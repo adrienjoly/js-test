@@ -1,0 +1,9 @@
+{
+  "firebase": "js-exo-algo",
+  "public": ".",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}

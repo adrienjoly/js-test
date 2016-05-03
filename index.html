@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="Polymer Starter Kit" />
+  <title>Javascript Quizz</title>
+  
+  <link rel="manifest" href="manifest.json">
+
+  <meta name="theme-color" content="#2E3AA1"> <!-- Chrome for Android theme color -->
+  <meta name="msapplication-TileColor" content="#3372DF"> <!-- Tile color for Win8 -->
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="PSK">
+  <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
+
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Polymer Starter Kit">
+  <link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png">
+
+  <!-- Tile icon for Win8 (144x144) -->
+  <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+
+  <!-- build:css styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild-->
+
+  <!-- build:js bower_components/webcomponentsjs/webcomponents-lite.min.js -->
+  <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+  <!-- endbuild -->
+
+  <!-- will be replaced with elements/elements.vulcanized.html -->
+  <link rel="import" href="elements/elements.html">
+  <!-- endreplace-->
+
+  <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+
+  <!-- For shared styles, shared-styles.html import in elements.html -->
+  <style is="custom-style" include="shared-styles"></style>
+
+</head>
+
+<body unresolved class="fullbleed layout vertical">
+  <span id="browser-sync-binding"></span>
+
+  <template is="dom-bind" id="app">
+    <!--
+    <iron-localstorage
+      name="my-answers"
+      value="{{myAnswers}}"
+      on-iron-localstorage-load-empty="initDefaults"
+    ></iron-localstorage>
+    -->
+
+    <paper-scroll-header-panel main id="headerPanelMain">
+
+      <paper-toolbar id="mainToolbar">
+        <div class="center horizontal layout">
+          <div class="title">{{title}}</div>
+        </div>
+      </paper-toolbar>
+
+      <div class="content">
+        
+        <section>
+          <paper-material elevation="1">
+            <template is="dom-if" if="{{!loggedIn}}">
+              <h2>Introduction</h2>
+              <p>Veuillez vous connecter à votre compte EEMI en utilisant le bouton ci-dessous svp:</p>
+            </template>
+            <template is="dom-if" if="{{loggedIn}}">
+              <h2>Bonjour, {{user.name}}</h2>
+            </template>
+            <google-signin
+              is-authorized="{{loggedIn}}"
+              scopes="profile email"
+              hosted-domain="eemi.com"
+              client-id="247219641427-b0eh4u1a9fi2tmbsak5m6vr8mt35vu5i.apps.googleusercontent.com"
+            ></google-signin>
+            <!-- client id generated from https://console.developers.google.com/apis/credentials?project=eemi-own-exam&authuser=1 -->
+          </paper-material>
+        </section>
+
+        <template is="dom-if" if="{{loggedIn}}">
+          <template is="dom-if" if="{{active}}">
+            <template is="dom-repeat" items="{{questions}}">
+              <section id="[[item.id]]" class="quizz-question">
+                <paper-material elevation="1">
+                  <h2>QCM {{item.i}}</h2>
+                  <paper-spinner-lite active></paper-spinner-lite>
+                  <zero-md text="{{item.md}}">
+                    <!-- Remember to pass in empty container of class="md-html". -->
+                    <div class="md-html"></div>
+                  </zero-md>
+                  <my-qcm data-id$="[[item.id]]" on-tap="onTap" items="{{item.choices}}" value="[[myAnswersItem(myAnswers.*, item.id)]]"></my-qcm>
+                </paper-material>
+              </section>
+            </template>
+          </template>
+        </template>
+
+      </div>
+    </paper-scroll-header-panel>
+
+    <paper-toast id="toast">
+      <span class="toast-hide-button" role="button" tabindex="0" onclick="app.$.toast.hide()">Ok</span>
+    </paper-toast>
+
+  </template>
+
+  <!-- build:js scripts/app.js -->
+  <script src="scripts/app.js"></script>
+  <!-- endbuild-->
+
+  <script src="scripts/questions-qcm.md.js"></script>
+</body>
+
+</html>
