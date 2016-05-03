@@ -48,7 +48,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     app.$.headerPanelMain.scrollToTop(true);
   };
 
-  app.title = 'Javascript Quizz';
+  app.title = 'Javascript Exo';
   app.loggedIn = false; // init default value, to be set by google-signin
   app.user = null;
   app.myAnswers = {}; // will be populated from firebase after login

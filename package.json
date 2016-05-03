@@ -1,0 +1,15 @@
+{
+  "name": "js-exo-algo",
+  "version": "1.0.0",
+  "description": "Javascript Exo - Algo",
+  "main": "index.js",
+  "dependencies": {
+    "firebase-tools": "^2.2.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "deploy": "firebase deploy"
+  },
+  "author": "Adrien Joly <adrien.joly@gmail.com>",
+  "license": "MIT"
+}
