@@ -9,7 +9,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "build": "for f in exercice.variant.*.json; do mustache $f exercice.template.md; done;",
+    "build": "for f in ./public/data/exercice.variant.*.json; do mustache $f ./exercice.template.md > $f.md; done;",
     "deploy": "firebase deploy"
   },
   "author": "Adrien Joly <adrien.joly@gmail.com>",
