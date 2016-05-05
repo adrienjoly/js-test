@@ -2,14 +2,16 @@
   "name": "js-exo-algo",
   "version": "1.0.0",
   "description": "Javascript Exo - Algo",
-  "main": "index.js",
   "dependencies": {
+    "bower": "^1.7.9",
     "firebase-tools": "^2.2.1",
     "mustache": "^2.2.1"
   },
   "devDependencies": {},
   "scripts": {
+    "postinstall": "cd public; bower install; cd ..",
     "build": "for f in ./public/data/exercice.variant.*.json; do mustache $f ./exercice.template.md > $f.md; done;",
+    "start": "cd public; python -m SimpleHTTPServer; cd ..",
     "deploy": "firebase deploy"
   },
   "author": "Adrien Joly <adrien.joly@gmail.com>",
