@@ -4,10 +4,12 @@
   "description": "Javascript Exo - Algo",
   "main": "index.js",
   "dependencies": {
-    "firebase-tools": "^2.2.1"
+    "firebase-tools": "^2.2.1",
+    "mustache": "^2.2.1"
   },
   "devDependencies": {},
   "scripts": {
+    "build": "for f in exercice.variant.*.json; do mustache $f exercice.template.md; done;",
     "deploy": "firebase deploy"
   },
   "author": "Adrien Joly <adrien.joly@gmail.com>",
