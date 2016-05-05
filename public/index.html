@@ -85,13 +85,13 @@
             <template is="dom-repeat" items="{{questions}}">
               <section id="[[item.id]]" class="quizz-question">
                 <paper-material elevation="1">
-                  <h2>QCM {{item.i}}</h2>
+                  <h2>Exercice {{item.i}}</h2>
                   <paper-spinner-lite active></paper-spinner-lite>
-                  <zero-md text="{{item.md}}">
+                  <zero-md file="{{item.mdFile}}">
                     <!-- Remember to pass in empty container of class="md-html". -->
                     <div class="md-html"></div>
                   </zero-md>
-                  <my-qcm data-id$="[[item.id]]" on-tap="onTap" items="{{item.choices}}" value="[[myAnswersItem(myAnswers.*, item.id)]]"></my-qcm>
+                  <my-code data-id$="[[item.id]]" on-change="onChange" value="[[myAnswersItem(myAnswers.*, item.id)]]"></my-code>
                 </paper-material>
               </section>
             </template>
@@ -111,7 +111,7 @@
   <script src="scripts/app.js"></script>
   <!-- endbuild-->
 
-  <script src="scripts/questions-qcm.md.js"></script>
+  <script src="scripts/exercices.js"></script>
 </body>
 
 </html>

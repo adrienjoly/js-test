@@ -1,0 +1,40 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/paper-input/paper-textarea.html">
+
+<dom-module id="my-code">
+  <template>
+    <style include="shared-styles"></style>
+    <style is="custom-style">
+      :root {
+        --paper-input-container-input-color: blue;
+        --iron-autogrow-textarea: {
+          font-family: monospace !important;
+        };
+      }
+    </style>
+    <paper-textarea label="{{label}}" value="{{value::input}}"></paper-textarea>
+  </template>
+
+  <script>
+    (function() {
+      'use strict';
+
+      Polymer({
+        is: 'my-code',
+
+        properties: {
+          label: {
+            type: String
+          },
+          value: {
+            type: String,
+            notify: true
+          }
+        }
+      });
+
+
+    })();
+  </script>
+
+</dom-module>
