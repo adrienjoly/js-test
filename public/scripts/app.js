@@ -10,12 +10,22 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 (function(document) {
   'use strict';
 
-  // Grab a reference to our auto-binding template
-  // and give it some initial binding values
-  // Learn more about auto-binding templates at http://goo.gl/Dx1u2g
-  var app = document.querySelector('#app');
+  var PUBLIC_TEST_MODE = true; // TODO: set to false to activate Google Login
+  var PAGE_TITLE = 'Javascript Exo';
+  var FIREBASE_URL = 'https://js-exo-algo.firebaseio.com';
 
-  // Sets app default base URL
+  /* firebase security rules: {
+   "rules": {
+      ".read": false,
+      ".write": false,
+      "submissions": {
+        ".read": true,
+          "$key": {
+           ".write": "newData.exists()" // prevents deletion, cf http://stackoverflow.com/questions/29466247/in-firebase-what-security-rules-should-i-write-to-allow-only-push-to-object
+  */
+
+  // Grab a reference to our auto-binding template and give it some initial binding values
+  var app = document.querySelector('#app');
   app.baseUrl = '/';
 
   app.displayInstalledToast = function() {
@@ -25,18 +35,19 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     }
   };
 
-  // Scroll page to top and expand header
+  // Scroll page to top (used by routing.html)
   app.scrollPageToTop = function() {
     app.$.headerPanelMain.scrollToTop(true);
   };
 
-  app.title = 'Javascript Exo';
+  app.title = PAGE_TITLE;
   app.loggedIn = false; // init default value, to be set by google-signin
   app.user = null;
+  app.backend = null; // Firebase instance
   app.myAnswers = {}; // will be populated from firebase after login
-  app.backend = null;
   app.active = false;
 
+  // when user entry was succesfully stored to Firebase, hide the loading spinner
   function onStoredUserAnswers(snapshot) {
     //console.log('onStoredUserAnswers:', snapshot.key(), snapshot.val());
     var stored = snapshot.val();
@@ -49,18 +60,20 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     }, 500);
   }
 
+  // disable/enable user entry based on the `active` value in the Firebase DB
   function onBackEndStatus(snapshot) {
     var active = snapshot.val();
     console.log('onBackEndStatus, active:', active);
     app.set('active', active);
   }
 
-  function onLogin(userData) {
+  function onLogin(userData, offline) {
     app.user = userData;
+    if (offline) return;
     var userHash = userData.email.split('@')[0].replace(/[^\w]/g, '_');
-    app.backend = new Firebase('https://js-quizz.firebaseio.com/submissions/' + userHash);
+    app.backend = new Firebase(FIREBASE_URL + '/submissions/' + userHash);
     app.backend.on("value", onStoredUserAnswers);
-    (new Firebase('https://js-quizz.firebaseio.com/active')).on('value', onBackEndStatus);
+    (new Firebase(FIREBASE_URL + '/active')).on('value', onBackEndStatus);
   }
 
   window.addEventListener('google-signin-success', function() {
@@ -74,12 +87,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     });
   });
 
+  // used by components to get current answer data
   app.myAnswersItem = function(change, index) {
     return this.get(index, change.base);
   };
   //cf https://www.polymer-project.org/1.0/docs/devguide/data-binding.html#array-binding
   
-  app.onTap = function(evt) {
+  // when user changes an answer
+  app.onChange = function(evt) {
     var qcmComponent = evt.currentTarget;
     var choiceValue = qcmComponent.value; // or this.value
     var choiceId = qcmComponent.getAttribute('data-id');
@@ -89,29 +104,21 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     };
     upd[choiceId] = choiceValue;
     this.backend.update(upd, function(err, res) {
-      if (err) console.error('onTap -> firebase:', err || res);
+      if (err) console.error('onChange -> firebase:', err || res);
     });
-    /* firebase security rules: {
-     "rules": {
-        ".read": false,
-        ".write": false,
-        "submissions": {
-          ".read": true,
-            "$key": {
-             ".write": "newData.exists()" // prevents deletion, cf http://stackoverflow.com/questions/29466247/in-firebase-what-security-rules-should-i-write-to-allow-only-push-to-object
-    */
     document.getElementById(choiceId).classList.add('loading');
   }
 
-  // TODO: FOR PUBLIC TESTING => disable the following lines to activate Google Login
-  
-  onLogin({
-    id: 1,
-    name: 'Demo User',
-    email: 'demo-user@example.com',
-    token: 'XXX'
-  });
-  app.loggedIn = true;
-  app.active = true;
+  // FOR PUBLIC TESTING: fakes Google Login
+  if (PUBLIC_TEST_MODE) {
+    onLogin({
+      id: 1,
+      name: 'Demo User',
+      email: 'demo-user@example.com',
+      token: 'XXX'
+    }, true);
+    app.loggedIn = true;
+    app.active = true;
+  }
 
 })(document);
