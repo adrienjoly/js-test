@@ -17,13 +17,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
   // Sets app default base URL
   app.baseUrl = '/';
-  /*
-  if (window.location.port === '') {  // if production
-    // Uncomment app.baseURL below and
-    // set app.baseURL to '/your-pathname/' if running from folder in production
-    app.baseUrl = '/js-partiel-1/';
-  }
-  */
 
   app.displayInstalledToast = function() {
     // Check to make sure caching is actually enabled—it won't be in the dev environment.
@@ -31,17 +24,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       Polymer.dom(document).querySelector('#caching-complete').show();
     }
   };
-
-  // Listen for template bound event to know when bindings
-  // have resolved and content has been stamped to the page
-  app.addEventListener('dom-change', function() {
-    //console.log('Our app is ready to rock!');
-  });
-
-  // See https://github.com/Polymer/polymer/issues/1381
-  window.addEventListener('WebComponentsReady', function() {
-    // imports are loaded and elements have been registered
-  });
 
   // Scroll page to top and expand header
   app.scrollPageToTop = function() {
@@ -71,7 +53,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     var active = snapshot.val();
     console.log('onBackEndStatus, active:', active);
     app.set('active', active);
-    //console.log('app.active', app.active);
   }
 
   function onLogin(userData) {
@@ -79,7 +60,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     var userHash = userData.email.split('@')[0].replace(/[^\w]/g, '_');
     app.backend = new Firebase('https://js-quizz.firebaseio.com/submissions/' + userHash);
     app.backend.on("value", onStoredUserAnswers);
-
     (new Firebase('https://js-quizz.firebaseio.com/active')).on('value', onBackEndStatus);
   }
 
@@ -108,7 +88,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       _d: Date()
     };
     upd[choiceId] = choiceValue;
-    //console.log('onTap:', upd);
     this.backend.update(upd, function(err, res) {
       if (err) console.error('onTap -> firebase:', err || res);
     });
