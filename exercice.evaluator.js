@@ -59,6 +59,45 @@ var TESTS = [
       callback(null, res.reduce(sum));
     });
   },
+  /* TEST 2: first line of console depends on prompt() */
+  function (code, callback) {
+    // TODO: make it work for each variant
+    var variant = { nb1: 3, nb3: 5}; 
+    function renderMulti(i, j) {
+      return i + ' * ' + j + ' = ' + (i * j);
+    }
+    function makeTestCaseForInput(input, variant) {
+      var lines = [ renderMulti(input, 2) ]; // first line
+      for (var i = variant.nb1; i <= variant.nb3; ++i) {
+        lines.push(renderMulti(input, i));
+      }
+      return { input: input, expectedOutput: lines };
+    }
+    var CASES = [
+      makeTestCaseForInput(4, variant),
+      makeTestCaseForInput(5, variant),
+    ];
+    function test(testCase, caseCallback) {
+      var caseCode = 'var prompt = function(){ return ' + testCase.input + '; };\n' + code;
+      testCode(caseCode, function(err, res) {
+        var isSolutionValid = JSON.stringify(res) === JSON.stringify(testCase.expectedOutput);
+        var renderedCase = {
+          second: testCase.expectedOutput[1],
+          last: testCase.expectedOutput[testCase.expectedOutput.length - 1]
+        };
+        res = res || [ null ];
+        var renderedAnsw = {
+          second: res[1],
+          last: res[res.length - 1]
+        };
+        console.log('[test]', renderedCase, '=> studentOutput:', renderedAnsw, '=>', isSolutionValid);
+        caseCallback(null, isSolutionValid);
+      });
+    }
+    async.mapSeries(CASES, test, function(err, res){
+      callback(null, res.reduce(sum));
+    });
+  },
 ];
 
 function evaluateStudent(task, callback) {
