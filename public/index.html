@@ -96,7 +96,12 @@
                     <!-- Remember to pass in empty container of class="md-html". -->
                     <div class="md-html"></div>
                   </zero-md>
-                  <my-code data-id$="[[item.id]]" on-change="onChange" value="[[myAnswersItem(myAnswers.*, item.id)]]"></my-code>
+                  <!--<my-code label="Saisissez votre code Javascript ici" data-id$="[[item.id]]" value="[[myAnswersItem(myAnswers.*, item.id)]]"></my-code>-->
+                  <my-code label="Saisissez votre code Javascript ici" data-id$="[[item.id]]" value="{{myCode}}"></my-code>
+                  <paper-button id="btnSubmit" on-click="onSubmit" disabled raised>
+                    <iron-icon icon="check"></iron-icon>&nbsp;
+                    Test
+                  </paper-button>
                 </paper-material>
               </section>
             </template>

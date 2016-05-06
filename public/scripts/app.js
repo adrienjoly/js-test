@@ -67,20 +67,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   app.user = null;
   app.backend = null; // Firebase instance
   app.myAnswers = {}; // will be populated from firebase after login
+  app.myCode = ''; // aynchronously bound to app.myAnswers.code1
   app.active = false;
-
-  // when user entry was succesfully stored to Firebase, hide the loading spinner
-  function onStoredUserAnswers(snapshot) {
-    //console.log('onStoredUserAnswers:', snapshot.key(), snapshot.val());
-    var stored = snapshot.val();
-    app.myAnswers = stored;
-    setTimeout(function() {
-      for (var id in stored) {
-        var qcmEl = document.getElementById(id);
-        if (qcmEl) qcmEl.classList.remove('loading');
-      }
-    }, 500);
-  }
 
   // disable/enable user entry based on the `active` value in the Firebase DB
   function onBackEndStatus(snapshot) {
@@ -95,7 +83,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     var variant = getVariantByStudentId(userData.id);
     app.set('questions', [
       {
-        i: 1,
+        //i: 1,
         id: 'code1',
         mdFile: getExerciseMdFile(variant),
       },
@@ -103,7 +91,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     if (offline) return;
     var userHash = userData.email.split('@')[0].replace(/[^\w]/g, '_');
     app.backend = new Firebase(FIREBASE_URL + '/submissions/' + userHash);
-    app.backend.on("value", onStoredUserAnswers);
+    app.backend.on('value', function onStoredUserAnswers(snapshot) {
+      // called on launch, and right after firebase data updates (even if offline)
+      app.myAnswers = snapshot.val(); // make sure that local state = remote state
+    });
     (new Firebase(FIREBASE_URL + '/active')).on('value', onBackEndStatus);
   }
 
@@ -118,27 +109,107 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     });
   });
 
-  // used by components to get current answer data
-  app.myAnswersItem = function(change, index) {
-    return this.get(index, change.base);
-  };
-  //cf https://www.polymer-project.org/1.0/docs/devguide/data-binding.html#array-binding
-  
-  // when user changes an answer
-  app.onChange = function(evt) {
-    var qcmComponent = evt.currentTarget;
-    var choiceValue = qcmComponent.value; // or this.value
-    var choiceId = qcmComponent.getAttribute('data-id');
-    var upd = {
-      _t: Firebase.ServerValue.TIMESTAMP,
-      _d: Date()
+  var toggleLoadingSpinner = (function createToggleFct(){
+    var pendingPerId = {};
+    return function (id, toggle) {
+      var el = document.getElementById(id);
+      if (!el) return;
+      if (pendingPerId[id]) clearTimeout(pendingPerId[id]);
+      if (toggle) {
+        el.classList.add('loading');
+      } else {
+        pendingPerId[id] = setTimeout(function() {
+          el.classList.remove('loading');
+          delete pendingPerId[id];
+        }, 500);
+      }
     };
-    upd[choiceId] = choiceValue;
-    this.backend.update(upd, function(err, res) {
-      if (err) console.error('onChange -> firebase:', err || res);
+  })();
+
+  function sendAnswersToBackend(upd) {
+    if (!app.backend) return console.info('backend is not connected yet => ignoring update');
+    if (!upd) return console.warn('not sending a null update to backend');
+    // ui feedback: display loading spinner on questions to be sync'ed
+    for (var id in upd) {
+      toggleLoadingSpinner(id, true);
+    }
+    // add metadata and send to firebase
+    upd._t = Firebase.ServerValue.TIMESTAMP;
+    upd._d = Date();
+    upd._uid = app.user.id; // will be used to re-generate the variant number during evaluation
+    app.backend.update(upd, function(err) {
+      if (err) {
+        console.error('onChange -> firebase:', err);
+        alert('Une erreur est survenue lors de l\'envoi de votre réponse. Prévenez votre enseignant.');
+      } else {
+        // ui feedback: remove loading spinner on sync'ed questions (even after a temporary disconnection)
+        for (var id in upd) {
+          toggleLoadingSpinner(id, false);
+        }
+      }
     });
-    document.getElementById(choiceId).classList.add('loading');
   }
+
+  function toggleSubmitButton (toggle) {
+    var btn = document.querySelector('#btnSubmit');
+    if (toggle) {
+      btn.removeAttribute('disabled');
+    } else {
+      btn.setAttribute('disabled', 'disabled');  
+    }
+  }
+
+  (function bindAnswerChangesToBackend(){
+    // cf https://www.polymer-project.org/1.0/docs/devguide/properties.html#observing-path-changes
+    app.observers = [
+      'onAnswersUpdate(myAnswers.*)',
+      'onCodeUpdate(myCode)'
+      //'onAnswersUpdate(user)'
+    ];
+    app.onAnswersUpdate = function(update){
+      //console.log('onAnswersUpdate', update);
+      if (update.value.code1) app.set('myCode', update.value.code1);
+    };
+    app.onCodeUpdate = function(update){
+      if (app.myAnswers) {
+        var changed = app.myAnswers.code1 !== update;
+        //console.log('onCodeUpdate changed:', changed, update);
+        toggleSubmitButton(changed);
+      }
+    };
+  })();
+
+  app.onSubmit = function(e) {
+    var changed = app.myAnswers.code1 !== app.myCode;
+    //console.log('onSubmit, code changed:', changed, app.myCode);
+    if (changed) {
+      toggleSubmitButton(false); // prevent user from clicking more than once in a row
+      sendAnswersToBackend({ code1: app.myCode });
+    }
+  };
+
+  // this commented part works only for QCMs:
+  /*
+  (function bindQcmAnswersToBackend(){
+    // used by components to get current answer data
+    app.myAnswersItem = function(change, index) {
+      console.log('myAnswersItem', change, index)
+      return this.get(index, change.base);
+    };
+    //cf https://www.polymer-project.org/1.0/docs/devguide/data-binding.html#array-binding
+    
+    // when user changes an answer
+    app.onChange = function(evt) {
+      var qcmComponent = evt.currentTarget;
+      var choiceValue = qcmComponent.value; // or this.value
+      var choiceId = qcmComponent.getAttribute('data-id');
+      var upd = {};
+      upd[choiceId] = choiceValue;
+      //app.set('myAnswers.' + choiceId, choiceValue);
+      sendAnswersToBackend(upd); // should be called by the above line, thru observer
+    }
+  })();
+  */
 
   // FOR PUBLIC TESTING: fakes Google Login
   if (PUBLIC_TEST_MODE) {
@@ -147,7 +218,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       name: 'Demo User',
       email: 'demo-user@example.com',
       token: 'XXX'
-    }, true);
+    }/*, true*/);
     app.loggedIn = true;
     app.active = true;
   }
