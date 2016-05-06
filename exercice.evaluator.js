@@ -41,15 +41,16 @@ testCode("console.log('test', 666); alert('Hello from the plugin!');", function(
 
 
 var TESTS = [
-  function(code, callback) {
+  /* TEST 1: first line of console depends on prompt() */
+  function (code, callback) {
     var CASES = [
-      { input: 4, expectedOutput: [ '4 * 2 = 8' ] },
-      { input: 5, expectedOutput: [ '5 * 2 = 10' ] },
+      { input: 4, expectedOutput: '4 * 2 = 8' },
+      { input: 5, expectedOutput: '5 * 2 = 10' },
     ];
     function test(testCase, caseCallback) {
       var caseCode = 'var prompt = function(){ return ' + testCase.input + '; };\n' + code;
       testCode(caseCode, function(err, res) {
-        var isSolutionValid = JSON.stringify(res) === JSON.stringify(testCase.expectedOutput);
+        var isSolutionValid = (res || [])[0] === testCase.expectedOutput;
         console.log('[test]', testCase, '=> studentOutput:', res, '=>', isSolutionValid);
         caseCallback(null, isSolutionValid);
       });
