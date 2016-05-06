@@ -20,7 +20,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     return './data/exercice.variant.' + variant + '.json.md';
   }
 
-  /* firebase security rules: {
+  /* firebase security rules:
+  {
    "rules": {
       ".read": false,
       ".write": false,
@@ -28,6 +29,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         ".read": true,
           "$key": {
            ".write": "newData.exists()" // prevents deletion, cf http://stackoverflow.com/questions/29466247/in-firebase-what-security-rules-should-i-write-to-allow-only-push-to-object
+          }
+        }
+      }
+    }
+  }
   */
 
 
