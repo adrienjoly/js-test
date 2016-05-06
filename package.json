@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "description": "Javascript Exo - Algo",
   "dependencies": {
+    "async": "^1.5.2",
     "bower": "^1.7.9",
+    "firebase": "^2.4.2",
     "firebase-tools": "^2.2.1",
+    "jailed-node": "^0.3.2",
     "mustache": "^2.2.1"
   },
   "devDependencies": {},
