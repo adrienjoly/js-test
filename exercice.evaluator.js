@@ -64,10 +64,10 @@ var TESTS = [
   /* TEST 2: first line of console depends on prompt() */
   function (code, callback) {
     // TODO: make it work for each variant
-    var variant = { nb1: 3, nb3: 5}; 
     function renderMulti(i, j) {
       return i + ' * ' + j + ' = ' + (i * j);
     }
+    var variant = { nb1: 3, nb3: 100}; 
     function makeTestCaseForInput(input, variant) {
       var lines = [ renderMulti(input, 2) ]; // first line
       for (var i = variant.nb1; i <= variant.nb3; ++i) {
