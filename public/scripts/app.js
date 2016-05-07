@@ -99,7 +99,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     app.backend = new Firebase(FIREBASE_URL + '/submissions/' + userHash);
     app.backend.on('value', function onStoredUserAnswers(snapshot) {
       // called on launch, and right after firebase data updates (even if offline)
-      app.myAnswers = snapshot.val(); // make sure that local state = remote state
+      app.myAnswers = snapshot.val() || {}; // make sure that local state = remote state
     });
     (new Firebase(FIREBASE_URL + '/active')).on('value', onBackEndStatus);
   }
