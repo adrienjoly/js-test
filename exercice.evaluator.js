@@ -53,7 +53,7 @@ var TESTS = [
       var caseCode = 'var prompt = function(){ return ' + testCase.input + '; };\n' + code;
       testCode(caseCode, function(err, res) {
         var isSolutionValid = (res || [])[0] === testCase.expectedOutput;
-        console.log('[test]', testCase, '=> studentOutput:', res, '=>', isSolutionValid);
+        console.log('[test]', testCase, '=> studentOutput:', (res || [])[0], '=>', isSolutionValid);
         caseCallback(null, isSolutionValid);
       });
     }
