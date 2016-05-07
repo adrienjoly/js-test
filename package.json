@@ -15,6 +15,7 @@
     "postinstall": "cd public; bower install; cd ..",
     "build": "for f in ./public/data/exercice.variant.*.json; do mustache $f ./exercice.template.md > $f.md; done;",
     "start": "cd public; python -m SimpleHTTPServer; cd ..",
+    "eval": "node evaluate.js",
     "deploy": "firebase deploy"
   },
   "author": "Adrien Joly <adrien.joly@gmail.com>",
