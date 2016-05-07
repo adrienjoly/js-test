@@ -45,6 +45,7 @@ function renderMulti(i, j) {
 }
 
 var TESTS = [
+
   /* TEST 1: first line of console depends on prompt() */
   function (code, callback) {
     var CASES = [
@@ -63,6 +64,7 @@ var TESTS = [
       callback(null, res.reduce(sum));
     });
   },
+
   /* TEST 2: first line of console depends on prompt() */
   function (code, callback) {
     // TODO: make it work for each variant
@@ -99,6 +101,29 @@ var TESTS = [
       callback(null, res.reduce(sum));
     });
   },
+
+  /* TEST 3: function for rendering multiplication */
+  function (code, callback) {
+    // TODO: make it work for each variant
+    var variant = { fctName: 'multi' };
+    var CASES = [ [-1,1], [12,33] ];
+    function test(testCase, caseCallback) {
+      var caseCode = [
+        'var prompt = function(){};',
+        code,
+        'console.log(' + variant.fctName + '(' + testCase[0] + ', ' + testCase[1] + '));'
+      ].join('\n');
+      testCode(caseCode, function(err, results) {
+        var res = results.pop(); // last line of console holds the result
+        var isSolutionValid = res == renderMulti(testCase[0], testCase[1]);
+        console.log('[test]', testCase, res, '=> studentOutput:', res, '=>', isSolutionValid);
+        caseCallback(null, isSolutionValid);
+      });
+    }
+    async.mapSeries(CASES, test, function(err, res){
+      callback(null, res.reduce(sum));
+    });
+  }
 ];
 
 function evaluateStudent(task, callback) {
