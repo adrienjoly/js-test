@@ -2,8 +2,8 @@
   "fctName": "multiplication",
   "nb1": 3,
   "nb2": 4,
-  "nb3": 5,
+  "nb3": 100,
   "res1": 12,
   "res2": 16,
-  "res3": 20
+  "res3": 400
 }

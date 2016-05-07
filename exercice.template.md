@@ -6,7 +6,7 @@ Pour ce faire:
 
 1. Inviter l'utilisateur à saisir un nombre à l'aide de la fonction `prompt()`;
 2. Afficher dans la console la ligne `nb * 2 = res` (où `nb` est à remplacer par le nombre saisi par l'utilisateur, et `res` par le résultat de la multiplication);
-3. Selon le même modèle, afficher ensuite la multiplication de ce nombre par chaque nombre de `{{nb1}}` à `{{nb3}}` (compris) dans la console; (faire un appel à `console.log()` pour chaque multiplication à afficher);
+3. Selon le même modèle, afficher ensuite la multiplication de ce nombre par chaque nombre de `{{nb1}}` à `{{nb3}}` (compris) dans la console; (faire un appel à `console.log()` pour chaque multiplication à afficher, en utilisant une boucle `for`);
 
     Par exemple: Si l'utilisateur saisit `4` dans la boite de dialogue, votre script doit afficher les lignes suivantes dans la console:
 
@@ -14,6 +14,7 @@ Pour ce faire:
     4 * 2 = 8
     4 * {{nb1}} = {{res1}}
     4 * {{nb2}} = {{res2}}
+    ... etc, jusqu'à ...
     4 * {{nb3}} = {{res3}}
     ```
 
