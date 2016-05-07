@@ -174,7 +174,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     ];
     app.onAnswersUpdate = function(update){
       //console.log('onAnswersUpdate', update);
-      if (update.value.code1) app.set('myCode', update.value.code1);
+      if ((update.value || {}).code1) app.set('myCode', update.value.code1);
     };
     app.onCodeUpdate = function(update){
       if (app.myAnswers) {
