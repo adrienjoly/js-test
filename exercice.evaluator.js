@@ -56,7 +56,7 @@ var TESTS = [
       var caseCode = 'var prompt = function(){ return ' + testCase.input + '; };\n' + code;
       testCode(caseCode, function(err, res) {
         var isSolutionValid = (res || [])[0] === testCase.expectedOutput;
-        console.log('[test]', testCase, '=> studentOutput:', (res || [])[0], '=>', isSolutionValid);
+        console.log('[test]', testCase.expectedOutput, '->', (res || [])[0], '=>', isSolutionValid);
         caseCallback(null, isSolutionValid);
       });
     }
@@ -84,16 +84,16 @@ var TESTS = [
       var caseCode = 'var prompt = function(){ return ' + testCase.input + '; };\n' + code;
       testCode(caseCode, function(err, res) {
         var isSolutionValid = JSON.stringify(res) === JSON.stringify(testCase.expectedOutput);
-        var renderedCase = {
-          second: testCase.expectedOutput[1],
-          last: testCase.expectedOutput[testCase.expectedOutput.length - 1]
-        };
+        var renderedCase = [
+          testCase.expectedOutput[1], // second line
+          testCase.expectedOutput[testCase.expectedOutput.length - 1] // last line
+        ];
         res = res || [ null ];
-        var renderedAnsw = {
-          second: res[1],
-          last: res[res.length - 1]
-        };
-        console.log('[test]', renderedCase, '=> studentOutput:', renderedAnsw, '=>', isSolutionValid);
+        var renderedAnsw = [
+          res[1], // second line
+          res[res.length - 1] // last line
+        ];
+        console.log('[test]', renderedCase, '->', renderedAnsw, '=>', isSolutionValid);
         caseCallback(null, isSolutionValid);
       });
     }
@@ -115,8 +115,9 @@ var TESTS = [
       ].join('\n');
       testCode(caseCode, function(err, results) {
         var res = results.pop(); // last line of console holds the result
-        var isSolutionValid = res == renderMulti(testCase[0], testCase[1]);
-        console.log('[test]', testCase, res, '=> studentOutput:', res, '=>', isSolutionValid);
+        var expected = renderMulti(testCase[0], testCase[1]);
+        var isSolutionValid = res == expected;
+        console.log('[test]', expected, '->', res, '=>', isSolutionValid);
         caseCallback(null, isSolutionValid);
       });
     }
@@ -127,13 +128,12 @@ var TESTS = [
 ];
 
 function evaluateStudent(task, callback) {
-  console.log('\n===\nSTUDENT', task.key, ':', task.code1);
+  console.log('\n===\nSTUDENT', task.key, '(' + task._uid + ') :\n---\n' + task.code1 + '\n---');
   function runTest(testFct, callback) {
     testFct(task.code1, callback);
   }
   async.mapSeries(TESTS, runTest, function done(err, res) {
-    console.log('=> total TEST errors:', err);
-    console.log('=> total TEST points:', res);
+    console.log('=> total STUDENT points:', res);
     callback();
   });
 }
