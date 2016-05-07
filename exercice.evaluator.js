@@ -1,6 +1,8 @@
 var async = require('async');
 var jailed = require('jailed-node');
 
+var TEST_TIMEOUT = 200;
+
 function sum(a, b) {
   return a + b;
 }
@@ -26,7 +28,7 @@ function testCode(code, callback) {
   };
   code = 'var console = { log: application.remote._consoleLog };\n' + code;
   //console.log('FINAL CODE:', code);
-  runCodeAsync(code, api, 1000, function(err) {
+  runCodeAsync(code, api, TEST_TIMEOUT, function(err) {
     callback(err, result);
   });
 }
