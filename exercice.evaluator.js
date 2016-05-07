@@ -40,7 +40,9 @@ testCode("console.log('test', 666); alert('Hello from the plugin!');", function(
 });
 */
 
-
+function renderMulti(i, j) {
+  return i + ' * ' + j + ' = ' + (i * j);
+}
 
 var TESTS = [
   /* TEST 1: first line of console depends on prompt() */
@@ -64,9 +66,6 @@ var TESTS = [
   /* TEST 2: first line of console depends on prompt() */
   function (code, callback) {
     // TODO: make it work for each variant
-    function renderMulti(i, j) {
-      return i + ' * ' + j + ' = ' + (i * j);
-    }
     var variant = { nb1: 3, nb3: 100}; 
     function makeTestCaseForInput(input, variant) {
       var lines = [ renderMulti(input, 2) ]; // first line
