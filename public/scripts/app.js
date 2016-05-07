@@ -75,6 +75,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   app.myAnswers = {}; // will be populated from firebase after login
   app.myCode = ''; // aynchronously bound to app.myAnswers.code1
   app.active = false;
+  app.submitText = 'Enregistrer';
 
   // disable/enable user entry based on the `active` value in the Firebase DB
   function onBackEndStatus(snapshot) {
@@ -152,17 +153,19 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         for (var id in upd) {
           toggleLoadingSpinner(id, false);
         }
+        app.submitText = 'Enregistré avec succès';
       }
     });
   }
 
-  function toggleSubmitButton (toggle) {
+  function toggleSubmitButton (toggle, submitting) {
     var btn = document.querySelector('#btnSubmit');
     if (toggle) {
       btn.removeAttribute('disabled');
     } else {
       btn.setAttribute('disabled', 'disabled');  
     }
+    app.submitText = submitting ? 'Enregistrement...' : 'Enregistrer';
   }
 
   (function bindAnswerChangesToBackend(){
@@ -189,7 +192,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     var changed = app.myAnswers.code1 !== app.myCode;
     //console.log('onSubmit, code changed:', changed, app.myCode);
     if (changed) {
-      toggleSubmitButton(false); // prevent user from clicking more than once in a row
+      toggleSubmitButton(false, true); // prevent user from clicking more than once in a row
       sendAnswersToBackend({ code1: app.myCode });
     }
   };
