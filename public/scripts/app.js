@@ -10,7 +10,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 (function(document) {
   'use strict';
 
-  var PUBLIC_TEST_MODE = true; // TODO: set to false to activate Google Login
+  var PUBLIC_TEST_MODE = false; // TODO: set to false to activate Google Login
   var PAGE_TITLE = 'Javascript Exo';
   var FIREBASE_URL = 'https://js-exo-algo.firebaseio.com';
 
