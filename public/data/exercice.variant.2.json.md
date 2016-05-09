@@ -1,11 +1,11 @@
-# Table de multiplication
+# Table de multiplication (20mn)
 
 But: Nous allons développer un script permettant d'afficher une table de multiplication dans la console, en fonction d'un nombre saisi par l'utilisateur.
 
 Pour ce faire:
 
 1. Inviter l'utilisateur à saisir un nombre à l'aide de la fonction `prompt()`;
-2. Afficher dans la console la ligne `nb * 2 = res` (où `nb` est à remplacer par le nombre saisi par l'utilisateur, et `res` par le résultat de la multiplication);
+2. Afficher dans la console la ligne `nb * 2 = res` (où `nb` est à remplacer par le nombre saisi par l'utilisateur, et `res` par le résultat de la multiplication). Note: il ne faut afficher le résultat ET la multiplication, en respectant bien le modèle proposé;
 3. Selon le même modèle, afficher ensuite la multiplication de ce nombre par chaque nombre de `5` à `100` (compris) dans la console; (faire un appel à `console.log()` pour chaque multiplication à afficher, en utilisant une boucle `for`);
 
     Par exemple: Si l'utilisateur saisit `4` dans la boite de dialogue, votre script doit afficher les lignes suivantes dans la console:
