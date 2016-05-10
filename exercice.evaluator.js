@@ -1,3 +1,4 @@
+var _ = require('lodash');
 var async = require('async');
 var jailed = require('jailed-node');
 
@@ -148,13 +149,16 @@ function evaluateStudent(task, callback) {
   console.log('\n===\nSTUDENT', task.key, '(' + task._uid + ' => ' + variantNumber + ') :\n---\n' + task.code1 + '\n---');
 
   var variant = /*{ nb1: 3, nb3: 100, fctName: 'multi' };*/ getVariantData(variantNumber);
-  console.log('variant:', variant);
+  //console.log('variant:', JSON.stringify(variant));
 
   function runTest(testFct, callback) {
     testFct(task.code1, variant, callback);
   }
   async.mapSeries(TESTS, runTest, function done(err, res) {
-    console.log('=> total STUDENT points:', res);
+    var total = _.flatten(res).reduce(sum);
+    console.log('=> total STUDENT points:', res, '=', total);
+    // csv export of marks:
+    console.log(JSON.stringify([ 'SCORE', task.key, task._uid, variantNumber, total ]));
     callback();
   });
 }
