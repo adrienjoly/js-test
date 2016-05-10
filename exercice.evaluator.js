@@ -3,6 +3,12 @@ var jailed = require('jailed-node');
 
 var TEST_TIMEOUT = 200;
 
+var NB_VARIANTS = 3;
+
+function getVariantData(variant) {
+  return require('./public/data/exercice.variant.' + variant + '.json');
+}
+
 function sum(a, b) {
   return a + b;
 }
@@ -47,7 +53,7 @@ function renderMulti(i, j) {
 var TESTS = [
 
   /* TEST 1: first line of console depends on prompt() */
-  function (code, callback) {
+  function (code, variant, callback) {
     var CASES = [
       { input: 4, expectedOutput: '4 * 2 = 8' },
       { input: 5, expectedOutput: '5 * 2 = 10' },
@@ -66,9 +72,7 @@ var TESTS = [
   },
 
   /* TEST 2: first line of console depends on prompt() */
-  function (code, callback) {
-    // TODO: make it work for each variant
-    var variant = { nb1: 3, nb3: 100}; 
+  function (code, variant, callback) {
     function makeTestCaseForInput(input, variant) {
       var lines = [ renderMulti(input, 2) ]; // first line
       for (var i = variant.nb1; i <= variant.nb3; ++i) {
@@ -103,9 +107,7 @@ var TESTS = [
   },
 
   /* TEST 3: function for rendering multiplication */
-  function (code, callback) {
-    // TODO: make it work for each variant
-    var variant = { fctName: 'multi' };
+  function (code, variant, callback) {
     var CASES = [ [-1,1], [12,33] ];
     function test(testCase, caseCallback) {
       var caseCode = [
@@ -127,10 +129,29 @@ var TESTS = [
   }
 ];
 
+// fixed version of variant3() => returns 0, 1 or 2, depending on the value of number
+function getVariantByStudentId (id) {
+  // modulo that also works for big integers
+  var modulo = function(divident, divisor) {
+      var partLength = 10;
+      while (divident.length > partLength) {
+          var part = divident.substring(0, partLength);
+          divident = (part % divisor) +  divident.substring(partLength);          
+      }
+      return divident % divisor;
+  };
+  return modulo(id, NB_VARIANTS);
+};
+
 function evaluateStudent(task, callback) {
-  console.log('\n===\nSTUDENT', task.key, '(' + task._uid + ') :\n---\n' + task.code1 + '\n---');
+  var variantNumber = getVariantByStudentId(task._uid);
+  console.log('\n===\nSTUDENT', task.key, '(' + task._uid + ' => ' + variantNumber + ') :\n---\n' + task.code1 + '\n---');
+
+  var variant = /*{ nb1: 3, nb3: 100, fctName: 'multi' };*/ getVariantData(variantNumber);
+  console.log('variant:', variant);
+
   function runTest(testFct, callback) {
-    testFct(task.code1, callback);
+    testFct(task.code1, variant, callback);
   }
   async.mapSeries(TESTS, runTest, function done(err, res) {
     console.log('=> total STUDENT points:', res);
