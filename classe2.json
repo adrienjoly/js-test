@@ -1,0 +1,119 @@
+{
+  "active" : 0,
+  "submissions" : {
+    "adrien_joly" : {
+      "_d" : "Tue May 10 2016 13:36:31 GMT+0200 (CEST)",
+      "_t" : 1462880191992,
+      "_uid" : "103769591752335079590",
+      "code1" : ""
+    },
+    "adrien_regnaultdemontgon" : {
+      "_d" : "Tue May 10 2016 14:37:17 GMT+0200 (CEST)",
+      "_t" : 1462883837650,
+      "_uid" : "116679982480752457552",
+      "code1" : "N=parseInt(prompt('entrez N',''))"
+    },
+    "alexandre_evrard" : {
+      "_d" : "Tue May 10 2016 14:37:51 GMT+0200 (Paris, Madrid (heure d’été))",
+      "_t" : 1462884020051,
+      "_uid" : "115173112075180731014",
+      "code1" : "var multiplication = prompt()\nconsole.log(multiplication) * 2 = result"
+    },
+    "arnaud_manaranche" : {
+      "_d" : "Tue May 10 2016 14:38:48 GMT+0200 (CEST)",
+      "_t" : 1462883928381,
+      "_uid" : "107172046548987188834",
+      "code1" : "var nb = prompt('Saisir un nombre');\nvar coef = nb * 2;\n\nconsole.log(nb + ' * 2 = ' + coef);\n\nfunction multi(nb,coef) {\n\tfor(coef=5; coef<=100; coef++) {\n\t  console.log(nb + ' * ' + coef + ' = ' + nb * coef)\n}\n};\n\nconsole.log(multi(nb, coef));"
+    },
+    "assila_zitouni" : {
+      "_d" : "Tue May 10 2016 14:41:10 GMT+0200 (Paris, Madrid (heure d’été))",
+      "_t" : 1462884071189,
+      "_uid" : "107573928737735339074",
+      "code1" : "\nfor (var i=0; i<10; i++) {\n  var nb = prompt(\"entrez votre chiffre\");\n  var res = nb * 2;\n  alert(res);\n  }"
+    },
+    "briac_suquet" : {
+      "_d" : "Tue May 10 2016 14:40:34 GMT+0200 (CEST)",
+      "_t" : 1462884034296,
+      "_uid" : "102147722742332758287",
+      "code1" : "var joueur = prompt();\nfor (int i = 3 ; i <= 100 ; i++)\n\nfor(var i=3; i<=100; i++) {\n\nif(i % 3 == 0 && i % 5 == 0) {\n    console.log('FizzBuzz');\n  } else if(i % 3 == 0) {\n    console.log('Fizz');\n  } else if(i % 5 == 0) {\n    console.log('Buzz');\n  } else {\n    console.log(i);    \n  }\n}\nmultiplication()\nnb * 2 = res\n\nconsole.log(multiplication(3, 100));"
+    },
+    "camille_bournier" : {
+      "_d" : "Tue May 10 2016 14:40:45 GMT+0200 (CEST)",
+      "_t" : 1462884045338,
+      "_uid" : "107741489064753039193",
+      "code1" : "var nb = prompt(\"choisir un nombre\")\nvar res = nb*2\n\nconsole.log(res)\n\nfor (var i=4; i<101; i++) {\n    console.log(nb*i);\n}\n"
+    },
+    "celine_meme" : {
+      "_d" : "Tue May 10 2016 14:38:41 GMT+0200 (CEST)",
+      "_t" : 1462883921847,
+      "_uid" : "105851694432543357504",
+      "code1" : "\nfunction multiplication(){nb=prompt();\n   for (i=3;i<=100;i++){console.log(nb * i)}\n}"
+    },
+    "charles_guignard" : {
+      "_d" : "Tue May 10 2016 14:31:21 GMT+0200 (CEST)",
+      "_t" : 1462883482239,
+      "_uid" : "106260878910256496020",
+      "code1" : "prompt ()\nfor (var i = 1; i <= 199; i++) {\n    console.log(i);\n        if (var i = i*2 == res)\n}"
+    },
+    "fabien_schneiter" : {
+      "_d" : "Tue May 10 2016 14:38:27 GMT+0200 (CEST)",
+      "_t" : 1462883907385,
+      "_uid" : "100322773186257825155",
+      "code1" : "var nb = prompt('Veuillez saisir un nombre');\nvar res = nb * 2;\nconsole.log(nb + ' * 2 = ' + res);\nfor (var coef=5 ; coef<=100 ; coef++) {\n  console.log(nb + ' * ' + coef + ' = ' + nb * coef);\n}"
+    },
+    "francois_gorgerin" : {
+      "_d" : "Tue May 10 2016 14:41:12 GMT+0200",
+      "_t" : 1462884072495,
+      "_uid" : "106576109926142604675",
+      "code1" : "var x = prompt();\nvar res = x * 2;\nfor(var i = 3 ; i < 101){\n\tconsole.log(res);\n\tres = x * i;\n\ti++;\n}"
+    },
+    "hadrien_bauville" : {
+      "_d" : "Tue May 10 2016 14:38:21 GMT+0200 (Paris, Madrid (heure d’été))",
+      "_t" : 1462883898749,
+      "_uid" : "105686855929419458563",
+      "code1" : "var nb = prompt('Veuillez saisir un nombre');\nvar res = nb * 2;\nconsole.log(nb + ' * 2 = ' + res);\nfor (var coef=4 ; coef<=100 ; coef++) {\n  console.log(nb + ' * ' + coef + ' = ' + nb * coef);\n}"
+    },
+    "hugo_paradiso" : {
+      "_d" : "Tue May 10 2016 14:33:10 GMT+0200 (Paris, Madrid (heure d’été))",
+      "_t" : 1462883620139,
+      "_uid" : "115852772576547459643",
+      "code1" : "\nfunction multiplier(nombre)\n{\nvar i;\nfor (i=0; i<=100; i++) {\nresultat=nombre*i;\ndocument.write(nombre+\" x \"+i+\"=\"+nombre*i+\"\");}\n}\t\t\t\t\t  \nnombre=window.prompt(\"Entrez le numéro de la table:\",\"Saisir un entier ici\");\nmultiplier(nombre);"
+    },
+    "kevin_wu" : {
+      "_d" : "Tue May 10 2016 14:39:49 GMT+0200 (CEST)",
+      "_t" : 1462883989583,
+      "_uid" : "116179280031821926883",
+      "code1" : "var nb = prompt('Veuillez saisir un nombre');\nvar res = nb * 2;\nconsole.log(nb + ' * 2 = ' + res);\nfor (var coef=4 ; coef<=100 ; coef++) {\n  console.log(nb + ' * ' + coef + ' = ' + nb * coef);\n}"
+    },
+    "laurene_lodter" : {
+      "_d" : "Tue May 10 2016 14:40:11 GMT+0200 (CEST)",
+      "_t" : 1462884011923,
+      "_uid" : "114347809722429019984",
+      "code1" : "var nb = prompt('Veuillez saisir un nombre');\nvar res = nb * 2;\nconsole.log(nb + ' * 2 = ' + res);\nfor (var coef=4 ; coef<=100 ; coef++) {\n  console.log(nb + ' * ' + coef + ' = ' + nb * coef);\n}\nfunction Nom_De_La_Fonction(multiplier) {\nconsole.log(multiplier(nb, coef));\n}"
+    },
+    "leon_lapotre" : {
+      "_d" : "Tue May 10 2016 14:41:05 GMT+0200",
+      "_t" : 1462884065283,
+      "_uid" : "103659140839603503174",
+      "code1" : " function fois2() {\n       var res = prompt(\"Saisisez un nombre\")\n       console.log()"
+    },
+    "marine_bourgeois" : {
+      "_d" : "Tue May 10 2016 14:41:07 GMT+0200 (CEST)",
+      "_t" : 1462884067073,
+      "_uid" : "106016122078624523322",
+      "code1" : "nb=prompt()\nres=nb*2\nfor(i=2;i<=10;i++){\nconsole.log(res)\n}"
+    },
+    "norman_villaret" : {
+      "_d" : "Tue May 10 2016 14:40:44 GMT+0200 (Paris, Madrid (heure d’été))",
+      "_t" : 1462884044917,
+      "_uid" : "100212266235788964177",
+      "code1" : "var ordi = Math.floor(1+ Math.random() * 100);\nalert('ordi:' + ordi);\n\n\nfor (var i=0; i<1000; i++) {\n  var joueur = prompt();\n  console.log('joueur:', joueur);\n  if(joueur > 1) {\n    console.log(joueur * 2);\n  } else if(joueur < 1) {\n    console.log(\"entrer un chiffre\");\n \n    break;\n    //return;    \n  }\n  if(i == 400) {\n    console.log('game over!');\n  }\n}\n"
+    },
+    "victor_delafouchardiere" : {
+      "_d" : "Tue May 10 2016 14:40:13 GMT+0200 (Paris, Madrid (heure d’été))",
+      "_t" : 1462884015927,
+      "_uid" : "115196211086729181863",
+      "code1" : "var nb = prompt('Veuillez saisir un nombre');\nvar res = nb * 2;\nconsole.log(nb + ' * 2 = ' + res);\nfor (var coef=5 ; coef<=100 ; coef++) {\n  console.log(nb + ' * ' + coef + ' = ' + nb * coef);\n}"
+    }
+  }
+}

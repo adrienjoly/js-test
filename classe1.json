@@ -1,0 +1,125 @@
+{
+  "active" : 0,
+  "submissions" : {
+    "adrien_jourdier" : {
+      "_d" : "Tue May 10 2016 16:56:52 GMT+0200 (Paris, Madrid (heure d’été))",
+      "_t" : 1462892220188,
+      "_uid" : "116372307368767833451",
+      "code1" : "prompt();\nvar res = 4 * 4;\nfor(var nbmultiplie=4; nbmultiplie <=100; nbmultiplie++){console.log(res)}"
+    },
+    "alicia_djaffar" : {
+      "_d" : "Tue May 10 2016 16:56:20 GMT+0200 (CEST)",
+      "_t" : 1462892181523,
+      "_uid" : "106518625043392065922",
+      "code1" : "var nb = prompt('Veuillez saisir un nombre !');\nvar res = nb * 2;\nconsole.log(nb + ' * 2 = ' + res);\nfor (var coef=4 ; coef<=100 ; coef++) {\nconsole.log(nb + ' * ' + coef + ' = ' + nb * coef);\n}\nfunction name(multiplier) {\nconsole.log(multiplier(nb, coef));\n}"
+    },
+    "arnaud_juillet" : {
+      "_d" : "Tue May 10 2016 16:56:08 GMT+0200 (Paris, Madrid (heure d’été))",
+      "_t" : 1462892164599,
+      "_uid" : "113490061445927907956",
+      "code1" : "var nb = prompt ('Saisissez un nombre');\nvar res = nb * 2;\n\tconsole.log(nb + ' 2 = ' + res);\n\nfor (var coef=5 ; coef<=100 ; coef++) \n{\n\tconsole.log(nb + ' * ' + coef + ' = ' + nb * coef);\n}\n\nfunction multi() \n{\n\tconsole.log(multi(nb, coef));\n}"
+    },
+    "aurele_christ" : {
+      "_d" : "Tue May 10 2016 16:56:48 GMT+0200 (Paris, Madrid (heure d’été))",
+      "_t" : 1462892232620,
+      "_uid" : "109254081457830462271",
+      "code1" : "var nb = prompt(\"Veuillez Saisir un nombre)\nvar res = nb * 2\nconsole.log(res)\nfor (i=0; i<4; i+=4)"
+    },
+    "caroline_auclair" : {
+      "_d" : "Tue May 10 2016 16:50:20 GMT+0200 (Paris, Madrid (heure d’été))",
+      "_t" : 1462891822086,
+      "_uid" : "111413917136628350156",
+      "code1" : "var nb = prompt('Saisissez un chiffre');\nvar res = nb * 2;\nconsole.log(nb + ' * 2 = ' + res);\nfor (var coef=5 ; coef<=100 ; coef++) {\nconsole.log(nb + ' * ' + coef + ' = ' + nb * coef);\n}\nfunction multi(){\nconsole.log(multi(nb, coef));\n}"
+    },
+    "christopher_amega" : {
+      "_d" : "Tue May 10 2016 16:56:56 GMT+0200 (Paris, Madrid (heure d’été))",
+      "_t" : 1462892219135,
+      "_uid" : "108905198213282127834",
+      "code1" : "var nb = prompt('Saisissez un nombre');\nvar res = nb * 2;\nconsole.log(nb + ' * 2 = ' + res);\nfor (var coef=3; coef<=100; coef++) {\nconsole.log(nb + ' * ' + coef + ' = ' + nb * coef);\n}\n"
+    },
+    "jean_barbier" : {
+      "_d" : "Tue May 10 2016 16:56:24 GMT+0200 (CEST)",
+      "_t" : 1462892184305,
+      "_uid" : "100839646955107672412",
+      "code1" : "var nb = prompt ('saisissez un nombre');\nvar res = nb * 2;\nconsole.log (nb + '' * 2 = ''+ res);\nfor (var  coef = 4 ; coef <= 100 ; coef++) {\n\n}"
+    },
+    "jordan_martins" : {
+      "_d" : "Tue May 10 2016 16:57:12 GMT+0200 (Paris, Madrid (heure d’été))",
+      "_t" : 1462892235052,
+      "_uid" : "102560048735619978819",
+      "code1" : "var nb = prompt('tu doit saisir un nombre svp');\nvar res = nb * 2;\nconsole.log(nb + ' * 2 = ' + res);\n\nfor (var coef=3 ; coef<=100 ; coef++) {\nconsole.log(nb + ' * ' + coef + ' = ' + nb * coef);\n}\n\nfunction multiplication() {\nconsole.log(multiplication(nb, coef));\n}"
+    },
+    "laurent_maximin" : {
+      "_d" : "Tue May 10 2016 16:56:51 GMT+0200 (CEST)",
+      "_t" : 1462892213099,
+      "_uid" : "103631253150006969014",
+      "code1" : "var nb = prompt('Veuillez saisir un nombre');\n\nvar res = nb * 2;\nconsole.log(nb + ' * 2 = ' + res);\n\nfor (var coef=5 ; coef<=100 ; coef++) {\nconsole.log(nb + ' * ' + coef + ' = ' + nb * coef);\n}\n\nfunction multi(nb, coef) {\nconsole.log(nb + ' * ' + coef + ' = ' + nb * coef);\n}\n\nfor (var coef=5 ; coef<=100 ; coef++) {\nconsole.log(multi(nb, coef));\n}\n"
+    },
+    "lucie_albira" : {
+      "_d" : "Tue May 10 2016 16:57:17 GMT+0200 (CEST)",
+      "_t" : 1462892237848,
+      "_uid" : "101607002944537809899",
+      "code1" : "var nb = prompt('Saisissez un nombre');\nvar res = nb * 2;\n\nconsole.log(nb + ' * 2 = ' + res);\nfor (var coef=4 ; coef<=100 ; coef++) {\nconsole.log(nb + ' * ' + coef + ' = ' + nb * coef);\n}\n\nfunction multi(multiplier) {\nconsole.log(multi(nb, coef));\n}"
+    },
+    "nicolas_gerbault" : {
+      "_d" : "Tue May 10 2016 16:56:20 GMT+0200 (Paris, Madrid (heure d’été))",
+      "_t" : 1462892180721,
+      "_uid" : "104803018614623792428",
+      "code1" : "var nb = prompt('Saisir un nombre');\nvar res = nb * 2;\nconsole.log(nb + ' * 2 = ' + res);\nfor (var coef=4 ; coef<=100 ; coef++)\n{\n  console.log(nb + ' * ' + coef + ' = ' + nb * coef);\n}"
+    },
+    "nina_pellan" : {
+      "_d" : "Tue May 10 2016 16:55:45 GMT+0200",
+      "_t" : 1462892150185,
+      "_uid" : "100833687235566341431",
+      "code1" : "var nb = prompt('Veuillez saisir un nombre');\nvar res = nb * 2;\nconsole.log(nb + ' * 2 = ' + res);\nfor (var coef=4 ; coef<=100 ; coef++) {\nconsole.log(nb + ' * ' + coef + ' = ' + nb * coef);\n}\nfunction nom_Fonction(multiplier) {\nconsole.log(multiplier(nb, coef));\n}"
+    },
+    "paul_ray" : {
+      "_d" : "Tue May 10 2016 16:54:34 GMT+0200 (Paris, Madrid (heure d’été))",
+      "_t" : 1462892223626,
+      "_uid" : "117441267682820388698",
+      "code1" : "var nb = prompt('Veuillez saisir un nombre');\nvar res = nb * 2;\nconsole.log(nb + ' * 2 = ' + res);\nfor (var coef=4 ; coef<=100 ; coef++) {\n  console.log(nb + ' * ' + coef + ' = ' + nb * coef);\n}\nfunction nom_Fonction(multiplier) {\nconsole.log(multiplier(nb, coef));\n}"
+    },
+    "remi_alvarez_franco" : {
+      "_d" : "Tue May 10 2016 16:56:18 GMT+0200 (Paris, Madrid (heure d’été))",
+      "_t" : 1462892173957,
+      "_uid" : "107661820303365152078",
+      "code1" : "var nb = prompt('Veuillez saisir le nombre à multiplier');\nvar res = nb * 2;\nconsole.log(nb + ' * 2 = ' + res);\nfor (var coef=4 ; coef<=100 ; coef++) {\nconsole.log(nb + ' * ' + coef + ' = ' + nb * coef);\n}\nfunction multi() {\nconsole.log(multi(nb, coef));\n}"
+    },
+    "rodrigue_coail" : {
+      "_d" : "Tue May 10 2016 16:55:11 GMT+0200 (Paris, Madrid (heure d’été))",
+      "_t" : 1462892116338,
+      "_uid" : "112837382688102224023",
+      "code1" : "var nb = prompt(\"Veuillez saisir le nombre de votre choix :\");\nvar res;\nvar i;\nfor (i=4; i<=100; i++){\n  res = nb*i;\n  console.log(nb + \" * \" + i + \" = \" + res)\n}\n"
+    },
+    "samy_announ" : {
+      "_d" : "Tue May 10 2016 16:56:17 GMT+0200 (Paris, Madrid (heure d’été))",
+      "_t" : 1462892182712,
+      "_uid" : "115861581274490603829",
+      "code1" : "var nb = prompt('veuillez saisir un nombre')\nvar res = nb * 2\nconsole.log (nb + ' * 2 = ' res );\nfor (var coef = 4 ; coef<=100 ; coef++)\n "
+    },
+    "sarah_cohen" : {
+      "_d" : "Tue May 10 2016 16:56:30 GMT+0200 (CEST)",
+      "_t" : 1462892190470,
+      "_uid" : "105264193742863490620",
+      "code1" : "var nb = prompt('Saisir un nombre');\nvar res = nb * 2;\nconsole.log(nb + ' * 2 = ' + res);\nfor (var coef=4 ; coef<=100 ; coef++) {\n  console.log(nb + ' * ' + coef + ' = ' + nb * coef);\n}\nfunction nom_Fonction(multiplier) {\nconsole.log(multiplier(nb, coef));\n}"
+    },
+    "savinien_maire" : {
+      "_d" : "Tue May 10 2016 16:57:07 GMT+0200 (CEST)",
+      "_t" : 1462892227444,
+      "_uid" : "108003350025924655784",
+      "code1" : "var nb = prompt(\"Tappez un nombre\");\nvar coef = 5;\n\nconsole.log(multi(nb, coef));\n\nfunction multi(nb, coef){\n  for (coef; coef <= 100; coef++){\n    var res = nb * coef;\n    console.log(nb + \" * \" + coef + \" = \" + res);\n  }  \n}"
+    },
+    "simon_chotard" : {
+      "_d" : "Tue May 10 2016 16:56:08 GMT+0200 (Paris, Madrid (heure d’été))",
+      "_t" : 1462892175369,
+      "_uid" : "114981914867023607521",
+      "code1" : "var nb = prompt('Veuillez saisir un nombre');\nvar res = nb * 2;\nconsole.log(nb + ' * 2 = ' + res);\nfor (var coef = 4 ; coef<101 ; coef++) {\nconsole.log(nb + ' * ' + coef + ' = ' + nb * coef);\n}\nfunction multiplication (multiplier) {\nconsole.log(multiplier(nb, coef));\n}"
+    },
+    "tess_tilmont" : {
+      "_d" : "Tue May 10 2016 16:56:53 GMT+0200 (Paris, Madrid (heure d’été))",
+      "_t" : 1462892215747,
+      "_uid" : "111457311246491113843",
+      "code1" : "  var nb = prompt(),\n      res = nb * 2;\n  console.log(nb + ' * 2 = ' + res);\n\n  for(var i=4; i<101; i++) {\n    var result= nb * i;\n    console.log(nb +' * '+ i +' = '+ result);\n  } "
+    }
+  }
+}
