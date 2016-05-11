@@ -51,6 +51,10 @@ function renderMulti(i, j) {
   return i + ' * ' + j + ' = ' + (i * j);
 }
 
+function errorOr(err, res) {
+  return (err && err.length) > 0 ? ('ERROR: ' + err[0]) : res;
+}
+
 var TESTS = [
 
   /* TEST 1: first line of console depends on prompt() */
@@ -63,7 +67,7 @@ var TESTS = [
       var caseCode = 'var prompt = function(){ return ' + testCase.input + '; };\n' + code;
       testCode(caseCode, function(err, res) {
         var isSolutionValid = (res || [])[0] === testCase.expectedOutput;
-        console.log('[test]', testCase.expectedOutput, '->', (res || [])[0], '=>', isSolutionValid);
+        console.log('[test]', testCase.expectedOutput, '->', errorOr(err, (res || [])[0]), '=>', isSolutionValid);
         caseCallback(null, isSolutionValid);
       });
     }
@@ -88,17 +92,17 @@ var TESTS = [
     function test(testCase, caseCallback) {
       var caseCode = 'var prompt = function(){ return ' + testCase.input + '; };\n' + code;
       testCode(caseCode, function(err, res) {
+        res = res || [ null ];
         var isSolutionValid = JSON.stringify(res.slice(1)) === JSON.stringify(testCase.expectedOutput.slice(1));
         var renderedCase = [
           testCase.expectedOutput[1], // second line
           testCase.expectedOutput[testCase.expectedOutput.length - 1] // last line
         ];
-        res = res || [ null ];
         var renderedAnsw = [
           res[1], // second line
           res[res.length - 1] // last line
         ];
-        console.log('[test]', renderedCase, '->', renderedAnsw, '=>', isSolutionValid);
+        console.log('[test]', renderedCase, '->', errorOr(err, renderedAnsw), '=>', isSolutionValid);
         caseCallback(null, isSolutionValid);
       });
     }
@@ -120,7 +124,7 @@ var TESTS = [
         var res = results.pop(); // last line of console holds the result
         var expected = renderMulti(testCase[0], testCase[1]);
         var isSolutionValid = res == expected;
-        console.log('[test]', expected, '->', res, '=>', isSolutionValid);
+        console.log('[test]', expected, '->', errorOr(err, res), '=>', isSolutionValid);
         caseCallback(null, isSolutionValid);
       });
     }
