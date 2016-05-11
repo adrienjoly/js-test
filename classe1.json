@@ -1,6 +1,18 @@
 {
   "active" : 0,
   "submissions" : {
+    "antoine_blot": {
+      "_uid": "1",
+      "code1": "var nb = prompt('saisissez un nombre');\nvar res = nb * 2;\nconsole.log(nb + '* 2 =' + res);\nfor (var coef = 4 ; coef<101 ; coef++) {\nconsole.log(nb + ' * ' + coef + ' = ' + nb * coef);\n}\nfunction multiplication (multiplier) {\nconsole.log(multiplier(nb, coef));\n}"
+    },
+    "valentin_bernard": {
+      "_uid": "2",
+      "code1": "var nb = prompt(\"saisissez un nombre\");\n\nvar coef = 5;\n\nconsole.log(calc(nb, coef));\n\nfunction calc (nb, coef){\n  for (coef; coef <= 100; coef ++){\n    var res = nb * coef;\n    console.log(nb + \"\")\n  }\n}"
+    },
+    "aurelien_bonnaud": {
+      "_uid": "2",
+      "code1": "var nb = prompt(\"Choisissez un nombre !\")\nvar res = nb * 2\nconsole.log(nb + ' 2 = ' + res)\nfor (var coef=5 ; coef<= 100 ; coef ++){\nconsole.log(nb + ' * ' + coef + ' = ' + nb * coef)\n}"
+    },
     "adrien_jourdier" : {
       "_d" : "Tue May 10 2016 16:56:52 GMT+0200 (Paris, Madrid (heure d’été))",
       "_t" : 1462892220188,

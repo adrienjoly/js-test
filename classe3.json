@@ -101,7 +101,7 @@
       "_d" : "Tue May 10 2016 11:45:35 GMT+0200 (Paris, Madrid (heure d’été))",
       "_t" : 1462873532759,
       "_uid" : "100072992268804705214",
-      "code1" : "var nb = prompt();\n\nfunction multi (nb, coef) {\nvar coef = i;\nfor (i = 5; i < 101; i++) {\nconsole.log(nb + \" * \" + i + \" = \" + nb*i); }\n}\nconsole.log(multi(nb, coef));"
+      "code1" : "var nb = prompt();\nvar i = 0;\nvar coef = i;\nfunction multi (nb, coef) {\nfor (i = 5; i < 101; i++) {\nconsole.log(nb + \" * \" + i + \" = \" + nb*i); }\n}\nconsole.log(multi(nb, coef));"
     },
     "romain_rouleau" : {
       "_d" : "Tue May 10 2016 11:45:05 GMT+0200 (Paris, Madrid (heure d’été))",

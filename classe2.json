@@ -1,6 +1,10 @@
 {
   "active" : 0,
   "submissions" : {
+    "guillaume_amortilla" : {
+      "_uid" : "0",
+      "code1": "var nb;\nvar res;\nnb = prompt();\nres = nb * 2;\nfor(var i=3; i<101; i++){\nconsole.log(nb,'*',i,'=', nb*i)\n}"
+    },
     "adrien_regnaultdemontgon" : {
       "_d" : "Tue May 10 2016 14:37:17 GMT+0200 (CEST)",
       "_t" : 1462883837650,
@@ -59,7 +63,7 @@
       "_d" : "Tue May 10 2016 14:41:12 GMT+0200",
       "_t" : 1462884072495,
       "_uid" : "106576109926142604675",
-      "code1" : "var x = prompt();\nvar res = x * 2;\nfor(var i = 3 ; i < 101){\n\tconsole.log(res);\n\tres = x * i;\n\ti++;\n}"
+      "code1" : "var x = prompt();\nvar res = x * 2;\nfor(var i = 3 ; i < 101){\n    console.log(res);\n    res = x * i;\n    i++;\n}"
     },
     "hadrien_bauville" : {
       "_d" : "Tue May 10 2016 14:38:21 GMT+0200 (Paris, Madrid (heure d’été))",
