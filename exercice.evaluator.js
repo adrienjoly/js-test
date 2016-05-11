@@ -158,7 +158,7 @@ function evaluateStudent(task, callback) {
     var total = _.flatten(res).reduce(sum);
     console.log('=> total STUDENT points:', res, '=', total);
     // csv export of marks:
-    console.log(JSON.stringify([ 'SCORE', task.key, task._uid, variantNumber, total ]));
+    console.log(JSON.stringify([ 'SCORE', task.key, task._uid, variantNumber, total ]).replace(/[\[\]]/g, ''));
     callback();
   });
 }
