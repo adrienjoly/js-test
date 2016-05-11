@@ -41,3 +41,10 @@ How to get student answers:
 - Toggle the `active` property (1 or 0) of your Firebase database to (de-)activate student access to the questionnaire
 - When the test is done, export answers from Firebase dashboard to a `answers.json` file in your local project directory
 - Move `solutions.json` back to your local project directory, then run `node evaluate answers.json solutions.json` to see the score of your students
+
+TODO
+----
+
+- Right after login, initialize student's record in Firebase, in order to know their presence (and id) even if they didn't press the "save" button.
+- Display the last submitted solution after `active` was set to `false`, to confirm that student's submission was taken into account.
+- Allow per-variable variants. => more combinations.
