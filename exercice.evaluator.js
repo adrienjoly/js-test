@@ -2,7 +2,7 @@ var _ = require('lodash');
 var async = require('async');
 var jailed = require('jailed-node');
 
-var TEST_TIMEOUT = 200;
+var TEST_TIMEOUT = 300; // 200 was not enough for one of the tests!
 
 var NB_VARIANTS = 3;
 
