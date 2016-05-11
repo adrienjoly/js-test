@@ -3,5 +3,5 @@
 for f in ./classe*.json;
 do
   echo Reading from $f...
-  node evaluateFile.js $f 2>/dev/null | grep SCORE;
+  node evaluateFile.js $f 2>/dev/null >$f.eval.txt # | grep SCORE;
 done;
