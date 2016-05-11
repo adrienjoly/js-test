@@ -1,12 +1,6 @@
 {
   "active" : 0,
   "submissions" : {
-    "adrien_joly" : {
-      "_d" : "Tue May 10 2016 11:42:37 GMT+0200 (CEST)",
-      "_t" : 1462873357163,
-      "_uid" : "103769591752335079590",
-      "code1" : "var nb = prompt(\"Saisissez le nombre ici\", \"0\");\nvar res = nb * 2;\nconsole.log(nb,'*',2,'=',res);\nfunction multiplication(nb, i){\n  return nb + ' * ' + i + ' = ' + nb * i;\n}\nfor(var i = 3; i <= 100; i++){\n  console.log(multiplication(nb, i));\n}\n"
-    },
     "amel_guellal" : {
       "_d" : "Tue May 10 2016 11:44:52 GMT+0200 (CEST)",
       "_t" : 1462873492833,
@@ -36,12 +30,6 @@
       "_t" : 1462873487029,
       "_uid" : "117863570411837800649",
       "code1" : "prompt(\"Saisir un nombre\");\n\nres = nb * i \nfor (var i=0; 4<i<101; i++){\n  var nb = prompt\n  var res = nb * i \n  console.log = res\n}\n"
-    },
-    "demo_user" : {
-      "_d" : "Mon May 09 2016 08:12:32 GMT+0200 (CEST)",
-      "_t" : 1462774352624,
-      "_uid" : 2,
-      "code1" : "var nb = prompt(\"Saisissez le nombre ici\", \"0\");\nvar res = nb * 2;\nconsole.log(res)\nfor(var i = 5; i <= 100; i++){\nres = nb * i;\nconsole.log(res);\n}"
     },
     "enzo_ferreira" : {
       "_d" : "Tue May 10 2016 11:45:25 GMT+0200 (CEST)",
@@ -126,14 +114,6 @@
       "_t" : 1462873475922,
       "_uid" : "112253427180215337120",
       "code1" : "\tvar nb = prompt('Saisissez un nombre');\n\tvar i = 3;\n\t\n\t\n\tfor (i; i<=100; i++) {\n\t\tvar res = nb * i ;\n\t\tconsole.log(nb+\" * \"+i+\" = \"+res);\n\t}\n\n\tfunction multiplication(nb, coef) {\n\t\tvar res = nb * coef ;\n\t\tconsole.log(nb+\" * \"+coef+\" = \"+res);\n\t}"
-    },
-    "test_user_1" : {
-      "_uid" : 1,
-      "code1" : "var nb = prompt();\nconsole.log(nb, '* 2 =', nb * 2);\nfor (var i=3; i<=5; ++i) console.log(nb, '*', i, '=', nb * i);"
-    },
-    "test_user_2" : {
-      "_uid" : 1,
-      "code1" : "function multi(i, j) { return i + ' * ' + j + ' = ' + (i * j); } var nb = prompt(); console.log(nb, '* 2 =', nb * 2); for (var i=3; i<=100; ++i) console.log(multi(nb, i));"
     }
   }
 }
