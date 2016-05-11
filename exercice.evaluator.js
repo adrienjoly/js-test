@@ -88,7 +88,7 @@ var TESTS = [
     function test(testCase, caseCallback) {
       var caseCode = 'var prompt = function(){ return ' + testCase.input + '; };\n' + code;
       testCode(caseCode, function(err, res) {
-        var isSolutionValid = JSON.stringify(res) === JSON.stringify(testCase.expectedOutput);
+        var isSolutionValid = JSON.stringify(res.slice(1)) === JSON.stringify(testCase.expectedOutput.slice(1));
         var renderedCase = [
           testCase.expectedOutput[1], // second line
           testCase.expectedOutput[testCase.expectedOutput.length - 1] // last line

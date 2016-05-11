@@ -15,9 +15,9 @@ console.log(multiplier(nb, coef));
 ---
 [test] 4 * 2 = 8 -> 4* 2 =8 => false
 [test] 5 * 2 = 10 -> 5* 2 =10 => false
-[test] [ '4 * 4 = 16', '4 * 100 = 400' ] -> [ '4 * 4 = 16', '4 * 100 = 400' ] => false
-[test] [ '5 * 4 = 20', '5 * 100 = 500' ] -> [ '5 * 4 = 20', '5 * 100 = 500' ] => false
-Wed, 11 May 2016 17:57:01 GMT jailed:sandbox ReferenceError: multiplier is not defined
+[test] [ '4 * 4 = 16', '4 * 100 = 400' ] -> [ '4 * 4 = 16', '4 * 100 = 400' ] => true
+[test] [ '5 * 4 = 20', '5 * 100 = 500' ] -> [ '5 * 4 = 20', '5 * 100 = 500' ] => true
+Wed, 11 May 2016 18:06:58 GMT jailed:sandbox ReferenceError: multiplier is not defined
     at DYNAMIC PLUGIN:13:13
     at ContextifyScript.Script.runInNewContext (vm.js:18:15)
     at Object.exports.runInNewContext (vm.js:49:17)
@@ -29,7 +29,7 @@ Wed, 11 May 2016 17:57:01 GMT jailed:sandbox ReferenceError: multiplier is not d
     at handleMessage (internal/child_process.js:686:10)
     at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] -1 * 1 = -1 -> undefined * 100 = NaN => false
-Wed, 11 May 2016 17:57:01 GMT jailed:sandbox ReferenceError: multiplier is not defined
+Wed, 11 May 2016 18:06:58 GMT jailed:sandbox ReferenceError: multiplier is not defined
     at DYNAMIC PLUGIN:13:13
     at ContextifyScript.Script.runInNewContext (vm.js:18:15)
     at Object.exports.runInNewContext (vm.js:49:17)
@@ -41,8 +41,8 @@ Wed, 11 May 2016 17:57:01 GMT jailed:sandbox ReferenceError: multiplier is not d
     at handleMessage (internal/child_process.js:686:10)
     at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] 12 * 33 = 396 -> undefined * 100 = NaN => false
-=> total STUDENT points: [ 0, 0, 0 ] = 0
-"SCORE","antoine_blot","1",1,0
+=> total STUDENT points: [ 0, 2, 0 ] = 2
+"SCORE","antoine_blot","1",1,2
 
 ===
 STUDENT valentin_bernard (2 => 2) :
@@ -64,7 +64,7 @@ function calc (nb, coef){
 [test] 5 * 2 = 10 -> 5 => false
 [test] [ '4 * 5 = 20', '4 * 100 = 400' ] -> [ '4', '' ] => false
 [test] [ '5 * 5 = 25', '5 * 100 = 500' ] -> [ '5', '' ] => false
-Wed, 11 May 2016 17:57:03 GMT jailed:sandbox ReferenceError: multi is not defined
+Wed, 11 May 2016 18:07:00 GMT jailed:sandbox ReferenceError: multi is not defined
     at DYNAMIC PLUGIN:16:13
     at ContextifyScript.Script.runInNewContext (vm.js:18:15)
     at Object.exports.runInNewContext (vm.js:49:17)
@@ -76,7 +76,7 @@ Wed, 11 May 2016 17:57:03 GMT jailed:sandbox ReferenceError: multi is not define
     at handleMessage (internal/child_process.js:686:10)
     at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] -1 * 1 = -1 ->  => false
-Wed, 11 May 2016 17:57:03 GMT jailed:sandbox ReferenceError: multi is not defined
+Wed, 11 May 2016 18:07:00 GMT jailed:sandbox ReferenceError: multi is not defined
     at DYNAMIC PLUGIN:16:13
     at ContextifyScript.Script.runInNewContext (vm.js:18:15)
     at Object.exports.runInNewContext (vm.js:49:17)
@@ -103,9 +103,9 @@ console.log(nb + ' * ' + coef + ' = ' + nb * coef)
 ---
 [test] 4 * 2 = 8 -> 4 2 = 8 => false
 [test] 5 * 2 = 10 -> 5 2 = 10 => false
-[test] [ '4 * 5 = 20', '4 * 100 = 400' ] -> [ '4 * 5 = 20', '4 * 100 = 400' ] => false
-[test] [ '5 * 5 = 25', '5 * 100 = 500' ] -> [ '5 * 5 = 25', '5 * 100 = 500' ] => false
-Wed, 11 May 2016 17:57:05 GMT jailed:sandbox ReferenceError: multi is not defined
+[test] [ '4 * 5 = 20', '4 * 100 = 400' ] -> [ '4 * 5 = 20', '4 * 100 = 400' ] => true
+[test] [ '5 * 5 = 25', '5 * 100 = 500' ] -> [ '5 * 5 = 25', '5 * 100 = 500' ] => true
+Wed, 11 May 2016 18:07:02 GMT jailed:sandbox ReferenceError: multi is not defined
     at DYNAMIC PLUGIN:10:13
     at ContextifyScript.Script.runInNewContext (vm.js:18:15)
     at Object.exports.runInNewContext (vm.js:49:17)
@@ -117,7 +117,7 @@ Wed, 11 May 2016 17:57:05 GMT jailed:sandbox ReferenceError: multi is not define
     at handleMessage (internal/child_process.js:686:10)
     at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] -1 * 1 = -1 -> undefined * 100 = NaN => false
-Wed, 11 May 2016 17:57:05 GMT jailed:sandbox ReferenceError: multi is not defined
+Wed, 11 May 2016 18:07:02 GMT jailed:sandbox ReferenceError: multi is not defined
     at DYNAMIC PLUGIN:10:13
     at ContextifyScript.Script.runInNewContext (vm.js:18:15)
     at Object.exports.runInNewContext (vm.js:49:17)
@@ -129,8 +129,8 @@ Wed, 11 May 2016 17:57:05 GMT jailed:sandbox ReferenceError: multi is not define
     at handleMessage (internal/child_process.js:686:10)
     at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] 12 * 33 = 396 -> undefined * 100 = NaN => false
-=> total STUDENT points: [ 0, 0, 0 ] = 0
-"SCORE","aurelien_bonnaud","2",2,0
+=> total STUDENT points: [ 0, 2, 0 ] = 2
+"SCORE","aurelien_bonnaud","2",2,2
 
 ===
 STUDENT adrien_jourdier (116372307368767833451 => 1) :
@@ -143,7 +143,7 @@ for(var nbmultiplie=4; nbmultiplie <=100; nbmultiplie++){console.log(res)}
 [test] 5 * 2 = 10 -> 16 => false
 [test] [ '4 * 4 = 16', '4 * 100 = 400' ] -> [ '16', '16' ] => false
 [test] [ '5 * 4 = 20', '5 * 100 = 500' ] -> [ '16', '16' ] => false
-Wed, 11 May 2016 17:57:06 GMT jailed:sandbox ReferenceError: multiplier is not defined
+Wed, 11 May 2016 18:07:04 GMT jailed:sandbox ReferenceError: multiplier is not defined
     at DYNAMIC PLUGIN:7:13
     at ContextifyScript.Script.runInNewContext (vm.js:18:15)
     at Object.exports.runInNewContext (vm.js:49:17)
@@ -155,7 +155,7 @@ Wed, 11 May 2016 17:57:06 GMT jailed:sandbox ReferenceError: multiplier is not d
     at handleMessage (internal/child_process.js:686:10)
     at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] -1 * 1 = -1 -> 16 => false
-Wed, 11 May 2016 17:57:07 GMT jailed:sandbox ReferenceError: multiplier is not defined
+Wed, 11 May 2016 18:07:04 GMT jailed:sandbox ReferenceError: multiplier is not defined
     at DYNAMIC PLUGIN:7:13
     at ContextifyScript.Script.runInNewContext (vm.js:18:15)
     at Object.exports.runInNewContext (vm.js:49:17)
@@ -187,7 +187,7 @@ console.log(multiplier(nb, coef));
 [test] 5 * 2 = 10 -> 5 * 2 = 10 => true
 [test] [ '4 * 4 = 16', '4 * 100 = 400' ] -> [ '4 * 4 = 16', '4 * 100 = 400' ] => true
 [test] [ '5 * 4 = 20', '5 * 100 = 500' ] -> [ '5 * 4 = 20', '5 * 100 = 500' ] => true
-Wed, 11 May 2016 17:57:08 GMT jailed:sandbox ReferenceError: multiplier is not defined
+Wed, 11 May 2016 18:07:05 GMT jailed:sandbox ReferenceError: multiplier is not defined
     at DYNAMIC PLUGIN:13:13
     at ContextifyScript.Script.runInNewContext (vm.js:18:15)
     at Object.exports.runInNewContext (vm.js:49:17)
@@ -199,7 +199,7 @@ Wed, 11 May 2016 17:57:08 GMT jailed:sandbox ReferenceError: multiplier is not d
     at handleMessage (internal/child_process.js:686:10)
     at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] -1 * 1 = -1 -> undefined * 100 = NaN => false
-Wed, 11 May 2016 17:57:09 GMT jailed:sandbox ReferenceError: multiplier is not defined
+Wed, 11 May 2016 18:07:06 GMT jailed:sandbox ReferenceError: multiplier is not defined
     at DYNAMIC PLUGIN:13:13
     at ContextifyScript.Script.runInNewContext (vm.js:18:15)
     at Object.exports.runInNewContext (vm.js:49:17)
@@ -233,9 +233,9 @@ function multi()
 ---
 [test] 4 * 2 = 8 -> 4 2 = 8 => false
 [test] 5 * 2 = 10 -> 5 2 = 10 => false
-[test] [ '4 * 5 = 20', '4 * 100 = 400' ] -> [ '4 * 5 = 20', '4 * 100 = 400' ] => false
-[test] [ '5 * 5 = 25', '5 * 100 = 500' ] -> [ '5 * 5 = 25', '5 * 100 = 500' ] => false
-Wed, 11 May 2016 17:57:10 GMT jailed:sandbox RangeError: Maximum call stack size exceeded
+[test] [ '4 * 5 = 20', '4 * 100 = 400' ] -> [ '4 * 5 = 20', '4 * 100 = 400' ] => true
+[test] [ '5 * 5 = 25', '5 * 100 = 500' ] -> [ '5 * 5 = 25', '5 * 100 = 500' ] => true
+Wed, 11 May 2016 18:07:07 GMT jailed:sandbox RangeError: Maximum call stack size exceeded
     at multi (DYNAMIC PLUGIN:13:15)
     at multi (DYNAMIC PLUGIN:15:14)
     at multi (DYNAMIC PLUGIN:15:14)
@@ -247,7 +247,7 @@ Wed, 11 May 2016 17:57:10 GMT jailed:sandbox RangeError: Maximum call stack size
     at multi (DYNAMIC PLUGIN:15:14)
     at multi (DYNAMIC PLUGIN:15:14)
 [test] -1 * 1 = -1 -> undefined * 100 = NaN => false
-Wed, 11 May 2016 17:57:10 GMT jailed:sandbox RangeError: Maximum call stack size exceeded
+Wed, 11 May 2016 18:07:08 GMT jailed:sandbox RangeError: Maximum call stack size exceeded
     at multi (DYNAMIC PLUGIN:13:15)
     at multi (DYNAMIC PLUGIN:15:14)
     at multi (DYNAMIC PLUGIN:15:14)
@@ -259,8 +259,8 @@ Wed, 11 May 2016 17:57:10 GMT jailed:sandbox RangeError: Maximum call stack size
     at multi (DYNAMIC PLUGIN:15:14)
     at multi (DYNAMIC PLUGIN:15:14)
 [test] 12 * 33 = 396 -> undefined * 100 = NaN => false
-=> total STUDENT points: [ 0, 0, 0 ] = 0
-"SCORE","arnaud_juillet","113490061445927907956",2,0
+=> total STUDENT points: [ 0, 2, 0 ] = 2
+"SCORE","arnaud_juillet","113490061445927907956",2,2
 
 ===
 STUDENT aurele_christ (109254081457830462271 => 1) :
@@ -270,7 +270,7 @@ var res = nb * 2
 console.log(res)
 for (i=0; i<4; i+=4)
 ---
-Wed, 11 May 2016 17:57:11 GMT jailed:sandbox SyntaxError: Unexpected token ILLEGAL
+Wed, 11 May 2016 18:07:08 GMT jailed:sandbox SyntaxError: Unexpected token ILLEGAL
     at Object.exports.runInNewContext (vm.js:48:16)
     at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
     at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
@@ -280,7 +280,7 @@ Wed, 11 May 2016 17:57:11 GMT jailed:sandbox SyntaxError: Unexpected token ILLEG
     at handleMessage (internal/child_process.js:686:10)
     at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] 4 * 2 = 8 -> undefined => false
-Wed, 11 May 2016 17:57:11 GMT jailed:sandbox SyntaxError: Unexpected token ILLEGAL
+Wed, 11 May 2016 18:07:08 GMT jailed:sandbox SyntaxError: Unexpected token ILLEGAL
     at Object.exports.runInNewContext (vm.js:48:16)
     at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
     at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
@@ -290,7 +290,7 @@ Wed, 11 May 2016 17:57:11 GMT jailed:sandbox SyntaxError: Unexpected token ILLEG
     at handleMessage (internal/child_process.js:686:10)
     at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] 5 * 2 = 10 -> undefined => false
-Wed, 11 May 2016 17:57:11 GMT jailed:sandbox SyntaxError: Unexpected token ILLEGAL
+Wed, 11 May 2016 18:07:09 GMT jailed:sandbox SyntaxError: Unexpected token ILLEGAL
     at Object.exports.runInNewContext (vm.js:48:16)
     at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
     at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
@@ -300,7 +300,7 @@ Wed, 11 May 2016 17:57:11 GMT jailed:sandbox SyntaxError: Unexpected token ILLEG
     at handleMessage (internal/child_process.js:686:10)
     at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] [ '4 * 4 = 16', '4 * 100 = 400' ] -> [ undefined, undefined ] => false
-Wed, 11 May 2016 17:57:12 GMT jailed:sandbox SyntaxError: Unexpected token ILLEGAL
+Wed, 11 May 2016 18:07:09 GMT jailed:sandbox SyntaxError: Unexpected token ILLEGAL
     at Object.exports.runInNewContext (vm.js:48:16)
     at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
     at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
@@ -310,7 +310,7 @@ Wed, 11 May 2016 17:57:12 GMT jailed:sandbox SyntaxError: Unexpected token ILLEG
     at handleMessage (internal/child_process.js:686:10)
     at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] [ '5 * 4 = 20', '5 * 100 = 500' ] -> [ undefined, undefined ] => false
-Wed, 11 May 2016 17:57:12 GMT jailed:sandbox SyntaxError: Unexpected token ILLEGAL
+Wed, 11 May 2016 18:07:09 GMT jailed:sandbox SyntaxError: Unexpected token ILLEGAL
     at Object.exports.runInNewContext (vm.js:48:16)
     at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
     at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
@@ -320,7 +320,7 @@ Wed, 11 May 2016 17:57:12 GMT jailed:sandbox SyntaxError: Unexpected token ILLEG
     at handleMessage (internal/child_process.js:686:10)
     at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] -1 * 1 = -1 -> undefined => false
-Wed, 11 May 2016 17:57:12 GMT jailed:sandbox SyntaxError: Unexpected token ILLEGAL
+Wed, 11 May 2016 18:07:09 GMT jailed:sandbox SyntaxError: Unexpected token ILLEGAL
     at Object.exports.runInNewContext (vm.js:48:16)
     at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
     at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
@@ -350,7 +350,7 @@ console.log(multi(nb, coef));
 [test] 5 * 2 = 10 -> 5 * 2 = 10 => true
 [test] [ '4 * 5 = 20', '4 * 100 = 400' ] -> [ '4 * 5 = 20', '4 * 100 = 400' ] => true
 [test] [ '5 * 5 = 25', '5 * 100 = 500' ] -> [ '5 * 5 = 25', '5 * 100 = 500' ] => true
-Wed, 11 May 2016 17:57:14 GMT jailed:sandbox RangeError: Maximum call stack size exceeded
+Wed, 11 May 2016 18:07:11 GMT jailed:sandbox RangeError: Maximum call stack size exceeded
     at multi (DYNAMIC PLUGIN:10:15)
     at multi (DYNAMIC PLUGIN:11:13)
     at multi (DYNAMIC PLUGIN:11:13)
@@ -362,7 +362,7 @@ Wed, 11 May 2016 17:57:14 GMT jailed:sandbox RangeError: Maximum call stack size
     at multi (DYNAMIC PLUGIN:11:13)
     at multi (DYNAMIC PLUGIN:11:13)
 [test] -1 * 1 = -1 -> undefined * 100 = NaN => false
-Wed, 11 May 2016 17:57:14 GMT jailed:sandbox RangeError: Maximum call stack size exceeded
+Wed, 11 May 2016 18:07:11 GMT jailed:sandbox RangeError: Maximum call stack size exceeded
     at multi (DYNAMIC PLUGIN:10:15)
     at multi (DYNAMIC PLUGIN:11:13)
     at multi (DYNAMIC PLUGIN:11:13)
@@ -392,7 +392,7 @@ console.log(nb + ' * ' + coef + ' = ' + nb * coef);
 [test] 5 * 2 = 10 -> 5 * 2 = 10 => true
 [test] [ '4 * 3 = 12', '4 * 100 = 400' ] -> [ '4 * 3 = 12', '4 * 100 = 400' ] => true
 [test] [ '5 * 3 = 15', '5 * 100 = 500' ] -> [ '5 * 3 = 15', '5 * 100 = 500' ] => true
-Wed, 11 May 2016 17:57:16 GMT jailed:sandbox ReferenceError: multiplication is not defined
+Wed, 11 May 2016 18:07:13 GMT jailed:sandbox ReferenceError: multiplication is not defined
     at DYNAMIC PLUGIN:11:13
     at ContextifyScript.Script.runInNewContext (vm.js:18:15)
     at Object.exports.runInNewContext (vm.js:49:17)
@@ -404,7 +404,7 @@ Wed, 11 May 2016 17:57:16 GMT jailed:sandbox ReferenceError: multiplication is n
     at handleMessage (internal/child_process.js:686:10)
     at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] -1 * 1 = -1 -> undefined * 100 = NaN => false
-Wed, 11 May 2016 17:57:16 GMT jailed:sandbox ReferenceError: multiplication is not defined
+Wed, 11 May 2016 18:07:13 GMT jailed:sandbox ReferenceError: multiplication is not defined
     at DYNAMIC PLUGIN:11:13
     at ContextifyScript.Script.runInNewContext (vm.js:18:15)
     at Object.exports.runInNewContext (vm.js:49:17)
@@ -429,7 +429,7 @@ for (var  coef = 4 ; coef <= 100 ; coef++) {
 
 }
 ---
-Wed, 11 May 2016 17:57:16 GMT jailed:sandbox ReferenceError: Invalid left-hand side in assignment
+Wed, 11 May 2016 18:07:13 GMT jailed:sandbox ReferenceError: Invalid left-hand side in assignment
     at Object.exports.runInNewContext (vm.js:48:16)
     at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
     at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
@@ -439,7 +439,7 @@ Wed, 11 May 2016 17:57:16 GMT jailed:sandbox ReferenceError: Invalid left-hand s
     at handleMessage (internal/child_process.js:686:10)
     at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] 4 * 2 = 8 -> undefined => false
-Wed, 11 May 2016 17:57:17 GMT jailed:sandbox ReferenceError: Invalid left-hand side in assignment
+Wed, 11 May 2016 18:07:14 GMT jailed:sandbox ReferenceError: Invalid left-hand side in assignment
     at Object.exports.runInNewContext (vm.js:48:16)
     at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
     at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
@@ -449,7 +449,7 @@ Wed, 11 May 2016 17:57:17 GMT jailed:sandbox ReferenceError: Invalid left-hand s
     at handleMessage (internal/child_process.js:686:10)
     at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] 5 * 2 = 10 -> undefined => false
-Wed, 11 May 2016 17:57:17 GMT jailed:sandbox ReferenceError: Invalid left-hand side in assignment
+Wed, 11 May 2016 18:07:14 GMT jailed:sandbox ReferenceError: Invalid left-hand side in assignment
     at Object.exports.runInNewContext (vm.js:48:16)
     at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
     at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
@@ -459,7 +459,7 @@ Wed, 11 May 2016 17:57:17 GMT jailed:sandbox ReferenceError: Invalid left-hand s
     at handleMessage (internal/child_process.js:686:10)
     at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] [ '4 * 5 = 20', '4 * 100 = 400' ] -> [ undefined, undefined ] => false
-Wed, 11 May 2016 17:57:17 GMT jailed:sandbox ReferenceError: Invalid left-hand side in assignment
+Wed, 11 May 2016 18:07:14 GMT jailed:sandbox ReferenceError: Invalid left-hand side in assignment
     at Object.exports.runInNewContext (vm.js:48:16)
     at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
     at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
@@ -469,7 +469,7 @@ Wed, 11 May 2016 17:57:17 GMT jailed:sandbox ReferenceError: Invalid left-hand s
     at handleMessage (internal/child_process.js:686:10)
     at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] [ '5 * 5 = 25', '5 * 100 = 500' ] -> [ undefined, undefined ] => false
-Wed, 11 May 2016 17:57:18 GMT jailed:sandbox ReferenceError: Invalid left-hand side in assignment
+Wed, 11 May 2016 18:07:15 GMT jailed:sandbox ReferenceError: Invalid left-hand side in assignment
     at Object.exports.runInNewContext (vm.js:48:16)
     at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
     at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
@@ -479,7 +479,7 @@ Wed, 11 May 2016 17:57:18 GMT jailed:sandbox ReferenceError: Invalid left-hand s
     at handleMessage (internal/child_process.js:686:10)
     at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] -1 * 1 = -1 -> undefined => false
-Wed, 11 May 2016 17:57:18 GMT jailed:sandbox ReferenceError: Invalid left-hand side in assignment
+Wed, 11 May 2016 18:07:15 GMT jailed:sandbox ReferenceError: Invalid left-hand side in assignment
     at Object.exports.runInNewContext (vm.js:48:16)
     at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
     at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
@@ -511,7 +511,7 @@ console.log(multiplication(nb, coef));
 [test] 5 * 2 = 10 -> 5 * 2 = 10 => true
 [test] [ '4 * 3 = 12', '4 * 100 = 400' ] -> [ '4 * 3 = 12', '4 * 100 = 400' ] => true
 [test] [ '5 * 3 = 15', '5 * 100 = 500' ] -> [ '5 * 3 = 15', '5 * 100 = 500' ] => true
-Wed, 11 May 2016 17:57:19 GMT jailed:sandbox RangeError: Maximum call stack size exceeded
+Wed, 11 May 2016 18:07:17 GMT jailed:sandbox RangeError: Maximum call stack size exceeded
     at multiplication (DYNAMIC PLUGIN:12:24)
     at multiplication (DYNAMIC PLUGIN:13:13)
     at multiplication (DYNAMIC PLUGIN:13:13)
@@ -523,7 +523,7 @@ Wed, 11 May 2016 17:57:19 GMT jailed:sandbox RangeError: Maximum call stack size
     at multiplication (DYNAMIC PLUGIN:13:13)
     at multiplication (DYNAMIC PLUGIN:13:13)
 [test] -1 * 1 = -1 -> undefined * 100 = NaN => false
-Wed, 11 May 2016 17:57:20 GMT jailed:sandbox RangeError: Maximum call stack size exceeded
+Wed, 11 May 2016 18:07:17 GMT jailed:sandbox RangeError: Maximum call stack size exceeded
     at multiplication (DYNAMIC PLUGIN:12:24)
     at multiplication (DYNAMIC PLUGIN:13:13)
     at multiplication (DYNAMIC PLUGIN:13:13)
@@ -587,7 +587,7 @@ console.log(multi(nb, coef));
 [test] 5 * 2 = 10 -> 5 * 2 = 10 => true
 [test] [ '4 * 5 = 20', '4 * 100 = 400' ] -> [ '4 * 4 = 16', '4 * 100 = 400' ] => false
 [test] [ '5 * 5 = 25', '5 * 100 = 500' ] -> [ '5 * 4 = 20', '5 * 100 = 500' ] => false
-Wed, 11 May 2016 17:57:23 GMT jailed:sandbox RangeError: Maximum call stack size exceeded
+Wed, 11 May 2016 18:07:20 GMT jailed:sandbox RangeError: Maximum call stack size exceeded
     at multi (DYNAMIC PLUGIN:12:15)
     at multi (DYNAMIC PLUGIN:13:13)
     at multi (DYNAMIC PLUGIN:13:13)
@@ -599,7 +599,7 @@ Wed, 11 May 2016 17:57:23 GMT jailed:sandbox RangeError: Maximum call stack size
     at multi (DYNAMIC PLUGIN:13:13)
     at multi (DYNAMIC PLUGIN:13:13)
 [test] -1 * 1 = -1 -> undefined * 100 = NaN => false
-Wed, 11 May 2016 17:57:23 GMT jailed:sandbox RangeError: Maximum call stack size exceeded
+Wed, 11 May 2016 18:07:21 GMT jailed:sandbox RangeError: Maximum call stack size exceeded
     at multi (DYNAMIC PLUGIN:12:15)
     at multi (DYNAMIC PLUGIN:13:13)
     at multi (DYNAMIC PLUGIN:13:13)
@@ -629,7 +629,7 @@ for (var coef=4 ; coef<=100 ; coef++)
 [test] 5 * 2 = 10 -> 5 * 2 = 10 => true
 [test] [ '4 * 4 = 16', '4 * 100 = 400' ] -> [ '4 * 4 = 16', '4 * 100 = 400' ] => true
 [test] [ '5 * 4 = 20', '5 * 100 = 500' ] -> [ '5 * 4 = 20', '5 * 100 = 500' ] => true
-Wed, 11 May 2016 17:57:25 GMT jailed:sandbox ReferenceError: multiplier is not defined
+Wed, 11 May 2016 18:07:22 GMT jailed:sandbox ReferenceError: multiplier is not defined
     at DYNAMIC PLUGIN:11:13
     at ContextifyScript.Script.runInNewContext (vm.js:18:15)
     at Object.exports.runInNewContext (vm.js:49:17)
@@ -641,7 +641,7 @@ Wed, 11 May 2016 17:57:25 GMT jailed:sandbox ReferenceError: multiplier is not d
     at handleMessage (internal/child_process.js:686:10)
     at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] -1 * 1 = -1 -> undefined * 100 = NaN => false
-Wed, 11 May 2016 17:57:25 GMT jailed:sandbox ReferenceError: multiplier is not defined
+Wed, 11 May 2016 18:07:22 GMT jailed:sandbox ReferenceError: multiplier is not defined
     at DYNAMIC PLUGIN:11:13
     at ContextifyScript.Script.runInNewContext (vm.js:18:15)
     at Object.exports.runInNewContext (vm.js:49:17)
@@ -673,7 +673,7 @@ console.log(multiplier(nb, coef));
 [test] 5 * 2 = 10 -> 5 * 2 = 10 => true
 [test] [ '4 * 4 = 16', '4 * 100 = 400' ] -> [ '4 * 4 = 16', '4 * 100 = 400' ] => true
 [test] [ '5 * 4 = 20', '5 * 100 = 500' ] -> [ '5 * 4 = 20', '5 * 100 = 500' ] => true
-Wed, 11 May 2016 17:57:27 GMT jailed:sandbox ReferenceError: multiplier is not defined
+Wed, 11 May 2016 18:07:24 GMT jailed:sandbox ReferenceError: multiplier is not defined
     at DYNAMIC PLUGIN:13:13
     at ContextifyScript.Script.runInNewContext (vm.js:18:15)
     at Object.exports.runInNewContext (vm.js:49:17)
@@ -685,7 +685,7 @@ Wed, 11 May 2016 17:57:27 GMT jailed:sandbox ReferenceError: multiplier is not d
     at handleMessage (internal/child_process.js:686:10)
     at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] -1 * 1 = -1 -> undefined * 100 = NaN => false
-Wed, 11 May 2016 17:57:27 GMT jailed:sandbox ReferenceError: multiplier is not defined
+Wed, 11 May 2016 18:07:24 GMT jailed:sandbox ReferenceError: multiplier is not defined
     at DYNAMIC PLUGIN:13:13
     at ContextifyScript.Script.runInNewContext (vm.js:18:15)
     at Object.exports.runInNewContext (vm.js:49:17)
@@ -717,7 +717,7 @@ console.log(multiplier(nb, coef));
 [test] 5 * 2 = 10 -> 5 * 2 = 10 => true
 [test] [ '4 * 5 = 20', '4 * 100 = 400' ] -> [ '4 * 4 = 16', '4 * 100 = 400' ] => false
 [test] [ '5 * 5 = 25', '5 * 100 = 500' ] -> [ '5 * 4 = 20', '5 * 100 = 500' ] => false
-Wed, 11 May 2016 17:57:29 GMT jailed:sandbox ReferenceError: multi is not defined
+Wed, 11 May 2016 18:07:26 GMT jailed:sandbox ReferenceError: multi is not defined
     at DYNAMIC PLUGIN:13:13
     at ContextifyScript.Script.runInNewContext (vm.js:18:15)
     at Object.exports.runInNewContext (vm.js:49:17)
@@ -729,7 +729,7 @@ Wed, 11 May 2016 17:57:29 GMT jailed:sandbox ReferenceError: multi is not define
     at handleMessage (internal/child_process.js:686:10)
     at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] -1 * 1 = -1 -> undefined * 100 = NaN => false
-Wed, 11 May 2016 17:57:29 GMT jailed:sandbox ReferenceError: multi is not defined
+Wed, 11 May 2016 18:07:26 GMT jailed:sandbox ReferenceError: multi is not defined
     at DYNAMIC PLUGIN:13:13
     at ContextifyScript.Script.runInNewContext (vm.js:18:15)
     at Object.exports.runInNewContext (vm.js:49:17)
@@ -761,7 +761,7 @@ console.log(multi(nb, coef));
 [test] 5 * 2 = 10 -> 5 * 2 = 10 => true
 [test] [ '4 * 5 = 20', '4 * 100 = 400' ] -> [ '4 * 4 = 16', '4 * 100 = 400' ] => false
 [test] [ '5 * 5 = 25', '5 * 100 = 500' ] -> [ '5 * 4 = 20', '5 * 100 = 500' ] => false
-Wed, 11 May 2016 17:57:30 GMT jailed:sandbox RangeError: Maximum call stack size exceeded
+Wed, 11 May 2016 18:07:28 GMT jailed:sandbox RangeError: Maximum call stack size exceeded
     at multi (DYNAMIC PLUGIN:10:15)
     at multi (DYNAMIC PLUGIN:11:13)
     at multi (DYNAMIC PLUGIN:11:13)
@@ -773,7 +773,7 @@ Wed, 11 May 2016 17:57:30 GMT jailed:sandbox RangeError: Maximum call stack size
     at multi (DYNAMIC PLUGIN:11:13)
     at multi (DYNAMIC PLUGIN:11:13)
 [test] -1 * 1 = -1 -> undefined * 100 = NaN => false
-Wed, 11 May 2016 17:57:31 GMT jailed:sandbox RangeError: Maximum call stack size exceeded
+Wed, 11 May 2016 18:07:28 GMT jailed:sandbox RangeError: Maximum call stack size exceeded
     at multi (DYNAMIC PLUGIN:10:15)
     at multi (DYNAMIC PLUGIN:11:13)
     at multi (DYNAMIC PLUGIN:11:13)
@@ -804,7 +804,7 @@ for (i=4; i<=100; i++){
 [test] 5 * 2 = 10 -> 5 * 4 = 20 => false
 [test] [ '4 * 4 = 16', '4 * 100 = 400' ] -> [ '4 * 5 = 20', '4 * 100 = 400' ] => false
 [test] [ '5 * 4 = 20', '5 * 100 = 500' ] -> [ '5 * 5 = 25', '5 * 100 = 500' ] => false
-Wed, 11 May 2016 17:57:32 GMT jailed:sandbox ReferenceError: multiplier is not defined
+Wed, 11 May 2016 18:07:29 GMT jailed:sandbox ReferenceError: multiplier is not defined
     at DYNAMIC PLUGIN:12:13
     at ContextifyScript.Script.runInNewContext (vm.js:18:15)
     at Object.exports.runInNewContext (vm.js:49:17)
@@ -816,7 +816,7 @@ Wed, 11 May 2016 17:57:32 GMT jailed:sandbox ReferenceError: multiplier is not d
     at handleMessage (internal/child_process.js:686:10)
     at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] -1 * 1 = -1 -> undefined * 100 = NaN => false
-Wed, 11 May 2016 17:57:33 GMT jailed:sandbox ReferenceError: multiplier is not defined
+Wed, 11 May 2016 18:07:30 GMT jailed:sandbox ReferenceError: multiplier is not defined
     at DYNAMIC PLUGIN:12:13
     at ContextifyScript.Script.runInNewContext (vm.js:18:15)
     at Object.exports.runInNewContext (vm.js:49:17)
@@ -840,7 +840,7 @@ console.log (nb + ' * 2 = ' res );
 for (var coef = 4 ; coef<=100 ; coef++)
  
 ---
-Wed, 11 May 2016 17:57:33 GMT jailed:sandbox SyntaxError: missing ) after argument list
+Wed, 11 May 2016 18:07:30 GMT jailed:sandbox SyntaxError: missing ) after argument list
     at Object.exports.runInNewContext (vm.js:48:16)
     at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
     at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
@@ -850,7 +850,7 @@ Wed, 11 May 2016 17:57:33 GMT jailed:sandbox SyntaxError: missing ) after argume
     at handleMessage (internal/child_process.js:686:10)
     at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] 4 * 2 = 8 -> undefined => false
-Wed, 11 May 2016 17:57:33 GMT jailed:sandbox SyntaxError: missing ) after argument list
+Wed, 11 May 2016 18:07:30 GMT jailed:sandbox SyntaxError: missing ) after argument list
     at Object.exports.runInNewContext (vm.js:48:16)
     at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
     at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
@@ -860,7 +860,7 @@ Wed, 11 May 2016 17:57:33 GMT jailed:sandbox SyntaxError: missing ) after argume
     at handleMessage (internal/child_process.js:686:10)
     at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] 5 * 2 = 10 -> undefined => false
-Wed, 11 May 2016 17:57:34 GMT jailed:sandbox SyntaxError: missing ) after argument list
+Wed, 11 May 2016 18:07:31 GMT jailed:sandbox SyntaxError: missing ) after argument list
     at Object.exports.runInNewContext (vm.js:48:16)
     at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
     at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
@@ -870,7 +870,7 @@ Wed, 11 May 2016 17:57:34 GMT jailed:sandbox SyntaxError: missing ) after argume
     at handleMessage (internal/child_process.js:686:10)
     at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] [ '4 * 3 = 12', '4 * 100 = 400' ] -> [ undefined, undefined ] => false
-Wed, 11 May 2016 17:57:34 GMT jailed:sandbox SyntaxError: missing ) after argument list
+Wed, 11 May 2016 18:07:31 GMT jailed:sandbox SyntaxError: missing ) after argument list
     at Object.exports.runInNewContext (vm.js:48:16)
     at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
     at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
@@ -880,7 +880,7 @@ Wed, 11 May 2016 17:57:34 GMT jailed:sandbox SyntaxError: missing ) after argume
     at handleMessage (internal/child_process.js:686:10)
     at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] [ '5 * 3 = 15', '5 * 100 = 500' ] -> [ undefined, undefined ] => false
-Wed, 11 May 2016 17:57:34 GMT jailed:sandbox SyntaxError: missing ) after argument list
+Wed, 11 May 2016 18:07:31 GMT jailed:sandbox SyntaxError: missing ) after argument list
     at Object.exports.runInNewContext (vm.js:48:16)
     at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
     at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
@@ -890,7 +890,7 @@ Wed, 11 May 2016 17:57:34 GMT jailed:sandbox SyntaxError: missing ) after argume
     at handleMessage (internal/child_process.js:686:10)
     at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] -1 * 1 = -1 -> undefined => false
-Wed, 11 May 2016 17:57:34 GMT jailed:sandbox SyntaxError: missing ) after argument list
+Wed, 11 May 2016 18:07:32 GMT jailed:sandbox SyntaxError: missing ) after argument list
     at Object.exports.runInNewContext (vm.js:48:16)
     at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
     at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
@@ -920,7 +920,7 @@ console.log(multiplier(nb, coef));
 [test] 5 * 2 = 10 -> 5 * 2 = 10 => true
 [test] [ '4 * 4 = 16', '4 * 100 = 400' ] -> [ '4 * 4 = 16', '4 * 100 = 400' ] => true
 [test] [ '5 * 4 = 20', '5 * 100 = 500' ] -> [ '5 * 4 = 20', '5 * 100 = 500' ] => true
-Wed, 11 May 2016 17:57:36 GMT jailed:sandbox ReferenceError: multiplier is not defined
+Wed, 11 May 2016 18:07:33 GMT jailed:sandbox ReferenceError: multiplier is not defined
     at DYNAMIC PLUGIN:13:13
     at ContextifyScript.Script.runInNewContext (vm.js:18:15)
     at Object.exports.runInNewContext (vm.js:49:17)
@@ -932,7 +932,7 @@ Wed, 11 May 2016 17:57:36 GMT jailed:sandbox ReferenceError: multiplier is not d
     at handleMessage (internal/child_process.js:686:10)
     at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] -1 * 1 = -1 -> undefined * 100 = NaN => false
-Wed, 11 May 2016 17:57:36 GMT jailed:sandbox ReferenceError: multiplier is not defined
+Wed, 11 May 2016 18:07:33 GMT jailed:sandbox ReferenceError: multiplier is not defined
     at DYNAMIC PLUGIN:13:13
     at ContextifyScript.Script.runInNewContext (vm.js:18:15)
     at Object.exports.runInNewContext (vm.js:49:17)
@@ -988,7 +988,7 @@ console.log(multiplier(nb, coef));
 [test] 5 * 2 = 10 -> 5 * 2 = 10 => true
 [test] [ '4 * 4 = 16', '4 * 100 = 400' ] -> [ '4 * 4 = 16', '4 * 100 = 400' ] => true
 [test] [ '5 * 4 = 20', '5 * 100 = 500' ] -> [ '5 * 4 = 20', '5 * 100 = 500' ] => true
-Wed, 11 May 2016 17:57:40 GMT jailed:sandbox ReferenceError: multiplier is not defined
+Wed, 11 May 2016 18:07:37 GMT jailed:sandbox ReferenceError: multiplier is not defined
     at DYNAMIC PLUGIN:13:13
     at ContextifyScript.Script.runInNewContext (vm.js:18:15)
     at Object.exports.runInNewContext (vm.js:49:17)
@@ -1000,7 +1000,7 @@ Wed, 11 May 2016 17:57:40 GMT jailed:sandbox ReferenceError: multiplier is not d
     at handleMessage (internal/child_process.js:686:10)
     at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] -1 * 1 = -1 -> undefined * 100 = NaN => false
-Wed, 11 May 2016 17:57:40 GMT jailed:sandbox ReferenceError: multiplier is not defined
+Wed, 11 May 2016 18:07:37 GMT jailed:sandbox ReferenceError: multiplier is not defined
     at DYNAMIC PLUGIN:13:13
     at ContextifyScript.Script.runInNewContext (vm.js:18:15)
     at Object.exports.runInNewContext (vm.js:49:17)
@@ -1031,7 +1031,7 @@ STUDENT tess_tilmont (111457311246491113843 => 1) :
 [test] 5 * 2 = 10 -> 5 * 2 = 10 => true
 [test] [ '4 * 4 = 16', '4 * 100 = 400' ] -> [ '4 * 4 = 16', '4 * 100 = 400' ] => true
 [test] [ '5 * 4 = 20', '5 * 100 = 500' ] -> [ '5 * 4 = 20', '5 * 100 = 500' ] => true
-Wed, 11 May 2016 17:57:42 GMT jailed:sandbox ReferenceError: multiplier is not defined
+Wed, 11 May 2016 18:07:39 GMT jailed:sandbox ReferenceError: multiplier is not defined
     at DYNAMIC PLUGIN:12:13
     at ContextifyScript.Script.runInNewContext (vm.js:18:15)
     at Object.exports.runInNewContext (vm.js:49:17)
@@ -1043,7 +1043,7 @@ Wed, 11 May 2016 17:57:42 GMT jailed:sandbox ReferenceError: multiplier is not d
     at handleMessage (internal/child_process.js:686:10)
     at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] -1 * 1 = -1 -> undefined * 100 = NaN => false
-Wed, 11 May 2016 17:57:42 GMT jailed:sandbox ReferenceError: multiplier is not defined
+Wed, 11 May 2016 18:07:39 GMT jailed:sandbox ReferenceError: multiplier is not defined
     at DYNAMIC PLUGIN:12:13
     at ContextifyScript.Script.runInNewContext (vm.js:18:15)
     at Object.exports.runInNewContext (vm.js:49:17)
