@@ -17,11 +17,77 @@ nombre=window.prompt("Entrez le numéro de la table:","Saisir un entier ici");
 			table_multiplication(nombre);
 	
 ---
+Wed, 11 May 2016 17:31:55 GMT jailed:sandbox ReferenceError: window is not defined
+    at DYNAMIC PLUGIN:14:8
+    at ContextifyScript.Script.runInNewContext (vm.js:18:15)
+    at Object.exports.runInNewContext (vm.js:49:17)
+    at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:87:13)
+    at process.emit (events.js:172:7)
+    at handleMessage (internal/child_process.js:686:10)
+    at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] 4 * 2 = 8 -> undefined => false
+Wed, 11 May 2016 17:31:55 GMT jailed:sandbox ReferenceError: window is not defined
+    at DYNAMIC PLUGIN:14:8
+    at ContextifyScript.Script.runInNewContext (vm.js:18:15)
+    at Object.exports.runInNewContext (vm.js:49:17)
+    at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:87:13)
+    at process.emit (events.js:172:7)
+    at handleMessage (internal/child_process.js:686:10)
+    at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] 5 * 2 = 10 -> undefined => false
+Wed, 11 May 2016 17:31:55 GMT jailed:sandbox ReferenceError: window is not defined
+    at DYNAMIC PLUGIN:14:8
+    at ContextifyScript.Script.runInNewContext (vm.js:18:15)
+    at Object.exports.runInNewContext (vm.js:49:17)
+    at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:87:13)
+    at process.emit (events.js:172:7)
+    at handleMessage (internal/child_process.js:686:10)
+    at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] [ '4 * 4 = 16', '4 * 100 = 400' ] -> [ undefined, undefined ] => false
+Wed, 11 May 2016 17:31:56 GMT jailed:sandbox ReferenceError: window is not defined
+    at DYNAMIC PLUGIN:14:8
+    at ContextifyScript.Script.runInNewContext (vm.js:18:15)
+    at Object.exports.runInNewContext (vm.js:49:17)
+    at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:87:13)
+    at process.emit (events.js:172:7)
+    at handleMessage (internal/child_process.js:686:10)
+    at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] [ '5 * 4 = 20', '5 * 100 = 500' ] -> [ undefined, undefined ] => false
+Wed, 11 May 2016 17:31:56 GMT jailed:sandbox ReferenceError: window is not defined
+    at DYNAMIC PLUGIN:14:8
+    at ContextifyScript.Script.runInNewContext (vm.js:18:15)
+    at Object.exports.runInNewContext (vm.js:49:17)
+    at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:87:13)
+    at process.emit (events.js:172:7)
+    at handleMessage (internal/child_process.js:686:10)
+    at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] -1 * 1 = -1 -> undefined => false
+Wed, 11 May 2016 17:31:56 GMT jailed:sandbox ReferenceError: window is not defined
+    at DYNAMIC PLUGIN:14:8
+    at ContextifyScript.Script.runInNewContext (vm.js:18:15)
+    at Object.exports.runInNewContext (vm.js:49:17)
+    at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:87:13)
+    at process.emit (events.js:172:7)
+    at handleMessage (internal/child_process.js:686:10)
+    at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] 12 * 33 = 396 -> undefined => false
 => total STUDENT points: [ 0, 0, 0 ] = 0
 "SCORE","amel_guellal","106449292539770179084",1,0
@@ -40,7 +106,29 @@ for (var coef=4 ; coef<=100 ; coef++) {
 [test] 5 * 2 = 10 -> 5 * 2 = 10 => true
 [test] [ '4 * 4 = 16', '4 * 100 = 400' ] -> [ '4 * 4 = 16', '4 * 100 = 400' ] => true
 [test] [ '5 * 4 = 20', '5 * 100 = 500' ] -> [ '5 * 4 = 20', '5 * 100 = 500' ] => true
+Wed, 11 May 2016 17:31:58 GMT jailed:sandbox ReferenceError: multiplier is not defined
+    at DYNAMIC PLUGIN:10:13
+    at ContextifyScript.Script.runInNewContext (vm.js:18:15)
+    at Object.exports.runInNewContext (vm.js:49:17)
+    at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:87:13)
+    at process.emit (events.js:172:7)
+    at handleMessage (internal/child_process.js:686:10)
+    at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] -1 * 1 = -1 -> undefined * 100 = NaN => false
+Wed, 11 May 2016 17:31:58 GMT jailed:sandbox ReferenceError: multiplier is not defined
+    at DYNAMIC PLUGIN:10:13
+    at ContextifyScript.Script.runInNewContext (vm.js:18:15)
+    at Object.exports.runInNewContext (vm.js:49:17)
+    at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:87:13)
+    at process.emit (events.js:172:7)
+    at handleMessage (internal/child_process.js:686:10)
+    at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] 12 * 33 = 396 -> undefined * 100 = NaN => false
 => total STUDENT points: [ 2, 2, 0 ] = 4
 "SCORE","anais_desmero","104233237249726545832",1,4
@@ -55,7 +143,29 @@ var res = console.log(nb * 2);
 [test] 5 * 2 = 10 -> 10 => false
 [test] [ '4 * 3 = 12', '4 * 100 = 400' ] -> [ undefined, '8' ] => false
 [test] [ '5 * 3 = 15', '5 * 100 = 500' ] -> [ undefined, '10' ] => false
+Wed, 11 May 2016 17:32:00 GMT jailed:sandbox ReferenceError: multiplication is not defined
+    at DYNAMIC PLUGIN:6:13
+    at ContextifyScript.Script.runInNewContext (vm.js:18:15)
+    at Object.exports.runInNewContext (vm.js:49:17)
+    at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:87:13)
+    at process.emit (events.js:172:7)
+    at handleMessage (internal/child_process.js:686:10)
+    at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] -1 * 1 = -1 ->  => false
+Wed, 11 May 2016 17:32:00 GMT jailed:sandbox ReferenceError: multiplication is not defined
+    at DYNAMIC PLUGIN:6:13
+    at ContextifyScript.Script.runInNewContext (vm.js:18:15)
+    at Object.exports.runInNewContext (vm.js:49:17)
+    at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:87:13)
+    at process.emit (events.js:172:7)
+    at handleMessage (internal/child_process.js:686:10)
+    at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] 12 * 33 = 396 ->  => false
 => total STUDENT points: [ 0, 0, 0 ] = 0
 "SCORE","brice_pioline","113205718336784161320",0,0
@@ -70,11 +180,65 @@ console.log(nb * 2 = res);
 num = `résultat`;
 console.log(res);
 ---
+Wed, 11 May 2016 17:32:00 GMT jailed:sandbox SyntaxError: Unexpected token <
+    at Object.exports.runInNewContext (vm.js:48:16)
+    at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:87:13)
+    at process.emit (events.js:172:7)
+    at handleMessage (internal/child_process.js:686:10)
+    at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] 4 * 2 = 8 -> undefined => false
+Wed, 11 May 2016 17:32:00 GMT jailed:sandbox SyntaxError: Unexpected token <
+    at Object.exports.runInNewContext (vm.js:48:16)
+    at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:87:13)
+    at process.emit (events.js:172:7)
+    at handleMessage (internal/child_process.js:686:10)
+    at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] 5 * 2 = 10 -> undefined => false
+Wed, 11 May 2016 17:32:01 GMT jailed:sandbox SyntaxError: Unexpected token <
+    at Object.exports.runInNewContext (vm.js:48:16)
+    at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:87:13)
+    at process.emit (events.js:172:7)
+    at handleMessage (internal/child_process.js:686:10)
+    at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] [ '4 * 5 = 20', '4 * 100 = 400' ] -> [ undefined, undefined ] => false
+Wed, 11 May 2016 17:32:01 GMT jailed:sandbox SyntaxError: Unexpected token <
+    at Object.exports.runInNewContext (vm.js:48:16)
+    at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:87:13)
+    at process.emit (events.js:172:7)
+    at handleMessage (internal/child_process.js:686:10)
+    at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] [ '5 * 5 = 25', '5 * 100 = 500' ] -> [ undefined, undefined ] => false
+Wed, 11 May 2016 17:32:01 GMT jailed:sandbox SyntaxError: Unexpected token <
+    at Object.exports.runInNewContext (vm.js:48:16)
+    at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:87:13)
+    at process.emit (events.js:172:7)
+    at handleMessage (internal/child_process.js:686:10)
+    at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] -1 * 1 = -1 -> undefined => false
+Wed, 11 May 2016 17:32:02 GMT jailed:sandbox SyntaxError: Unexpected token <
+    at Object.exports.runInNewContext (vm.js:48:16)
+    at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:87:13)
+    at process.emit (events.js:172:7)
+    at handleMessage (internal/child_process.js:686:10)
+    at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] 12 * 33 = 396 -> undefined => false
 => total STUDENT points: [ 0, 0, 0 ] = 0
 "SCORE","carla_succar","108011996141201084681",2,0
@@ -114,7 +278,29 @@ for (var i=5; i<101; i++ );{
 [test] 5 * 2 = 10 -> 5 * 2 =10 => false
 [test] [ '4 * 5 = 20', '4 * 100 = 400' ] -> [ '', '' ] => false
 [test] [ '5 * 5 = 25', '5 * 100 = 500' ] -> [ '', '' ] => false
+Wed, 11 May 2016 17:32:05 GMT jailed:sandbox ReferenceError: multi is not defined
+    at DYNAMIC PLUGIN:9:13
+    at ContextifyScript.Script.runInNewContext (vm.js:18:15)
+    at Object.exports.runInNewContext (vm.js:49:17)
+    at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:87:13)
+    at process.emit (events.js:172:7)
+    at handleMessage (internal/child_process.js:686:10)
+    at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] -1 * 1 = -1 ->  => false
+Wed, 11 May 2016 17:32:05 GMT jailed:sandbox ReferenceError: multi is not defined
+    at DYNAMIC PLUGIN:9:13
+    at ContextifyScript.Script.runInNewContext (vm.js:18:15)
+    at Object.exports.runInNewContext (vm.js:49:17)
+    at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:87:13)
+    at process.emit (events.js:172:7)
+    at handleMessage (internal/child_process.js:686:10)
+    at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] 12 * 33 = 396 ->  => false
 => total STUDENT points: [ 0, 0, 0 ] = 0
 "SCORE","enzo_ferreira","117276544425730858877",2,0
@@ -137,11 +323,65 @@ for(var i=3; i<=100; i++){
   }
 }
 ---
+Wed, 11 May 2016 17:32:06 GMT jailed:sandbox ReferenceError: Invalid left-hand side in assignment
+    at Object.exports.runInNewContext (vm.js:48:16)
+    at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:87:13)
+    at process.emit (events.js:172:7)
+    at handleMessage (internal/child_process.js:686:10)
+    at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] 4 * 2 = 8 -> undefined => false
+Wed, 11 May 2016 17:32:06 GMT jailed:sandbox ReferenceError: Invalid left-hand side in assignment
+    at Object.exports.runInNewContext (vm.js:48:16)
+    at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:87:13)
+    at process.emit (events.js:172:7)
+    at handleMessage (internal/child_process.js:686:10)
+    at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] 5 * 2 = 10 -> undefined => false
+Wed, 11 May 2016 17:32:06 GMT jailed:sandbox ReferenceError: Invalid left-hand side in assignment
+    at Object.exports.runInNewContext (vm.js:48:16)
+    at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:87:13)
+    at process.emit (events.js:172:7)
+    at handleMessage (internal/child_process.js:686:10)
+    at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] [ '4 * 3 = 12', '4 * 100 = 400' ] -> [ undefined, undefined ] => false
+Wed, 11 May 2016 17:32:07 GMT jailed:sandbox ReferenceError: Invalid left-hand side in assignment
+    at Object.exports.runInNewContext (vm.js:48:16)
+    at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:87:13)
+    at process.emit (events.js:172:7)
+    at handleMessage (internal/child_process.js:686:10)
+    at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] [ '5 * 3 = 15', '5 * 100 = 500' ] -> [ undefined, undefined ] => false
+Wed, 11 May 2016 17:32:07 GMT jailed:sandbox ReferenceError: Invalid left-hand side in assignment
+    at Object.exports.runInNewContext (vm.js:48:16)
+    at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:87:13)
+    at process.emit (events.js:172:7)
+    at handleMessage (internal/child_process.js:686:10)
+    at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] -1 * 1 = -1 -> undefined => false
+Wed, 11 May 2016 17:32:07 GMT jailed:sandbox ReferenceError: Invalid left-hand side in assignment
+    at Object.exports.runInNewContext (vm.js:48:16)
+    at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:87:13)
+    at process.emit (events.js:172:7)
+    at handleMessage (internal/child_process.js:686:10)
+    at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] 12 * 33 = 396 -> undefined => false
 => total STUDENT points: [ 0, 0, 0 ] = 0
 "SCORE","gersende_devilleneuve","107425685405909237154",0,0
@@ -162,11 +402,77 @@ for(coef=5; coef<=100; coef++)
   console.log(multi(nb, coef));
 }
 ---
+Wed, 11 May 2016 17:32:08 GMT jailed:sandbox ReferenceError: coef is not defined
+    at DYNAMIC PLUGIN:11:9
+    at ContextifyScript.Script.runInNewContext (vm.js:18:15)
+    at Object.exports.runInNewContext (vm.js:49:17)
+    at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:87:13)
+    at process.emit (events.js:172:7)
+    at handleMessage (internal/child_process.js:686:10)
+    at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] 4 * 2 = 8 -> undefined => false
+Wed, 11 May 2016 17:32:08 GMT jailed:sandbox ReferenceError: coef is not defined
+    at DYNAMIC PLUGIN:11:9
+    at ContextifyScript.Script.runInNewContext (vm.js:18:15)
+    at Object.exports.runInNewContext (vm.js:49:17)
+    at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:87:13)
+    at process.emit (events.js:172:7)
+    at handleMessage (internal/child_process.js:686:10)
+    at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] 5 * 2 = 10 -> undefined => false
+Wed, 11 May 2016 17:32:08 GMT jailed:sandbox ReferenceError: coef is not defined
+    at DYNAMIC PLUGIN:11:9
+    at ContextifyScript.Script.runInNewContext (vm.js:18:15)
+    at Object.exports.runInNewContext (vm.js:49:17)
+    at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:87:13)
+    at process.emit (events.js:172:7)
+    at handleMessage (internal/child_process.js:686:10)
+    at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] [ '4 * 5 = 20', '4 * 100 = 400' ] -> [ undefined, undefined ] => false
+Wed, 11 May 2016 17:32:08 GMT jailed:sandbox ReferenceError: coef is not defined
+    at DYNAMIC PLUGIN:11:9
+    at ContextifyScript.Script.runInNewContext (vm.js:18:15)
+    at Object.exports.runInNewContext (vm.js:49:17)
+    at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:87:13)
+    at process.emit (events.js:172:7)
+    at handleMessage (internal/child_process.js:686:10)
+    at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] [ '5 * 5 = 25', '5 * 100 = 500' ] -> [ undefined, undefined ] => false
+Wed, 11 May 2016 17:32:09 GMT jailed:sandbox ReferenceError: coef is not defined
+    at DYNAMIC PLUGIN:11:9
+    at ContextifyScript.Script.runInNewContext (vm.js:18:15)
+    at Object.exports.runInNewContext (vm.js:49:17)
+    at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:87:13)
+    at process.emit (events.js:172:7)
+    at handleMessage (internal/child_process.js:686:10)
+    at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] -1 * 1 = -1 -> undefined => false
+Wed, 11 May 2016 17:32:09 GMT jailed:sandbox ReferenceError: coef is not defined
+    at DYNAMIC PLUGIN:11:9
+    at ContextifyScript.Script.runInNewContext (vm.js:18:15)
+    at Object.exports.runInNewContext (vm.js:49:17)
+    at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:87:13)
+    at process.emit (events.js:172:7)
+    at handleMessage (internal/child_process.js:686:10)
+    at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] 12 * 33 = 396 -> undefined => false
 => total STUDENT points: [ 0, 0, 0 ] = 0
 "SCORE","guillaume_hulin","106233552530976351779",2,0
@@ -204,11 +510,69 @@ console.log (nb*2);
 for (i=3; i<=100; i++)
 
 ---
+Wed, 11 May 2016 17:32:11 GMT jailed:sandbox SyntaxError: Unexpected end of input
+    at Object.exports.runInNewContext (vm.js:48:16)
+    at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:87:13)
+    at process.emit (events.js:172:7)
+    at handleMessage (internal/child_process.js:686:10)
+    at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] 4 * 2 = 8 -> undefined => false
+Wed, 11 May 2016 17:32:12 GMT jailed:sandbox SyntaxError: Unexpected end of input
+    at Object.exports.runInNewContext (vm.js:48:16)
+    at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:87:13)
+    at process.emit (events.js:172:7)
+    at handleMessage (internal/child_process.js:686:10)
+    at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] 5 * 2 = 10 -> undefined => false
+Wed, 11 May 2016 17:32:12 GMT jailed:sandbox SyntaxError: Unexpected end of input
+    at Object.exports.runInNewContext (vm.js:48:16)
+    at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:87:13)
+    at process.emit (events.js:172:7)
+    at handleMessage (internal/child_process.js:686:10)
+    at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] [ '4 * 3 = 12', '4 * 100 = 400' ] -> [ undefined, undefined ] => false
+Wed, 11 May 2016 17:32:12 GMT jailed:sandbox SyntaxError: Unexpected end of input
+    at Object.exports.runInNewContext (vm.js:48:16)
+    at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:87:13)
+    at process.emit (events.js:172:7)
+    at handleMessage (internal/child_process.js:686:10)
+    at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] [ '5 * 3 = 15', '5 * 100 = 500' ] -> [ undefined, undefined ] => false
+Wed, 11 May 2016 17:32:12 GMT jailed:sandbox ReferenceError: i is not defined
+    at DYNAMIC PLUGIN:8:7
+    at ContextifyScript.Script.runInNewContext (vm.js:18:15)
+    at Object.exports.runInNewContext (vm.js:49:17)
+    at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:87:13)
+    at process.emit (events.js:172:7)
+    at handleMessage (internal/child_process.js:686:10)
+    at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] -1 * 1 = -1 ->  => false
+Wed, 11 May 2016 17:32:13 GMT jailed:sandbox ReferenceError: i is not defined
+    at DYNAMIC PLUGIN:8:7
+    at ContextifyScript.Script.runInNewContext (vm.js:18:15)
+    at Object.exports.runInNewContext (vm.js:49:17)
+    at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:87:13)
+    at process.emit (events.js:172:7)
+    at handleMessage (internal/child_process.js:686:10)
+    at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] 12 * 33 = 396 ->  => false
 => total STUDENT points: [ 0, 0, 0 ] = 0
 "SCORE","josephine_mahieu","102320401513628102472",0,0
@@ -225,7 +589,29 @@ console.log(nb*2)
 [test] 5 * 2 = 10 -> 10 => false
 [test] [ '4 * 4 = 16', '4 * 100 = 400' ] -> [ undefined, '8' ] => false
 [test] [ '5 * 4 = 20', '5 * 100 = 500' ] -> [ undefined, '10' ] => false
+Wed, 11 May 2016 17:32:14 GMT jailed:sandbox ReferenceError: multiplier is not defined
+    at DYNAMIC PLUGIN:8:13
+    at ContextifyScript.Script.runInNewContext (vm.js:18:15)
+    at Object.exports.runInNewContext (vm.js:49:17)
+    at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:87:13)
+    at process.emit (events.js:172:7)
+    at handleMessage (internal/child_process.js:686:10)
+    at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] -1 * 1 = -1 ->  => false
+Wed, 11 May 2016 17:32:15 GMT jailed:sandbox ReferenceError: multiplier is not defined
+    at DYNAMIC PLUGIN:8:13
+    at ContextifyScript.Script.runInNewContext (vm.js:18:15)
+    at Object.exports.runInNewContext (vm.js:49:17)
+    at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:87:13)
+    at process.emit (events.js:172:7)
+    at handleMessage (internal/child_process.js:686:10)
+    at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] 12 * 33 = 396 ->  => false
 => total STUDENT points: [ 0, 0, 0 ] = 0
 "SCORE","louis_leopold_fiessinger","100617553123902683497",1,0
@@ -239,7 +625,29 @@ STUDENT maxime_pierre_pichot (104686591400476883641 => 1) :
 [test] 5 * 2 = 10 -> undefined => false
 [test] [ '4 * 4 = 16', '4 * 100 = 400' ] -> [ undefined, undefined ] => false
 [test] [ '5 * 4 = 20', '5 * 100 = 500' ] -> [ undefined, undefined ] => false
+Wed, 11 May 2016 17:32:16 GMT jailed:sandbox ReferenceError: multiplier is not defined
+    at DYNAMIC PLUGIN:5:13
+    at ContextifyScript.Script.runInNewContext (vm.js:18:15)
+    at Object.exports.runInNewContext (vm.js:49:17)
+    at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:87:13)
+    at process.emit (events.js:172:7)
+    at handleMessage (internal/child_process.js:686:10)
+    at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] -1 * 1 = -1 -> undefined => false
+Wed, 11 May 2016 17:32:16 GMT jailed:sandbox ReferenceError: multiplier is not defined
+    at DYNAMIC PLUGIN:5:13
+    at ContextifyScript.Script.runInNewContext (vm.js:18:15)
+    at Object.exports.runInNewContext (vm.js:49:17)
+    at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:87:13)
+    at process.emit (events.js:172:7)
+    at handleMessage (internal/child_process.js:686:10)
+    at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] 12 * 33 = 396 -> undefined => false
 => total STUDENT points: [ 0, 0, 0 ] = 0
 "SCORE","maxime_pierre_pichot","104686591400476883641",1,0
@@ -259,11 +667,77 @@ for (i=3; i<=100; i++)
 console.log(multiplierParDeux());
 
 ---
+Wed, 11 May 2016 17:32:17 GMT jailed:sandbox ReferenceError: i is not defined
+    at DYNAMIC PLUGIN:8:7
+    at ContextifyScript.Script.runInNewContext (vm.js:18:15)
+    at Object.exports.runInNewContext (vm.js:49:17)
+    at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:87:13)
+    at process.emit (events.js:172:7)
+    at handleMessage (internal/child_process.js:686:10)
+    at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] 4 * 2 = 8 -> undefined => false
+Wed, 11 May 2016 17:32:17 GMT jailed:sandbox ReferenceError: i is not defined
+    at DYNAMIC PLUGIN:8:7
+    at ContextifyScript.Script.runInNewContext (vm.js:18:15)
+    at Object.exports.runInNewContext (vm.js:49:17)
+    at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:87:13)
+    at process.emit (events.js:172:7)
+    at handleMessage (internal/child_process.js:686:10)
+    at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] 5 * 2 = 10 -> undefined => false
+Wed, 11 May 2016 17:32:17 GMT jailed:sandbox ReferenceError: i is not defined
+    at DYNAMIC PLUGIN:8:7
+    at ContextifyScript.Script.runInNewContext (vm.js:18:15)
+    at Object.exports.runInNewContext (vm.js:49:17)
+    at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:87:13)
+    at process.emit (events.js:172:7)
+    at handleMessage (internal/child_process.js:686:10)
+    at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] [ '4 * 3 = 12', '4 * 100 = 400' ] -> [ undefined, undefined ] => false
+Wed, 11 May 2016 17:32:18 GMT jailed:sandbox ReferenceError: i is not defined
+    at DYNAMIC PLUGIN:8:7
+    at ContextifyScript.Script.runInNewContext (vm.js:18:15)
+    at Object.exports.runInNewContext (vm.js:49:17)
+    at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:87:13)
+    at process.emit (events.js:172:7)
+    at handleMessage (internal/child_process.js:686:10)
+    at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] [ '5 * 3 = 15', '5 * 100 = 500' ] -> [ undefined, undefined ] => false
+Wed, 11 May 2016 17:32:18 GMT jailed:sandbox ReferenceError: i is not defined
+    at DYNAMIC PLUGIN:8:7
+    at ContextifyScript.Script.runInNewContext (vm.js:18:15)
+    at Object.exports.runInNewContext (vm.js:49:17)
+    at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:87:13)
+    at process.emit (events.js:172:7)
+    at handleMessage (internal/child_process.js:686:10)
+    at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] -1 * 1 = -1 -> undefined => false
+Wed, 11 May 2016 17:32:18 GMT jailed:sandbox ReferenceError: i is not defined
+    at DYNAMIC PLUGIN:8:7
+    at ContextifyScript.Script.runInNewContext (vm.js:18:15)
+    at Object.exports.runInNewContext (vm.js:49:17)
+    at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:87:13)
+    at process.emit (events.js:172:7)
+    at handleMessage (internal/child_process.js:686:10)
+    at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] 12 * 33 = 396 -> undefined => false
 => total STUDENT points: [ 0, 0, 0 ] = 0
 "SCORE","maxime_vion","101784347288786900868",0,0
@@ -291,7 +765,29 @@ console.log(res);
 [test] 5 * 2 = 10 -> 10 => false
 [test] [ '4 * 4 = 16', '4 * 100 = 400' ] -> [ undefined, '8' ] => false
 [test] [ '5 * 4 = 20', '5 * 100 = 500' ] -> [ undefined, '10' ] => false
+Wed, 11 May 2016 17:32:20 GMT jailed:sandbox ReferenceError: multiplier is not defined
+    at DYNAMIC PLUGIN:19:13
+    at ContextifyScript.Script.runInNewContext (vm.js:18:15)
+    at Object.exports.runInNewContext (vm.js:49:17)
+    at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:87:13)
+    at process.emit (events.js:172:7)
+    at handleMessage (internal/child_process.js:686:10)
+    at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] -1 * 1 = -1 ->  => false
+Wed, 11 May 2016 17:32:20 GMT jailed:sandbox ReferenceError: multiplier is not defined
+    at DYNAMIC PLUGIN:19:13
+    at ContextifyScript.Script.runInNewContext (vm.js:18:15)
+    at Object.exports.runInNewContext (vm.js:49:17)
+    at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:87:13)
+    at process.emit (events.js:172:7)
+    at handleMessage (internal/child_process.js:686:10)
+    at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] 12 * 33 = 396 ->  => false
 => total STUDENT points: [ 0, 0, 0 ] = 0
 "SCORE","quentin_faure","103074518630058079840",1,0
@@ -320,11 +816,77 @@ for (var i = 0; i <= 20; i++) {
 }
 
 ---
+Wed, 11 May 2016 17:32:20 GMT jailed:sandbox ReferenceError: document is not defined
+    at DYNAMIC PLUGIN:9:1
+    at ContextifyScript.Script.runInNewContext (vm.js:18:15)
+    at Object.exports.runInNewContext (vm.js:49:17)
+    at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:87:13)
+    at process.emit (events.js:172:7)
+    at handleMessage (internal/child_process.js:686:10)
+    at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] 4 * 2 = 8 -> undefined => false
+Wed, 11 May 2016 17:32:21 GMT jailed:sandbox ReferenceError: document is not defined
+    at DYNAMIC PLUGIN:9:1
+    at ContextifyScript.Script.runInNewContext (vm.js:18:15)
+    at Object.exports.runInNewContext (vm.js:49:17)
+    at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:87:13)
+    at process.emit (events.js:172:7)
+    at handleMessage (internal/child_process.js:686:10)
+    at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] 5 * 2 = 10 -> undefined => false
+Wed, 11 May 2016 17:32:21 GMT jailed:sandbox ReferenceError: document is not defined
+    at DYNAMIC PLUGIN:9:1
+    at ContextifyScript.Script.runInNewContext (vm.js:18:15)
+    at Object.exports.runInNewContext (vm.js:49:17)
+    at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:87:13)
+    at process.emit (events.js:172:7)
+    at handleMessage (internal/child_process.js:686:10)
+    at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] [ '4 * 3 = 12', '4 * 100 = 400' ] -> [ undefined, undefined ] => false
+Wed, 11 May 2016 17:32:21 GMT jailed:sandbox ReferenceError: document is not defined
+    at DYNAMIC PLUGIN:9:1
+    at ContextifyScript.Script.runInNewContext (vm.js:18:15)
+    at Object.exports.runInNewContext (vm.js:49:17)
+    at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:87:13)
+    at process.emit (events.js:172:7)
+    at handleMessage (internal/child_process.js:686:10)
+    at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] [ '5 * 3 = 15', '5 * 100 = 500' ] -> [ undefined, undefined ] => false
+Wed, 11 May 2016 17:32:22 GMT jailed:sandbox ReferenceError: document is not defined
+    at DYNAMIC PLUGIN:9:1
+    at ContextifyScript.Script.runInNewContext (vm.js:18:15)
+    at Object.exports.runInNewContext (vm.js:49:17)
+    at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:87:13)
+    at process.emit (events.js:172:7)
+    at handleMessage (internal/child_process.js:686:10)
+    at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] -1 * 1 = -1 -> undefined => false
+Wed, 11 May 2016 17:32:22 GMT jailed:sandbox ReferenceError: document is not defined
+    at DYNAMIC PLUGIN:9:1
+    at ContextifyScript.Script.runInNewContext (vm.js:18:15)
+    at Object.exports.runInNewContext (vm.js:49:17)
+    at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:87:13)
+    at process.emit (events.js:172:7)
+    at handleMessage (internal/child_process.js:686:10)
+    at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] 12 * 33 = 396 -> undefined => false
 => total STUDENT points: [ 0, 0, 0 ] = 0
 "SCORE","robin_guerreau","101151607093998533676",0,0
@@ -345,7 +907,29 @@ for (i=0;i>=100;i++){
 [test] 5 * 2 = 10 -> undefined => false
 [test] [ '4 * 3 = 12', '4 * 100 = 400' ] -> [ undefined, undefined ] => false
 [test] [ '5 * 3 = 15', '5 * 100 = 500' ] -> [ undefined, undefined ] => false
+Wed, 11 May 2016 17:32:24 GMT jailed:sandbox ReferenceError: multiplication is not defined
+    at DYNAMIC PLUGIN:12:13
+    at ContextifyScript.Script.runInNewContext (vm.js:18:15)
+    at Object.exports.runInNewContext (vm.js:49:17)
+    at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:87:13)
+    at process.emit (events.js:172:7)
+    at handleMessage (internal/child_process.js:686:10)
+    at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] -1 * 1 = -1 -> undefined => false
+Wed, 11 May 2016 17:32:24 GMT jailed:sandbox ReferenceError: multiplication is not defined
+    at DYNAMIC PLUGIN:12:13
+    at ContextifyScript.Script.runInNewContext (vm.js:18:15)
+    at Object.exports.runInNewContext (vm.js:49:17)
+    at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:87:13)
+    at process.emit (events.js:172:7)
+    at handleMessage (internal/child_process.js:686:10)
+    at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] 12 * 33 = 396 -> undefined => false
 => total STUDENT points: [ 0, 0, 0 ] = 0
 "SCORE","robin_mesa_marin","112814090841211251108",0,0
@@ -362,11 +946,77 @@ console.log(nb + " * " + i + " = " + nb*i); }
 }
 console.log(multi(nb, coef));
 ---
+Wed, 11 May 2016 17:32:24 GMT jailed:sandbox ReferenceError: coef is not defined
+    at DYNAMIC PLUGIN:11:23
+    at ContextifyScript.Script.runInNewContext (vm.js:18:15)
+    at Object.exports.runInNewContext (vm.js:49:17)
+    at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:87:13)
+    at process.emit (events.js:172:7)
+    at handleMessage (internal/child_process.js:686:10)
+    at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] 4 * 2 = 8 -> undefined => false
+Wed, 11 May 2016 17:32:24 GMT jailed:sandbox ReferenceError: coef is not defined
+    at DYNAMIC PLUGIN:11:23
+    at ContextifyScript.Script.runInNewContext (vm.js:18:15)
+    at Object.exports.runInNewContext (vm.js:49:17)
+    at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:87:13)
+    at process.emit (events.js:172:7)
+    at handleMessage (internal/child_process.js:686:10)
+    at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] 5 * 2 = 10 -> undefined => false
+Wed, 11 May 2016 17:32:25 GMT jailed:sandbox ReferenceError: coef is not defined
+    at DYNAMIC PLUGIN:11:23
+    at ContextifyScript.Script.runInNewContext (vm.js:18:15)
+    at Object.exports.runInNewContext (vm.js:49:17)
+    at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:87:13)
+    at process.emit (events.js:172:7)
+    at handleMessage (internal/child_process.js:686:10)
+    at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] [ '4 * 5 = 20', '4 * 100 = 400' ] -> [ undefined, undefined ] => false
+Wed, 11 May 2016 17:32:25 GMT jailed:sandbox ReferenceError: coef is not defined
+    at DYNAMIC PLUGIN:11:23
+    at ContextifyScript.Script.runInNewContext (vm.js:18:15)
+    at Object.exports.runInNewContext (vm.js:49:17)
+    at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:87:13)
+    at process.emit (events.js:172:7)
+    at handleMessage (internal/child_process.js:686:10)
+    at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] [ '5 * 5 = 25', '5 * 100 = 500' ] -> [ undefined, undefined ] => false
+Wed, 11 May 2016 17:32:25 GMT jailed:sandbox ReferenceError: coef is not defined
+    at DYNAMIC PLUGIN:11:23
+    at ContextifyScript.Script.runInNewContext (vm.js:18:15)
+    at Object.exports.runInNewContext (vm.js:49:17)
+    at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:87:13)
+    at process.emit (events.js:172:7)
+    at handleMessage (internal/child_process.js:686:10)
+    at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] -1 * 1 = -1 -> undefined => false
+Wed, 11 May 2016 17:32:26 GMT jailed:sandbox ReferenceError: coef is not defined
+    at DYNAMIC PLUGIN:11:23
+    at ContextifyScript.Script.runInNewContext (vm.js:18:15)
+    at Object.exports.runInNewContext (vm.js:49:17)
+    at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:87:13)
+    at process.emit (events.js:172:7)
+    at handleMessage (internal/child_process.js:686:10)
+    at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] 12 * 33 = 396 -> undefined => false
 => total STUDENT points: [ 0, 0, 0 ] = 0
 "SCORE","romain_peyret","100072992268804705214",2,0
@@ -389,11 +1039,65 @@ for (i=1; i<=10; i++)
 	console.log(multi(nb));
 }
 ---
+Wed, 11 May 2016 17:32:26 GMT jailed:sandbox SyntaxError: Unexpected token )
+    at Object.exports.runInNewContext (vm.js:48:16)
+    at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:87:13)
+    at process.emit (events.js:172:7)
+    at handleMessage (internal/child_process.js:686:10)
+    at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] 4 * 2 = 8 -> undefined => false
+Wed, 11 May 2016 17:32:26 GMT jailed:sandbox SyntaxError: Unexpected token )
+    at Object.exports.runInNewContext (vm.js:48:16)
+    at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:87:13)
+    at process.emit (events.js:172:7)
+    at handleMessage (internal/child_process.js:686:10)
+    at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] 5 * 2 = 10 -> undefined => false
+Wed, 11 May 2016 17:32:27 GMT jailed:sandbox SyntaxError: Unexpected token )
+    at Object.exports.runInNewContext (vm.js:48:16)
+    at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:87:13)
+    at process.emit (events.js:172:7)
+    at handleMessage (internal/child_process.js:686:10)
+    at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] [ '4 * 5 = 20', '4 * 100 = 400' ] -> [ undefined, undefined ] => false
+Wed, 11 May 2016 17:32:27 GMT jailed:sandbox SyntaxError: Unexpected token )
+    at Object.exports.runInNewContext (vm.js:48:16)
+    at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:87:13)
+    at process.emit (events.js:172:7)
+    at handleMessage (internal/child_process.js:686:10)
+    at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] [ '5 * 5 = 25', '5 * 100 = 500' ] -> [ undefined, undefined ] => false
+Wed, 11 May 2016 17:32:27 GMT jailed:sandbox SyntaxError: Unexpected token )
+    at Object.exports.runInNewContext (vm.js:48:16)
+    at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:87:13)
+    at process.emit (events.js:172:7)
+    at handleMessage (internal/child_process.js:686:10)
+    at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] -1 * 1 = -1 -> undefined => false
+Wed, 11 May 2016 17:32:28 GMT jailed:sandbox SyntaxError: Unexpected token )
+    at Object.exports.runInNewContext (vm.js:48:16)
+    at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/_clients/EEMI/js-exo-algo/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:87:13)
+    at process.emit (events.js:172:7)
+    at handleMessage (internal/child_process.js:686:10)
+    at Pipe.channel.onread (internal/child_process.js:440:11)
 [test] 12 * 33 = 396 -> undefined => false
 => total STUDENT points: [ 0, 0, 0 ] = 0
 "SCORE","romain_rouleau","101819953116639767831",2,0
