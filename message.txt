@@ -1,0 +1,8 @@
+Vous êtes notés sur 6 points:
+- 2 points pour les parties 1 et 2 (prompt et affichage de la multiplication par 2)
+- 2 points pour la partie 3 (boucle for)
+- 2 points pour la partie 4 (fonction)
+
+Chaque point correspond à un test validé par votre code.
+
+Pour chaque test, le fichier de résultats vous donne le résultat qui était attendu, une flèche, votre résultat (ou erreur), puis `true` si votre résultat est correct.
