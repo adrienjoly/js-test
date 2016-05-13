@@ -40,6 +40,6 @@ var isQuizzFile = makeRegexTester(RE_EX_QUIZZ_FILE);
 files.filter(isQuizzFile).forEach(function(file){
   console.log('Rendering', file, 'quizz ...');
   var quizz = new QuizzRenderer().readFromFile(PATH_SOURCE + file);
-  fs.writeFileSync(PATH_OUTPUT + file + '.js', quizz.renderJsQuestions());
+  fs.writeFileSync(PATH_OUTPUT + file + '.js', quizz.renderJsFile());
   //console.log(JSON.stringify(quizz.getSolutions(), null, 2));
 });
