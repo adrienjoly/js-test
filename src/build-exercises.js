@@ -41,4 +41,5 @@ files.filter(isQuizzFile).forEach(function(file){
   console.log('Rendering', file, 'quizz ...');
   var quizz = new QuizzRenderer().readFromFile(PATH_SOURCE + file);
   fs.writeFileSync(PATH_OUTPUT + file + '.js', quizz.renderJsQuestions());
+  //console.log(JSON.stringify(quizz.getSolutions(), null, 2));
 });
