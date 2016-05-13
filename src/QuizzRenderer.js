@@ -12,6 +12,14 @@ function renderString(line, addComma){
   return "'" + line.replace(/'/g, '\\\'') + "'" + (addComma ? ',' : '');
 }
 
+function isChoice(line) {
+  return /^[-\*] (.+)$/.test(line);
+}
+
+function getFirstChar(line) {
+  return line[0];
+}
+
 function renderQuestionLines(lines, index) {
   var choice = 1;
   function renderOption(line){
@@ -40,17 +48,6 @@ function renderQuestionLines(lines, index) {
   ).concat([
     '],'
   ]);
-}
-
-function renderExpectedAnswers(lines, index) {
-  function isChoice(line) {
-    return /^[-\*] (.+)$/.test(line);
-  }
-  function getFirstChar(line) {
-    return line[0];
-  }
-  var solution = lines.filter(isChoice).map(getFirstChar).join('').indexOf('*') + 1;
-  return '\'qcm' + (index + 1) + '\': ' + solution + ',';
 }
 
 function indent(n) {
@@ -96,8 +93,12 @@ QuizzRenderer.prototype.renderJsQuestions = function () {
   ]).join('\n');
 };
 
-QuizzRenderer.prototype.renderSolutions = function () {
-  return this.questionLines.map(renderExpectedAnswers).map(indent(2)).join('\n');
+QuizzRenderer.prototype.getSolutions = function () {
+  var solutions = {};
+  this.questionLines.forEach(function(lines, index){
+    solutions['qcm' + (index + 1)] = lines.filter(isChoice).map(getFirstChar).join('').indexOf('*') + 1;
+  });
+  return solutions;
 };
 
 module.exports = QuizzRenderer;
