@@ -17,7 +17,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   var NB_VARIANTS = 3;
 
   function getExerciseMdFile(variant) {
-    return './data/exercice.variant.' + variant + '.json.md';
+    return './data/ex.2.variant.' + variant + '.json.md';
   }
 
   /* firebase security rules:
