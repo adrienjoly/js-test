@@ -1,5 +1,5 @@
-Javascript Coding Exercise runner for course students
-=====================================================
+Coding Exam for Javascript course students
+==========================================
 
 Features:
 ---------
@@ -7,7 +7,6 @@ Features:
 - 100% paperless examination software, 100% online;
 - designed for automated testing and evaluation of students' answers;
 - students are identified using their Google Apps account;
-- type of exercise: algorythmic coding;
 - variants based on student id;
 - answers are submitted to a Firebase account, and can be exported to a JSON file;
 - beautiful UI thanks to Google Polymer and Material Design.
@@ -35,12 +34,11 @@ How to deploy:
 - Protect your Firebase database to prevent data alteration/loss (cf comments in `./scripts/app.js`)
 - Run `npm run deploy` to push the project to production on Firebase Hosting (based on `firebase.json`)
 
-How to get student answers:
----------------------------
+How to evaluate students' answers
+---------------------------------
 
 - Toggle the `active` property (1 or 0) of your Firebase database to (de-)activate student access to the questionnaire
-- When the test is done, export answers from Firebase dashboard to a `answers.json` file in your local project directory
-- Move `solutions.json` back to your local project directory, then run `node evaluate answers.json solutions.json` to see the score of your students
+- Run `npm run eval` to evaluate the score of your students from Firebase
 
 TODO
 ----

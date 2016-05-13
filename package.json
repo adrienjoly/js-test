@@ -1,7 +1,7 @@
 {
-  "name": "js-exo-algo",
+  "name": "js-exam",
   "version": "1.0.0",
-  "description": "Javascript Exo - Algo",
+  "description": "Javascript Exam",
   "dependencies": {
     "async": "^1.5.2",
     "bower": "^1.7.9",
