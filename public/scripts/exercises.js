@@ -115,7 +115,7 @@
             },
             {
               "name": 3,
-              "text": "[ 'b', ]"
+              "text": "[ 'b' ]"
             },
             {
               "name": 4,
@@ -315,35 +315,31 @@
           "i": 3,
           "id": "code3",
           "mdVariants": [
-            "Écrivez une boucle qui affiche dans la console tous les nombres entiers pairs entre `1` et `100` (compris).\n\n`console.log` ne doit paraître qu'une seule fois dans votre code.\n\nUtilisez `% 2` (opérateur modulo) pour savoir si un nombre est pair ou impair.\n",
-            "Écrivez une boucle qui affiche dans la console tous les nombres entiers impairs entre `1` et `100` (compris).\n\n`console.log` ne doit paraître qu'une seule fois dans votre code.\n\nUtilisez `% 2` (opérateur modulo) pour savoir si un nombre est pair ou impair.\n"
+            "Définissez une fonction `plusUn` qui renvoie le nombre passé en paramètre après y avoir additionné le nombre `1`; de manière à ce que `plusUn(1)` renvoie `2`, `plusUn(2)` renvoie `3`, etc...\n\nCette fonction ne doit ni afficher d'alerte modale, ni écrire dans la console. Utilisez `return` pour renvoyer le résultat de l'addition."
           ]
         },
         {
           "i": 4,
           "id": "code4",
           "mdVariants": [
-            "Définissez une fonction `logMultiples` qui affiche dans la console tous les nombres entiers entre `1` et `100` (compris) qui sont multiples du nombre passé en paramètre de cette fonction.\n",
-            "Définissez une fonction `logMultiples` qui affiche dans la console tous les nombres entiers entre `5` et `100` (compris) qui sont multiples du nombre passé en paramètre de cette fonction.\n",
-            "Définissez une fonction `logMultiples` qui affiche dans la console tous les nombres entiers entre `10` et `100` (compris) qui sont multiples du nombre passé en paramètre de cette fonction.\n"
+            "Supposons que vous disposiez d'une fonction `plusUn` définie telle que dans la question précédente.\n\nÉcrivez le code JS permettant de demander un nombre a l'utilisateur (à l'aide de `prompt`), d'appeler la fonction `plusUn` en passant ce nombre en paramètre, puis d'afficher le résultat de cet appel dans une alerte modale (`alert`)."
           ]
         },
         {
           "i": 5,
           "id": "code5",
           "mdVariants": [
-            "Définissez une fonction `tabMultiples` qui renvoie (à l'aide de `return`) un tableau contenant tous les nombres entiers entre `1` et `100` (compris) qui sont multiples du nombre passé en paramètre de cette fonction.\n\nCette fonction ne doit pas écrire dans la console.\n\nPour créer un tableau vide, il suffit d'écrire `[]`.\n",
-            "Définissez une fonction `tabMultiples` qui renvoie (à l'aide de `return`) un tableau contenant tous les nombres entiers entre `1` et `100` (compris) qui sont multiples du nombre passé en paramètre de cette fonction.\n\nCette fonction ne doit pas écrire dans la console.\n\nPour créer un tableau vide, il suffit d'écrire `[]`.\n",
-            "Définissez une fonction `tabMultiples` qui renvoie (à l'aide de `return`) un tableau contenant tous les nombres entiers entre `1` et `100` (compris) qui sont multiples du nombre passé en paramètre de cette fonction.\n\nCette fonction ne doit pas écrire dans la console.\n\nPour créer un tableau vide, il suffit d'écrire `[]`.\n"
+            "Écrivez une boucle qui affiche dans la console tous les nombres entiers pairs entre `1` et `100` (compris).\n\n`console.log` ne doit paraître qu'une seule fois dans votre code.\n\nUtilisez `% 2` (opérateur modulo) pour savoir si un nombre est pair ou impair.\n",
+            "Écrivez une boucle qui affiche dans la console tous les nombres entiers impairs entre `1` et `100` (compris).\n\n`console.log` ne doit paraître qu'une seule fois dans votre code.\n\nUtilisez `% 2` (opérateur modulo) pour savoir si un nombre est pair ou impair.\n"
           ]
         },
         {
           "i": 6,
           "id": "code6",
           "mdVariants": [
-            "Écrivez le code JS permettant de demander un nombre a l'utilisateur (à l'aide de `prompt`), puis d'afficher dans la console un tableau contenant tous les nombres entiers entre `1` et `100` (compris) qui sont multiples du nombre saisi par l'utilisateur.\n\nUtilisez pour cela la fonction `tabMultiples` telle que définie ci-dessus.\n",
-            "Écrivez le code JS permettant de demander un nombre a l'utilisateur (à l'aide de `prompt`), puis d'afficher dans la console un tableau contenant tous les nombres entiers entre `1` et `100` (compris) qui sont multiples du nombre saisi par l'utilisateur.\n\nUtilisez pour cela la fonction `tabMultiples` telle que définie ci-dessus.\n",
-            "Écrivez le code JS permettant de demander un nombre a l'utilisateur (à l'aide de `prompt`), puis d'afficher dans la console un tableau contenant tous les nombres entiers entre `1` et `100` (compris) qui sont multiples du nombre saisi par l'utilisateur.\n\nUtilisez pour cela la fonction `tabMultiples` telle que définie ci-dessus.\n"
+            "Définissez une fonction `tabNombres` qui renvoie (à l'aide de `return`) un tableau contenant tous les nombres entiers entre `1` et `n` (compris), `n` étant un nombre passé en paramètre de cette fonction.\n\nCette fonction ne doit pas écrire dans la console.\n\nPour créer un tableau vide, il suffit d'écrire `[]`.\n",
+            "Définissez une fonction `jusqua` qui renvoie (à l'aide de `return`) un tableau contenant tous les nombres entiers entre `1` et `n` (compris), `n` étant un nombre passé en paramètre de cette fonction.\n\nCette fonction ne doit pas écrire dans la console.\n\nPour créer un tableau vide, il suffit d'écrire `[]`.\n",
+            "Définissez une fonction `nombres` qui renvoie (à l'aide de `return`) un tableau contenant tous les nombres entiers entre `1` et `n` (compris), `n` étant un nombre passé en paramètre de cette fonction.\n\nCette fonction ne doit pas écrire dans la console.\n\nPour créer un tableau vide, il suffit d'écrire `[]`.\n"
           ]
         },
         {
