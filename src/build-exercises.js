@@ -9,8 +9,7 @@ var PATH_SOURCE = './';
 var PATH_OUTPUT = './public/data/';
 var OUTPUT_FILE = './public/scripts/exercises.js';
 
-var RE_EX_CODE_FILE = /ex\.(\d+)\.code\.template\.md/;
-var RE_EX_QUIZZ_FILE = /ex\.(\d+)\.quizz\.template\.md/;
+var RE_TEMPLATE_FILE = /ex\.(\d+)\.(code|quizz)\.template\.md/;
 
 function makeRegexTester(regex) {
   return regex.test.bind(regex);
@@ -28,50 +27,53 @@ function renderExercisesFile(exercises) {
   ].join('\n');
 }
 
-// actual script
+// converters
 
-var files = fs.readdirSync(PATH_SOURCE);
-var exercises = [];
-
-// 1) render code exercises
-
-var isCodeFile = makeRegexTester(RE_EX_CODE_FILE);
-files.filter(isCodeFile).forEach(function(file){
-  console.log('Rendering', file, 'coding exercise ...');
-  var exNumber = RE_EX_CODE_FILE.exec(file)[1];
-  var exercisePack = new QuizzRenderer().readFromFile(PATH_SOURCE + file);
-  var exercise = exercisePack.renderJsonQuestions()[0];
+function renderCodeExercise(exerciseData, exNumber) {
+  var exercise = exerciseData.renderJsonQuestions()[0];
   var variants = _.map(exercise.choices, 'text').map(JSON.parse);
   var variantFiles = variants.map(function renderVariant(variantData, i) {
     var variantFile = 'ex.' + exNumber + '.variant.' + i + '.json.md';
     fs.writeFileSync(PATH_OUTPUT + variantFile, mustache.render(exercise.md, variantData));
     return variantFile;
   });
-  exercises[exNumber - 1] = {
-    _info: 'generated from ' + file,
+  return {
     isCode: true,
-    i: exNumber, // exercise.i,
     id: 'code' + exNumber,
     mdVariants: variantFiles,
   };
   // TODO: store md content here instead of in a file?
-});
+}
 
-// 2) render quizz exercises
-
-var isQuizzFile = makeRegexTester(RE_EX_QUIZZ_FILE);
-files.filter(isQuizzFile).forEach(function(file){
-  console.log('Rendering', file, 'quizz ...');
-  var quizz = new QuizzRenderer().readFromFile(PATH_SOURCE + file);
+function renderQuizzExercise(exerciseData, exNumber) {
   //fs.writeFileSync(PATH_OUTPUT + file + '.js', quizz.renderJsFile());
-  var exNumber = RE_EX_QUIZZ_FILE.exec(file)[1];
-  exercises[exNumber - 1] = {
-    _info: 'generated from ' + file,
+  return {
     isQuizz: true,
-    i: exNumber,
-    questions: quizz.renderJsonQuestions()
+    questions: exerciseData.renderJsonQuestions()
   };
   //console.log(JSON.stringify(quizz.getSolutions(), null, 2));
+}
+
+var converters = {
+  code: renderCodeExercise,
+  quizz: renderQuizzExercise
+};
+
+// actual script
+
+var files = fs.readdirSync(PATH_SOURCE);
+var exercises = [];
+
+files.filter(makeRegexTester(RE_TEMPLATE_FILE)).forEach(function(file){
+  var fileParts = RE_TEMPLATE_FILE.exec(file);
+  var exNumber = fileParts[1];
+  var exType = fileParts[2];
+  console.log('Rendering', file, '...');
+  var exerciseData = new QuizzRenderer().readFromFile(PATH_SOURCE + file);
+  exercises[exNumber - 1] = _.extend({
+    _info: 'generated from ' + file,
+    i: exNumber, // exercise.i,
+  }, converters[exType](exerciseData, exNumber));
 });
 
 var exercisePack = renderExercisesFile(exercises);

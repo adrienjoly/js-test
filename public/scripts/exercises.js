@@ -4,8 +4,8 @@
   document.querySelector('#app').exercises = [
     {
       "_info": "generated from ex.1.quizz.template.md",
-      "isQuizz": true,
       "i": "1",
+      "isQuizz": true,
       "questions": [
         {
           "i": 1,
@@ -287,8 +287,8 @@
     },
     {
       "_info": "generated from ex.2.code.template.md",
-      "isCode": true,
       "i": "2",
+      "isCode": true,
       "id": "code2",
       "mdVariants": [
         "ex.2.variant.0.json.md",
