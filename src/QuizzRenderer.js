@@ -26,7 +26,7 @@ function renderQuestion(lines, index) {
   function renderOption(line){
     return {
       name: (choice++),
-      text: line.replace(CHOICE, '$1')
+      text: line.replace(CHOICE, '$1').replace(/`/g, '')
     };
   }
   var code = [];
@@ -37,7 +37,7 @@ function renderQuestion(lines, index) {
   return {
     i: index + 1,
     id: 'qcm' + (index + 1),
-    md: code,
+    md: code.join('\n'),
     choices: choices.map(renderOption)
   };
 }
