@@ -1,4 +1,4 @@
-// This scripts renders markdown files in PATH_OUTPUT for each exercise template and variants in PATH_SOURCE
+// This scripts generates ./public/scripts/exercices.js based on ./*.md files
 
 var _ = require('lodash');
 var fs = require('fs');
@@ -6,7 +6,6 @@ var mustache = require('mustache');
 var QuizzRenderer = require('./QuizzRenderer');
 
 var PATH_SOURCE = './';
-var PATH_OUTPUT = './public/data/';
 var OUTPUT_FILE = './public/scripts/exercises.js';
 
 var RE_TEMPLATE_FILE = /ex\.(\d+)\.(code|quizz)\.template\.md/;
@@ -34,8 +33,8 @@ function renderCodeExercise(exerciseData, exNumber) {
     var variants = _.map(question.choices, 'text').map(JSON.parse);
     variants = variants.length > 0 ? variants : [{}]; // also render coding questions that don't have any variants
     return {
-      i: q + 1,
-      id: 'code' + (q + 1),
+      i: q + 1, // TODO: prevent id collisions if more than one code.template.md file is used
+      id: 'code' + (q + 1), // TODO: allow each question to override this id
       mdVariants: variants.map(function renderVariant(variantData, i) {
         //var variantFile = 'ex.' + exNumber + '.variant.' + i + '.json.md';
         //fs.writeFileSync(PATH_OUTPUT + variantFile, mustache.render(question.md, variantData));
@@ -52,12 +51,12 @@ function renderCodeExercise(exerciseData, exNumber) {
 }
 
 function renderQuizzExercise(exerciseData, exNumber) {
-  //fs.writeFileSync(PATH_OUTPUT + file + '.js', quizz.renderJsFile());
   return {
     isQuizz: true,
     title: 'QCM',
     questions: exerciseData.renderJsonQuestions()
   };
+  // TODO: also generate solution file, for evaluation of students' answers
   //console.log(JSON.stringify(quizz.getSolutions(), null, 2));
 }
 
@@ -83,7 +82,7 @@ files.filter(makeRegexTester(RE_TEMPLATE_FILE)).forEach(function(file){
   }, converters[exType](exerciseData, exNumber)));
 });
 
+// the exercisePack file will be loaded by index.html, then processed by app.js for rendering
+// exercises and student-id-based variants
 var exercisePack = renderExercisesFile(exercises);
-//console.log(exercisePack);
 fs.writeFileSync(OUTPUT_FILE, exercisePack);
-// TODO: remove all files from ./public/data, when all exercise data will be in the exercises JSON structure
