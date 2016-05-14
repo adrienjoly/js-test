@@ -1,1 +1,0 @@
-Écrivez le code JS permettant d'envoyer une requête Ajax de type GET à l'URL `http://jsonplaceholder.typicode.com/users/2`. Une fois la réponse reçue, affichez dans la console seulement la valeur de la propriété `email` de cette réponse JSON.

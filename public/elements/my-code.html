@@ -28,8 +28,13 @@
           },
           value: {
             type: String,
+            observer: '_changed',
             notify: true
           }
+        },
+
+        _changed: function(evt) {
+          this.fire('change', evt);
         }
       });
 

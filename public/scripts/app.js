@@ -60,14 +60,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   };
 
   app.title = PAGE_TITLE;
-  app.questions = [];
   app.loggedIn = false; // init default value, to be set by google-signin
   app.user = null;
   app.backend = null; // Firebase instance
   app.myAnswers = {}; // will be populated from firebase after login
-  app.myCode = ''; // aynchronously bound to app.myAnswers.code1
   app.active = false;
-  app.submitText = 'Enregistrer';
 
   // disable/enable user entry based on the `active` value in the Firebase DB
   function onBackEndStatus(snapshot) {
@@ -83,7 +80,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     // switch exercise variant based on student id
     app.set('exercises', app.exercises.map(function applyVariant(ex) {
       if (ex.mdVariants) {
-        ex.mdFile = './data/' + pickVariant(ex.mdVariants, userData.id);
+        ex.md = pickVariant(ex.mdVariants, userData.id);
       }
       return ex;
     }));
@@ -144,51 +141,60 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         // ui feedback: remove loading spinner on sync'ed questions (even after a temporary disconnection)
         for (var id in upd) {
           toggleLoadingSpinner(id, false);
+          var btn = document.querySelectorAll('#btnSubmit_' + id + ' span')[0];
+          if (btn) btn.innerHTML = 'Enregistré avec succès';
         }
-        app.submitText = 'Enregistré avec succès';
       }
     });
   }
 
-  function toggleSubmitButton (toggle, submitting) {
-    var btn = document.querySelector('#btnSubmit');
-    if (toggle) {
-      btn.removeAttribute('disabled');
-    } else {
-      btn.setAttribute('disabled', 'disabled');  
-    }
-    app.submitText = submitting ? 'Enregistrement...' : 'Enregistrer';
-  }
-
-  (function bindAnswerChangesToBackend(){
+  // for code exercises only
+  (function bindCodeAnswersToBackend(){
+    /*
     // cf https://www.polymer-project.org/1.0/docs/devguide/properties.html#observing-path-changes
     app.observers = [
       'onAnswersUpdate(myAnswers.*)',
-      'onCodeUpdate(myCode)'
       //'onAnswersUpdate(user)'
     ];
     app.onAnswersUpdate = function(update){
-      //console.log('onAnswersUpdate', update);
-      if ((update.value || {}).code1) app.set('myCode', update.value.code1);
+      console.log('onAnswersUpdate', update);
     };
-    app.onCodeUpdate = function(update){
+    */
+    function toggleSubmitButton (questionId, toggle, submitting) {
+      var btn = document.querySelector('#btnSubmit_' + questionId);
+      if (!btn) return;
+      if (toggle) {
+        btn.removeAttribute('disabled');
+      } else {
+        btn.setAttribute('disabled', 'disabled');  
+      }
+      btn.querySelectorAll('span')[0].innerHTML = submitting ? 'Enregistrement...' : 'Enregistrer';
+    }
+    // when user changes an answer => update associated submit button
+    app.onCodeChange = function(evt) {
+      var input = evt.currentTarget;
+      var questionId = input.getAttribute('data-id');
       if (app.myAnswers) {
-        var changed = app.myAnswers.code1 !== update;
-        //console.log('onCodeUpdate changed:', changed, update);
-        toggleSubmitButton(changed);
+        var changed = app.myAnswers[questionId] !== input.value;
+        //console.log('onCodeChange changed:', changed);
+        toggleSubmitButton(questionId, changed);
+      }
+    }
+    // when user presses submit button => upload answer
+    app.onSubmit = function(evt) {
+      var button = evt.currentTarget;
+      var questionId = button.getAttribute('data-id');
+      var input = document.querySelector('my-code[data-id="' + questionId + '"]');
+      var changed = app.myAnswers[questionId] !== input.value;
+      //console.log('onSubmit, code changed:', questionId, changed, input.value);
+      if (changed) {
+        toggleSubmitButton(questionId, false, true); // prevent user from clicking more than once in a row
+        var upd = {};
+        upd[questionId] = input.value;
+        sendAnswersToBackend(upd);
       }
     };
   })();
-
-  // for code exercises only
-  app.onSubmit = function(e) {
-    var changed = app.myAnswers.code1 !== app.myCode;
-    //console.log('onSubmit, code changed:', changed, app.myCode);
-    if (changed) {
-      toggleSubmitButton(false, true); // prevent user from clicking more than once in a row
-      sendAnswersToBackend({ code1: app.myCode });
-    }
-  };
 
   // for quizz questions only
   (function bindQcmAnswersToBackend(){
