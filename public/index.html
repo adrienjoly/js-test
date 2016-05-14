@@ -69,6 +69,10 @@
             </template>
             <template is="dom-if" if="{{loggedIn}}">
               <h2>Bonjour, {{user.name}}</h2>
+              <zero-md file="./data/intro.md">
+                <!-- Remember to pass in empty container of class="md-html". -->
+                <div class="md-html"></div>
+              </zero-md>
             </template>
             <google-signin
               is-authorized="{{loggedIn}}"
