@@ -78,11 +78,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   function onLogin(userData, offline) {
     app.user = userData;
     // switch exercise variant based on student id
-    app.set('exercises', app.exercises.map(function applyVariant(ex) {
-      if (ex.mdVariants) {
-        ex.md = pickVariant(ex.mdVariants, userData.id);
-      }
-      return ex;
+    app.set('exercises', app.exercises.map(function applyVariants(ex) {
+      return Polymer.Base.extend(ex, {
+        questions: ex.questions.map(function applyVariant(question) {
+          return Polymer.Base.extend(question, {
+            md: question.md || pickVariant(question.mdVariants, userData.id)
+          });
+        })
+      });
     }));
     if (offline) return;
     var userHash = userData.email.split('@')[0].replace(/[^\w]/g, '_');
