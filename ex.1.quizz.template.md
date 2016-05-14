@@ -54,7 +54,7 @@ Je crée un tableau `[ 'a', 'b', 'c' ]`, puis j'utilise successivement les méth
 
 - `[ 'a', 'b', 'c' ]`
 - `[ 'a', 'b', 'c', 'd' ]`
-- `[ 'b', ]`
+- `[ 'b' ]`
 * `[ 'a', 'd' ]`
 
 ---

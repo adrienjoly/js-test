@@ -26,6 +26,18 @@ xhr.send(JSON.stringify({a:'données à envoyer'}));
 
 ---
 
+Définissez une fonction `plusUn` qui renvoie le nombre passé en paramètre après y avoir additionné le nombre `1`; de manière à ce que `plusUn(1)` renvoie `2`, `plusUn(2)` renvoie `3`, etc...
+
+Cette fonction ne doit ni afficher d'alerte modale, ni écrire dans la console. Utilisez `return` pour renvoyer le résultat de l'addition.
+
+---
+
+Supposons que vous disposiez d'une fonction `plusUn` définie telle que dans la question précédente.
+
+Écrivez le code JS permettant de demander un nombre a l'utilisateur (à l'aide de `prompt`), d'appeler la fonction `plusUn` en passant ce nombre en paramètre, puis d'afficher le résultat de cet appel dans une alerte modale (`alert`).
+
+---
+
 Écrivez une boucle qui affiche dans la console tous les nombres entiers {{p}}s entre `1` et `100` (compris).
 
 `console.log` ne doit paraître qu'une seule fois dans votre code.
@@ -37,33 +49,15 @@ Utilisez `% 2` (opérateur modulo) pour savoir si un nombre est pair ou impair.
 
 ---
 
-Définissez une fonction `logMultiples` qui affiche dans la console tous les nombres entiers entre `{{min}}` et `100` (compris) qui sont multiples du nombre passé en paramètre de cette fonction.
-
-- { "min": "1" }
-- { "min": "5" }
-- { "min": "10" }
-
----
-
-Définissez une fonction `tabMultiples` qui renvoie (à l'aide de `return`) un tableau contenant tous les nombres entiers entre `1` et `100` (compris) qui sont multiples du nombre passé en paramètre de cette fonction.
+Définissez une fonction `{{nom}}` qui renvoie (à l'aide de `return`) un tableau contenant tous les nombres entiers entre `1` et `n` (compris), `n` étant un nombre passé en paramètre de cette fonction.
 
 Cette fonction ne doit pas écrire dans la console.
 
 Pour créer un tableau vide, il suffit d'écrire `[]`.
 
-- { "min": "1" }
-- { "min": "5" }
-- { "min": "10" }
-
----
-
-Écrivez le code JS permettant de demander un nombre a l'utilisateur (à l'aide de `prompt`), puis d'afficher dans la console un tableau contenant tous les nombres entiers entre `1` et `100` (compris) qui sont multiples du nombre saisi par l'utilisateur.
-
-Utilisez pour cela la fonction `tabMultiples` telle que définie ci-dessus.
-
-- { "min": "1" }
-- { "min": "5" }
-- { "min": "10" }
+- { "nom": "tabNombres" }
+- { "nom": "jusqua" }
+- { "nom": "nombres" }
 
 ---
 
