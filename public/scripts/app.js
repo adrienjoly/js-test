@@ -10,9 +10,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 (function(document) {
   'use strict';
 
-  var PUBLIC_TEST_MODE = true; // TODO: set to false to activate Google Login
+  var PUBLIC_TEST_MODE = false; // TODO: set to false to activate Google Login
   var PAGE_TITLE = 'Javascript Exam';
   var FIREBASE_URL = 'https://js-exam.firebaseio.com';
+  var GOOGLE_CLIENT_ID = '247219641427-vkbr8g262hfk0dbtvbu2mpbuj09ah569.apps.googleusercontent.com'; // generated from https://console.developers.google.com/apis/credentials?project=eemi-own-exam&authuser=1
+  var GOOGLE_CLIENT_DOMAIN = 'eemi.com'; // to restrict access to users from a certain domain only
+  var LOGIN_INVITE = 'Veuillez vous connecter à votre compte EEMI en utilisant le bouton ci-dessous svp:';
 
   /* firebase security rules:
   {
@@ -60,6 +63,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   };
 
   app.title = PAGE_TITLE;
+  app.GOOGLE_CLIENT_ID = GOOGLE_CLIENT_ID;
+  app.GOOGLE_CLIENT_DOMAIN = GOOGLE_CLIENT_DOMAIN;
+  app.LOGIN_INVITE = LOGIN_INVITE;
   app.loggedIn = false; // init default value, to be set by google-signin
   app.user = null;
   app.backend = null; // Firebase instance

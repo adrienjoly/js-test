@@ -64,8 +64,8 @@
         <section>
           <paper-material elevation="1">
             <template is="dom-if" if="{{!loggedIn}}">
-              <h2>Introduction</h2>
-              <p>Veuillez vous connecter à votre compte EEMI en utilisant le bouton ci-dessous svp:</p>
+              <h2>Connexion</h2>
+              <p>{{LOGIN_INVITE}}</p>
             </template>
             <template is="dom-if" if="{{loggedIn}}">
               <h2>Bonjour, {{user.name}}</h2>
@@ -77,10 +77,9 @@
             <google-signin
               is-authorized="{{loggedIn}}"
               scopes="profile email"
-              hosted-domain="eemi.com"
-              client-id="247219641427-vkbr8g262hfk0dbtvbu2mpbuj09ah569.apps.googleusercontent.com"
+              hosted-domain="{{GOOGLE_CLIENT_DOMAIN}}"
+              client-id="{{GOOGLE_CLIENT_ID}}"
             ></google-signin>
-            <!-- client id generated from https://console.developers.google.com/apis/credentials?project=eemi-own-exam&authuser=1 -->
           </paper-material>
         </section>
 
