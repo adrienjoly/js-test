@@ -6,6 +6,7 @@
       "_info": "generated from ex.1.quizz.template.md",
       "i": "1",
       "isQuizz": true,
+      "title": "QCM",
       "questions": [
         {
           "i": 1,
@@ -289,11 +290,25 @@
       "_info": "generated from ex.2.code.template.md",
       "i": "2",
       "isCode": true,
+      "title": "Exercices de codage",
       "id": "code2",
-      "mdVariants": [
-        "ex.2.variant.0.json.md",
-        "ex.2.variant.1.json.md",
-        "ex.2.variant.2.json.md"
+      "questions": [
+        {
+          "i": 0,
+          "id": "code0",
+          "mdVariants": [
+            "Écrivez le code JS permettant d'envoyer une requête Ajax de type GET à l'URL `http://jsonplaceholder.typicode.com/users/1`. Une fois la réponse reçue, affichez dans la console seulement la valeur de la propriété `username` de cette réponse JSON.\n",
+            "Écrivez le code JS permettant d'envoyer une requête Ajax de type GET à l'URL `http://jsonplaceholder.typicode.com/users/2`. Une fois la réponse reçue, affichez dans la console seulement la valeur de la propriété `email` de cette réponse JSON.\n",
+            "Écrivez le code JS permettant d'envoyer une requête Ajax de type GET à l'URL `http://jsonplaceholder.typicode.com/users/3`. Une fois la réponse reçue, affichez dans la console seulement la valeur de la propriété `phone` de cette réponse JSON.\n"
+          ]
+        },
+        {
+          "i": 1,
+          "id": "code1",
+          "mdVariants": [
+            "Test\n"
+          ]
+        }
       ]
     }
   ];

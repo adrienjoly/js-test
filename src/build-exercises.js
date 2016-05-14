@@ -30,25 +30,32 @@ function renderExercisesFile(exercises) {
 // converters
 
 function renderCodeExercise(exerciseData, exNumber) {
-  var exercise = exerciseData.renderJsonQuestions()[0];
-  var variants = _.map(exercise.choices, 'text').map(JSON.parse);
-  var variantFiles = variants.map(function renderVariant(variantData, i) {
-    var variantFile = 'ex.' + exNumber + '.variant.' + i + '.json.md';
-    fs.writeFileSync(PATH_OUTPUT + variantFile, mustache.render(exercise.md, variantData));
-    return variantFile;
+  var questions = exerciseData.renderJsonQuestions().map(function(question, q) {
+    var variants = _.map(question.choices, 'text').map(JSON.parse) || [{}]; // also render coding questions that don't have any variants
+    return {
+      i: q,
+      id: 'code' + q,
+      mdVariants: variants.map(function renderVariant(variantData, i) {
+        //var variantFile = 'ex.' + exNumber + '.variant.' + i + '.json.md';
+        //fs.writeFileSync(PATH_OUTPUT + variantFile, mustache.render(question.md, variantData));
+        //return variantFile;
+        return mustache.render(question.md, variantData);
+      })      
+    };
   });
   return {
     isCode: true,
-    id: 'code' + exNumber,
-    mdVariants: variantFiles,
+    title: 'Exercices de codage',
+    id: 'code' + exNumber, // TODO: one id per question
+    questions: questions,
   };
-  // TODO: store md content here instead of in a file?
 }
 
 function renderQuizzExercise(exerciseData, exNumber) {
   //fs.writeFileSync(PATH_OUTPUT + file + '.js', quizz.renderJsFile());
   return {
     isQuizz: true,
+    title: 'QCM',
     questions: exerciseData.renderJsonQuestions()
   };
   //console.log(JSON.stringify(quizz.getSolutions(), null, 2));
@@ -61,7 +68,7 @@ var converters = {
 
 // actual script
 
-var files = fs.readdirSync(PATH_SOURCE);
+var files = fs.readdirSync(PATH_SOURCE).sort();
 var exercises = [];
 
 files.filter(makeRegexTester(RE_TEMPLATE_FILE)).forEach(function(file){
@@ -70,10 +77,10 @@ files.filter(makeRegexTester(RE_TEMPLATE_FILE)).forEach(function(file){
   var exType = fileParts[2];
   console.log('Rendering', file, '...');
   var exerciseData = new QuizzRenderer().readFromFile(PATH_SOURCE + file);
-  exercises[exNumber - 1] = _.extend({
+  exercises.push(_.extend({
     _info: 'generated from ' + file,
-    i: exNumber, // exercise.i,
-  }, converters[exType](exerciseData, exNumber));
+    i: exNumber
+  }, converters[exType](exerciseData, exNumber)));
 });
 
 var exercisePack = renderExercisesFile(exercises);

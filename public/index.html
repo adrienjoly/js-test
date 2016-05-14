@@ -95,36 +95,47 @@
 
               <section id="[[exercise.id]]" class="quizz-question">
                 <paper-material elevation="1">
-                  <h2>Exercice {{exercise.i}}</h2>
-
+                  <!--
                   <template is="dom-if" if="{{exercise.isCode}}">
+                    <h2>Exercices de codage</h2>
                     <paper-spinner-lite active></paper-spinner-lite>
                     <zero-md file="{{exercise.mdFile}}">
-                      <!-- Remember to pass in empty container of class="md-html". -->
                       <div class="md-html"></div>
                     </zero-md>
-                    <!--<my-code label="Saisissez votre code Javascript ici" data-id$="[[item.id]]" value="[[myAnswersItem(myAnswers.*, item.id)]]"></my-code>-->
                     <my-code label="Saisissez votre code Javascript ici" data-id$="[[exercise.id]]" value="{{myCode}}"></my-code>
                     <paper-button id="btnSubmit" on-click="onSubmit" disabled raised>
                       <iron-icon icon="check"></iron-icon>&nbsp;
                       <span>{{submitText}}</span>
                     </paper-button>
                   </template>
+                  -->
 
-                  <template is="dom-if" if="{{exercise.isQuizz}}">
-                    <template is="dom-repeat" items="{{exercise.questions}}" as="question">
-                      <section id="[[question.id]]" class="quizz-question">
-                        <paper-material elevation="0">
-                          <h3>Question {{question.i}}</h2>
-                          <paper-spinner-lite active></paper-spinner-lite>
-                          <zero-md text="{{question.md}}">
-                            <!-- Remember to pass in empty container of class="md-html". -->
-                            <div class="md-html"></div>
-                          </zero-md>
+                  <h2>{{exercise.title}}</h2>
+                  <template is="dom-repeat" items="{{exercise.questions}}" as="question">
+                    <section id="[[question.id]]" class="quizz-question">
+                      <paper-material elevation="0">
+                        <h3>Question {{question.i}}</h2>
+                        <paper-spinner-lite active></paper-spinner-lite>
+
+                        <zero-md text="{{question.md}}" file="{{question.mdFile}}">
+                          <!-- Remember to pass in empty container of class="md-html". -->
+                          <div class="md-html"></div>
+                        </zero-md>
+
+                        <template is="dom-if" if="{{exercise.isQuizz}}">
                           <my-qcm data-id$="[[question.id]]" on-tap="onChange" items="{{question.choices}}" value="[[myAnswersItem(myAnswers.*, question.id)]]"></my-qcm>
-                        </paper-material>
-                      </section>
-                    </template>
+                        </template>
+
+                        <template is="dom-if" if="{{exercise.isCode}}">
+                          <my-code label="Saisissez votre code Javascript ici" on-change="onCodeChange" data-id$="[[question.id]]" value="[[myAnswersItem(myAnswers.*, question.id)]]"></my-code>
+                          <paper-button id="btnSubmit_{{question.id}}" data-id$="[[question.id]]" on-click="onSubmit" disabled raised>
+                            <iron-icon icon="check"></iron-icon>&nbsp;
+                            <span>Enregistrer</span>
+                          </paper-button>
+                        </template>
+
+                      </paper-material>
+                    </section>
                   </template>
 
                 </paper-material>
