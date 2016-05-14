@@ -9,16 +9,11 @@ var PATH_SOURCE = './';
 var PATH_OUTPUT = './public/data/';
 var OUTPUT_FILE = './public/scripts/exercises.js';
 
-//var RE_EX_VARIANT_FILE = /ex\.(\d+)\.variant\.(\d+)\.json/;
 var RE_EX_CODE_FILE = /ex\.(\d+)\.code\.template\.md/;
 var RE_EX_QUIZZ_FILE = /ex\.(\d+)\.quizz\.template\.md/;
 
 function makeRegexTester(regex) {
   return regex.test.bind(regex);
-}
-
-function getExerciseTemplateName(exercise) {
-  return 'ex.' + exercise + '.code.template.md';
 }
 
 function renderExercisesFile(exercises) {
@@ -40,56 +35,27 @@ var exercises = [];
 
 // 1) render code exercises
 
-/*
-var isVariantFile = makeRegexTester(RE_EX_VARIANT_FILE);
-files.filter(isVariantFile).forEach(function(file){
-  console.log('Rendering', file, 'code variants ...');
-  var values = RE_EX_VARIANT_FILE.exec(file);
-  var exNumber = values[1];
-  var templateName = getExerciseTemplateName(exNumber);
-  var variantFile = file + '.md';
-  exercises[exNumber - 1] = exercises[exNumber - 1] || {
-    _info: 'generated from ' + templateName,
-    isCode: true,
-    i: exNumber,
-    id: 'code' + exNumber,
-    mdVariants: [],
-  }; // TODO: store md content here instead of in a file?
-  exercises[exNumber - 1].mdVariants.push(variantFile);
-  var template = fs.readFileSync(PATH_SOURCE + templateName).toString();
-  var variantData = JSON.parse(fs.readFileSync(PATH_SOURCE + file));
-  var rendered = mustache.render(template, variantData);
-  fs.writeFileSync(PATH_OUTPUT + variantFile, rendered);
-});
-*/
-
 var isCodeFile = makeRegexTester(RE_EX_CODE_FILE);
 files.filter(isCodeFile).forEach(function(file){
   console.log('Rendering', file, 'coding exercise ...');
-  var quizz = new QuizzRenderer().readFromFile(PATH_SOURCE + file);
   var exNumber = RE_EX_CODE_FILE.exec(file)[1];
-  var exercise = quizz.renderJsonQuestions()[0];
-  var variants = _.map(exercise.choices, 'text').map(JSON.parse.bind(JSON));
-  var variantFiles = variants.map(function(variantData, i) {
+  var exercisePack = new QuizzRenderer().readFromFile(PATH_SOURCE + file);
+  var exercise = exercisePack.renderJsonQuestions()[0];
+  var variants = _.map(exercise.choices, 'text').map(JSON.parse);
+  var variantFiles = variants.map(function renderVariant(variantData, i) {
     var variantFile = 'ex.' + exNumber + '.variant.' + i + '.json.md';
     fs.writeFileSync(PATH_OUTPUT + variantFile, mustache.render(exercise.md, variantData));
     return variantFile;
   });
-  var final = {
+  exercises[exNumber - 1] = {
     _info: 'generated from ' + file,
     isCode: true,
-    i: exercise.i,
+    i: exNumber, // exercise.i,
+    id: 'code' + exNumber,
     mdVariants: variantFiles,
   };
-  console.log(final);
-  return;
-
-  //fs.writeFileSync(PATH_OUTPUT + file + '.js', quizz.renderJsFile());
-  exercises[exNumber - 1] = {
-  };
-  //console.log(JSON.stringify(quizz.getSolutions(), null, 2));
+  // TODO: store md content here instead of in a file?
 });
-
 
 // 2) render quizz exercises
 
