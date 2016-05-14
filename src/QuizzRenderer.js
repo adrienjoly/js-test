@@ -10,7 +10,7 @@ function getTrimmedLines(str) {
 }
 
 function nonEmptySection(lines) {
-  return lines.length > 1;
+  return lines.join('').length > 1;
 }
 
 function isChoice(line) {
