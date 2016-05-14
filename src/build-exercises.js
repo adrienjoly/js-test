@@ -31,7 +31,8 @@ function renderExercisesFile(exercises) {
 
 function renderCodeExercise(exerciseData, exNumber) {
   var questions = exerciseData.renderJsonQuestions().map(function(question, q) {
-    var variants = _.map(question.choices, 'text').map(JSON.parse) || [{}]; // also render coding questions that don't have any variants
+    var variants = _.map(question.choices, 'text').map(JSON.parse);
+    variants = variants.length > 0 ? variants : [{}]; // also render coding questions that don't have any variants
     return {
       i: q,
       id: 'code' + q,

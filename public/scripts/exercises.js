@@ -306,7 +306,7 @@
           "i": 1,
           "id": "code1",
           "mdVariants": [
-            "Test\n"
+            "Test"
           ]
         }
       ]
