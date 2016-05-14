@@ -305,10 +305,10 @@
           "i": 2,
           "id": "code2",
           "mdVariants": [
-            "Écrivez le code JS permettant d'envoyer une requête Ajax de type POST à l'URL `http://httpbin.org/post`, en transmettant un objet JSON contenant une propriété `` valant `\"pierredup\"`.\n\n\n???\n\nvar xhr = new XMLHttpRequest();\nxhr.open('POST', 'http://httpbin.org/post');\nxhr.onreadystatechange = function() {\n  if (xhr.readyState == 4) alert(xhr.responseText);\n};\nxhr.send(JSON.stringify({a:'données à envoyer'}));",
-            "Écrivez le code JS permettant d'envoyer une requête Ajax de type POST à l'URL `http://httpbin.org/post`, en transmettant un objet JSON contenant une propriété `` valant `\"eemi\"`.\n\n\n???\n\nvar xhr = new XMLHttpRequest();\nxhr.open('POST', 'http://httpbin.org/post');\nxhr.onreadystatechange = function() {\n  if (xhr.readyState == 4) alert(xhr.responseText);\n};\nxhr.send(JSON.stringify({a:'données à envoyer'}));",
-            "Écrivez le code JS permettant d'envoyer une requête Ajax de type POST à l'URL `http://httpbin.org/post`, en transmettant un objet JSON contenant une propriété `` valant `\"2016\"`.\n\n\n???\n\nvar xhr = new XMLHttpRequest();\nxhr.open('POST', 'http://httpbin.org/post');\nxhr.onreadystatechange = function() {\n  if (xhr.readyState == 4) alert(xhr.responseText);\n};\nxhr.send(JSON.stringify({a:'données à envoyer'}));",
-            "Écrivez le code JS permettant d'envoyer une requête Ajax de type POST à l'URL `http://httpbin.org/post`, en transmettant un objet JSON contenant une propriété `` valant `\"dupont\"`.\n\n\n???\n\nvar xhr = new XMLHttpRequest();\nxhr.open('POST', 'http://httpbin.org/post');\nxhr.onreadystatechange = function() {\n  if (xhr.readyState == 4) alert(xhr.responseText);\n};\nxhr.send(JSON.stringify({a:'données à envoyer'}));"
+            "Écrivez le code JS permettant d'envoyer une requête Ajax de type POST à l'URL `http://httpbin.org/post`, en transmettant un objet JSON contenant une propriété `username` valant `\"pierredup\"`.\n\n\n",
+            "Écrivez le code JS permettant d'envoyer une requête Ajax de type POST à l'URL `http://httpbin.org/post`, en transmettant un objet JSON contenant une propriété `school` valant `\"eemi\"`.\n\n\n",
+            "Écrivez le code JS permettant d'envoyer une requête Ajax de type POST à l'URL `http://httpbin.org/post`, en transmettant un objet JSON contenant une propriété `date` valant `\"2016\"`.\n\n\n",
+            "Écrivez le code JS permettant d'envoyer une requête Ajax de type POST à l'URL `http://httpbin.org/post`, en transmettant un objet JSON contenant une propriété `nickname` valant `\"dupont\"`.\n\n\n"
           ]
         },
         {

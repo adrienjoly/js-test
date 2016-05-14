@@ -8,7 +8,7 @@
 
 ---
 
-Écrivez le code JS permettant d'envoyer une requête Ajax de type POST à l'URL `http://httpbin.org/post`, en transmettant un objet JSON contenant une propriété `{{name}}` valant `"{{val}}"`.
+Écrivez le code JS permettant d'envoyer une requête Ajax de type POST à l'URL `http://httpbin.org/post`, en transmettant un objet JSON contenant une propriété `{{prop}}` valant `"{{val}}"`.
 
 - { "prop": "username", "val": "pierredup" }
 - { "prop": "school", "val": "eemi" }
