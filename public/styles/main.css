@@ -31,3 +31,9 @@ paper-radio-button {
 .quizz-question.loading h2 {
   color: red;
 }
+
+#topBar,
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+}
