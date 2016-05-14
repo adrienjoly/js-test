@@ -1,5 +1,6 @@
 // This scripts renders markdown files in PATH_OUTPUT for each exercise template and variants in PATH_SOURCE
 
+var _ = require('lodash');
 var fs = require('fs');
 var mustache = require('mustache');
 var QuizzRenderer = require('./QuizzRenderer');
@@ -8,7 +9,8 @@ var PATH_SOURCE = './';
 var PATH_OUTPUT = './public/data/';
 var OUTPUT_FILE = './public/scripts/exercises.js';
 
-var RE_EX_VARIANT_FILE = /ex\.(\d+)\.variant\.(\d+)\.json/;
+//var RE_EX_VARIANT_FILE = /ex\.(\d+)\.variant\.(\d+)\.json/;
+var RE_EX_CODE_FILE = /ex\.(\d+)\.code\.template\.md/;
 var RE_EX_QUIZZ_FILE = /ex\.(\d+)\.quizz\.template\.md/;
 
 function makeRegexTester(regex) {
@@ -38,6 +40,7 @@ var exercises = [];
 
 // 1) render code exercises
 
+/*
 var isVariantFile = makeRegexTester(RE_EX_VARIANT_FILE);
 files.filter(isVariantFile).forEach(function(file){
   console.log('Rendering', file, 'code variants ...');
@@ -58,6 +61,35 @@ files.filter(isVariantFile).forEach(function(file){
   var rendered = mustache.render(template, variantData);
   fs.writeFileSync(PATH_OUTPUT + variantFile, rendered);
 });
+*/
+
+var isCodeFile = makeRegexTester(RE_EX_CODE_FILE);
+files.filter(isCodeFile).forEach(function(file){
+  console.log('Rendering', file, 'coding exercise ...');
+  var quizz = new QuizzRenderer().readFromFile(PATH_SOURCE + file);
+  var exNumber = RE_EX_CODE_FILE.exec(file)[1];
+  var exercise = quizz.renderJsonQuestions()[0];
+  var variants = _.map(exercise.choices, 'text').map(JSON.parse.bind(JSON));
+  var variantFiles = variants.map(function(variantData, i) {
+    var variantFile = 'ex.' + exNumber + '.variant.' + i + '.json.md';
+    fs.writeFileSync(PATH_OUTPUT + variantFile, mustache.render(exercise.md, variantData));
+    return variantFile;
+  });
+  var final = {
+    _info: 'generated from ' + file,
+    isCode: true,
+    i: exercise.i,
+    mdVariants: variantFiles,
+  };
+  console.log(final);
+  return;
+
+  //fs.writeFileSync(PATH_OUTPUT + file + '.js', quizz.renderJsFile());
+  exercises[exNumber - 1] = {
+  };
+  //console.log(JSON.stringify(quizz.getSolutions(), null, 2));
+});
+
 
 // 2) render quizz exercises
 
