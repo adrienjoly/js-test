@@ -180,6 +180,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     };
   })();
 
+  // for code exercises only
   app.onSubmit = function(e) {
     var changed = app.myAnswers.code1 !== app.myCode;
     //console.log('onSubmit, code changed:', changed, app.myCode);
@@ -189,16 +190,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     }
   };
 
-  // this commented part works only for QCMs:
-  /*
+  // for quizz questions only
   (function bindQcmAnswersToBackend(){
     // used by components to get current answer data
     app.myAnswersItem = function(change, index) {
-      console.log('myAnswersItem', change, index)
+      //console.log('myAnswersItem', change, index)
       return this.get(index, change.base);
+      //cf https://www.polymer-project.org/1.0/docs/devguide/data-binding.html#array-binding    
     };
-    //cf https://www.polymer-project.org/1.0/docs/devguide/data-binding.html#array-binding
-    
     // when user changes an answer
     app.onChange = function(evt) {
       var qcmComponent = evt.currentTarget;
@@ -210,7 +209,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       sendAnswersToBackend(upd); // should be called by the above line, thru observer
     }
   })();
-  */
 
   // FOR PUBLIC TESTING: fakes Google Login
   if (PUBLIC_TEST_MODE) {
