@@ -39,7 +39,7 @@ function renderCodeExercise(exerciseData, exNumber) {
         //var variantFile = 'ex.' + exNumber + '.variant.' + i + '.json.md';
         //fs.writeFileSync(PATH_OUTPUT + variantFile, mustache.render(question.md, variantData));
         //return variantFile;
-        return mustache.render(question.md, variantData);
+        return mustache.render(question.md.split('???')[0], variantData);
       })      
     };
   });
