@@ -44,14 +44,19 @@ files.filter(isVariantFile).forEach(function(file){
   var values = RE_EX_VARIANT_FILE.exec(file);
   var exNumber = values[1];
   var templateName = getExerciseTemplateName(exNumber);
-  exercises[exNumber - 1] = {
+  var variantFile = file + '.md';
+  exercises[exNumber - 1] = exercises[exNumber - 1] || {
     _info: 'generated from ' + templateName,
-    type: 'code'
+    isCode: true,
+    i: exNumber,
+    id: 'code' + exNumber,
+    mdVariants: [],
   }; // TODO: store md content here instead of in a file?
+  exercises[exNumber - 1].mdVariants.push(variantFile);
   var template = fs.readFileSync(PATH_SOURCE + templateName).toString();
   var variantData = JSON.parse(fs.readFileSync(PATH_SOURCE + file));
   var rendered = mustache.render(template, variantData);
-  fs.writeFileSync(PATH_OUTPUT + file + '.md', rendered);
+  fs.writeFileSync(PATH_OUTPUT + variantFile, rendered);
 });
 
 // 2) render quizz exercises
@@ -64,7 +69,8 @@ files.filter(isQuizzFile).forEach(function(file){
   var exNumber = RE_EX_QUIZZ_FILE.exec(file)[1];
   exercises[exNumber - 1] = {
     _info: 'generated from ' + file,
-    type: 'quizz',
+    isQuizz: true,
+    i: exNumber,
     questions: quizz.renderJsonQuestions()
   };
   //console.log(JSON.stringify(quizz.getSolutions(), null, 2));

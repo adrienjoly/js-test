@@ -4,46 +4,32 @@
   document.querySelector('#app').exercises = [
     {
       "_info": "generated from ex.1.quizz.template.md",
-      "type": "quizz",
+      "isQuizz": true,
+      "i": "1",
       "questions": [
         {
           "i": 1,
           "id": "qcm1",
           "md": [
-            "// TP B",
-            "",
-            "```html",
-            "<form id=\"formulaire\"><input id=\"email\"></form>",
-            "```",
-            "```js",
-            "document.getElementById('formulaire').onsubmit = function(event) {",
-            "  event.preventDefault();",
-            "  alert('bonjour')",
-            "  if (document.getElementById('email').value == 'hollande@elysee.fr') {",
-            "    alert('Vérifiez votre adresse');",
-            "  }",
-            "};",
-            "```",
-            "",
-            "Quel est le rôle de `evt.preventDefault()` ?",
+            "Que renvoie `typeof` quand il est appliqué sur `\"bonjour\"` ?",
             ""
           ],
           "choices": [
             {
               "name": 1,
-              "text": "le formulaire sera crypté"
+              "text": "`\"string\"`"
             },
             {
               "name": 2,
-              "text": "le formulaire sera envoyé en AJAX"
+              "text": "`string`"
             },
             {
               "name": 3,
-              "text": "la page ne change pas quand l'utilisateur appuie sur Entrée"
+              "text": "`\"object\"`"
             },
             {
               "name": 4,
-              "text": "le champ email vaudra 'hollande@elysee.fr' par défaut"
+              "text": "`undefined`"
             }
           ]
         },
@@ -51,25 +37,25 @@
           "i": 2,
           "id": "qcm2",
           "md": [
-            "Que se passera-t-il si l'utilisateur tape 'hollande@elysee.fr' dans le champ puis presse Entrée ?",
+            "Que renvoie `typeof` quand il est appliqué sur un tableau ?",
             ""
           ],
           "choices": [
             {
               "name": 1,
-              "text": "une requête AJAX va être envoyée"
+              "text": "`\"array\"`"
             },
             {
               "name": 2,
-              "text": "la page va se recharger"
+              "text": "`array`"
             },
             {
               "name": 3,
-              "text": "seul le message 'Vérifiez votre adresse' va s'afficher "
+              "text": "`\"object\"`"
             },
             {
               "name": 4,
-              "text": "'bonjour' puis 'Vérifiez votre adresse' vont s'afficher"
+              "text": "`undefined`"
             }
           ]
         },
@@ -77,25 +63,29 @@
           "i": 3,
           "id": "qcm3",
           "md": [
-            "Pourquoi faut-il mettre deux signes d'égalité ?",
+            "```js",
+            "var tab = [ 's', 'u', 'p', 'e', 'r' ];",
+            "```",
+            "",
+            "Si je veux afficher une alerte modale seulement quand la valeur de `lettre` n'est pas contenue dans `tab`, quelle condition dois-je utiliser dans mon `if` ?",
             ""
           ],
           "choices": [
             {
               "name": 1,
-              "text": "le simple egal ne fonctionne qu'entre les nombres"
+              "text": "`tab[lettre] == false`"
             },
             {
               "name": 2,
-              "text": "le simple egal ne sert qu'à créer des variables"
+              "text": "`tab[lettre] == -1`"
             },
             {
               "name": 3,
-              "text": "le simple egal modifie la valeur de ce qui est à sa gauche"
+              "text": "`tab.indexOf(lettre) == false`"
             },
             {
               "name": 4,
-              "text": "le simple egal affecte la valeur de gauche à droite"
+              "text": "`tab.indexOf(lettre) == -1`"
             }
           ]
         },
@@ -103,34 +93,35 @@
           "i": 4,
           "id": "qcm4",
           "md": [
-            "```html",
-            "<label for=\"ref1\">",
-            "<input type=\"checkbox\" name=\"ref1\">",
-            "<input type=\"text\" id=\"ref1\">",
-            "```",
             "```js",
-            "var ref = document.getElementById('ref1')",
+            "// la bibliothèque \"underscore\" a été chargée dans l'objet \"_\"",
+            "var template = '<%= nb %> lutin<%= pl %>';",
+            "var nombre = 3;",
+            "var rendu = _.template(template, {",
+            "  nb: nombre,",
+            "  pl: nombre != 0 ? 's' : ''",
+            "});",
             "```",
             "",
-            "À quel élément la variable `ref` fait-elle référence ?",
+            "Que vaut la variable `rendu` ?",
             ""
           ],
           "choices": [
             {
               "name": 1,
-              "text": "le label"
+              "text": "`\"3 lutins\"`"
             },
             {
               "name": 2,
-              "text": "la case a cocher"
+              "text": "`\"trois lutins\"`"
             },
             {
               "name": 3,
-              "text": "le champ texte"
+              "text": "`\"3 lutin\"`"
             },
             {
               "name": 4,
-              "text": "aucun"
+              "text": "`\"nombre lutins?\"`"
             }
           ]
         },
@@ -138,34 +129,25 @@
           "i": 5,
           "id": "qcm5",
           "md": [
-            "// TP C",
-            "",
-            "```js",
-            "var a = 2;",
-            "a + 4;",
-            "a = 1;",
-            "alert(a + 4);",
-            "```",
-            "",
-            "Quel chiffre va être affiché ?",
+            "Je crée un tableau `[ 'a', 'b', 'c' ]`, puis j'utilise successivement les méthodes `push('d')` et `splice(1, 2)` sur ce tableau. Que contient le tableau à la fin ?",
             ""
           ],
           "choices": [
             {
               "name": 1,
-              "text": "1"
+              "text": "`[ 'a', 'b', 'c' ]`"
             },
             {
               "name": 2,
-              "text": "2"
+              "text": "`[ 'a', 'b', 'c', 'd' ]`"
             },
             {
               "name": 3,
-              "text": "5"
+              "text": "`[ 'b', ]`"
             },
             {
               "name": 4,
-              "text": "6"
+              "text": "`[ 'a', 'd' ]`"
             }
           ]
         },
@@ -173,25 +155,25 @@
           "i": 6,
           "id": "qcm6",
           "md": [
-            "Comment écrire du texte dans la console ?",
+            "Pour stocker des données dans un back-end Firebase, y a-t-il besoin d'effectuer une requête Ajax ?",
             ""
           ],
           "choices": [
             {
               "name": 1,
-              "text": "alert('message')"
+              "text": "Oui, en utilisant XMLHttpRequest"
             },
             {
               "name": 2,
-              "text": "function(message)"
+              "text": "Non, pas besoin d'Ajax pour cela"
             },
             {
               "name": 3,
-              "text": "console.log('bonjour')"
+              "text": "Peut-être, mais c'est l'API de Firebase qui le fait pour nous"
             },
             {
               "name": 4,
-              "text": "var message = 'bonjour'"
+              "text": "Firebase n'est pas un back-end"
             }
           ]
         },
@@ -199,14 +181,113 @@
           "i": 7,
           "id": "qcm7",
           "md": [
-            "```html",
-            "<a id=\"link\" href=\"http://google.com\">google</a>",
-            "```",
+            "Si `typeof x` vaut `\"object\"`, et `x.length` vaut `undefined`, quel est le type de la variable `x` ?",
+            ""
+          ],
+          "choices": [
+            {
+              "name": 1,
+              "text": "Tableau vide"
+            },
+            {
+              "name": 2,
+              "text": "Objet"
+            },
+            {
+              "name": 3,
+              "text": "Chaîne de caractères vide"
+            },
+            {
+              "name": 4,
+              "text": "Valeur non définie"
+            }
+          ]
+        },
+        {
+          "i": 8,
+          "id": "qcm8",
+          "md": [
+            "La ligne `hello();` sert à:",
+            ""
+          ],
+          "choices": [
+            {
+              "name": 1,
+              "text": "appeler la fonction hello"
+            },
+            {
+              "name": 2,
+              "text": "définir la fonction hello"
+            },
+            {
+              "name": 3,
+              "text": "afficher hello"
+            },
+            {
+              "name": 4,
+              "text": "(on ne peut pas répondre à cette question sans plus de contexte)"
+            }
+          ]
+        },
+        {
+          "i": 9,
+          "id": "qcm9",
+          "md": [
             "```js",
-            "link.onclick = function(evt) { evt.preventDefault(); }",
+            "hello[1] = 2",
             "```",
-            "",
-            "En supposant que la variable `link` fasse référence au lien HTML ci-dessus, que se passe-t-il si on clique sur ce lien ?",
+            ""
+          ],
+          "choices": [
+            {
+              "name": 1,
+              "text": "affiche la valeur du tableau `hello` à l'indice `1`"
+            },
+            {
+              "name": 2,
+              "text": "sert à vérifier que la valeur à l'indice `1` vaut `2`"
+            },
+            {
+              "name": 3,
+              "text": "affecte la valeur `1` à l'indice `2` du tableau"
+            },
+            {
+              "name": 4,
+              "text": "remplace la valeur à l'indice `1` du tableau par `2`"
+            }
+          ]
+        },
+        {
+          "i": 10,
+          "id": "qcm10",
+          "md": [
+            "Si j'ai deux conditions `if` liées par un `else`, laquelle de ces propositions est fausse:",
+            ""
+          ],
+          "choices": [
+            {
+              "name": 1,
+              "text": "les conditions sont évaluées une à une"
+            },
+            {
+              "name": 2,
+              "text": "si la seconde est vraie alors la première est ignorée"
+            },
+            {
+              "name": 3,
+              "text": "seule le code d'une des deux condition sera exécuté"
+            },
+            {
+              "name": 4,
+              "text": "il est possible qu'aucune condition ne soit vraie"
+            }
+          ]
+        },
+        {
+          "i": 11,
+          "id": "qcm11",
+          "md": [
+            "Quand on définit une fonction, que faut-il mettre entre les parenthèses qui suivent le nom de la fonction ?",
             ""
           ],
           "choices": [
@@ -216,161 +297,15 @@
             },
             {
               "name": 2,
-              "text": "on change de page"
+              "text": "le nom de la fonction"
             },
             {
               "name": 3,
-              "text": "un message est affiché à l'écran"
+              "text": "un nom pour chaque paramètre attendu"
             },
             {
               "name": 4,
-              "text": "le formulaire n'est pas soumis"
-            }
-          ]
-        },
-        {
-          "i": 8,
-          "id": "qcm8",
-          "md": [
-            "```js",
-            "if (0 == 0 && 1 == 3) {",
-            "    alert('Un est égal à trois');",
-            "}",
-            "else if (2 == 2) {",
-            "    alert('Deux est égal à lui-même');",
-            "}",
-            "else {",
-            "    alert('Les conditions sont toutes fausses');",
-            "}",
-            "```",
-            "",
-            "Quelles alertes sont affichées ?",
-            ""
-          ],
-          "choices": [
-            {
-              "name": 1,
-              "text": "'Un est égal à trois'"
-            },
-            {
-              "name": 2,
-              "text": "'Deux est égal à lui-même'"
-            },
-            {
-              "name": 3,
-              "text": "'Les conditions sont toutes fausses'"
-            },
-            {
-              "name": 4,
-              "text": "les trois"
-            }
-          ]
-        },
-        {
-          "i": 9,
-          "id": "qcm9",
-          "md": [
-            "// TP D",
-            "",
-            "```js",
-            "for ( var i = 0; i < 4; i++ ) {",
-            "  console.log(i);",
-            "}",
-            "```",
-            "",
-            "Combien de chiffres vont être affichés ?",
-            ""
-          ],
-          "choices": [
-            {
-              "name": 1,
-              "text": "0"
-            },
-            {
-              "name": 2,
-              "text": "1"
-            },
-            {
-              "name": 3,
-              "text": "3"
-            },
-            {
-              "name": 4,
-              "text": "4"
-            }
-          ]
-        },
-        {
-          "i": 10,
-          "id": "qcm10",
-          "md": [
-            "// TP E",
-            "",
-            "```js",
-            "function multiplierParDeux (nombre) {",
-            "  return nombre * 2;",
-            "}",
-            "var resultat = multiplierParDeux(multiplierParDeux(3));",
-            "```",
-            "",
-            "Que vaut `resultat` ?",
-            ""
-          ],
-          "choices": [
-            {
-              "name": 1,
-              "text": "2"
-            },
-            {
-              "name": 2,
-              "text": "3"
-            },
-            {
-              "name": 3,
-              "text": "6"
-            },
-            {
-              "name": 4,
-              "text": "12"
-            }
-          ]
-        },
-        {
-          "i": 11,
-          "id": "qcm11",
-          "md": [
-            "// TP G",
-            "",
-            "```js",
-            "var xhr = new XMLHttpRequest(); ",
-            "xhr.open('GET', 'http://jsonplaceholder.typicode.com/users/1');",
-            "xhr.onreadystatechange = function() {",
-            "  if (xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 0)) {",
-            "    // [...]",
-            "  }",
-            "};",
-            "xhr.send(null);",
-            "```",
-            "",
-            "Comment afficher la propriété `name` de l'objet JSON renvoyé en réponse de cette requête AJAX ?",
-            ""
-          ],
-          "choices": [
-            {
-              "name": 1,
-              "text": "alert(xhr.responseText.name)"
-            },
-            {
-              "name": 2,
-              "text": "alert(JSON.parse(xhr.responseText).name)"
-            },
-            {
-              "name": 3,
-              "text": "alert(JSON.parse('name'))"
-            },
-            {
-              "name": 4,
-              "text": "alert(xhr.send('name'))"
+              "text": "les valeurs littérales (ex: `3`) qui serviront de paramètres"
             }
           ]
         },
@@ -378,334 +313,25 @@
           "i": 12,
           "id": "qcm12",
           "md": [
-            "// TP H",
-            "",
-            "```js",
-            "var xhr = new XMLHttpRequest();",
-            "xhr.open('POST', 'http://httpbin.org/post');",
-            "```",
-            "",
-            "Comment envoyer un objet JSON contenant une propriété `name` ayant \"steve\" comme valeur:",
+            "On définit une fonction `fct` qui prend un nombre en paramètre, et retourne le double de ce nombre. Comment obtenir le double de `2` en utilisant cette fonction ?",
             ""
           ],
           "choices": [
             {
               "name": 1,
-              "text": "xhr.send(JSON.stringify({ name: 'steve' }));"
+              "text": "`function fct(2)`"
             },
             {
               "name": 2,
-              "text": "alert(JSON.stringify('name', 'steve'))"
+              "text": "`fct(2)`"
             },
             {
               "name": 3,
-              "text": "xhr.responseText = {name: 'steve'};"
+              "text": "`fct(2, 2)`"
             },
             {
               "name": 4,
-              "text": "xhr.send('name', 'steve')"
-            }
-          ]
-        },
-        {
-          "i": 13,
-          "id": "qcm13",
-          "md": [
-            "// TP I",
-            "",
-            "```html",
-            "<a href=\"http://eemi.com\">eemi</a>",
-            "```",
-            "",
-            "Je veux ajouter une image à l'intérieur de l'élément `<a>`, référencé par la variable `lien`:",
-            ""
-          ],
-          "choices": [
-            {
-              "name": 1,
-              "text": "lien.setAttribute('href', 'http://eemi.com/image.jpg');"
-            },
-            {
-              "name": 2,
-              "text": "lien.innerHTML = lien.innerHTML + '<img src=\"http://eemi.com/image.jpg\">';"
-            },
-            {
-              "name": 3,
-              "text": "lien.innerText += \"http://eemi.com/image.jpg\";"
-            },
-            {
-              "name": 4,
-              "text": "lien.image = 'http://eemi.com/image.jpg';"
-            }
-          ]
-        },
-        {
-          "i": 14,
-          "id": "qcm14",
-          "md": [
-            "// TP K",
-            "",
-            "Trouvez l'intrus: qu'est-ce qui n'a aucun rapport direct avec un back-end ?",
-            ""
-          ],
-          "choices": [
-            {
-              "name": 1,
-              "text": "une interface d'administration du site"
-            },
-            {
-              "name": 2,
-              "text": "une API pour effectuer des opérations CRUD"
-            },
-            {
-              "name": 3,
-              "text": "le stockage des données du site"
-            },
-            {
-              "name": 4,
-              "text": "Firebase"
-            }
-          ]
-        },
-        {
-          "i": 15,
-          "id": "qcm15",
-          "md": [
-            "Laquelle de ces applications ne pourrait pas fonctionner sans back-end ?",
-            ""
-          ],
-          "choices": [
-            {
-              "name": 1,
-              "text": "Facebook"
-            },
-            {
-              "name": 2,
-              "text": "Angry birds"
-            },
-            {
-              "name": 3,
-              "text": "Une application de conversion de devises"
-            },
-            {
-              "name": 4,
-              "text": "Votre éditeur de texte"
-            }
-          ]
-        },
-        {
-          "i": 16,
-          "id": "qcm16",
-          "md": [
-            "Quelle serait la principale limitation d'une app de todo-list sans back-end ?",
-            ""
-          ],
-          "choices": [
-            {
-              "name": 1,
-              "text": "la page se rafraichit à chaque fois qu'on ajoute une tache"
-            },
-            {
-              "name": 2,
-              "text": "tous les utilisateurs auraient la même liste de taches"
-            },
-            {
-              "name": 3,
-              "text": "toutes les modifications seraient \"oubliées\" quand on rafraichit la page"
-            },
-            {
-              "name": 4,
-              "text": "on ne pourrait pas se logger avec son compte EEMI"
-            }
-          ]
-        },
-        {
-          "i": 17,
-          "id": "qcm17",
-          "md": [
-            "Quelle commande permet d'ajouter un objet à stocker dans firebase ?",
-            ""
-          ],
-          "choices": [
-            {
-              "name": 1,
-              "text": "myDataRef.on('child_added', objet);"
-            },
-            {
-              "name": 2,
-              "text": "myDataRef.push(objet);"
-            },
-            {
-              "name": 3,
-              "text": "new Firebase('https://flickering-inferno-5369.firebaseIO.com');"
-            },
-            {
-              "name": 4,
-              "text": "afaire.innerHTML = afaire.innerHTML + '<p>' + objet + '</p>';"
-            }
-          ]
-        },
-        {
-          "i": 18,
-          "id": "qcm18",
-          "md": [
-            "```js",
-            "myDataRef.on('child_added', function(snapshot) { alert('bonjour') })",
-            "```",
-            "",
-            "En supposant que ma base de données firebase référencée par la variable `myDataRef` contienne 3 objets, combien de fois vais-je voir \"bonjour\" s'afficher ?",
-            ""
-          ],
-          "choices": [
-            {
-              "name": 1,
-              "text": "0"
-            },
-            {
-              "name": 2,
-              "text": "1"
-            },
-            {
-              "name": 3,
-              "text": "2"
-            },
-            {
-              "name": 4,
-              "text": "3"
-            }
-          ]
-        },
-        {
-          "i": 19,
-          "id": "qcm19",
-          "md": [
-            "// TP L",
-            "",
-            "Comment supprimer de firebase un objet dont la clé est `key` ?",
-            ""
-          ],
-          "choices": [
-            {
-              "name": 1,
-              "text": "new Firebase('https://flickering-inferno-5369.firebaseIO.com/' + key).remove();"
-            },
-            {
-              "name": 2,
-              "text": "Firebase.remove('https://flickering-inferno-5369.firebaseIO.com/' + key);"
-            },
-            {
-              "name": 3,
-              "text": "Firebase.remove(key);"
-            },
-            {
-              "name": 4,
-              "text": "document.getElementById(key).remove();"
-            }
-          ]
-        },
-        {
-          "i": 20,
-          "id": "qcm20",
-          "md": [
-            "// TP M",
-            "",
-            "Quelle commande permet de créer un repository local ?",
-            ""
-          ],
-          "choices": [
-            {
-              "name": 1,
-              "text": "git init"
-            },
-            {
-              "name": 2,
-              "text": "mkdir todolist"
-            },
-            {
-              "name": 3,
-              "text": "git checkout"
-            },
-            {
-              "name": 4,
-              "text": "cd todolist"
-            }
-          ]
-        },
-        {
-          "i": 21,
-          "id": "qcm21",
-          "md": [
-            "Qu'est-ce que la commande `git clone` ne fait pas ?",
-            ""
-          ],
-          "choices": [
-            {
-              "name": 1,
-              "text": "créer un sous-répertoire"
-            },
-            {
-              "name": 2,
-              "text": "créer un repo local"
-            },
-            {
-              "name": 3,
-              "text": "télécharger le code depuis un repo distant"
-            },
-            {
-              "name": 4,
-              "text": "envoyer les modifs du repo local vers le repo distant"
-            }
-          ]
-        },
-        {
-          "i": 22,
-          "id": "qcm22",
-          "md": [
-            "Qu'est-ce que la commande `git checkout` ne permet pas de faire ?",
-            ""
-          ],
-          "choices": [
-            {
-              "name": 1,
-              "text": "créer un repo local"
-            },
-            {
-              "name": 2,
-              "text": "creer une branche gh-pages"
-            },
-            {
-              "name": 3,
-              "text": "revenir sur la branche master"
-            },
-            {
-              "name": 4,
-              "text": "revenir à une ancienne version (commit) du code"
-            }
-          ]
-        },
-        {
-          "i": 23,
-          "id": "qcm23",
-          "md": [
-            "Quelle commande n'est pas nécéssaire pour partager ses modifications de code avec ses collaborateurs ?",
-            ""
-          ],
-          "choices": [
-            {
-              "name": 1,
-              "text": "git add"
-            },
-            {
-              "name": 2,
-              "text": "git log"
-            },
-            {
-              "name": 3,
-              "text": "git commit"
-            },
-            {
-              "name": 4,
-              "text": "git push"
+              "text": "`fct(2 * 2)`"
             }
           ]
         }
@@ -713,7 +339,14 @@
     },
     {
       "_info": "generated from ex.2.code.template.md",
-      "type": "code"
+      "isCode": true,
+      "i": "2",
+      "id": "code2",
+      "mdVariants": [
+        "ex.2.variant.0.json.md",
+        "ex.2.variant.1.json.md",
+        "ex.2.variant.2.json.md"
+      ]
     }
   ];
 })(document);
