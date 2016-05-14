@@ -14,12 +14,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   var PAGE_TITLE = 'Javascript Exam';
   var FIREBASE_URL = 'https://js-exam.firebaseio.com';
 
-  var NB_VARIANTS = 3;
-
-  function getExerciseMdFile(variant) {
-    return './data/ex.2.variant.' + variant + '.json.md';
-  }
-
   /* firebase security rules:
   {
    "rules": {
@@ -36,9 +30,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   }
   */
 
-
-  // fixed version of variant3() => returns 0, 1 or 2, depending on the value of number
-  function getVariantByStudentId (id) {
+  function pickVariant (variants, id) {
     // modulo that also works for big integers
     var modulo = function(divident, divisor) {
         var partLength = 10;
@@ -48,7 +40,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         }
         return divident % divisor;
     };
-    return modulo(id, NB_VARIANTS);
+    return variants[modulo(id, variants.length)];
   };
 
   // Grab a reference to our auto-binding template and give it some initial binding values
@@ -88,15 +80,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
   function onLogin(userData, offline) {
     app.user = userData;
-    // generate exercise variant, based on student id
-    var variant = getVariantByStudentId(userData.id);
-    app.set('questions', [
-      {
-        //i: 1,
-        id: 'code1',
-        mdFile: getExerciseMdFile(variant),
-      },
-    ]);
+    // switch exercise variant based on student id
+    app.set('exercises', app.exercises.map(function applyVariant(ex) {
+      if (ex.mdVariants) {
+        ex.mdFile = './data/' + pickVariant(ex.mdVariants, userData.id);
+      }
+      return ex;
+    }));
     if (offline) return;
     var userHash = userData.email.split('@')[0].replace(/[^\w]/g, '_');
     app.backend = new Firebase(FIREBASE_URL + '/submissions/' + userHash);
@@ -225,7 +215,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   // FOR PUBLIC TESTING: fakes Google Login
   if (PUBLIC_TEST_MODE) {
     onLogin({
-      id: Math.floor(NB_VARIANTS * Math.random()), // variant is based on user id => randomize it
+      id: Math.floor(999 * Math.random()), // variant is based on user id => randomize it
       name: 'Demo User',
       email: 'demo-user@example.com',
       token: 'XXX'

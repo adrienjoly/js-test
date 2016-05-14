@@ -87,21 +87,30 @@
             </paper-material>
           </template>
           <template is="dom-if" if="{{active}}">
-            <template is="dom-repeat" items="{{questions}}">
+            <template is="dom-repeat" items="{{exercises}}">
               <section id="[[item.id]]" class="quizz-question">
                 <paper-material elevation="1">
                   <h2>Exercice {{item.i}}</h2>
                   <paper-spinner-lite active></paper-spinner-lite>
+
                   <zero-md file="{{item.mdFile}}">
                     <!-- Remember to pass in empty container of class="md-html". -->
                     <div class="md-html"></div>
                   </zero-md>
-                  <!--<my-code label="Saisissez votre code Javascript ici" data-id$="[[item.id]]" value="[[myAnswersItem(myAnswers.*, item.id)]]"></my-code>-->
-                  <my-code label="Saisissez votre code Javascript ici" data-id$="[[item.id]]" value="{{myCode}}"></my-code>
-                  <paper-button id="btnSubmit" on-click="onSubmit" disabled raised>
-                    <iron-icon icon="check"></iron-icon>&nbsp;
-                    <span>{{submitText}}</span>
-                  </paper-button>
+
+                  <template is="dom-if" if="{{item.isCode}}">
+                    <!--<my-code label="Saisissez votre code Javascript ici" data-id$="[[item.id]]" value="[[myAnswersItem(myAnswers.*, item.id)]]"></my-code>-->
+                    <my-code label="Saisissez votre code Javascript ici" data-id$="[[item.id]]" value="{{myCode}}"></my-code>
+                    <paper-button id="btnSubmit" on-click="onSubmit" disabled raised>
+                      <iron-icon icon="check"></iron-icon>&nbsp;
+                      <span>{{submitText}}</span>
+                    </paper-button>
+                  </template>
+
+                  <template is="dom-if" if="{{item.isQuizz}}">
+                    Quizz
+                  </template>
+
                 </paper-material>
               </section>
             </template>
@@ -116,6 +125,8 @@
     </paper-toast>
 
   </template>
+
+  <script src="scripts/exercises.js"></script>
 
   <!-- build:js scripts/app.js -->
   <script src="scripts/app.js"></script>
