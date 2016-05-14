@@ -87,28 +87,40 @@
             </paper-material>
           </template>
           <template is="dom-if" if="{{active}}">
-            <template is="dom-repeat" items="{{exercises}}">
-              <section id="[[item.id]]" class="quizz-question">
+            <template is="dom-repeat" items="{{exercises}}" as="exercise">
+
+              <section id="[[exercise.id]]" class="quizz-question">
                 <paper-material elevation="1">
-                  <h2>Exercice {{item.i}}</h2>
-                  <paper-spinner-lite active></paper-spinner-lite>
+                  <h2>Exercice {{exercise.i}}</h2>
 
-                  <zero-md file="{{item.mdFile}}">
-                    <!-- Remember to pass in empty container of class="md-html". -->
-                    <div class="md-html"></div>
-                  </zero-md>
-
-                  <template is="dom-if" if="{{item.isCode}}">
+                  <template is="dom-if" if="{{exercise.isCode}}">
+                    <paper-spinner-lite active></paper-spinner-lite>
+                    <zero-md file="{{exercise.mdFile}}">
+                      <!-- Remember to pass in empty container of class="md-html". -->
+                      <div class="md-html"></div>
+                    </zero-md>
                     <!--<my-code label="Saisissez votre code Javascript ici" data-id$="[[item.id]]" value="[[myAnswersItem(myAnswers.*, item.id)]]"></my-code>-->
-                    <my-code label="Saisissez votre code Javascript ici" data-id$="[[item.id]]" value="{{myCode}}"></my-code>
+                    <my-code label="Saisissez votre code Javascript ici" data-id$="[[exercise.id]]" value="{{myCode}}"></my-code>
                     <paper-button id="btnSubmit" on-click="onSubmit" disabled raised>
                       <iron-icon icon="check"></iron-icon>&nbsp;
                       <span>{{submitText}}</span>
                     </paper-button>
                   </template>
 
-                  <template is="dom-if" if="{{item.isQuizz}}">
-                    Quizz
+                  <template is="dom-if" if="{{exercise.isQuizz}}">
+                    <template is="dom-repeat" items="{{exercise.questions}}" as="question">
+                      <section id="[[question.id]]" class="quizz-question">
+                        <paper-material elevation="0">
+                          <h3>Question {{question.i}}</h2>
+                          <paper-spinner-lite active></paper-spinner-lite>
+                          <zero-md text="{{question.md}}">
+                            <!-- Remember to pass in empty container of class="md-html". -->
+                            <div class="md-html"></div>
+                          </zero-md>
+                          <my-qcm data-id$="[[question.id]]" on-tap="onTap" items="{{question.choices}}" value="[[myAnswersItem(myAnswers.*, question.id)]]"></my-qcm>
+                        </paper-material>
+                      </section>
+                    </template>
                   </template>
 
                 </paper-material>

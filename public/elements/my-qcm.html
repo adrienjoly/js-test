@@ -1,0 +1,49 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/paper-radio-group/paper-radio-group.html">
+<link rel="import" href="../../bower_components/paper-radio-button/paper-radio-button.html">
+
+<dom-module id="my-qcm">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <paper-radio-group allow-empty-selection selected="{{value::paper-radio-group-changed}}">
+      <template is="dom-repeat" items="{{items}}">
+        <paper-radio-button name$="{{item.name}}">{{item.text}}</paper-radio-button><br>
+      </template>
+    </paper-radio-group>
+  </template>
+
+  <script>
+    (function() {
+      'use strict';
+
+      Polymer({
+        is: 'my-qcm',
+        properties: {
+          value: {
+            type: String,
+            //notify: true // cause I want a value-changed event instead
+          },
+          items: {
+            type: Array,
+            //notify: true // no need
+          }
+        },
+        ready: function() {
+          var sampleItems = [
+            { name: "small", text: "Small" },
+            { name: "medium", text: "Medium" },
+            { name: "large", text: "Large" }
+          ];
+          //console.log('this.items', typeof this.items, this.items);
+          this.items = !this.items ? sampleItems : this.items.map(function(item){
+            return typeof item != 'object' ? { name: item, text: item } : item;
+          });
+        }
+      });
+    })();
+  </script>
+</dom-module>
