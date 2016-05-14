@@ -121,7 +121,7 @@
                             <!-- Remember to pass in empty container of class="md-html". -->
                             <div class="md-html"></div>
                           </zero-md>
-                          <my-qcm data-id$="[[question.id]]" on-tap="onTap" items="{{question.choices}}" value="[[myAnswersItem(myAnswers.*, question.id)]]"></my-qcm>
+                          <my-qcm data-id$="[[question.id]]" on-tap="onChange" items="{{question.choices}}" value="[[myAnswersItem(myAnswers.*, question.id)]]"></my-qcm>
                         </paper-material>
                       </section>
                     </template>
