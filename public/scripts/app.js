@@ -13,7 +13,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   var PUBLIC_TEST_MODE = false; // TODO: set to false to activate Google Login
   var PAGE_TITLE = 'Javascript Exam';
   var FIREBASE_URL = 'https://js-exam.firebaseio.com';
-  var GOOGLE_CLIENT_ID = '247219641427-vkbr8g262hfk0dbtvbu2mpbuj09ah569.apps.googleusercontent.com'; // generated from https://console.developers.google.com/apis/credentials?project=eemi-own-exam&authuser=1
+  var GOOGLE_CLIENT_ID = '247219641427-vs70sb2354ug6kafth4sm8mf8en4g1sb.apps.googleusercontent.com'; // generated from https://console.developers.google.com/apis/credentials?project=eemi-own-exam&authuser=1
   var GOOGLE_CLIENT_DOMAIN = 'eemi.com'; // to restrict access to users from a certain domain only
   var LOGIN_INVITE = 'Veuillez vous connecter à votre compte EEMI en utilisant le bouton ci-dessous svp:';
 
