@@ -34,8 +34,8 @@ function renderCodeExercise(exerciseData, exNumber) {
     var variants = _.map(question.choices, 'text').map(JSON.parse);
     variants = variants.length > 0 ? variants : [{}]; // also render coding questions that don't have any variants
     return {
-      i: q,
-      id: 'code' + q,
+      i: q + 1,
+      id: 'code' + (q + 1),
       mdVariants: variants.map(function renderVariant(variantData, i) {
         //var variantFile = 'ex.' + exNumber + '.variant.' + i + '.json.md';
         //fs.writeFileSync(PATH_OUTPUT + variantFile, mustache.render(question.md, variantData));
@@ -47,7 +47,6 @@ function renderCodeExercise(exerciseData, exNumber) {
   return {
     isCode: true,
     title: 'Exercices de codage',
-    id: 'code' + exNumber, // TODO: one id per question
     questions: questions,
   };
 }

@@ -291,11 +291,10 @@
       "i": "2",
       "isCode": true,
       "title": "Exercices de codage",
-      "id": "code2",
       "questions": [
         {
-          "i": 0,
-          "id": "code0",
+          "i": 1,
+          "id": "code1",
           "mdVariants": [
             "Écrivez le code JS permettant d'envoyer une requête Ajax de type GET à l'URL `http://jsonplaceholder.typicode.com/users/1`. Une fois la réponse reçue, affichez dans la console seulement la valeur de la propriété `username` de cette réponse JSON.\n",
             "Écrivez le code JS permettant d'envoyer une requête Ajax de type GET à l'URL `http://jsonplaceholder.typicode.com/users/2`. Une fois la réponse reçue, affichez dans la console seulement la valeur de la propriété `email` de cette réponse JSON.\n",
@@ -303,8 +302,8 @@
           ]
         },
         {
-          "i": 1,
-          "id": "code1",
+          "i": 2,
+          "id": "code2",
           "mdVariants": [
             "Test"
           ]
