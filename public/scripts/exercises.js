@@ -10,154 +10,122 @@
         {
           "i": 1,
           "id": "qcm1",
-          "md": [
-            "Que renvoie `typeof` quand il est appliqué sur `\"bonjour\"` ?",
-            ""
-          ],
+          "md": "Que renvoie `typeof` quand il est appliqué sur `\"bonjour\"` ?\n",
           "choices": [
             {
               "name": 1,
-              "text": "`\"string\"`"
+              "text": "\"string\""
             },
             {
               "name": 2,
-              "text": "`string`"
+              "text": "string"
             },
             {
               "name": 3,
-              "text": "`\"object\"`"
+              "text": "\"object\""
             },
             {
               "name": 4,
-              "text": "`undefined`"
+              "text": "undefined"
             }
           ]
         },
         {
           "i": 2,
           "id": "qcm2",
-          "md": [
-            "Que renvoie `typeof` quand il est appliqué sur un tableau ?",
-            ""
-          ],
+          "md": "Que renvoie `typeof` quand il est appliqué sur un tableau ?\n",
           "choices": [
             {
               "name": 1,
-              "text": "`\"array\"`"
+              "text": "\"array\""
             },
             {
               "name": 2,
-              "text": "`array`"
+              "text": "array"
             },
             {
               "name": 3,
-              "text": "`\"object\"`"
+              "text": "\"object\""
             },
             {
               "name": 4,
-              "text": "`undefined`"
+              "text": "undefined"
             }
           ]
         },
         {
           "i": 3,
           "id": "qcm3",
-          "md": [
-            "```js",
-            "var tab = [ 's', 'u', 'p', 'e', 'r' ];",
-            "```",
-            "",
-            "Si je veux afficher une alerte modale seulement quand la valeur de `lettre` n'est pas contenue dans `tab`, quelle condition dois-je utiliser dans mon `if` ?",
-            ""
-          ],
+          "md": "```js\nvar tab = [ 's', 'u', 'p', 'e', 'r' ];\n```\n\nSi je veux afficher une alerte modale seulement quand la valeur de `lettre` n'est pas contenue dans `tab`, quelle condition dois-je utiliser dans mon `if` ?\n",
           "choices": [
             {
               "name": 1,
-              "text": "`tab[lettre] == false`"
+              "text": "tab[lettre] == false"
             },
             {
               "name": 2,
-              "text": "`tab[lettre] == -1`"
+              "text": "tab[lettre] == -1"
             },
             {
               "name": 3,
-              "text": "`tab.indexOf(lettre) == false`"
+              "text": "tab.indexOf(lettre) == false"
             },
             {
               "name": 4,
-              "text": "`tab.indexOf(lettre) == -1`"
+              "text": "tab.indexOf(lettre) == -1"
             }
           ]
         },
         {
           "i": 4,
           "id": "qcm4",
-          "md": [
-            "```js",
-            "// la bibliothèque \"underscore\" a été chargée dans l'objet \"_\"",
-            "var template = '<%= nb %> lutin<%= pl %>';",
-            "var nombre = 3;",
-            "var rendu = _.template(template, {",
-            "  nb: nombre,",
-            "  pl: nombre != 0 ? 's' : ''",
-            "});",
-            "```",
-            "",
-            "Que vaut la variable `rendu` ?",
-            ""
-          ],
+          "md": "```js\n// la bibliothèque \"underscore\" a été chargée dans l'objet \"_\"\nvar template = '<%= nb %> lutin<%= pl %>';\nvar nombre = 3;\nvar rendu = _.template(template, {\n  nb: nombre,\n  pl: nombre != 0 ? 's' : ''\n});\n```\n\nQue vaut la variable `rendu` ?\n",
           "choices": [
             {
               "name": 1,
-              "text": "`\"3 lutins\"`"
+              "text": "\"3 lutins\""
             },
             {
               "name": 2,
-              "text": "`\"trois lutins\"`"
+              "text": "\"trois lutins\""
             },
             {
               "name": 3,
-              "text": "`\"3 lutin\"`"
+              "text": "\"3 lutin\""
             },
             {
               "name": 4,
-              "text": "`\"nombre lutins?\"`"
+              "text": "\"nombre lutins?\""
             }
           ]
         },
         {
           "i": 5,
           "id": "qcm5",
-          "md": [
-            "Je crée un tableau `[ 'a', 'b', 'c' ]`, puis j'utilise successivement les méthodes `push('d')` et `splice(1, 2)` sur ce tableau. Que contient le tableau à la fin ?",
-            ""
-          ],
+          "md": "Je crée un tableau `[ 'a', 'b', 'c' ]`, puis j'utilise successivement les méthodes `push('d')` et `splice(1, 2)` sur ce tableau. Que contient le tableau à la fin ?\n",
           "choices": [
             {
               "name": 1,
-              "text": "`[ 'a', 'b', 'c' ]`"
+              "text": "[ 'a', 'b', 'c' ]"
             },
             {
               "name": 2,
-              "text": "`[ 'a', 'b', 'c', 'd' ]`"
+              "text": "[ 'a', 'b', 'c', 'd' ]"
             },
             {
               "name": 3,
-              "text": "`[ 'b', ]`"
+              "text": "[ 'b', ]"
             },
             {
               "name": 4,
-              "text": "`[ 'a', 'd' ]`"
+              "text": "[ 'a', 'd' ]"
             }
           ]
         },
         {
           "i": 6,
           "id": "qcm6",
-          "md": [
-            "Pour stocker des données dans un back-end Firebase, y a-t-il besoin d'effectuer une requête Ajax ?",
-            ""
-          ],
+          "md": "Pour stocker des données dans un back-end Firebase, y a-t-il besoin d'effectuer une requête Ajax ?\n",
           "choices": [
             {
               "name": 1,
@@ -180,10 +148,7 @@
         {
           "i": 7,
           "id": "qcm7",
-          "md": [
-            "Si `typeof x` vaut `\"object\"`, et `x.length` vaut `undefined`, quel est le type de la variable `x` ?",
-            ""
-          ],
+          "md": "Si `typeof x` vaut `\"object\"`, et `x.length` vaut `undefined`, quel est le type de la variable `x` ?\n",
           "choices": [
             {
               "name": 1,
@@ -206,10 +171,7 @@
         {
           "i": 8,
           "id": "qcm8",
-          "md": [
-            "La ligne `hello();` sert à:",
-            ""
-          ],
+          "md": "La ligne `hello();` sert à:\n",
           "choices": [
             {
               "name": 1,
@@ -232,38 +194,30 @@
         {
           "i": 9,
           "id": "qcm9",
-          "md": [
-            "```js",
-            "hello[1] = 2",
-            "```",
-            ""
-          ],
+          "md": "```js\nhello[1] = 2\n```\n",
           "choices": [
             {
               "name": 1,
-              "text": "affiche la valeur du tableau `hello` à l'indice `1`"
+              "text": "affiche la valeur du tableau hello à l'indice 1"
             },
             {
               "name": 2,
-              "text": "sert à vérifier que la valeur à l'indice `1` vaut `2`"
+              "text": "sert à vérifier que la valeur à l'indice 1 vaut 2"
             },
             {
               "name": 3,
-              "text": "affecte la valeur `1` à l'indice `2` du tableau"
+              "text": "affecte la valeur 1 à l'indice 2 du tableau"
             },
             {
               "name": 4,
-              "text": "remplace la valeur à l'indice `1` du tableau par `2`"
+              "text": "remplace la valeur à l'indice 1 du tableau par 2"
             }
           ]
         },
         {
           "i": 10,
           "id": "qcm10",
-          "md": [
-            "Si j'ai deux conditions `if` liées par un `else`, laquelle de ces propositions est fausse:",
-            ""
-          ],
+          "md": "Si j'ai deux conditions `if` liées par un `else`, laquelle de ces propositions est fausse:\n",
           "choices": [
             {
               "name": 1,
@@ -286,10 +240,7 @@
         {
           "i": 11,
           "id": "qcm11",
-          "md": [
-            "Quand on définit une fonction, que faut-il mettre entre les parenthèses qui suivent le nom de la fonction ?",
-            ""
-          ],
+          "md": "Quand on définit une fonction, que faut-il mettre entre les parenthèses qui suivent le nom de la fonction ?\n",
           "choices": [
             {
               "name": 1,
@@ -305,33 +256,30 @@
             },
             {
               "name": 4,
-              "text": "les valeurs littérales (ex: `3`) qui serviront de paramètres"
+              "text": "les valeurs littérales (ex: 3) qui serviront de paramètres"
             }
           ]
         },
         {
           "i": 12,
           "id": "qcm12",
-          "md": [
-            "On définit une fonction `fct` qui prend un nombre en paramètre, et retourne le double de ce nombre. Comment obtenir le double de `2` en utilisant cette fonction ?",
-            ""
-          ],
+          "md": "On définit une fonction `fct` qui prend un nombre en paramètre, et retourne le double de ce nombre. Comment obtenir le double de `2` en utilisant cette fonction ?\n",
           "choices": [
             {
               "name": 1,
-              "text": "`function fct(2)`"
+              "text": "function fct(2)"
             },
             {
               "name": 2,
-              "text": "`fct(2)`"
+              "text": "fct(2)"
             },
             {
               "name": 3,
-              "text": "`fct(2, 2)`"
+              "text": "fct(2, 2)"
             },
             {
               "name": 4,
-              "text": "`fct(2 * 2)`"
+              "text": "fct(2 * 2)"
             }
           ]
         }
