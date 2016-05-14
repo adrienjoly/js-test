@@ -88,6 +88,7 @@
           <template is="dom-if" if="{{!active}}">
             <paper-material elevation="1">
               <p>Le test est fermé pour l'instant. Suivez les consignes de votre enseignant.</p>
+              <!-- TODO: display last submitted answers -->
             </paper-material>
           </template>
           <template is="dom-if" if="{{active}}">
@@ -95,20 +96,6 @@
 
               <section id="[[exercise.id]]" class="quizz-question">
                 <paper-material elevation="1">
-                  <!--
-                  <template is="dom-if" if="{{exercise.isCode}}">
-                    <h2>Exercices de codage</h2>
-                    <paper-spinner-lite active></paper-spinner-lite>
-                    <zero-md file="{{exercise.mdFile}}">
-                      <div class="md-html"></div>
-                    </zero-md>
-                    <my-code label="Saisissez votre code Javascript ici" data-id$="[[exercise.id]]" value="{{myCode}}"></my-code>
-                    <paper-button id="btnSubmit" on-click="onSubmit" disabled raised>
-                      <iron-icon icon="check"></iron-icon>&nbsp;
-                      <span>{{submitText}}</span>
-                    </paper-button>
-                  </template>
-                  -->
 
                   <h2>{{exercise.title}}</h2>
                   <template is="dom-repeat" items="{{exercise.questions}}" as="question">
