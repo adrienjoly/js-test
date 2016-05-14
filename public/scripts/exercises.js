@@ -305,7 +305,63 @@
           "i": 2,
           "id": "code2",
           "mdVariants": [
-            "Test"
+            "Écrivez le code JS permettant d'envoyer une requête Ajax de type POST à l'URL `http://httpbin.org/post`, en transmettant un objet JSON contenant une propriété `` valant `\"pierredup\"`.\n\n\n???\n\nvar xhr = new XMLHttpRequest();\nxhr.open('POST', 'http://httpbin.org/post');\nxhr.onreadystatechange = function() {\n  if (xhr.readyState == 4) alert(xhr.responseText);\n};\nxhr.send(JSON.stringify({a:'données à envoyer'}));",
+            "Écrivez le code JS permettant d'envoyer une requête Ajax de type POST à l'URL `http://httpbin.org/post`, en transmettant un objet JSON contenant une propriété `` valant `\"eemi\"`.\n\n\n???\n\nvar xhr = new XMLHttpRequest();\nxhr.open('POST', 'http://httpbin.org/post');\nxhr.onreadystatechange = function() {\n  if (xhr.readyState == 4) alert(xhr.responseText);\n};\nxhr.send(JSON.stringify({a:'données à envoyer'}));",
+            "Écrivez le code JS permettant d'envoyer une requête Ajax de type POST à l'URL `http://httpbin.org/post`, en transmettant un objet JSON contenant une propriété `` valant `\"2016\"`.\n\n\n???\n\nvar xhr = new XMLHttpRequest();\nxhr.open('POST', 'http://httpbin.org/post');\nxhr.onreadystatechange = function() {\n  if (xhr.readyState == 4) alert(xhr.responseText);\n};\nxhr.send(JSON.stringify({a:'données à envoyer'}));",
+            "Écrivez le code JS permettant d'envoyer une requête Ajax de type POST à l'URL `http://httpbin.org/post`, en transmettant un objet JSON contenant une propriété `` valant `\"dupont\"`.\n\n\n???\n\nvar xhr = new XMLHttpRequest();\nxhr.open('POST', 'http://httpbin.org/post');\nxhr.onreadystatechange = function() {\n  if (xhr.readyState == 4) alert(xhr.responseText);\n};\nxhr.send(JSON.stringify({a:'données à envoyer'}));"
+          ]
+        },
+        {
+          "i": 3,
+          "id": "code3",
+          "mdVariants": [
+            "Écrivez une boucle qui affiche dans la console tous les nombres entiers pairs entre `1` et `100` (compris).\n\n`console.log` ne doit paraître qu'une seule fois dans votre code.\n\nUtilisez `% 2` (opérateur modulo) pour savoir si un nombre est pair ou impair.\n",
+            "Écrivez une boucle qui affiche dans la console tous les nombres entiers impairs entre `1` et `100` (compris).\n\n`console.log` ne doit paraître qu'une seule fois dans votre code.\n\nUtilisez `% 2` (opérateur modulo) pour savoir si un nombre est pair ou impair.\n"
+          ]
+        },
+        {
+          "i": 4,
+          "id": "code4",
+          "mdVariants": [
+            "Définissez une fonction `logMultiples` qui affiche dans la console tous les nombres entiers entre `1` et `100` (compris) qui sont multiples du nombre passé en paramètre de cette fonction.\n",
+            "Définissez une fonction `logMultiples` qui affiche dans la console tous les nombres entiers entre `5` et `100` (compris) qui sont multiples du nombre passé en paramètre de cette fonction.\n",
+            "Définissez une fonction `logMultiples` qui affiche dans la console tous les nombres entiers entre `10` et `100` (compris) qui sont multiples du nombre passé en paramètre de cette fonction.\n"
+          ]
+        },
+        {
+          "i": 5,
+          "id": "code5",
+          "mdVariants": [
+            "Définissez une fonction `tabMultiples` qui renvoie (à l'aide de `return`) un tableau contenant tous les nombres entiers entre `1` et `100` (compris) qui sont multiples du nombre passé en paramètre de cette fonction.\n\nCette fonction ne doit pas écrire dans la console.\n\nPour créer un tableau vide, il suffit d'écrire `[]`.\n",
+            "Définissez une fonction `tabMultiples` qui renvoie (à l'aide de `return`) un tableau contenant tous les nombres entiers entre `1` et `100` (compris) qui sont multiples du nombre passé en paramètre de cette fonction.\n\nCette fonction ne doit pas écrire dans la console.\n\nPour créer un tableau vide, il suffit d'écrire `[]`.\n",
+            "Définissez une fonction `tabMultiples` qui renvoie (à l'aide de `return`) un tableau contenant tous les nombres entiers entre `1` et `100` (compris) qui sont multiples du nombre passé en paramètre de cette fonction.\n\nCette fonction ne doit pas écrire dans la console.\n\nPour créer un tableau vide, il suffit d'écrire `[]`.\n"
+          ]
+        },
+        {
+          "i": 6,
+          "id": "code6",
+          "mdVariants": [
+            "Écrivez le code JS permettant de demander un nombre a l'utilisateur (à l'aide de `prompt`), puis d'afficher dans la console un tableau contenant tous les nombres entiers entre `1` et `100` (compris) qui sont multiples du nombre saisi par l'utilisateur.\n\nUtilisez pour cela la fonction `tabMultiples` telle que définie ci-dessus.\n",
+            "Écrivez le code JS permettant de demander un nombre a l'utilisateur (à l'aide de `prompt`), puis d'afficher dans la console un tableau contenant tous les nombres entiers entre `1` et `100` (compris) qui sont multiples du nombre saisi par l'utilisateur.\n\nUtilisez pour cela la fonction `tabMultiples` telle que définie ci-dessus.\n",
+            "Écrivez le code JS permettant de demander un nombre a l'utilisateur (à l'aide de `prompt`), puis d'afficher dans la console un tableau contenant tous les nombres entiers entre `1` et `100` (compris) qui sont multiples du nombre saisi par l'utilisateur.\n\nUtilisez pour cela la fonction `tabMultiples` telle que définie ci-dessus.\n"
+          ]
+        },
+        {
+          "i": 7,
+          "id": "code7",
+          "mdVariants": [
+            "Définir une fonction `chaines` qui prend un tableau en paramètre et renvoie (à l'aide de `return`) un autre tableau contenant seulement les valeurs de type `\"string\"` contenues dans le tableau passé en paramètre.\n\nLe tableau résultant ne doit contenir que des chaînes de caractères, et donc aucune valeur `null` ou `undefined`.\n",
+            "Définir une fonction `nombres` qui prend un tableau en paramètre et renvoie (à l'aide de `return`) un autre tableau contenant seulement les valeurs de type `\"number\"` contenues dans le tableau passé en paramètre.\n\nLe tableau résultant ne doit contenir que des nombres, et donc aucune valeur `null` ou `undefined`.\n"
+          ]
+        },
+        {
+          "i": 8,
+          "id": "code8",
+          "mdVariants": [
+            "Nous allons implémenter un petit jeu consistant à deviner un nombre entier choisi aléatoirement entre `1` et `4` (compris) par l'ordinateur.\n\nÉcrire le code JS permettant de stocker ce nombre aléatoire dans une variable `choixOrdi`, de demander un nombre a l'utilisateur (à l'aide de `prompt`), puis d'afficher `\"bravo\"` dans une alerte modale (à l'aide de `alert`) si ce nombre est égal à `choixOrdi`, ou `\"il fallait deviner X\"` (en remplaçant `X` par la valeur de `choixOrdi`) dans le cas contraire.\n",
+            "Nous allons implémenter un petit jeu consistant à deviner un nombre entier choisi aléatoirement entre `1` et `4` (compris) par l'ordinateur.\n\nÉcrire le code JS permettant de stocker ce nombre aléatoire dans une variable `choixOrdi`, de demander un nombre a l'utilisateur (à l'aide de `prompt`), puis d'afficher `\"congrats\"` dans une alerte modale (à l'aide de `alert`) si ce nombre est égal à `choixOrdi`, ou `\"il fallait deviner X\"` (en remplaçant `X` par la valeur de `choixOrdi`) dans le cas contraire.\n",
+            "Nous allons implémenter un petit jeu consistant à deviner un nombre entier choisi aléatoirement entre `1` et `4` (compris) par l'ordinateur.\n\nÉcrire le code JS permettant de stocker ce nombre aléatoire dans une variable `choixOrdi`, de demander un nombre a l'utilisateur (à l'aide de `prompt`), puis d'afficher `\"yeah\"` dans une alerte modale (à l'aide de `alert`) si ce nombre est égal à `choixOrdi`, ou `\"il fallait deviner X\"` (en remplaçant `X` par la valeur de `choixOrdi`) dans le cas contraire.\n",
+            "Nous allons implémenter un petit jeu consistant à deviner un nombre entier choisi aléatoirement entre `1` et `4` (compris) par l'ordinateur.\n\nÉcrire le code JS permettant de stocker ce nombre aléatoire dans une variable `choixOrdi`, de demander un nombre a l'utilisateur (à l'aide de `prompt`), puis d'afficher `\"super\"` dans une alerte modale (à l'aide de `alert`) si ce nombre est égal à `choixOrdi`, ou `\"il fallait deviner X\"` (en remplaçant `X` par la valeur de `choixOrdi`) dans le cas contraire.\n"
           ]
         }
       ]
