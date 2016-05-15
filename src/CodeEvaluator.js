@@ -43,8 +43,8 @@ function runCodeAsync(code, api, callback) {
   var plugin = new jailed.DynamicPlugin(code, api);
   function onDone(err){
     if (err) errors.push(err);
-    plugin.disconnect();
     callback(errors);
+    plugin.disconnect();
   }
   plugin.whenFailed(onDone);
   plugin.whenConnected(onDone);
@@ -55,16 +55,24 @@ var testHelpers = {
   sum: sum,
 
   testCode: function (code, callback) {
-    var result = [];
+    var results = [];
     var api = {
-      _consoleLog: function() {
-        result.push(Array.prototype.join.call(arguments, ' '));
+      // this function will be called with resulting arguments by sandboxed script, when done
+      _send: function(){
+        results = arguments;
       }
     };
-    code = 'var console = { log: application.remote._consoleLog };\n' + code;
+    code = [
+      // test-specific instructions
+      'var _result = [];',
+      'var console = { log: function(){ _result.push(Array.prototype.join.call(arguments, " ")); } };',
+      code,
+      // every test should end with this, in order to compare to expected results
+      'application.remote._send(_result);'
+    ].join('\n');
     //console.log('FINAL CODE:', code);
     runCodeAsync(code, api, function(err) {
-      callback(err, result);
+      callback(err, results[0] || []); // TODO: include all _send() arguments
     });
   },
 
