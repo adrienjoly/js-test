@@ -12,6 +12,7 @@ function QuizzEvaluator(solutions) {
 
 QuizzEvaluator.prototype.readSolutionsFromFile = function(filePath) {
   this.solutions = JSON.parse(fs.readFileSync(filePath).toString());
+  return this;
 };
 
 QuizzEvaluator.prototype.evaluateAnswers = function(answers) {
@@ -28,7 +29,7 @@ QuizzEvaluator.prototype.evaluateAnswers = function(answers) {
     });
   }
   return {
-    length: Object.keys(solutions).length,
+    length: Object.keys(this.solutions).length,
     score: score,
     log: log,    
   };
