@@ -4,7 +4,7 @@ var async = require('async');
 var Firebase = require('firebase');
 var evaluateStudent = require('./exercice.evaluator.js');
 
-var FIREBASE_URL = 'https://js-exo-algo.firebaseio.com';
+var FIREBASE_URL = 'https://js-exam.firebaseio.com';
 
 function forEachChild(endpointUrl, handler, callback) {
   var q = async.queue(handler, 1); // handler(task, callnext) will be called for each child
