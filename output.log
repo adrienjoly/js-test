@@ -1,0 +1,96 @@
+
+> js-exam@1.0.0 eval /Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2
+> node ./src/evaluate.js
+
+Evaluating adrien_jourdier (116372307368767833451) ...
+=> quizz score: 0 / 12
+=> code score: 0 / 6
+
+Evaluating alicia_djaffar (106518625043392065922) ...
+=> quizz score: 0 / 12
+=> code score: 4 / 6
+
+Evaluating antoine_blot (1) ...
+=> quizz score: 0 / 12
+=> code score: 2 / 6
+
+Evaluating arnaud_juillet (113490061445927907956) ...
+=> quizz score: 0 / 12
+=> code score: 2 / 6
+
+Evaluating aurele_christ (109254081457830462271) ...
+=> quizz score: 0 / 12
+=> code score: 0 / 6
+
+Evaluating aurelien_bonnaud (2) ...
+=> quizz score: 0 / 12
+=> code score: 2 / 6
+
+Evaluating caroline_auclair (111413917136628350156) ...
+=> quizz score: 0 / 12
+=> code score: 4 / 6
+
+Evaluating christopher_amega (108905198213282127834) ...
+=> quizz score: 0 / 12
+=> code score: 4 / 6
+
+Evaluating jean_barbier (100839646955107672412) ...
+=> quizz score: 0 / 12
+=> code score: 0 / 6
+
+Evaluating jordan_martins (102560048735619978819) ...
+=> quizz score: 0 / 12
+=> code score: 4 / 6
+
+Evaluating laurent_maximin (103631253150006969014) ...
+=> quizz score: 0 / 12
+=> code score: 2 / 6
+
+Evaluating lucie_albira (101607002944537809899) ...
+=> quizz score: 0 / 12
+=> code score: 2 / 6
+
+Evaluating nicolas_gerbault (104803018614623792428) ...
+=> quizz score: 0 / 12
+=> code score: 4 / 6
+
+Evaluating nina_pellan (100833687235566341431) ...
+=> quizz score: 0 / 12
+=> code score: 4 / 6
+
+Evaluating paul_ray (117441267682820388698) ...
+=> quizz score: 0 / 12
+=> code score: 2 / 6
+
+Evaluating remi_alvarez_franco (107661820303365152078) ...
+=> quizz score: 0 / 12
+=> code score: 2 / 6
+
+Evaluating rodrigue_coail (112837382688102224023) ...
+=> quizz score: 0 / 12
+=> code score: 0 / 6
+
+Evaluating samy_announ (115861581274490603829) ...
+=> quizz score: 0 / 12
+=> code score: 0 / 6
+
+Evaluating sarah_cohen (105264193742863490620) ...
+=> quizz score: 0 / 12
+=> code score: 4 / 6
+
+Evaluating savinien_maire (108003350025924655784) ...
+=> quizz score: 0 / 12
+=> code score: 0 / 6
+
+Evaluating simon_chotard (114981914867023607521) ...
+=> quizz score: 0 / 12
+=> code score: 4 / 6
+
+Evaluating tess_tilmont (111457311246491113843) ...
+=> quizz score: 0 / 12
+=> code score: 4 / 6
+
+Evaluating valentin_bernard (2) ...
+=> quizz score: 0 / 12
+=> code score: 0 / 6
+
