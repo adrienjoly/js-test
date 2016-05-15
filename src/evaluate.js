@@ -3,8 +3,9 @@
 var async = require('async');
 var Firebase = require('firebase');
 var QuizzEvaluator = require('./QuizzEvaluator.js');
+var CodeEvaluator = require('./CodeEvaluator.js');
 
-var FIREBASE_URL = 'https://js-exam.firebaseio.com';
+var FIREBASE_URL = 'https://js-exo-algo.firebaseio.com'; // https://js-exam.firebaseio.com
 var SOLUTIONS_FILE = './ex.1.quizz.solutions.json';
 
 // helpers
@@ -30,15 +31,17 @@ function forEachChild(endpointUrl, handler, callback) {
 // evaluation logic
 
 var quizzEvaluator = new QuizzEvaluator().readSolutionsFromFile(SOLUTIONS_FILE);
-// TODO: also instanciate code evaluator
+var codeEvaluator = new CodeEvaluator(); //.readSolutionsFromFile(SOLUTIONS_FILE);
 
 function evaluateStudent(student, next) {
   console.log('Evaluating', student.key, '(' + student._uid + ')', '...');
   var res = quizzEvaluator.evaluateAnswers(student);
   console.log('=> quizz score:', res.score, '/', res.length);
-  console.log();
-  // TODO: also evaluate code exercises
-  next();
+  codeEvaluator.evaluateAnswers(student, function(err, res){
+    console.log('=> code score:', res.score, '/', res.length);
+    console.log();
+    next();
+  });
 }
 
 // actual script
