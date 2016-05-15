@@ -62,17 +62,9 @@ var testHelpers = {
         results = arguments;
       }
     };
-    code = [
-      // test-specific instructions
-      'var _result = [];',
-      'var console = { log: function(){ _result.push(Array.prototype.join.call(arguments, " ")); } };',
-      code,
-      // every test should end with this, in order to compare to expected results
-      'application.remote._send(_result);'
-    ].join('\n');
     //console.log('FINAL CODE:', code);
     runCodeAsync(code, api, function(err) {
-      callback(err, results[0] || []); // TODO: include all _send() arguments
+      callback(err, results[0] || []); // TODO: include all _send() arguments, and one error only (not an array)
     });
   },
 
