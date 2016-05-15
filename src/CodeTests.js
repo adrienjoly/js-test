@@ -4,6 +4,17 @@ function renderMulti(i, j) {
   return i + ' * ' + j + ' = ' + (i * j);
 }
 
+function wrapCode(code) {
+  return [
+    // test-specific instructions
+    'var _result = [];',
+    'var console = { log: function(){ _result.push(Array.prototype.join.call(arguments, " ")); } };',
+    code,
+    // every test should end with this, in order to compare to expected results
+    'application.remote._send(_result);'
+  ].join('\n');
+}
+
 module.exports = [
 
   /* TEST 1: first line of console depends on prompt() */
@@ -15,7 +26,7 @@ module.exports = [
     ];
     function test(testCase, caseCallback) {
       var caseCode = 'var prompt = function(){ return ' + testCase.input + '; };\n' + code;
-      helpers.testCode(caseCode, function(err, res) {
+      helpers.testCode(wrapCode(caseCode), function(err, res) {
         var isSolutionValid = (res || [])[0] === testCase.expectedOutput;
         //console.log('[test]', testCase.expectedOutput, '->', helpers.errorOr(err, (res || [])[0]), '=>', isSolutionValid);
         caseCallback(null, isSolutionValid);
@@ -42,7 +53,7 @@ module.exports = [
     ];
     function test(testCase, caseCallback) {
       var caseCode = 'var prompt = function(){ return ' + testCase.input + '; };\n' + code;
-      helpers.testCode(caseCode, function(err, res) {
+      helpers.testCode(wrapCode(caseCode), function(err, res) {
         res = res || [ null ];
         var isSolutionValid = JSON.stringify(res.slice(1)) === JSON.stringify(testCase.expectedOutput.slice(1));
         var renderedCase = [
@@ -72,7 +83,7 @@ module.exports = [
         code,
         'console.log(' + variant.fctName + '(' + testCase[0] + ', ' + testCase[1] + '));'
       ].join('\n');
-      helpers.testCode(caseCode, function(err, results) {
+      helpers.testCode(wrapCode(caseCode), function(err, results) {
         var res = results.pop(); // last line of console holds the result
         var expected = renderMulti(testCase[0], testCase[1]);
         var isSolutionValid = res == expected;
