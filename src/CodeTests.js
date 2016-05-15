@@ -1,5 +1,9 @@
 var async = require('async');
 
+function renderMulti(i, j) {
+  return i + ' * ' + j + ' = ' + (i * j);
+}
+
 module.exports = [
 
   /* TEST 1: first line of console depends on prompt() */
@@ -13,7 +17,7 @@ module.exports = [
       var caseCode = 'var prompt = function(){ return ' + testCase.input + '; };\n' + code;
       helpers.testCode(caseCode, function(err, res) {
         var isSolutionValid = (res || [])[0] === testCase.expectedOutput;
-        console.log('[test]', testCase.expectedOutput, '->', helpers.errorOr(err, (res || [])[0]), '=>', isSolutionValid);
+        //console.log('[test]', testCase.expectedOutput, '->', helpers.errorOr(err, (res || [])[0]), '=>', isSolutionValid);
         caseCallback(null, isSolutionValid);
       });
     }
@@ -23,8 +27,8 @@ module.exports = [
   },
 
   /* TEST 2: first line of console depends on prompt() */
-  /*
   function (code, variant, callback) {
+    var helpers = this;
     function makeTestCaseForInput(input, variant) {
       var lines = [ renderMulti(input, 2) ]; // first line
       for (var i = variant.nb1; i <= variant.nb3; ++i) {
@@ -38,7 +42,7 @@ module.exports = [
     ];
     function test(testCase, caseCallback) {
       var caseCode = 'var prompt = function(){ return ' + testCase.input + '; };\n' + code;
-      testCode(caseCode, function(err, res) {
+      helpers.testCode(caseCode, function(err, res) {
         res = res || [ null ];
         var isSolutionValid = JSON.stringify(res.slice(1)) === JSON.stringify(testCase.expectedOutput.slice(1));
         var renderedCase = [
@@ -49,19 +53,18 @@ module.exports = [
           res[1], // second line
           res[res.length - 1] // last line
         ];
-        console.log('[test]', renderedCase, '->', errorOr(err, renderedAnsw), '=>', isSolutionValid);
+        //console.log('[test]', renderedCase, '->', helpers.errorOr(err, renderedAnsw), '=>', isSolutionValid);
         caseCallback(null, isSolutionValid);
       });
     }
     async.mapSeries(CASES, test, function(err, res){
-      callback(null, res.reduce(sum));
+      callback(null, res.reduce(helpers.sum));
     });
   },
-  */
 
   /* TEST 3: function for rendering multiplication */
-  /*
   function (code, variant, callback) {
+    var helpers = this;
     var CASES = [ [-1,1], [12,33] ];
     function test(testCase, caseCallback) {
       var caseCode = [
@@ -69,17 +72,16 @@ module.exports = [
         code,
         'console.log(' + variant.fctName + '(' + testCase[0] + ', ' + testCase[1] + '));'
       ].join('\n');
-      testCode(caseCode, function(err, results) {
+      helpers.testCode(caseCode, function(err, results) {
         var res = results.pop(); // last line of console holds the result
         var expected = renderMulti(testCase[0], testCase[1]);
         var isSolutionValid = res == expected;
-        console.log('[test]', expected, '->', errorOr(err, res), '=>', isSolutionValid);
+        //console.log('[test]', expected, '->', helpers.errorOr(err, res), '=>', isSolutionValid);
         caseCallback(null, isSolutionValid);
       });
     }
     async.mapSeries(CASES, test, function(err, res){
-      callback(null, res.reduce(sum));
+      callback(null, res.reduce(helpers.sum));
     });
   }
-  */
 ];
