@@ -4,8 +4,6 @@ var jailed = require('jailed-node');
 
 var TESTS = require('./CodeTests.js');
 
-var TEST_TIMEOUT = 300; // 200 was not enough for one of the tests!
-
 var VARIANTS = [
   {
     "fctName": "multiplication",
@@ -40,16 +38,16 @@ function sum(a, b) {
   return a + b;
 }
 
-function runCodeAsync(code, api, timeout, callback) {
+function runCodeAsync(code, api, callback) {
   var errors = [];
   var plugin = new jailed.DynamicPlugin(code, api);
-  plugin.whenFailed(function(err){
-    errors.push(err);
-  });
-  setTimeout(function(){
+  function onDone(err){
+    if (err) errors.push(err);
     plugin.disconnect();
     callback(errors);
-  }, timeout);
+  }
+  plugin.whenFailed(onDone);
+  plugin.whenConnected(onDone);
 }
 
 var testHelpers = {
@@ -65,7 +63,7 @@ var testHelpers = {
     };
     code = 'var console = { log: application.remote._consoleLog };\n' + code;
     //console.log('FINAL CODE:', code);
-    runCodeAsync(code, api, TEST_TIMEOUT, function(err) {
+    runCodeAsync(code, api, function(err) {
       callback(err, result);
     });
   },
@@ -104,10 +102,8 @@ CodeEvaluator.prototype.evaluateAnswers = function(answers, callback) {
   var variantNumber = getVariantByStudentId(answers._uid);
   //console.log('\n===\nSTUDENT', answers.key, '(' + answers._uid + ' => ' + variantNumber + ') :\n---\n' + answers.code1 + '\n---');
 
-  var variant = VARIANTS[variantNumber];
-
   function runTest(testFct, callback) {
-    testFct.call(testHelpers, answers.code1, variant, callback);
+    testFct.call(testHelpers, answers.code1, VARIANTS[variantNumber], callback);
   }
   async.mapSeries(TESTS, runTest, function done(err, res) {
     var total = _.flatten(res).reduce(sum);
@@ -120,6 +116,5 @@ CodeEvaluator.prototype.evaluateAnswers = function(answers, callback) {
     });
   });
 };
-
 
 module.exports = CodeEvaluator;
