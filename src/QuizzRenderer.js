@@ -1,5 +1,6 @@
 // This class transforms de quizz.template.md file into a JSON definition for the web client
-// and a solutions file (for evaluation of students' answers)
+// and a solutions file (for evaluation of students' answers).
+// It is also used by evaluate.js for parsing and transforming code.template.md files.
 
 // helpers
 
