@@ -38,18 +38,6 @@ function sum(a, b) {
   return a + b;
 }
 
-function runCodeAsync(code, api, callback) {
-  var errors = [];
-  var plugin = new jailed.DynamicPlugin(code, api);
-  function onDone(err){
-    if (err) errors.push(err);
-    callback(errors);
-    plugin.disconnect();
-  }
-  plugin.whenFailed(onDone);
-  plugin.whenConnected(onDone);
-}
-
 var testHelpers = {
 
   sum: sum,
@@ -63,9 +51,13 @@ var testHelpers = {
       }
     };
     //console.log('FINAL CODE:', code);
-    runCodeAsync(code, api, function(err) {
-      callback(err, results[0] || []); // TODO: include all _send() arguments, and one error only (not an array)
-    });
+    var plugin = new jailed.DynamicPlugin(code, api);
+    function onDone(err){
+      callback(err, results[0] || []); // TODO: include all _send() arguments
+      plugin.disconnect();
+    }
+    plugin.whenFailed(onDone);
+    plugin.whenConnected(onDone);
   },
 
   /*
