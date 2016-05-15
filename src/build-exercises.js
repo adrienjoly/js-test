@@ -51,13 +51,15 @@ function renderCodeExercise(exerciseData, exNumber) {
 }
 
 function renderQuizzExercise(exerciseData, exNumber) {
+  // generate solution file, for evaluation of students' answers using QuizzEvaluator.js
+  var solFile = PATH_SOURCE + 'ex.' + exNumber + '.quizz.solutions.json';
+  fs.writeFileSync(solFile, JSON.stringify(exerciseData.getSolutions(), null, 2));
+  // return rendered questions, for web client
   return {
     isQuizz: true,
     title: 'QCM',
     questions: exerciseData.renderJsonQuestions()
   };
-  // TODO: also generate solution file, for evaluation of students' answers
-  //console.log(JSON.stringify(quizz.getSolutions(), null, 2));
 }
 
 var converters = {
