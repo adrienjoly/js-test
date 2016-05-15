@@ -16,7 +16,7 @@
     "postinstall": "cd public; bower install; cd ..",
     "build": "node ./src/build-exercises.js",
     "start": "cd public; python -m SimpleHTTPServer; cd ..",
-    "eval": "node evaluate.js",
+    "eval": "node ./src/evaluate.js",
     "deploy": "firebase deploy"
   },
   "author": "Adrien Joly <adrien.joly@gmail.com>",
