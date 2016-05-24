@@ -6,7 +6,7 @@ Merci de prendre connaissance des informations suivantes:
 
 - Les copies ont été individualisées => tout copiage détecté vaudra une note nulle pour les étudiants concernés.
 - Toute communication avec d'autres personnes, ou usage d'un moyen de communication pendant l'examen (email, chat, sms) annulera votre note. En revanche, vous êtes libre d'utiliser vos notes, les supports de cours, ou tout autre document ou ressource internet, du moment qu'elle ne permet pas d'échanger des informations avec d'autres personnes pendant l'examen.
-- Vos réponses seront évaluées de manière automatique, donc respectez à la lettre les noms, valeurs, messages et instructions fournies, et assurez vous que votre code Javascript est valide. Libre à vous d'utiliser la console et autres outils de développement pour tester votre code.
+- Pour éviter de perdre des points, respectez à la lettre les noms, valeurs, messages et instructions fournies, et assurez vous que votre code Javascript est valide. Libre à vous d'utiliser la console et autres outils de développement pour tester votre code.
 - Aucun code/balise HTML ne doit être fourni dans vos réponses.
 
 À vous de jouer !
