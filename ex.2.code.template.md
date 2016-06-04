@@ -2,13 +2,13 @@
 
 Écrivez le code JS permettant d'envoyer une requête Ajax de type GET à l'URL `{{{url}}}`. Une fois la réponse reçue, affichez dans la console seulement la valeur de la propriété `{{prop}}` de cette réponse JSON.
 
-- { "url": "http://jsonplaceholder.typicode.com/users/1", "prop": "username" }
-- { "url": "http://jsonplaceholder.typicode.com/users/2", "prop": "email" }
-- { "url": "http://jsonplaceholder.typicode.com/users/3", "prop": "phone" }
+- { "url": "https://js-jsonplaceholder.herokuapp.com/users/1", "prop": "username" }
+- { "url": "https://js-jsonplaceholder.herokuapp.com/users/2", "prop": "email" }
+- { "url": "https://js-jsonplaceholder.herokuapp.com/users/3", "prop": "phone" }
 
 ---
 
-Écrivez le code JS permettant d'envoyer une requête Ajax de type POST à l'URL `http://httpbin.org/post`, en transmettant un objet JSON contenant une propriété `{{prop}}` valant `"{{val}}"`.
+Écrivez le code JS permettant d'envoyer une requête Ajax de type POST à l'URL `https://js-httpbin.herokuapp.com/post`, en transmettant un objet JSON contenant une propriété `{{prop}}` valant `"{{val}}"`.
 
 - { "prop": "username", "val": "pierredup" }
 - { "prop": "school", "val": "eemi" }
@@ -18,7 +18,7 @@
 ???
 
 var xhr = new XMLHttpRequest();
-xhr.open('POST', 'http://httpbin.org/post');
+xhr.open('POST', 'https://js-httpbin.herokuapp.com/post');
 xhr.onreadystatechange = function() {
   if (xhr.readyState == 4) alert(xhr.responseText);
 };
