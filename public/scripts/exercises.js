@@ -296,19 +296,19 @@
           "i": 1,
           "id": "code1",
           "mdVariants": [
-            "Écrivez le code JS permettant d'envoyer une requête Ajax de type GET à l'URL `http://jsonplaceholder.typicode.com/users/1`. Une fois la réponse reçue, affichez dans la console seulement la valeur de la propriété `username` de cette réponse JSON.\n",
-            "Écrivez le code JS permettant d'envoyer une requête Ajax de type GET à l'URL `http://jsonplaceholder.typicode.com/users/2`. Une fois la réponse reçue, affichez dans la console seulement la valeur de la propriété `email` de cette réponse JSON.\n",
-            "Écrivez le code JS permettant d'envoyer une requête Ajax de type GET à l'URL `http://jsonplaceholder.typicode.com/users/3`. Une fois la réponse reçue, affichez dans la console seulement la valeur de la propriété `phone` de cette réponse JSON.\n"
+            "Écrivez le code JS permettant d'envoyer une requête Ajax de type GET à l'URL `https://js-jsonplaceholder.herokuapp.com/users/1`. Une fois la réponse reçue, affichez dans la console seulement la valeur de la propriété `username` de cette réponse JSON.\n",
+            "Écrivez le code JS permettant d'envoyer une requête Ajax de type GET à l'URL `https://js-jsonplaceholder.herokuapp.com/users/2`. Une fois la réponse reçue, affichez dans la console seulement la valeur de la propriété `email` de cette réponse JSON.\n",
+            "Écrivez le code JS permettant d'envoyer une requête Ajax de type GET à l'URL `https://js-jsonplaceholder.herokuapp.com/users/3`. Une fois la réponse reçue, affichez dans la console seulement la valeur de la propriété `phone` de cette réponse JSON.\n"
           ]
         },
         {
           "i": 2,
           "id": "code2",
           "mdVariants": [
-            "Écrivez le code JS permettant d'envoyer une requête Ajax de type POST à l'URL `http://httpbin.org/post`, en transmettant un objet JSON contenant une propriété `username` valant `\"pierredup\"`.\n\n\n",
-            "Écrivez le code JS permettant d'envoyer une requête Ajax de type POST à l'URL `http://httpbin.org/post`, en transmettant un objet JSON contenant une propriété `school` valant `\"eemi\"`.\n\n\n",
-            "Écrivez le code JS permettant d'envoyer une requête Ajax de type POST à l'URL `http://httpbin.org/post`, en transmettant un objet JSON contenant une propriété `date` valant `\"2016\"`.\n\n\n",
-            "Écrivez le code JS permettant d'envoyer une requête Ajax de type POST à l'URL `http://httpbin.org/post`, en transmettant un objet JSON contenant une propriété `nickname` valant `\"dupont\"`.\n\n\n"
+            "Écrivez le code JS permettant d'envoyer une requête Ajax de type POST à l'URL `https://js-httpbin.herokuapp.com/post`, en transmettant un objet JSON contenant une propriété `username` valant `\"pierredup\"`.\n\n\n",
+            "Écrivez le code JS permettant d'envoyer une requête Ajax de type POST à l'URL `https://js-httpbin.herokuapp.com/post`, en transmettant un objet JSON contenant une propriété `school` valant `\"eemi\"`.\n\n\n",
+            "Écrivez le code JS permettant d'envoyer une requête Ajax de type POST à l'URL `https://js-httpbin.herokuapp.com/post`, en transmettant un objet JSON contenant une propriété `date` valant `\"2016\"`.\n\n\n",
+            "Écrivez le code JS permettant d'envoyer une requête Ajax de type POST à l'URL `https://js-httpbin.herokuapp.com/post`, en transmettant un objet JSON contenant une propriété `nickname` valant `\"dupont\"`.\n\n\n"
           ]
         },
         {
