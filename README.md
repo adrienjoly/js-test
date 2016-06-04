@@ -43,6 +43,7 @@ How to evaluate students' answers
 TODO
 ----
 
+- Add variants to Quizzes.
 - Prevent the on-tap event from firing when clicking outside of the choices.
 - Right after login, initialize student's record in Firebase, in order to know their presence (and id) even if they didn't press the "save" button.
 - Display the last submitted solution after `active` was set to `false`, to confirm that student's submission was taken into account.
