@@ -17,6 +17,8 @@ function wrapCode(code) {
 
 module.exports = [
 
+// TODO: split test 1 into 2 tests
+
   /* TEST 1: first line of console depends on prompt() */
   function (code, variant, callback) {
     var helpers = this;
