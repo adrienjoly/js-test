@@ -51,6 +51,15 @@
 
   <template is="dom-bind" id="app">
 
+    <paper-dialog id="submitConfirmation" modal on-iron-overlay-closed="onSubmitConfirm">
+      <h2>Attention !</h2>
+      <p>Une fois votre copie rendue, vous ne pourrez plus modifier vos réponses !</p>
+      <div class="buttons">
+        <paper-button dialog-dismiss>Annuler</paper-button>
+        <paper-button dialog-confirm>Rendre la copie</paper-button>
+      </div>
+    </paper-dialog>
+
     <paper-scroll-header-panel main fixed="true" id="headerPanelMain">
 
       <paper-toolbar id="mainToolbar">
@@ -152,15 +161,6 @@
                   </paper-button>
                 </paper-material>
               </section>
-
-              <paper-dialog id="submitConfirmation" modal on-iron-overlay-closed="onSubmitConfirm">
-                <h2>Attention !</h2>
-                <p>Une fois votre copie rendue, vous ne pourrez plus modifier vos réponses !</p>
-                <div class="buttons">
-                  <paper-button dialog-dismiss>Annuler</paper-button>
-                  <paper-button dialog-confirm>Rendre la copie</paper-button>
-                </div>
-              </paper-dialog>
 
             </template>
           </template>
