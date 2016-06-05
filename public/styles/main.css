@@ -37,3 +37,7 @@ paper-radio-button {
   max-width: 800px;
   margin: 0 auto;
 }
+
+.paper-dialog-0 {
+  background-color: white;
+}
