@@ -37,7 +37,7 @@ var template = '<%= nb %> lutin<%= pl %>';
 var nombre = 3;
 var rendu = _.template(template, {
   nb: nombre,
-  pl: nombre != 0 ? 's' : ''
+  pl: 's'
 });
 ```
 
@@ -59,12 +59,12 @@ Je crée un tableau `[ 'a', 'b', 'c' ]`, puis j'utilise successivement les méth
 
 ---
 
-Pour stocker des données dans un back-end Firebase, y a-t-il besoin d'effectuer une requête Ajax ?
+Pour stocker des données dans un back-end Firebase en Javascript, qu'ai-je besoin de faire ?
 
-- Oui, en utilisant XMLHttpRequest
-- Non, pas besoin d'Ajax pour cela
-* Peut-être, mais c'est l'API de Firebase qui le fait pour nous
-- Firebase n'est pas un back-end
+- Je dois effectuer une requête Ajax avec XMLHttpRequest
+- Je uploader un fichier JSON sur le serveur de Firebase
+* Je dois utiliser une fonction de l'API de Firebase comme push() ou update()
+- Je dois utiliser un bouton Google Connect pour m'identifier
 
 ---
 
