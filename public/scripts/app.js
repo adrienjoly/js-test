@@ -104,6 +104,16 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       app.myAnswers = snapshot.val() || {}; // make sure that local state = remote state
       app.hashedAnswers = JSON.stringify(app.myAnswers, null, '  ');
     });
+    /*
+    function onStoredAnswers(snapshot) {
+      console.log('onStoredAnswers', snapshot.key(), snapshot.val());
+      // called on launch, and right after firebase data updates (even if offline)
+      app.set('myAnswers.' + snapshot.key(), snapshot.val());
+      app.hashedAnswers = JSON.stringify(app.myAnswers, null, '  ');
+    }
+    app.backend.on('child_added', onStoredAnswers);
+    app.backend.on('child_changed', onStoredAnswers); // only fired when online
+    */
     (new Firebase(FIREBASE_URL + '/active')).on('value', onBackEndStatus);
   }
 
@@ -182,6 +192,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       console.log('onAnswersUpdate', update);
     };
     */
+    /*
     function toggleSubmitButton (questionId, toggle, submitting) {
       var btn = document.querySelector('#btnSubmit_' + questionId);
       if (!btn) return;
@@ -198,19 +209,29 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         toggleSubmitButton(questionId, changed);
       }
     }
-    // when user presses submit button => upload answer
+    */
+    // upload code answer
+    function uploadCodeValue(questionId, inputValue) {
+      var changed = app.myAnswers[questionId] !== inputValue;
+      if (changed) {
+        //toggleSubmitButton(questionId, false, true); // prevent user from clicking more than once in a row
+        var upd = {};
+        upd[questionId] = inputValue;
+        sendAnswersToBackend(upd);
+      }
+    }
+    /*
     app.onSubmit = function(evt) {
       var button = evt.currentTarget;
       var questionId = button.getAttribute('data-id');
       var input = document.querySelector('my-code[data-id="' + questionId + '"]');
-      var changed = app.myAnswers[questionId] !== input.value;
-      //console.log('onSubmit, code changed:', questionId, changed, input.value);
-      if (changed) {
-        toggleSubmitButton(questionId, false, true); // prevent user from clicking more than once in a row
-        var upd = {};
-        upd[questionId] = input.value;
-        sendAnswersToBackend(upd);
-      }
+      uploadCodeValue(questionId, input.value);
+    };
+    */
+    app.onCodeBlur = function(evt) {
+      var input = evt.currentTarget;
+      var questionId = input.getAttribute('data-id');
+      uploadCodeValue(questionId, input.value);
     };
   })();
 
@@ -238,7 +259,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   app.onSubmitConfirm = function(evt, res){
     toggleButton(document.getElementById('submitConfirmation'), true);
     if (res.confirmed) {
-      var upd = { _submitted: true }; // TODO: store all answers
+      var upd = { _submitted: true };
+      /*
+      // store all answers
+      var codes = document.getElementsByTagName('my-code'); // TODO use this.shadowRoot.querySelectorAll('my-code') intead ?
+      for (var i=0; i<codes.length; ++i) {
+        upd[codes[i].getAttribute('data-id')] = codes[i].value;
+      }
+      */
       sendAnswersToBackend(upd, function(err) {
         if (err) {
           console.error('onSubmitExam -> firebase:', err);
