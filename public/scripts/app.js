@@ -131,7 +131,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     };
   })();
 
-  function sendAnswersToBackend(upd) {
+  function sendAnswersToBackend(upd, callback) {
     if (!app.backend) return console.info('backend is not connected yet => ignoring update');
     if (!upd) return console.warn('not sending a null update to backend');
     // ui feedback: display loading spinner on questions to be sync'ed
@@ -142,7 +142,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     upd._t = Firebase.ServerValue.TIMESTAMP;
     upd._d = Date();
     upd._uid = app.user.id; // will be used to re-generate the variant number during evaluation
-    app.backend.update(upd, function(err) {
+    app.backend.update(upd, callback || function(err) {
       if (err) {
         console.error('onChange -> firebase:', err);
         alert('Une erreur est survenue lors de l\'envoi de votre réponse. Prévenez votre enseignant.');
@@ -155,6 +155,15 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         }
       }
     });
+  }
+
+  function toggleButton(btn, toggle) {
+    if (!btn) return;
+    if (toggle) {
+      btn.removeAttribute('disabled');
+    } else {
+      btn.setAttribute('disabled', 'disabled');  
+    }
   }
 
   // for code exercises only
@@ -172,11 +181,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     function toggleSubmitButton (questionId, toggle, submitting) {
       var btn = document.querySelector('#btnSubmit_' + questionId);
       if (!btn) return;
-      if (toggle) {
-        btn.removeAttribute('disabled');
-      } else {
-        btn.setAttribute('disabled', 'disabled');  
-      }
+      toggleButton(btn, toggle);
       btn.querySelectorAll('span')[0].innerHTML = submitting ? 'Enregistrement...' : 'Enregistrer';
     }
     // when user changes an answer => update associated submit button
@@ -224,6 +229,29 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       sendAnswersToBackend(upd); // should be called by the above line, thru observer
     }
   })();
+
+  // when user confirms submission of all exam answers
+  app.onSubmitConfirm = function(evt, res){
+    toggleButton(document.getElementById('submitConfirmation'), true);
+    if (res.confirmed) {
+      var upd = { _submitted: true }; // TODO: store all answers
+      sendAnswersToBackend(upd, function(err) {
+        if (err) {
+          console.error('onSubmitExam -> firebase:', err);
+          alert('Une erreur est survenue lors du rendu de votre copie. Prévenez votre enseignant.');
+        } else {
+          app.scrollPageToTop();
+        }
+        // => the page will de-activate after onStoredUserAnswers() is called by Firebase
+      });
+    }
+  };
+
+  // when user presses exam submit button => ask confirmation then upload all answers and de-activate form
+  app.onSubmitExam = function(evt) {
+    toggleButton(document.getElementById('submitConfirmation'), false);
+    document.getElementById('submitConfirmation').open();
+  };
 
   // FOR PUBLIC TESTING: fakes Google Login
   if (PUBLIC_TEST_MODE) {

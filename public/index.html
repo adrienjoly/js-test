@@ -69,10 +69,19 @@
             </template>
             <template is="dom-if" if="{{loggedIn}}">
               <h2>Bonjour, {{user.name}}</h2>
-              <zero-md file="./data/intro.md">
-                <!-- Remember to pass in empty container of class="md-html". -->
-                <div class="md-html"></div>
-              </zero-md>
+
+              <template is="dom-if" if="{{myAnswers._submitted}}">
+                <p>Votre copie a été rendue avec succès !</p>
+                <p>Vous pouvez à présent quitter la salle d'examen.</p>
+              </template>
+
+              <template is="dom-if" if="{{!myAnswers._submitted}}">
+                <zero-md file="./data/intro.md">
+                  <!-- Remember to pass in empty container of class="md-html". -->
+                  <div class="md-html"></div>
+                </zero-md>
+              </template>
+
             </template>
             <google-signin
               is-authorized="{{loggedIn}}"
@@ -84,48 +93,75 @@
         </section>
 
         <template is="dom-if" if="{{loggedIn}}">
-          <template is="dom-if" if="{{!active}}">
-            <paper-material elevation="1">
-              <p>Le test est fermé pour l'instant. Suivez les consignes de votre enseignant.</p>
-              <!-- TODO: display last submitted answers -->
-            </paper-material>
-          </template>
-          <template is="dom-if" if="{{active}}">
-            <template is="dom-repeat" items="{{exercises}}" as="exercise">
+          <template is="dom-if" if="{{!myAnswers._submitted}}">
 
-              <section id="[[exercise.id]]" class="quizz-question">
+            <template is="dom-if" if="{{!active}}">
+              <paper-material elevation="1">
+                <p>Le test est fermé pour l'instant. Suivez les consignes de votre enseignant.</p>
+                <!-- TODO: display last submitted answers -->
+              </paper-material>
+            </template>
+
+            <template is="dom-if" if="{{active}}">
+              <template is="dom-repeat" items="{{exercises}}" as="exercise">
+
+                <section id="[[exercise.id]]" class="quizz-question">
+                  <paper-material elevation="1">
+
+                    <h2>{{exercise.title}}</h2>
+                    <template is="dom-repeat" items="{{exercise.questions}}" as="question">
+                      <section id="[[question.id]]" class="quizz-question">
+                        <paper-material elevation="0">
+                          <h3>Question {{question.i}}</h2>
+                          <paper-spinner-lite active></paper-spinner-lite>
+
+                          <zero-md text="{{question.md}}" file="{{question.mdFile}}">
+                            <!-- Remember to pass in empty container of class="md-html". -->
+                            <div class="md-html"></div>
+                          </zero-md>
+
+                          <template is="dom-if" if="{{exercise.isQuizz}}">
+                            <my-qcm data-id$="[[question.id]]" on-tap="onChange" items="{{question.choices}}" value="[[myAnswersItem(myAnswers.*, question.id)]]"></my-qcm>
+                          </template>
+
+                          <template is="dom-if" if="{{exercise.isCode}}">
+                            <my-code label="Saisissez votre code Javascript ici" on-change="onCodeChange" data-id$="[[question.id]]" value="[[myAnswersItem(myAnswers.*, question.id)]]"></my-code>
+                            <paper-button id="btnSubmit_{{question.id}}" data-id$="[[question.id]]" on-click="onSubmit" disabled raised>
+                              <iron-icon icon="check"></iron-icon>&nbsp;
+                              <span>Enregistrer</span>
+                            </paper-button>
+                          </template>
+
+                        </paper-material>
+                      </section>
+                    </template>
+
+                  </paper-material>
+                </section>
+              </template>
+
+              <section>
                 <paper-material elevation="1">
-
-                  <h2>{{exercise.title}}</h2>
-                  <template is="dom-repeat" items="{{exercise.questions}}" as="question">
-                    <section id="[[question.id]]" class="quizz-question">
-                      <paper-material elevation="0">
-                        <h3>Question {{question.i}}</h2>
-                        <paper-spinner-lite active></paper-spinner-lite>
-
-                        <zero-md text="{{question.md}}" file="{{question.mdFile}}">
-                          <!-- Remember to pass in empty container of class="md-html". -->
-                          <div class="md-html"></div>
-                        </zero-md>
-
-                        <template is="dom-if" if="{{exercise.isQuizz}}">
-                          <my-qcm data-id$="[[question.id]]" on-tap="onChange" items="{{question.choices}}" value="[[myAnswersItem(myAnswers.*, question.id)]]"></my-qcm>
-                        </template>
-
-                        <template is="dom-if" if="{{exercise.isCode}}">
-                          <my-code label="Saisissez votre code Javascript ici" on-change="onCodeChange" data-id$="[[question.id]]" value="[[myAnswersItem(myAnswers.*, question.id)]]"></my-code>
-                          <paper-button id="btnSubmit_{{question.id}}" data-id$="[[question.id]]" on-click="onSubmit" disabled raised>
-                            <iron-icon icon="check"></iron-icon>&nbsp;
-                            <span>Enregistrer</span>
-                          </paper-button>
-                        </template>
-
-                      </paper-material>
-                    </section>
-                  </template>
-
+                  <h2>Rendu de copie</h2>
+                  <p>Afin que vos réponses soient prises en compte, veuillez rendre votre copie avant de quitter la salle d'examen.</p>
+                  <p>Tout rendu tardif annulera votre note.</p>
+                  <p>Attention: une fois votre copie rendue, vous ne pourrez plus modifier vos réponses. Donc relisez-vous avant de cliquer sur le bouton ci-dessous.</p>
+                  <paper-button id="btnSubmitExam" on-click="onSubmitExam" raised class="green">
+                    <iron-icon icon="check"></iron-icon>&nbsp;
+                    <span>Rendre votre copie</span>
+                  </paper-button>
                 </paper-material>
               </section>
+
+              <paper-dialog id="submitConfirmation" modal on-iron-overlay-closed="onSubmitConfirm">
+                <h2>Attention !</h2>
+                <p>Une fois votre copie rendue, vous ne pourrez plus modifier vos réponses !</p>
+                <div class="buttons">
+                  <paper-button dialog-dismiss>Annuler</paper-button>
+                  <paper-button dialog-confirm>Rendre la copie</paper-button>
+                </div>
+              </paper-dialog>
+
             </template>
           </template>
         </template>
