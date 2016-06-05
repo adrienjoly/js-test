@@ -63,6 +63,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   };
 
   app.title = PAGE_TITLE;
+  app.teacherEmail = "adrien.joly@eemi.com";
+  app.emailSubject = "PARTIEL2";
   app.GOOGLE_CLIENT_ID = GOOGLE_CLIENT_ID;
   app.GOOGLE_CLIENT_DOMAIN = GOOGLE_CLIENT_DOMAIN;
   app.LOGIN_INVITE = LOGIN_INVITE;
@@ -70,6 +72,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   app.user = null;
   app.backend = null; // Firebase instance
   app.myAnswers = {}; // will be populated from firebase after login
+  app.hashedAnswers = '';
   app.active = false;
 
   // disable/enable user entry based on the `active` value in the Firebase DB
@@ -99,6 +102,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     app.backend.on('value', function onStoredUserAnswers(snapshot) {
       // called on launch, and right after firebase data updates (even if offline)
       app.myAnswers = snapshot.val() || {}; // make sure that local state = remote state
+      app.hashedAnswers = JSON.stringify(app.myAnswers, null, '  ');
     });
     (new Firebase(FIREBASE_URL + '/active')).on('value', onBackEndStatus);
   }
