@@ -80,7 +80,7 @@
         {
           "i": 4,
           "id": "qcm4",
-          "md": "```js\n// la bibliothèque \"underscore\" a été chargée dans l'objet \"_\"\nvar template = '<%= nb %> lutin<%= pl %>';\nvar nombre = 3;\nvar rendu = _.template(template, {\n  nb: nombre,\n  pl: nombre != 0 ? 's' : ''\n});\n```\n\nQue vaut la variable `rendu` ?\n",
+          "md": "```js\n// la bibliothèque \"underscore\" a été chargée dans l'objet \"_\"\nvar template = '<%= nb %> lutin<%= pl %>';\nvar nombre = 3;\nvar rendu = _.template(template, {\n  nb: nombre,\n  pl: 's'\n});\n```\n\nQue vaut la variable `rendu` ?\n",
           "choices": [
             {
               "name": 1,
@@ -126,23 +126,23 @@
         {
           "i": 6,
           "id": "qcm6",
-          "md": "Pour stocker des données dans un back-end Firebase, y a-t-il besoin d'effectuer une requête Ajax ?\n",
+          "md": "Pour stocker des données dans un back-end Firebase en Javascript, qu'ai-je besoin de faire ?\n",
           "choices": [
             {
               "name": 1,
-              "text": "Oui, en utilisant XMLHttpRequest"
+              "text": "Je dois effectuer une requête Ajax avec XMLHttpRequest"
             },
             {
               "name": 2,
-              "text": "Non, pas besoin d'Ajax pour cela"
+              "text": "Je uploader un fichier JSON sur le serveur de Firebase"
             },
             {
               "name": 3,
-              "text": "Peut-être, mais c'est l'API de Firebase qui le fait pour nous"
+              "text": "Je dois utiliser une fonction de l'API de Firebase comme push() ou update()"
             },
             {
               "name": 4,
-              "text": "Firebase n'est pas un back-end"
+              "text": "Je dois utiliser un bouton Google Connect pour m'identifier"
             }
           ]
         },
