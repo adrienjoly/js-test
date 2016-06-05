@@ -152,11 +152,13 @@
                           </template>
 
                           <template is="dom-if" if="{{exercise.isCode}}">
-                            <my-code label="Saisissez votre code Javascript ici" on-change="onCodeChange" data-id$="[[question.id]]" value="[[myAnswersItem(myAnswers.*, question.id)]]"></my-code>
+                            <my-code label="Saisissez votre code Javascript ici" on-blur="onCodeBlur" data-id$="[[question.id]]" value="[[myAnswersItem(myAnswers.*, question.id)]]"></my-code> <!-- on-change="onCodeChange" -->
+                            <!--
                             <paper-button id="btnSubmit_{{question.id}}" data-id$="[[question.id]]" on-click="onSubmit" disabled raised>
                               <iron-icon icon="check"></iron-icon>&nbsp;
                               <span>Enregistrer</span>
                             </paper-button>
+                            -->
                           </template>
 
                         </paper-material>

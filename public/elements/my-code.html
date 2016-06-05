@@ -12,7 +12,7 @@
         };
       }
     </style>
-    <paper-textarea label="{{label}}" value="{{value::input}}"></paper-textarea>
+    <paper-textarea label="{{label}}" value="{{value::input}}" on-blur="_blur"></paper-textarea>
   </template>
 
   <script>
@@ -35,6 +35,10 @@
 
         _changed: function(evt) {
           this.fire('change', evt);
+        },
+
+        _blur: function(evt) {
+          this.fire('blur', evt);
         }
       });
 
