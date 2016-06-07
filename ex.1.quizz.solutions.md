@@ -63,7 +63,7 @@ Pour stocker des données dans un back-end Firebase en Javascript, qu'ai-je beso
 
 - Je dois effectuer une requête Ajax avec XMLHttpRequest
 - Je uploader un fichier JSON sur le serveur de Firebase
-* Je dois utiliser une fonction de l'API de Firebase comme push() ou update()
+* **Je dois utiliser une fonction de l'API de Firebase comme push() ou update()**
 - Je dois utiliser un bouton Google Connect pour m'identifier
 
 ---
@@ -118,7 +118,7 @@ Quand on définit une fonction, que faut-il mettre entre les parenthèses qui su
 On définit une fonction `fct` qui prend un nombre en paramètre, et retourne le double de ce nombre. Comment obtenir le double de `2` en utilisant cette fonction ?
 
 - `function fct(2)`
-* `**fct(2)`**
+* **`fct(2)`**
 - `fct(2, 2)`
 - `fct(2 * 2)`
 
