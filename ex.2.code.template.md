@@ -1,6 +1,6 @@
 ---
 
-Écrivez le code JS permettant d'envoyer une requête Ajax de type GET à l'URL `{{{url}}}`. Une fois la réponse reçue, affichez dans la console seulement la valeur de la propriété `{{prop}}` de cette réponse JSON.
+Écrivez le code JS permettant d'envoyer une requête Ajax de type GET à l'URL `{{{url}}}`. Une fois la réponse reçue, votre code doit afficher dans la console seulement la valeur de la propriété `{{prop}}` de cette réponse JSON.
 
 - { "url": "https://js-jsonplaceholder.herokuapp.com/users/1", "prop": "username" }
 - { "url": "https://js-jsonplaceholder.herokuapp.com/users/2", "prop": "email" }

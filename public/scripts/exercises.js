@@ -296,9 +296,9 @@
           "i": 1,
           "id": "code1",
           "mdVariants": [
-            "Écrivez le code JS permettant d'envoyer une requête Ajax de type GET à l'URL `https://js-jsonplaceholder.herokuapp.com/users/1`. Une fois la réponse reçue, affichez dans la console seulement la valeur de la propriété `username` de cette réponse JSON.\n",
-            "Écrivez le code JS permettant d'envoyer une requête Ajax de type GET à l'URL `https://js-jsonplaceholder.herokuapp.com/users/2`. Une fois la réponse reçue, affichez dans la console seulement la valeur de la propriété `email` de cette réponse JSON.\n",
-            "Écrivez le code JS permettant d'envoyer une requête Ajax de type GET à l'URL `https://js-jsonplaceholder.herokuapp.com/users/3`. Une fois la réponse reçue, affichez dans la console seulement la valeur de la propriété `phone` de cette réponse JSON.\n"
+            "Écrivez le code JS permettant d'envoyer une requête Ajax de type GET à l'URL `https://js-jsonplaceholder.herokuapp.com/users/1`. Une fois la réponse reçue, votre code doit afficher dans la console seulement la valeur de la propriété `username` de cette réponse JSON.\n\n\n",
+            "Écrivez le code JS permettant d'envoyer une requête Ajax de type GET à l'URL `https://js-jsonplaceholder.herokuapp.com/users/2`. Une fois la réponse reçue, votre code doit afficher dans la console seulement la valeur de la propriété `email` de cette réponse JSON.\n\n\n",
+            "Écrivez le code JS permettant d'envoyer une requête Ajax de type GET à l'URL `https://js-jsonplaceholder.herokuapp.com/users/3`. Une fois la réponse reçue, votre code doit afficher dans la console seulement la valeur de la propriété `phone` de cette réponse JSON.\n\n\n"
           ]
         },
         {
