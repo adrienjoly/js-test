@@ -41,8 +41,10 @@ function getVariantByStudentId (id, variants) {
 function runTest(testCode, studentCode, callback) {
   if (!testCode) {
     console.log('// WARNING: NO CODE TESTER => skipping');
+    callback(null, [ 0 ]);
   } else if (!studentCode) {
     console.log('// WARNING: NO STUDENT CODE => skipping');
+    callback(null, [ 0 ]);
   } else {
     var code = [ '// CODE TESTER:', testCode, '// STUDENT CODE:', studentCode ].join('\n\n');
     console.log(code);
@@ -52,7 +54,6 @@ function runTest(testCode, studentCode, callback) {
       var testScore = res[1];
       if (testError) console.log('\n// -> STUDENT CODE ERROR:', testError);
       console.log('\n// => STUDENT CODE SCORE:', testScore || 0);
-      process.exit(); // TODO: remove
       callback(err, [ testScore || 0 ]); // sum of array must be <= 1
     });
   }
