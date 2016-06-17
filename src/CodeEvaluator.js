@@ -50,9 +50,14 @@ function runTest(testCode, studentCode, callback) {
     console.log(code);
     runCodeInSandbox(code, function(err, res) {
       if (err) console.log('=> test runner err:', err);
-      var testError = res[0];
-      var testScore = res[1];
-      if (testError) console.log('\n// -> STUDENT CODE ERROR:', testError);
+      var testScore = 0;
+      if (res) {
+        testScore = res[1];
+        var testError = res[0];
+        if (testError) {
+          console.log('\n// -> STUDENT CODE ERROR:', testError);
+        }
+      }
       console.log('\n// => STUDENT CODE SCORE:', testScore || 0);
       callback(err, [ testScore || 0 ]); // sum of array must be <= 1
     });
