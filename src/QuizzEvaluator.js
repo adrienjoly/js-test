@@ -15,6 +15,14 @@ QuizzEvaluator.prototype.readSolutionsFromFile = function(filePath) {
   return this;
 };
 
+QuizzEvaluator.prototype.getAnswerSet = function(answers) {
+  var set = {};
+  for (var id in this.solutions) {
+    set[id] = answers[id];
+  }
+  return set;
+};
+
 QuizzEvaluator.prototype.evaluateAnswers = function(answers) {
   var log = [];
   var score = 0;
