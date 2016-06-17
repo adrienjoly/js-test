@@ -166,6 +166,7 @@ Cette fonction ne doit ni afficher d'alerte modale, ni écrire dans la console. 
 
 ???
 ```js
+var console = { log: function(){} }; // tolerate calls to console.log()
 _runStudentCode();
 (function evaluateStudentCode(){
   var done = application.remote._send;
@@ -262,6 +263,7 @@ Pour créer un tableau vide, il suffit d'écrire `[]`.
 ???
 ```js
 (function evaluateStudentCode(){
+  var console = { log: function(){} }; // tolerate calls to console.log()
   _runStudentCode();
   var done = application.remote._send;
   function makeExpectedArray(n) {
@@ -369,6 +371,7 @@ try {
   Math.random = function() {
     return 0;
   };
+  var console = { log: function(){} }; // tolerate calls to console.log()
   // test 1: correct guess
   var prompt = function() {
     return '1';
