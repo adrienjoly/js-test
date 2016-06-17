@@ -388,7 +388,7 @@ try {
   _runStudentCode();
   done(null, 1);
 } catch (e) {
-  done(e.message);
+  done(e.message || e);
 }
 ```
 

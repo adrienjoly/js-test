@@ -156,7 +156,7 @@ Evaluating adrien_jourdier (116372307368767833451) ...
   | 
   | console.log(JSON.Stringify(email));
   | xhr.send(null);
-Fri, 17 Jun 2016 13:46:46 GMT jailed:sandbox ReferenceError: email is not defined
+Fri, 17 Jun 2016 13:54:33 GMT jailed:sandbox ReferenceError: email is not defined
     at evaluateStudentCode (DYNAMIC PLUGIN:85:28)
     at DYNAMIC PLUGIN:88:3
     at ContextifyScript.Script.runInNewContext (vm.js:18:15)
@@ -242,7 +242,7 @@ Fri, 17 Jun 2016 13:46:46 GMT jailed:sandbox ReferenceError: email is not define
   | }
   | 
   | jusqua(5);
-Fri, 17 Jun 2016 13:46:47 GMT jailed:sandbox ReferenceError: i is not defined
+Fri, 17 Jun 2016 13:54:33 GMT jailed:sandbox ReferenceError: i is not defined
     at jusqua (DYNAMIC PLUGIN:7:8)
     at evaluateStudentCode (DYNAMIC PLUGIN:13:1)
     at DYNAMIC PLUGIN:48:3
@@ -279,6 +279,8 @@ Fri, 17 Jun 2016 13:46:47 GMT jailed:sandbox ReferenceError: i is not defined
   |      break;
   |   }
   | }
+  | 
+  | // -> STUDENT CODE ERROR: on correct guess, got: "Super", expected: "super"
   | 
   | // => STUDENT CODE SCORE: 0
   => code score: 3 / 8
@@ -373,7 +375,7 @@ Error in BasicConnection:onMessage Error: Callback was already called.
   | var x = prompt();
   | plusUn(bonjour);
   | alert(bonjour);
-Fri, 17 Jun 2016 13:46:47 GMT jailed:sandbox ReferenceError: bonjour is not defined
+Fri, 17 Jun 2016 13:54:34 GMT jailed:sandbox ReferenceError: bonjour is not defined
     at evaluateStudentCode (DYNAMIC PLUGIN:18:8)
     at DYNAMIC PLUGIN:24:3
     at ContextifyScript.Script.runInNewContext (vm.js:18:15)
@@ -596,7 +598,7 @@ Evaluating assila_zitouni (107573928737735339074) ...
   | var x = prompt();
   | plusUn(coucou);
   | alert(coucou);
-Fri, 17 Jun 2016 13:46:48 GMT jailed:sandbox ReferenceError: coucou is not defined
+Fri, 17 Jun 2016 13:54:35 GMT jailed:sandbox ReferenceError: coucou is not defined
     at evaluateStudentCode (DYNAMIC PLUGIN:18:8)
     at DYNAMIC PLUGIN:24:3
     at ContextifyScript.Script.runInNewContext (vm.js:18:15)
@@ -652,6 +654,8 @@ Fri, 17 Jun 2016 13:46:48 GMT jailed:sandbox ReferenceError: coucou is not defin
   | if (joueur == choixOrdi) {alert('yeah');}
   | else { alert('il fallait deviner X');}
   | 
+  | // -> STUDENT CODE ERROR: on wrong guess, got: "il fallait deviner X", expected: "il fallait deviner 4"
+  | 
   | // => STUDENT CODE SCORE: 0
   => code score: 0 / 8
 
@@ -702,7 +706,7 @@ Evaluating briac_suquet (102147722742332758287) ...
   | xhr.onreadystatechange = function() {   
   |   if (xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 0)) {        
   | alert(xhr.responseText);  } }; xhr.send(JSON.stringify({ nickname : \"dupont\" }));",
-Fri, 17 Jun 2016 13:46:48 GMT jailed:sandbox SyntaxError: Unexpected token ILLEGAL
+Fri, 17 Jun 2016 13:54:35 GMT jailed:sandbox SyntaxError: Unexpected token ILLEGAL
     at Object.exports.runInNewContext (vm.js:48:16)
     at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:145:8)
     at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:159:3)
@@ -733,7 +737,7 @@ Fri, 17 Jun 2016 13:46:48 GMT jailed:sandbox SyntaxError: Unexpected token ILLEG
   | var x = prompt();
   | plusUn(bonjour);
   | alert(bonjour);
-Fri, 17 Jun 2016 13:46:49 GMT jailed:sandbox ReferenceError: bonjour is not defined
+Fri, 17 Jun 2016 13:54:35 GMT jailed:sandbox ReferenceError: bonjour is not defined
     at evaluateStudentCode (DYNAMIC PLUGIN:18:8)
     at DYNAMIC PLUGIN:24:3
     at ContextifyScript.Script.runInNewContext (vm.js:18:15)
@@ -819,7 +823,7 @@ Evaluating brice_pioline (113205718336784161320) ...
   | // STUDENT CODE:
   | 
   | var xhr = 
-Fri, 17 Jun 2016 13:46:49 GMT jailed:sandbox SyntaxError: Unexpected token }
+Fri, 17 Jun 2016 13:54:36 GMT jailed:sandbox SyntaxError: Unexpected token }
     at Object.exports.runInNewContext (vm.js:48:16)
     at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:145:8)
     at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:159:3)
@@ -949,7 +953,7 @@ Evaluating carla_succar (108011996141201084681) ...
   | return _.template(monTemplate, { nombre: pNombre});
   | }
   | 
-Fri, 17 Jun 2016 13:46:50 GMT jailed:sandbox ReferenceError: _ is not defined
+Fri, 17 Jun 2016 13:54:37 GMT jailed:sandbox ReferenceError: _ is not defined
     at plusUn (DYNAMIC PLUGIN:23:8)
     at evaluateStudentCode (DYNAMIC PLUGIN:18:15)
     at DYNAMIC PLUGIN:30:3
@@ -974,7 +978,7 @@ Fri, 17 Jun 2016 13:46:50 GMT jailed:sandbox ReferenceError: _ is not defined
   |         {
   |           console.log('alert');
   |     }
-Fri, 17 Jun 2016 13:46:50 GMT jailed:sandbox SyntaxError: Unexpected token )
+Fri, 17 Jun 2016 13:54:37 GMT jailed:sandbox SyntaxError: Unexpected token )
     at Object.exports.runInNewContext (vm.js:48:16)
     at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:145:8)
     at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:159:3)
@@ -1014,7 +1018,7 @@ Fri, 17 Jun 2016 13:46:50 GMT jailed:sandbox SyntaxError: Unexpected token )
   |     }
   |        alert ('il fallait deviner X');
   | 
-Fri, 17 Jun 2016 13:46:51 GMT jailed:sandbox SyntaxError: Unexpected token catch
+Fri, 17 Jun 2016 13:54:37 GMT jailed:sandbox SyntaxError: Unexpected token catch
     at Object.exports.runInNewContext (vm.js:48:16)
     at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:145:8)
     at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:159:3)
@@ -1079,7 +1083,7 @@ Evaluating chloe_tubiana (117863570411837800649) ...
   | xhr.send(null);
   | 
   | xhr.send(JSON.stringify({ school: 'eemi' }));
-Fri, 17 Jun 2016 13:46:51 GMT jailed:sandbox SyntaxError: Unexpected token ILLEGAL
+Fri, 17 Jun 2016 13:54:37 GMT jailed:sandbox SyntaxError: Unexpected token ILLEGAL
     at Object.exports.runInNewContext (vm.js:48:16)
     at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:145:8)
     at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:159:3)
@@ -1145,6 +1149,8 @@ Fri, 17 Jun 2016 13:46:51 GMT jailed:sandbox SyntaxError: Unexpected token ILLEG
   | else{
   | alert('il fallait deviner ' + choixOrdi);
   | }
+  | 
+  | // -> STUDENT CODE ERROR: on correct guess, got: "il fallait deviner 4", expected: "congrats"
   | 
   | // => STUDENT CODE SCORE: 0
   => code score: 3 / 8
@@ -1216,6 +1222,8 @@ Evaluating fabien_schneiter (100322773186257825155) ...
   | var joueur = prompt();
   | if (joueur == choixOrdi) {alert('super');}
   | else { alert('il fallait deviner choixOrdi');}
+  | 
+  | // -> STUDENT CODE ERROR: on wrong guess, got: "il fallait deviner choixOrdi", expected: "il fallait deviner 2"
   | 
   | // => STUDENT CODE SCORE: 0
   => code score: 1 / 8
@@ -1291,7 +1299,7 @@ Evaluating hugo_paradiso (115852772576547459643) ...
   | var x = prompt();
   | plusUn(bonjour);
   | alert(bonjour)
-Fri, 17 Jun 2016 13:46:53 GMT jailed:sandbox ReferenceError: bonjour is not defined
+Fri, 17 Jun 2016 13:54:39 GMT jailed:sandbox ReferenceError: bonjour is not defined
     at evaluateStudentCode (DYNAMIC PLUGIN:18:8)
     at DYNAMIC PLUGIN:24:3
     at ContextifyScript.Script.runInNewContext (vm.js:18:15)
@@ -1352,7 +1360,7 @@ Fri, 17 Jun 2016 13:46:53 GMT jailed:sandbox ReferenceError: bonjour is not defi
   | 	}
   | 	return(x);
   | }
-Fri, 17 Jun 2016 13:46:53 GMT jailed:sandbox ReferenceError: u is not defined
+Fri, 17 Jun 2016 13:54:39 GMT jailed:sandbox ReferenceError: u is not defined
     at nombres (DYNAMIC PLUGIN:22:5)
     at evaluateStudentCode (DYNAMIC PLUGIN:51:12)
     at DYNAMIC PLUGIN:66:3
@@ -1446,7 +1454,7 @@ Evaluating ibrahim_bouhaj (106771024311888459107) ...
   | 	return parseInt(nbr) + 1;
   | }
   | alert(plusUn(nbr));
-Fri, 17 Jun 2016 13:46:54 GMT jailed:sandbox ReferenceError: console is not defined
+Fri, 17 Jun 2016 13:54:41 GMT jailed:sandbox ReferenceError: console is not defined
     at evaluateStudentCode (DYNAMIC PLUGIN:18:1)
     at DYNAMIC PLUGIN:27:3
     at ContextifyScript.Script.runInNewContext (vm.js:18:15)
@@ -1481,7 +1489,7 @@ Fri, 17 Jun 2016 13:46:54 GMT jailed:sandbox ReferenceError: console is not defi
   | return n[i];}
   |  }
   | nombres[n];
-Fri, 17 Jun 2016 13:46:54 GMT jailed:sandbox ReferenceError: n is not defined
+Fri, 17 Jun 2016 13:54:41 GMT jailed:sandbox ReferenceError: n is not defined
     at evaluateStudentCode (DYNAMIC PLUGIN:10:9)
     at DYNAMIC PLUGIN:45:3
     at ContextifyScript.Script.runInNewContext (vm.js:18:15)
@@ -1510,6 +1518,8 @@ Fri, 17 Jun 2016 13:46:54 GMT jailed:sandbox ReferenceError: n is not defined
   | if ( x == aleatoire  ){
   |      alert('super');
   | }else{ alert('il fallait deviner X');} 
+  | 
+  | // -> STUDENT CODE ERROR: on correct guess, got: "il fallait deviner X", expected: "super"
   | 
   | // => STUDENT CODE SCORE: 0
   => code score: 3 / 8
@@ -1617,7 +1627,7 @@ Error in BasicConnection:onMessage Error: Callback was already called.
   | var x = prompt();
   | plusUn(bonjour);
   | alert(bonjour);
-Fri, 17 Jun 2016 13:46:55 GMT jailed:sandbox ReferenceError: bonjour is not defined
+Fri, 17 Jun 2016 13:54:41 GMT jailed:sandbox ReferenceError: bonjour is not defined
     at evaluateStudentCode (DYNAMIC PLUGIN:18:8)
     at DYNAMIC PLUGIN:24:3
     at ContextifyScript.Script.runInNewContext (vm.js:18:15)
@@ -1763,7 +1773,7 @@ Evaluating maxime_vion (101784347288786900868) ...
   | };
   | xhr.send(null);
   | 
-Fri, 17 Jun 2016 13:46:55 GMT jailed:sandbox Uncaught Exception: ReferenceError: consol is not defined
+Fri, 17 Jun 2016 13:54:42 GMT jailed:sandbox Uncaught Exception: ReferenceError: consol is not defined
     at xhr.onreadystatechange (DYNAMIC PLUGIN:83:5)
     at null._onTimeout (DYNAMIC PLUGIN:72:13)
     at Timer.listOnTimeout (timers.js:92:15)
@@ -1842,7 +1852,7 @@ Fri, 17 Jun 2016 13:46:55 GMT jailed:sandbox Uncaught Exception: ReferenceError:
   | function chaines([]){
   | return [JSON.stringify(chaines)]
   | }
-Fri, 17 Jun 2016 13:46:57 GMT jailed:sandbox SyntaxError: Unexpected token [
+Fri, 17 Jun 2016 13:54:43 GMT jailed:sandbox SyntaxError: Unexpected token [
     at Object.exports.runInNewContext (vm.js:48:16)
     at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:145:8)
     at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:159:3)
@@ -1868,6 +1878,8 @@ Fri, 17 Jun 2016 13:46:57 GMT jailed:sandbox SyntaxError: Unexpected token [
   | {
   | alert("il fallait deviner " + choixOrdi);
   | }
+  | 
+  | // -> STUDENT CODE ERROR: on correct guess, got: "il fallait deviner 1", expected: "bravo"
   | 
   | // => STUDENT CODE SCORE: 0
   => code score: 3 / 8
@@ -1907,7 +1919,7 @@ Evaluating nina_pellan (100833687235566341431) ...
   |   }
   | };
   | xhr.send(null);
-Fri, 17 Jun 2016 13:46:57 GMT jailed:sandbox Uncaught Exception: ReferenceError: email is not defined
+Fri, 17 Jun 2016 13:54:43 GMT jailed:sandbox Uncaught Exception: ReferenceError: email is not defined
     at xhr.onreadystatechange (DYNAMIC PLUGIN:83:17)
     at null._onTimeout (DYNAMIC PLUGIN:72:13)
     at Timer.listOnTimeout (timers.js:92:15)
@@ -1980,6 +1992,8 @@ Fri, 17 Jun 2016 13:46:57 GMT jailed:sandbox Uncaught Exception: ReferenceError:
   |   }
   | }
   | 
+  | // -> STUDENT CODE ERROR: on correct guess, got: "3", expected: "super"
+  | 
   | // => STUDENT CODE SCORE: 0
   => code score: 1 / 8
 
@@ -2044,7 +2058,7 @@ Evaluating norman_villaret (100212266235788964177) ...
   | var nb = prompt();
   | var x = parseInt(nb);
   | alert(plusUn (x));
-Fri, 17 Jun 2016 13:47:00 GMT jailed:sandbox ReferenceError: prompt is not defined
+Fri, 17 Jun 2016 13:54:46 GMT jailed:sandbox ReferenceError: prompt is not defined
     at DYNAMIC PLUGIN:4:10
     at ContextifyScript.Script.runInNewContext (vm.js:18:15)
     at Object.exports.runInNewContext (vm.js:49:17)
@@ -2131,6 +2145,8 @@ Fri, 17 Jun 2016 13:47:00 GMT jailed:sandbox ReferenceError: prompt is not defin
   | else {
   |  alert('\"il fallait deviner ' + choixOrdi + '\"');
   | }
+  | 
+  | // -> STUDENT CODE ERROR: on correct guess, got: ""il fallait deviner 2"", expected: "congrats"
   | 
   | // => STUDENT CODE SCORE: 0
   => code score: 3 / 8
@@ -2360,6 +2376,8 @@ Evaluating romain_peyret (100072992268804705214) ...
   | alert('il fallait deviner ' + choixOrdi );
   | }
   | 
+  | // -> STUDENT CODE ERROR: on correct guess, got: "il fallait deviner 1", expected: "yeah"
+  | 
   | // => STUDENT CODE SCORE: 0
   => code score: 6 / 8
 
@@ -2476,7 +2494,7 @@ Evaluating romain_rouleau (101819953116639767831) ...
   |   }
   | }
   | nombres(12)
-Fri, 17 Jun 2016 13:47:04 GMT jailed:sandbox SyntaxError: Unexpected token ]
+Fri, 17 Jun 2016 13:54:50 GMT jailed:sandbox SyntaxError: Unexpected token ]
     at Object.exports.runInNewContext (vm.js:48:16)
     at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:145:8)
     at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:159:3)
@@ -2531,7 +2549,7 @@ Fri, 17 Jun 2016 13:47:04 GMT jailed:sandbox SyntaxError: Unexpected token ]
   |      }
   |     }
   |     comparer (choixOrdi, choixUtilisateur);
-Fri, 17 Jun 2016 13:47:04 GMT jailed:sandbox SyntaxError: Identifier 'comparer' has already been declared
+Fri, 17 Jun 2016 13:54:50 GMT jailed:sandbox SyntaxError: Identifier 'comparer' has already been declared
     at Object.exports.runInNewContext (vm.js:48:16)
     at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:145:8)
     at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:159:3)
@@ -2719,7 +2737,7 @@ Evaluating tess_tilmont (111457311246491113843) ...
   | tableau.push(i);
   | }
   | }
-Fri, 17 Jun 2016 13:47:05 GMT jailed:sandbox SyntaxError: Unexpected token ;
+Fri, 17 Jun 2016 13:54:51 GMT jailed:sandbox SyntaxError: Unexpected token ;
     at Object.exports.runInNewContext (vm.js:48:16)
     at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:145:8)
     at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:159:3)
@@ -2750,7 +2768,7 @@ Fri, 17 Jun 2016 13:47:05 GMT jailed:sandbox SyntaxError: Unexpected token ;
   |     alert('il fallait deviner ' + choixOrdi);
   |   } 
   | }
-Fri, 17 Jun 2016 13:47:05 GMT jailed:sandbox SyntaxError: Missing catch or finally after try
+Fri, 17 Jun 2016 13:54:51 GMT jailed:sandbox SyntaxError: Missing catch or finally after try
     at Object.exports.runInNewContext (vm.js:48:16)
     at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:145:8)
     at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:159:3)
@@ -2799,7 +2817,7 @@ Evaluating timothee_podguszer (108194736825106247098) ...
   |    
   | });
   | 
-Fri, 17 Jun 2016 13:47:05 GMT jailed:sandbox SyntaxError: Unexpected identifier
+Fri, 17 Jun 2016 13:54:51 GMT jailed:sandbox SyntaxError: Unexpected identifier
     at Object.exports.runInNewContext (vm.js:48:16)
     at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:145:8)
     at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:159:3)
@@ -2821,7 +2839,7 @@ Fri, 17 Jun 2016 13:47:05 GMT jailed:sandbox SyntaxError: Unexpected identifier
   | </form>
   | <script type="text/javascript">	
   | </script>
-Fri, 17 Jun 2016 13:47:05 GMT jailed:sandbox SyntaxError: Unexpected token <
+Fri, 17 Jun 2016 13:54:51 GMT jailed:sandbox SyntaxError: Unexpected token <
     at Object.exports.runInNewContext (vm.js:48:16)
     at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:145:8)
     at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:159:3)
@@ -2899,7 +2917,7 @@ Evaluating antoine_blot (112981518204327775681) ...
   | };
   | xhr.send('données à envoyer');
   | console.log(mail);
-Fri, 17 Jun 2016 13:47:07 GMT jailed:sandbox ReferenceError: mail is not defined
+Fri, 17 Jun 2016 13:54:53 GMT jailed:sandbox ReferenceError: mail is not defined
     at evaluateStudentCode (DYNAMIC PLUGIN:85:13)
     at DYNAMIC PLUGIN:87:3
     at ContextifyScript.Script.runInNewContext (vm.js:18:15)
@@ -2937,7 +2955,7 @@ Fri, 17 Jun 2016 13:47:07 GMT jailed:sandbox ReferenceError: mail is not defined
   |   return nombre + 1;
   | };
   | console.log(plusUn(2));
-Fri, 17 Jun 2016 13:47:08 GMT jailed:sandbox ReferenceError: console is not defined
+Fri, 17 Jun 2016 13:54:53 GMT jailed:sandbox ReferenceError: console is not defined
     at DYNAMIC PLUGIN:7:1
     at ContextifyScript.Script.runInNewContext (vm.js:18:15)
     at Object.exports.runInNewContext (vm.js:49:17)
@@ -3074,7 +3092,7 @@ Evaluating aurele_christ (109254081457830462271) ...
   |     return table1[0,1];
   | }
   | };
-Fri, 17 Jun 2016 13:47:08 GMT jailed:sandbox ReferenceError: _n is not defined
+Fri, 17 Jun 2016 13:54:54 GMT jailed:sandbox ReferenceError: _n is not defined
     at evaluateStudentCode (DYNAMIC PLUGIN:33:30)
     at DYNAMIC PLUGIN:46:3
     at ContextifyScript.Script.runInNewContext (vm.js:18:15)
@@ -3141,7 +3159,7 @@ Evaluating aurelien_bonnaud_leroux (111796068059410650427) ...
   |   }
   | };
   | xhr.send('null');
-Fri, 17 Jun 2016 13:47:08 GMT jailed:sandbox Uncaught Exception: ReferenceError: res is not defined
+Fri, 17 Jun 2016 13:54:54 GMT jailed:sandbox Uncaught Exception: ReferenceError: res is not defined
     at xhr.onreadystatechange (DYNAMIC PLUGIN:81:18)
     at null._onTimeout (DYNAMIC PLUGIN:72:13)
     at Timer.listOnTimeout (timers.js:92:15)
@@ -3195,7 +3213,7 @@ Fri, 17 Jun 2016 13:47:08 GMT jailed:sandbox Uncaught Exception: ReferenceError:
   | for i=0; i<=100; i++}{
   | if (i %2 i==1
   | 
-Fri, 17 Jun 2016 13:47:11 GMT jailed:sandbox SyntaxError: Unexpected identifier
+Fri, 17 Jun 2016 13:54:56 GMT jailed:sandbox SyntaxError: Unexpected identifier
     at Object.exports.runInNewContext (vm.js:48:16)
     at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:145:8)
     at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:159:3)
@@ -3216,7 +3234,7 @@ Fri, 17 Jun 2016 13:47:11 GMT jailed:sandbox SyntaxError: Unexpected identifier
   | var tab =[]
   | function jusqua(n) {
   | for {i=1; i + n (++)
-Fri, 17 Jun 2016 13:47:11 GMT jailed:sandbox SyntaxError: Unexpected token {
+Fri, 17 Jun 2016 13:54:56 GMT jailed:sandbox SyntaxError: Unexpected token {
     at Object.exports.runInNewContext (vm.js:48:16)
     at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:145:8)
     at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:159:3)
@@ -3264,7 +3282,7 @@ Evaluating camille_bournier (107741489064753039193) ...
   | // STUDENT CODE:
   | 
   | Shanna@melissa.tv
-Fri, 17 Jun 2016 13:47:11 GMT jailed:sandbox SyntaxError: Unexpected token ILLEGAL
+Fri, 17 Jun 2016 13:54:56 GMT jailed:sandbox SyntaxError: Unexpected token ILLEGAL
     at Object.exports.runInNewContext (vm.js:48:16)
     at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:145:8)
     at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:159:3)
@@ -3302,7 +3320,7 @@ Fri, 17 Jun 2016 13:47:11 GMT jailed:sandbox SyntaxError: Unexpected token ILLEG
   | 
   | var html = plusUn(2);
   | document.body.innerHTML = html;
-Fri, 17 Jun 2016 13:47:11 GMT jailed:sandbox ReferenceError: document is not defined
+Fri, 17 Jun 2016 13:54:56 GMT jailed:sandbox ReferenceError: document is not defined
     at DYNAMIC PLUGIN:9:1
     at ContextifyScript.Script.runInNewContext (vm.js:18:15)
     at Object.exports.runInNewContext (vm.js:49:17)
@@ -3339,7 +3357,7 @@ Fri, 17 Jun 2016 13:47:11 GMT jailed:sandbox ReferenceError: document is not def
   | for (i = 1 ; i <= 99 ; i++) {
   |        window.document.writeln(2*i-1)
   |    } ;
-Fri, 17 Jun 2016 13:47:11 GMT jailed:sandbox ReferenceError: window is not defined
+Fri, 17 Jun 2016 13:54:57 GMT jailed:sandbox ReferenceError: window is not defined
     at evaluateStudentCode (DYNAMIC PLUGIN:15:8)
     at DYNAMIC PLUGIN:31:3
     at ContextifyScript.Script.runInNewContext (vm.js:18:15)
@@ -3393,7 +3411,7 @@ Fri, 17 Jun 2016 13:47:11 GMT jailed:sandbox ReferenceError: window is not defin
   |   }
   | }
   | 
-Fri, 17 Jun 2016 13:47:11 GMT jailed:sandbox SyntaxError: Unexpected token ==
+Fri, 17 Jun 2016 13:54:57 GMT jailed:sandbox SyntaxError: Unexpected token ==
     at Object.exports.runInNewContext (vm.js:48:16)
     at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:145:8)
     at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:159:3)
@@ -3503,7 +3521,7 @@ Evaluating caroline_auclair (111413917136628350156) ...
   | var tab [i];
   | return tab;
   | }
-Fri, 17 Jun 2016 13:47:13 GMT jailed:sandbox SyntaxError: Unexpected token [
+Fri, 17 Jun 2016 13:54:58 GMT jailed:sandbox SyntaxError: Unexpected token [
     at Object.exports.runInNewContext (vm.js:48:16)
     at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:145:8)
     at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:159:3)
@@ -3534,6 +3552,8 @@ Fri, 17 Jun 2016 13:47:13 GMT jailed:sandbox SyntaxError: Unexpected token [
   | else {
   | alert("il fallait deviner X")
   | }
+  | 
+  | // -> STUDENT CODE ERROR: on wrong guess, got: "il fallait deviner X", expected: "il fallait deviner 1"
   | 
   | // => STUDENT CODE SCORE: 0
   => code score: 3 / 8
@@ -3613,7 +3633,7 @@ Evaluating christopher_amega (108905198213282127834) ...
   | var nbre= Math.floor(prompt ("Choisissez un nombre svp"));
   | PlusUn(nbre);
   | alert(PlusUn(nbre));
-Fri, 17 Jun 2016 13:47:14 GMT jailed:sandbox ReferenceError: PlusUn is not defined
+Fri, 17 Jun 2016 13:55:00 GMT jailed:sandbox ReferenceError: PlusUn is not defined
     at evaluateStudentCode (DYNAMIC PLUGIN:18:1)
     at DYNAMIC PLUGIN:24:3
     at ContextifyScript.Script.runInNewContext (vm.js:18:15)
@@ -3655,7 +3675,7 @@ Fri, 17 Jun 2016 13:47:14 GMT jailed:sandbox ReferenceError: PlusUn is not defin
   | return tab;
   | }
   | tabNombres(n);
-Fri, 17 Jun 2016 13:47:14 GMT jailed:sandbox ReferenceError: prompt is not defined
+Fri, 17 Jun 2016 13:55:00 GMT jailed:sandbox ReferenceError: prompt is not defined
     at evaluateStudentCode (DYNAMIC PLUGIN:5:19)
     at DYNAMIC PLUGIN:48:3
     at ContextifyScript.Script.runInNewContext (vm.js:18:15)
@@ -3679,7 +3699,7 @@ Fri, 17 Jun 2016 13:47:14 GMT jailed:sandbox ReferenceError: prompt is not defin
   | // STUDENT CODE:
   | 
   | var choixOrdi = Math.floor(
-Fri, 17 Jun 2016 13:47:14 GMT jailed:sandbox SyntaxError: missing ) after argument list
+Fri, 17 Jun 2016 13:55:00 GMT jailed:sandbox SyntaxError: missing ) after argument list
     at Object.exports.runInNewContext (vm.js:48:16)
     at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:145:8)
     at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:159:3)
@@ -3829,7 +3849,7 @@ Evaluating gersende_devilleneuve (107425685405909237154) ...
   | };
   | 
   | xhr.send(JSON.stringify({ date: ‘2016’ }));
-Fri, 17 Jun 2016 13:47:16 GMT jailed:sandbox SyntaxError: Unexpected token ILLEGAL
+Fri, 17 Jun 2016 13:55:01 GMT jailed:sandbox SyntaxError: Unexpected token ILLEGAL
     at Object.exports.runInNewContext (vm.js:48:16)
     at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:145:8)
     at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:159:3)
@@ -3849,7 +3869,7 @@ Fri, 17 Jun 2016 13:47:16 GMT jailed:sandbox SyntaxError: Unexpected token ILLEG
   | 
   | 
   | function plusUn
-Fri, 17 Jun 2016 13:47:16 GMT jailed:sandbox SyntaxError: Unexpected token function
+Fri, 17 Jun 2016 13:55:01 GMT jailed:sandbox SyntaxError: Unexpected token function
     at Object.exports.runInNewContext (vm.js:48:16)
     at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:145:8)
     at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:159:3)
@@ -3874,7 +3894,7 @@ Fri, 17 Jun 2016 13:47:16 GMT jailed:sandbox SyntaxError: Unexpected token funct
   |    var monTemplate = '<%=nombre%>';
   |    return _.template(monTemplate, { nombre: pNombre });
   | }
-Fri, 17 Jun 2016 13:47:16 GMT jailed:sandbox ReferenceError: _ is not defined
+Fri, 17 Jun 2016 13:55:01 GMT jailed:sandbox ReferenceError: _ is not defined
     at plusUn (DYNAMIC PLUGIN:23:11)
     at evaluateStudentCode (DYNAMIC PLUGIN:18:16)
     at DYNAMIC PLUGIN:29:3
@@ -3896,7 +3916,7 @@ Fri, 17 Jun 2016 13:47:16 GMT jailed:sandbox ReferenceError: _ is not defined
   | for (var i=1, i<=100, i++) {
   | 
   | }
-Fri, 17 Jun 2016 13:47:16 GMT jailed:sandbox SyntaxError: Unexpected token <=
+Fri, 17 Jun 2016 13:55:02 GMT jailed:sandbox SyntaxError: Unexpected token <=
     at Object.exports.runInNewContext (vm.js:48:16)
     at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:145:8)
     at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:159:3)
@@ -3918,7 +3938,7 @@ Fri, 17 Jun 2016 13:47:16 GMT jailed:sandbox SyntaxError: Unexpected token <=
   | // STUDENT CODE:
   | 
   | fruits = [ "Mangue", 'Raisin', 'Figue', 'Raisin' ];
-Fri, 17 Jun 2016 13:47:16 GMT jailed:sandbox ReferenceError: fruits is not defined
+Fri, 17 Jun 2016 13:55:02 GMT jailed:sandbox ReferenceError: fruits is not defined
     at evaluateStudentCode (DYNAMIC PLUGIN:5:8)
     at DYNAMIC PLUGIN:42:3
     at ContextifyScript.Script.runInNewContext (vm.js:18:15)
@@ -3950,7 +3970,7 @@ Fri, 17 Jun 2016 13:47:16 GMT jailed:sandbox ReferenceError: fruits is not defin
   | if (gagne === false) {
   |   alert('il fallait deviner' + choixOrdi);
   | }
-Fri, 17 Jun 2016 13:47:16 GMT jailed:sandbox SyntaxError: missing ) after argument list
+Fri, 17 Jun 2016 13:55:02 GMT jailed:sandbox SyntaxError: missing ) after argument list
     at Object.exports.runInNewContext (vm.js:48:16)
     at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:145:8)
     at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:159:3)
@@ -4014,7 +4034,7 @@ Evaluating guillaume_amortila (110094529371235135290) ...
   |   }
   | };
   | xhr.send(null);
-Fri, 17 Jun 2016 13:47:17 GMT jailed:sandbox SyntaxError: Unexpected token function
+Fri, 17 Jun 2016 13:55:02 GMT jailed:sandbox SyntaxError: Unexpected token function
     at Object.exports.runInNewContext (vm.js:48:16)
     at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:145:8)
     at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:159:3)
@@ -4032,7 +4052,7 @@ Fri, 17 Jun 2016 13:47:17 GMT jailed:sandbox SyntaxError: Unexpected token funct
   | // STUDENT CODE:
   | 
   | function plusUn(nb){result = nb+1; return result;}
-Fri, 17 Jun 2016 13:47:17 GMT jailed:sandbox ReferenceError: result is not defined
+Fri, 17 Jun 2016 13:55:02 GMT jailed:sandbox ReferenceError: result is not defined
     at plusUn (DYNAMIC PLUGIN:4:28)
     at evaluateStudentCode (DYNAMIC PLUGIN:10:12)
     at DYNAMIC PLUGIN:14:5
@@ -4054,7 +4074,7 @@ Fri, 17 Jun 2016 13:47:17 GMT jailed:sandbox ReferenceError: result is not defin
   | var nb = prompt();
   | plusUn(nb);
   | alert(result);
-Fri, 17 Jun 2016 13:47:17 GMT jailed:sandbox ReferenceError: result is not defined
+Fri, 17 Jun 2016 13:55:02 GMT jailed:sandbox ReferenceError: result is not defined
     at evaluateStudentCode (DYNAMIC PLUGIN:19:7)
     at DYNAMIC PLUGIN:24:3
     at ContextifyScript.Script.runInNewContext (vm.js:18:15)
@@ -4087,7 +4107,7 @@ Fri, 17 Jun 2016 13:47:17 GMT jailed:sandbox ReferenceError: result is not defin
   | var tab=[];
   | for(i=1;i<n+1;i++){ tab.push(i) }
   | }
-Fri, 17 Jun 2016 13:47:17 GMT jailed:sandbox ReferenceError: i is not defined
+Fri, 17 Jun 2016 13:55:02 GMT jailed:sandbox ReferenceError: i is not defined
     at tabNombres (DYNAMIC PLUGIN:7:6)
     at evaluateStudentCode (DYNAMIC PLUGIN:28:12)
     at DYNAMIC PLUGIN:43:3
@@ -4113,7 +4133,7 @@ Fri, 17 Jun 2016 13:47:17 GMT jailed:sandbox ReferenceError: i is not defined
   | var choixOrdi = Math.random() * 4;
   | var choix = prompt();
   | if cho
-Fri, 17 Jun 2016 13:47:17 GMT jailed:sandbox SyntaxError: Unexpected identifier
+Fri, 17 Jun 2016 13:55:02 GMT jailed:sandbox SyntaxError: Unexpected identifier
     at Object.exports.runInNewContext (vm.js:48:16)
     at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:145:8)
     at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:159:3)
@@ -4189,7 +4209,7 @@ Evaluating hadrien_bauville (105686855929419458563) ...
   | plusUn(salut);
   | alert(salut);
   | 
-Fri, 17 Jun 2016 13:47:17 GMT jailed:sandbox ReferenceError: salut is not defined
+Fri, 17 Jun 2016 13:55:03 GMT jailed:sandbox ReferenceError: salut is not defined
     at evaluateStudentCode (DYNAMIC PLUGIN:18:8)
     at DYNAMIC PLUGIN:25:3
     at ContextifyScript.Script.runInNewContext (vm.js:18:15)
@@ -4314,7 +4334,7 @@ Evaluating julien_boudeville (103874377118893126548) ...
   | }
   | };
   | xhr.send(JSON.stringify({username: ‘pierredup’}));
-Fri, 17 Jun 2016 13:47:19 GMT jailed:sandbox SyntaxError: Unexpected token ILLEGAL
+Fri, 17 Jun 2016 13:55:04 GMT jailed:sandbox SyntaxError: Unexpected token ILLEGAL
     at Object.exports.runInNewContext (vm.js:48:16)
     at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:145:8)
     at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:159:3)
@@ -4350,7 +4370,7 @@ Fri, 17 Jun 2016 13:47:19 GMT jailed:sandbox SyntaxError: Unexpected token ILLEG
   |     return plusUn;
   |     alert(plusUn)
   | }
-Fri, 17 Jun 2016 13:47:19 GMT jailed:sandbox SyntaxError: Unexpected identifier
+Fri, 17 Jun 2016 13:55:04 GMT jailed:sandbox SyntaxError: Unexpected identifier
     at Object.exports.runInNewContext (vm.js:48:16)
     at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:145:8)
     at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:159:3)
@@ -4559,7 +4579,7 @@ Evaluating marine_bourgeois (106016122078624523322) ...
   | }
   | plusUn(1);
   | 2
-Fri, 17 Jun 2016 13:47:21 GMT jailed:sandbox TypeError: 2 is not a function
+Fri, 17 Jun 2016 13:55:06 GMT jailed:sandbox TypeError: 2 is not a function
     at DYNAMIC PLUGIN:11:1
     at ContextifyScript.Script.runInNewContext (vm.js:18:15)
     at Object.exports.runInNewContext (vm.js:49:17)
@@ -4783,7 +4803,7 @@ Evaluating rodrigue_coail (112837382688102224023) ...
   | return tab;
   | }
   | jusqua(n);
-Fri, 17 Jun 2016 13:47:22 GMT jailed:sandbox ReferenceError: i is not defined
+Fri, 17 Jun 2016 13:55:08 GMT jailed:sandbox ReferenceError: i is not defined
     at jusqua (DYNAMIC PLUGIN:8:7)
     at evaluateStudentCode (DYNAMIC PLUGIN:13:1)
     at DYNAMIC PLUGIN:48:3
@@ -4815,7 +4835,7 @@ Fri, 17 Jun 2016 13:47:22 GMT jailed:sandbox ReferenceError: i is not defined
   | return number;
   | }
   | nombres(tab);
-Fri, 17 Jun 2016 13:47:23 GMT jailed:sandbox ReferenceError: i is not defined
+Fri, 17 Jun 2016 13:55:08 GMT jailed:sandbox ReferenceError: i is not defined
     at nombres (DYNAMIC PLUGIN:8:7)
     at evaluateStudentCode (DYNAMIC PLUGIN:17:1)
     at DYNAMIC PLUGIN:54:3
@@ -4842,7 +4862,7 @@ Fri, 17 Jun 2016 13:47:23 GMT jailed:sandbox ReferenceError: i is not defined
   | else{alert('il fallait deviner ' + choixOrdi);}
   | }
   | petitmalin(choixPlaya);
-Fri, 17 Jun 2016 13:47:23 GMT jailed:sandbox SyntaxError: Identifier 'petitmalin' has already been declared
+Fri, 17 Jun 2016 13:55:08 GMT jailed:sandbox SyntaxError: Identifier 'petitmalin' has already been declared
     at Object.exports.runInNewContext (vm.js:48:16)
     at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:145:8)
     at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:159:3)
@@ -4971,7 +4991,7 @@ Evaluating salome_chiche (110014628040879105032) ...
   |     });
   |    
   | });
-Fri, 17 Jun 2016 13:47:24 GMT jailed:sandbox SyntaxError: Unexpected token :
+Fri, 17 Jun 2016 13:55:09 GMT jailed:sandbox SyntaxError: Unexpected token :
     at Object.exports.runInNewContext (vm.js:48:16)
     at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:145:8)
     at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:159:3)
@@ -4999,7 +5019,7 @@ Fri, 17 Jun 2016 13:47:24 GMT jailed:sandbox SyntaxError: Unexpected token :
   |    
   | });
   | 
-Fri, 17 Jun 2016 13:47:24 GMT jailed:sandbox ReferenceError: $ is not defined
+Fri, 17 Jun 2016 13:55:09 GMT jailed:sandbox ReferenceError: $ is not defined
     at evaluateStudentCode (DYNAMIC PLUGIN:55:1)
     at DYNAMIC PLUGIN:67:3
     at ContextifyScript.Script.runInNewContext (vm.js:18:15)
@@ -5084,7 +5104,7 @@ Evaluating samy_announ (115861581274490603829) ...
   |     });
   | 
   | });
-Fri, 17 Jun 2016 13:47:24 GMT jailed:sandbox SyntaxError: Unexpected identifier
+Fri, 17 Jun 2016 13:55:09 GMT jailed:sandbox SyntaxError: Unexpected identifier
     at Object.exports.runInNewContext (vm.js:48:16)
     at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:145:8)
     at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:159:3)
@@ -5111,7 +5131,7 @@ Fri, 17 Jun 2016 13:47:24 GMT jailed:sandbox SyntaxError: Unexpected identifier
   | 
   | });
   | 
-Fri, 17 Jun 2016 13:47:24 GMT jailed:sandbox SyntaxError: Unexpected identifier
+Fri, 17 Jun 2016 13:55:09 GMT jailed:sandbox SyntaxError: Unexpected identifier
     at Object.exports.runInNewContext (vm.js:48:16)
     at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:145:8)
     at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:159:3)
@@ -5175,7 +5195,7 @@ Evaluating simon_chotard (114981914867023607521) ...
   | // STUDENT CODE:
   | 
   | Shanna@melissa.tv
-Fri, 17 Jun 2016 13:47:24 GMT jailed:sandbox SyntaxError: Unexpected token ILLEGAL
+Fri, 17 Jun 2016 13:55:09 GMT jailed:sandbox SyntaxError: Unexpected token ILLEGAL
     at Object.exports.runInNewContext (vm.js:48:16)
     at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:145:8)
     at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:159:3)
@@ -5203,7 +5223,7 @@ Fri, 17 Jun 2016 13:47:24 GMT jailed:sandbox SyntaxError: Unexpected token ILLEG
   | function multiplication(nb, coef) {
   |   return nb + ' * ' + coef + ' = ' + (nb * coef);
   | }
-Fri, 17 Jun 2016 13:47:25 GMT jailed:sandbox ReferenceError: console is not defined
+Fri, 17 Jun 2016 13:55:10 GMT jailed:sandbox ReferenceError: console is not defined
     at DYNAMIC PLUGIN:6:1
     at ContextifyScript.Script.runInNewContext (vm.js:18:15)
     at Object.exports.runInNewContext (vm.js:49:17)
@@ -5235,7 +5255,7 @@ Fri, 17 Jun 2016 13:47:25 GMT jailed:sandbox ReferenceError: console is not defi
   | alert("plusUn * coef")
   | }
   | 
-Fri, 17 Jun 2016 13:47:25 GMT jailed:sandbox ReferenceError: console is not defined
+Fri, 17 Jun 2016 13:55:10 GMT jailed:sandbox ReferenceError: console is not defined
     at evaluateStudentCode (DYNAMIC PLUGIN:20:1)
     at DYNAMIC PLUGIN:34:3
     at ContextifyScript.Script.runInNewContext (vm.js:18:15)
@@ -5305,7 +5325,7 @@ Evaluating valentin_bernard (103037102019133748890) ...
   | // STUDENT CODE:
   | 
   | "email": "Shanna@melissa.tv",
-Fri, 17 Jun 2016 13:47:25 GMT jailed:sandbox SyntaxError: Unexpected token :
+Fri, 17 Jun 2016 13:55:10 GMT jailed:sandbox SyntaxError: Unexpected token :
     at Object.exports.runInNewContext (vm.js:48:16)
     at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:145:8)
     at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:159:3)
@@ -5474,7 +5494,7 @@ Evaluating victor_delafouchardiere (115196211086729181863) ...
   | 	}
   | 	return(tab);
   | }
-Fri, 17 Jun 2016 13:47:26 GMT jailed:sandbox ReferenceError: tab is not defined
+Fri, 17 Jun 2016 13:55:10 GMT jailed:sandbox ReferenceError: tab is not defined
     at nombres (DYNAMIC PLUGIN:12:9)
     at evaluateStudentCode (DYNAMIC PLUGIN:33:12)
     at DYNAMIC PLUGIN:48:3
@@ -5694,7 +5714,7 @@ Evaluating alicia_djaffar (106518625043392065922) ...
   | return resultat;
   | }
   | plusUn(5)
-Fri, 17 Jun 2016 13:47:31 GMT jailed:sandbox ReferenceError: resultat is not defined
+Fri, 17 Jun 2016 13:55:15 GMT jailed:sandbox ReferenceError: resultat is not defined
     at plusUn (DYNAMIC PLUGIN:6:10)
     at DYNAMIC PLUGIN:9:1
     at ContextifyScript.Script.runInNewContext (vm.js:18:15)
@@ -5720,7 +5740,7 @@ Fri, 17 Jun 2016 13:47:31 GMT jailed:sandbox ReferenceError: resultat is not def
   | }
   | var joueur = prompt('Veuillez saisir un nombre');
   | plusUn(choix);
-Fri, 17 Jun 2016 13:47:31 GMT jailed:sandbox ReferenceError: choix is not defined
+Fri, 17 Jun 2016 13:55:15 GMT jailed:sandbox ReferenceError: choix is not defined
     at evaluateStudentCode (DYNAMIC PLUGIN:23:8)
     at DYNAMIC PLUGIN:28:3
     at ContextifyScript.Script.runInNewContext (vm.js:18:15)
@@ -5920,6 +5940,8 @@ Error in BasicConnection:onMessage Error: Callback was already called.
   |     break;
   |   }
   | }
+  | 
+  | // -> STUDENT CODE ERROR: on correct guess, got: "1", expected: "bravo"
   | 
   | // => STUDENT CODE SCORE: 0
   => code score: 1 / 8
@@ -6200,7 +6222,7 @@ Evaluating arnaud_manaranche (107172046548987188834) ...
   | // STUDENT CODE:
   | 
   | for (i=1; i<100; i++) { if(i%2 == 0) {console.log(i)}; 
-Fri, 17 Jun 2016 13:47:35 GMT jailed:sandbox SyntaxError: Unexpected token )
+Fri, 17 Jun 2016 13:55:19 GMT jailed:sandbox SyntaxError: Unexpected token )
     at Object.exports.runInNewContext (vm.js:48:16)
     at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:145:8)
     at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:159:3)
@@ -6225,7 +6247,7 @@ Fri, 17 Jun 2016 13:47:35 GMT jailed:sandbox SyntaxError: Unexpected token )
   | 		i++;
   | 	}
   | 	return(tableau);
-Fri, 17 Jun 2016 13:47:35 GMT jailed:sandbox SyntaxError: Unexpected token )
+Fri, 17 Jun 2016 13:55:19 GMT jailed:sandbox SyntaxError: Unexpected token )
     at Object.exports.runInNewContext (vm.js:48:16)
     at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:145:8)
     at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:159:3)
@@ -6256,6 +6278,8 @@ Fri, 17 Jun 2016 13:47:35 GMT jailed:sandbox SyntaxError: Unexpected token )
   | 
   | 
   | 
+  | 
+  | // -> STUDENT CODE ERROR: on wrong guess, got: "il fallait deviner ordi", expected: "il fallait deviner 85"
   | 
   | // => STUDENT CODE SCORE: 0
   => code score: 2 / 8
@@ -6360,7 +6384,7 @@ Evaluating celine_meme (105851694432543357504) ...
   | }
   | return tab;
   | }
-Fri, 17 Jun 2016 13:47:35 GMT jailed:sandbox ReferenceError: i is not defined
+Fri, 17 Jun 2016 13:55:20 GMT jailed:sandbox ReferenceError: i is not defined
     at tabNombres (DYNAMIC PLUGIN:7:9)
     at evaluateStudentCode (DYNAMIC PLUGIN:31:12)
     at DYNAMIC PLUGIN:46:3
@@ -6389,7 +6413,7 @@ Fri, 17 Jun 2016 13:47:35 GMT jailed:sandbox ReferenceError: i is not defined
   | }
   | return tab;
   | }
-Fri, 17 Jun 2016 13:47:35 GMT jailed:sandbox ReferenceError: i is not defined
+Fri, 17 Jun 2016 13:55:20 GMT jailed:sandbox ReferenceError: i is not defined
     at chaines (DYNAMIC PLUGIN:8:6)
     at evaluateStudentCode (DYNAMIC PLUGIN:36:12)
     at DYNAMIC PLUGIN:51:3
@@ -6622,6 +6646,8 @@ Evaluating enzo_ferreira (117276544425730858877) ...
   |   alert('"il fallait deviner ' + choixOrdi + '"');
   | }
   | 
+  | // -> STUDENT CODE ERROR: on correct guess, got: ""il fallait deviner 2"", expected: "congrats"
+  | 
   | // => STUDENT CODE SCORE: 0
   => code score: 2 / 8
 
@@ -6739,7 +6765,7 @@ Evaluating francois_gorgerin (106576109926142604675) ...
   | 	}
   | 	return(x);
   | }
-Fri, 17 Jun 2016 13:47:40 GMT jailed:sandbox ReferenceError: u is not defined
+Fri, 17 Jun 2016 13:55:24 GMT jailed:sandbox ReferenceError: u is not defined
     at nombres (DYNAMIC PLUGIN:11:5)
     at evaluateStudentCode (DYNAMIC PLUGIN:40:12)
     at DYNAMIC PLUGIN:55:3
@@ -6915,6 +6941,8 @@ Evaluating guillaume_hulin (106233552530976351779) ...
   | {
   |     alert("il fallait deviner " + choixOrdi);
   | }
+  | 
+  | // -> STUDENT CODE ERROR: on correct guess, got: "il fallait deviner 0", expected: "super"
   | 
   | // => STUDENT CODE SCORE: 0
   => code score: 4 / 8
@@ -7147,7 +7175,7 @@ Evaluating josephine_mahieu (102320401513628102472) ...
   |   
   |  else if (choixUtilisateur == choixOrdi)
   | 	{alert(bravo);}
-Fri, 17 Jun 2016 13:47:42 GMT jailed:sandbox SyntaxError: Unexpected token else
+Fri, 17 Jun 2016 13:55:27 GMT jailed:sandbox SyntaxError: Unexpected token else
     at Object.exports.runInNewContext (vm.js:48:16)
     at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:145:8)
     at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:159:3)
@@ -7197,7 +7225,7 @@ Evaluating laurene_lodter (114347809722429019984) ...
   | function plusUn()
   | var plusUn = 1
   | plusUn(1)
-Fri, 17 Jun 2016 13:47:42 GMT jailed:sandbox SyntaxError: Unexpected token var
+Fri, 17 Jun 2016 13:55:27 GMT jailed:sandbox SyntaxError: Unexpected token var
     at Object.exports.runInNewContext (vm.js:48:16)
     at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:145:8)
     at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:159:3)
@@ -7244,7 +7272,7 @@ Fri, 17 Jun 2016 13:47:42 GMT jailed:sandbox SyntaxError: Unexpected token var
   | 
   | function jusqua(10);
   | return [table];
-Fri, 17 Jun 2016 13:47:42 GMT jailed:sandbox SyntaxError: Unexpected number
+Fri, 17 Jun 2016 13:55:27 GMT jailed:sandbox SyntaxError: Unexpected number
     at Object.exports.runInNewContext (vm.js:48:16)
     at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:145:8)
     at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:159:3)
@@ -7264,7 +7292,7 @@ Fri, 17 Jun 2016 13:47:42 GMT jailed:sandbox SyntaxError: Unexpected number
   | function chaine(table)
   | return "table"
   | 
-Fri, 17 Jun 2016 13:47:42 GMT jailed:sandbox SyntaxError: Unexpected token return
+Fri, 17 Jun 2016 13:55:27 GMT jailed:sandbox SyntaxError: Unexpected token return
     at Object.exports.runInNewContext (vm.js:48:16)
     at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:145:8)
     at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:159:3)
@@ -7343,6 +7371,8 @@ Fri, 17 Jun 2016 13:47:42 GMT jailed:sandbox SyntaxError: Unexpected token retur
   | 
   | }
   | 
+  | // -> STUDENT CODE ERROR: on correct guess, got: "Il faut deviner un nombre entre 3 et 4", expected: "bravo"
+  | 
   | // => STUDENT CODE SCORE: 0
   => code score: 0 / 8
 
@@ -7406,7 +7436,7 @@ Evaluating laurent_maximin (103631253150006969014) ...
   | {
   | 	return nombre * 2;
   | }
-Fri, 17 Jun 2016 13:47:43 GMT jailed:sandbox TypeError: (intermediate value)(...) is not a function
+Fri, 17 Jun 2016 13:55:27 GMT jailed:sandbox TypeError: (intermediate value)(...) is not a function
     at DYNAMIC PLUGIN:17:5
     at ContextifyScript.Script.runInNewContext (vm.js:18:15)
     at Object.exports.runInNewContext (vm.js:49:17)
@@ -7460,7 +7490,7 @@ Fri, 17 Jun 2016 13:47:43 GMT jailed:sandbox TypeError: (intermediate value)(...
   | }
   | var n = prompt("nombre");
   | nombres(n);
-Fri, 17 Jun 2016 13:47:43 GMT jailed:sandbox ReferenceError: prompt is not defined
+Fri, 17 Jun 2016 13:55:27 GMT jailed:sandbox ReferenceError: prompt is not defined
     at evaluateStudentCode (DYNAMIC PLUGIN:15:9)
     at DYNAMIC PLUGIN:51:3
     at ContextifyScript.Script.runInNewContext (vm.js:18:15)
@@ -7495,7 +7525,7 @@ Fri, 17 Jun 2016 13:47:43 GMT jailed:sandbox ReferenceError: prompt is not defin
   |   }
   |   alert(tab2);
   | }
-Fri, 17 Jun 2016 13:47:43 GMT jailed:sandbox ReferenceError: i is not defined
+Fri, 17 Jun 2016 13:55:28 GMT jailed:sandbox ReferenceError: i is not defined
     at chaines (DYNAMIC PLUGIN:11:10)
     at evaluateStudentCode (DYNAMIC PLUGIN:42:12)
     at DYNAMIC PLUGIN:57:3
@@ -7594,7 +7624,7 @@ Evaluating leon_lapotre (103659140839603503174) ...
   | xhr.setRequestHeader('Content-Type');
   | var Date="2016";
   | xhr.send("id1="+id1);
-Fri, 17 Jun 2016 13:47:43 GMT jailed:sandbox ReferenceError: xhr is not defined
+Fri, 17 Jun 2016 13:55:28 GMT jailed:sandbox ReferenceError: xhr is not defined
     at evaluateStudentCode (DYNAMIC PLUGIN:55:1)
     at DYNAMIC PLUGIN:60:3
     at ContextifyScript.Script.runInNewContext (vm.js:18:15)
@@ -7619,7 +7649,7 @@ Fri, 17 Jun 2016 13:47:43 GMT jailed:sandbox ReferenceError: xhr is not defined
   | }
   | 
   | console.log(plusUn(1))
-Fri, 17 Jun 2016 13:47:43 GMT jailed:sandbox ReferenceError: console is not defined
+Fri, 17 Jun 2016 13:55:28 GMT jailed:sandbox ReferenceError: console is not defined
     at DYNAMIC PLUGIN:9:1
     at ContextifyScript.Script.runInNewContext (vm.js:18:15)
     at Object.exports.runInNewContext (vm.js:49:17)
@@ -7712,7 +7742,7 @@ Evaluating louis_leopold_fiessinger (100617553123902683497) ...
   |    
   | });
   | 
-Fri, 17 Jun 2016 13:47:44 GMT jailed:sandbox SyntaxError: Unexpected token }
+Fri, 17 Jun 2016 13:55:28 GMT jailed:sandbox SyntaxError: Unexpected token }
     at Object.exports.runInNewContext (vm.js:48:16)
     at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:145:8)
     at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:159:3)
@@ -7738,7 +7768,7 @@ Fri, 17 Jun 2016 13:47:44 GMT jailed:sandbox SyntaxError: Unexpected token }
   |    });
   | });
   | 
-Fri, 17 Jun 2016 13:47:44 GMT jailed:sandbox SyntaxError: Unexpected token :
+Fri, 17 Jun 2016 13:55:28 GMT jailed:sandbox SyntaxError: Unexpected token :
     at Object.exports.runInNewContext (vm.js:48:16)
     at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:145:8)
     at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:159:3)
@@ -7834,7 +7864,7 @@ Evaluating nicolas_gerbault (104803018614623792428) ...
   | }
   | 
   | plusUn(5);
-Fri, 17 Jun 2016 13:47:45 GMT jailed:sandbox ReferenceError: result is not defined
+Fri, 17 Jun 2016 13:55:29 GMT jailed:sandbox ReferenceError: result is not defined
     at plusUn (DYNAMIC PLUGIN:6:10)
     at DYNAMIC PLUGIN:10:1
     at ContextifyScript.Script.runInNewContext (vm.js:18:15)
@@ -7861,7 +7891,7 @@ Fri, 17 Jun 2016 13:47:45 GMT jailed:sandbox ReferenceError: result is not defin
   | 
   | var choix = prompt('entrez un nombre');
   | plusUn(choix);
-Fri, 17 Jun 2016 13:47:45 GMT jailed:sandbox ReferenceError: result is not defined
+Fri, 17 Jun 2016 13:55:29 GMT jailed:sandbox ReferenceError: result is not defined
     at plusUn (DYNAMIC PLUGIN:19:10)
     at evaluateStudentCode (DYNAMIC PLUGIN:24:1)
     at DYNAMIC PLUGIN:29:3
@@ -7933,7 +7963,7 @@ Fri, 17 Jun 2016 13:47:45 GMT jailed:sandbox ReferenceError: result is not defin
   | }
   | 
   | al();
-Fri, 17 Jun 2016 13:47:45 GMT jailed:sandbox SyntaxError: Identifier 'al' has already been declared
+Fri, 17 Jun 2016 13:55:30 GMT jailed:sandbox SyntaxError: Identifier 'al' has already been declared
     at Object.exports.runInNewContext (vm.js:48:16)
     at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:145:8)
     at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:159:3)
@@ -8155,7 +8185,7 @@ Evaluating robin_mesa_marin (112814090841211251108) ...
   |   result = nombre+1;
   |   return result;
   | }
-Fri, 17 Jun 2016 13:47:47 GMT jailed:sandbox ReferenceError: result is not defined
+Fri, 17 Jun 2016 13:55:31 GMT jailed:sandbox ReferenceError: result is not defined
     at plusUn (DYNAMIC PLUGIN:5:10)
     at evaluateStudentCode (DYNAMIC PLUGIN:13:12)
     at DYNAMIC PLUGIN:17:5
@@ -8183,7 +8213,7 @@ Fri, 17 Jun 2016 13:47:47 GMT jailed:sandbox ReferenceError: result is not defin
   | var nombre = parseInt(nombre);
   | plusUn(nombre);
   | alert(result);
-Fri, 17 Jun 2016 13:47:47 GMT jailed:sandbox ReferenceError: result is not defined
+Fri, 17 Jun 2016 13:55:31 GMT jailed:sandbox ReferenceError: result is not defined
     at plusUn (DYNAMIC PLUGIN:18:10)
     at evaluateStudentCode (DYNAMIC PLUGIN:24:1)
     at DYNAMIC PLUGIN:30:3
@@ -8220,7 +8250,7 @@ Fri, 17 Jun 2016 13:47:47 GMT jailed:sandbox ReferenceError: result is not defin
   |   }
   |   return(tableau);
   | }
-Fri, 17 Jun 2016 13:47:47 GMT jailed:sandbox ReferenceError: i is not defined
+Fri, 17 Jun 2016 13:55:32 GMT jailed:sandbox ReferenceError: i is not defined
     at tabNombres (DYNAMIC PLUGIN:8:8)
     at evaluateStudentCode (DYNAMIC PLUGIN:32:12)
     at DYNAMIC PLUGIN:47:3
@@ -8327,7 +8357,7 @@ Evaluating ruben_desert (112253427180215337120) ...
   | }
   | 	
   | plusUn(nbrUser);
-Fri, 17 Jun 2016 13:47:48 GMT jailed:sandbox ReferenceError: nbrUser is not defined
+Fri, 17 Jun 2016 13:55:33 GMT jailed:sandbox ReferenceError: nbrUser is not defined
     at evaluateStudentCode (DYNAMIC PLUGIN:17:9)
     at DYNAMIC PLUGIN:31:3
     at ContextifyScript.Script.runInNewContext (vm.js:18:15)
@@ -8367,7 +8397,7 @@ Fri, 17 Jun 2016 13:47:48 GMT jailed:sandbox ReferenceError: nbrUser is not defi
   | 	}
   | 	return tab;
   | }
-Fri, 17 Jun 2016 13:47:48 GMT jailed:sandbox ReferenceError: tab is not defined
+Fri, 17 Jun 2016 13:55:33 GMT jailed:sandbox ReferenceError: tab is not defined
     at tabNombres (DYNAMIC PLUGIN:6:6)
     at evaluateStudentCode (DYNAMIC PLUGIN:33:12)
     at DYNAMIC PLUGIN:48:3
@@ -8417,7 +8447,7 @@ Fri, 17 Jun 2016 13:47:48 GMT jailed:sandbox ReferenceError: tab is not defined
   | 		alert('Il fallait deviner '+choixOrdi);
   | 	}
   | }
-Fri, 17 Jun 2016 13:47:49 GMT jailed:sandbox SyntaxError: Identifier 'getRandomInt' has already been declared
+Fri, 17 Jun 2016 13:55:33 GMT jailed:sandbox SyntaxError: Identifier 'getRandomInt' has already been declared
     at Object.exports.runInNewContext (vm.js:48:16)
     at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:145:8)
     at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:159:3)
@@ -8457,7 +8487,7 @@ Evaluating savinien_maire (108003350025924655784) ...
   | // STUDENT CODE:
   | 
   | Clementine Bauch
-Fri, 17 Jun 2016 13:47:49 GMT jailed:sandbox SyntaxError: Unexpected identifier
+Fri, 17 Jun 2016 13:55:33 GMT jailed:sandbox SyntaxError: Unexpected identifier
     at Object.exports.runInNewContext (vm.js:48:16)
     at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:145:8)
     at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:159:3)
@@ -8544,7 +8574,7 @@ Fri, 17 Jun 2016 13:47:49 GMT jailed:sandbox SyntaxError: Unexpected identifier
   | }
   | 
   | tableau(10);
-Fri, 17 Jun 2016 13:47:49 GMT jailed:sandbox ReferenceError: console is not defined
+Fri, 17 Jun 2016 13:55:34 GMT jailed:sandbox ReferenceError: console is not defined
     at tableau (DYNAMIC PLUGIN:11:3)
     at evaluateStudentCode (DYNAMIC PLUGIN:14:1)
     at DYNAMIC PLUGIN:49:3
@@ -8595,7 +8625,7 @@ Fri, 17 Jun 2016 13:47:49 GMT jailed:sandbox ReferenceError: console is not defi
   | aleatoire();
   | comparer();
   | 
-Fri, 17 Jun 2016 13:47:49 GMT jailed:sandbox SyntaxError: Identifier 'aleatoire' has already been declared
+Fri, 17 Jun 2016 13:55:34 GMT jailed:sandbox SyntaxError: Identifier 'aleatoire' has already been declared
     at Object.exports.runInNewContext (vm.js:48:16)
     at executeJailed (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:145:8)
     at execute (/Users/adrienjoly/Dev/_clients/EEMI/js-partiel-2/js-exam/node_modules/jailed-node/sandbox/sandbox.js:159:3)
