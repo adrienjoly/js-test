@@ -2,10 +2,61 @@
 
 Écrivez le code JS permettant d'envoyer une requête Ajax de type GET à l'URL `{{{url}}}`. Une fois la réponse reçue, votre code doit afficher dans la console seulement la valeur de la propriété `{{prop}}` de cette réponse JSON.
 
-- { "url": "https://js-jsonplaceholder.herokuapp.com/users/1", "prop": "username" }
-- { "url": "https://js-jsonplaceholder.herokuapp.com/users/2", "prop": "email" }
-- { "url": "https://js-jsonplaceholder.herokuapp.com/users/3", "prop": "phone" }
+- { "url": "https://js-jsonplaceholder.herokuapp.com/users/1", "prop": "username", "expectedValue": "Bret" }
+- { "url": "https://js-jsonplaceholder.herokuapp.com/users/2", "prop": "email", "expectedValue": "Shanna@melissa.tv" }
+- { "url": "https://js-jsonplaceholder.herokuapp.com/users/3", "prop": "phone", "expectedValue": "1-463-123-4447" }
 
+??? // Automated evaluation tests
+```js
+// mock/stubs
+
+var checkpoint = (function(){
+  var remaining = 1; // expected number of calls to checkpoint()
+  var timeout = setTimeout(application.remote._send.bind(null, 'console log was never called'), 1000);
+  return function(err) {
+    if (err) {
+      clearTimeout(timeout);
+      application.remote._send(err);
+    } else {
+      --remaining;
+      if (!remaining) {
+        clearTimeout(timeout);
+        application.remote._send(null, 1);
+      }
+    }
+  };
+})();
+
+var console = {
+  log: function(value){
+    //Test.assert.equal(value, {{expectedValue}});
+    checkpoint("{{expectedValue}}" == value ? null : 'expected "{{expectedValue}}", got: ' + value);
+  }
+};
+
+var XMLHttpRequest = function(){};
+XMLHttpRequest.prototype.open = function(method, url){
+  this.method = method;
+  this.url = url;  
+};
+XMLHttpRequest.prototype.send = function(data){
+  var _this = this;
+  this.data = data;
+  setTimeout(function(){
+    // intermediate call
+    _this.readyState = 1;
+    _this.responseText = null;
+    _this.onreadystatechange();
+  }, 10);
+  setTimeout(function(){
+    // final response call
+    _this.readyState = 4;
+    _this.status = 200;
+    _this.responseText = '{ "{{prop}}": "{{expectedValue}}" }';
+    _this.onreadystatechange();
+  }, 20);
+};
+```
 ---
 
 Écrivez le code JS permettant d'envoyer une requête Ajax de type POST à l'URL `https://js-httpbin.herokuapp.com/post`, en transmettant un objet JSON contenant une propriété `{{prop}}` valant `"{{val}}"`.
