@@ -199,6 +199,7 @@ Supposons que vous disposiez d'une fonction `plusUn` définie telle que dans la 
       done(null, 1);
     }
   };
+  var console = { log: function(){} }; // tolerate calls to console.log()
   _runStudentCode(); // should call alert()
   if (!called) {
     done('alert() was not called');
