@@ -87,9 +87,6 @@ CodeEvaluator.prototype.evaluateAnswers = function(answers, callback) {
   }
   async.mapSeries(this.tests, runExEval, function done(err, res) {
     var total = _.flatten(res).reduce(sum);
-    //console.log('=> total STUDENT points:', res, '=', total);
-    // csv export of marks:
-    //console.log(JSON.stringify([ 'SCORE', answers.key, answers._uid, variantNumber, total ]).replace(/[\[\]]/g, ''));
     callback(null, {
       score: total,
       length: nbTests
