@@ -2,25 +2,22 @@
 
 var _ = require('lodash');
 var async = require('async');
-var evaluateStudent = require('./exercice.evaluator.js');
+var evaluateStudent = require('./StudentEvaluator');
 
-var filePath = './' + (process.argv[2] || 'classe1.json');
+var filePath = process.argv[2] || '../students/albira.json';
 
-console.log('Reading from:', filePath, '...');
+console.log('Reading and evaluating answers from:', filePath, '...');
 
-var submissionSet = require(filePath).submissions;
+//var submissionSet = require(filePath).submissions; // this line allows to parse an entire firebase json export at once
+
+var submissionSet = {};
+var studentName = filePath.split('/').pop().replace('.json', '');
+submissionSet[studentName] = require(filePath);
 
 var submissions = Object.keys(submissionSet).map(function(key){
   return _.extend(submissionSet[key], { key: key });
 });
 
-//console.log(submissions);
-/*
-var evaluateStudent = function(task, cb) {
-  console.log(task);
-  cb();
-}
-*/
 async.mapSeries(submissions, evaluateStudent, function(){
   process.exit();
 });
