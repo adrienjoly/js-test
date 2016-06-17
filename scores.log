@@ -595,7 +595,7 @@ Evaluating assila_zitouni (107573928737735339074) ...
   | if (joueur == choixOrdi) {alert('yeah');}
   | else { alert('il fallait deviner X');}
   | 
-  | // -> STUDENT CODE ERROR: on wrong guess, got: "il fallait deviner X", expected: "il fallait deviner 2"
+  | // -> STUDENT CODE ERROR: on wrong guess, got: "il fallait deviner X", expected: "il fallait deviner 1"
   | 
   | // => STUDENT CODE SCORE: 0
   => code score: 0 / 8
@@ -1024,7 +1024,7 @@ Evaluating chloe_tubiana (117863570411837800649) ...
   | alert('il fallait deviner ' + choixOrdi);
   | }
   | 
-  | // -> STUDENT CODE ERROR: on correct guess, got: "il fallait deviner 3", expected: "congrats"
+  | // -> STUDENT CODE ERROR: on correct guess, got: "il fallait deviner 0", expected: "congrats"
   | 
   | // => STUDENT CODE SCORE: 0
   => code score: 3 / 8
@@ -1349,7 +1349,7 @@ Evaluating ibrahim_bouhaj (106771024311888459107) ...
   |      alert('super');
   | }else{ alert('il fallait deviner X');} 
   | 
-  | // -> STUDENT CODE ERROR: on correct guess, got: "il fallait deviner X", expected: "super"
+  | // -> STUDENT CODE ERROR: on wrong guess, got: "il fallait deviner X", expected: "il fallait deviner 1"
   | 
   | // => STUDENT CODE SCORE: 0
   => code score: 3 / 8
@@ -1655,12 +1655,10 @@ Evaluating maxime_vion (101784347288786900868) ...
   | alert("il fallait deviner " + choixOrdi);
   | }
   | 
-  | // -> STUDENT CODE ERROR: on correct guess, got: "il fallait deviner 3", expected: "bravo"
-  | 
-  | // => STUDENT CODE SCORE: 0
-  => code score: 3 / 8
+  | // => STUDENT CODE SCORE: 1
+  => code score: 4 / 8
 
-=> TOTAL STUDENT SCORE: 12 / 20
+=> TOTAL STUDENT SCORE: 13 / 20
 
 ================================
 
@@ -1764,7 +1762,7 @@ Evaluating nina_pellan (100833687235566341431) ...
   |   }
   | }
   | 
-  | // -> STUDENT CODE ERROR: on correct guess, got: "3", expected: "super"
+  | // -> STUDENT CODE ERROR: on correct guess, got: "1", expected: "super"
   | 
   | // => STUDENT CODE SCORE: 0
   => code score: 1 / 8
@@ -1907,7 +1905,7 @@ Evaluating norman_villaret (100212266235788964177) ...
   |  alert('\"il fallait deviner ' + choixOrdi + '\"');
   | }
   | 
-  | // -> STUDENT CODE ERROR: on correct guess, got: ""il fallait deviner 3"", expected: "congrats"
+  | // -> STUDENT CODE ERROR: on correct guess, got: ""congrats"", expected: "congrats"
   | 
   | // => STUDENT CODE SCORE: 0
   => code score: 3 / 8
@@ -2137,7 +2135,7 @@ Evaluating romain_peyret (100072992268804705214) ...
   | alert('il fallait deviner ' + choixOrdi );
   | }
   | 
-  | // -> STUDENT CODE ERROR: on correct guess, got: "il fallait deviner 2", expected: "yeah"
+  | // -> STUDENT CODE ERROR: on correct guess, got: "Yeah", expected: "yeah"
   | 
   | // => STUDENT CODE SCORE: 0
   => code score: 6 / 8
@@ -3156,7 +3154,7 @@ Evaluating caroline_auclair (111413917136628350156) ...
   | alert("il fallait deviner X")
   | }
   | 
-  | // -> STUDENT CODE ERROR: on wrong guess, got: "il fallait deviner X", expected: "il fallait deviner 4"
+  | // -> STUDENT CODE ERROR: on correct guess, got: "il fallait deviner X", expected: "bravo"
   | 
   | // => STUDENT CODE SCORE: 0
   => code score: 3 / 8
@@ -5207,7 +5205,7 @@ Evaluating amel_guellal (106449292539770179084) ...
   |   }
   | }
   | 
-  | // -> STUDENT CODE ERROR: on correct guess, got: "3", expected: "bravo"
+  | // -> STUDENT CODE ERROR: on correct guess, got: "1", expected: "bravo"
   | 
   | // => STUDENT CODE SCORE: 0
   => code score: 1 / 8
@@ -5527,7 +5525,7 @@ Evaluating arnaud_manaranche (107172046548987188834) ...
   | 
   | 
   | 
-  | // -> STUDENT CODE ERROR: on wrong guess, got: "il fallait deviner ordi", expected: "il fallait deviner 90"
+  | // -> STUDENT CODE ERROR: on wrong guess, got: "il fallait deviner ordi", expected: "il fallait deviner 1"
   | 
   | // => STUDENT CODE SCORE: 0
   => code score: 2 / 8
@@ -5672,7 +5670,7 @@ Evaluating celine_meme (105851694432543357504) ...
   | }
   | console.log(choixOrdi);
   | 
-  | // -> STUDENT CODE ERROR: console is not defined
+  | // -> STUDENT CODE ERROR: on correct guess, got: "il fallait deviner 0", expected: "bravo"
   | 
   | // => STUDENT CODE SCORE: 0
   => code score: 4 / 8
@@ -5872,7 +5870,7 @@ Evaluating enzo_ferreira (117276544425730858877) ...
   |   alert('"il fallait deviner ' + choixOrdi + '"');
   | }
   | 
-  | // -> STUDENT CODE ERROR: on correct guess, got: ""il fallait deviner 4"", expected: "congrats"
+  | // -> STUDENT CODE ERROR: on correct guess, got: ""congrats"", expected: "congrats"
   | 
   | // => STUDENT CODE SCORE: 0
   => code score: 2 / 8
@@ -6157,7 +6155,7 @@ Evaluating guillaume_hulin (106233552530976351779) ...
   |     alert("il fallait deviner " + choixOrdi);
   | }
   | 
-  | // -> STUDENT CODE ERROR: on correct guess, got: "il fallait deviner 3", expected: "super"
+  | // -> STUDENT CODE ERROR: on correct guess, got: "il fallait deviner 0", expected: "super"
   | 
   | // => STUDENT CODE SCORE: 0
   => code score: 4 / 8

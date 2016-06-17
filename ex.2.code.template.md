@@ -365,9 +365,12 @@ Nous allons implémenter un petit jeu consistant à deviner un nombre entier cho
 try {
   var done = application.remote._send;
   var remaining = 2;
+  Math.random = function() {
+    return 0;
+  };
   // test 1: correct guess
   var prompt = function() {
-    return '' + choixOrdi;
+    return '1';
   };
   var alert = function(m) {
     --remaining;
@@ -382,7 +385,7 @@ try {
   };
   alert = function(m) {
     --remaining;
-    var expected = 'il fallait deviner ' + choixOrdi;
+    var expected = 'il fallait deviner ' + (Math.random() + 1);
     if (m != expected) {
       throw 'on wrong guess, got: "' + m + '", expected: "' + expected + '"';
     }
