@@ -356,4 +356,38 @@ Nous allons implémenter un petit jeu consistant à deviner un nombre entier cho
 - { "bravo": "yeah" }
 - { "bravo": "super" }
 
+???
+```js
+try {
+  var done = application.remote._send;
+  var remaining = 2;
+  // test 1: correct guess
+  var prompt = function() {
+    return '' + choixOrdi;
+  };
+  var alert = function(m) {
+    --remaining;
+    if (m != '{{bravo}}') {
+      throw 'on correct guess, got: "' + m + '", expected: "{{bravo}}"';
+    }
+  }
+  _runStudentCode();
+  // test 2: wrong guess
+  prompt = function() {
+    return '8';
+  };
+  alert = function(m) {
+    --remaining;
+    var expected = 'il fallait deviner ' + choixOrdi;
+    if (m != expected) {
+      throw 'on wrong guess, got: "' + m + '", expected: "' + expected + '"';
+    }
+  }
+  _runStudentCode();
+  done(null, 1);
+} catch (e) {
+  done(e.message);
+}
+```
+
 ---
