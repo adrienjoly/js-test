@@ -1,3 +1,5 @@
+# evaluate from firebase databases (1 per class), to log and csv formats (one student mark per line)
+
 npm run build
 
 rm scores.csv
