@@ -2297,7 +2297,7 @@ Evaluating romain_rouleau (101819953116639767831) ...
   |     }
   |     comparer (choixOrdi, choixUtilisateur);
   | 
-  | // -> STUDENT CODE ERROR: on correct guess, got: "il fallait deviner 0", expected: "super"
+  | // -> STUDENT CODE ERROR: on correct guess, got: "il fallait deviner 4", expected: "super"
   | 
   | // => STUDENT CODE SCORE: 0
   => code score: 5 / 8
@@ -5523,7 +5523,7 @@ Evaluating arnaud_manaranche (107172046548987188834) ...
   | 
   | 
   | 
-  | // -> STUDENT CODE ERROR: on wrong guess, got: "il fallait deviner ordi", expected: "il fallait deviner 1"
+  | // -> STUDENT CODE ERROR: on correct guess, got: "il fallait deviner ordi", expected: "yeah"
   | 
   | // => STUDENT CODE SCORE: 0
   => code score: 2 / 8
@@ -5668,12 +5668,10 @@ Evaluating celine_meme (105851694432543357504) ...
   | }
   | console.log(choixOrdi);
   | 
-  | // -> STUDENT CODE ERROR: on correct guess, got: "il fallait deviner 0", expected: "bravo"
-  | 
-  | // => STUDENT CODE SCORE: 0
-  => code score: 4 / 8
+  | // => STUDENT CODE SCORE: 1
+  => code score: 5 / 8
 
-=> TOTAL STUDENT SCORE: 15 / 20
+=> TOTAL STUDENT SCORE: 16 / 20
 
 ================================
 
@@ -7044,12 +7042,10 @@ Evaluating nicolas_gerbault (104803018614623792428) ...
   | 
   | al();
   | 
-  | // -> STUDENT CODE ERROR: on correct guess, got: "il fallait deviner 0", expected: "bravo"
-  | 
-  | // => STUDENT CODE SCORE: 0
-  => code score: 2 / 8
+  | // => STUDENT CODE SCORE: 1
+  => code score: 3 / 8
 
-=> TOTAL STUDENT SCORE: 14 / 20
+=> TOTAL STUDENT SCORE: 15 / 20
 
 ================================
 

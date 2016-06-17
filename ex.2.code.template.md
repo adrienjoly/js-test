@@ -369,7 +369,7 @@ try {
   var done = application.remote._send;
   var remaining = 2;
   Math.random = function() {
-    return 0;
+    return 0.1;
   };
   var console = { log: function(){} }; // tolerate calls to console.log()
   // test 1: correct guess
@@ -389,7 +389,7 @@ try {
   };
   alert = function(m) {
     --remaining;
-    var expected = 'il fallait deviner ' + (Math.random() + 1);
+    var expected = 'il fallait deviner ' + Math.floor(Math.random() + 1);
     if (m != expected) {
       throw 'on wrong guess, got: "' + m + '", expected: "' + expected + '"';
     }
