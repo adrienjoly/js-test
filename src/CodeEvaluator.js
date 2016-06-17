@@ -63,7 +63,7 @@ function runTest(testCode, studentCode, callback) {
         }
       }
       console.log('\n// => STUDENT CODE SCORE:', testScore || 0);
-      callback(err, [ testScore || 0 ]); // sum of array must be <= 1
+      callback(null, [ testScore || 0 ]); // sum of array must be <= 1
     });
   }
 }
