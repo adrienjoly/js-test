@@ -50,7 +50,7 @@ function runTest(testCode, studentCode, callback) {
       if (err) console.log('=> test runner err:', err);
       var testError = res[0];
       var testScore = res[1];
-      if (testError) console.log('=> test error:', testError);
+      if (testError) console.log('\n// -> STUDENT CODE ERROR:', testError);
       console.log('\n// => STUDENT CODE SCORE:', testScore || 0);
       process.exit(); // TODO: remove
       callback(err, [ testScore || 0 ]); // sum of array must be <= 1
