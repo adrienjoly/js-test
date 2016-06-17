@@ -394,7 +394,7 @@ try {
       throw 'on wrong guess, got: "' + m + '", expected: "' + expected + '"';
     }
   }
-  _runStudentCode();
+  _runStudentCodeAgain();
   done(null, 1);
 } catch (e) {
   done(e.message || e);

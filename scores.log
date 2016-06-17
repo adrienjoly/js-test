@@ -2296,7 +2296,8 @@ Evaluating romain_rouleau (101819953116639767831) ...
   |      }
   |     }
   |     comparer (choixOrdi, choixUtilisateur);
-  | => test runner err: SyntaxError: Identifier 'comparer' has already been declared
+  | 
+  | // -> STUDENT CODE ERROR: on correct guess, got: "il fallait deviner 0", expected: "super"
   | 
   | // => STUDENT CODE SCORE: 0
   => code score: 5 / 8
@@ -4257,7 +4258,8 @@ Evaluating rodrigue_coail (112837382688102224023) ...
   | else{alert('il fallait deviner ' + choixOrdi);}
   | }
   | petitmalin(choixPlaya);
-  | => test runner err: SyntaxError: Identifier 'petitmalin' has already been declared
+  | 
+  | // -> STUDENT CODE ERROR: choixPlaya is not defined
   | 
   | // => STUDENT CODE SCORE: 0
   => code score: 5 / 8
@@ -7041,7 +7043,8 @@ Evaluating nicolas_gerbault (104803018614623792428) ...
   | }
   | 
   | al();
-  | => test runner err: SyntaxError: Identifier 'al' has already been declared
+  | 
+  | // -> STUDENT CODE ERROR: on correct guess, got: "il fallait deviner 0", expected: "bravo"
   | 
   | // => STUDENT CODE SCORE: 0
   => code score: 2 / 8
@@ -7461,7 +7464,8 @@ Evaluating ruben_desert (112253427180215337120) ...
   | 		alert('Il fallait deviner '+choixOrdi);
   | 	}
   | }
-  | => test runner err: SyntaxError: Identifier 'getRandomInt' has already been declared
+  | 
+  | // -> STUDENT CODE ERROR: choixOrdi is not defined
   | 
   | // => STUDENT CODE SCORE: 0
   => code score: 3 / 8
@@ -7611,10 +7615,9 @@ Evaluating savinien_maire (108003350025924655784) ...
   | aleatoire();
   | comparer();
   | 
-  | => test runner err: SyntaxError: Identifier 'aleatoire' has already been declared
   | 
-  | // => STUDENT CODE SCORE: 0
-  => code score: 3 / 8
+  | // => STUDENT CODE SCORE: 1
+  => code score: 4 / 8
 
-=> TOTAL STUDENT SCORE: 12 / 20
+=> TOTAL STUDENT SCORE: 13 / 20
 

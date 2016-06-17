@@ -49,7 +49,15 @@ function runTest(testCode, studentCode, callback) {
     console.log('// WARNING: NO STUDENT CODE => skipping');
     callback(null, [ 0 ]);
   } else {
-    var code = testCode.replace(/_runStudentCode\(\)/g, [ '// <STUDENT-CODE>', studentCode, '// </STUDENT-CODE>' ].join('\n'));
+    var code = testCode
+      .replace(/_runStudentCode\(\)/g, [
+        '// <STUDENT-CODE>',
+        studentCode,
+        '// </STUDENT-CODE>' ].join('\n'))
+      .replace(/_runStudentCodeAgain\(\)/g, [
+        '// <STUDENT-CODE>',
+        studentCode.replace(/function ([^ \(]+)/g, '$1 = function'),
+        '// </STUDENT-CODE>' ].join('\n'));
     //console.log(code);
     console.log([ '// STUDENT CODE:', studentCode ].join('\n\n'));
     runCodeInSandbox(code, function(err, res) {
