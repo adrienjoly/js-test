@@ -29,6 +29,22 @@ function forEachChild(endpointUrl, handler, callback) {
   });
 }
 
+function setConsolePrefix(prefix) {
+  if (!prefix) {
+    // restore original console
+    console.log = console._log_backup;
+  } else {
+    console._log_backup = console._log_backup || console.log;
+    console.log = function() {
+      for (var i in arguments) {
+        if (arguments[i] instanceof Object || arguments[i] instanceof Array)
+          arguments[i] = sys.inspect(arguments[i]);
+      }
+      console._log_backup(prefix + Array.prototype.join.call(arguments, " ").replace(/\n/g, '\n' + prefix));
+    };
+  }
+}
+
 // evaluation logic
 
 var quizzEvaluator = new QuizzEvaluator().readSolutionsFromFile(SOLUTIONS_FILE);
@@ -38,13 +54,17 @@ function evaluateStudent(student, next) {
   console.log('Evaluating', student.key, '(' + student._uid + ')', '...');
   console.log('  -  quizz answers:');
   var quizzAnsw = quizzEvaluator.getAnswerSet(student);
+  setConsolePrefix('  | ');
   for (var i in quizzAnsw) {
-    console.log('  |', i, ':', quizzAnsw[i]);
+    console.log(i, ':', quizzAnsw[i]);
   }
+  setConsolePrefix();
   var res = quizzEvaluator.evaluateAnswers(student);
   console.log('  => quizz score:', res.score, '/', res.length);
   console.log('  -  code evaluation:');
+  setConsolePrefix('  | ');
   codeEvaluator.evaluateAnswers(student, function(err, res){
+    setConsolePrefix();
     console.log('  => code score:', res.score, '/', res.length);
     console.log();
     next();

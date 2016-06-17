@@ -6,9 +6,8 @@
 - { "url": "https://js-jsonplaceholder.herokuapp.com/users/2", "prop": "email", "expectedValue": "Shanna@melissa.tv" }
 - { "url": "https://js-jsonplaceholder.herokuapp.com/users/3", "prop": "phone", "expectedValue": "1-463-123-4447" }
 
-??? // Automated evaluation tests
+???
 ```js
-// mock/stubs
 
 var checkpoint = (function(){
   var remaining = 1; // expected number of calls to checkpoint()
