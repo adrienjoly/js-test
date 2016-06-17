@@ -29,6 +29,7 @@
       if (err) {
         clearTimeout(timeout);
         application.remote._send(err);
+        application.remote._send = function(){}; // to prevent >1 callback
       } else {
         --remaining;
         if (!remaining) {
@@ -115,6 +116,7 @@
       if (err) {
         clearTimeout(timeout);
         application.remote._send(err);
+        application.remote._send = function(){}; // to prevent >1 callback
       } else {
         --remaining;
         if (!remaining) {
