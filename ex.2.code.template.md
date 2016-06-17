@@ -177,9 +177,15 @@ Supposons que vous disposiez d'une fonction `plusUn` définie telle que dans la 
 var done = application.remote._send;
 function plusUn(p) { return parseInt(p) + 1; }
 function prompt() { return '8' };
-function alert(r) { r != 9 && done('if user types 8, alert should show 9'); };
+function alert(r) {
+  if (r != 9) {
+    done('if user types 8, alert should show 9');
+  } else {
+    done(null, 1);
+  }
+};
 setTimeout(function(){
-  done(null, 1);
+  done('alert() was not called');
 }, 10);
 ```
 
