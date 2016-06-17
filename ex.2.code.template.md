@@ -9,9 +9,22 @@
 ???
 ```js
 
+var expectations = [
+  'call to xhr.open()',
+  'call to xhr.send()',
+  'call to console.log()'
+];
+
+function success(key) {
+  expectations.splice(expectations.indexOf(key), 1);
+}
+
 var checkpoint = (function(){
-  var remaining = 1; // expected number of calls to checkpoint()
-  var timeout = setTimeout(application.remote._send.bind(null, 'console log was never called'), 1000);
+  var remaining = 3; // expected number of calls to checkpoint()
+  function missingExpectations(){
+    application.remote._send('missing: ' + expectations.join(', '));
+  }
+  var timeout = setTimeout(missingExpectations, 1000);
   return function(err) {
     if (err) {
       clearTimeout(timeout);
@@ -20,27 +33,37 @@ var checkpoint = (function(){
       --remaining;
       if (!remaining) {
         clearTimeout(timeout);
-        application.remote._send(null, 1);
+        if (expectations.length) {
+          missingExpectations();
+        } else {
+          application.remote._send(null, 1);
+        }
       }
     }
   };
 })();
 
+function shouldEqual(val, exp, name) {
+  checkpoint(val == exp ? null :
+    'expected ' + (name || '') + ' == "' + exp + '", got: "' + val + '"');
+}
+
 var console = {
   log: function(value){
-    //Test.assert.equal(value, {{expectedValue}});
-    checkpoint("{{expectedValue}}" == value ? null : 'expected "{{expectedValue}}", got: ' + value);
+    success('call to console.log()');
+    shouldEqual(value, '{{expectedValue}}');
   }
 };
 
 var XMLHttpRequest = function(){};
 XMLHttpRequest.prototype.open = function(method, url){
-  this.method = method;
-  this.url = url;  
+  success('call to xhr.open()');
+  shouldEqual((method || '').toUpperCase(), 'GET', 'method');
+  shouldEqual(url || '', '{{{url}}}', 'url');
 };
-XMLHttpRequest.prototype.send = function(data){
+XMLHttpRequest.prototype.send = function(){
+  success('call to xhr.send()');
   var _this = this;
-  this.data = data;
   setTimeout(function(){
     // intermediate call
     _this.readyState = 1;
