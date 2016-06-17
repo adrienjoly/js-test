@@ -41,7 +41,7 @@ function renderCodeExercise(exerciseData, exNumber) {
     var exText = parts[0];
     var exEval = parts[1];
     if (exEval) {
-      exEval = exEval.replace(/```js/g, '').replace(/```/g, '');
+      exEval = exEval.replace(/```js\n*/g, '').replace(/```\n*/g, '');
     }
     evalTests.push({
       i: q + 1, // TODO: prevent id collisions if more than one code.template.md file is used

@@ -19,7 +19,6 @@ function runCodeInSandbox(code, callback) {
       onDone(null, arguments);
     }
   };
-  console.log('FINAL CODE:', code);
   plugin = new jailed.DynamicPlugin(code, api);
   plugin.whenFailed(onDone);
   //plugin.whenConnected(onDone);
@@ -39,21 +38,22 @@ function getVariantByStudentId (id, variants) {
   return modulo(id, variants.length);
 };
 
-function runTest(testCode, /*variantData,*/ studentCode, callback) {
-  //var fakeScores = [0, 0.25, 0, 0]; // sum must be == 1
+function runTest(testCode, studentCode, callback) {
   if (!testCode) {
-    console.log('no testCode => skipping');
+    console.log('// WARNING: NO CODE TESTER => skipping');
   } else if (!studentCode) {
-    console.log('no studentCode => skipping');
+    console.log('// WARNING: NO STUDENT CODE => skipping');
   } else {
-    runCodeInSandbox(testCode + '\n// STUDENT CODE:\n' + studentCode, function(err, res) {
+    var code = [ '// CODE TESTER:', testCode, '// STUDENT CODE:', studentCode ].join('\n\n');
+    console.log(code);
+    runCodeInSandbox(code, function(err, res) {
       if (err) console.log('=> test runner err:', err);
       var testError = res[0];
       var testScore = res[1];
       if (testError) console.log('=> test error:', testError);
-      console.log('=> test score:', testScore || 0);
+      console.log('\n// => STUDENT CODE SCORE:', testScore || 0);
       process.exit(); // TODO: remove
-      callback(err, [ testScore || 0 ]);
+      callback(err, [ testScore || 0 ]); // sum of array must be <= 1
     });
   }
 }
@@ -70,13 +70,10 @@ CodeEvaluator.prototype.readTestsFromFile = function(filePath) {
 CodeEvaluator.prototype.evaluateAnswers = function(answers, callback) {
   var nbTests = this.tests.length;
   function runExEval(exEval, callback) {
-    //testFct.call(testHelpers, answers.code1, VARIANTS[variantNumber], callback);
-    //'(' + answers._uid + ' => ' + variantNumber + ')
     var variantNumber = getVariantByStudentId(answers._uid, exEval.variants);
-    //var variantData = exEval.variants[variantNumber];
     var evalTest = exEval.testVariants[variantNumber];
-    console.log('runExEval', exEval.id, '...');
-    runTest(evalTest, /*variantData,*/ answers[exEval.id], callback);
+    console.log('\n------------- EXERCISE:', exEval.id, '(variant:', variantNumber + ') -------------\n');
+    runTest(evalTest, answers[exEval.id], callback);
   }
   async.mapSeries(this.tests, runExEval, function done(err, res) {
     var total = _.flatten(res).reduce(sum);
