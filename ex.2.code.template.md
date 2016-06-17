@@ -8,7 +8,6 @@
 
 ???
 ```js
-// TODO: allow calls to alert();
 (function evaluateStudentCode(){
   var expectations = [
     'call to xhr.open()',
@@ -56,6 +55,8 @@
     }
   };
 
+  function alert(){}; // prevent error if student code uses alert
+
   var XMLHttpRequest = function(){};
   XMLHttpRequest.prototype.open = function(method, url){
     success('call to xhr.open()');
@@ -94,7 +95,6 @@
 
 ???
 ```js
-// TODO: allow calls to alert();
 (function evaluateStudentCode(){
   var expectations = [
     'call to xhr.open()',
@@ -133,6 +133,8 @@
     checkpoint(val == exp ? null :
       'expected ' + (name || '') + ' == "' + exp + '", got: "' + val + '"');
   }
+
+  function alert(){}; // prevent error if student code uses alert
 
   var XMLHttpRequest = function(){};
   XMLHttpRequest.prototype.open = function(method, url){
