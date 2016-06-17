@@ -1,0 +1,158 @@
+[
+  {
+    "i": 1,
+    "id": "code1",
+    "variants": [
+      {
+        "url": "https://js-jsonplaceholder.herokuapp.com/users/1",
+        "prop": "username",
+        "expectedValue": "Bret"
+      },
+      {
+        "url": "https://js-jsonplaceholder.herokuapp.com/users/2",
+        "prop": "email",
+        "expectedValue": "Shanna@melissa.tv"
+      },
+      {
+        "url": "https://js-jsonplaceholder.herokuapp.com/users/3",
+        "prop": "phone",
+        "expectedValue": "1-463-123-4447"
+      }
+    ],
+    "testVariants": [
+      "\n(function evaluateStudentCode(){\n  var expectations = [\n    'call to xhr.open()',\n    'call to xhr.send()',\n    'call to console.log()'\n  ];\n\n  function success(key) {\n    expectations.splice(expectations.indexOf(key), 1);\n  }\n\n  var checkpoint = (function(){\n    var remaining = 3; // expected number of calls to checkpoint()\n    function missingExpectations(){\n      application.remote._send('missing: ' + expectations.join(', '));\n    }\n    var timeout = setTimeout(missingExpectations, 1000);\n    return function(err) {\n      if (err) {\n        clearTimeout(timeout);\n        application.remote._send(err);\n        application.remote._send = function(){}; // to prevent >1 callback\n      } else {\n        --remaining;\n        if (!remaining) {\n          clearTimeout(timeout);\n          if (expectations.length) {\n            missingExpectations();\n          } else {\n            application.remote._send(null, 1);\n          }\n        }\n      }\n    };\n  })();\n\n  function shouldEqual(val, exp, name) {\n    checkpoint(val == exp ? null :\n      'expected ' + (name || '') + ' == \"' + exp + '\", got: \"' + val + '\"');\n  }\n\n  var console = {\n    log: function(value){\n      success('call to console.log()');\n      shouldEqual(value, 'Bret');\n    }\n  };\n\n  function alert(){}; // prevent error if student code uses alert\n\n  var XMLHttpRequest = function(){};\n  XMLHttpRequest.prototype.open = function(method, url){\n    success('call to xhr.open()');\n    shouldEqual((method || '').toUpperCase(), 'GET', 'method');\n    shouldEqual(url || '', 'https://js-jsonplaceholder.herokuapp.com/users/1', 'url');\n  };\n  XMLHttpRequest.prototype.send = function(){\n    success('call to xhr.send()');\n    var _this = this;\n    setTimeout(function(){\n      // intermediate call\n      _this.readyState = 1;\n      _this.responseText = null;\n      _this.onreadystatechange();\n    }, 10);\n    setTimeout(function(){\n      // final response call\n      _this.readyState = 4;\n      _this.status = 200;\n      _this.responseText = '{ \"username\": \"Bret\" }';\n      _this.onreadystatechange();\n    }, 20);\n  };\n\n  _runStudentCode();\n})();\n",
+      "\n(function evaluateStudentCode(){\n  var expectations = [\n    'call to xhr.open()',\n    'call to xhr.send()',\n    'call to console.log()'\n  ];\n\n  function success(key) {\n    expectations.splice(expectations.indexOf(key), 1);\n  }\n\n  var checkpoint = (function(){\n    var remaining = 3; // expected number of calls to checkpoint()\n    function missingExpectations(){\n      application.remote._send('missing: ' + expectations.join(', '));\n    }\n    var timeout = setTimeout(missingExpectations, 1000);\n    return function(err) {\n      if (err) {\n        clearTimeout(timeout);\n        application.remote._send(err);\n        application.remote._send = function(){}; // to prevent >1 callback\n      } else {\n        --remaining;\n        if (!remaining) {\n          clearTimeout(timeout);\n          if (expectations.length) {\n            missingExpectations();\n          } else {\n            application.remote._send(null, 1);\n          }\n        }\n      }\n    };\n  })();\n\n  function shouldEqual(val, exp, name) {\n    checkpoint(val == exp ? null :\n      'expected ' + (name || '') + ' == \"' + exp + '\", got: \"' + val + '\"');\n  }\n\n  var console = {\n    log: function(value){\n      success('call to console.log()');\n      shouldEqual(value, 'Shanna@melissa.tv');\n    }\n  };\n\n  function alert(){}; // prevent error if student code uses alert\n\n  var XMLHttpRequest = function(){};\n  XMLHttpRequest.prototype.open = function(method, url){\n    success('call to xhr.open()');\n    shouldEqual((method || '').toUpperCase(), 'GET', 'method');\n    shouldEqual(url || '', 'https://js-jsonplaceholder.herokuapp.com/users/2', 'url');\n  };\n  XMLHttpRequest.prototype.send = function(){\n    success('call to xhr.send()');\n    var _this = this;\n    setTimeout(function(){\n      // intermediate call\n      _this.readyState = 1;\n      _this.responseText = null;\n      _this.onreadystatechange();\n    }, 10);\n    setTimeout(function(){\n      // final response call\n      _this.readyState = 4;\n      _this.status = 200;\n      _this.responseText = '{ \"email\": \"Shanna@melissa.tv\" }';\n      _this.onreadystatechange();\n    }, 20);\n  };\n\n  _runStudentCode();\n})();\n",
+      "\n(function evaluateStudentCode(){\n  var expectations = [\n    'call to xhr.open()',\n    'call to xhr.send()',\n    'call to console.log()'\n  ];\n\n  function success(key) {\n    expectations.splice(expectations.indexOf(key), 1);\n  }\n\n  var checkpoint = (function(){\n    var remaining = 3; // expected number of calls to checkpoint()\n    function missingExpectations(){\n      application.remote._send('missing: ' + expectations.join(', '));\n    }\n    var timeout = setTimeout(missingExpectations, 1000);\n    return function(err) {\n      if (err) {\n        clearTimeout(timeout);\n        application.remote._send(err);\n        application.remote._send = function(){}; // to prevent >1 callback\n      } else {\n        --remaining;\n        if (!remaining) {\n          clearTimeout(timeout);\n          if (expectations.length) {\n            missingExpectations();\n          } else {\n            application.remote._send(null, 1);\n          }\n        }\n      }\n    };\n  })();\n\n  function shouldEqual(val, exp, name) {\n    checkpoint(val == exp ? null :\n      'expected ' + (name || '') + ' == \"' + exp + '\", got: \"' + val + '\"');\n  }\n\n  var console = {\n    log: function(value){\n      success('call to console.log()');\n      shouldEqual(value, '1-463-123-4447');\n    }\n  };\n\n  function alert(){}; // prevent error if student code uses alert\n\n  var XMLHttpRequest = function(){};\n  XMLHttpRequest.prototype.open = function(method, url){\n    success('call to xhr.open()');\n    shouldEqual((method || '').toUpperCase(), 'GET', 'method');\n    shouldEqual(url || '', 'https://js-jsonplaceholder.herokuapp.com/users/3', 'url');\n  };\n  XMLHttpRequest.prototype.send = function(){\n    success('call to xhr.send()');\n    var _this = this;\n    setTimeout(function(){\n      // intermediate call\n      _this.readyState = 1;\n      _this.responseText = null;\n      _this.onreadystatechange();\n    }, 10);\n    setTimeout(function(){\n      // final response call\n      _this.readyState = 4;\n      _this.status = 200;\n      _this.responseText = '{ \"phone\": \"1-463-123-4447\" }';\n      _this.onreadystatechange();\n    }, 20);\n  };\n\n  _runStudentCode();\n})();\n"
+    ]
+  },
+  {
+    "i": 2,
+    "id": "code2",
+    "variants": [
+      {
+        "prop": "username",
+        "val": "pierredup"
+      },
+      {
+        "prop": "school",
+        "val": "eemi"
+      },
+      {
+        "prop": "date",
+        "val": "2016"
+      },
+      {
+        "prop": "nickname",
+        "val": "dupont"
+      }
+    ],
+    "testVariants": [
+      "\n(function evaluateStudentCode(){\n  var expectations = [\n    'call to xhr.open()',\n    'call to xhr.send()'\n  ];\n\n  function success(key) {\n    expectations.splice(expectations.indexOf(key), 1);\n  }\n\n  var checkpoint = (function(){\n    var remaining = 3; // expected number of calls to checkpoint()\n    function missingExpectations(){\n      application.remote._send('missing: ' + expectations.join(', '));\n    }\n    var timeout = setTimeout(missingExpectations, 1000);\n    return function(err) {\n      if (err) {\n        clearTimeout(timeout);\n        application.remote._send(err);\n        application.remote._send = function(){}; // to prevent >1 callback\n      } else {\n        --remaining;\n        if (!remaining) {\n          clearTimeout(timeout);\n          if (expectations.length) {\n            missingExpectations();\n          } else {\n            application.remote._send(null, 1);\n          }\n        }\n      }\n    };\n  })();\n\n  function shouldEqual(val, exp, name) {\n    checkpoint(val == exp ? null :\n      'expected ' + (name || '') + ' == \"' + exp + '\", got: \"' + val + '\"');\n  }\n\n  function alert(){}; // prevent error if student code uses alert\n\n  var XMLHttpRequest = function(){};\n  XMLHttpRequest.prototype.open = function(method, url){\n    success('call to xhr.open()');\n    shouldEqual((method || '').toUpperCase(), 'POST', 'method');\n    shouldEqual(url || '', 'https://js-httpbin.herokuapp.com/post', 'url');\n  };\n  XMLHttpRequest.prototype.send = function(data){\n    success('call to xhr.send()');\n    shouldEqual(data, JSON.stringify({ 'username': 'pierredup' }), 'data');\n  };\n  _runStudentCode();\n})();\n/*\n// expected solution:\nvar xhr = new XMLHttpRequest();\nxhr.open('POST', 'https://js-httpbin.herokuapp.com/post');\n// xhr.onreadystatechange = function() { xhr.readyState == 4 && alert(xhr.responseText); };\nxhr.send(JSON.stringify({ username: 'pierredup' }));\n*/\n",
+      "\n(function evaluateStudentCode(){\n  var expectations = [\n    'call to xhr.open()',\n    'call to xhr.send()'\n  ];\n\n  function success(key) {\n    expectations.splice(expectations.indexOf(key), 1);\n  }\n\n  var checkpoint = (function(){\n    var remaining = 3; // expected number of calls to checkpoint()\n    function missingExpectations(){\n      application.remote._send('missing: ' + expectations.join(', '));\n    }\n    var timeout = setTimeout(missingExpectations, 1000);\n    return function(err) {\n      if (err) {\n        clearTimeout(timeout);\n        application.remote._send(err);\n        application.remote._send = function(){}; // to prevent >1 callback\n      } else {\n        --remaining;\n        if (!remaining) {\n          clearTimeout(timeout);\n          if (expectations.length) {\n            missingExpectations();\n          } else {\n            application.remote._send(null, 1);\n          }\n        }\n      }\n    };\n  })();\n\n  function shouldEqual(val, exp, name) {\n    checkpoint(val == exp ? null :\n      'expected ' + (name || '') + ' == \"' + exp + '\", got: \"' + val + '\"');\n  }\n\n  function alert(){}; // prevent error if student code uses alert\n\n  var XMLHttpRequest = function(){};\n  XMLHttpRequest.prototype.open = function(method, url){\n    success('call to xhr.open()');\n    shouldEqual((method || '').toUpperCase(), 'POST', 'method');\n    shouldEqual(url || '', 'https://js-httpbin.herokuapp.com/post', 'url');\n  };\n  XMLHttpRequest.prototype.send = function(data){\n    success('call to xhr.send()');\n    shouldEqual(data, JSON.stringify({ 'school': 'eemi' }), 'data');\n  };\n  _runStudentCode();\n})();\n/*\n// expected solution:\nvar xhr = new XMLHttpRequest();\nxhr.open('POST', 'https://js-httpbin.herokuapp.com/post');\n// xhr.onreadystatechange = function() { xhr.readyState == 4 && alert(xhr.responseText); };\nxhr.send(JSON.stringify({ school: 'eemi' }));\n*/\n",
+      "\n(function evaluateStudentCode(){\n  var expectations = [\n    'call to xhr.open()',\n    'call to xhr.send()'\n  ];\n\n  function success(key) {\n    expectations.splice(expectations.indexOf(key), 1);\n  }\n\n  var checkpoint = (function(){\n    var remaining = 3; // expected number of calls to checkpoint()\n    function missingExpectations(){\n      application.remote._send('missing: ' + expectations.join(', '));\n    }\n    var timeout = setTimeout(missingExpectations, 1000);\n    return function(err) {\n      if (err) {\n        clearTimeout(timeout);\n        application.remote._send(err);\n        application.remote._send = function(){}; // to prevent >1 callback\n      } else {\n        --remaining;\n        if (!remaining) {\n          clearTimeout(timeout);\n          if (expectations.length) {\n            missingExpectations();\n          } else {\n            application.remote._send(null, 1);\n          }\n        }\n      }\n    };\n  })();\n\n  function shouldEqual(val, exp, name) {\n    checkpoint(val == exp ? null :\n      'expected ' + (name || '') + ' == \"' + exp + '\", got: \"' + val + '\"');\n  }\n\n  function alert(){}; // prevent error if student code uses alert\n\n  var XMLHttpRequest = function(){};\n  XMLHttpRequest.prototype.open = function(method, url){\n    success('call to xhr.open()');\n    shouldEqual((method || '').toUpperCase(), 'POST', 'method');\n    shouldEqual(url || '', 'https://js-httpbin.herokuapp.com/post', 'url');\n  };\n  XMLHttpRequest.prototype.send = function(data){\n    success('call to xhr.send()');\n    shouldEqual(data, JSON.stringify({ 'date': '2016' }), 'data');\n  };\n  _runStudentCode();\n})();\n/*\n// expected solution:\nvar xhr = new XMLHttpRequest();\nxhr.open('POST', 'https://js-httpbin.herokuapp.com/post');\n// xhr.onreadystatechange = function() { xhr.readyState == 4 && alert(xhr.responseText); };\nxhr.send(JSON.stringify({ date: '2016' }));\n*/\n",
+      "\n(function evaluateStudentCode(){\n  var expectations = [\n    'call to xhr.open()',\n    'call to xhr.send()'\n  ];\n\n  function success(key) {\n    expectations.splice(expectations.indexOf(key), 1);\n  }\n\n  var checkpoint = (function(){\n    var remaining = 3; // expected number of calls to checkpoint()\n    function missingExpectations(){\n      application.remote._send('missing: ' + expectations.join(', '));\n    }\n    var timeout = setTimeout(missingExpectations, 1000);\n    return function(err) {\n      if (err) {\n        clearTimeout(timeout);\n        application.remote._send(err);\n        application.remote._send = function(){}; // to prevent >1 callback\n      } else {\n        --remaining;\n        if (!remaining) {\n          clearTimeout(timeout);\n          if (expectations.length) {\n            missingExpectations();\n          } else {\n            application.remote._send(null, 1);\n          }\n        }\n      }\n    };\n  })();\n\n  function shouldEqual(val, exp, name) {\n    checkpoint(val == exp ? null :\n      'expected ' + (name || '') + ' == \"' + exp + '\", got: \"' + val + '\"');\n  }\n\n  function alert(){}; // prevent error if student code uses alert\n\n  var XMLHttpRequest = function(){};\n  XMLHttpRequest.prototype.open = function(method, url){\n    success('call to xhr.open()');\n    shouldEqual((method || '').toUpperCase(), 'POST', 'method');\n    shouldEqual(url || '', 'https://js-httpbin.herokuapp.com/post', 'url');\n  };\n  XMLHttpRequest.prototype.send = function(data){\n    success('call to xhr.send()');\n    shouldEqual(data, JSON.stringify({ 'nickname': 'dupont' }), 'data');\n  };\n  _runStudentCode();\n})();\n/*\n// expected solution:\nvar xhr = new XMLHttpRequest();\nxhr.open('POST', 'https://js-httpbin.herokuapp.com/post');\n// xhr.onreadystatechange = function() { xhr.readyState == 4 && alert(xhr.responseText); };\nxhr.send(JSON.stringify({ nickname: 'dupont' }));\n*/\n"
+    ]
+  },
+  {
+    "i": 3,
+    "id": "code3",
+    "variants": [
+      {}
+    ],
+    "testVariants": [
+      "\nvar console = { log: function(){} }; // tolerate calls to console.log()\n_runStudentCode();\n(function evaluateStudentCode(){\n  var done = application.remote._send;\n  try { plusUn; } catch(e) { done('plusUn is not defined'); return; };\n  if (typeof plusUn != 'function') done('plusUn() definition not found');\n  else if (plusUn(1) != 2) done('plusUn(1) != 2');\n  else if (plusUn(2) != 3) done('plusUn(2) != 3');\n  else if (plusUn(-99) != -98) done('plusUn(-99) != -98');\n  else done(null, 1);\n  })();\n"
+    ]
+  },
+  {
+    "i": 4,
+    "id": "code4",
+    "variants": [
+      {}
+    ],
+    "testVariants": [
+      "\n(function evaluateStudentCode(){\n  var done = application.remote._send;\n  var called = false;\n  function plusUn(p) { return parseInt(p) + 1; }\n  function prompt() { return '8' };\n  function alert(r) {\n    called = true;\n    if (r != 9) {\n      done('if user types 8, alert should show 9');\n    } else {\n      done(null, 1);\n    }\n  };\n  var console = { log: function(){} }; // tolerate calls to console.log()\n  _runStudentCode(); // should call alert()\n  if (!called) {\n    done('alert() was not called');\n  }\n})();\n"
+    ]
+  },
+  {
+    "i": 5,
+    "id": "code5",
+    "variants": [
+      {
+        "p": "pair",
+        "_modRes": 0
+      },
+      {
+        "p": "impair",
+        "_modRes": 1
+      }
+    ],
+    "testVariants": [
+      "\n(function evaluateStudentCode(){\n  var done = application.remote._send;\n  var output = [];\n  var console = { log: output.push.bind(output) };\n  var expected = [];\n  for (var i = 1; i <= 100; ++i) {\n    if (i % 2 == 0) {\n      expected.push(i);\n    }\n  }\n  _runStudentCode();\n  var outputFirsts = output.slice(0, 2).join(',');\n  var expectedFirsts = expected.slice(0, 2).join(',');\n  if (outputFirsts != expectedFirsts) {\n    done('two first lines: ' + outputFirsts + ', expected: ' + expectedFirsts);\n    return;\n  }\n  var outputLast = output.pop();\n  var expectedLast = expected.pop();\n  if (outputLast != expectedLast) {\n    done('last line: ' + outputLast + ', expected: ' + expectedLast);\n  } else {\n    done(null, 1);\n  }\n})();\n",
+      "\n(function evaluateStudentCode(){\n  var done = application.remote._send;\n  var output = [];\n  var console = { log: output.push.bind(output) };\n  var expected = [];\n  for (var i = 1; i <= 100; ++i) {\n    if (i % 2 == 1) {\n      expected.push(i);\n    }\n  }\n  _runStudentCode();\n  var outputFirsts = output.slice(0, 2).join(',');\n  var expectedFirsts = expected.slice(0, 2).join(',');\n  if (outputFirsts != expectedFirsts) {\n    done('two first lines: ' + outputFirsts + ', expected: ' + expectedFirsts);\n    return;\n  }\n  var outputLast = output.pop();\n  var expectedLast = expected.pop();\n  if (outputLast != expectedLast) {\n    done('last line: ' + outputLast + ', expected: ' + expectedLast);\n  } else {\n    done(null, 1);\n  }\n})();\n"
+    ]
+  },
+  {
+    "i": 6,
+    "id": "code6",
+    "variants": [
+      {
+        "nom": "tabNombres"
+      },
+      {
+        "nom": "jusqua"
+      },
+      {
+        "nom": "nombres"
+      }
+    ],
+    "testVariants": [
+      "\n(function evaluateStudentCode(){\n  var console = { log: function(){} }; // tolerate calls to console.log()\n  _runStudentCode();\n  var done = application.remote._send;\n  function makeExpectedArray(n) {\n    var expected = [];\n    for (var i = 1; i <= n; ++i) {\n      expected.push(i);\n    }\n    return expected;\n  }\n  try {\n    tabNombres;\n  } catch(e) {\n    return done('tabNombres is not defined');\n  };\n  if (typeof tabNombres != 'function') {\n    return done('tabNombres() definition not found');\n  }\n  var _n = 50;\n  var e = makeExpectedArray(_n); // expected output\n  var o = (tabNombres(_n)); // actual output\n  if (typeof o != 'object' || typeof o.length == 'undefined') {\n    return done('tabNombres(' + _n + ') did not return an array');\n  }\n  if (e[0] != o[0]) {\n    done('first value of returned array: ' + o[0] + ', expected: ' + e[0]);\n    return;\n  }\n  var eLast = e.pop();\n  var oLast = o.pop();\n  if (eLast != oLast) {\n    done('last value of returned array: ' + oLast + ', expected: ' + eLast);\n    return;\n  }\n  done(null, 1);\n})();\n",
+      "\n(function evaluateStudentCode(){\n  var console = { log: function(){} }; // tolerate calls to console.log()\n  _runStudentCode();\n  var done = application.remote._send;\n  function makeExpectedArray(n) {\n    var expected = [];\n    for (var i = 1; i <= n; ++i) {\n      expected.push(i);\n    }\n    return expected;\n  }\n  try {\n    jusqua;\n  } catch(e) {\n    return done('jusqua is not defined');\n  };\n  if (typeof jusqua != 'function') {\n    return done('jusqua() definition not found');\n  }\n  var _n = 50;\n  var e = makeExpectedArray(_n); // expected output\n  var o = (jusqua(_n)); // actual output\n  if (typeof o != 'object' || typeof o.length == 'undefined') {\n    return done('jusqua(' + _n + ') did not return an array');\n  }\n  if (e[0] != o[0]) {\n    done('first value of returned array: ' + o[0] + ', expected: ' + e[0]);\n    return;\n  }\n  var eLast = e.pop();\n  var oLast = o.pop();\n  if (eLast != oLast) {\n    done('last value of returned array: ' + oLast + ', expected: ' + eLast);\n    return;\n  }\n  done(null, 1);\n})();\n",
+      "\n(function evaluateStudentCode(){\n  var console = { log: function(){} }; // tolerate calls to console.log()\n  _runStudentCode();\n  var done = application.remote._send;\n  function makeExpectedArray(n) {\n    var expected = [];\n    for (var i = 1; i <= n; ++i) {\n      expected.push(i);\n    }\n    return expected;\n  }\n  try {\n    nombres;\n  } catch(e) {\n    return done('nombres is not defined');\n  };\n  if (typeof nombres != 'function') {\n    return done('nombres() definition not found');\n  }\n  var _n = 50;\n  var e = makeExpectedArray(_n); // expected output\n  var o = (nombres(_n)); // actual output\n  if (typeof o != 'object' || typeof o.length == 'undefined') {\n    return done('nombres(' + _n + ') did not return an array');\n  }\n  if (e[0] != o[0]) {\n    done('first value of returned array: ' + o[0] + ', expected: ' + e[0]);\n    return;\n  }\n  var eLast = e.pop();\n  var oLast = o.pop();\n  if (eLast != oLast) {\n    done('last value of returned array: ' + oLast + ', expected: ' + eLast);\n    return;\n  }\n  done(null, 1);\n})();\n"
+    ]
+  },
+  {
+    "i": 7,
+    "id": "code7",
+    "variants": [
+      {
+        "nom": "chaines",
+        "type": "string",
+        "fr": "chaînes de caractères"
+      },
+      {
+        "nom": "nombres",
+        "type": "number",
+        "fr": "nombres"
+      }
+    ],
+    "testVariants": [
+      "\n(function evaluateStudentCode(){\n  _runStudentCode();\n  var done = application.remote._send;\n  function makeExpectedArray(a) {\n    var expected = [];\n    for (var i in a) {\n      if (typeof a[i] == 'string') {\n        expected.push(a[i]);\n      }\n    }\n    return expected;\n  }\n  try {\n    chaines;\n  } catch(e) {\n    return done('chaines is not defined');\n  };\n  if (typeof chaines != 'function') {\n    return done('chaines() definition not found');\n  }\n  var _a = [ null, 'a', 10, undefined, 'b', 4 ];\n  var e = makeExpectedArray(_a); // expected output\n  var o = (chaines(_a)); // actual output\n  if (typeof o != 'object' || typeof o.length == 'undefined') {\n    return done('chaines(' + _n + ') did not return an array');\n  }\n  if (e[0] != o[0]) {\n    done('first value of returned array: ' + o[0] + ', expected: ' + e[0]);\n    return;\n  }\n  var eLast = e.pop();\n  var oLast = o.pop();\n  if (eLast != oLast) {\n    done('last value of returned array: ' + oLast + ', expected: ' + eLast);\n    return;\n  }\n  done(null, 1);\n})();\n",
+      "\n(function evaluateStudentCode(){\n  _runStudentCode();\n  var done = application.remote._send;\n  function makeExpectedArray(a) {\n    var expected = [];\n    for (var i in a) {\n      if (typeof a[i] == 'number') {\n        expected.push(a[i]);\n      }\n    }\n    return expected;\n  }\n  try {\n    nombres;\n  } catch(e) {\n    return done('nombres is not defined');\n  };\n  if (typeof nombres != 'function') {\n    return done('nombres() definition not found');\n  }\n  var _a = [ null, 'a', 10, undefined, 'b', 4 ];\n  var e = makeExpectedArray(_a); // expected output\n  var o = (nombres(_a)); // actual output\n  if (typeof o != 'object' || typeof o.length == 'undefined') {\n    return done('nombres(' + _n + ') did not return an array');\n  }\n  if (e[0] != o[0]) {\n    done('first value of returned array: ' + o[0] + ', expected: ' + e[0]);\n    return;\n  }\n  var eLast = e.pop();\n  var oLast = o.pop();\n  if (eLast != oLast) {\n    done('last value of returned array: ' + oLast + ', expected: ' + eLast);\n    return;\n  }\n  done(null, 1);\n})();\n"
+    ]
+  },
+  {
+    "i": 8,
+    "id": "code8",
+    "variants": [
+      {
+        "bravo": "bravo"
+      },
+      {
+        "bravo": "congrats"
+      },
+      {
+        "bravo": "yeah"
+      },
+      {
+        "bravo": "super"
+      }
+    ],
+    "testVariants": [
+      "\ntry {\n  var done = application.remote._send;\n  var remaining = 2;\n  Math.random = function() {\n    return 0.1;\n  };\n  var console = { log: function(){} }; // tolerate calls to console.log()\n  // test 1: correct guess\n  var prompt = function() {\n    return '1';\n  };\n  var alert = function(m) {\n    --remaining;\n    if (m != 'bravo') {\n      throw 'on correct guess, got: \"' + m + '\", expected: \"bravo\"';\n    }\n  }\n  _runStudentCode();\n  // test 2: wrong guess\n  prompt = function() {\n    return '8';\n  };\n  alert = function(m) {\n    --remaining;\n    var expected = 'il fallait deviner ' + Math.floor(Math.random() + 1);\n    if (m != expected) {\n      throw 'on wrong guess, got: \"' + m + '\", expected: \"' + expected + '\"';\n    }\n  }\n  _runStudentCodeAgain();\n  done(null, 1);\n} catch (e) {\n  done(e.message || e);\n}\n",
+      "\ntry {\n  var done = application.remote._send;\n  var remaining = 2;\n  Math.random = function() {\n    return 0.1;\n  };\n  var console = { log: function(){} }; // tolerate calls to console.log()\n  // test 1: correct guess\n  var prompt = function() {\n    return '1';\n  };\n  var alert = function(m) {\n    --remaining;\n    if (m != 'congrats') {\n      throw 'on correct guess, got: \"' + m + '\", expected: \"congrats\"';\n    }\n  }\n  _runStudentCode();\n  // test 2: wrong guess\n  prompt = function() {\n    return '8';\n  };\n  alert = function(m) {\n    --remaining;\n    var expected = 'il fallait deviner ' + Math.floor(Math.random() + 1);\n    if (m != expected) {\n      throw 'on wrong guess, got: \"' + m + '\", expected: \"' + expected + '\"';\n    }\n  }\n  _runStudentCodeAgain();\n  done(null, 1);\n} catch (e) {\n  done(e.message || e);\n}\n",
+      "\ntry {\n  var done = application.remote._send;\n  var remaining = 2;\n  Math.random = function() {\n    return 0.1;\n  };\n  var console = { log: function(){} }; // tolerate calls to console.log()\n  // test 1: correct guess\n  var prompt = function() {\n    return '1';\n  };\n  var alert = function(m) {\n    --remaining;\n    if (m != 'yeah') {\n      throw 'on correct guess, got: \"' + m + '\", expected: \"yeah\"';\n    }\n  }\n  _runStudentCode();\n  // test 2: wrong guess\n  prompt = function() {\n    return '8';\n  };\n  alert = function(m) {\n    --remaining;\n    var expected = 'il fallait deviner ' + Math.floor(Math.random() + 1);\n    if (m != expected) {\n      throw 'on wrong guess, got: \"' + m + '\", expected: \"' + expected + '\"';\n    }\n  }\n  _runStudentCodeAgain();\n  done(null, 1);\n} catch (e) {\n  done(e.message || e);\n}\n",
+      "\ntry {\n  var done = application.remote._send;\n  var remaining = 2;\n  Math.random = function() {\n    return 0.1;\n  };\n  var console = { log: function(){} }; // tolerate calls to console.log()\n  // test 1: correct guess\n  var prompt = function() {\n    return '1';\n  };\n  var alert = function(m) {\n    --remaining;\n    if (m != 'super') {\n      throw 'on correct guess, got: \"' + m + '\", expected: \"super\"';\n    }\n  }\n  _runStudentCode();\n  // test 2: wrong guess\n  prompt = function() {\n    return '8';\n  };\n  alert = function(m) {\n    --remaining;\n    var expected = 'il fallait deviner ' + Math.floor(Math.random() + 1);\n    if (m != expected) {\n      throw 'on wrong guess, got: \"' + m + '\", expected: \"' + expected + '\"';\n    }\n  }\n  _runStudentCodeAgain();\n  done(null, 1);\n} catch (e) {\n  done(e.message || e);\n}\n"
+    ]
+  }
+]
