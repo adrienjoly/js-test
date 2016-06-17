@@ -3,10 +3,14 @@
 
 var fs = require('fs');
 
+var PTS_RIGHT = 1;
+var PTS_WRONG = 0; // or -0.5 for example
+var PTS_NULL = 0;
+
 function QuizzEvaluator(solutions) {
   this.solutions = solutions;
   this.scoreAnswer = function (answer, expected) {
-    return !answer ? 0 : (answer == expected ? 1 : -0.5);
+    return !answer ? PTS_NULL : (answer == expected ? PTS_RIGHT : PTS_WRONG);
   };
 }
 
