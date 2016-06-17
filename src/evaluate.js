@@ -51,6 +51,8 @@ var quizzEvaluator = new QuizzEvaluator().readSolutionsFromFile(SOLUTIONS_FILE);
 var codeEvaluator = new CodeEvaluator().readTestsFromFile(TESTS_FILE);
 
 function evaluateStudent(student, next) {
+  var totalScore = 0;
+  var totalPoints = 0;
   console.log('Evaluating', student.key, '(' + student._uid + ')', '...');
   console.log('  -  quizz answers:');
   var quizzAnsw = quizzEvaluator.getAnswerSet(student);
@@ -60,13 +62,18 @@ function evaluateStudent(student, next) {
   }
   setConsolePrefix();
   var res = quizzEvaluator.evaluateAnswers(student);
+  totalScore += res.score;
+  totalPoints += res.length;
   console.log('  => quizz score:', res.score, '/', res.length);
   console.log('  -  code evaluation:');
   setConsolePrefix('  | ');
   codeEvaluator.evaluateAnswers(student, function(err, res){
+    totalScore += res.score;
+    totalPoints += res.length;
     setConsolePrefix();
     console.log('  => code score:', res.score, '/', res.length);
     console.log();
+    console.log('=> TOTAL STUDENT SCORE:', totalScore, '/', totalPoints);
     next();
   });
 }

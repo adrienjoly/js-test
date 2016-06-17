@@ -47,7 +47,8 @@ function runTest(testCode, studentCode, callback) {
     callback(null, [ 0 ]);
   } else {
     var code = testCode.replace(/_runStudentCode\(\)/g, [ '// <STUDENT-CODE>', studentCode, '// </STUDENT-CODE>' ].join('\n'));
-    console.log(code);
+    //console.log(code);
+    console.log([ '// STUDENT CODE:', studentCode ].join('\n\n'));
     runCodeInSandbox(code, function(err, res) {
       if (err) console.log('=> test runner err:', err);
       var testScore = 0;
