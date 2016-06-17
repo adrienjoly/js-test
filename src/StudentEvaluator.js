@@ -1,4 +1,5 @@
 var fs = require('fs');
+var util = require('util');
 var QuizzEvaluator = require('./QuizzEvaluator.js');
 var CodeEvaluator = require('./CodeEvaluator.js');
 
@@ -22,7 +23,7 @@ function setConsolePrefix(prefix) {
     console.log = function() {
       for (var i in arguments) {
         if (arguments[i] instanceof Object || arguments[i] instanceof Array)
-          arguments[i] = sys.inspect(arguments[i]);
+          arguments[i] = util.inspect(arguments[i]);
       }
       console._log_backup(prefix + Array.prototype.join.call(arguments, " ").replace(/\n/g, '\n' + prefix));
     };
