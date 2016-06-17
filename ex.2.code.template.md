@@ -8,7 +8,7 @@
 
 ???
 ```js
-
+// TODO: allow calls to alert();
 var expectations = [
   'call to xhr.open()',
   'call to xhr.send()',
@@ -89,14 +89,64 @@ XMLHttpRequest.prototype.send = function(){
 - { "prop": "nickname", "val": "dupont" }
 
 ???
+```js
+// TODO: allow calls to alert();
+var expectations = [
+  'call to xhr.open()',
+  'call to xhr.send()'
+];
 
+function success(key) {
+  expectations.splice(expectations.indexOf(key), 1);
+}
+
+var checkpoint = (function(){
+  var remaining = 3; // expected number of calls to checkpoint()
+  function missingExpectations(){
+    application.remote._send('missing: ' + expectations.join(', '));
+  }
+  var timeout = setTimeout(missingExpectations, 1000);
+  return function(err) {
+    if (err) {
+      clearTimeout(timeout);
+      application.remote._send(err);
+    } else {
+      --remaining;
+      if (!remaining) {
+        clearTimeout(timeout);
+        if (expectations.length) {
+          missingExpectations();
+        } else {
+          application.remote._send(null, 1);
+        }
+      }
+    }
+  };
+})();
+
+function shouldEqual(val, exp, name) {
+  checkpoint(val == exp ? null :
+    'expected ' + (name || '') + ' == "' + exp + '", got: "' + val + '"');
+}
+
+var XMLHttpRequest = function(){};
+XMLHttpRequest.prototype.open = function(method, url){
+  success('call to xhr.open()');
+  shouldEqual((method || '').toUpperCase(), 'POST', 'method');
+  shouldEqual(url || '', 'https://js-httpbin.herokuapp.com/post', 'url');
+};
+XMLHttpRequest.prototype.send = function(data){
+  success('call to xhr.send()');
+  shouldEqual(data, JSON.stringify({ '{{prop}}': '{{val}}' }), 'data');
+};
+/*
+// expected solution:
 var xhr = new XMLHttpRequest();
 xhr.open('POST', 'https://js-httpbin.herokuapp.com/post');
-xhr.onreadystatechange = function() {
-  if (xhr.readyState == 4) alert(xhr.responseText);
-};
-xhr.send(JSON.stringify({a:'données à envoyer'}));
-
+// xhr.onreadystatechange = function() { xhr.readyState == 4 && alert(xhr.responseText); };
+xhr.send(JSON.stringify({ {{prop}}: '{{val}}' }));
+*/
+```
 ---
 
 Définissez une fonction `plusUn` qui renvoie le nombre passé en paramètre après y avoir additionné le nombre `1`; de manière à ce que `plusUn(1)` renvoie `2`, `plusUn(2)` renvoie `3`, etc...
