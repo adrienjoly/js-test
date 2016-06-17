@@ -36,9 +36,14 @@ var codeEvaluator = new CodeEvaluator().readTestsFromFile(TESTS_FILE);
 
 function evaluateStudent(student, next) {
   console.log('Evaluating', student.key, '(' + student._uid + ')', '...');
-  console.log('  -  quizz answers:', student);
+  console.log('  -  quizz answers:');
+  var quizzAnsw = quizzEvaluator.getAnswerSet(student);
+  for (var i in quizzAnsw) {
+    console.log('  |', i, ':', quizzAnsw[i]);
+  }
   var res = quizzEvaluator.evaluateAnswers(student);
   console.log('  => quizz score:', res.score, '/', res.length);
+  console.log('  -  code evaluation:');
   codeEvaluator.evaluateAnswers(student, function(err, res){
     console.log('  => code score:', res.score, '/', res.length);
     console.log();
