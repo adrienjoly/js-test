@@ -6,11 +6,13 @@ var Firebase = require('firebase');
 var QuizzEvaluator = require('./QuizzEvaluator.js');
 var CodeEvaluator = require('./CodeEvaluator.js');
 
-var FIREBASE_URL = 'https://js-exam.firebaseio.com';
 // outputs
 
 var SCORES_FILE = './scores.csv';
 
+// inputs
+
+var FIREBASE_URL = process.argv[2] || 'https://js-exam.firebaseio.com';
 var SOLUTIONS_FILE = './ex.1.quizz.solutions.json';
 var TESTS_FILE = './ex.2.code.tests.json';
 
@@ -58,6 +60,7 @@ var codeEvaluator = new CodeEvaluator().readTestsFromFile(TESTS_FILE);
 function evaluateStudent(student, next) {
   var totalScore = 0;
   var totalPoints = 0;
+  console.log('\n================================\n')
   console.log('Evaluating', student.key, '(' + student._uid + ')', '...');
   console.log('  -  quizz answers:');
   var quizzAnsw = quizzEvaluator.getAnswerSet(student);
@@ -86,6 +89,8 @@ function evaluateStudent(student, next) {
 
 // actual script
 
+console.log('Reading and evaluating answers from:', FIREBASE_URL, '...');
 forEachChild(FIREBASE_URL + '/submissions', evaluateStudent, function done() {
+  console.log();
   process.exit();
 });
