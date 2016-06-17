@@ -9,7 +9,9 @@ function sum(a, b) {
 
 function runCodeInSandbox(code, callback) {
   var plugin = null;
+  var timeout = null;
   function onDone(err, results){
+    clearTimeout(timeout);
     callback(err, results);
     plugin.disconnect();
   }
@@ -22,6 +24,7 @@ function runCodeInSandbox(code, callback) {
   plugin = new jailed.DynamicPlugin(code, api);
   plugin.whenFailed(onDone);
   //plugin.whenConnected(onDone);
+  timeout = setTimeout(onDone.bind(null, 'TIMEOUT: infinite loop?'), 2000);
 }
 
 // fixed version of variant3() => returns 0, 1 or 2, depending on the value of number
