@@ -46,7 +46,7 @@ function runTest(testCode, studentCode, callback) {
     console.log('// WARNING: NO STUDENT CODE => skipping');
     callback(null, [ 0 ]);
   } else {
-    var code = [ '// CODE TESTER:', testCode, '// STUDENT CODE:', studentCode ].join('\n\n');
+    var code = testCode.replace(/_runStudentCode\(\)/g, [ '// <STUDENT-CODE>', studentCode, '// </STUDENT-CODE>' ].join('\n'));
     console.log(code);
     runCodeInSandbox(code, function(err, res) {
       if (err) console.log('=> test runner err:', err);
