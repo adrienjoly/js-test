@@ -9,75 +9,79 @@
 ???
 ```js
 // TODO: allow calls to alert();
-var expectations = [
-  'call to xhr.open()',
-  'call to xhr.send()',
-  'call to console.log()'
-];
+(function evaluateStudentCode(){
+  var expectations = [
+    'call to xhr.open()',
+    'call to xhr.send()',
+    'call to console.log()'
+  ];
 
-function success(key) {
-  expectations.splice(expectations.indexOf(key), 1);
-}
-
-var checkpoint = (function(){
-  var remaining = 3; // expected number of calls to checkpoint()
-  function missingExpectations(){
-    application.remote._send('missing: ' + expectations.join(', '));
+  function success(key) {
+    expectations.splice(expectations.indexOf(key), 1);
   }
-  var timeout = setTimeout(missingExpectations, 1000);
-  return function(err) {
-    if (err) {
-      clearTimeout(timeout);
-      application.remote._send(err);
-    } else {
-      --remaining;
-      if (!remaining) {
+
+  var checkpoint = (function(){
+    var remaining = 3; // expected number of calls to checkpoint()
+    function missingExpectations(){
+      application.remote._send('missing: ' + expectations.join(', '));
+    }
+    var timeout = setTimeout(missingExpectations, 1000);
+    return function(err) {
+      if (err) {
         clearTimeout(timeout);
-        if (expectations.length) {
-          missingExpectations();
-        } else {
-          application.remote._send(null, 1);
+        application.remote._send(err);
+      } else {
+        --remaining;
+        if (!remaining) {
+          clearTimeout(timeout);
+          if (expectations.length) {
+            missingExpectations();
+          } else {
+            application.remote._send(null, 1);
+          }
         }
       }
+    };
+  })();
+
+  function shouldEqual(val, exp, name) {
+    checkpoint(val == exp ? null :
+      'expected ' + (name || '') + ' == "' + exp + '", got: "' + val + '"');
+  }
+
+  var console = {
+    log: function(value){
+      success('call to console.log()');
+      shouldEqual(value, '{{expectedValue}}');
     }
   };
+
+  var XMLHttpRequest = function(){};
+  XMLHttpRequest.prototype.open = function(method, url){
+    success('call to xhr.open()');
+    shouldEqual((method || '').toUpperCase(), 'GET', 'method');
+    shouldEqual(url || '', '{{{url}}}', 'url');
+  };
+  XMLHttpRequest.prototype.send = function(){
+    success('call to xhr.send()');
+    var _this = this;
+    setTimeout(function(){
+      // intermediate call
+      _this.readyState = 1;
+      _this.responseText = null;
+      _this.onreadystatechange();
+    }, 10);
+    setTimeout(function(){
+      // final response call
+      _this.readyState = 4;
+      _this.status = 200;
+      _this.responseText = '{ "{{prop}}": "{{expectedValue}}" }';
+      _this.onreadystatechange();
+    }, 20);
+  };
+
+  _runStudentCode();
 })();
-
-function shouldEqual(val, exp, name) {
-  checkpoint(val == exp ? null :
-    'expected ' + (name || '') + ' == "' + exp + '", got: "' + val + '"');
-}
-
-var console = {
-  log: function(value){
-    success('call to console.log()');
-    shouldEqual(value, '{{expectedValue}}');
-  }
-};
-
-var XMLHttpRequest = function(){};
-XMLHttpRequest.prototype.open = function(method, url){
-  success('call to xhr.open()');
-  shouldEqual((method || '').toUpperCase(), 'GET', 'method');
-  shouldEqual(url || '', '{{{url}}}', 'url');
-};
-XMLHttpRequest.prototype.send = function(){
-  success('call to xhr.send()');
-  var _this = this;
-  setTimeout(function(){
-    // intermediate call
-    _this.readyState = 1;
-    _this.responseText = null;
-    _this.onreadystatechange();
-  }, 10);
-  setTimeout(function(){
-    // final response call
-    _this.readyState = 4;
-    _this.status = 200;
-    _this.responseText = '{ "{{prop}}": "{{expectedValue}}" }';
-    _this.onreadystatechange();
-  }, 20);
-};
 ```
 ---
 
@@ -91,54 +95,57 @@ XMLHttpRequest.prototype.send = function(){
 ???
 ```js
 // TODO: allow calls to alert();
-var expectations = [
-  'call to xhr.open()',
-  'call to xhr.send()'
-];
+(function evaluateStudentCode(){
+  var expectations = [
+    'call to xhr.open()',
+    'call to xhr.send()'
+  ];
 
-function success(key) {
-  expectations.splice(expectations.indexOf(key), 1);
-}
-
-var checkpoint = (function(){
-  var remaining = 3; // expected number of calls to checkpoint()
-  function missingExpectations(){
-    application.remote._send('missing: ' + expectations.join(', '));
+  function success(key) {
+    expectations.splice(expectations.indexOf(key), 1);
   }
-  var timeout = setTimeout(missingExpectations, 1000);
-  return function(err) {
-    if (err) {
-      clearTimeout(timeout);
-      application.remote._send(err);
-    } else {
-      --remaining;
-      if (!remaining) {
+
+  var checkpoint = (function(){
+    var remaining = 3; // expected number of calls to checkpoint()
+    function missingExpectations(){
+      application.remote._send('missing: ' + expectations.join(', '));
+    }
+    var timeout = setTimeout(missingExpectations, 1000);
+    return function(err) {
+      if (err) {
         clearTimeout(timeout);
-        if (expectations.length) {
-          missingExpectations();
-        } else {
-          application.remote._send(null, 1);
+        application.remote._send(err);
+      } else {
+        --remaining;
+        if (!remaining) {
+          clearTimeout(timeout);
+          if (expectations.length) {
+            missingExpectations();
+          } else {
+            application.remote._send(null, 1);
+          }
         }
       }
-    }
+    };
+  })();
+
+  function shouldEqual(val, exp, name) {
+    checkpoint(val == exp ? null :
+      'expected ' + (name || '') + ' == "' + exp + '", got: "' + val + '"');
+  }
+
+  var XMLHttpRequest = function(){};
+  XMLHttpRequest.prototype.open = function(method, url){
+    success('call to xhr.open()');
+    shouldEqual((method || '').toUpperCase(), 'POST', 'method');
+    shouldEqual(url || '', 'https://js-httpbin.herokuapp.com/post', 'url');
   };
+  XMLHttpRequest.prototype.send = function(data){
+    success('call to xhr.send()');
+    shouldEqual(data, JSON.stringify({ '{{prop}}': '{{val}}' }), 'data');
+  };
+  _runStudentCode();
 })();
-
-function shouldEqual(val, exp, name) {
-  checkpoint(val == exp ? null :
-    'expected ' + (name || '') + ' == "' + exp + '", got: "' + val + '"');
-}
-
-var XMLHttpRequest = function(){};
-XMLHttpRequest.prototype.open = function(method, url){
-  success('call to xhr.open()');
-  shouldEqual((method || '').toUpperCase(), 'POST', 'method');
-  shouldEqual(url || '', 'https://js-httpbin.herokuapp.com/post', 'url');
-};
-XMLHttpRequest.prototype.send = function(data){
-  success('call to xhr.send()');
-  shouldEqual(data, JSON.stringify({ '{{prop}}': '{{val}}' }), 'data');
-};
 /*
 // expected solution:
 var xhr = new XMLHttpRequest();
@@ -155,7 +162,8 @@ Cette fonction ne doit ni afficher d'alerte modale, ni écrire dans la console. 
 
 ???
 ```js
-setTimeout(function(){
+_runStudentCode();
+(function evaluateStudentCode(){
   var done = application.remote._send;
   try { plusUn; } catch(e) { done('plusUn is not defined'); return; };
   if (typeof plusUn != 'function') done('plusUn() definition not found');
@@ -163,7 +171,7 @@ setTimeout(function(){
   else if (plusUn(2) != 3) done('plusUn(2) != 3');
   else if (plusUn(-99) != -98) done('plusUn(-99) != -98');
   else done(null, 1);
-}, 10);
+  })();
 ```
 
 ---
@@ -174,19 +182,24 @@ Supposons que vous disposiez d'une fonction `plusUn` définie telle que dans la 
 
 ???
 ```js
-var done = application.remote._send;
-function plusUn(p) { return parseInt(p) + 1; }
-function prompt() { return '8' };
-function alert(r) {
-  if (r != 9) {
-    done('if user types 8, alert should show 9');
-  } else {
-    done(null, 1);
+(function evaluateStudentCode(){
+  var done = application.remote._send;
+  var called = false;
+  function plusUn(p) { return parseInt(p) + 1; }
+  function prompt() { return '8' };
+  function alert(r) {
+    called = true;
+    if (r != 9) {
+      done('if user types 8, alert should show 9');
+    } else {
+      done(null, 1);
+    }
+  };
+  _runStudentCode(); // should call alert()
+  if (!called) {
+    done('alert() was not called');
   }
-};
-setTimeout(function(){
-  done('alert() was not called');
-}, 10);
+})();
 ```
 
 ---
@@ -202,16 +215,17 @@ Utilisez `% 2` (opérateur modulo) pour savoir si un nombre est pair ou impair.
 
 ???
 ```js
-var done = application.remote._send;
-var output = [];
-var console = { log: output.push.bind(output) };
-var expected = [];
-for (var i = 1; i <= 100; ++i) {
-  if (i % 2 == {{_modRes}}) {
-    expected.push(i);
+(function evaluateStudentCode(){
+  var done = application.remote._send;
+  var output = [];
+  var console = { log: output.push.bind(output) };
+  var expected = [];
+  for (var i = 1; i <= 100; ++i) {
+    if (i % 2 == {{_modRes}}) {
+      expected.push(i);
+    }
   }
-}
-setTimeout(function(){
+  _runStudentCode();
   var outputFirsts = output.slice(0, 2).join(',');
   var expectedFirsts = expected.slice(0, 2).join(',');
   if (outputFirsts != expectedFirsts) {
@@ -225,7 +239,7 @@ setTimeout(function(){
   } else {
     done(null, 1);
   }
-}, 10);
+})();
 ```
 
 ---
@@ -242,7 +256,8 @@ Pour créer un tableau vide, il suffit d'écrire `[]`.
 
 ???
 ```js
-setTimeout(function(){
+(function evaluateStudentCode(){
+  _runStudentCode();
   var done = application.remote._send;
   function makeExpectedArray(n) {
     var expected = [];
@@ -276,7 +291,7 @@ setTimeout(function(){
     return;
   }
   done(null, 1);
-}, 10);
+})();
 ```
 
 ---
@@ -290,7 +305,8 @@ Le tableau résultant ne doit contenir que des {{fr}}, et donc aucune valeur `nu
 
 ???
 ```js
-setTimeout(function(){
+(function evaluateStudentCode(){
+  _runStudentCode();
   var done = application.remote._send;
   function makeExpectedArray(a) {
     var expected = [];
@@ -326,7 +342,7 @@ setTimeout(function(){
     return;
   }
   done(null, 1);
-}, 10);
+})();
 ```
 
 ---
