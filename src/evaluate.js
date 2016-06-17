@@ -1,11 +1,16 @@
 // This script loads and evaluates answers submitted by students from Firebase.
 
+var fs = require('fs');
 var async = require('async');
 var Firebase = require('firebase');
 var QuizzEvaluator = require('./QuizzEvaluator.js');
 var CodeEvaluator = require('./CodeEvaluator.js');
 
 var FIREBASE_URL = 'https://js-exam.firebaseio.com';
+// outputs
+
+var SCORES_FILE = './scores.csv';
+
 var SOLUTIONS_FILE = './ex.1.quizz.solutions.json';
 var TESTS_FILE = './ex.2.code.tests.json';
 
@@ -74,7 +79,8 @@ function evaluateStudent(student, next) {
     console.log('  => code score:', res.score, '/', res.length);
     console.log();
     console.log('=> TOTAL STUDENT SCORE:', totalScore, '/', totalPoints);
-    next();
+    var csv = [ student.key, totalScore ];
+    fs.appendFile(SCORES_FILE, csv.toString() + '\n', next);
   });
 }
 
