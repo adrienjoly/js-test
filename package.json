@@ -2,6 +2,10 @@
   "name": "js-exam",
   "version": "1.0.0",
   "description": "Javascript Exam",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/adrienjoly/js-exam.git"
+  },
   "dependencies": {
     "async": "^1.5.2",
     "bower": "^1.7.9",
