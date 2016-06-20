@@ -10,7 +10,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 (function(document) {
   'use strict';
 
-  var PUBLIC_TEST_MODE = false; // TODO: set to false to activate Google Login
+  var PUBLIC_TEST_MODE = true; // TODO: set to false to restrict acccess and identify students using Google Login
   var PAGE_TITLE = 'Javascript Exam';
   var FIREBASE_URL = 'https://js-exam.firebaseio.com';
   var GOOGLE_CLIENT_ID = '247219641427-vs70sb2354ug6kafth4sm8mf8en4g1sb.apps.googleusercontent.com'; // generated from https://console.developers.google.com/apis/credentials?project=eemi-own-exam&authuser=1
