@@ -33,7 +33,7 @@ How to evaluate students' answers
 ---------------------------------
 
 - Toggle the `active` property (to `1` or `0`) of your Firebase database, to (de-)activate student access to the questionnaire,
-- Run `npm run eval` to evaluate the score of your students from Firebase.
+- Run `npm run eval` to compute the scores of your students (from the Firebase database) to `scores.csv`.
 
 TODO
 ----
