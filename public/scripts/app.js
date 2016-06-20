@@ -287,10 +287,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
   // FOR PUBLIC TESTING: fakes Google Login
   if (PUBLIC_TEST_MODE) {
+    var id = Math.floor(999 * Math.random()); // variant is based on user id => randomize it
     onLogin({
-      id: Math.floor(999 * Math.random()), // variant is based on user id => randomize it
-      name: 'Demo User',
-      email: 'demo-user@example.com',
+      id: id,
+      name: 'Demo User #' + id,
+      email: 'demo-user-' + id + '@example.com',
       token: 'XXX'
     }/*, true*/);
     app.loggedIn = true;
