@@ -15,30 +15,25 @@ Usage:
 ------
 
 - Clone the repo locally
-- Run `npm install`
-- Run `npm start`
-- Open [localhost:8000](http://localhost:8000)
-
-Updating the exercise data:
----------------------------
-
-- Update the exercise template (`exercice.template.md`) using Markdown formatting and Mustache variables,
-- Update `public/data/exercice.variant.*.json` files to set up variant-specific values for Mustache variables defined above,
-- Run `npm run build` to render/generate final markdown files for each variant.
+- Run `npm install` to install dependencies,
+- Update exercises (`ex.1.quizz.template.md` and `ex.2.code.template.md`) using Markdown formatting and Mustache variables,
+- Run `npm run build` to compile exercise data into `/public/scripts/exercices.js`,
+- Run `npm start` to start the web server locally,
+- Open [localhost:8000](http://localhost:8000) to test the web client locally.
 
 How to deploy:
 --------------
 
-- Change Firebase's URL (from `public/scripts/app.js`) to your own instance
-- Change Google's client ID (from `public/index.html`) to work with your own domain name (or localhost)
-- Protect your Firebase database to prevent data alteration/loss (cf comments in `./scripts/app.js`)
-- Run `npm run deploy` to push the project to production on Firebase Hosting (based on `firebase.json`)
+- Change Firebase's URL (from `public/scripts/app.js`) to your own back-end instance,
+- Change Google's client ID (from `public/index.html`) so that students can identify using your own google apps domain name (or localhost),
+- Protect your Firebase database to prevent data alteration/loss (cf comments in `./scripts/app.js`),
+- Run `npm run deploy` to push the project to production on Firebase Hosting (as defined in `firebase.json`).
 
 How to evaluate students' answers
 ---------------------------------
 
-- Toggle the `active` property (1 or 0) of your Firebase database to (de-)activate student access to the questionnaire
-- Run `npm run eval` to evaluate the score of your students from Firebase
+- Toggle the `active` property (to `1` or `0`) of your Firebase database, to (de-)activate student access to the questionnaire,
+- Run `npm run eval` to evaluate the score of your students from Firebase.
 
 TODO
 ----
