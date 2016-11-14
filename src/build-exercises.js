@@ -5,8 +5,6 @@ var fs = require('fs');
 var mustache = require('mustache');
 var QuizzRenderer = require('./QuizzRenderer');
 
-var PARTS_SEPARATOR = '???';
-
 var PATH_SOURCE = './';
 var OUTPUT_FILE = './public/scripts/exercises.js';
 
@@ -37,9 +35,8 @@ function renderCodeExercise(exerciseData, exNumber) {
   var questions = exerciseData.renderJsonQuestions().map(function(question, q) {
     var variants = _.map(question.choices, 'text').map(JSON.parse);
     variants = variants.length > 0 ? variants : [{}]; // also render coding questions that don't have any variants
-    var parts = question.md.split(PARTS_SEPARATOR);
-    var exText = parts[0];
-    var exEval = parts[1];
+    var exText = question.md;
+    var exEval = question.mdSolution;
     if (exEval) {
       exEval = exEval.replace(/```js\n*/g, '').replace(/```\n*/g, '');
     }

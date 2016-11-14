@@ -11,7 +11,8 @@
         {
           "i": 1,
           "id": "qcm1",
-          "md": "Que renvoie `typeof` quand il est appliqué sur `\"bonjour\"` ?\n",
+          "md": "Que renvoie `typeof` quand il est appliqué sur `\"bonjour\"` ?\n\n\n",
+          "mdSolution": "\n\nPour le savoir, taper `typeof \"bonjour\";` dans la console JavaScript.",
           "choices": [
             {
               "name": 1,
