@@ -10,9 +10,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 (function(document) {
   'use strict';
 
-  var PUBLIC_TEST_MODE = true; // TODO: set to false to restrict acccess and identify students using Google Login
+  var PUBLIC_TEST_MODE = false; // TODO: set to false to restrict acccess and identify students using Google Login
   var DISPLAY_SOLUTIONS_ON_SUBMIT = true; // TODO: set to false, for real exams
-  var PAGE_TITLE = 'Javascript Exam';
   var PAGE_TITLE = 'QCM JavaScript 1';
   var FIREBASE_CONFIG = {
     apiKey: "AIzaSyBph4tUdL5wcWOg-lHR8JeSyY08RSIrnMI",
@@ -23,7 +22,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   };
   var GOOGLE_CLIENT_ID = '247219641427-vs70sb2354ug6kafth4sm8mf8en4g1sb.apps.googleusercontent.com'; // generated from https://console.developers.google.com/apis/credentials?project=eemi-own-exam&authuser=1
   var GOOGLE_CLIENT_DOMAIN = 'eemi.com'; // to restrict access to users from a certain domain only
-  var LOGIN_INVITE = 'Veuillez vous connecter à votre compte EEMI en utilisant le bouton ci-dessous svp:';
+  var LOGIN_INVITE = 'Se connecter à son compte EEMI:';
 
   /* firebase security rules:
   {

@@ -1,10 +1,10 @@
 {
-  "name": "js-exam",
+  "name": "js-test-1",
   "version": "1.1.0",
-  "description": "Javascript Exam",
+  "description": "QCM JavaScript 1",
   "repository": {
     "type" : "git",
-    "url" : "https://github.com/adrienjoly/js-exam.git"
+    "url" : "https://github.com/cours-javascript-eemi-2016-2017/js-test-1.git"
   },
   "dependencies": {
     "async": "^1.5.2",
