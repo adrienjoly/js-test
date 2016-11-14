@@ -148,7 +148,7 @@
                           </zero-md>
 
                           <template is="dom-if" if="{{exercise.isQuizz}}">
-                            <my-qcm data-id$="[[question.id]]" on-tap="onChange" items="{{question.choices}}" value="[[myAnswersItem(myAnswers.*, question.id)]]"></my-qcm>
+                            <my-qcm data-id$="[[question.id]]" on-answer="onChange" items="{{question.choices}}" value="[[myAnswersItem(myAnswers.*, question.id)]]"></my-qcm>
                             <template is="dom-if" if="{{showSolutions}}">
                               <zero-md class="solution" text="{{question.mdSolution}}" file="{{question.mdSolutionFile}}">
                                 <!-- Remember to pass in empty container of class="md-html". -->

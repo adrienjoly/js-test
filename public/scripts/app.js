@@ -256,9 +256,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     };
     // when user changes an answer
     app.onChange = function(evt) {
-      var qcmComponent = evt.currentTarget;
-      var choiceValue = qcmComponent.value; // or this.value
-      var choiceId = qcmComponent.getAttribute('data-id');
+      var choiceValue = evt.detail.value; // or this.value
+      var choiceId = evt.detail.id;
       var upd = {};
       upd[choiceId] = choiceValue;
       //app.set('myAnswers.' + choiceId, choiceValue);

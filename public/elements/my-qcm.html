@@ -9,9 +9,9 @@
         display: block;
       }
     </style>
-    <paper-radio-group allow-empty-selection selected="{{value::paper-radio-group-changed}}">
+    <paper-radio-group on-change="handleAnswer" allow-empty-selection selected="{{value}}">
       <template is="dom-repeat" items="{{items}}">
-        <paper-radio-button name$="{{item.name}}">{{item.text}}</paper-radio-button><br>
+        <paper-radio-button name$="[[item.name]]">{{item.text}}</paper-radio-button><br>
       </template>
     </paper-radio-group>
   </template>
@@ -31,6 +31,13 @@
             type: Array,
             //notify: true // no need
           }
+        },
+        handleAnswer: function(e) {
+          this.fire('answer', {
+            qcmComponent: this,
+            id: this.getAttribute('data-id'),
+            value: e.target.getAttribute('name'),
+          });
         },
         ready: function() {
           var sampleItems = [
