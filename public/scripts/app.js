@@ -11,6 +11,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   'use strict';
 
   var PUBLIC_TEST_MODE = true; // TODO: set to false to restrict acccess and identify students using Google Login
+  var DISPLAY_SOLUTIONS_ON_SUBMIT = true; // TODO: set to false, for real exams
   var PAGE_TITLE = 'Javascript Exam';
   var FIREBASE_URL = 'https://js-exam.firebaseio.com';
   var GOOGLE_CLIENT_ID = '247219641427-vs70sb2354ug6kafth4sm8mf8en4g1sb.apps.googleusercontent.com'; // generated from https://console.developers.google.com/apis/credentials?project=eemi-own-exam&authuser=1
@@ -74,6 +75,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   app.myAnswers = {}; // will be populated from firebase after login
   app.hashedAnswers = '';
   app.active = false;
+  app.showSolutions = false;
 
   // disable/enable user entry based on the `active` value in the Firebase DB
   function onBackEndStatus(snapshot) {
@@ -267,15 +269,21 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         upd[codes[i].getAttribute('data-id')] = codes[i].value;
       }
       */
-      sendAnswersToBackend(upd, function(err) {
-        if (err) {
-          console.error('onSubmitExam -> firebase:', err);
-          alert('Une erreur est survenue lors du rendu de votre copie. Prévenez votre enseignant.');
-        } else {
-          app.scrollPageToTop();
-        }
-        // => the page will de-activate after onStoredUserAnswers() is called by Firebase
-      });
+      if (DISPLAY_SOLUTIONS_ON_SUBMIT) {
+        app.showSolutions = true;
+        app.scrollPageToTop();
+        // TODO: compute and display student score
+      } else {
+        sendAnswersToBackend(upd, function(err) {
+          if (err) {
+            console.error('onSubmitExam -> firebase:', err);
+            alert('Une erreur est survenue lors du rendu de votre copie. Prévenez votre enseignant.');
+          } else {
+            app.scrollPageToTop();
+          }
+          // => the page will de-activate after onStoredUserAnswers() is called by Firebase
+        });
+      }
     }
   };
 

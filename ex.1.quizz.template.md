@@ -7,6 +7,10 @@ Que renvoie `typeof` quand il est appliqué sur `"bonjour"` ?
 - `"object"`
 - `undefined`
 
+???
+
+Pour le savoir, taper `typeof "bonjour";` dans la console JavaScript.
+
 ---
 
 Que renvoie `typeof` quand il est appliqué sur un tableau ?

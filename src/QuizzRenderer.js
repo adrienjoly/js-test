@@ -4,6 +4,8 @@
 
 // helpers
 
+var PARTS_SEPARATOR = '???';
+
 var CHOICE = /^[-\*] (.+)$/;
 
 function getTrimmedLines(str) {
@@ -30,15 +32,20 @@ function renderQuestion(lines, index) {
       text: line.replace(CHOICE, '$1').replace(/`/g, '')
     };
   }
-  var code = [];
+  // 1) extract choices from exercise
+  var mdText = [];
   var choices = [];
-  lines.forEach(function(line) {
-    (isChoice(line) ? choices : code).push(line);
+    lines.forEach(function(line) {
+    (isChoice(line) ? choices : mdText).push(line);
   });
+  // 2) separate exercise text and solution
+  var mdTextParts = mdText.join('\n').split(PARTS_SEPARATOR);
+  // 3) output:
   return {
     i: index + 1,
     id: 'qcm' + (index + 1),
-    md: code.join('\n'),
+    md: mdTextParts[0],
+    mdSolution: mdTextParts[1], // TODO: store solution in a separate file (like for code exercises)
     choices: choices.map(renderOption)
   };
 }
