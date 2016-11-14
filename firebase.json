@@ -1,9 +1,11 @@
 {
-  "firebase": "js-exam",
+ "hosting": {
+  "firebase": "js-test-1",
   "public": "./public",
   "ignore": [
     "firebase.json",
     "**/.*",
     "**/node_modules/**"
   ]
+ }
 }

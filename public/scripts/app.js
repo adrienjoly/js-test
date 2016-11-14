@@ -13,7 +13,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   var PUBLIC_TEST_MODE = true; // TODO: set to false to restrict acccess and identify students using Google Login
   var DISPLAY_SOLUTIONS_ON_SUBMIT = true; // TODO: set to false, for real exams
   var PAGE_TITLE = 'Javascript Exam';
-  var FIREBASE_URL = 'https://js-exam.firebaseio.com';
+  var PAGE_TITLE = 'QCM JavaScript 1';
+  var FIREBASE_CONFIG = {
+    apiKey: "AIzaSyBph4tUdL5wcWOg-lHR8JeSyY08RSIrnMI",
+    authDomain: "js-test-1.firebaseapp.com",
+    databaseURL: "https://js-test-1.firebaseio.com",
+    storageBucket: "",
+    messagingSenderId: "94278989407"
+  };
   var GOOGLE_CLIENT_ID = '247219641427-vs70sb2354ug6kafth4sm8mf8en4g1sb.apps.googleusercontent.com'; // generated from https://console.developers.google.com/apis/credentials?project=eemi-own-exam&authuser=1
   var GOOGLE_CLIENT_DOMAIN = 'eemi.com'; // to restrict access to users from a certain domain only
   var LOGIN_INVITE = 'Veuillez vous connecter à votre compte EEMI en utilisant le bouton ci-dessous svp:';
@@ -33,6 +40,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     }
   }
   */
+
+  var firebaseDB = firebase.initializeApp(FIREBASE_CONFIG).database();
 
   function pickVariant (variants, id) {
     // modulo that also works for big integers
@@ -100,7 +109,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     }));
     if (offline) return;
     var userHash = userData.email.split('@')[0].replace(/[^\w]/g, '_');
-    app.backend = new Firebase(FIREBASE_URL + '/submissions/' + userHash);
+    app.backend = firebaseDB.ref('/submissions/' + userHash);
     app.backend.on('value', function onStoredUserAnswers(snapshot) {
       // called on launch, and right after firebase data updates (even if offline)
       app.myAnswers = snapshot.val() || {}; // make sure that local state = remote state
@@ -116,7 +125,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     app.backend.on('child_added', onStoredAnswers);
     app.backend.on('child_changed', onStoredAnswers); // only fired when online
     */
-    (new Firebase(FIREBASE_URL + '/active')).on('value', onBackEndStatus);
+    (firebaseDB.ref('/active')).on('value', onBackEndStatus);
   }
 
   window.addEventListener('google-signin-success', function() {
@@ -155,7 +164,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       toggleLoadingSpinner(id, true);
     }
     // add metadata and send to firebase
-    upd._t = Firebase.ServerValue.TIMESTAMP;
+    upd._t = firebase.database.ServerValue.TIMESTAMP;
     upd._d = Date();
     upd._uid = app.user.id; // will be used to re-generate the variant number during evaluation
     app.backend.update(upd, callback || function(err) {

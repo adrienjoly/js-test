@@ -10,5 +10,8 @@
     "page": "~1.7.1",
     "paper-elements": "~1.0.7",
     "iron-elements": "~1.0.9"
+  },
+  "resolutions": {
+    "polymer": "~1.4.0"
   }
 }
