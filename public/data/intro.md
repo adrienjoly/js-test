@@ -1,4 +1,3 @@
-- Chaque question est indépendante des autres.
 - Tous documents et usage de Google Chrome autorisés.
 - Communication ou usage d'un moyen de communication (email, chat, sms...) => note de 0.
 - Copiage => note de 0 pour les étudiants concernés.

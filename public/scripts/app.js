@@ -20,7 +20,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     storageBucket: "",
     messagingSenderId: "94278989407"
   };
-  var GOOGLE_CLIENT_ID = '247219641427-vs70sb2354ug6kafth4sm8mf8en4g1sb.apps.googleusercontent.com'; // generated from https://console.developers.google.com/apis/credentials?project=eemi-own-exam&authuser=1
+  var GOOGLE_CLIENT_ID = '247219641427-ifeq88p7rgor9al5ksduds7ug0ba7djr.apps.googleusercontent.com'; // generated from https://console.developers.google.com/apis/credentials?project=eemi-own-exam&authuser=1
   var GOOGLE_CLIENT_DOMAIN = 'eemi.com'; // to restrict access to users from a certain domain only
   var LOGIN_INVITE = 'Se connecter à son compte EEMI:';
 

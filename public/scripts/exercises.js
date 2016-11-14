@@ -11,8 +11,32 @@
         {
           "i": 1,
           "id": "qcm1",
-          "md": "Que renvoie `typeof` quand il est appliqué sur `\"bonjour\"` ?\n\n\n",
-          "mdSolution": "\n\nPour le savoir, taper `typeof \"bonjour\";` dans la console JavaScript.",
+          "md": "Comment ouvrir la console JavaScript dans Google Chrome ?\n\n\n",
+          "mdSolution": "\n\nRéponse: *en pressant Cmd-Alt-J ou Ctrl-Shift-J*",
+          "choices": [
+            {
+              "name": 1,
+              "text": "En tapant \"console\""
+            },
+            {
+              "name": 2,
+              "text": "En appelant le prof"
+            },
+            {
+              "name": 3,
+              "text": "En demandant gentiment à Siri"
+            },
+            {
+              "name": 4,
+              "text": "En pressant Cmd-Alt-J ou Ctrl-Shift-J"
+            }
+          ]
+        },
+        {
+          "i": 2,
+          "id": "qcm2",
+          "md": "Que retourne `typeof` quand il est appliqué sur `\"bonjour\"` ?\n\n\n",
+          "mdSolution": "\n\nRéponse: `\"string\"`.\nPour le vérifier, taper `typeof \"bonjour\";` dans la console JavaScript.",
           "choices": [
             {
               "name": 1,
@@ -33,332 +57,123 @@
           ]
         },
         {
-          "i": 2,
-          "id": "qcm2",
-          "md": "Que renvoie `typeof` quand il est appliqué sur un tableau ?\n",
-          "choices": [
-            {
-              "name": 1,
-              "text": "\"array\""
-            },
-            {
-              "name": 2,
-              "text": "array"
-            },
-            {
-              "name": 3,
-              "text": "\"object\""
-            },
-            {
-              "name": 4,
-              "text": "undefined"
-            }
-          ]
-        },
-        {
           "i": 3,
           "id": "qcm3",
-          "md": "```js\nvar tab = [ 's', 'u', 'p', 'e', 'r' ];\n```\n\nSi je veux afficher une alerte modale seulement quand la valeur de `lettre` n'est pas contenue dans `tab`, quelle condition dois-je utiliser dans mon `if` ?\n",
+          "md": "Types de valeurs en JavaScript. Quel est l'intrus ?\n\n\n",
+          "mdSolution": "\n\nRéponse: `decimal` était l'intrus.\nEn JavaScript, les nombres décimaux sont compris dans le type `number`.\nVérifier en tapant `typeof 4.5;` dans la console.",
           "choices": [
             {
               "name": 1,
-              "text": "tab[lettre] == false"
+              "text": "string"
             },
             {
               "name": 2,
-              "text": "tab[lettre] == -1"
+              "text": "boolean"
             },
             {
               "name": 3,
-              "text": "tab.indexOf(lettre) == false"
+              "text": "decimal"
             },
             {
               "name": 4,
-              "text": "tab.indexOf(lettre) == -1"
+              "text": "number"
             }
           ]
         },
         {
           "i": 4,
           "id": "qcm4",
-          "md": "```js\n// la bibliothèque \"underscore\" a été chargée dans l'objet \"_\"\nvar template = '<%= nb %> lutin<%= pl %>';\nvar nombre = 3;\nvar rendu = _.template(template, {\n  nb: nombre,\n  pl: 's'\n});\n```\n\nQue vaut la variable `rendu` ?\n",
+          "md": "Comment créer une variable en JavaScript ?\n\n\n",
+          "mdSolution": "\n\nRéponse: `var maVariable;`\nPour créer une variable, il faut utiliser le mot-clé `var`.\nAprès, il est possible de changer la valeur de cette variable sans avoir à utiliser `var`.\nIl est aussi possible d'affecter une valeur à cette variable au moment de sa création: `var maVariable = 4;`",
           "choices": [
             {
               "name": 1,
-              "text": "\"3 lutins\""
+              "text": "maVariable;"
             },
             {
               "name": 2,
-              "text": "\"trois lutins\""
+              "text": "var maVariable;"
             },
             {
               "name": 3,
-              "text": "\"3 lutin\""
+              "text": "x = 0;"
             },
             {
               "name": 4,
-              "text": "\"nombre lutins?\""
+              "text": "maVariable = 'bonjour';"
             }
           ]
         },
         {
           "i": 5,
           "id": "qcm5",
-          "md": "Je crée un tableau `[ 'a', 'b', 'c' ]`, puis j'utilise successivement les méthodes `push('d')` et `splice(1, 2)` sur ce tableau. Que contient le tableau à la fin ?\n",
+          "md": "Comment afficher la valeur d'une variable appelée `maVariable` depuis la console ?\n\n\n",
+          "mdSolution": "\n\nRéponse: `maVariable;`\nDans la console JavaScript, il suffit de taper le nom du variable pour afficher sa valeur, de la même façon que taper `1+1` provoquera l'affichage de `2`.\nLe point virgule n'est pas imposé par la console JavaScript, mais c'est une convention à suivre.",
           "choices": [
             {
               "name": 1,
-              "text": "[ 'a', 'b', 'c' ]"
+              "text": "maVariable;"
             },
             {
               "name": 2,
-              "text": "[ 'a', 'b', 'c', 'd' ]"
+              "text": "var maVariable;"
             },
             {
               "name": 3,
-              "text": "[ 'b' ]"
+              "text": "maVariable?"
             },
             {
               "name": 4,
-              "text": "[ 'a', 'd' ]"
+              "text": "show maVariable"
             }
           ]
         },
         {
           "i": 6,
           "id": "qcm6",
-          "md": "Pour stocker des données dans un back-end Firebase en Javascript, qu'ai-je besoin de faire ?\n",
+          "md": "Comment changer la valeur d'une variable existante ? (déjà créée)\n\n\n",
+          "mdSolution": "\n\nRéponse: `maVariable = 4;`\nLe mot-clé `var` n'est à utiliser que lorsque la variable n'a pas encore été créée.\nL'usage des parenthèses dans `maVariable(4);` provoque l'appel d'une fonction appelée `maVariable` en passant la valeur `4` en paramètre.\nEnfin, l'opérateur d'affectation stocke la valeur à droite du `=` dans la variable à gauche du `=`, donc `4 = maVariable` n'a pas de sens car `4` n'est pas une variable.",
           "choices": [
             {
               "name": 1,
-              "text": "Je dois effectuer une requête Ajax avec XMLHttpRequest"
+              "text": "var maVariable = 4;"
             },
             {
               "name": 2,
-              "text": "Je uploader un fichier JSON sur le serveur de Firebase"
+              "text": "maVariable = 4;"
             },
             {
               "name": 3,
-              "text": "Je dois utiliser une fonction de l'API de Firebase comme push() ou update()"
+              "text": "maVariable(4);"
             },
             {
               "name": 4,
-              "text": "Je dois utiliser un bouton Google Connect pour m'identifier"
+              "text": "4 = maVariable;"
             }
           ]
         },
         {
           "i": 7,
           "id": "qcm7",
-          "md": "Si `typeof x` vaut `\"object\"`, et `x.length` vaut `undefined`, quel est le type de la variable `x` ?\n",
+          "md": "Si j'ai créé une variable dont la valeur est un nombre, que se passera-t-il si je lui affecte ensuite une chaine de caractères ?\n\n\n",
+          "mdSolution": "\n\nRéponse: *la valeur de la variable va être remplacée par la chaine de caractères.*\nL'affectation consiste à utiliser l'opérateur `=` pour remplacer la valeur d'une variable par une autre valeur.\nPour effectuer une concaténation, il faut utiliser l'opérateur `+`, et non l'opérateur d'affectation.\nJavaScript est un langage faiblement typé, il est donc possible d'affecter une valeur de n'importe quel type à n'importe quelle variable.",
           "choices": [
             {
               "name": 1,
-              "text": "Tableau vide"
+              "text": "erreur, car le type est différent."
             },
             {
               "name": 2,
-              "text": "Objet"
+              "text": "erreur, car on ne peut pas changer la valeur d'une variable."
             },
             {
               "name": 3,
-              "text": "Chaîne de caractères vide"
+              "text": "la valeur de la variable va être remplacée par la chaine de caractères."
             },
             {
               "name": 4,
-              "text": "Valeur non définie"
+              "text": "les deux valeurs vont être concaténées."
             }
-          ]
-        },
-        {
-          "i": 8,
-          "id": "qcm8",
-          "md": "La ligne `hello();` sert à:\n",
-          "choices": [
-            {
-              "name": 1,
-              "text": "appeler la fonction hello"
-            },
-            {
-              "name": 2,
-              "text": "définir la fonction hello"
-            },
-            {
-              "name": 3,
-              "text": "afficher hello"
-            },
-            {
-              "name": 4,
-              "text": "(on ne peut pas répondre à cette question sans plus de contexte)"
-            }
-          ]
-        },
-        {
-          "i": 9,
-          "id": "qcm9",
-          "md": "```js\nhello[1] = 2\n```\n",
-          "choices": [
-            {
-              "name": 1,
-              "text": "affiche la valeur du tableau hello à l'indice 1"
-            },
-            {
-              "name": 2,
-              "text": "sert à vérifier que la valeur à l'indice 1 vaut 2"
-            },
-            {
-              "name": 3,
-              "text": "affecte la valeur 1 à l'indice 2 du tableau"
-            },
-            {
-              "name": 4,
-              "text": "remplace la valeur à l'indice 1 du tableau par 2"
-            }
-          ]
-        },
-        {
-          "i": 10,
-          "id": "qcm10",
-          "md": "Si j'ai deux conditions `if` liées par un `else`, laquelle de ces propositions est fausse:\n",
-          "choices": [
-            {
-              "name": 1,
-              "text": "les conditions sont évaluées une à une"
-            },
-            {
-              "name": 2,
-              "text": "si la seconde est vraie alors la première est ignorée"
-            },
-            {
-              "name": 3,
-              "text": "seule le code d'une des deux condition sera exécuté"
-            },
-            {
-              "name": 4,
-              "text": "il est possible qu'aucune condition ne soit vraie"
-            }
-          ]
-        },
-        {
-          "i": 11,
-          "id": "qcm11",
-          "md": "Quand on définit une fonction, que faut-il mettre entre les parenthèses qui suivent le nom de la fonction ?\n",
-          "choices": [
-            {
-              "name": 1,
-              "text": "rien"
-            },
-            {
-              "name": 2,
-              "text": "le nom de la fonction"
-            },
-            {
-              "name": 3,
-              "text": "un nom pour chaque paramètre attendu"
-            },
-            {
-              "name": 4,
-              "text": "les valeurs littérales (ex: 3) qui serviront de paramètres"
-            }
-          ]
-        },
-        {
-          "i": 12,
-          "id": "qcm12",
-          "md": "On définit une fonction `fct` qui prend un nombre en paramètre, et retourne le double de ce nombre. Comment obtenir le double de `2` en utilisant cette fonction ?\n",
-          "choices": [
-            {
-              "name": 1,
-              "text": "function fct(2)"
-            },
-            {
-              "name": 2,
-              "text": "fct(2)"
-            },
-            {
-              "name": 3,
-              "text": "fct(2, 2)"
-            },
-            {
-              "name": 4,
-              "text": "fct(2 * 2)"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "_info": "generated from ex.2.code.template.md",
-      "i": "2",
-      "isCode": true,
-      "title": "Exercices de codage",
-      "questions": [
-        {
-          "i": 1,
-          "id": "code1",
-          "mdVariants": [
-            "Écrivez le code JS permettant d'envoyer une requête Ajax de type GET à l'URL `https://js-jsonplaceholder.herokuapp.com/users/1`. Une fois la réponse reçue, votre code doit afficher dans la console seulement la valeur de la propriété `username` de cette réponse JSON.\n\n\n",
-            "Écrivez le code JS permettant d'envoyer une requête Ajax de type GET à l'URL `https://js-jsonplaceholder.herokuapp.com/users/2`. Une fois la réponse reçue, votre code doit afficher dans la console seulement la valeur de la propriété `email` de cette réponse JSON.\n\n\n",
-            "Écrivez le code JS permettant d'envoyer une requête Ajax de type GET à l'URL `https://js-jsonplaceholder.herokuapp.com/users/3`. Une fois la réponse reçue, votre code doit afficher dans la console seulement la valeur de la propriété `phone` de cette réponse JSON.\n\n\n"
-          ]
-        },
-        {
-          "i": 2,
-          "id": "code2",
-          "mdVariants": [
-            "Écrivez le code JS permettant d'envoyer une requête Ajax de type POST à l'URL `https://js-httpbin.herokuapp.com/post`, en transmettant un objet JSON contenant une propriété `username` valant `\"pierredup\"`.\n\n\n",
-            "Écrivez le code JS permettant d'envoyer une requête Ajax de type POST à l'URL `https://js-httpbin.herokuapp.com/post`, en transmettant un objet JSON contenant une propriété `school` valant `\"eemi\"`.\n\n\n",
-            "Écrivez le code JS permettant d'envoyer une requête Ajax de type POST à l'URL `https://js-httpbin.herokuapp.com/post`, en transmettant un objet JSON contenant une propriété `date` valant `\"2016\"`.\n\n\n",
-            "Écrivez le code JS permettant d'envoyer une requête Ajax de type POST à l'URL `https://js-httpbin.herokuapp.com/post`, en transmettant un objet JSON contenant une propriété `nickname` valant `\"dupont\"`.\n\n\n"
-          ]
-        },
-        {
-          "i": 3,
-          "id": "code3",
-          "mdVariants": [
-            "Définissez une fonction `plusUn` qui renvoie le nombre passé en paramètre après y avoir additionné le nombre `1`; de manière à ce que `plusUn(1)` renvoie `2`, `plusUn(2)` renvoie `3`, etc...\n\nCette fonction ne doit ni afficher d'alerte modale, ni écrire dans la console. Utilisez `return` pour renvoyer le résultat de l'addition.\n\n"
-          ]
-        },
-        {
-          "i": 4,
-          "id": "code4",
-          "mdVariants": [
-            "Supposons que vous disposiez d'une fonction `plusUn` définie telle que dans la question précédente.\n\nÉcrivez le code JS permettant de demander un nombre a l'utilisateur (à l'aide de `prompt`), d'appeler la fonction `plusUn` en passant ce nombre en paramètre, puis d'afficher le résultat de cet appel dans une alerte modale (`alert`).\n\n"
-          ]
-        },
-        {
-          "i": 5,
-          "id": "code5",
-          "mdVariants": [
-            "Écrivez une boucle qui affiche dans la console tous les nombres entiers pairs entre `1` et `100` (compris).\n\n`console.log` ne doit paraître qu'une seule fois dans votre code.\n\nUtilisez `% 2` (opérateur modulo) pour savoir si un nombre est pair ou impair.\n\n\n",
-            "Écrivez une boucle qui affiche dans la console tous les nombres entiers impairs entre `1` et `100` (compris).\n\n`console.log` ne doit paraître qu'une seule fois dans votre code.\n\nUtilisez `% 2` (opérateur modulo) pour savoir si un nombre est pair ou impair.\n\n\n"
-          ]
-        },
-        {
-          "i": 6,
-          "id": "code6",
-          "mdVariants": [
-            "Définissez une fonction `tabNombres` qui renvoie (à l'aide de `return`) un tableau contenant tous les nombres entiers entre `1` et `n` (compris), `n` étant un nombre passé en paramètre de cette fonction.\n\nCette fonction ne doit pas écrire dans la console.\n\nPour créer un tableau vide, il suffit d'écrire `[]`.\n\n\n",
-            "Définissez une fonction `jusqua` qui renvoie (à l'aide de `return`) un tableau contenant tous les nombres entiers entre `1` et `n` (compris), `n` étant un nombre passé en paramètre de cette fonction.\n\nCette fonction ne doit pas écrire dans la console.\n\nPour créer un tableau vide, il suffit d'écrire `[]`.\n\n\n",
-            "Définissez une fonction `nombres` qui renvoie (à l'aide de `return`) un tableau contenant tous les nombres entiers entre `1` et `n` (compris), `n` étant un nombre passé en paramètre de cette fonction.\n\nCette fonction ne doit pas écrire dans la console.\n\nPour créer un tableau vide, il suffit d'écrire `[]`.\n\n\n"
-          ]
-        },
-        {
-          "i": 7,
-          "id": "code7",
-          "mdVariants": [
-            "Définir une fonction `chaines` qui prend un tableau en paramètre et renvoie (à l'aide de `return`) un autre tableau contenant seulement les valeurs de type `\"string\"` contenues dans le tableau passé en paramètre.\n\nLe tableau résultant ne doit contenir que des chaînes de caractères, et donc aucune valeur `null` ou `undefined`.\n\n\n",
-            "Définir une fonction `nombres` qui prend un tableau en paramètre et renvoie (à l'aide de `return`) un autre tableau contenant seulement les valeurs de type `\"number\"` contenues dans le tableau passé en paramètre.\n\nLe tableau résultant ne doit contenir que des nombres, et donc aucune valeur `null` ou `undefined`.\n\n\n"
-          ]
-        },
-        {
-          "i": 8,
-          "id": "code8",
-          "mdVariants": [
-            "Nous allons implémenter un petit jeu consistant à deviner un nombre entier choisi aléatoirement entre `1` et `4` (compris) par l'ordinateur.\n\nÉcrire le code JS permettant de stocker ce nombre aléatoire dans une variable `choixOrdi`, de demander un nombre a l'utilisateur (à l'aide de `prompt`), puis d'afficher `\"bravo\"` dans une alerte modale (à l'aide de `alert`) si ce nombre est égal à `choixOrdi`, ou `\"il fallait deviner X\"` (en remplaçant `X` par la valeur de `choixOrdi`) dans le cas contraire.\n\n\n",
-            "Nous allons implémenter un petit jeu consistant à deviner un nombre entier choisi aléatoirement entre `1` et `4` (compris) par l'ordinateur.\n\nÉcrire le code JS permettant de stocker ce nombre aléatoire dans une variable `choixOrdi`, de demander un nombre a l'utilisateur (à l'aide de `prompt`), puis d'afficher `\"congrats\"` dans une alerte modale (à l'aide de `alert`) si ce nombre est égal à `choixOrdi`, ou `\"il fallait deviner X\"` (en remplaçant `X` par la valeur de `choixOrdi`) dans le cas contraire.\n\n\n",
-            "Nous allons implémenter un petit jeu consistant à deviner un nombre entier choisi aléatoirement entre `1` et `4` (compris) par l'ordinateur.\n\nÉcrire le code JS permettant de stocker ce nombre aléatoire dans une variable `choixOrdi`, de demander un nombre a l'utilisateur (à l'aide de `prompt`), puis d'afficher `\"yeah\"` dans une alerte modale (à l'aide de `alert`) si ce nombre est égal à `choixOrdi`, ou `\"il fallait deviner X\"` (en remplaçant `X` par la valeur de `choixOrdi`) dans le cas contraire.\n\n\n",
-            "Nous allons implémenter un petit jeu consistant à deviner un nombre entier choisi aléatoirement entre `1` et `4` (compris) par l'ordinateur.\n\nÉcrire le code JS permettant de stocker ce nombre aléatoire dans une variable `choixOrdi`, de demander un nombre a l'utilisateur (à l'aide de `prompt`), puis d'afficher `\"super\"` dans une alerte modale (à l'aide de `alert`) si ce nombre est égal à `choixOrdi`, ou `\"il fallait deviner X\"` (en remplaçant `X` par la valeur de `choixOrdi`) dans le cas contraire.\n\n\n"
           ]
         }
       ]
