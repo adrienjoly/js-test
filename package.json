@@ -20,10 +20,9 @@
   "scripts": {
     "postinstall": "bower install",
     "build": "node ./src/build-exercises.js",
-    "start": "node server.js",
-    "server": "cd public; python -m SimpleHTTPServer; cd ..",
+    "start": "npm run build; node server.js",
     "eval": "node ./src/evaluate.js",
-    "init-heroku": "heroku create",
+    "init-heroku": "heroku create js-test-2",
     "deploy": "git push heroku master"
   },
   "author": "Adrien Joly <adrien.joly@gmail.com>",
