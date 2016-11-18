@@ -20,8 +20,7 @@
   "scripts": {
     "postinstall": "bower install",
     "build": "node ./src/build-exercises.js",
-    "start": "node_modules/.bin/static public -p $PORT",
-    "start-local": "node_modules/.bin/static public",
+    "start": "node server.js",
     "server": "cd public; python -m SimpleHTTPServer; cd ..",
     "eval": "node ./src/evaluate.js",
     "init-heroku": "heroku create",
