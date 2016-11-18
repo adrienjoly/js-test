@@ -17,9 +17,9 @@
   },
   "devDependencies": {},
   "scripts": {
-    "postinstall": "cd public; bower install; cd ..",
+    "postinstall": "bower install",
     "build": "node ./src/build-exercises.js",
-    "start": "use npm run server instead. heroku will use nginx for serving static content from /public.",
+    "start": "echo use npm run server instead. heroku will use nginx for serving static content from /public.",
     "server": "cd public; python -m SimpleHTTPServer; cd ..",
     "eval": "node ./src/evaluate.js",
     "init-heroku": "heroku create --buildpack=https://github.com/heroku/heroku-buildpack-static.git",
