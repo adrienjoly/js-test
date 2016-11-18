@@ -1,10 +1,10 @@
 {
-  "name": "js-test-1",
-  "version": "1.1.0",
-  "description": "QCM JavaScript 1",
+  "name": "js-test",
+  "version": "2.0.0",
+  "description": "QCM JavaScript 2",
   "repository": {
     "type" : "git",
-    "url" : "https://github.com/cours-javascript-eemi-2016-2017/js-test-1.git"
+    "url" : "https://github.com/cours-javascript-eemi-2016-2017/js-test.git"
   },
   "dependencies": {
     "async": "^1.5.2",
@@ -21,7 +21,8 @@
     "build": "node ./src/build-exercises.js",
     "start": "cd public; python -m SimpleHTTPServer; cd ..",
     "eval": "node ./src/evaluate.js",
-    "deploy": "firebase deploy"
+    "init-heroku": "heroku create --buildpack=https://github.com/heroku/heroku-buildpack-static.git",
+    "deploy": "git push heroku master"
   },
   "author": "Adrien Joly <adrien.joly@gmail.com>",
   "license": "MIT"
