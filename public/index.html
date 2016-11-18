@@ -80,7 +80,7 @@
               <h2>Bonjour, {{user.name}}</h2>
 
               <template is="dom-if" if="{{myAnswers._submitted}}">
-
+                <!--
                 <p>Pour rendre votre copie, envoyez un email en suivant attentivement les étapes ci-dessous.</p>
                 <p>Pour éviter toute erreur, il est conseillé d'effectuer des copier-coller.</p>
 
@@ -100,6 +100,9 @@
                 </paper-material>
 
                 <p>Une fois votre email bien envoyé, vous pouvez quitter la salle d'examen. Merci !</p>
+                -->
+                <p>Votre copie a bien été rendue. Merci !</p>
+                <p>Date/heure de rendu: {{myAnswers._d}}</p> 
               </template>
 
               <template is="dom-if" if="{{!myAnswers._submitted}}">
