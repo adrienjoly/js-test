@@ -1,102 +1,90 @@
-Comment ouvrir la console JavaScript dans Google Chrome ?
+Quel section de va être exécutée, si on exécute le code suivant ?
 
-- En tapant "console"
-- En appelant le prof
-- En demandant gentiment à Siri
-* En pressant Cmd-Alt-J ou Ctrl-Shift-J
+```
+var nb = 2;
+if (nb === 1) {
+  // A
+} else {
+  // B
+}
+```
+
+- A
+* B
+- A et B
+- aucune 
 
 ???
 
-Réponse: *en pressant Cmd-Alt-J ou Ctrl-Shift-J*
+Réponse: B, car l'expression d'égalité `nb === 1` de la premiere condition est fausse,
+donc ce sont les intructions rattachées à l'alternative par défaut (`else`) qui sont exécutées.
 
 ---
 
-Que retourne `typeof` quand il est appliqué sur `"bonjour"` ?
+Quel section de va être exécutée, si on exécute le code suivant ?
 
-* `"string"`
-- `string`
-- `"object"`
-- `undefined`
+```
+var nb = 2;
+if (nb === 2) {
+  // A
+} else if (nb > 1) {
+  // B
+} else {
+  // C
+}
+```
+
+* A
+- B
+- A et B
+- A, B et C
 
 ???
 
-Réponse: `"string"`.
-Pour le vérifier, taper `typeof "bonjour";` dans la console JavaScript.
+Réponse: A. Une seule des trois alternatives peut s'exécuter, car elles sont liées par des `else`.
+Sachant que les conditions sont évaluées de haut en bas, et que la première expression est vraie,
+c'est donc la section A qui va s'exécuter.
 
 ---
 
-Types de valeurs en JavaScript. Quel est l'intrus ?
+À quoi ressemblerait l'arbre de décision correspondant à ce code:
 
-- string
-- boolean
-* decimal
-- number
+```
+var reponse = prompt('as-tu faim ?')
+if (reponse === 'oui) {
+  var reponse2 = prompt('aimes-tu les burgers ?');
+  if (reponse2 == 'oui') {
+    alert('alors je t\'en offre un !');
+  } else {
+    alert('dommage !');
+  }
+} else {
+  alert('désolé');
+}
+```
+
+- une boîte et deux branches
+- deux boîtes de même niveau
+* une boîte de niveau 1, et une boîte de niveau 2
+- une boîte et trois branches
 
 ???
 
-Réponse: `decimal` était l'intrus.
-En JavaScript, les nombres décimaux sont compris dans le type `number`.
-Vérifier en tapant `typeof 4.5;` dans la console.
+Réponse: Une première boîte (niveau 1) représente la question `as-tu faim ?`, et a deux branches: `oui` et *autre*.
+Liée à la première branche, une deuxième boîte (niveau 2) représente la question `aimes-tu les burgers ?`, et
+a elle-aussi deux branches: `oui` et *autre*.
 
 ---
 
-Comment créer une variable en JavaScript ?
+Pourquoi faut-il éviter d'utiliser les opérateurs `==` et `!=` ?
 
-- maVariable;
-* var maVariable;
-- x = 0;
-- maVariable = 'bonjour';
-
-???
-
-Réponse: `var maVariable;`
-Pour créer une variable, il faut utiliser le mot-clé `var`.
-Après, il est possible de changer la valeur de cette variable sans avoir à utiliser `var`.
-Il est aussi possible d'affecter une valeur à cette variable au moment de sa création: `var maVariable = 4;` 
-
----
-
-Comment afficher la valeur d'une variable appelée `maVariable` depuis la console ?
-
-* maVariable;
-- var maVariable;
-- maVariable?
-- show maVariable
+- car il vaut mieux utiliser une affectation `=`
+- car ils sont trop stricts
+* car ils sont trop laxistes
+- var `===` et `!==` sont plus lisibles
 
 ???
 
-Réponse: `maVariable;`
-Dans la console JavaScript, il suffit de taper le nom du variable pour afficher sa valeur, de la même façon que taper `1+1` provoquera l'affichage de `2`.
-Le point virgule n'est pas imposé par la console JavaScript, mais c'est une convention à suivre.
-
----
-
-Comment changer la valeur d'une variable existante ? (déjà créée)
-
-- var maVariable = 4;
-* maVariable = 4;
-- maVariable(4);
-- 4 = maVariable;
-
-???
-
-Réponse: `maVariable = 4;`
-Le mot-clé `var` n'est à utiliser que lorsque la variable n'a pas encore été créée.
-L'usage des parenthèses dans `maVariable(4);` provoque l'appel d'une fonction appelée `maVariable` en passant la valeur `4` en paramètre.
-Enfin, l'opérateur d'affectation stocke la valeur à droite du `=` dans la variable à gauche du `=`, donc `4 = maVariable` n'a pas de sens car `4` n'est pas une variable. 
-
----
-
-Si j'ai créé une variable dont la valeur est un nombre, que se passera-t-il si je lui affecte ensuite une chaine de caractères ?
-
-- erreur, car le type est différent.
-- erreur, car on ne peut pas changer la valeur d'une variable.
-* la valeur de la variable va être remplacée par la chaine de caractères.
-- les deux valeurs vont être concaténées.
-
-???
-
-Réponse: *la valeur de la variable va être remplacée par la chaine de caractères.*
-L'affectation consiste à utiliser l'opérateur `=` pour remplacer la valeur d'une variable par une autre valeur.
-Pour effectuer une concaténation, il faut utiliser l'opérateur `+`, et non l'opérateur d'affectation.
-JavaScript est un langage faiblement typé, il est donc possible d'affecter une valeur de n'importe quel type à n'importe quelle variable.  
+Réponse: Ils sont trop laxistes, dans le sens où deux valeurs de types différents (ex: `1` et `'1'`) peuvent
+être vus comme égaux par l'opérateur `==`. Cet excès de tolérance peut occasionner des comportements imprévus
+qui font perdre beaucoup de temps à diagnostiquer et à corriger. Idem pour `!=`.
