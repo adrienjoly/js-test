@@ -11,7 +11,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   'use strict';
 
   var PUBLIC_TEST_MODE = true; // TODO: set to false to restrict acccess and identify students using Google Login
-  var DISPLAY_SOLUTIONS_ON_SUBMIT = true; // TODO: set to false, for real exams
+  var DISPLAY_SOLUTIONS_AFTER_SUBMIT = true; // TODO: set to false, for real exams
   var PAGE_TITLE = 'QCM JavaScript 2';
   var FIREBASE_CONFIG = {
     apiKey: "AIzaSyCBkfcodGHJEJDsnh99KgpP_F3cxU58P9I",
@@ -111,6 +111,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       // called on launch, and right after firebase data updates (even if offline)
       app.myAnswers = snapshot.val() || {}; // make sure that local state = remote state
       app.hashedAnswers = JSON.stringify(app.myAnswers, null, '  ');
+      app.showSolutions = DISPLAY_SOLUTIONS_AFTER_SUBMIT && app.myAnswers._submitted;  
+      // TODO: compute and display student score
     });
     /*
     function onStoredAnswers(snapshot) {
@@ -156,6 +158,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   function sendAnswersToBackend(upd, callback) {
     if (!app.backend) return console.info('backend is not connected yet => ignoring update');
     if (!upd) return console.warn('not sending a null update to backend');
+    if (app.myAnswers._submitted) {
+      return alert('Vous ne pouvez plus changer vos réponses, après avoir rendu.');
+    }
     // ui feedback: display loading spinner on questions to be sync'ed
     for (var id in upd) {
       toggleLoadingSpinner(id, true);
@@ -274,21 +279,15 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         upd[codes[i].getAttribute('data-id')] = codes[i].value;
       }
       */
-      if (DISPLAY_SOLUTIONS_ON_SUBMIT) {
-        app.showSolutions = true;
-        app.scrollPageToTop();
-        // TODO: compute and display student score
-      } else {
-        sendAnswersToBackend(upd, function(err) {
-          if (err) {
-            console.error('onSubmitExam -> firebase:', err);
-            alert('Une erreur est survenue lors du rendu de votre copie. Prévenez votre enseignant.');
-          } else {
-            app.scrollPageToTop();
-          }
-          // => the page will de-activate after onStoredUserAnswers() is called by Firebase
-        });
-      }
+      sendAnswersToBackend(upd, function(err) {
+        if (err) {
+          console.error('onSubmitExam -> firebase:', err);
+          alert('Une erreur est survenue lors du rendu de votre copie. Prévenez votre enseignant.');
+        } else {
+          app.scrollPageToTop();
+        }
+        // => the page will de-activate after onStoredUserAnswers() is called by Firebase
+      });
     }
   };
 
