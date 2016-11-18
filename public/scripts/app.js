@@ -10,7 +10,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 (function(document) {
   'use strict';
 
-  var PUBLIC_TEST_MODE = false; // TODO: set to false to restrict acccess and identify students using Google Login
+  var PUBLIC_TEST_MODE = true; // TODO: set to false to restrict acccess and identify students using Google Login
   var DISPLAY_SOLUTIONS_ON_SUBMIT = true; // TODO: set to false, for real exams
   var PAGE_TITLE = 'QCM JavaScript 1';
   var FIREBASE_CONFIG = {
