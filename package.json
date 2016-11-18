@@ -22,7 +22,7 @@
     "start": "use npm run server instead. heroku will use nginx for serving static content from /public.",
     "server": "cd public; python -m SimpleHTTPServer; cd ..",
     "eval": "node ./src/evaluate.js",
-    "init-heroku": "heroku create --buildpack=https://github.com/heroku/heroku-buildpack-static.git; heroku buildpacks:add https://github.com/heroku/heroku-buildpack-nodejs",
+    "init-heroku": "heroku create --buildpack=https://github.com/heroku/heroku-buildpack-static.git",
     "deploy": "git push heroku master"
   },
   "author": "Adrien Joly <adrien.joly@gmail.com>",
