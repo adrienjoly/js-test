@@ -19,7 +19,7 @@
   "scripts": {
     "postinstall": "cd public; bower install; cd ..",
     "build": "node ./src/build-exercises.js",
-    "start": "cd public; python -m SimpleHTTPServer; cd ..",
+    "server": "cd public; python -m SimpleHTTPServer; cd ..",
     "eval": "node ./src/evaluate.js",
     "init-heroku": "heroku create --buildpack=https://github.com/heroku/heroku-buildpack-static.git; heroku buildpacks:add https://github.com/heroku/heroku-buildpack-nodejs",
     "deploy": "git push heroku master"
