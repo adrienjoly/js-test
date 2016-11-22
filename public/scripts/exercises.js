@@ -105,6 +105,21 @@
           ]
         }
       ]
+    },
+    {
+      "_info": "generated from ex.2.code.template.md",
+      "i": "2",
+      "isCode": true,
+      "title": "Exercices de codage",
+      "questions": [
+        {
+          "i": 1,
+          "id": "code1",
+          "mdVariants": [
+            "Implémenter une condition qui affecte `'egal'` à une variable `resultat` seulement si une autre variable `nombre` vaut strictement `4`. Indenter correctement."
+          ]
+        }
+      ]
     }
   ];
 })(document);
