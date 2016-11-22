@@ -51,9 +51,9 @@ c'est donc la section A qui va s'exécuter.
 
 ```
 var reponse = prompt('as-tu faim ?')
-if (reponse === 'oui) {
+if (reponse === 'oui') {
   var reponse2 = prompt('aimes-tu les burgers ?');
-  if (reponse2 == 'oui') {
+  if (reponse2 === 'oui') {
     alert('alors je t\'en offre un !');
   } else {
     alert('dommage !');
