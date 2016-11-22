@@ -1,4 +1,4 @@
-Quel section de va être exécutée, si on exécute le code suivant ?
+Quel section va être exécutée, si on exécute le code suivant ?
 
 ```
 var nb = 2;
