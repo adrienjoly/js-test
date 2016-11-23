@@ -123,7 +123,7 @@
         </section>
 
         <template is="dom-if" if="{{loggedIn}}">
-          <!--<template is="dom-if" if="{{!myAnswers._submitted}}">-->
+          <template is="dom-if" if="[[showQuestions(myAnswers)]]">
 
             <template is="dom-if" if="{{!active}}">
               <paper-material elevation="1">
@@ -152,7 +152,7 @@
 
                           <template is="dom-if" if="{{exercise.isQuizz}}">
                             <my-qcm data-id$="[[question.id]]" on-answer="onChange" items="{{question.choices}}" value="[[myAnswersItem(myAnswers.*, question.id)]]"></my-qcm>
-                            <template is="dom-if" if="{{showSolutions}}">
+                            <template is="dom-if" if="[[showSolutions(myAnswers)]]">
                               <zero-md class="solution" text="{{question.mdSolution}}" file="{{question.mdSolutionFile}}">
                                 <!-- Remember to pass in empty container of class="md-html". -->
                                 <div class="md-html"></div>
@@ -194,7 +194,7 @@
               </template>
 
             </template>
-          <!--</template>-->
+          </template>
         </template>
 
       </div>

@@ -81,7 +81,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   app.myAnswers = {}; // will be populated from firebase after login
   app.hashedAnswers = '';
   app.active = false;
-  app.showSolutions = false;
+
+  app.showQuestions = function(myAnswers) {
+    return DISPLAY_SOLUTIONS_AFTER_SUBMIT || !myAnswers._submitted;
+  };
+
+  app.showSolutions = function(myAnswers) {
+    return DISPLAY_SOLUTIONS_AFTER_SUBMIT && myAnswers._submitted;
+  };
 
   // disable/enable user entry based on the `active` value in the Firebase DB
   function onBackEndStatus(snapshot) {
@@ -111,7 +118,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       // called on launch, and right after firebase data updates (even if offline)
       app.myAnswers = snapshot.val() || {}; // make sure that local state = remote state
       app.hashedAnswers = JSON.stringify(app.myAnswers, null, '  ');
-      app.showSolutions = DISPLAY_SOLUTIONS_AFTER_SUBMIT && app.myAnswers._submitted;  
       // TODO: compute and display student score
     });
     /*
