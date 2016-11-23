@@ -33,6 +33,15 @@
           }
         },
 
+        attached: function() {
+          // prevent blur when user presses the TAB key
+          var textArea = this.$$('paper-textarea');
+          textArea._tab = function(evt) {
+            evt.preventDefault();
+          };
+          textArea.addOwnKeyBinding('tab', '_tab');
+        },
+
         _changed: function(evt) {
           this.fire('change', evt);
         },
