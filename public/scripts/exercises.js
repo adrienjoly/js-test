@@ -11,40 +11,130 @@
         {
           "i": 1,
           "id": "qcm1",
-          "md": "Quel section de va être exécutée, si on exécute le code suivant ?\n\n```\nvar nb = 2;\nif (nb === 1) {\n  // A\n} else {\n  // B\n}\n```\n\n\n",
-          "mdSolution": "\n\nRéponse: B, car l'expression d'égalité `nb === 1` de la premiere condition est fausse,\ndonc ce sont les intructions rattachées à l'alternative par défaut (`else`) qui sont exécutées.",
+          "md": "Comment créer une variable en JavaScript ?\n  \t\t  ",
           "choices": [
             {
               "name": 1,
-              "text": "A"
+              "text": "maVariable;"
             },
             {
               "name": 2,
-              "text": "B"
+              "text": "var maVariable;"
             },
             {
               "name": 3,
-              "text": "A et B"
+              "text": "x = 0;"
             },
             {
               "name": 4,
-              "text": "aucune "
+              "text": "maVariable = 'bonjour';"
             }
           ]
         },
         {
           "i": 2,
           "id": "qcm2",
-          "md": "Quel section de va être exécutée, si on exécute le code suivant ?\n\n```\nvar nb = 2;\nif (nb === 2) {\n  // A\n} else if (nb > 1) {\n  // B\n} else {\n  // C\n}\n```\n\n\n",
-          "mdSolution": "\n\nRéponse: A. Une seule des trois alternatives peut s'exécuter, car elles sont liées par des `else`.\nSachant que les conditions sont évaluées de haut en bas, et que la première expression est vraie,\nc'est donc la section A qui va s'exécuter.",
+          "md": "Quel est le type de cette variable:\n\n```\nvar maVariable = 3.2;\n```\n",
           "choices": [
             {
               "name": 1,
-              "text": "A"
+              "text": "string"
             },
             {
               "name": 2,
-              "text": "B"
+              "text": "number"
+            },
+            {
+              "name": 3,
+              "text": "decimal"
+            },
+            {
+              "name": 4,
+              "text": "boolean"
+            }
+          ]
+        },
+        {
+          "i": 3,
+          "id": "qcm3",
+          "md": "Quel est le type de cette variable:\n\n```\nvar maVariable = '3.2';\n```\n",
+          "choices": [
+            {
+              "name": 1,
+              "text": "string"
+            },
+            {
+              "name": 2,
+              "text": "number"
+            },
+            {
+              "name": 3,
+              "text": "decimal"
+            },
+            {
+              "name": 4,
+              "text": "boolean"
+            }
+          ]
+        },
+        {
+          "i": 4,
+          "id": "qcm4",
+          "md": "Que vaut cette expression de comparaison de valeur ?\n\n```\n3.2 === '3.2'\n```\n",
+          "choices": [
+            {
+              "name": 1,
+              "text": "true"
+            },
+            {
+              "name": 2,
+              "text": "false"
+            },
+            {
+              "name": 3,
+              "text": "undefined"
+            },
+            {
+              "name": 4,
+              "text": "c'est une affectation"
+            }
+          ]
+        },
+        {
+          "i": 5,
+          "id": "qcm5",
+          "md": "En respectant les conventions indiquées en cours, quelle affectation faut-il exécuter pour que `J'ai tout compris !` s'affiche à l'écran ?\n\n```\nalert(message);\n```\n",
+          "choices": [
+            {
+              "name": 1,
+              "text": "message = \"J'ai tout compris !\";"
+            },
+            {
+              "name": 2,
+              "text": "message = 'J\"ai tout compris !';"
+            },
+            {
+              "name": 3,
+              "text": "message = 'J\\'ai tout compris !';"
+            },
+            {
+              "name": 4,
+              "text": "message = J'ai tout compris !"
+            }
+          ]
+        },
+        {
+          "i": 6,
+          "id": "qcm6",
+          "md": "Quelles sections vont être exécutées, si on exécute le code suivant ?\n\n```\nvar nb = 2;\nif (nb === 2) {\n  // A\n} else if (nb > 1) {\n  // B\n} else {\n  // C\n}\n```\n",
+          "choices": [
+            {
+              "name": 1,
+              "text": "seulement A"
+            },
+            {
+              "name": 2,
+              "text": "seulement B"
             },
             {
               "name": 3,
@@ -57,50 +147,25 @@
           ]
         },
         {
-          "i": 3,
-          "id": "qcm3",
-          "md": "À quoi ressemblerait l'arbre de décision correspondant à ce code:\n\n```\nvar reponse = prompt('as-tu faim ?')\nif (reponse === 'oui) {\n  var reponse2 = prompt('aimes-tu les burgers ?');\n  if (reponse2 == 'oui') {\n    alert('alors je t\\'en offre un !');\n  } else {\n    alert('dommage !');\n  }\n} else {\n  alert('désolé');\n}\n```\n\n\n",
-          "mdSolution": "\n\nRéponse: Une première boîte (niveau 1) représente la question `as-tu faim ?`, et a deux branches: `oui` et *autre*.\nLiée à la première branche, une deuxième boîte (niveau 2) représente la question `aimes-tu les burgers ?`, et\na elle-aussi deux branches: `oui` et *autre*.",
+          "i": 7,
+          "id": "qcm7",
+          "md": "À quoi ressemblerait l'arbre de décision correspondant à ce code:\n\n```\nvar reponse = prompt('as-tu faim ?')\nif (reponse === 'oui') {\n  var reponse2 = prompt('aimes-tu les burgers ?');\n  if (reponse2 === 'oui') {\n    alert('alors je t\\'en offre un !');\n  } else {\n    alert('dommage !');\n  }\n} else {\n  alert('désolé');\n}\n```\n",
           "choices": [
             {
               "name": 1,
-              "text": "une boîte et deux branches"
+              "text": "une boîte de niveau 1, et deux branches"
             },
             {
               "name": 2,
-              "text": "deux boîtes de même niveau"
+              "text": "une boîte de niveau 1, et quatre branches"
             },
             {
               "name": 3,
-              "text": "une boîte de niveau 1, et une boîte de niveau 2"
+              "text": "deux boîtes de niveau 1, avec deux branches chacune"
             },
             {
               "name": 4,
-              "text": "une boîte et trois branches"
-            }
-          ]
-        },
-        {
-          "i": 4,
-          "id": "qcm4",
-          "md": "Pourquoi faut-il éviter d'utiliser les opérateurs `==` et `!=` ?\n\n\n",
-          "mdSolution": "\n\nRéponse: Ils sont trop laxistes, dans le sens où deux valeurs de types différents (ex: `1` et `'1'`) peuvent\nêtre vus comme égaux par l'opérateur `==`. Cet excès de tolérance peut occasionner des comportements imprévus\nqui font perdre beaucoup de temps à diagnostiquer et à corriger. Idem pour `!=`.",
-          "choices": [
-            {
-              "name": 1,
-              "text": "car il vaut mieux utiliser une affectation ="
-            },
-            {
-              "name": 2,
-              "text": "car ils sont trop stricts"
-            },
-            {
-              "name": 3,
-              "text": "car ils sont trop laxistes"
-            },
-            {
-              "name": 4,
-              "text": "var === et !== sont plus lisibles"
+              "text": "deux boites de niveaux différents, liées par une branche"
             }
           ]
         }
@@ -116,7 +181,7 @@
           "i": 1,
           "id": "code1",
           "mdVariants": [
-            "Implémenter une condition qui affecte `'egal'` à une variable `resultat` seulement si une autre variable `nombre` vaut strictement `4`. Indenter correctement."
+            "Implémenter un chat-bot à partir de l'arbre de décision suivant:\n\n![arbre de décision](data/arbre.jpg)\n\nComme vu en cours:\n - Les questions posées par l'ordinateur sont représentées par des rectangles, et sont à implémenter à l'aide de la fonction `prompt()`.\n - Les réponses comprises par l'ordinateur sont écrites à côté de chaque branche, et sont à implémenter à l'aide de conditions.\n - Les messages à afficher par l'ordinateur sont représentés par des cercles, et sont à implémenter à l'aide de la fonction `alert()`.  \n\nRespecter les règles d'indentation et autres conventions vues en cours. Utiliser des espaces (et non des tabulations) pour l'indentation.\n\nTestez votre code, pour vous assurer qu'il fonctionne sans erreur, dans tous les cas illustrés dans l'arbre de décision."
           ]
         }
       ]
