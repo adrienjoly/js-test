@@ -114,10 +114,34 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     if (offline) return;
     var userHash = userData.email.split('@')[0].replace(/[^\w]/g, '_');
     app.backend = firebaseDB.ref('/submissions/' + userHash);
+    // send a first update with timestamp on login    
+    var upd = {
+      _uid: app.user.id,
+      _t: firebase.database.ServerValue.TIMESTAMP,
+      _d: Date()
+    };
+    app.backend.update(upd, function(err) {
+      if (err) {
+        console.error('connection -> firebase:', err);
+      } else {
+        console.log('connection -> OK');
+      }
+    });
+    // get data on login, and every time firebase data is updated (even if offline)
     app.backend.on('value', function onStoredUserAnswers(snapshot) {
-      // called on launch, and right after firebase data updates (even if offline)
-      app.myAnswers = snapshot.val() || {}; // make sure that local state = remote state
+      var value = snapshot.val();
+      app.myAnswers = value || {}; // make sure that local state = remote state
       app.hashedAnswers = JSON.stringify(app.myAnswers, null, '  ');
+      // if first connection of this user, store first timestamps
+      if (value && !value._f) {
+        app.backend.update({ _f: value._d, _ft: value._t }, function(err) {
+          if (err) {
+            console.error('firstconnectionupdate -> firebase:', err);
+          } else {
+            console.log('firstconnectionupdate -> OK');
+          }
+        });
+      }
       // TODO: compute and display student score
     });
     /*
