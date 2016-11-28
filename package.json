@@ -22,7 +22,7 @@
     "build": "node ./src/build-exercises.js",
     "start": "npm run build; node server.js",
     "eval": "node ./src/evaluate.js",
-    "init-heroku": "heroku create js-test-2",
+    "init-heroku": "git remote rm heroku; heroku create js-controle-1",
     "deploy": "git push heroku master"
   },
   "author": "Adrien Joly <adrien.joly@gmail.com>",
