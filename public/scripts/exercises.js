@@ -145,29 +145,6 @@
               "text": "A, B et C"
             }
           ]
-        },
-        {
-          "i": 7,
-          "id": "qcm7",
-          "md": "À quoi ressemblerait l'arbre de décision correspondant à ce code:\n\n```\nvar reponse = prompt('as-tu faim ?')\nif (reponse === 'oui') {\n  var reponse2 = prompt('aimes-tu les burgers ?');\n  if (reponse2 === 'oui') {\n    alert('alors je t\\'en offre un !');\n  } else {\n    alert('dommage !');\n  }\n} else {\n  alert('désolé');\n}\n```\n",
-          "choices": [
-            {
-              "name": 1,
-              "text": "une boîte de niveau 1, et deux branches"
-            },
-            {
-              "name": 2,
-              "text": "une boîte de niveau 1, et quatre branches"
-            },
-            {
-              "name": 3,
-              "text": "deux boîtes de niveau 1, avec deux branches chacune"
-            },
-            {
-              "name": 4,
-              "text": "deux boites de niveaux différents, liées par une branche"
-            }
-          ]
         }
       ]
     },
@@ -181,7 +158,9 @@
           "i": 1,
           "id": "code1",
           "mdVariants": [
-            "Implémenter un chat-bot à partir de l'arbre de décision suivant:\n\n![arbre de décision](data/arbre.jpg)\n\nComme vu en cours:\n - Les questions posées par l'ordinateur sont représentées par des rectangles, et sont à implémenter à l'aide de la fonction `prompt()`.\n - Les réponses comprises par l'ordinateur sont écrites à côté de chaque branche, et sont à implémenter à l'aide de conditions.\n - Les messages à afficher par l'ordinateur sont représentés par des cercles, et sont à implémenter à l'aide de la fonction `alert()`.  \n\nRespecter les règles d'indentation et autres conventions vues en cours. Utiliser des espaces (et non des tabulations) pour l'indentation.\n\nTestez votre code, pour vous assurer qu'il fonctionne sans erreur, dans tous les cas illustrés dans l'arbre de décision."
+            "Implémenter un chat-bot à partir de l'arbre de décision suivant:\n\n![arbre de décision](data/arbre1.jpg)\n\nComme vu et pratiqué en cours:\n - Les questions posées par l'ordinateur sont représentées par des rectangles, et sont à implémenter à l'aide de la fonction `prompt()`.\n - Les réponses comprises par l'ordinateur sont écrites à côté de chaque branche, et sont à implémenter à l'aide de conditions.\n - Les messages à afficher par l'ordinateur sont représentés par des cercles, et sont à implémenter à l'aide de la fonction `alert()`.\n\nVous serez noté(e) sur:\n - le respect **à la lettre** du texte des questions et des réponses (espaces, accents, et majuscules/minuscules compris).\n - le respect des règles d'indentation et autres conventions vues en cours. (ex: 2 espaces par niveau d'indentation)\n - le bon fonctionnement de votre code, sans erreurs, depuis la console JavaScript de Google Chrome, pour chacun des cas illustrés dans l'arbre de décision.\n",
+            "Implémenter un chat-bot à partir de l'arbre de décision suivant:\n\n![arbre de décision](data/arbre2.jpg)\n\nComme vu et pratiqué en cours:\n - Les questions posées par l'ordinateur sont représentées par des rectangles, et sont à implémenter à l'aide de la fonction `prompt()`.\n - Les réponses comprises par l'ordinateur sont écrites à côté de chaque branche, et sont à implémenter à l'aide de conditions.\n - Les messages à afficher par l'ordinateur sont représentés par des cercles, et sont à implémenter à l'aide de la fonction `alert()`.\n\nVous serez noté(e) sur:\n - le respect **à la lettre** du texte des questions et des réponses (espaces, accents, et majuscules/minuscules compris).\n - le respect des règles d'indentation et autres conventions vues en cours. (ex: 2 espaces par niveau d'indentation)\n - le bon fonctionnement de votre code, sans erreurs, depuis la console JavaScript de Google Chrome, pour chacun des cas illustrés dans l'arbre de décision.\n",
+            "Implémenter un chat-bot à partir de l'arbre de décision suivant:\n\n![arbre de décision](data/arbre3.jpg)\n\nComme vu et pratiqué en cours:\n - Les questions posées par l'ordinateur sont représentées par des rectangles, et sont à implémenter à l'aide de la fonction `prompt()`.\n - Les réponses comprises par l'ordinateur sont écrites à côté de chaque branche, et sont à implémenter à l'aide de conditions.\n - Les messages à afficher par l'ordinateur sont représentés par des cercles, et sont à implémenter à l'aide de la fonction `alert()`.\n\nVous serez noté(e) sur:\n - le respect **à la lettre** du texte des questions et des réponses (espaces, accents, et majuscules/minuscules compris).\n - le respect des règles d'indentation et autres conventions vues en cours. (ex: 2 espaces par niveau d'indentation)\n - le bon fonctionnement de votre code, sans erreurs, depuis la console JavaScript de Google Chrome, pour chacun des cas illustrés dans l'arbre de décision.\n"
           ]
         }
       ]
