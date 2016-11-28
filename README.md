@@ -40,7 +40,6 @@ TODO
 
 - Add variants to Quizzes.
 - Prevent the on-tap event from firing when clicking outside of the choices.
-- Right after login, initialize student's record in Firebase, in order to know their presence (and id) even if they didn't press the "save" button.
 - Allow per-variable variants. => more combinations.
 - Add a way to evalute students scores in real time, from a web interface.
 - Prevent students from connecting an exam URL 1 hour after activation. (to avoid next students to see the test before their timeslot, even if other students finish early and show them the URL)
