@@ -3,9 +3,19 @@
     "i": 1,
     "id": "code1",
     "variants": [
-      {}
+      {
+        "n": 1
+      },
+      {
+        "n": 2
+      },
+      {
+        "n": 3
+      }
     ],
     "testVariants": [
+      null,
+      null,
       null
     ]
   }
