@@ -48,3 +48,21 @@ paper-radio-button {
   padding: 20px;
   margin-top: 20px;
 }
+
+@media print {
+  body {
+    height: auto !important;
+  }
+  #headerPanelMain {
+    display: block !important;
+    overflow: auto;
+    height: auto !important;
+  }
+  #mainContainer {
+    position: static !important;
+    bottom: auto !important;
+  }
+  .content {
+    height: auto !important;
+  }
+}
