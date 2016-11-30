@@ -12,6 +12,7 @@ function runCodeInSandbox(code, callback) {
   var timeout = null;
   function onDone(err, results){
     clearTimeout(timeout);
+    timeout = null;
     callback(err, results);
     plugin.disconnect();
   }
@@ -24,7 +25,10 @@ function runCodeInSandbox(code, callback) {
     // this function will be called with resulting arguments by sandboxed script, when done
     _send: function(){
       onDone(null, arguments);
-    }
+    },
+    _sendOnce: function(){
+      timeout && onDone(null, arguments);
+    },
   };
   plugin = new jailed.DynamicPlugin(code, api);
   plugin.whenFailed(onDone);
