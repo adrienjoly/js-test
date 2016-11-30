@@ -16,6 +16,7 @@ function runCodeInSandbox(code, callback) {
     plugin.disconnect();
   }
   var api = {
+    _log: console.log.bind(console),
     // this function will be called with resulting arguments by sandboxed script, when done
     _send: function(){
       onDone(null, arguments);
