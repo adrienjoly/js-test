@@ -22,8 +22,9 @@
     "build": "node ./src/build-exercises.js",
     "start": "npm run build; node src/server.js",
     "eval": "node ./src/evaluate.js",
+    "eval-students": "src/score-students.sh ./students/*.json",
+    "eval-student-groups": "src/score-student-groups.sh ./student-groups/*.json",
     "eval-groups-from-firebase": "src/score-groups.sh",
-    "eval-students-from-firebase-exports": "src/score-students.sh",
     "init-heroku": "git remote rm heroku; heroku create js-controle-1",
     "deploy": "git push heroku master"
   },
