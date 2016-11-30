@@ -38,9 +38,10 @@ var codeEvaluator = new CodeEvaluator().readTestsFromFile(TESTS_FILE);
 function evaluateStudent(student, next) {
   var totalScore = 0;
   var totalPoints = 0;
-  console.log('\n================================\n')
-  console.log('Evaluating', student.key, '(' + student._uid + ')', '...');
-  console.log('  -  quizz answers:');
+  console.log('\n\n================================\n')
+  console.log('STUDENT:', student.key/*, '(' + student._uid + ')', '...'*/);
+
+  console.log('\n  -  quizz answers:');
   var quizzAnsw = quizzEvaluator.getAnswerSet(student);
   setConsolePrefix('  | ');
   for (var i in quizzAnsw) {
@@ -50,14 +51,15 @@ function evaluateStudent(student, next) {
   var res = quizzEvaluator.evaluateAnswers(student);
   totalScore += res.score;
   totalPoints += res.length;
-  console.log('  => quizz score:', res.score, '/', res.length);
-  console.log('  -  code evaluation:');
+  console.log('\n  => quizz score:', res.score, '/', res.length);
+
+  console.log('\n  -  code evaluation:');
   setConsolePrefix('  | ');
   codeEvaluator.evaluateAnswers(student, function(err, res){
     totalScore += res.score;
     totalPoints += res.length;
     setConsolePrefix();
-    console.log('  => code score:', res.score, '/', res.length);
+    console.log('\n  => code score:', res.score, '/', res.length);
     console.log();
     console.log('=> TOTAL STUDENT SCORE:', totalScore, '/', totalPoints);
     var csv = [ student.key, totalScore ];
