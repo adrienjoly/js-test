@@ -5,6 +5,10 @@ Reading and evaluating answers from: ../student-groups/js-controle-1-classe-3.js
 
 STUDENT: bastien_bigot
 
+Bonne compréhension!
+Maintenant tu peux t'améliorer en rigueur dans l'indentation et autres conventions.
+Continue!
+
   -  quizz answers:
   | qcm1 : 2 (solution: 2) => 2 pts
   | qcm2 : 2 (solution: 2) => 2 pts
@@ -44,25 +48,29 @@ Wed, 30 Nov 2016 13:28:39 GMT jailed:sandbox DYNAMIC PLUGIN:47
 else {
 ^^^^
 SyntaxError: Unexpected token else
-    at Object.exports.runInNewContext (vm.js:71:16)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
-    at emitTwo (events.js:106:13)
-    at process.emit (events.js:191:7)
-    at process.nextTick (internal/child_process.js:744:12)
-    at _combinedTickCallback (internal/process/next_tick.js:67:7)
-    at process._tickCallback (internal/process/next_tick.js:98:9)
-  | => test runner err: SyntaxError: Unexpected token else
 
-  => code score: 0 / 2 pts
+  [ ] Syntaxe: le code s'exécute sans erreur
+  [ ] Fonctionnement: le code respecte à la lettre les valeurs de l'énoncé (presque: il n'y avait pas de "e" dans clair)
+  [ ] Indentation: correcte, avec 2 espaces par niveau (tu as compris le principe, mais ce n'est pas encore ça)
+  [ ] Conventions: placement des accolades (idem)
+  [x] Conventions: ponctuation avec points-virgules
+  [x] Conventions: apostrophes
+  [x] Conditions: maitrise des conditions imbriquées (je t'accorde le point car ton indentation montre que tu as compris. dommage que tu aies oublié les accolades du else if "gris"...)
+  [x] Logique: la structure du code correspond à celle de l'arbre de décision
+  [ ] /!\ la solution ne correspond pas à l'énoncé de l'étudiant => ZERO
 
-=> TOTAL STUDENT SCORE: 10 / 14
+  => code score: 4 / 8 pts
+
+=> TOTAL STUDENT SCORE: 14 / 20
 
 
 ================================
 
 STUDENT: benjamin_kissous
+
+Bonne compréhension et rigueur, bravo!
+Maintenant, il faut que tu comprennes l'usage du else, et du placement d'accolades qui va avec.
+Continue!
 
   -  quizz answers:
   | qcm1 : 2 (solution: 2) => 2 pts
@@ -106,16 +114,29 @@ STUDENT: benjamin_kissous
   | 	alert('je connais pas');
   | }
   | 
-  | // -> STUDENT CODE ERROR: si l'utilisateur tape gris puis foncé, alert devrait afficher "c&#39;est bien!" au lieu de "cest bien!"
+  
+  [x] Syntaxe: le code s'exécute sans erreur
+  [x] Fonctionnement: le code respecte à la lettre les valeurs de l'énoncé
+  [x] Indentation: correcte, avec 2 espaces par niveau (par contre tu mets bcp trop de sauts de ligne)
+  [ ] Conventions: placement des accolades (ici, il devrait y avoir des else à côté de tes } )
+  [x] Conventions: ponctuation avec points-virgules
+  [x] Conventions: apostrophes
+  [x] Conditions: maitrise des conditions imbriquées
+  [ ] Logique: la structure du code correspond à celle de l'arbre de décision
+  [ ] /!\ la solution ne correspond pas à l'énoncé de l'étudiant => ZERO
 
-  => code score: 1 / 2 pts
+  => code score: 6 / 8 pts
 
-=> TOTAL STUDENT SCORE: 13 / 14
+=> TOTAL STUDENT SCORE: 18 / 20
 
 
 ================================
 
 STUDENT: charles_kiefer
+
+Très bien!
+Sois juste plus attentif aux valeurs de l'énoncé, et aux conventions.
+Continue!
 
   -  quizz answers:
   | qcm1 : 2 (solution: 2) => 2 pts
@@ -152,16 +173,29 @@ STUDENT: charles_kiefer
   | 		alert('je ne connais pas');
   | 			}
   | 
-  | // -> STUDENT CODE ERROR: si l'utilisateur tape gris puis foncé, alert devrait afficher "c&#39;est bien!" au lieu de "c'est bien!"
+  
+  [x] Syntaxe: le code s'exécute sans erreur
+  [ ] Fonctionnement: le code respecte à la lettre les valeurs de l'énoncé (majuscles en mot en trop)
+  [ ] Indentation: correcte, avec 2 espaces par niveau (pas encore ça, mais tu y es presque)
+  [ ] Conventions: placement des accolades (les else doivent être sur la meme ligne que { )
+  [x] Conventions: ponctuation avec points-virgules
+  [x] Conventions: apostrophes
+  [x] Conditions: maitrise des conditions imbriquées
+  [x] Logique: la structure du code correspond à celle de l'arbre de décision
+  [ ] /!\ la solution ne correspond pas à l'énoncé de l'étudiant => ZERO
 
-  => code score: 1 / 2 pts
+  => code score: 4 / 8 pts
 
-=> TOTAL STUDENT SCORE: 13 / 14
+=> TOTAL STUDENT SCORE: 16 / 20
 
 
 ================================
 
 STUDENT: edouard_duchesnedelamotte
+
+Excellent travail!
+Sois juste plus attentif aux valeurs de l'énoncé, et au nombre d'espaces par indentation. (cf conventions du cours)
+Continue!
 
   -  quizz answers:
   | qcm1 : 2 (solution: 2) => 2 pts
@@ -180,8 +214,6 @@ STUDENT: edouard_duchesnedelamotte
   | // STUDENT CODE:
   | 
   | 
-  | 
-  | 
   | var reponse = prompt('Ta couleur préférée ?');
   | if (reponse === 'bleu') {
   |     alert('OK');
@@ -196,18 +228,28 @@ STUDENT: edouard_duchesnedelamotte
   |     alert('je connais pas');
   | }
   | 
-  | 
-  | 
-  | // -> STUDENT CODE ERROR: si l'utilisateur tape gris puis foncé, alert devrait afficher "c&#39;est bien!" au lieu de "c'est bien !"
+  
+  [x] Syntaxe: le code s'exécute sans erreur
+  [ ] Fonctionnement: le code respecte à la lettre les valeurs de l'énoncé (espace en trop)
+  [ ] Indentation: correcte, avec 2 espaces par niveau (trop d'espaces par niveau)
+  [x] Conventions: placement des accolades
+  [x] Conventions: ponctuation avec points-virgules
+  [x] Conventions: apostrophes
+  [x] Conditions: maitrise des conditions imbriquées
+  [x] Logique: la structure du code correspond à celle de l'arbre de décision
+  [ ] /!\ la solution ne correspond pas à l'énoncé de l'étudiant => ZERO
 
-  => code score: 1 / 2 pts
+  => code score: 6 / 8 pts
 
-=> TOTAL STUDENT SCORE: 13 / 14
+=> TOTAL STUDENT SCORE: 18 / 20
 
 
 ================================
 
 STUDENT: guillaume_martin
+
+Difficile de dire à quel point tu as compris, car ton indentation ne correspond pas aux accolades. Et il manque des else => à pratiquer.
+Je pense que tu peux faire bien mieux, continue!
 
   -  quizz answers:
   | qcm1 : 2 (solution: 2) => 2 pts
@@ -240,16 +282,28 @@ STUDENT: guillaume_martin
   | }
   | else alert ('je connais pas');
   | 
-  | // -> STUDENT CODE ERROR: si l'utilisateur tape gris puis foncé, alert devrait afficher "c&#39;est bien!" au lieu de "c'est bien"
 
-  => code score: 1 / 2 pts
+  [x] Syntaxe: le code s'exécute sans erreur
+  [ ] Fonctionnement: le code respecte à la lettre les valeurs de l'énoncé (il manque un espace)
+  [ ] Indentation: correcte, avec 2 espaces par niveau (on indente le code qui se trouve entre accoldes)
+  [ ] Conventions: placement des accolades (else doit etre sur meme ligne que } )
+  [x] Conventions: ponctuation avec points-virgules (tu l'as oublié au 1er prompt)
+  [x] Conventions: apostrophes
+  [ ] Conditions: maitrise des conditions imbriquées
+  [ ] Logique: la structure du code correspond à celle de l'arbre de décision
+  [ ] /!\ la solution ne correspond pas à l'énoncé de l'étudiant => ZERO
 
-=> TOTAL STUDENT SCORE: 13 / 14
+  => code score: 3 / 8 pts
+
+=> TOTAL STUDENT SCORE: 15 / 20
 
 
 ================================
 
 STUDENT: ilana_bloch
+
+Excellent travail!
+Continue comme ça!
 
   -  quizz answers:
   | qcm1 : 2 (solution: 2) => 2 pts
@@ -281,14 +335,27 @@ STUDENT: ilana_bloch
   |   alert('j\'ai pas compris');
   | }
 
-  => code score: 2 / 2 pts
+  [x] Syntaxe: le code s'exécute sans erreur
+  [x] Fonctionnement: le code respecte à la lettre les valeurs de l'énoncé
+  [x] Indentation: correcte, avec 2 espaces par niveau
+  [x] Conventions: placement des accolades
+  [x] Conventions: ponctuation avec points-virgules
+  [x] Conventions: apostrophes
+  [x] Conditions: maitrise des conditions imbriquées
+  [x] Logique: la structure du code correspond à celle de l'arbre de décision
+  [ ] /!\ la solution ne correspond pas à l'énoncé de l'étudiant => ZERO
 
-=> TOTAL STUDENT SCORE: 14 / 14
+  => code score: 8 / 8 pts
+
+=> TOTAL STUDENT SCORE: 20 / 20
 
 
 ================================
 
 STUDENT: jeanne_vinay
+
+Je vois un début de compréhension des conditions et de l'indentation, mais tu manques encore un peu de rigueur et de pratique dans ton code. Par exemple alert doit être suivi d'une parenthèse, et non d'un égal d'affectation...
+Tu peux faire beaucoup mieux que ça, continue!
 
   -  quizz answers:
   | qcm1 : 2 (solution: 2) => 2 pts
@@ -330,17 +397,30 @@ STUDENT: jeanne_vinay
   |     alert = ('je connais pas');
   | }
   | 
-  | 
-  | => test runner err: si l'utilisateur tape gris puis foncé, alert devrait afficher "c&#39;est bien!", mais alert n'a pas été appelé...
+  
+  [x] Syntaxe: le code s'exécute sans erreur
+  [x] Fonctionnement: le code respecte à la lettre les valeurs de l'énoncé
+  [ ] Indentation: correcte, avec 2 espaces par niveau
+  [ ] Conventions: placement des accolades
+  [ ] Conventions: ponctuation avec points-virgules (il en faut apres prompt aussi)
+  [ ] Conventions: apostrophes (tu as aussi mis des guillemets...)
+  [x] Conditions: maitrise des conditions imbriquées
+  [ ] Logique: la structure du code correspond à celle de l'arbre de décision (il manque des else au premier niveau)
+  [ ] /!\ la solution ne correspond pas à l'énoncé de l'étudiant => ZERO
 
-  => code score: 0 / 2 pts
+  => code score: 3 / 8 pts
 
-=> TOTAL STUDENT SCORE: 12 / 14
+=> TOTAL STUDENT SCORE: 15 / 20
 
 
 ================================
 
 STUDENT: jessy_hachet
+
+Très bon travail!
+Et, même si le code était assez clair pour ne pas en nécéssiter, bravo pour avoir mis des commentaires!
+Dommage qu'il manquait la dernière accolade pour que le code soit valide. Et attention à l'indentation, elle doit de 2 espaces à chaque niveau.
+Continue!
 
   -  quizz answers:
   | qcm1 : 2 (solution: 2) => 2 pts
@@ -379,25 +459,29 @@ Wed, 30 Nov 2016 13:28:41 GMT jailed:sandbox DYNAMIC PLUGIN:50
 })();
  ^
 SyntaxError: Unexpected token )
-    at Object.exports.runInNewContext (vm.js:71:16)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
-    at emitTwo (events.js:106:13)
-    at process.emit (events.js:191:7)
-    at process.nextTick (internal/child_process.js:744:12)
-    at _combinedTickCallback (internal/process/next_tick.js:67:7)
-    at process._tickCallback (internal/process/next_tick.js:98:9)
-  | => test runner err: SyntaxError: Unexpected token )
 
-  => code score: 0 / 2 pts
+  [ ] Syntaxe: le code s'exécute sans erreur
+  [ ] Fonctionnement: le code respecte à la lettre les valeurs de l'énoncé (espaces et majuscules)
+  [ ] Indentation: correcte, avec 2 espaces par niveau (presque, mais encore trop inégale)
+  [x] Conventions: placement des accolades
+  [x] Conventions: ponctuation avec points-virgules
+  [x] Conventions: apostrophes
+  [x] Conditions: maitrise des conditions imbriquées
+  [x] Logique: la structure du code correspond à celle de l'arbre de décision
+  [ ] /!\ la solution ne correspond pas à l'énoncé de l'étudiant => ZERO
 
-=> TOTAL STUDENT SCORE: 12 / 14
+  => code score: 5 / 8 pts
+
+=> TOTAL STUDENT SCORE: 17 / 20
 
 
 ================================
 
 STUDENT: kamil_izaret
+
+Bon travail!
+Par contre, pratique tes conditions, et réflechis bien à ce qui doit être dans quelles accolades.
+Continue!
 
   -  quizz answers:
   | qcm1 : 2 (solution: 2) => 2 pts
@@ -429,14 +513,28 @@ STUDENT: kamil_izaret
   | 		alert ('j\'ai pas compris');
   | 	}
 
-  => code score: 2 / 2 pts
+  [x] Syntaxe: le code s'exécute sans erreur
+  [ ] Fonctionnement: le code respecte à la lettre les valeurs de l'énoncé (espace en trop)
+  [ ] Indentation: correcte, avec 2 espaces par niveau (seulement le code entre accolades)
+  [x] Conventions: placement des accolades
+  [x] Conventions: ponctuation avec points-virgules
+  [x] Conventions: apostrophes
+  [ ] Conditions: maitrise des conditions imbriquées (le if de reponse 2 aurait du etre dans les accolades du if 'bleu')
+  [ ] Logique: la structure du code correspond à celle de l'arbre de décision
+  [ ] /!\ la solution ne correspond pas à l'énoncé de l'étudiant => ZERO
 
-=> TOTAL STUDENT SCORE: 14 / 14
+  => code score: 4 / 8 pts
+
+=> TOTAL STUDENT SCORE: 16 / 20
 
 
 ================================
 
 STUDENT: lara_kounowski
+
+Bon travail!
+Par contre, pratique tes conditions, et réflechis bien à ce qui doit être dans quelles accolades.
+Continue!
 
   -  quizz answers:
   | qcm1 : 2 (solution: 2) => 2 pts
@@ -470,14 +568,28 @@ STUDENT: lara_kounowski
   | 
   | // -> STUDENT CODE ERROR: si l'utilisateur tape gris puis foncé, alert devrait afficher "ah bon?" au lieu de "comment ?"
 
-  => code score: 1 / 2 pts
+  [x] Syntaxe: le code s'exécute sans erreur
+  [ ] Fonctionnement: le code respecte à la lettre les valeurs de l'énoncé (il manque un espace dans une des questions)
+  [ ] Indentation: correcte, avec 2 espaces par niveau
+  [x] Conventions: placement des accolades (oui, sauf pour les duos de } )
+  [x] Conventions: ponctuation avec points-virgules
+  [x] Conventions: apostrophes
+  [ ] Conditions: maitrise des conditions imbriquées (c'etait un bon début, mais tu as fermé deux accolades dès la première sous condition, et tu fais une condition sur reponse2 avant de l'avoir créée...)
+  [ ] Logique: la structure du code correspond à celle de l'arbre de décision
+  [ ] /!\ la solution ne correspond pas à l'énoncé de l'étudiant => ZERO
 
-=> TOTAL STUDENT SCORE: 13 / 14
+  => code score: 4 / 8 pts
+
+=> TOTAL STUDENT SCORE: 16 / 20
 
 
 ================================
 
 STUDENT: legacvictor
+
+Excellent!
+Pense juste à utiliser des indentations de 2 espaces, comme demandé dans le cours.
+Continue comme ça!
 
   -  quizz answers:
   | qcm1 : 2 (solution: 2) => 2 pts
@@ -509,14 +621,28 @@ STUDENT: legacvictor
   |     alert('comment ?');
   | }
 
-  => code score: 2 / 2 pts
+  [x] Syntaxe: le code s'exécute sans erreur
+  [x] Fonctionnement: le code respecte à la lettre les valeurs de l'énoncé
+  [ ] Indentation: correcte, avec 2 espaces par niveau (et non 4 espaces)
+  [x] Conventions: placement des accolades
+  [x] Conventions: ponctuation avec points-virgules
+  [x] Conventions: apostrophes
+  [x] Conditions: maitrise des conditions imbriquées
+  [x] Logique: la structure du code correspond à celle de l'arbre de décision
+  [ ] /!\ la solution ne correspond pas à l'énoncé de l'étudiant => ZERO
 
-=> TOTAL STUDENT SCORE: 14 / 14
+  => code score: 7 / 8 pts
+
+=> TOTAL STUDENT SCORE: 19 / 20
 
 
 ================================
 
 STUDENT: louis_gosse
+
+Très bien!
+Tu peux avoir de meilleurs resultats en suivant mieux les conventions et en respectant à la lettre les valeurs données dans l'énoncé.
+Continue!
 
   -  quizz answers:
   | qcm1 : 2 (solution: 2) => 2 pts
@@ -548,14 +674,27 @@ STUDENT: louis_gosse
   |     alert('j\ai pas compris');
   | }
 
-  => code score: 2 / 2 pts
+  [x] Syntaxe: le code s'exécute sans erreur
+  [ ] Fonctionnement: le code respecte à la lettre les valeurs de l'énoncé (espaces)
+  [ ] Indentation: correcte, avec 2 espaces par niveau (et non 4)
+  [x] Conventions: placement des accolades
+  [ ] Conventions: ponctuation avec points-virgules (et les prompt?)
+  [x] Conventions: apostrophes
+  [x] Conditions: maitrise des conditions imbriquées
+  [x] Logique: la structure du code correspond à celle de l'arbre de décision
+  [ ] /!\ la solution ne correspond pas à l'énoncé de l'étudiant => ZERO
 
-=> TOTAL STUDENT SCORE: 12 / 14
+  => code score: 5 / 8 pts
+
+=> TOTAL STUDENT SCORE: 15 / 20
 
 
 ================================
 
 STUDENT: louis_malrieu
+
+Tu aurais pu faire beaucoup mieux. Pratique tes conditions (et surtout l'usage de else), et révise bien les conventions du cours pour éviter de perdre autant de points à l'avenir.
+Ne lache pas tes efforts!
 
   -  quizz answers:
   | qcm1 : 2 (solution: 2) => 2 pts
@@ -598,26 +737,27 @@ STUDENT: louis_malrieu
   | 	}
   | 	}
 Wed, 30 Nov 2016 13:28:41 GMT jailed:sandbox ReferenceError: reponse is not defined
-    at evaluateStudentCode (DYNAMIC PLUGIN:47:6)
-    at DYNAMIC PLUGIN:57:3
-    at ContextifyScript.Script.runInContext (vm.js:35:29)
-    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
-    at Object.exports.runInNewContext (vm.js:72:17)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
-    at emitTwo (events.js:106:13)
-    at process.emit (events.js:191:7)
-  | => test runner err: ReferenceError: reponse is not defined
 
-  => code score: 0 / 2 pts
+  [ ] Syntaxe: le code s'exécute sans erreur
+  [ ] Fonctionnement: le code respecte à la lettre les valeurs de l'énoncé (espaces)
+  [ ] Indentation: correcte, avec 2 espaces par niveau (presque)
+  [ ] Conventions: placement des accolades (à revoir dans le cours)
+  [ ] Conventions: ponctuation avec points-virgules
+  [ ] Conventions: apostrophes
+  [x] Conditions: maitrise des conditions imbriquées
+  [ ] Logique: la structure du code correspond à celle de l'arbre de décision
+  [ ] /!\ la solution ne correspond pas à l'énoncé de l'étudiant => ZERO
 
-=> TOTAL STUDENT SCORE: 8 / 14
+  => code score: 1 / 8 pts
+
+=> TOTAL STUDENT SCORE: 9 / 20
 
 
 ================================
 
 STUDENT: madison_hayat
+
+Tu es sur la bonne voie! En pratiquant plus et en testant avec ta console, tu auras de meilleurs résultats! Continue!
 
   -  quizz answers:
   | qcm1 : 2 (solution: 2) => 2 pts
@@ -654,14 +794,26 @@ STUDENT: madison_hayat
   | 
   | // -> STUDENT CODE ERROR: si l'utilisateur tape gris puis foncé, alert devrait afficher "ah bon?" au lieu de "Comment ?"
 
-  => code score: 1 / 2 pts
+  [x] Syntaxe: le code s'exécute sans erreur
+  [ ] Fonctionnement: le code respecte à la lettre les valeurs de l'énoncé (majuscules et espaces)
+  [ ] Indentation: correcte, avec 2 espaces par niveau
+  [ ] Conventions: placement des accolades (les else doivent être sur la meme ligne que les } )
+  [x] Conventions: ponctuation avec points-virgules
+  [x] Conventions: apostrophes
+  [ ] Conditions: maitrise des conditions imbriquées
+  [ ] Logique: la structure du code correspond à celle de l'arbre de décision
+  [ ] /!\ la solution ne correspond pas à l'énoncé de l'étudiant => ZERO
 
-=> TOTAL STUDENT SCORE: 11 / 14
+  => code score: 3 / 8 pts
+
+=> TOTAL STUDENT SCORE: 13 / 20
 
 
 ================================
 
 STUDENT: mickael_chekroun
+
+Excellent travail! Sois plus attentif aux placement conventionnel des accolades, et ce sera parfait! Continue!
 
   -  quizz answers:
   | qcm1 : 2 (solution: 2) => 2 pts
@@ -696,14 +848,27 @@ STUDENT: mickael_chekroun
   | 	alert('comment ?');
   | }
 
-  => code score: 2 / 2 pts
+  [x] Syntaxe: le code s'exécute sans erreur
+  [x] Fonctionnement: le code respecte à la lettre les valeurs de l'énoncé
+  [x] Indentation: correcte, avec 2 espaces par niveau
+  [ ] Conventions: placement des accolades (les else doivent être sur la meme ligne que } )
+  [x] Conventions: ponctuation avec points-virgules
+  [x] Conventions: apostrophes
+  [x] Conditions: maitrise des conditions imbriquées
+  [x] Logique: la structure du code correspond à celle de l'arbre de décision
+  [ ] /!\ la solution ne correspond pas à l'énoncé de l'étudiant => ZERO
 
-=> TOTAL STUDENT SCORE: 14 / 14
+  => code score: 7 / 8 pts
+
+=> TOTAL STUDENT SCORE: 19 / 20
 
 
 ================================
 
 STUDENT: pierre_salesse
+
+Excellent travail!
+Sois plus attentif aux valeurs fournies, respecte les 2 espaces par indentation et ce sera parfait! Continue!
 
   -  quizz answers:
   | qcm1 : 2 (solution: 2) => 2 pts
@@ -735,16 +900,28 @@ STUDENT: pierre_salesse
   |     alert('je ne connais pas');
   | }
   | 
-  | // -> STUDENT CODE ERROR: si l'utilisateur tape gris puis foncé, alert devrait afficher "c&#39;est bien!" au lieu de "c'est bien !"
 
-  => code score: 1 / 2 pts
+  [x] Syntaxe: le code s'exécute sans erreur
+  [ ] Fonctionnement: le code respecte à la lettre les valeurs de l'énoncé (il y a un "ne" en trop)
+  [ ] Indentation: correcte, avec 2 espaces par niveau (et non 4)
+  [x] Conventions: placement des accolades
+  [x] Conventions: ponctuation avec points-virgules
+  [x] Conventions: apostrophes
+  [x] Conditions: maitrise des conditions imbriquées
+  [x] Logique: la structure du code correspond à celle de l'arbre de décision
+  [ ] /!\ la solution ne correspond pas à l'énoncé de l'étudiant => ZERO
 
-=> TOTAL STUDENT SCORE: 13 / 14
+  => code score: 6 / 8 pts
+
+=> TOTAL STUDENT SCORE: 18 / 20
 
 
 ================================
 
 STUDENT: quentin_champenois
+
+Excellent travail!
+Sois plus attentif aux valeurs fournies et ce sera parfait! Continue!
 
   -  quizz answers:
   | qcm1 : 2 (solution: 2) => 2 pts
@@ -779,14 +956,27 @@ STUDENT: quentin_champenois
   | 
   | // -> STUDENT CODE ERROR: si l'utilisateur tape bleu puis foncé, alert devrait afficher "OK" au lieu de "ok"
 
-  => code score: 1 / 2 pts
+  [x] Syntaxe: le code s'exécute sans erreur
+  [ ] Fonctionnement: le code respecte à la lettre les valeurs de l'énoncé (majuscules)
+  [x] Indentation: correcte, avec 2 espaces par niveau
+  [x] Conventions: placement des accolades
+  [x] Conventions: ponctuation avec points-virgules
+  [x] Conventions: apostrophes
+  [x] Conditions: maitrise des conditions imbriquées
+  [x] Logique: la structure du code correspond à celle de l'arbre de décision
+  [ ] /!\ la solution ne correspond pas à l'énoncé de l'étudiant => ZERO
 
-=> TOTAL STUDENT SCORE: 13 / 14
+  => code score: 7 / 8 pts
+
+=> TOTAL STUDENT SCORE: 19 / 20
 
 
 ================================
 
 STUDENT: theo_geay
+
+Dommage que tu aies mélangé les deux niveaux d'arbre de décision dans ton code, car tu as l'air d'avoir une bonne compréhension des conditions et des conventions.
+Un peu de pratique t'apportera de très bons resultats, continue!
 
   -  quizz answers:
   | qcm1 : 2 (solution: 2) => 2 pts
@@ -817,16 +1007,27 @@ STUDENT: theo_geay
   |     alert('Je ne connais pas');
   | }
   | 
-  | // -> STUDENT CODE ERROR: si l'utilisateur tape gris puis foncé, alert devrait afficher "c&#39;est bien!" au lieu de "C'est bien!"
 
-  => code score: 1 / 2 pts
+  [x] Syntaxe: le code s'exécute sans erreur
+  [ ] Fonctionnement: le code respecte à la lettre les valeurs de l'énoncé (majuscules et espaces)
+  [ ] Indentation: correcte, avec 2 espaces par niveau (et non 4)
+  [ ] Conventions: placement des accolades (oui, mais il en manque, au premier if!)
+  [x] Conventions: ponctuation avec points-virgules
+  [x] Conventions: apostrophes
+  [ ] Conditions: maitrise des conditions imbriquées
+  [ ] Logique: la structure du code correspond à celle de l'arbre de décision
+  [ ] /!\ la solution ne correspond pas à l'énoncé de l'étudiant => ZERO
 
-=> TOTAL STUDENT SCORE: 13 / 14
+  => code score: 3 / 8 pts
+
+=> TOTAL STUDENT SCORE: 15 / 20
 
 
 ================================
 
 STUDENT: thibault_chambrillon
+
+Très bien! Mais avec un peu plus de rigueur tu pourrais avoir de bien meilleurs résultats! Continue!
 
   -  quizz answers:
   | qcm1 : 2 (solution: 2) => 2 pts
@@ -860,16 +1061,27 @@ STUDENT: thibault_chambrillon
   | 		alert('je connais pas')
   | 	}
   | 
-  | // -> STUDENT CODE ERROR: si l'utilisateur tape gris puis foncé, alert devrait afficher "c&#39;est bien!" au lieu de "c'est bien !"
 
-  => code score: 1 / 2 pts
+  [x] Syntaxe: le code s'exécute sans erreur
+  [ ] Fonctionnement: le code respecte à la lettre les valeurs de l'énoncé (espaces)
+  [ ] Indentation: correcte, avec 2 espaces par niveau (seulement code entre accolades)
+  [x] Conventions: placement des accolades
+  [ ] Conventions: ponctuation avec points-virgules
+  [x] Conventions: apostrophes
+  [x] Conditions: maitrise des conditions imbriquées
+  [x] Logique: la structure du code correspond à celle de l'arbre de décision (remarque: le else vide était inutile)
+  [ ] /!\ la solution ne correspond pas à l'énoncé de l'étudiant => ZERO
 
-=> TOTAL STUDENT SCORE: 13 / 14
+  => code score: 5 / 8 pts
+
+=> TOTAL STUDENT SCORE: 17 / 20
 
 
 ================================
 
 STUDENT: timothee_ong
+
+Très bien! Mais avec un peu plus de rigueur tu pourrais avoir de bien meilleurs résultats! Continue!
 
   -  quizz answers:
   | qcm1 : 2 (solution: 2) => 2 pts
@@ -901,16 +1113,28 @@ STUDENT: timothee_ong
   |   alert('je connais pas')
   | };
   | 
-  | // -> STUDENT CODE ERROR: si l'utilisateur tape gris puis foncé, alert devrait afficher "c&#39;est bien!" au lieu de "c'est bien"
 
-  => code score: 1 / 2 pts
+  [x] Syntaxe: le code s'exécute sans erreur
+  [ ] Fonctionnement: le code respecte à la lettre les valeurs de l'énoncé (ponctuation manquante)
+  [x] Indentation: correcte, avec 2 espaces par niveau
+  [x] Conventions: placement des accolades
+  [ ] Conventions: ponctuation avec points-virgules
+  [x] Conventions: apostrophes
+  [x] Conditions: maitrise des conditions imbriquées
+  [x] Logique: la structure du code correspond à celle de l'arbre de décision
+  [ ] /!\ la solution ne correspond pas à l'énoncé de l'étudiant => ZERO
 
-=> TOTAL STUDENT SCORE: 11 / 14
+  => code score: 6 / 8 pts
+
+=> TOTAL STUDENT SCORE: 16 / 20
 
 
 ================================
 
 STUDENT: victoria_antalis
+
+Très bon début dans ton code! Dommage que tu ne sois pas allée plus loin...
+Tu as de bonnes bases, pratique tes conditions imbriquées et tu devrais avoir de très bon résultats!
 
   -  quizz answers:
   | qcm1 : 2 (solution: 2) => 2 pts
@@ -936,6 +1160,16 @@ STUDENT: victoria_antalis
   | 	} 
   | => test runner err: si l'utilisateur tape gris puis foncé, alert devrait afficher "ah bon?", mais alert n'a pas été appelé...
 
-  => code score: 0 / 2 pts
+  [x] Syntaxe: le code s'exécute sans erreur
+  [x] Fonctionnement: le code respecte à la lettre les valeurs de l'énoncé
+  [ ] Indentation: correcte, avec 2 espaces par niveau (seulement le code entre accolades)
+  [x] Conventions: placement des accolades
+  [ ] Conventions: ponctuation avec points-virgules (oublié au deuxieme prompt)
+  [x] Conventions: apostrophes
+  [ ] Conditions: maitrise des conditions imbriquées
+  [ ] Logique: la structure du code correspond à celle de l'arbre de décision
+  [ ] /!\ la solution ne correspond pas à l'énoncé de l'étudiant => ZERO
 
-=> TOTAL STUDENT SCORE: 10 / 14
+  => code score: 4 / 8 pts
+
+=> TOTAL STUDENT SCORE: 14 / 20
