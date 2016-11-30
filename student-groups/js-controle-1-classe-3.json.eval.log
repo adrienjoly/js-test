@@ -1,0 +1,941 @@
+Reading and evaluating answers from: ../student-groups/js-controle-1-classe-3.json ...
+
+
+================================
+
+STUDENT: bastien_bigot
+
+  -  quizz answers:
+  | qcm1 : 2 (solution: 2) => 2 pts
+  | qcm2 : 2 (solution: 2) => 2 pts
+  | qcm3 : 1 (solution: 1) => 2 pts
+  | qcm4 : 1 (solution: 2) => 0 pts
+  | qcm5 : 3 (solution: 3) => 2 pts
+  | qcm6 : 1 (solution: 1) => 2 pts
+
+  => quizz score: 10 / 12 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code1 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var ordinateur = prompt('Ta couleur préférée ?');
+  | if (ordinateur === 'bleu') 	
+  |   	{
+  |      alert('OK');
+  |     } 
+  | else if (ordinateur ==='gris')
+  |     
+  |         var entourage = prompt('claire ou foncé ?');
+  |         if (entourage === 'clair') 
+  |        		{
+  |        			alert('presque blanc');
+  |        		}
+  |        	else {
+  |        		alert('ah bon ?');
+  |        		}
+  | else {
+  | 		alert('comment ?');
+  | 	}
+  | 
+Wed, 30 Nov 2016 13:28:39 GMT jailed:sandbox DYNAMIC PLUGIN:47
+else {
+^^^^
+SyntaxError: Unexpected token else
+    at Object.exports.runInNewContext (vm.js:71:16)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:106:13)
+    at process.emit (events.js:191:7)
+    at process.nextTick (internal/child_process.js:744:12)
+    at _combinedTickCallback (internal/process/next_tick.js:67:7)
+    at process._tickCallback (internal/process/next_tick.js:98:9)
+  | => test runner err: SyntaxError: Unexpected token else
+
+  => code score: 0 / 2 pts
+
+=> TOTAL STUDENT SCORE: 10 / 14
+
+
+================================
+
+STUDENT: benjamin_kissous
+
+  -  quizz answers:
+  | qcm1 : 2 (solution: 2) => 2 pts
+  | qcm2 : 2 (solution: 2) => 2 pts
+  | qcm3 : 1 (solution: 1) => 2 pts
+  | qcm4 : 2 (solution: 2) => 2 pts
+  | qcm5 : 3 (solution: 3) => 2 pts
+  | qcm6 : 1 (solution: 1) => 2 pts
+
+  => quizz score: 12 / 12 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code1 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var reponse = prompt('Ta couleur préférée ?');
+  | 
+  | if (reponse === 'bleu') {
+  | 
+  | 	alert('OK');
+  | }
+  | 
+  | if (reponse === 'gris') {
+  | 
+  | 	var reponse2 = prompt('clair ou foncé ?');
+  | 	if (reponse2 === 'clair'){
+  | 
+  | 		alert('comme le ciel');
+  | 	}
+  | 
+  | 	if (reponse2 === 'foncé') {
+  | 
+  | 		alert('c\est bien!');
+  | 	}	
+  | }
+  | 
+  | else {
+  | 
+  | 	alert('je connais pas');
+  | }
+  | 
+  | // -> STUDENT CODE ERROR: si l'utilisateur tape gris puis foncé, alert devrait afficher "c&#39;est bien!" au lieu de "cest bien!"
+
+  => code score: 1 / 2 pts
+
+=> TOTAL STUDENT SCORE: 13 / 14
+
+
+================================
+
+STUDENT: charles_kiefer
+
+  -  quizz answers:
+  | qcm1 : 2 (solution: 2) => 2 pts
+  | qcm2 : 2 (solution: 2) => 2 pts
+  | qcm3 : 1 (solution: 1) => 2 pts
+  | qcm4 : 2 (solution: 2) => 2 pts
+  | qcm5 : 3 (solution: 3) => 2 pts
+  | qcm6 : 1 (solution: 1) => 2 pts
+
+  => quizz score: 12 / 12 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code1 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var reponse = prompt('Ta couleur préféréer ?');
+  | if (reponse === 'bleu') {
+  | 	alert('ok' );
+  | }
+  | 
+  | 	else if (reponse === 'gris') {
+  | 		var reponseA = prompt ('clair ou foncé ?');
+  | 			
+  | 				if (reponseA === 'clair') {
+  | 				    alert('comme le ciel');
+  | 					}
+  | 				else if (reponseA === 'foncé') {
+  | 					alert('c\'est bien!');
+  | 					}
+  | }
+  | 	else {
+  | 		alert('je ne connais pas');
+  | 			}
+  | 
+  | // -> STUDENT CODE ERROR: si l'utilisateur tape gris puis foncé, alert devrait afficher "c&#39;est bien!" au lieu de "c'est bien!"
+
+  => code score: 1 / 2 pts
+
+=> TOTAL STUDENT SCORE: 13 / 14
+
+
+================================
+
+STUDENT: edouard_duchesnedelamotte
+
+  -  quizz answers:
+  | qcm1 : 2 (solution: 2) => 2 pts
+  | qcm2 : 2 (solution: 2) => 2 pts
+  | qcm3 : 1 (solution: 1) => 2 pts
+  | qcm4 : 2 (solution: 2) => 2 pts
+  | qcm5 : 3 (solution: 3) => 2 pts
+  | qcm6 : 1 (solution: 1) => 2 pts
+
+  => quizz score: 12 / 12 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code1 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | 
+  | 
+  | 
+  | var reponse = prompt('Ta couleur préférée ?');
+  | if (reponse === 'bleu') {
+  |     alert('OK');
+  | } else if (reponse === 'gris') {
+  |     var reponseL = prompt('clair ou foncé ?')
+  |     if (reponseL === 'clair') {
+  |         alert('comme le ciel');
+  |     } else if (reponseL === 'foncé') {
+  |         alert('c\'est bien !');
+  |     }
+  | } else {
+  |     alert('je connais pas');
+  | }
+  | 
+  | 
+  | 
+  | // -> STUDENT CODE ERROR: si l'utilisateur tape gris puis foncé, alert devrait afficher "c&#39;est bien!" au lieu de "c'est bien !"
+
+  => code score: 1 / 2 pts
+
+=> TOTAL STUDENT SCORE: 13 / 14
+
+
+================================
+
+STUDENT: guillaume_martin
+
+  -  quizz answers:
+  | qcm1 : 2 (solution: 2) => 2 pts
+  | qcm2 : 2 (solution: 2) => 2 pts
+  | qcm3 : 1 (solution: 1) => 2 pts
+  | qcm4 : 2 (solution: 2) => 2 pts
+  | qcm5 : 3 (solution: 3) => 2 pts
+  | qcm6 : 1 (solution: 1) => 2 pts
+
+  => quizz score: 12 / 12 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code1 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var salut = prompt('Ta couleur préférée?')
+  | if (salut === 'bleu'){
+  | 	alert('OK');
+  | }
+  | 	if (salut === 'gris'){
+  | 	var grey = prompt('clair ou foncé?');
+  | 	if (grey === 'clair'){
+  | 	alert ('comme le ciel');
+  | }
+  | 	else if (grey === 'foncé'){
+  | 		alert ('c\'est bien');
+  | 	}
+  | }
+  | else alert ('je connais pas');
+  | 
+  | // -> STUDENT CODE ERROR: si l'utilisateur tape gris puis foncé, alert devrait afficher "c&#39;est bien!" au lieu de "c'est bien"
+
+  => code score: 1 / 2 pts
+
+=> TOTAL STUDENT SCORE: 13 / 14
+
+
+================================
+
+STUDENT: ilana_bloch
+
+  -  quizz answers:
+  | qcm1 : 2 (solution: 2) => 2 pts
+  | qcm2 : 2 (solution: 2) => 2 pts
+  | qcm3 : 1 (solution: 1) => 2 pts
+  | qcm4 : 2 (solution: 2) => 2 pts
+  | qcm5 : 3 (solution: 3) => 2 pts
+  | qcm6 : 1 (solution: 1) => 2 pts
+
+  => quizz score: 12 / 12 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code1 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var rep1 = prompt('Ta couleur préférée ?');
+  | if (rep1 === 'rouge') {
+  |   alert('bien!');
+  | } else if (rep1 === 'bleu') {
+  |   var rep2 = prompt('clair ou foncé ?');
+  |   if (rep2 === 'clair') {
+  |     alert('comme le ciel');
+  |   } else if (rep2 === 'foncé') {
+  |     alert('OK');
+  |   };
+  | } else {
+  |   alert('j\'ai pas compris');
+  | }
+
+  => code score: 2 / 2 pts
+
+=> TOTAL STUDENT SCORE: 14 / 14
+
+
+================================
+
+STUDENT: jeanne_vinay
+
+  -  quizz answers:
+  | qcm1 : 2 (solution: 2) => 2 pts
+  | qcm2 : 2 (solution: 2) => 2 pts
+  | qcm3 : 1 (solution: 1) => 2 pts
+  | qcm4 : 2 (solution: 2) => 2 pts
+  | qcm5 : 3 (solution: 3) => 2 pts
+  | qcm6 : 1 (solution: 1) => 2 pts
+
+  => quizz score: 12 / 12 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code1 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var couleur = prompt('Ta couleur préférée ?')
+  | 
+  | if (couleur ==='gris')
+  | {
+  | 	var question = prompt('clair ou foncé ?')
+  | 	if (question === "clair")
+  | 	{
+  | 	alert=('comme le ciel');
+  | 	}
+  | 	else if (question ==="foncé")
+  | 	{
+  | 	alert=('c\'est bien!');
+  | 	}
+  | }
+  | 
+  | if (couleur ==='bleu')
+  | {
+  | 	alert= ('OK');
+  | }
+  | else
+  | {
+  |     alert = ('je connais pas');
+  | }
+  | 
+  | 
+  | => test runner err: si l'utilisateur tape gris puis foncé, alert devrait afficher "c&#39;est bien!", mais alert n'a pas été appelé...
+
+  => code score: 0 / 2 pts
+
+=> TOTAL STUDENT SCORE: 12 / 14
+
+
+================================
+
+STUDENT: jessy_hachet
+
+  -  quizz answers:
+  | qcm1 : 2 (solution: 2) => 2 pts
+  | qcm2 : 2 (solution: 2) => 2 pts
+  | qcm3 : 1 (solution: 1) => 2 pts
+  | qcm4 : 2 (solution: 2) => 2 pts
+  | qcm5 : 3 (solution: 3) => 2 pts
+  | qcm6 : 1 (solution: 1) => 2 pts
+
+  => quizz score: 12 / 12 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code1 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | //Je créer ma variable "reponse" et je lui affecte un texte
+  | var reponse = prompt('Ta couleur préférée ?');
+  | //Si la réponse est bleu alors une pop up affiche Ok
+  | if (reponse === 'bleu') {
+  |     alert('Ok');
+  | //Si la réponse est gris alors une pop up affiche clair ou foncé ?
+  | } else if (reponse === 'gris') {
+  |     alert('clair ou foncé ?');
+  | 		var reponse2 = prompt('clair ou foncé ?');
+  | 		if (reponse2 === 'clair') {
+  | 			alert('presque blanc');
+  | 		} else if (reponse2 === 'foncé') {
+  | 			alert('ah bon ?');
+  | 		}
+  | //Si la réponse n'est pas répertorier alors une pop up affiche comment ?
+  | } else {
+  |     alert('comment ?');
+Wed, 30 Nov 2016 13:28:41 GMT jailed:sandbox DYNAMIC PLUGIN:50
+})();
+ ^
+SyntaxError: Unexpected token )
+    at Object.exports.runInNewContext (vm.js:71:16)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:106:13)
+    at process.emit (events.js:191:7)
+    at process.nextTick (internal/child_process.js:744:12)
+    at _combinedTickCallback (internal/process/next_tick.js:67:7)
+    at process._tickCallback (internal/process/next_tick.js:98:9)
+  | => test runner err: SyntaxError: Unexpected token )
+
+  => code score: 0 / 2 pts
+
+=> TOTAL STUDENT SCORE: 12 / 14
+
+
+================================
+
+STUDENT: kamil_izaret
+
+  -  quizz answers:
+  | qcm1 : 2 (solution: 2) => 2 pts
+  | qcm2 : 2 (solution: 2) => 2 pts
+  | qcm3 : 1 (solution: 1) => 2 pts
+  | qcm4 : 2 (solution: 2) => 2 pts
+  | qcm5 : 3 (solution: 3) => 2 pts
+  | qcm6 : 1 (solution: 1) => 2 pts
+
+  => quizz score: 12 / 12 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code1 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var reponse1 = prompt('Ta couleur préférée ?');
+  | 	if (reponse1 === 'rouge') {
+  | 		alert ('bien !');
+  | 		}else if (reponse1 === 'bleu') {
+  | 		var reponse2 = prompt('clair ou foncé ?');
+  | 		}
+  | 		if (reponse2 ==='clair') {
+  | 			alert ('comme le ciel');
+  | 		}else if (reponse2 === 'foncé') {
+  | 			alert ('OK');
+  | 	}else {
+  | 		alert ('j\'ai pas compris');
+  | 	}
+
+  => code score: 2 / 2 pts
+
+=> TOTAL STUDENT SCORE: 14 / 14
+
+
+================================
+
+STUDENT: lara_kounowski
+
+  -  quizz answers:
+  | qcm1 : 2 (solution: 2) => 2 pts
+  | qcm2 : 2 (solution: 2) => 2 pts
+  | qcm3 : 1 (solution: 1) => 2 pts
+  | qcm4 : 2 (solution: 2) => 2 pts
+  | qcm5 : 3 (solution: 3) => 2 pts
+  | qcm6 : 1 (solution: 1) => 2 pts
+
+  => quizz score: 12 / 12 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code1 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var reponse = prompt('Ta couleur préférée?');
+  | if (reponse === 'bleu') {
+  | 	alert('ok');
+  | 	} else if (reponse2 === 'gris') {
+  | 	alert('clair ou foncé?');
+  | 	var reponse2 = prompt('Réponse attendue');
+  | 	if (reponse2 === 'clair') {
+  | 	alert('presque blanc'); {
+  | 	} } else if (reponse2 === 'foncé') {
+  | 	alert('ah bon?'); 
+  | 	} } else {
+  | 	alert('comment ?');
+  | 	}
+  | 
+  | // -> STUDENT CODE ERROR: si l'utilisateur tape gris puis foncé, alert devrait afficher "ah bon?" au lieu de "comment ?"
+
+  => code score: 1 / 2 pts
+
+=> TOTAL STUDENT SCORE: 13 / 14
+
+
+================================
+
+STUDENT: legacvictor
+
+  -  quizz answers:
+  | qcm1 : 2 (solution: 2) => 2 pts
+  | qcm2 : 2 (solution: 2) => 2 pts
+  | qcm3 : 1 (solution: 1) => 2 pts
+  | qcm4 : 2 (solution: 2) => 2 pts
+  | qcm5 : 3 (solution: 3) => 2 pts
+  | qcm6 : 1 (solution: 1) => 2 pts
+
+  => quizz score: 12 / 12 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code1 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var couleur = prompt('Ta couleur préférée ?');
+  | if ( couleur === 'gris') {
+  |     var nuance = prompt('clair ou foncé ?');
+  |     if (nuance === 'clair') {
+  |         alert('presque blanc');
+  |     } else {
+  |         alert('ah bon?');
+  |     }
+  | } else if (couleur === 'bleu') {
+  |     alert('OK');
+  | } else {
+  |     alert('comment ?');
+  | }
+
+  => code score: 2 / 2 pts
+
+=> TOTAL STUDENT SCORE: 14 / 14
+
+
+================================
+
+STUDENT: louis_gosse
+
+  -  quizz answers:
+  | qcm1 : 2 (solution: 2) => 2 pts
+  | qcm2 : 2 (solution: 2) => 2 pts
+  | qcm3 : 1 (solution: 1) => 2 pts
+  | qcm4 : 2 (solution: 2) => 2 pts
+  | qcm5 : 3 (solution: 3) => 2 pts
+  | qcm6 : 3 (solution: 1) => 0 pts
+
+  => quizz score: 10 / 12 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code1 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var couleur = prompt('Ta couleur préférée?')
+  | if (couleur === 'rouge') {
+  |     alert('bien!');
+  | } else if (couleur === 'bleu') {
+  |     var bleu = prompt('clair ou foncé?')
+  |     if (bleu === 'clair') {
+  |         alert('comme le ciel');
+  |     } else if (bleu === 'foncé') {
+  |         alert('OK');
+  |     }
+  | } else {
+  |     alert('j\ai pas compris');
+  | }
+
+  => code score: 2 / 2 pts
+
+=> TOTAL STUDENT SCORE: 12 / 14
+
+
+================================
+
+STUDENT: louis_malrieu
+
+  -  quizz answers:
+  | qcm1 : 2 (solution: 2) => 2 pts
+  | qcm2 : 2 (solution: 2) => 2 pts
+  | qcm3 : 1 (solution: 1) => 2 pts
+  | qcm4 : 2 (solution: 2) => 2 pts
+  | qcm5 : 1 (solution: 3) => 0 pts
+  | qcm6 : 2 (solution: 1) => 0 pts
+
+  => quizz score: 8 / 12 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code1 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var question = prompt('Ta couleur préféré?');
+  | 
+  | if (couleur==='bleu')
+  | {
+  | 	var couleur= prompt('OK');
+  | 	if (couleur === "Sinon?")
+  | 	{
+  | 	alert('comment?')
+  | 	}
+  | 	
+  | 	}
+  | 
+  | if (couleur ==="gris");
+  | {
+  | 	var question = prompt("clair ou foncé?");
+  | 	if (reponse ==="clair")
+  | 	{
+  | 		alert('presque blanc')
+  | 	}
+  | else if (reponse ==='foncé')
+  | 	{
+  | 	alert('ah bon?')
+  | 	}
+  | 	}
+Wed, 30 Nov 2016 13:28:41 GMT jailed:sandbox ReferenceError: reponse is not defined
+    at evaluateStudentCode (DYNAMIC PLUGIN:47:6)
+    at DYNAMIC PLUGIN:57:3
+    at ContextifyScript.Script.runInContext (vm.js:35:29)
+    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
+    at Object.exports.runInNewContext (vm.js:72:17)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:106:13)
+    at process.emit (events.js:191:7)
+  | => test runner err: ReferenceError: reponse is not defined
+
+  => code score: 0 / 2 pts
+
+=> TOTAL STUDENT SCORE: 8 / 14
+
+
+================================
+
+STUDENT: madison_hayat
+
+  -  quizz answers:
+  | qcm1 : 2 (solution: 2) => 2 pts
+  | qcm2 : 2 (solution: 2) => 2 pts
+  | qcm3 : 1 (solution: 1) => 2 pts
+  | qcm4 : 2 (solution: 2) => 2 pts
+  | qcm5 : 2 (solution: 3) => 0 pts
+  | qcm6 : 1 (solution: 1) => 2 pts
+
+  => quizz score: 10 / 12 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code1 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var reponse = prompt('Ta couleur préférée?');
+  | if (reponse === 'bleu') {
+  | alert('OK');
+  | }
+  | else if (reponse2 === 'gris') {
+  | var reponse2 = prompt('clair ou foncé ? '); 
+  | }
+  | if (reponse === 'clair') {
+  | alert('presque blanc');
+  | }
+  | else if (reponse === 'foncé') {
+  | alert('ah bon ?');
+  | } 
+  | else {
+  | alert('Comment ?');
+  | }
+  | 
+  | // -> STUDENT CODE ERROR: si l'utilisateur tape gris puis foncé, alert devrait afficher "ah bon?" au lieu de "Comment ?"
+
+  => code score: 1 / 2 pts
+
+=> TOTAL STUDENT SCORE: 11 / 14
+
+
+================================
+
+STUDENT: mickael_chekroun
+
+  -  quizz answers:
+  | qcm1 : 2 (solution: 2) => 2 pts
+  | qcm2 : 2 (solution: 2) => 2 pts
+  | qcm3 : 1 (solution: 1) => 2 pts
+  | qcm4 : 2 (solution: 2) => 2 pts
+  | qcm5 : 3 (solution: 3) => 2 pts
+  | qcm6 : 1 (solution: 1) => 2 pts
+
+  => quizz score: 12 / 12 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code1 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var reponse = prompt('Ta couleur préférée ?');
+  | if (reponse === 'bleu') {
+  | 	alert('OK');
+  | }
+  | else if (reponse === 'gris') {
+  | 	var reponse2 = prompt('clair ou foncé ?');
+  | 	if (reponse2 === 'clair') {
+  | 		alert('presque blanc');
+  | 	}
+  | 	else if (reponse2 === 'foncé') {
+  | 		alert('ah bon?');
+  | 	}
+  | }
+  | else{
+  | 	alert('comment ?');
+  | }
+
+  => code score: 2 / 2 pts
+
+=> TOTAL STUDENT SCORE: 14 / 14
+
+
+================================
+
+STUDENT: pierre_salesse
+
+  -  quizz answers:
+  | qcm1 : 2 (solution: 2) => 2 pts
+  | qcm2 : 2 (solution: 2) => 2 pts
+  | qcm3 : 1 (solution: 1) => 2 pts
+  | qcm4 : 2 (solution: 2) => 2 pts
+  | qcm5 : 3 (solution: 3) => 2 pts
+  | qcm6 : 1 (solution: 1) => 2 pts
+
+  => quizz score: 12 / 12 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code1 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var reponse = prompt('Ta couleur préférée ?');
+  | if (reponse === 'bleu') {
+  |     alert('ok');
+  | } else if (reponse === 'gris') {
+  |     var reponse2 = prompt('clair ou foncé ?');
+  |     if (reponse2 === 'clair') {
+  |         alert('comme le ciel');
+  |     } else if (reponse2 === 'foncé') {
+  |         alert('c\'est bien !');
+  |     }
+  | } else {
+  |     alert('je ne connais pas');
+  | }
+  | 
+  | // -> STUDENT CODE ERROR: si l'utilisateur tape gris puis foncé, alert devrait afficher "c&#39;est bien!" au lieu de "c'est bien !"
+
+  => code score: 1 / 2 pts
+
+=> TOTAL STUDENT SCORE: 13 / 14
+
+
+================================
+
+STUDENT: quentin_champenois
+
+  -  quizz answers:
+  | qcm1 : 2 (solution: 2) => 2 pts
+  | qcm2 : 2 (solution: 2) => 2 pts
+  | qcm3 : 1 (solution: 1) => 2 pts
+  | qcm4 : 2 (solution: 2) => 2 pts
+  | qcm5 : 3 (solution: 3) => 2 pts
+  | qcm6 : 1 (solution: 1) => 2 pts
+
+  => quizz score: 12 / 12 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code1 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var reponse = prompt('Ta couleur préférée ?');
+  | if (reponse === 'rouge'){
+  | 	alert('bien!');
+  | } else if (reponse === 'bleu'){
+  | 	var reponse2 = prompt('clair ou foncé ?');
+  | 	if (reponse2 === 'clair'){
+  | 		alert('comme le ciel');
+  | 	} else if (reponse2 === 'foncé'){
+  | 		alert('ok');
+  | 	}
+  | } else {
+  | 	alert('j\'ai pas compris');
+  | }
+  | 
+  | 
+  | // -> STUDENT CODE ERROR: si l'utilisateur tape bleu puis foncé, alert devrait afficher "OK" au lieu de "ok"
+
+  => code score: 1 / 2 pts
+
+=> TOTAL STUDENT SCORE: 13 / 14
+
+
+================================
+
+STUDENT: theo_geay
+
+  -  quizz answers:
+  | qcm1 : 2 (solution: 2) => 2 pts
+  | qcm2 : 2 (solution: 2) => 2 pts
+  | qcm3 : 1 (solution: 1) => 2 pts
+  | qcm4 : 2 (solution: 2) => 2 pts
+  | qcm5 : 3 (solution: 3) => 2 pts
+  | qcm6 : 1 (solution: 1) => 2 pts
+
+  => quizz score: 12 / 12 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code1 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var q1 = prompt('Ta couleur préférée?');
+  | if (q1 === 'gris')
+  |     var q2 = prompt('clair ou foncé?');
+  | if (q2 === 'clair') {
+  |     alert('Comme le ciel');
+  | } else if (q2 === 'foncé') {
+  |     alert('C\'est bien!');
+  | } else if (q1 === 'bleu') {
+  |     alert('OK');
+  | } else {
+  |     alert('Je ne connais pas');
+  | }
+  | 
+  | // -> STUDENT CODE ERROR: si l'utilisateur tape gris puis foncé, alert devrait afficher "c&#39;est bien!" au lieu de "C'est bien!"
+
+  => code score: 1 / 2 pts
+
+=> TOTAL STUDENT SCORE: 13 / 14
+
+
+================================
+
+STUDENT: thibault_chambrillon
+
+  -  quizz answers:
+  | qcm1 : 2 (solution: 2) => 2 pts
+  | qcm2 : 2 (solution: 2) => 2 pts
+  | qcm3 : 1 (solution: 1) => 2 pts
+  | qcm4 : 2 (solution: 2) => 2 pts
+  | qcm5 : 3 (solution: 3) => 2 pts
+  | qcm6 : 1 (solution: 1) => 2 pts
+
+  => quizz score: 12 / 12 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code1 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var reponse = prompt('Ta couleur préférée ?')
+  | 	if (reponse === 'bleu') {
+  | 		alert('OK')
+  | 	} else if (reponse === 'gris') {
+  | 			var reponseA = prompt('clair ou foncé ?')
+  | 				if (reponseA === 'clair') {
+  | 					alert('comme le ciel')
+  | 				} else if (reponseA === 'foncé') {
+  | 					alert('c\'est bien !')
+  | 				} else {
+  | 
+  | 				}
+  | 	} else {
+  | 		alert('je connais pas')
+  | 	}
+  | 
+  | // -> STUDENT CODE ERROR: si l'utilisateur tape gris puis foncé, alert devrait afficher "c&#39;est bien!" au lieu de "c'est bien !"
+
+  => code score: 1 / 2 pts
+
+=> TOTAL STUDENT SCORE: 13 / 14
+
+
+================================
+
+STUDENT: timothee_ong
+
+  -  quizz answers:
+  | qcm1 : 2 (solution: 2) => 2 pts
+  | qcm2 : 2 (solution: 2) => 2 pts
+  | qcm3 : 1 (solution: 1) => 2 pts
+  | qcm4 : 2 (solution: 2) => 2 pts
+  | qcm5 : 3 (solution: 3) => 2 pts
+  | qcm6 : 3 (solution: 1) => 0 pts
+
+  => quizz score: 10 / 12 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code1 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var reponse = prompt('Ta couleur préférée ?');
+  | if (reponse === 'bleu') {
+  |   alert('OK')
+  | } else if (reponse ==='gris') {
+  |   var reponse2 = prompt('clair ou foncé ?');
+  |   if (reponse2 ==='clair') {
+  |     alert('comme le ciel')
+  |   } else if (reponse2 ==='foncé') {
+  |     alert('c\'est bien')
+  |   }
+  | } else {
+  |   alert('je connais pas')
+  | };
+  | 
+  | // -> STUDENT CODE ERROR: si l'utilisateur tape gris puis foncé, alert devrait afficher "c&#39;est bien!" au lieu de "c'est bien"
+
+  => code score: 1 / 2 pts
+
+=> TOTAL STUDENT SCORE: 11 / 14
+
+
+================================
+
+STUDENT: victoria_antalis
+
+  -  quizz answers:
+  | qcm1 : 2 (solution: 2) => 2 pts
+  | qcm2 : 3 (solution: 2) => 0 pts
+  | qcm3 : 1 (solution: 1) => 2 pts
+  | qcm4 : 2 (solution: 2) => 2 pts
+  | qcm5 : 3 (solution: 3) => 2 pts
+  | qcm6 : 1 (solution: 1) => 2 pts
+
+  => quizz score: 10 / 12 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code1 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var reponse = prompt('Ta couleur préférée');
+  | 	if (reponse === 'bleu') {
+  | 		alert('OK'); 
+  | 	} else if(reponse==='gris'){
+  | 		prompt('clair ou foncé ?')
+  | 	} 
+  | => test runner err: si l'utilisateur tape gris puis foncé, alert devrait afficher "ah bon?", mais alert n'a pas été appelé...
+
+  => code score: 0 / 2 pts
+
+=> TOTAL STUDENT SCORE: 10 / 14
