@@ -22,7 +22,7 @@ Vous serez noté(e) sur:
 
 ```js
 (function evaluateStudentCode(){
-  var done = application.remote._send; // to call upon code evaluation
+  var done = application.remote._sendOnce; // to call upon code evaluation
   // student's variant -> test inputs and expected outputs
   var variant = {
     prompts: '{{prompts}}'.split(','),
