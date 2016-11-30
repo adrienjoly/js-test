@@ -1,4 +1,4 @@
-// this script loads and evaluates answers submitted by students from a JSON file (exported from firebase)
+// load and evaluate answers submitted by a student, from a JSON file exported from Firebase
 
 var _ = require('lodash');
 var async = require('async');
@@ -7,8 +7,6 @@ var evaluateStudent = require('./StudentEvaluator');
 var filePath = process.argv[2] || '../students/albira.json';
 
 console.log('Reading and evaluating answers from:', filePath, '...');
-
-//var submissionSet = require(filePath).submissions; // this line allows to parse an entire firebase json export at once
 
 var submissionSet = {};
 var studentName = filePath.split('/').pop().replace('.json', '');
