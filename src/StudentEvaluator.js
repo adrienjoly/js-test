@@ -41,14 +41,13 @@ function evaluateStudent(student, next) {
   console.log('\n\n================================\n')
   console.log('STUDENT:', student.key/*, '(' + student._uid + ')', '...'*/);
 
-  console.log('\n  -  quizz answers:');
-  var quizzAnsw = quizzEvaluator.getAnswerSet(student);
-  setConsolePrefix('  | ');
-  for (var i in quizzAnsw) {
-    console.log(i, ':', quizzAnsw[i]);
-  }
-  setConsolePrefix();
   var res = quizzEvaluator.evaluateAnswers(student);
+  console.log('\n  -  quizz answers:');
+  setConsolePrefix('  | ');
+  res.log.map(function(q){
+    console.log(q.questionId, ':', q.answer, '(solution: ' + q.solution + ') =>', q.points, 'pts');
+  });
+  setConsolePrefix();
   totalScore += res.score;
   totalPoints += res.length;
   console.log('\n  => quizz score:', res.score, '/', res.length);
