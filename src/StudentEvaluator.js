@@ -50,7 +50,7 @@ function evaluateStudent(student, next) {
   setConsolePrefix();
   totalScore += res.score;
   totalPoints += res.length;
-  console.log('\n  => quizz score:', res.score, '/', res.length);
+  console.log('\n  => quizz score:', res.score, '/', res.length, 'pts');
 
   console.log('\n  -  code evaluation:');
   setConsolePrefix('  | ');
@@ -58,7 +58,7 @@ function evaluateStudent(student, next) {
     totalScore += res.score;
     totalPoints += res.length;
     setConsolePrefix();
-    console.log('\n  => code score:', res.score, '/', res.length);
+    console.log('\n  => code score:', res.score, '/', res.length, 'pts');
     console.log();
     console.log('=> TOTAL STUDENT SCORE:', totalScore, '/', totalPoints);
     var csv = [ student.key, totalScore ];
