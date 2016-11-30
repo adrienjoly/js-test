@@ -15,7 +15,11 @@ function runCodeInSandbox(code, callback) {
     callback(err, results);
     plugin.disconnect();
   }
+  var timeoutMessage = 'TIMEOUT: infinite loop?'; // can be overrided by evaluation code
   var api = {
+    _setTimeoutMessage: function(message){
+      timeoutMessage = message;
+    },
     _log: console.log.bind(console),
     // this function will be called with resulting arguments by sandboxed script, when done
     _send: function(){
@@ -25,7 +29,7 @@ function runCodeInSandbox(code, callback) {
   plugin = new jailed.DynamicPlugin(code, api);
   plugin.whenFailed(onDone);
   //plugin.whenConnected(onDone);
-  timeout = setTimeout(onDone.bind(null, 'TIMEOUT: infinite loop?'), 2000);
+  timeout = setTimeout(function(){ onDone(timeoutMessage); }, 2000);
 }
 
 // fixed version of variant3() => returns 0, 1 or 2, depending on the value of number
