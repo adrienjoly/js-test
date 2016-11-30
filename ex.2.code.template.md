@@ -14,6 +14,40 @@ Vous serez noté(e) sur:
  - le respect des règles d'indentation et autres conventions vues en cours. (ex: 2 espaces par niveau d'indentation)
  - le bon fonctionnement de votre code, sans erreurs, depuis la console JavaScript de Google Chrome, pour chacun des cas illustrés dans l'arbre de décision.
 
-- {"n":1}
-- {"n":2}
-- {"n":3}
+- { "n": 1, "prompts": "gris,foncé", "expected": "ah bon?" }
+- { "n": 2, "prompts": "gris,foncé", "expected": "c'est bien!" }
+- { "n": 3, "prompts": "bleu,foncé", "expected": "OK" }
+
+???
+
+```js
+(function evaluateStudentCode(){
+  var done = application.remote._send; // to call upon code evaluation
+  // student's variant -> test inputs and expected outputs
+  var variant = {
+    prompts: '{{prompts}}'.split(','),
+    expected: '{{expected}}',
+  };
+  // exercise requirements
+  var req = 'si l\'utilisateur tape ' + variant.prompts.join(' puis ')
+    + ', alert devrait afficher "' + variant.expected + '"';
+  application.remote._setTimeoutMessage(req
+    + ', mais alert n\'a pas été appelé...');
+  // test environment
+  var prompts = variant.prompts.slice(); // clone the array
+  function prompt() {
+    return prompts.shift();
+  }
+  function alert(message) {
+    if (message !== variant.expected) {
+      done(req + ' au lieu de "' + message + '"', 0.5);
+      // give a half point to the student, because her code runs
+    } else {
+      done(null, 1); // passed test => give the point to the student
+    }
+  };
+  var console = { log: function(){} }; // tolerate calls to console.log()
+  // run the test
+  _runStudentCode(); // student call should call prompt() and alert()
+})();
+```
