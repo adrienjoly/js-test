@@ -40,7 +40,7 @@ Que vaut cette expression de comparaison de valeur ?
 ```
 
 - true
-- false
+* false
 - undefined
 - c'est une affectation
 
