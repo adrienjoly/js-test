@@ -3,6 +3,8 @@ var fs = require('fs');
 var async = require('async');
 var jailed = require('jailed-node');
 
+var COEF = 2; // applies to scores of code exercises
+
 function sum(a, b) {
   return a + b;
 }
@@ -79,7 +81,7 @@ function runTest(testCode, studentCode, callback) {
           console.log('\n// -> STUDENT CODE ERROR:', testError);
         }
       }
-      console.log('\n// => STUDENT CODE SCORE:', testScore || 0);
+      //console.log('\n// => STUDENT CODE SCORE:', COEF * (testScore || 0));
       callback(null, [ testScore || 0 ]); // sum of array must be <= 1
     });
   }
@@ -105,8 +107,8 @@ CodeEvaluator.prototype.evaluateAnswers = function(answers, callback) {
   async.mapSeries(this.tests, runExEval, function done(err, res) {
     var total = _.flatten(res).reduce(sum);
     callback(null, {
-      score: total,
-      length: nbTests
+      score: COEF * total,
+      length: COEF * nbTests
     });
   });
 };

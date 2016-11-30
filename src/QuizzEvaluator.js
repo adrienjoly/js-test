@@ -3,7 +3,8 @@
 
 var fs = require('fs');
 
-var PTS_RIGHT = 1;
+// TODO: move these constants to a configuration file
+var PTS_RIGHT = 2;
 var PTS_WRONG = 0; // or -0.5 for example
 var PTS_NULL = 0;
 
@@ -41,7 +42,7 @@ QuizzEvaluator.prototype.evaluateAnswers = function(answers) {
     });
   }
   return {
-    length: Object.keys(this.solutions).length,
+    length: Object.keys(this.solutions).length * PTS_RIGHT, // = maximum score
     score: score,
     log: log,    
   };
