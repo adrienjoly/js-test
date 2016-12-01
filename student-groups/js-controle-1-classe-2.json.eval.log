@@ -159,7 +159,7 @@ STUDENT: guillaume_ceyssac
   | } else {
   | 	alert('J'ai pas compris');
   | } 
-Wed, 30 Nov 2016 13:28:35 GMT jailed:sandbox DYNAMIC PLUGIN:45
+Thu, 01 Dec 2016 09:05:36 GMT jailed:sandbox DYNAMIC PLUGIN:45
 } else {
   ^^^^
 SyntaxError: Unexpected token else
@@ -240,11 +240,27 @@ STUDENT: haroon_hassan
   | 
   | ------------- EXERCISE: code1 (variant: 2) -------------
   | 
-  | // WARNING: NO STUDENT CODE => skipping
+  | // STUDENT CODE:
+  | 
+  | var reponse = prompt('Ta couleur préférée ?');
+  | if (reponse === 'rouge'){
+  | alert ('Bien joué ');
+  | } else if (reponse === 'bleu') {
+  | var reponse1 = prompt(' clair ou foncé');
+  | } if (reponse1 === 'clair') {
+  | alert('comme le ciel');
+  | } else if (reponse1 === 'foncé') {
+  | alert('ok');
+  |  }else {
+  | alert('Je n\'pas compris');
+  | }
+  | //envoyé par email
+  | 
+  | // -> STUDENT CODE ERROR: si l'utilisateur tape bleu puis foncé, alert devrait afficher "OK" au lieu de "ok"
 
-  => code score: 0 / 2 pts
+  => code score: 1 / 2 pts
 
-=> TOTAL STUDENT SCORE: 10 / 14
+=> TOTAL STUDENT SCORE: 11 / 14
 
 
 ================================
@@ -665,7 +681,7 @@ STUDENT: raphaela_agus_azoubel
   | 		}
   | 	}
   | }
-Wed, 30 Nov 2016 13:28:38 GMT jailed:sandbox DYNAMIC PLUGIN:37
+Thu, 01 Dec 2016 09:05:39 GMT jailed:sandbox DYNAMIC PLUGIN:37
 	}else if(demande === 'gris'){
 	 ^^^^
 SyntaxError: Unexpected token else
@@ -727,7 +743,7 @@ STUDENT: romain_lognon
   | 	{
   | 	alert('j/'ai pas compris');
   | 	}
-Wed, 30 Nov 2016 13:28:38 GMT jailed:sandbox DYNAMIC PLUGIN:34
+Thu, 01 Dec 2016 09:05:39 GMT jailed:sandbox DYNAMIC PLUGIN:34
 if question ===('rouge')
    ^^^^^^^^
 SyntaxError: Unexpected identifier
@@ -846,7 +862,7 @@ STUDENT: valentine_piol
   | }else if (rep === 'foncé') {
   |      alert('OK');
   | }
-Wed, 30 Nov 2016 13:28:38 GMT jailed:sandbox DYNAMIC PLUGIN:36
+Thu, 01 Dec 2016 09:05:39 GMT jailed:sandbox DYNAMIC PLUGIN:36
     alert('j\ai pas compris);
           ^^^^^^^^^^^^^^^^^^^
 SyntaxError: Invalid or unexpected token
@@ -900,7 +916,7 @@ STUDENT: yannis_chaumard_sevean
   | 
   | }
   | //suite a un soucis de mail j'ai perdu un peu de temps
-Wed, 30 Nov 2016 13:28:38 GMT jailed:sandbox DYNAMIC PLUGIN:42
+Thu, 01 Dec 2016 09:05:39 GMT jailed:sandbox DYNAMIC PLUGIN:42
 }   else (je connais pas) {
              ^^^^^^^
 SyntaxError: Unexpected identifier

@@ -82,6 +82,7 @@
       "_ft" : 1480425486033,
       "_t" : 1480425880821,
       "_uid" : "110487536965862998916",
+      "code1" : "var reponse = prompt('Ta couleur pr\u00E9f\u00E9r\u00E9e ?');\r\nif (reponse === 'rouge'){\r\nalert ('Bien jou\u00E9 ');\r\n} else if (reponse === 'bleu') {\r\nvar reponse1 = prompt(' clair ou fonc\u00E9');\r\n} if (reponse1 === 'clair') {\r\nalert('comme le ciel');\r\n} else if (reponse1 === 'fonc\u00E9') {\r\nalert('ok');\r\n }else {\r\nalert('Je n\\'pas compris');\r\n}\r\n//envoyé par email",
       "qcm1" : "2",
       "qcm2" : "2",
       "qcm3" : "1",
