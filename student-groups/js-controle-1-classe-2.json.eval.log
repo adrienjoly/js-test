@@ -35,6 +35,16 @@ STUDENT: alexandre_blanc
   |     alert('j\'ai pas compris');
   | }
 
+  [ ] Syntaxe: le code s'exécute sans erreur
+  [ ] Fonctionnement: le code respecte à la lettre les valeurs de l'énoncé
+  [ ] Indentation: correcte, avec 2 espaces par niveau
+  [ ] Conventions: placement des accolades
+  [ ] Conventions: ponctuation avec points-virgules
+  [ ] Conventions: apostrophes
+  [ ] Conditions: maitrise des conditions imbriquées
+  [ ] Logique: la structure du code correspond à celle de l'arbre de décision
+  [ ] /!\ la solution ne correspond pas à l'énoncé de l'étudiant => ZERO
+
   => code score: 2 / 2 pts
 
 => TOTAL STUDENT SCORE: 14 / 14
@@ -74,8 +84,16 @@ STUDENT: david_regnault
   | 		alert('je connais pas')
   | 	}
   | 
-  | 
-  | // -> STUDENT CODE ERROR: si l'utilisateur tape gris puis foncé, alert devrait afficher "c&#39;est bien!" au lieu de "c'est bien !"
+
+  [ ] Syntaxe: le code s'exécute sans erreur
+  [ ] Fonctionnement: le code respecte à la lettre les valeurs de l'énoncé
+  [ ] Indentation: correcte, avec 2 espaces par niveau
+  [ ] Conventions: placement des accolades
+  [ ] Conventions: ponctuation avec points-virgules
+  [ ] Conventions: apostrophes
+  [ ] Conditions: maitrise des conditions imbriquées
+  [ ] Logique: la structure du code correspond à celle de l'arbre de décision
+  [ ] /!\ la solution ne correspond pas à l'énoncé de l'étudiant => ZERO
 
   => code score: 1 / 2 pts
 
@@ -117,6 +135,16 @@ STUDENT: elsa_haddad
   | }
   | 
   | // -> STUDENT CODE ERROR: si l'utilisateur tape gris puis foncé, alert devrait afficher "ah bon?" au lieu de "ah bon ?"
+
+  [ ] Syntaxe: le code s'exécute sans erreur
+  [ ] Fonctionnement: le code respecte à la lettre les valeurs de l'énoncé
+  [ ] Indentation: correcte, avec 2 espaces par niveau
+  [ ] Conventions: placement des accolades
+  [ ] Conventions: ponctuation avec points-virgules
+  [ ] Conventions: apostrophes
+  [ ] Conditions: maitrise des conditions imbriquées
+  [ ] Logique: la structure du code correspond à celle de l'arbre de décision
+  [ ] /!\ la solution ne correspond pas à l'énoncé de l'étudiant => ZERO
 
   => code score: 1 / 2 pts
 
@@ -163,16 +191,16 @@ Thu, 01 Dec 2016 09:05:36 GMT jailed:sandbox DYNAMIC PLUGIN:45
 } else {
   ^^^^
 SyntaxError: Unexpected token else
-    at Object.exports.runInNewContext (vm.js:71:16)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
-    at emitTwo (events.js:106:13)
-    at process.emit (events.js:191:7)
-    at process.nextTick (internal/child_process.js:744:12)
-    at _combinedTickCallback (internal/process/next_tick.js:67:7)
-    at process._tickCallback (internal/process/next_tick.js:98:9)
-  | => test runner err: SyntaxError: Unexpected token else
+
+  [ ] Syntaxe: le code s'exécute sans erreur
+  [ ] Fonctionnement: le code respecte à la lettre les valeurs de l'énoncé
+  [ ] Indentation: correcte, avec 2 espaces par niveau
+  [ ] Conventions: placement des accolades
+  [ ] Conventions: ponctuation avec points-virgules
+  [ ] Conventions: apostrophes
+  [ ] Conditions: maitrise des conditions imbriquées
+  [ ] Logique: la structure du code correspond à celle de l'arbre de décision
+  [ ] /!\ la solution ne correspond pas à l'énoncé de l'étudiant => ZERO
 
   => code score: 0 / 2 pts
 
@@ -217,6 +245,16 @@ STUDENT: guillaume_desaintsernin
   | 	alert('comment ?');
   | }
 
+  [ ] Syntaxe: le code s'exécute sans erreur
+  [ ] Fonctionnement: le code respecte à la lettre les valeurs de l'énoncé
+  [ ] Indentation: correcte, avec 2 espaces par niveau
+  [ ] Conventions: placement des accolades
+  [ ] Conventions: ponctuation avec points-virgules
+  [ ] Conventions: apostrophes
+  [ ] Conditions: maitrise des conditions imbriquées
+  [ ] Logique: la structure du code correspond à celle de l'arbre de décision
+  [ ] /!\ la solution ne correspond pas à l'énoncé de l'étudiant => ZERO
+
   => code score: 2 / 2 pts
 
 => TOTAL STUDENT SCORE: 14 / 14
@@ -258,6 +296,16 @@ STUDENT: haroon_hassan
   | 
   | // -> STUDENT CODE ERROR: si l'utilisateur tape bleu puis foncé, alert devrait afficher "OK" au lieu de "ok"
 
+  [ ] Syntaxe: le code s'exécute sans erreur
+  [ ] Fonctionnement: le code respecte à la lettre les valeurs de l'énoncé
+  [ ] Indentation: correcte, avec 2 espaces par niveau
+  [ ] Conventions: placement des accolades
+  [ ] Conventions: ponctuation avec points-virgules
+  [ ] Conventions: apostrophes
+  [ ] Conditions: maitrise des conditions imbriquées
+  [ ] Logique: la structure du code correspond à celle de l'arbre de décision
+  [ ] /!\ la solution ne correspond pas à l'énoncé de l'étudiant => ZERO
+
   => code score: 1 / 2 pts
 
 => TOTAL STUDENT SCORE: 11 / 14
@@ -296,6 +344,16 @@ STUDENT: ines_pouamon
   | }else{
   |   alert('comment ?');
   | }
+
+  [ ] Syntaxe: le code s'exécute sans erreur
+  [ ] Fonctionnement: le code respecte à la lettre les valeurs de l'énoncé
+  [ ] Indentation: correcte, avec 2 espaces par niveau
+  [ ] Conventions: placement des accolades
+  [ ] Conventions: ponctuation avec points-virgules
+  [ ] Conventions: apostrophes
+  [ ] Conditions: maitrise des conditions imbriquées
+  [ ] Logique: la structure du code correspond à celle de l'arbre de décision
+  [ ] /!\ la solution ne correspond pas à l'énoncé de l'étudiant => ZERO
 
   => code score: 2 / 2 pts
 
@@ -337,6 +395,16 @@ STUDENT: lucas_lacheny
   |     alert('Comment ?');
   | }
 
+  [ ] Syntaxe: le code s'exécute sans erreur
+  [ ] Fonctionnement: le code respecte à la lettre les valeurs de l'énoncé
+  [ ] Indentation: correcte, avec 2 espaces par niveau
+  [ ] Conventions: placement des accolades
+  [ ] Conventions: ponctuation avec points-virgules
+  [ ] Conventions: apostrophes
+  [ ] Conditions: maitrise des conditions imbriquées
+  [ ] Logique: la structure du code correspond à celle de l'arbre de décision
+  [ ] /!\ la solution ne correspond pas à l'énoncé de l'étudiant => ZERO
+
   => code score: 2 / 2 pts
 
 => TOTAL STUDENT SCORE: 14 / 14
@@ -374,6 +442,16 @@ STUDENT: marc_antoine_poisier
   | 		} else {
   | 	  alert ('comment ?');
   | 	}
+
+  [ ] Syntaxe: le code s'exécute sans erreur
+  [ ] Fonctionnement: le code respecte à la lettre les valeurs de l'énoncé
+  [ ] Indentation: correcte, avec 2 espaces par niveau
+  [ ] Conventions: placement des accolades
+  [ ] Conventions: ponctuation avec points-virgules
+  [ ] Conventions: apostrophes
+  [ ] Conditions: maitrise des conditions imbriquées
+  [ ] Logique: la structure du code correspond à celle de l'arbre de décision
+  [ ] /!\ la solution ne correspond pas à l'énoncé de l'étudiant => ZERO
 
   => code score: 2 / 2 pts
 
@@ -413,6 +491,16 @@ STUDENT: martin_callonnec
   | } else {
   | alert('comment ?');
   | }
+
+  [ ] Syntaxe: le code s'exécute sans erreur
+  [ ] Fonctionnement: le code respecte à la lettre les valeurs de l'énoncé
+  [ ] Indentation: correcte, avec 2 espaces par niveau
+  [ ] Conventions: placement des accolades
+  [ ] Conventions: ponctuation avec points-virgules
+  [ ] Conventions: apostrophes
+  [ ] Conditions: maitrise des conditions imbriquées
+  [ ] Logique: la structure du code correspond à celle de l'arbre de décision
+  [ ] /!\ la solution ne correspond pas à l'énoncé de l'étudiant => ZERO
 
   => code score: 2 / 2 pts
 
@@ -454,6 +542,16 @@ STUDENT: mike_meimoun
   | 
   | // -> STUDENT CODE ERROR: si l'utilisateur tape gris puis foncé, alert devrait afficher "ah bon?" au lieu de "Comment?"
 
+  [ ] Syntaxe: le code s'exécute sans erreur
+  [ ] Fonctionnement: le code respecte à la lettre les valeurs de l'énoncé
+  [ ] Indentation: correcte, avec 2 espaces par niveau
+  [ ] Conventions: placement des accolades
+  [ ] Conventions: ponctuation avec points-virgules
+  [ ] Conventions: apostrophes
+  [ ] Conditions: maitrise des conditions imbriquées
+  [ ] Logique: la structure du code correspond à celle de l'arbre de décision
+  [ ] /!\ la solution ne correspond pas à l'énoncé de l'étudiant => ZERO
+
   => code score: 1 / 2 pts
 
 => TOTAL STUDENT SCORE: 9 / 14
@@ -494,6 +592,16 @@ STUDENT: nathan_dumaine
   | }
   | 
   | // -> STUDENT CODE ERROR: si l'utilisateur tape gris puis foncé, alert devrait afficher "ah bon?" au lieu de "ha bon?"
+
+  [ ] Syntaxe: le code s'exécute sans erreur
+  [ ] Fonctionnement: le code respecte à la lettre les valeurs de l'énoncé
+  [ ] Indentation: correcte, avec 2 espaces par niveau
+  [ ] Conventions: placement des accolades
+  [ ] Conventions: ponctuation avec points-virgules
+  [ ] Conventions: apostrophes
+  [ ] Conditions: maitrise des conditions imbriquées
+  [ ] Logique: la structure du code correspond à celle de l'arbre de décision
+  [ ] /!\ la solution ne correspond pas à l'énoncé de l'étudiant => ZERO
 
   => code score: 1 / 2 pts
 
@@ -553,6 +661,16 @@ STUDENT: paul_erwan_ferry
   | 
   | }
 
+  [ ] Syntaxe: le code s'exécute sans erreur
+  [ ] Fonctionnement: le code respecte à la lettre les valeurs de l'énoncé
+  [ ] Indentation: correcte, avec 2 espaces par niveau
+  [ ] Conventions: placement des accolades
+  [ ] Conventions: ponctuation avec points-virgules
+  [ ] Conventions: apostrophes
+  [ ] Conditions: maitrise des conditions imbriquées
+  [ ] Logique: la structure du code correspond à celle de l'arbre de décision
+  [ ] /!\ la solution ne correspond pas à l'énoncé de l'étudiant => ZERO
+
   => code score: 2 / 2 pts
 
 => TOTAL STUDENT SCORE: 14 / 14
@@ -593,6 +711,16 @@ STUDENT: paul_esmenard
   | }
   | 
   | // -> STUDENT CODE ERROR: si l'utilisateur tape gris puis foncé, alert devrait afficher "c&#39;est bien!" au lieu de "c'est bien !"
+
+  [ ] Syntaxe: le code s'exécute sans erreur
+  [ ] Fonctionnement: le code respecte à la lettre les valeurs de l'énoncé
+  [ ] Indentation: correcte, avec 2 espaces par niveau
+  [ ] Conventions: placement des accolades
+  [ ] Conventions: ponctuation avec points-virgules
+  [ ] Conventions: apostrophes
+  [ ] Conditions: maitrise des conditions imbriquées
+  [ ] Logique: la structure du code correspond à celle de l'arbre de décision
+  [ ] /!\ la solution ne correspond pas à l'énoncé de l'étudiant => ZERO
 
   => code score: 1 / 2 pts
 
@@ -636,6 +764,16 @@ STUDENT: pauline_bittante
   | 	alert('je connais pas');
   | 	}
   | => test runner err: si l'utilisateur tape gris puis foncé, alert devrait afficher "c&#39;est bien!", mais alert n'a pas été appelé...
+
+  [ ] Syntaxe: le code s'exécute sans erreur
+  [ ] Fonctionnement: le code respecte à la lettre les valeurs de l'énoncé
+  [ ] Indentation: correcte, avec 2 espaces par niveau
+  [ ] Conventions: placement des accolades
+  [ ] Conventions: ponctuation avec points-virgules
+  [ ] Conventions: apostrophes
+  [ ] Conditions: maitrise des conditions imbriquées
+  [ ] Logique: la structure du code correspond à celle de l'arbre de décision
+  [ ] /!\ la solution ne correspond pas à l'énoncé de l'étudiant => ZERO
 
   => code score: 0 / 2 pts
 
@@ -685,16 +823,16 @@ Thu, 01 Dec 2016 09:05:39 GMT jailed:sandbox DYNAMIC PLUGIN:37
 	}else if(demande === 'gris'){
 	 ^^^^
 SyntaxError: Unexpected token else
-    at Object.exports.runInNewContext (vm.js:71:16)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
-    at emitTwo (events.js:106:13)
-    at process.emit (events.js:191:7)
-    at process.nextTick (internal/child_process.js:744:12)
-    at _combinedTickCallback (internal/process/next_tick.js:67:7)
-    at process._tickCallback (internal/process/next_tick.js:98:9)
-  | => test runner err: SyntaxError: Unexpected token else
+
+  [ ] Syntaxe: le code s'exécute sans erreur
+  [ ] Fonctionnement: le code respecte à la lettre les valeurs de l'énoncé
+  [ ] Indentation: correcte, avec 2 espaces par niveau
+  [ ] Conventions: placement des accolades
+  [ ] Conventions: ponctuation avec points-virgules
+  [ ] Conventions: apostrophes
+  [ ] Conditions: maitrise des conditions imbriquées
+  [ ] Logique: la structure du code correspond à celle de l'arbre de décision
+  [ ] /!\ la solution ne correspond pas à l'énoncé de l'étudiant => ZERO
 
   => code score: 0 / 2 pts
 
@@ -747,16 +885,16 @@ Thu, 01 Dec 2016 09:05:39 GMT jailed:sandbox DYNAMIC PLUGIN:34
 if question ===('rouge')
    ^^^^^^^^
 SyntaxError: Unexpected identifier
-    at Object.exports.runInNewContext (vm.js:71:16)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
-    at emitTwo (events.js:106:13)
-    at process.emit (events.js:191:7)
-    at process.nextTick (internal/child_process.js:744:12)
-    at _combinedTickCallback (internal/process/next_tick.js:67:7)
-    at process._tickCallback (internal/process/next_tick.js:98:9)
-  | => test runner err: SyntaxError: Unexpected identifier
+
+  [ ] Syntaxe: le code s'exécute sans erreur
+  [ ] Fonctionnement: le code respecte à la lettre les valeurs de l'énoncé
+  [ ] Indentation: correcte, avec 2 espaces par niveau
+  [ ] Conventions: placement des accolades
+  [ ] Conventions: ponctuation avec points-virgules
+  [ ] Conventions: apostrophes
+  [ ] Conditions: maitrise des conditions imbriquées
+  [ ] Logique: la structure du code correspond à celle de l'arbre de décision
+  [ ] /!\ la solution ne correspond pas à l'énoncé de l'étudiant => ZERO
 
   => code score: 0 / 2 pts
 
@@ -824,6 +962,16 @@ STUDENT: thomas_bonnet
   | 
   | // -> STUDENT CODE ERROR: si l'utilisateur tape bleu puis foncé, alert devrait afficher "OK" au lieu de "ok"
 
+  [ ] Syntaxe: le code s'exécute sans erreur
+  [ ] Fonctionnement: le code respecte à la lettre les valeurs de l'énoncé
+  [ ] Indentation: correcte, avec 2 espaces par niveau
+  [ ] Conventions: placement des accolades
+  [ ] Conventions: ponctuation avec points-virgules
+  [ ] Conventions: apostrophes
+  [ ] Conditions: maitrise des conditions imbriquées
+  [ ] Logique: la structure du code correspond à celle de l'arbre de décision
+  [ ] /!\ la solution ne correspond pas à l'énoncé de l'étudiant => ZERO
+
   => code score: 1 / 2 pts
 
 => TOTAL STUDENT SCORE: 9 / 14
@@ -866,16 +1014,16 @@ Thu, 01 Dec 2016 09:05:39 GMT jailed:sandbox DYNAMIC PLUGIN:36
     alert('j\ai pas compris);
           ^^^^^^^^^^^^^^^^^^^
 SyntaxError: Invalid or unexpected token
-    at Object.exports.runInNewContext (vm.js:71:16)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
-    at emitTwo (events.js:106:13)
-    at process.emit (events.js:191:7)
-    at process.nextTick (internal/child_process.js:744:12)
-    at _combinedTickCallback (internal/process/next_tick.js:67:7)
-    at process._tickCallback (internal/process/next_tick.js:98:9)
-  | => test runner err: SyntaxError: Invalid or unexpected token
+
+  [ ] Syntaxe: le code s'exécute sans erreur
+  [ ] Fonctionnement: le code respecte à la lettre les valeurs de l'énoncé
+  [ ] Indentation: correcte, avec 2 espaces par niveau
+  [ ] Conventions: placement des accolades
+  [ ] Conventions: ponctuation avec points-virgules
+  [ ] Conventions: apostrophes
+  [ ] Conditions: maitrise des conditions imbriquées
+  [ ] Logique: la structure du code correspond à celle de l'arbre de décision
+  [ ] /!\ la solution ne correspond pas à l'énoncé de l'étudiant => ZERO
 
   => code score: 0 / 2 pts
 
@@ -920,16 +1068,16 @@ Thu, 01 Dec 2016 09:05:39 GMT jailed:sandbox DYNAMIC PLUGIN:42
 }   else (je connais pas) {
              ^^^^^^^
 SyntaxError: Unexpected identifier
-    at Object.exports.runInNewContext (vm.js:71:16)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
-    at emitTwo (events.js:106:13)
-    at process.emit (events.js:191:7)
-    at process.nextTick (internal/child_process.js:744:12)
-    at _combinedTickCallback (internal/process/next_tick.js:67:7)
-    at process._tickCallback (internal/process/next_tick.js:98:9)
-  | => test runner err: SyntaxError: Unexpected identifier
+
+  [ ] Syntaxe: le code s'exécute sans erreur
+  [ ] Fonctionnement: le code respecte à la lettre les valeurs de l'énoncé
+  [ ] Indentation: correcte, avec 2 espaces par niveau
+  [ ] Conventions: placement des accolades
+  [ ] Conventions: ponctuation avec points-virgules
+  [ ] Conventions: apostrophes
+  [ ] Conditions: maitrise des conditions imbriquées
+  [ ] Logique: la structure du code correspond à celle de l'arbre de décision
+  [ ] /!\ la solution ne correspond pas à l'énoncé de l'étudiant => ZERO
 
   => code score: 0 / 2 pts
 
