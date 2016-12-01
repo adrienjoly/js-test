@@ -1,7 +1,7 @@
 {
   "name": "js-test",
-  "version": "2.0.0",
-  "description": "QCM JavaScript 2",
+  "version": "2.1.0",
+  "description": "Exercise/exam software for evaluating JavaScript students' progress",
   "repository": {
     "type": "git",
     "url": "https://github.com/cours-javascript-eemi-2016-2017/js-test.git"
