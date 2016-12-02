@@ -10,8 +10,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 (function(document) {
   'use strict';
 
-  var PUBLIC_TEST_MODE = false; // TODO: set to false to restrict acccess and identify students using Google Login
-  var DISPLAY_SOLUTIONS_AFTER_SUBMIT = false; // TODO: set to false, for real exams
+  // TODO: move all this to an external file
+  var PUBLIC_TEST_MODE = false; // set to false to restrict acccess and identify students using Google Login
+  var DISPLAY_SOLUTIONS_AFTER_SUBMIT = false; // set to false, for real exams
   var PAGE_TITLE = 'Contrôle JavaScript 1';
   var FIREBASE_CONFIG = {
     apiKey: "AIzaSyCBkfcodGHJEJDsnh99KgpP_F3cxU58P9I",
