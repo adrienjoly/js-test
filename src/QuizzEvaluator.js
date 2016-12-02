@@ -3,10 +3,10 @@
 
 var fs = require('fs');
 
-// TODO: move these constants to a configuration file
-var PTS_RIGHT = 2;
-var PTS_WRONG = 0; // or -0.5 for example
-var PTS_NULL = 0;
+var config = require('../exam-data/exam-config.js');
+var PTS_RIGHT = config.quizzGrading.ptsRight;
+var PTS_WRONG = config.quizzGrading.ptsWrong; // or -0.5 for example
+var PTS_NULL = config.quizzGrading.ptsNull;
 
 function QuizzEvaluator(solutions) {
   this.solutions = solutions;
