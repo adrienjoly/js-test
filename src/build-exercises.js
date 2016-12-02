@@ -6,7 +6,7 @@ var mustache = require('mustache');
 var QuizzRenderer = require('./QuizzRenderer');
 
 var PATH_SOURCE = './exam-data/';
-var OUTPUT_FILE = './public/scripts/exercises.js';
+var OUTPUT_FILE = './public/scripts/exam-data.js';
 
 var RE_TEMPLATE_FILE = /ex\.(\d+)\.(code|quizz)\.template\.md/;
 
