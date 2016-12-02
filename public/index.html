@@ -64,7 +64,7 @@
 
       <paper-toolbar id="mainToolbar">
         <div class="center horizontal layout">
-          <div class="title">{{title}}</div>
+          <div class="title">{{config.title}}</div>
         </div>
       </paper-toolbar>
 
@@ -74,7 +74,7 @@
           <paper-material elevation="1">
             <template is="dom-if" if="{{!loggedIn}}">
               <h2>Connexion</h2>
-              <p>{{LOGIN_INVITE}}</p>
+              <p>{{config.LOGIN_INVITE}}</p>
             </template>
             <template is="dom-if" if="{{loggedIn}}">
               <h2>Bonjour, {{user.name}}</h2>
@@ -86,12 +86,12 @@
 
                 <h3>Destinataire de l'email:</h3>
                 <paper-material elevation="1">
-                  <p style="font-family: monospace; margin: 0;">{{teacherEmail}}</p>
+                  <p style="font-family: monospace; margin: 0;">{{config.teacherEmail}}</p>
                 </paper-material>
 
                 <h3>Sujet de l'email:</h3>
                 <paper-material elevation="1">
-                  <p style="font-family: monospace; margin: 0;">{{emailSubject}}</p>
+                  <p style="font-family: monospace; margin: 0;">{{config.emailSubject}}</p>
                 </paper-material>
 
                 <h3>Contenu de l'email:</h3>
@@ -116,8 +116,8 @@
             <google-signin
               is-authorized="{{loggedIn}}"
               scopes="profile email"
-              hosted-domain="{{GOOGLE_CLIENT_DOMAIN}}"
-              client-id="{{GOOGLE_CLIENT_ID}}"
+              hosted-domain="{{config.GOOGLE_CLIENT_DOMAIN}}"
+              client-id="{{config.GOOGLE_CLIENT_ID}}"
             ></google-signin>
           </paper-material>
         </section>
