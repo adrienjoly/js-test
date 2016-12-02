@@ -7,4 +7,4 @@ do
   echo Evaluating $f to $f.eval.log ...
   node ./src/evaluateGroupFile.js .$f &>$f.eval.log
 done;
-echo ... and appended students\' grades to ./scores.csv
+echo ... and appended students\' grades to ./exam-data/scores.csv

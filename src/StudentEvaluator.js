@@ -3,14 +3,17 @@ var util = require('util');
 var QuizzEvaluator = require('./QuizzEvaluator.js');
 var CodeEvaluator = require('./CodeEvaluator.js');
 
+var PATH_SOURCE = './exam-data/';
+
 // outputs
 
-var SCORES_FILE = './scores.csv';
+var SCORES_FILE = PATH_SOURCE + 'scores.csv';
 
 // inputs
 
-var SOLUTIONS_FILE = './ex.1.quizz.solutions.json';
-var TESTS_FILE = './ex.2.code.tests.json';
+
+var SOLUTIONS_FILE = PATH_SOURCE + 'ex.1.quizz.solutions.json';
+var TESTS_FILE = PATH_SOURCE + 'ex.2.code.tests.json';
 
 // helpers
 

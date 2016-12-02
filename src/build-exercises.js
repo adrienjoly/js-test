@@ -5,7 +5,7 @@ var fs = require('fs');
 var mustache = require('mustache');
 var QuizzRenderer = require('./QuizzRenderer');
 
-var PATH_SOURCE = './';
+var PATH_SOURCE = './exam-data/';
 var OUTPUT_FILE = './public/scripts/exercises.js';
 
 var RE_TEMPLATE_FILE = /ex\.(\d+)\.(code|quizz)\.template\.md/;
