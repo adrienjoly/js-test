@@ -29,5 +29,8 @@ module.exports = {
     ptsWrong: 0, // or -0.5 for example
     ptsNull: 0,
   },
+  codeGrading: {
+    ptsPerExercise: 2, // applies to scores of code exercises
+  }
 
 };
