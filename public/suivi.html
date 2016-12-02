@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="Polymer Starter Kit" />
+  <title>Suivi</title>
+  
+  <link rel="manifest" href="manifest.json">
+
+  <meta name="theme-color" content="#2E3AA1"> <!-- Chrome for Android theme color -->
+  <meta name="msapplication-TileColor" content="#3372DF"> <!-- Tile color for Win8 -->
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="PSK">
+  <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
+
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Polymer Starter Kit">
+  <link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png">
+
+  <!-- Tile icon for Win8 (144x144) -->
+  <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+
+  <!-- build:css styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild-->
+
+  <!-- build:js bower_components/webcomponentsjs/webcomponents-lite.min.js -->
+  <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+  <!-- endbuild -->
+
+  <!-- will be replaced with elements/elements.vulcanized.html -->
+
+  <!-- Iron elements -->
+  <link rel="import" href="../bower_components/iron-icons/iron-icons.html">
+  <link rel="import" href="../bower_components/iron-pages/iron-pages.html">
+
+  <!-- Paper elements -->
+  <link rel="import" href="../bower_components/paper-button/paper-button.html">
+  <link rel="import" href="../bower_components/paper-item/paper-item.html">
+  <link rel="import" href="../bower_components/paper-material/paper-material.html">
+  <link rel="import" href="../bower_components/paper-menu/paper-menu.html">
+  <link rel="import" href="../bower_components/paper-scroll-header-panel/paper-scroll-header-panel.html">
+  <link rel="import" href="../bower_components/paper-styles/paper-styles-classes.html">
+  <link rel="import" href="../bower_components/paper-toolbar/paper-toolbar.html">
+
+  <link rel="import" href="../bower_components/google-signin/google-signin.html">
+
+  <!-- Add your elements here -->
+  <link rel="import" href="../styles/app-theme.html">
+  <link rel="import" href="../styles/shared-styles.html">
+  <!-- endreplace-->
+
+  <script src="https://www.gstatic.com/firebasejs/3.6.0/firebase.js"></script>
+
+  <!-- For shared styles, shared-styles.html import in elements.html -->
+  <style is="custom-style" include="shared-styles"></style>
+
+</head>
+
+<body unresolved class="fullbleed layout vertical">
+  <span id="browser-sync-binding"></span>
+
+  <template is="dom-bind" id="app">
+
+    <paper-scroll-header-panel main fixed="true" id="headerPanelMain">
+
+      <paper-toolbar id="mainToolbar">
+        <div class="center horizontal layout">
+          <div class="title">Suivi</div>
+        </div>
+      </paper-toolbar>
+
+      <div class="content">
+        
+        <section>
+          <paper-material elevation="1">
+            <template is="dom-if" if="{{!loggedIn}}">
+              <h2>Connexion</h2>
+            </template>
+            <template is="dom-if" if="{{loggedIn}}">
+              <h2>Bonjour, {{user.name}}</h2>
+              <template is="dom-repeat" items="{{students}}" as="student">
+                <p>{{student}}</p>
+              </template>
+            </template>
+            <google-signin
+              is-authorized="{{loggedIn}}"
+              scopes="profile email"
+              hosted-domain="{{config.GOOGLE_CLIENT_DOMAIN}}"
+              client-id="{{config.GOOGLE_CLIENT_ID}}"
+            ></google-signin>
+          </paper-material>
+        </section>
+
+      </div>
+    </paper-scroll-header-panel>
+
+  </template>
+
+  <script src="scripts/exam-data.js"></script>
+  <script src="scripts/suivi.js"></script>
+
+</body>
+
+</html>
