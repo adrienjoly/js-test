@@ -10,19 +10,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 (function(document) {
   'use strict';
 
-  // TODO: move all this to an external file
-  var PUBLIC_TEST_MODE = false; // set to false to restrict acccess and identify students using Google Login
-  var DISPLAY_SOLUTIONS_AFTER_SUBMIT = false; // set to false, for real exams
-  var PAGE_TITLE = 'Contrôle JavaScript 1';
-  var FIREBASE_CONFIG = {
-    apiKey: "AIzaSyCBkfcodGHJEJDsnh99KgpP_F3cxU58P9I",
-    databaseURL: "https://js-test-2.firebaseio.com",
-    messagingSenderId: "730428017661"
-  };
-  var GOOGLE_CLIENT_ID = '247219641427-9qq25ajpmqvtcmdgrjhadi6o7kpg5sci.apps.googleusercontent.com'; // generated from https://console.developers.google.com/apis/credentials?project=eemi-own-exam&authuser=1
-  var GOOGLE_CLIENT_DOMAIN = 'eemi.com'; // to restrict access to users from a certain domain only
-  var LOGIN_INVITE = 'Se connecter à son compte EEMI:';
-
   /* firebase security rules:
   {
    "rules": {
@@ -39,8 +26,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   }
   */
 
-  var firebaseDB = firebase.initializeApp(FIREBASE_CONFIG).database();
-
   function pickVariant (variants, id) {
     // modulo that also works for big integers
     var modulo = function(divident, divisor) {
@@ -56,7 +41,15 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
   // Grab a reference to our auto-binding template and give it some initial binding values
   var app = document.querySelector('#app');
-  app.baseUrl = '/';
+
+  app.baseUrl = '/'; // absolute path where index.html can be reached
+  app.loggedIn = false; // init default value, to be set by google-signin
+  app.user = null;
+  app.backend = null; // Firebase instance
+  app.myAnswers = {}; // will be populated from firebase after login
+  app.hashedAnswers = '';
+  app.active = false;
+  app.firebaseDB = firebase.initializeApp(app.config.FIREBASE_CONFIG).database();
 
   app.displayInstalledToast = function() {
     // Check to make sure caching is actually enabled—it won't be in the dev environment.
@@ -70,32 +63,19 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     app.$.headerPanelMain.scrollToTop(true);
   };
 
-  app.title = PAGE_TITLE;
-  app.teacherEmail = "adrien.joly@eemi.com";
-  app.emailSubject = "PARTIEL2";
-  app.GOOGLE_CLIENT_ID = GOOGLE_CLIENT_ID;
-  app.GOOGLE_CLIENT_DOMAIN = GOOGLE_CLIENT_DOMAIN;
-  app.LOGIN_INVITE = LOGIN_INVITE;
-  app.loggedIn = false; // init default value, to be set by google-signin
-  app.user = null;
-  app.backend = null; // Firebase instance
-  app.myAnswers = {}; // will be populated from firebase after login
-  app.hashedAnswers = '';
-  app.active = false;
-
   app.showQuestions = function(myAnswers) {
-    return DISPLAY_SOLUTIONS_AFTER_SUBMIT || !myAnswers._submitted;
+    return app.config.DISPLAY_SOLUTIONS_AFTER_SUBMIT || !myAnswers._submitted;
   };
 
   app.showSolutions = function(myAnswers) {
-    return DISPLAY_SOLUTIONS_AFTER_SUBMIT && myAnswers._submitted;
+    return app.config.DISPLAY_SOLUTIONS_AFTER_SUBMIT && myAnswers._submitted;
   };
 
   // disable/enable user entry based on the `active` value in the Firebase DB
   function onBackEndStatus(snapshot) {
     var active = snapshot.val();
     console.log('onBackEndStatus, active:', active);
-    if (!PUBLIC_TEST_MODE) {
+    if (!app.config.PUBLIC_TEST_MODE) {
       app.set('active', active);
     }
   }
@@ -114,7 +94,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     }));
     if (offline) return;
     var userHash = userData.email.split('@')[0].replace(/[^\w]/g, '_');
-    app.backend = firebaseDB.ref('/submissions/' + userHash);
+    app.backend = app.firebaseDB.ref('/submissions/' + userHash);
     // send a first update with timestamp on login    
     var upd = {
       _uid: app.user.id,
@@ -155,7 +135,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     app.backend.on('child_added', onStoredAnswers);
     app.backend.on('child_changed', onStoredAnswers); // only fired when online
     */
-    (firebaseDB.ref('/active')).on('value', onBackEndStatus);
+    (app.firebaseDB.ref('/active')).on('value', onBackEndStatus);
   }
 
   window.addEventListener('google-signin-success', function() {
@@ -329,7 +309,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   };
 
   // FOR PUBLIC TESTING: fakes Google Login
-  if (PUBLIC_TEST_MODE) {
+  if (app.config.PUBLIC_TEST_MODE) {
     var id = Math.floor(999 * Math.random()); // variant is based on user id => randomize it
     onLogin({
       id: id,
