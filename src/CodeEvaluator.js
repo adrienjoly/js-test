@@ -3,7 +3,8 @@ var fs = require('fs');
 var async = require('async');
 var jailed = require('jailed-node');
 
-var COEF = 2; // applies to scores of code exercises
+var config = require('../exam-data/exam-config.js');
+var COEF = config.codeGrading.ptsPerExercise; // applies to scores of code exercises
 
 function sum(a, b) {
   return a + b;
