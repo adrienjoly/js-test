@@ -2,7 +2,7 @@ module.exports = {
 
   // General settings
   PUBLIC_TEST_MODE: false, // set to false to restrict acccess and identify students using Google Login
-  DISPLAY_SOLUTIONS_AFTER_SUBMIT: false, // set to false, for real exams
+  DISPLAY_SOLUTIONS_AFTER_SUBMIT: true, // set to false, for real exams
 
   // Back-end config
   FIREBASE_CONFIG: {
@@ -12,7 +12,7 @@ module.exports = {
   },
 
   // Front-end config
-  title: 'JavaScript Exam 1',
+  title: 'JavaScript QCM 3',
 
   // For email submission only
   teacherEmail: 'adrien.joly@eemi.com',
@@ -25,12 +25,12 @@ module.exports = {
 
   // Evaluation / grading
   quizzGrading: {
-    ptsRight: 2,
+    ptsRight: 1,
     ptsWrong: 0, // or -0.5 for example
     ptsNull: 0,
   },
   codeGrading: {
-    ptsPerExercise: 2, // applies to scores of code exercises
+    ptsPerExercise: 1, // applies to scores of code exercises
   }
 
 };

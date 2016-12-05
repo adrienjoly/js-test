@@ -1,0 +1,12 @@
+[
+  {
+    "i": 1,
+    "id": "code1",
+    "variants": [
+      {}
+    ],
+    "testVariants": [
+      "\n// automatic student evaluation code\n(function evaluateStudentCode(){\n  var nb = 0;\n  var console = {\n    log: function(t){\n      if (t === 'Bonjour!') {\n        nb++;\n      }\n    }\n  };\n  _runStudentCode();\n  application.remote._send(null, nb === 50 ? 1 : 0); // points to the student\n})();\n"
+    ]
+  }
+]
