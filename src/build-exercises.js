@@ -43,8 +43,13 @@ function renderCodeExercise(exerciseData, exNumber) {
     variants = variants.length > 0 ? variants : [{}]; // also render coding questions that don't have any variants
     var exText = question.md;
     var exEval = question.mdSolution;
+    var exSolution = null;
     if (exEval) {
+      var parts = exEval.split('\n--\n');
+      exEval = parts.pop(); // evaluation code
       exEval = exEval.replace(/```js\n*/g, '').replace(/```\n*/g, '');
+      exSolution = parts.pop();
+      // TODO: apply variants to exSolution?
     }
     evalTests.push({
       i: q + 1, // TODO: prevent id collisions if more than one code.template.md file is used
@@ -59,7 +64,8 @@ function renderCodeExercise(exerciseData, exNumber) {
       id: 'code' + (q + 1), // TODO: allow each question to override this id
       mdVariants: variants.map(function renderVariant(variantData, i) {
         return mustache.render(exText, variantData);
-      })      
+      }),
+      mdSolution: exSolution
     };
   });
 
