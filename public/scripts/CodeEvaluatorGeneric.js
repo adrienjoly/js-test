@@ -112,6 +112,8 @@ function makeCodeEvaluator(jailed, codeGradingOptions) {
     this.tests = tests;
   }
 
+  CodeEvaluator.mapSeries = mapSeries; // exported for convenience. (used client-side in suivi.js)
+
   CodeEvaluator.prototype.evaluateAnswers = function(answers, callback) {
     function runExEval(exEval, callback) {
       var variantNumber = getVariantByStudentId(answers._uid, exEval.variants);

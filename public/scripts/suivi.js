@@ -20,23 +20,34 @@
     return app.config && user && user.email === app.config.teacherEmail;
   };
 
-  function computeExerciseScore(studentAnswers, solutions) {
+  function computeQuizzScore(studentAnswers, exercise, callback) {
     var score = 0;
-    for (var qId in solutions) {
+    for (var qId in exercise.solutions) {
       if (studentAnswers[qId] === undefined) {
         score += app.config.quizzGrading.ptsNull;
-      } else if (studentAnswers[qId] == solutions[qId]) {
+      } else if (studentAnswers[qId] == exercise.solutions[qId]) {
         score += app.config.quizzGrading.ptsRight
       } else {
         score += app.config.quizzGrading.ptsWrong;
       }
     }
-    return score;
+    callback(null, score);
+  }
+
+  function computeCodeScore(CodeEvaluator, studentAnswers, exercise, callback) {
+    var codeEvaluator = new CodeEvaluator(exercise.questions);
+    codeEvaluator.evaluateAnswers(studentAnswers, function(err, res){
+      callback(null, res.score);
+    });
   }
 
   function computeStudentScores(studentAnswers) {
-    return app.exercises.map(function(ex){
-      return computeExerciseScore(studentAnswers, ex.solutions);
+    var CodeEvaluator = makeCodeEvaluator(jailed, app.config.codeGrading);
+    CodeEvaluator.mapSeries(app.exercises, function(ex, callback){
+      var computeExerciseScore = ex.isQuizz ? computeQuizzScore : computeCodeScore.bind(null, CodeEvaluator);
+      return computeExerciseScore(studentAnswers, ex, callback);
+    }, function onDone(err, scores) {
+      console.log(scores);
     });
   }
 
