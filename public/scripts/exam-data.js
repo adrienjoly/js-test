@@ -144,6 +144,9 @@
         {
           "i": 1,
           "id": "code1",
+          "variants": [
+            {}
+          ],
           "testVariants": [
             "\n// automatic student evaluation code\n(function evaluateStudentCode(){\n  var console = { log: function(){} }; // tolerate console.log() calls\n  _runStudentCode();\n  var tests = [\n    typeof soustraire === 'function', \n    soustraire(2, 1) === 1,\n    soustraire(2, -1) === 3,\n  ];\n  application.remote._send(null, tests); // 1 point per passing test => 3 pts per exercise\n})();\n"
           ],
@@ -155,6 +158,9 @@
         {
           "i": 2,
           "id": "code2",
+          "variants": [
+            {}
+          ],
           "testVariants": [
             "\n// automatic student evaluation code\n(function evaluateStudentCode(){\n  var nb = 0;\n  var console = {\n    log: function(t){\n      if (t === 'Bonjour!') {\n        nb++;\n      }\n    }\n  };\n  _runStudentCode();\n  var res = repeter(25);\n  var tests = [\n    typeof repeter === 'function',\n    nb === 25,\n    res === 25,\n  ];\n  application.remote._send(null, tests); // 1 point per passing test => 3 pts per exercise\n})();\n"
           ],
