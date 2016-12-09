@@ -53,13 +53,12 @@ function renderCodeExercise(exerciseData, exNumber) {
     var exerciseData = {
       i: q + 1, // TODO: prevent id collisions if more than one code.template.md file is used
       id: 'code' + (q + 1), // TODO: allow each question to override this id
+      variants: variants,
       testVariants: variants.map(function renderVariant(variantData, i) {
         return exEval && mustache.render(exEval, variantData);
       })
     };
-    evalTests.push(Object.assign({}, exerciseData, {
-      variants: variants,
-    }));
+    evalTests.push(exerciseData);
     return Object.assign({}, exerciseData, {
       mdVariants: variants.map(function renderVariant(variantData, i) {
         return mustache.render(exText, variantData);
