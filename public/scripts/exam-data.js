@@ -13,7 +13,7 @@
     "title": "JavaScript QCM 3",
     "teacherEmail": "adrien.joly@eemi.com",
     "emailSubject": "JS EXAM DATA",
-    "GOOGLE_CLIENT_ID": "247219641427-9qq25ajpmqvtcmdgrjhadi6o7kpg5sci.apps.googleusercontent.com",
+    "GOOGLE_CLIENT_ID": "247219641427-ifeq88p7rgor9al5ksduds7ug0ba7djr.apps.googleusercontent.com",
     "GOOGLE_CLIENT_DOMAIN": "eemi.com",
     "LOGIN_INVITE": "Se connecter à son compte EEMI:",
     "quizzGrading": {
@@ -80,7 +80,11 @@
             }
           ]
         }
-      ]
+      ],
+      "solutions": {
+        "qcm1": 4,
+        "qcm2": 3
+      }
     },
     {
       "_info": "generated from ex.2.code.template.md",
