@@ -9,6 +9,7 @@ module.exports = {
     apiKey: "AIzaSyCBkfcodGHJEJDsnh99KgpP_F3cxU58P9I",
     databaseURL: "https://js-test-2.firebaseio.com",
     messagingSenderId: "730428017661"
+    // admin/dashboard: https://console.firebase.google.com/project/js-test-2/database/data
   },
 
   // Front-end config
