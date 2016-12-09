@@ -76,3 +76,9 @@ var maVariable = doubler(3);
 - le résultat va s'afficher dans la console
 - maVariable contient la définition de la fonction
 - maVariable contient l'appel de la fonction
+
+???
+
+Il s'agit ici d'un appel de fonction. De la même façon que pour une opération élémentaire (ex: `2 + 2`), tout appel de fonction sera remplacé par la valeur retourné par l'exécution de cette fonction.
+
+Ici, le résultat de l'exécution de la fonction `doubler` avec le paramètre `3`, soit la valeur `6`, va être affectée à `maVariable`.
