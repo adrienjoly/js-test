@@ -20,30 +20,42 @@
     return user && user.email === app.config.teacherEmail;
   };
 
+  function computeExerciseScore(studentAnswers, solutions) {
+    var score = 0;
+    for (var qId in solutions) {
+      if (studentAnswers[qId] === undefined) {
+        score += app.config.quizzGrading.ptsNull;
+      } else if (studentAnswers[qId] == solutions[qId]) {
+        score += app.config.quizzGrading.ptsRight
+      } else {
+        score += app.config.quizzGrading.ptsWrong;
+      }
+    }
+    return score;
+  }
+
+  function computeStudentScores(studentAnswers) {
+    return app.exercises.map(function(ex){
+      return computeExerciseScore(studentAnswers, ex.solutions);
+    });
+  }
+
   function onLogin(userData) {
     app.user = userData;
-    /*
-    // switch exercise variant based on student id
-    app.set('exercises', app.exercises.map(function applyVariants(ex) {
-      return Polymer.Base.extend(ex, {
-        questions: ex.questions.map(function applyVariant(question) {
-          return Polymer.Base.extend(question, {
-            md: question.md || pickVariant(question.mdVariants, userData.id)
-          });
-        })
-      });
-    }));
-    */
     app.submissions = app.firebaseDB.ref('/submissions');
     // get data on login, and every time firebase data is updated (even if offline)
     app.submissions.on('value', function onStoredUserAnswers(snapshot) {
-      var value = snapshot.val();
+      var studentData = snapshot.val();
       var students = [];
-      for (var key in value) {
-        students.push(key);
+      for (var key in studentData) {
+        students.push({
+          name: key,
+          value: studentData[key],
+          submitted: studentData[key]._submitted ? '☑' : '☐',
+          scores: computeStudentScores(studentData[key]),
+        });
       }
       app.set('students', students);
-      // TODO: compute and display student score
     });
   }
 
