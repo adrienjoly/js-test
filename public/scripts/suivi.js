@@ -34,20 +34,22 @@
     callback(null, score);
   }
 
-  function computeCodeScore(CodeEvaluator, studentAnswers, exercise, callback) {
+  function computeCodeScore(studentAnswers, exercise, callback) {
+    var CodeEvaluator = makeCodeEvaluator(jailed, app.config.codeGrading);
     var codeEvaluator = new CodeEvaluator(exercise.questions);
     codeEvaluator.evaluateAnswers(studentAnswers, function(err, res){
       callback(null, res.score);
     });
   }
 
-  function computeStudentScores(studentAnswers) {
-    var CodeEvaluator = makeCodeEvaluator(jailed, app.config.codeGrading);
-    CodeEvaluator.mapSeries(app.exercises, function(ex, callback){
-      var computeExerciseScore = ex.isQuizz ? computeQuizzScore : computeCodeScore.bind(null, CodeEvaluator);
-      return computeExerciseScore(studentAnswers, ex, callback);
+  function computeStudentScores(studentAnswers, studentIndex) {
+    console.log('computeStudentScores', studentAnswers);
+    mapSeries(app.exercises, function(ex, callback){
+      var computeExerciseScore = ex.isQuizz ? computeQuizzScore : computeCodeScore;
+      computeExerciseScore(studentAnswers, ex, callback);
     }, function onDone(err, scores) {
-      console.log(scores);
+      console.log('=> updating scores of student', studentIndex, 'of', app.students[studentIndex].name);
+      app.set('students.' + studentIndex + '.scores', scores);
     });
   }
 
@@ -64,8 +66,9 @@
           name: key,
           value: studentData[key],
           submitted: studentData[key]._submitted ? '☑' : '☐',
-          scores: computeStudentScores(studentData[key]),
+          scores: [0, 0],
         });
+        computeStudentScores(studentData[key], students.length - 1);
       }
       app.set('students', students);
     });

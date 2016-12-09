@@ -1,3 +1,22 @@
+// inspired by caolan's async.mapSeries
+function mapSeries(_arr, handler, callback) {
+  var arr = _arr.slice(); // clone
+  var results = [];
+  function next() {
+    if (!arr.length) {
+      callback(null, results);
+    } else {
+      var item = arr.shift();
+      handler(item, function(err, res) {
+        // TODO: also handle errors
+        results.push(res);
+        next();
+      });
+    }
+  }
+  next();
+}
+
 function makeCodeEvaluator(jailed, codeGradingOptions) {
 
   var COEF = codeGradingOptions.ptsPerExercise;
@@ -89,30 +108,9 @@ function makeCodeEvaluator(jailed, codeGradingOptions) {
 
   // exported class
 
-  // inspired by caolan's async.mapSeries
-  function mapSeries(_arr, handler, callback) {
-    var arr = _arr.slice(); // clone
-    var results = [];
-    function next() {
-      if (!arr.length) {
-        callback(null, results);
-      } else {
-        var item = arr.shift();
-        handler(item, function(err, res) {
-          // TODO: also handle errors
-          results.push(res);
-          next();
-        });
-      }
-    }
-    next();
-  }
-
   function CodeEvaluator(tests) {
     this.tests = tests;
   }
-
-  CodeEvaluator.mapSeries = mapSeries; // exported for convenience. (used client-side in suivi.js)
 
   CodeEvaluator.prototype.evaluateAnswers = function(answers, callback) {
     function runExEval(exEval, callback) {
