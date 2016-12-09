@@ -84,7 +84,7 @@
             <template is="dom-if" if="{{!loggedIn}}">
               <h2>Connexion</h2>
             </template>
-            <template is="dom-if" if="{{loggedIn}}">
+            <template is="dom-if" if="[[isAdmin(user)]]">
               <h2>Bonjour, {{user.name}}</h2>
               <table>
                 <tr>

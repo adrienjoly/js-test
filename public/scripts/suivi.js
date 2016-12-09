@@ -17,7 +17,7 @@
   };
 
   app.isAdmin = function(user) {
-    return user && user.email === app.config.teacherEmail;
+    return app.config && user && user.email === app.config.teacherEmail;
   };
 
   function computeExerciseScore(studentAnswers, solutions) {
@@ -42,6 +42,7 @@
 
   function onLogin(userData) {
     app.user = userData;
+    if (!userData) return;
     app.submissions = app.firebaseDB.ref('/submissions');
     // get data on login, and every time firebase data is updated (even if offline)
     app.submissions.on('value', function onStoredUserAnswers(snapshot) {
@@ -70,12 +71,16 @@
     });
   });
 
+  window.addEventListener('google-signed-out', function() {
+    onLogin();
+  });
+
   // FOR PUBLIC TESTING: fakes Google Login
   if (app.config.PUBLIC_TEST_MODE) {
     onLogin({
       id: -1,
       name: 'PUBLIC_TEST_MODE',
-      email: app.config.teacherEmail,
+      email: '_public@testmode.com',
       token: 'XXX'
     }/*, true*/);
     app.loggedIn = true;
