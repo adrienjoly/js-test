@@ -49,24 +49,24 @@ function renderCodeExercise(exerciseData, exNumber) {
       exEval = parts.pop(); // evaluation code
       exEval = exEval.replace(/```js\n*/g, '').replace(/```\n*/g, '');
       exSolution = parts.pop();
-      // TODO: apply variants to exSolution?
     }
-    evalTests.push({
+    var exerciseData = {
       i: q + 1, // TODO: prevent id collisions if more than one code.template.md file is used
       id: 'code' + (q + 1), // TODO: allow each question to override this id
-      variants: variants,
       testVariants: variants.map(function renderVariant(variantData, i) {
         return exEval && mustache.render(exEval, variantData);
       })
-    });
-    return {
-      i: q + 1, // TODO: prevent id collisions if more than one code.template.md file is used
-      id: 'code' + (q + 1), // TODO: allow each question to override this id
+    };
+    evalTests.push(Object.assign({}, exerciseData, {
+      variants: variants,
+    }));
+    return Object.assign({}, exerciseData, {
       mdVariants: variants.map(function renderVariant(variantData, i) {
         return mustache.render(exText, variantData);
       }),
-      mdSolution: exSolution
-    };
+      mdSolution: exSolution // TODO: one exSolution per variant? (like for testVariants)
+    });
+    // TODO: obfuscate solution and tests on client-side
   });
 
   // generate solution file, for evaluation of students' answers using QuizzEvaluator.js
