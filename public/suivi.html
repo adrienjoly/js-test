@@ -86,9 +86,24 @@
             </template>
             <template is="dom-if" if="{{loggedIn}}">
               <h2>Bonjour, {{user.name}}</h2>
-              <template is="dom-repeat" items="{{students}}" as="student">
-                <p>{{student}}</p>
-              </template>
+              <table>
+                <tr>
+                  <th>Student</th>
+                  <th>Submitted</th>
+                  <template is="dom-repeat" items="{{exercises}}" as="ex">
+                    <th>{{ex.title}}</th>
+                  </template>
+                </tr>
+                <template is="dom-repeat" items="{{students}}" as="student">
+                  <tr>
+                    <td>{{student.name}}</td>
+                    <td align="center">{{student.submitted}}</td>
+                    <template is="dom-repeat" items="{{student.scores}}" as="score">
+                      <td align="center">{{score}}</td>
+                    </template>
+                  </tr>
+                </template>
+              </table>
             </template>
             <google-signin
               is-authorized="{{loggedIn}}"
