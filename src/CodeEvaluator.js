@@ -1,4 +1,3 @@
-var _ = require('lodash');
 var fs = require('fs');
 var async = require('async');
 var jailed = require('jailed-node');
@@ -74,16 +73,19 @@ function runTest(testCode, studentCode, callback) {
     console.log([ '// STUDENT CODE:', studentCode ].join('\n\n'));
     runCodeInSandbox(code, function(err, res) {
       if (err) console.log('=> test runner err:', err);
-      var testScore = 0;
+      var scoreArray;
       if (res) {
-        testScore = res[1];
-        var testError = res[0];
-        if (testError) {
-          console.log('\n// -> STUDENT CODE ERROR:', testError);
+        if (res[0]) {
+          console.log('\n// -> STUDENT CODE ERROR:', res[0]);
+        }
+        var testResult = res[1];
+        if (typeof testResult === 'object' && testResult.length >= 0) {
+          scoreArray = testResult.map(function(a){ return a ? 1 : 0; });
+        } else {
+          scoreArray = [ testResult || 0 ];
         }
       }
-      //console.log('\n// => STUDENT CODE SCORE:', COEF * (testScore || 0));
-      callback(null, [ testScore || 0 ]); // sum of array must be <= 1
+      callback(null, scoreArray); // sum of array must be <= config.codeGrading.ptsPerExercise
     });
   }
 }
@@ -98,7 +100,6 @@ CodeEvaluator.prototype.readTestsFromFile = function(filePath) {
 };
 
 CodeEvaluator.prototype.evaluateAnswers = function(answers, callback) {
-  var nbTests = this.tests.length;
   function runExEval(exEval, callback) {
     var variantNumber = getVariantByStudentId(answers._uid, exEval.variants);
     var evalTest = exEval.testVariants[variantNumber];
@@ -106,10 +107,12 @@ CodeEvaluator.prototype.evaluateAnswers = function(answers, callback) {
     runTest(evalTest, answers[exEval.id], callback);
   }
   async.mapSeries(this.tests, runExEval, function done(err, res) {
-    var total = _.flatten(res).reduce(sum);
+    var ptsPerExercise = res.map(function(scoreArray){
+      return scoreArray.reduce(sum) * COEF / scoreArray.length;
+    });
     callback(null, {
-      score: COEF * total,
-      length: COEF * nbTests
+      score: ptsPerExercise.reduce(sum),
+      length: res.length * COEF
     });
   });
 };
