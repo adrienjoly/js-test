@@ -31,7 +31,7 @@ module.exports = {
     ptsNull: 0,
   },
   codeGrading: {
-    ptsPerExercise: 1, // applies to scores of code exercises
+    ptsPerExercise: 3, // applies to scores of code exercises
   }
 
 };

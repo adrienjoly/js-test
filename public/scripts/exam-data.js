@@ -22,7 +22,7 @@
       "ptsNull": 0
     },
     "codeGrading": {
-      "ptsPerExercise": 1
+      "ptsPerExercise": 3
     }
   };
   app.exercises = [
@@ -35,55 +35,104 @@
         {
           "i": 1,
           "id": "qcm1",
-          "md": "Combien de fois les instructions vont-elles être exécutées ?\n\n```js\nfor ( var i = 0; i < 4; i++ ) {\n  // instructions\n}\n```\n\n\n",
-          "mdSolution": "\n\nLes instructions vont être exécutées pour chaque valeur de `i` entre `0` et `4` (non compris), soit 0, 1, 2, puis 3.\n\nCe qui fait 4 itérations.",
+          "md": "```js\nfunction maFonction(param) {\n  return param + 2;\n}\n```\n\nCeci est:\n\n\n",
+          "mdSolution": "\n\nC'est une définition de fonction.\n\nOn la reconnait à l'usage du mot clé `function` et des accolades entourant le code qui sera exécuté lorsque cette fonction sera appelée.",
           "choices": [
             {
               "name": 1,
-              "text": "0 fois"
+              "text": "un appel de fonction"
             },
             {
               "name": 2,
-              "text": "1 fois"
+              "text": "une définition de fonction"
             },
             {
               "name": 3,
-              "text": "3 fois"
+              "text": "une affectation de fonction"
             },
             {
               "name": 4,
-              "text": "4 fois"
+              "text": "une fonction qui ne fonctionne pas"
             }
           ]
         },
         {
           "i": 2,
           "id": "qcm2",
-          "md": "Combien de fois les instructions vont-elles être exécutées ?\n\n```js\nfor ( var i = 3; i >= 1; i-- ) {\n  // instructions\n}\n```\n\n\n",
-          "mdSolution": "\n\nLes instructions vont être exécutées pour chaque valeur de `i` entre `3` et `1` (compris), soit 3, 2, puis 1.\n\nCe qui fait 3 itérations.",
+          "md": "```js\nmaFonction(4);\n```\n\nCeci est:\n\n\n",
+          "mdSolution": "\n\nC'est un appel de fonction.\n\nUn appel de fonction = le nom de la fonction, suivi par les paramètres entre parenthèses. Sans le mot clé `function`.\n\nCette instruction va exécuter le code défini dans la fonction, et affecter les valeurs fournies à chaque paramètre.",
           "choices": [
             {
               "name": 1,
-              "text": "0 fois"
+              "text": "un appel de fonction"
             },
             {
               "name": 2,
-              "text": "1 fois"
+              "text": "une définition de fonction"
             },
             {
               "name": 3,
-              "text": "3 fois"
+              "text": "une affectation de fonction"
             },
             {
               "name": 4,
-              "text": "4 fois"
+              "text": "une fonction qui ne fonctionne pas"
+            }
+          ]
+        },
+        {
+          "i": 3,
+          "id": "qcm3",
+          "md": "```\n// cette fonction concatène un zéro à la fin de la valeur passée en paramètre\nfunction maFonction(param) {\n  return param + '0';\n}\n```\n\nComment savoir si cette fonction fonctionne bien ? (c.a.d. sans bug)\n\n\n",
+          "mdSolution": "\n\nPour vérifier le bon fonctionnement il faut définir et exécuter des tests unitaires.\n\nCeux-ci permettent de comparer le résultat attendu d'une fonction, à celui effectivement retourné par l'implémentation actuelle de cette fonction.\n\n`maFonction(1) === '10';` est un bon test unitaire car son exécution retourne `true` si la fonction retourne le résultat attendu (`10`) lorsqu'on lui passe `1` en paramètre.",
+          "choices": [
+            {
+              "name": 1,
+              "text": "il suffit de la copier-coller dans la console"
+            },
+            {
+              "name": 2,
+              "text": "il faut taper maFonction dans la console"
+            },
+            {
+              "name": 3,
+              "text": "vérifier que le test passe: maFonction(1) === '10';"
+            },
+            {
+              "name": 4,
+              "text": "vérifier que maFonction(1) renvoie bien true"
+            }
+          ]
+        },
+        {
+          "i": 4,
+          "id": "qcm4",
+          "md": "Supposons que nous avons défini une fonction `doubler()` qui retourne le double du nombre passé en paramètre, lors de son appel.\n\nQue se passe-t-il si on exécute l'instruction suivante:\n\n```js\nvar maVariable = doubler(3);\n```\n",
+          "choices": [
+            {
+              "name": 1,
+              "text": "le résultat va être affecté à maVariable"
+            },
+            {
+              "name": 2,
+              "text": "le résultat va s'afficher dans la console"
+            },
+            {
+              "name": 3,
+              "text": "maVariable contient la définition de la fonction"
+            },
+            {
+              "name": 4,
+              "text": "maVariable contient l'appel de la fonction"
             }
           ]
         }
       ],
       "solutions": {
-        "qcm1": 4,
-        "qcm2": 3
+        "qcm1": 2,
+        "qcm2": 1,
+        "qcm3": 3,
+        "qcm4": 1
       }
     },
     {
@@ -96,9 +145,17 @@
           "i": 1,
           "id": "code1",
           "mdVariants": [
-            "Implémenter un programme de moins de 4 lignes qui affiche 50 fois `'Bonjour!'` dans la console. Respecter les conventions et règles d'indentation vues en cours.\n\n"
+            "Définir une fonction `soustraire` qui retourne le résultat de la soustraction `a - b`, `a` et `b` étant des paramètres de cette fonction.\n\nRespecter les conventions et règles d'indentation vues en cours.\n\n"
           ],
-          "mdSolution": "\n\nSolution:\n```js\nfor ( var i = 0; i < 50; i++ ) {\n  console.log('Bonjour!');\n}\n```\n"
+          "mdSolution": "\n\nSolution:\n```js\nfunction soustraire(a, b) {\n  return a - b;\n}\n```\n"
+        },
+        {
+          "i": 2,
+          "id": "code2",
+          "mdVariants": [
+            "Définir une fonction `repeter` qui affiche `n` fois `'Bonjour!'` dans la console, puis qui retourne `n`, `n` étant un paramètre de cette fonction.\n\nRespecter les conventions et règles d'indentation vues en cours.\n\n"
+          ],
+          "mdSolution": "\n\nSolution:\n```js\nfunction repeter(n) {\n  for (var i = 0; i < n; i++) {\n    console.log('Bonjour!');\n  }\n  return n;\n}\n```\n"
         }
       ]
     }
