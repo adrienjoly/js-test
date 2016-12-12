@@ -1,3 +1,6 @@
+== v2.2.0 Teacher dashboard with real-time client-side evaluation of students' answers
+ * Feature: https://github.com/cours-javascript-eemi-2016-2017/js-test/issues/5
+
 == v2.1.0 Mode to display solutions after submission, eval fixes, UI fixes
  * Feature: DISPLAY_SOLUTIONS_AFTER_SUBMIT mode, to display questions and solutions after submission, while not allowing changing answers
  * Feature: store timestamp of first connection for each student
