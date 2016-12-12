@@ -20,8 +20,8 @@
   // Grab a reference to our auto-binding template and give it some initial binding values
   var app = document.querySelector('#app');
 
-  app.backend = null; // Firebase instance
-  app.firebaseDB = firebase.initializeApp(app.config.FIREBASE_CONFIG).database();
+  app.remoteUser = null; // Firebase instance
+  app.firebaseDB = firebase.initializeApp(app.config.backend.FIREBASE_CONFIG).database();
 
   // disable/enable user entry based on the `active` value in the Firebase DB
   function onBackEndStatus(snapshot) {
@@ -34,14 +34,14 @@
 
   app._onLogin = function() {
     var userHash = app.user.email.split('@')[0].replace(/[^\w]/g, '_');
-    app.backend = app.firebaseDB.ref('/submissions/' + userHash);
+    app.remoteUser = app.firebaseDB.ref('/submissions/' + userHash);
     // send a first update with timestamp on login    
     var upd = {
       _uid: app.user.id,
       _t: firebase.database.ServerValue.TIMESTAMP,
       _d: Date()
     };
-    app.backend.update(upd, function(err) {
+    app.remoteUser.update(upd, function(err) {
       if (err) {
         console.error('connection -> firebase:', err);
       } else {
@@ -49,13 +49,13 @@
       }
     });
     // get data on login, and every time firebase data is updated (even if offline)
-    app.backend.on('value', function onStoredUserAnswers(snapshot) {
+    app.remoteUser.on('value', function onStoredUserAnswers(snapshot) {
       var value = snapshot.val();
       app.myAnswers = value || {}; // make sure that local state = remote state
       app.hashedAnswers = JSON.stringify(app.myAnswers, null, '  ');
       // if first connection of this user, store first timestamps
       if (value && !value._f) {
-        app.backend.update({ _f: value._d, _ft: value._t }, function(err) {
+        app.remoteUser.update({ _f: value._d, _ft: value._t }, function(err) {
           if (err) {
             console.error('firstconnectionupdate -> firebase:', err);
           } else {
@@ -72,14 +72,14 @@
       app.set('myAnswers.' + snapshot.key(), snapshot.val());
       app.hashedAnswers = JSON.stringify(app.myAnswers, null, '  ');
     }
-    app.backend.on('child_added', onStoredAnswers);
-    app.backend.on('child_changed', onStoredAnswers); // only fired when online
+    app.remoteUser.on('child_added', onStoredAnswers);
+    app.remoteUser.on('child_changed', onStoredAnswers); // only fired when online
     */
     (app.firebaseDB.ref('/active')).on('value', onBackEndStatus);
   }
 
   function sendAnswersToBackend(upd, callback) {
-    if (!app.backend) return console.info('backend is not connected yet => ignoring update');
+    if (!app.remoteUser) return console.info('backend is not connected yet => ignoring update');
     if (!upd) return console.warn('not sending a null update to backend');
     if (app.myAnswers._submitted) {
       return alert('Vous ne pouvez plus changer vos réponses, après avoir rendu.');
@@ -92,7 +92,7 @@
     upd._t = firebase.database.ServerValue.TIMESTAMP;
     upd._d = Date();
     upd._uid = app.user.id; // will be used to re-generate the variant number during evaluation
-    app.backend.update(upd, callback || function(err) {
+    app.remoteUser.update(upd, callback || function(err) {
       if (err) {
         console.error('onChange -> firebase:', err);
         alert('Une erreur est survenue lors de l\'envoi de votre réponse. Prévenez votre enseignant.');

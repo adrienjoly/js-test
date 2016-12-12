@@ -5,11 +5,14 @@ module.exports = {
   DISPLAY_SOLUTIONS_AFTER_SUBMIT: true, // set to false, for real exams
 
   // Back-end config
-  FIREBASE_CONFIG: {
-    apiKey: "AIzaSyCBkfcodGHJEJDsnh99KgpP_F3cxU58P9I",
-    databaseURL: "https://js-test-2.firebaseio.com",
-    messagingSenderId: "730428017661"
-    // admin/dashboard: https://console.firebase.google.com/project/js-test-2/database/data
+  backend: {
+    type: 'firebase',
+    FIREBASE_CONFIG: {
+      apiKey: "AIzaSyCBkfcodGHJEJDsnh99KgpP_F3cxU58P9I",
+      databaseURL: "https://js-test-2.firebaseio.com",
+      messagingSenderId: "730428017661"
+      // admin/dashboard: https://console.firebase.google.com/project/js-test-2/database/data
+    },
   },
 
   // Front-end config
