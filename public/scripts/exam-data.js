@@ -10,7 +10,7 @@
       "databaseURL": "https://js-test-2.firebaseio.com",
       "messagingSenderId": "730428017661"
     },
-    "title": "JavaScript QCM 3",
+    "title": "JavaScript QCM 4",
     "teacherEmail": "adrien.joly@eemi.com",
     "emailSubject": "JS EXAM DATA",
     "GOOGLE_CLIENT_ID": "247219641427-ifeq88p7rgor9al5ksduds7ug0ba7djr.apps.googleusercontent.com",
