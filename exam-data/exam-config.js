@@ -13,7 +13,7 @@ module.exports = {
   },
 
   // Front-end config
-  title: 'JavaScript QCM 3',
+  title: 'JavaScript QCM 4',
 
   // For email submission only
   teacherEmail: 'adrien.joly@eemi.com',
