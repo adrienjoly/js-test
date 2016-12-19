@@ -66,7 +66,7 @@
           name: key,
           value: studentData[key],
           submitted: studentData[key]._submitted ? '☑' : '☐',
-          scores: [0, 0],
+          scores: [NaN, NaN],
         });
         computeStudentScores(studentData[key], students.length - 1);
       }
