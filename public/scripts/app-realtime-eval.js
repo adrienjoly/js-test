@@ -1,6 +1,24 @@
 (function(document) {
   'use strict';
 
+  function sum(a, b) {
+    return a + b;
+  }
+
+  function pickProp(name) {
+    return function(res) {
+      return res[name];
+    }
+  }
+
+  function renameProp(old, name) {
+    return function(res) {
+      var obj = {};
+      obj[name] = res[old];
+      return obj;
+    }
+  }
+
   // Grab a reference to our auto-binding template and give it some initial binding values
   var app = document.querySelector('#app');
 
@@ -51,9 +69,9 @@
       codeEvaluator.evaluateAnswers(studentAnswers, callback);
     }, function(err, results) {
       callback(err, {
-        log: results.map(function(res) { return { points: res.score }; }),
-        length: results[0].length + results[1].length,
-        score: results[0].score + results[1].score,
+        log: results.map(renameProp('score', 'points')),
+        length: results.map(pickProp('length')).reduce(sum),
+        score: results.map(pickProp('score')).reduce(sum),
       });
     });
   }
