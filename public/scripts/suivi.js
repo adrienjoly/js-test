@@ -42,14 +42,16 @@
     });
   }
 
-  function computeStudentScores(studentAnswers, studentIndex) {
+  function computeStudentScores(studentAnswers, callback) {
+    var studentIndex = studentAnswers.i;
     console.log('computeStudentScores', studentIndex, studentAnswers);
     async.mapSeries(app.exercises, function(ex, callback){
       var computeExerciseScore = ex.isQuizz ? computeQuizzScore : computeCodeScore;
       computeExerciseScore(studentAnswers, ex, callback);
     }, function onDone(err, scores) {
-      console.log('=> updating scores of student', studentIndex, 'of', app.students[studentIndex].name);
+      console.log('=> student', studentIndex, 'scores:', err || scores, app.students[studentIndex].name);
       app.set('students.' + studentIndex + '.scores', scores);
+      callback();
     });
   }
 
@@ -62,15 +64,18 @@
       var studentData = snapshot.val();
       var students = [];
       for (var key in studentData) {
+        studentData[key].i = students.length;
         students.push({
           name: key,
           value: studentData[key],
           submitted: studentData[key]._submitted ? '☑' : '☐',
           scores: [NaN, NaN],
         });
-        computeStudentScores(studentData[key], students.length - 1);
       }
       app.set('students', students);
+      async.mapSeries(studentData, computeStudentScores);
+      // TODO: prevent refreshing all student score on every db update
+      // TODO: prevent concurrent execution of evaluation code
     });
   }
 
