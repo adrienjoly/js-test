@@ -53,7 +53,9 @@ paper-radio-button {
   margin-top: 20px;
 }
 
+.total-points,
 .question-points {
+  font-weight: bold;
   color: blue;
 }
 
