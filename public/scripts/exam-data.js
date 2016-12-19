@@ -6,9 +6,9 @@
     "PUBLIC_TEST_MODE": false,
     "DISPLAY_SOLUTIONS_AFTER_SUBMIT": true,
     "backend": {
-      "type": "none"
+      "type": "realtime-eval"
     },
-    "title": "JavaScript QCM 4",
+    "title": "JavaScript Training",
     "teacherEmail": "adrien.joly@eemi.com",
     "emailSubject": "JS EXAM DATA",
     "GOOGLE_CLIENT_ID": "247219641427-ifeq88p7rgor9al5ksduds7ug0ba7djr.apps.googleusercontent.com",

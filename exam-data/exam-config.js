@@ -6,7 +6,7 @@ module.exports = {
 
   // Back-end config
   backend: {
-    type: 'none',
+    type: 'realtime-eval',
     /*
     type: 'firebase',
     FIREBASE_CONFIG: {
@@ -19,7 +19,7 @@ module.exports = {
   },
 
   // Front-end config
-  title: 'JavaScript QCM 4',
+  title: 'JavaScript Training',
 
   // For email submission only
   teacherEmail: 'adrien.joly@eemi.com',
