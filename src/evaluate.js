@@ -8,7 +8,7 @@ var evaluateStudent = require('./StudentEvaluator');
 
 var config = require('../exam-data/exam-config.js');
 
-var FIREBASE_URL = process.argv[2] || config.FIREBASE_CONFIG.databaseURL;
+var FIREBASE_URL = process.argv[2] || config.backend.FIREBASE_CONFIG.databaseURL;
 
 // helpers
 
@@ -17,9 +17,9 @@ function forEachSubmission(endpointUrl, handler, callback) {
   //q.push({name: 'foo', code1: 'console.log("test", 666);'}); // for testing
 
   if (endpointUrl) {
-    config.FIREBASE_CONFIG.databaseURL = endpointUrl; 
+    config.backend.FIREBASE_CONFIG.databaseURL = endpointUrl; 
   }
-  firebase.initializeApp(config.FIREBASE_CONFIG);
+  firebase.initializeApp(config.backend.FIREBASE_CONFIG);
 
   var backend = firebase.database().ref('/submissions');
   backend.on('value', function (snapshot) {
