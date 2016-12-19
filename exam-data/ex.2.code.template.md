@@ -61,3 +61,47 @@ function sommeIntervalle(premier, dernier) {
   application.remote._send(null, tests); // 1 point per passing test => 3 pts per exercise
 })();
 ```
+
+---
+
+Définir une fonction `tableauContient` qui prend deux paramètres:
+ - `tableau`: un tableau de chaînes de caractères
+ - `chaine`: une chaîne de caractères
+
+...et retourne:
+ - `false` si la valeur `chaine` n'a pas été trouvée dans le tableau `tableau`,
+ - ou le premier indice (à partir de 0) auquel a été trouvé la valeur `chaine` dans le tableau `tableau`.
+
+Exemples d'appels:
+ - `tableauContient(['a', 'b', 'c'], 'b');` doit retourner `1`.
+ - `tableauContient(['a', 'b', 'c'], 'd');` doit retourner `false`.
+
+???
+
+Solution:
+```js
+function tableauContient(tableau, chaine) {
+  var indice = tableau.indexOf(chaine);
+  if (indice === -1) {
+    return false;
+  } else {
+    return indice;
+  }
+}
+```
+
+--
+
+```js
+// automatic student evaluation code
+(function evaluateStudentCode(){
+  var console = { log: function(){} }; // tolerate console.log() calls
+  _runStudentCode();
+  var tests = [
+    typeof tableauContient === 'function',
+    tableauContient(['a', 'b', 'c'], 'b') === 1,
+    tableauContient(['a', 'b', 'c'], 'd') === false,
+  ];
+  application.remote._send(null, tests); // 1 point per passing test => 3 pts per exercise
+})();
+```

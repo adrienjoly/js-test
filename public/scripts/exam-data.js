@@ -65,6 +65,20 @@
             "Définir une fonction `sommeIntervalle` qui retourne la somme de tous les nombres entiers compris entre les nombres `premier` et `dernier` (compris) passés en paramètres.\n\nExemple d'appel: `sommeIntervalle(2, 5);` doit retourner `14` (résultat de `2 + 3 + 4 + 5`).\n\n"
           ],
           "mdSolution": "\n\nSolution:\n```js\nfunction sommeIntervalle(premier, dernier) {\n  var somme = 0;\n  for (var i = premier; i <= dernier; i++) {\n    somme = somme + i;\n  }\n  return somme;\n}\n```\n"
+        },
+        {
+          "i": 3,
+          "id": "code3",
+          "variants": [
+            {}
+          ],
+          "testVariants": [
+            "\n// automatic student evaluation code\n(function evaluateStudentCode(){\n  var console = { log: function(){} }; // tolerate console.log() calls\n  _runStudentCode();\n  var tests = [\n    typeof tableauContient === 'function',\n    tableauContient(['a', 'b', 'c'], 'b') === 1,\n    tableauContient(['a', 'b', 'c'], 'd') === false,\n  ];\n  application.remote._send(null, tests); // 1 point per passing test => 3 pts per exercise\n})();\n"
+          ],
+          "mdVariants": [
+            "Définir une fonction `tableauContient` qui prend deux paramètres:\n - `tableau`: un tableau de chaînes de caractères\n - `chaine`: une chaîne de caractères\n\n...et retourne:\n - `false` si la valeur `chaine` n'a pas été trouvée dans le tableau `tableau`,\n - ou le premier indice (à partir de 0) auquel a été trouvé la valeur `chaine` dans le tableau `tableau`.\n\nExemples d'appels:\n - `tableauContient(['a', 'b', 'c'], 'b');` doit retourner `1`.\n - `tableauContient(['a', 'b', 'c'], 'd');` doit retourner `false`.\n\n"
+          ],
+          "mdSolution": "\n\nSolution:\n```js\nfunction tableauContient(tableau, chaine) {\n  var indice = tableau.indexOf(chaine);\n  if (indice === -1) {\n    return false;\n  } else {\n    return indice;\n  }\n}\n```\n"
         }
       ]
     }

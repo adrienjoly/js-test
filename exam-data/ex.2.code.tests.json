@@ -18,5 +18,15 @@
     "testVariants": [
       "\n// automatic student evaluation code\n(function evaluateStudentCode(){\n  var console = { log: function(){} }; // tolerate console.log() calls\n  _runStudentCode();\n  var tests = [\n    typeof sommeIntervalle === 'function',\n    sommeIntervalle(2, 5) === 14,\n    sommeIntervalle(-4, -1) === -10,\n  ];\n  application.remote._send(null, tests); // 1 point per passing test => 3 pts per exercise\n})();\n"
     ]
+  },
+  {
+    "i": 3,
+    "id": "code3",
+    "variants": [
+      {}
+    ],
+    "testVariants": [
+      "\n// automatic student evaluation code\n(function evaluateStudentCode(){\n  var console = { log: function(){} }; // tolerate console.log() calls\n  _runStudentCode();\n  var tests = [\n    typeof tableauContient === 'function',\n    tableauContient(['a', 'b', 'c'], 'b') === 1,\n    tableauContient(['a', 'b', 'c'], 'd') === false,\n  ];\n  application.remote._send(null, tests); // 1 point per passing test => 3 pts per exercise\n})();\n"
+    ]
   }
 ]
