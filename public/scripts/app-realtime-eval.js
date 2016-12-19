@@ -8,36 +8,31 @@
     app.set('active', true);
   };
 
-  function evaluateAnswers() {
+  function evaluateAnswer(id, value) {
+    if (app.myAnswers[id] === value) {
+      return; // value has not changed => ignore
+    }
+    app.myAnswers[id] = value;
     console.log(app.myAnswers);
-    // TODO
+    app._toggleLoadingSpinner(id, true);
+    // TODO: evaluate
+    setTimeout(function(){
+      app._toggleLoadingSpinner(id, false);
+    }, 200);
   }
 
   // for quizz questions only
-  (function bindQcmAnswers(){
-    // when user changes an answer
-    app.onChange = function(evt) {
-      var choiceValue = evt.detail.value; // or this.value
-      var choiceId = evt.detail.id;
-      app.myAnswers[choiceId] = choiceValue;
-      evaluateAnswers();
-    }
-  })();
+  app.onChange = function(evt) {
+    var choiceValue = evt.detail.value; // or this.value
+    var choiceId = evt.detail.id;
+    evaluateAnswer(choiceId, choiceValue);
+  }
 
   // for code exercises only
-  (function bindCodeAnswers(){
-    function evaluateCodeValue(questionId, inputValue) {
-      var changed = app.myAnswers[questionId] !== inputValue;
-      if (changed) {
-        app.myAnswers[questionId] = inputValue;
-        evaluateAnswers();
-      }
-    }
-    app.onCodeBlur = function(evt) {
-      var input = evt.currentTarget;
-      var questionId = input.getAttribute('data-id');
-      evaluateCodeValue(questionId, input.value);
-    };
-  })();
+  app.onCodeBlur = function(evt) {
+    var input = evt.currentTarget;
+    var questionId = input.getAttribute('data-id');
+    evaluateAnswer(questionId, input.value);
+  };
 
 })(document);
