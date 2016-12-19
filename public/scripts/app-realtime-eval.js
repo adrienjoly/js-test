@@ -117,18 +117,15 @@
       console.log('computeStudentScores =>', err || res);
       var upd = {
         _submitted: true, // display expected solutions
-        _maxScore: res[0].length + res[1].length,
-        _score: res[0].score + res[1].score, // sum of quizz and code scores
+        _maxScore: res.map(pickProp('length')).reduce(sum),
+        _score: res.map(pickProp('score')).reduce(sum), // sum of quizz and code scores
       };
-      // compute individual quizz points, for display
-      var quizzPoints = res[0].log.map(function(ent) { return ent.points; });
-      for (var qId in app.exercises[0].solutions) {
-        upd[qId + '_points'] = quizzPoints.shift();
-      }
-      // compute individual code points, for display
-      var codePoints = res[1].log.map(function(ent) { return ent.points; });
-      app.exercises[1].questions.forEach(function(q, i) {
-        upd[q.id + '_points'] = codePoints.shift();
+      // compute each exercise points, for display
+      res.forEach(function(exResult, i) {
+        var points = exResult.log.map(pickProp('points'));
+        app.exercises[i].questions.forEach(function(q, i) {
+          upd[q.id + '_points'] = points.shift();
+        });
       });
       // update display
       app.myAnswers = Object.assign({}, app.myAnswers, upd);
@@ -144,7 +141,7 @@
       el.setAttribute('src', src);
       document.body.appendChild(el);
     }
-    require('/scripts/CodeEvaluatorGeneric.js')
+    require('/scripts/CodeEvaluatorGeneric.js'); // TODO: use relative paths instead
     require('/bower_components/async/lib/async.js');
     require('/bower_components/jailed/lib/jailed.js');
   });
