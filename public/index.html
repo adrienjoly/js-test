@@ -102,7 +102,12 @@
                 <p>Une fois votre email bien envoyé, vous pouvez quitter la salle d'examen. Merci !</p>
                 -->
                 <p>Votre copie a bien été rendue. Merci !</p>
-                <p>Date/heure de rendu: {{myAnswers._d}}</p> 
+                <template is="dom-if" if="{{myAnswers._d}}">
+                  <p>Date/heure de rendu: {{myAnswers._d}}</p>
+                </template>
+                <template is="dom-if" if="{{myAnswers._score}}">
+                  <p>Note obtenue: {{myAnswers._score}} points</p>
+                </template>
               </template>
 
               <template is="dom-if" if="{{!myAnswers._submitted}}">
