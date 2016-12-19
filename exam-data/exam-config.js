@@ -6,6 +6,8 @@ module.exports = {
 
   // Back-end config
   backend: {
+    type: 'none',
+    /*
     type: 'firebase',
     FIREBASE_CONFIG: {
       apiKey: "AIzaSyCBkfcodGHJEJDsnh99KgpP_F3cxU58P9I",
@@ -13,6 +15,7 @@ module.exports = {
       messagingSenderId: "730428017661"
       // admin/dashboard: https://console.firebase.google.com/project/js-test-2/database/data
     },
+    */
   },
 
   // Front-end config
