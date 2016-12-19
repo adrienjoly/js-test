@@ -38,6 +38,10 @@ paper-radio-button {
   margin: 0 auto;
 }
 
+#btnSubmitExam {
+  margin-top: 20px;
+}
+
 .paper-dialog-0 {
   background-color: white;
 }
