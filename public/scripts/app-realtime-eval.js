@@ -46,8 +46,16 @@
 
   function computeCodeScore(studentAnswers, exercise, callback) {
     var CodeEvaluator = makeCodeEvaluator(jailed, async, app.config.codeGrading);
-    var codeEvaluator = new CodeEvaluator(exercise.questions);
-    codeEvaluator.evaluateAnswers(studentAnswers, callback);
+    async.mapSeries(exercise.questions, function(codeExercise, callback) {
+      var codeEvaluator = new CodeEvaluator([ codeExercise ]);
+      codeEvaluator.evaluateAnswers(studentAnswers, callback);
+    }, function(err, results) {
+      callback(err, {
+        log: results.map(function(res) { return { points: res.score }; }),
+        length: results[0].length + results[1].length,
+        score: results[0].score + results[1].score,
+      });
+    });
   }
 
   function computeStudentScores(studentAnswers, callback) {
@@ -89,17 +97,22 @@
     app._toggleButton(document.getElementById('submitConfirmation'), false);
     computeStudentScores(app.myAnswers, function(err, res){
       console.log('computeStudentScores =>', err || res);
-      // display expected solutions
-      var quizzPoints = res[0].log.map(function(ent) { return ent.points; });
       var upd = {
-        _submitted: true,
+        _submitted: true, // display expected solutions
         _maxScore: res[0].length + res[1].length,
         _score: res[0].score + res[1].score, // sum of quizz and code scores
       };
+      // compute individual quizz points, for display
+      var quizzPoints = res[0].log.map(function(ent) { return ent.points; });
       for (var qId in app.exercises[0].solutions) {
         upd[qId + '_points'] = quizzPoints.shift();
       }
+      // compute individual code points, for display
+      var codePoints = res[1].log.map(function(ent) { return ent.points; });
+      app.exercises[1].questions.forEach(function(q, i) {
+        upd[q.id + '_points'] = codePoints.shift();
       });
+      // update display
       app.myAnswers = Object.assign({}, app.myAnswers, upd);
       app._toggleButton(document.getElementById('submitConfirmation'), true);
       app.scrollPageToTop();
