@@ -29,110 +29,8 @@
       "i": "1",
       "isQuizz": true,
       "title": "QCM",
-      "questions": [
-        {
-          "i": 1,
-          "id": "qcm1",
-          "md": "```js\nfunction maFonction(param) {\n  return param + 2;\n}\n```\n\nCeci est:\n\n\n",
-          "mdSolution": "\n\nC'est une définition de fonction.\n\nOn la reconnait à l'usage du mot clé `function` et des accolades entourant le code qui sera exécuté lorsque cette fonction sera appelée.",
-          "choices": [
-            {
-              "name": 1,
-              "text": "un appel de fonction"
-            },
-            {
-              "name": 2,
-              "text": "une définition de fonction"
-            },
-            {
-              "name": 3,
-              "text": "une affectation de fonction"
-            },
-            {
-              "name": 4,
-              "text": "une fonction qui ne fonctionne pas"
-            }
-          ]
-        },
-        {
-          "i": 2,
-          "id": "qcm2",
-          "md": "```js\nmaFonction(4);\n```\n\nCeci est:\n\n\n",
-          "mdSolution": "\n\nC'est un appel de fonction.\n\nUn appel de fonction = le nom de la fonction, suivi par les paramètres entre parenthèses. Sans le mot clé `function`.\n\nCette instruction va exécuter le code défini dans la fonction, et affecter les valeurs fournies à chaque paramètre.",
-          "choices": [
-            {
-              "name": 1,
-              "text": "un appel de fonction"
-            },
-            {
-              "name": 2,
-              "text": "une définition de fonction"
-            },
-            {
-              "name": 3,
-              "text": "une affectation de fonction"
-            },
-            {
-              "name": 4,
-              "text": "une fonction qui ne fonctionne pas"
-            }
-          ]
-        },
-        {
-          "i": 3,
-          "id": "qcm3",
-          "md": "```\n// cette fonction concatène un zéro à la fin de la valeur passée en paramètre\nfunction maFonction(param) {\n  return param + '0';\n}\n```\n\nComment savoir si cette fonction fonctionne bien ? (c.a.d. sans bug)\n\n\n",
-          "mdSolution": "\n\nPour vérifier le bon fonctionnement il faut définir et exécuter des tests unitaires.\n\nCeux-ci permettent de comparer le résultat attendu d'une fonction, à celui effectivement retourné par l'implémentation actuelle de cette fonction.\n\n`maFonction(1) === '10';` est un bon test unitaire car son exécution retourne `true` si la fonction retourne le résultat attendu (`10`) lorsqu'on lui passe `1` en paramètre.",
-          "choices": [
-            {
-              "name": 1,
-              "text": "il suffit de la copier-coller dans la console"
-            },
-            {
-              "name": 2,
-              "text": "il faut taper maFonction dans la console"
-            },
-            {
-              "name": 3,
-              "text": "vérifier que le test passe: maFonction(1) === '10';"
-            },
-            {
-              "name": 4,
-              "text": "vérifier que maFonction(1) renvoie bien true"
-            }
-          ]
-        },
-        {
-          "i": 4,
-          "id": "qcm4",
-          "md": "Supposons que nous avons défini une fonction `doubler()` qui retourne le double du nombre passé en paramètre, lors de son appel.\n\nQue se passe-t-il si on exécute l'instruction suivante:\n\n```js\nvar maVariable = doubler(3);\n```\n\n\n",
-          "mdSolution": "\n\nIl s'agit ici d'un appel de fonction. De la même façon que pour une opération élémentaire (ex: `2 + 2`), tout appel de fonction sera remplacé par la valeur retourné par l'exécution de cette fonction.\n\nIci, le résultat de l'exécution de la fonction `doubler` avec le paramètre `3`, soit la valeur `6`, va être affectée à `maVariable`.",
-          "choices": [
-            {
-              "name": 1,
-              "text": "le résultat va être affecté à maVariable"
-            },
-            {
-              "name": 2,
-              "text": "le résultat va s'afficher dans la console"
-            },
-            {
-              "name": 3,
-              "text": "maVariable contient la définition de la fonction"
-            },
-            {
-              "name": 4,
-              "text": "maVariable contient l'appel de la fonction"
-            }
-          ]
-        }
-      ],
-      "solutions": {
-        "qcm1": 2,
-        "qcm2": 1,
-        "qcm3": 3,
-        "qcm4": 1
-      }
+      "questions": [],
+      "solutions": {}
     },
     {
       "_info": "generated from ex.2.code.template.md",
@@ -147,12 +45,12 @@
             {}
           ],
           "testVariants": [
-            "\n// automatic student evaluation code\n(function evaluateStudentCode(){\n  var console = { log: function(){} }; // tolerate console.log() calls\n  _runStudentCode();\n  var tests = [\n    typeof soustraire === 'function', \n    soustraire(2, 1) === 1,\n    soustraire(2, -1) === 3,\n  ];\n  application.remote._send(null, tests); // 1 point per passing test => 3 pts per exercise\n})();\n"
+            "\n// automatic student evaluation code\n(function evaluateStudentCode(){\n  var console = { log: function(){} }; // tolerate console.log() calls\n  _runStudentCode();\n  var tests = [\n    typeof somme === 'function', \n    somme(1, 3, -2) === 2,\n    somme(4, 100, 0.5) === 104.5,\n  ];\n  application.remote._send(null, tests); // 1 point per passing test => 3 pts per exercise\n})();\n"
           ],
           "mdVariants": [
-            "Définir une fonction `soustraire` qui retourne le résultat de la soustraction `a - b`, `a` et `b` étant des paramètres de cette fonction.\n\nRespecter les conventions et règles d'indentation vues en cours.\n\n"
+            "Définir une fonction `somme` qui retourne la somme des trois nombres passés en paramètres.\n\nExemple d'appel: `somme(1, 3, -2);` doit retourner `2`.\n\n"
           ],
-          "mdSolution": "\n\nSolution:\n```js\nfunction soustraire(a, b) {\n  return a - b;\n}\n```\n"
+          "mdSolution": "\n\nSolution:\n```js\nfunction somme(a, b, c) {\n  return a + b + c;\n}\n```\n"
         },
         {
           "i": 2,
@@ -161,12 +59,12 @@
             {}
           ],
           "testVariants": [
-            "\n// automatic student evaluation code\n(function evaluateStudentCode(){\n  var nb = 0;\n  var console = {\n    log: function(t){\n      if (t === 'Bonjour!') {\n        nb++;\n      }\n    }\n  };\n  _runStudentCode();\n  var res = repeter(25);\n  var tests = [\n    typeof repeter === 'function',\n    nb === 25,\n    res === 25,\n  ];\n  application.remote._send(null, tests); // 1 point per passing test => 3 pts per exercise\n})();\n"
+            "\n// automatic student evaluation code\n(function evaluateStudentCode(){\n  var console = { log: function(){} }; // tolerate console.log() calls\n  _runStudentCode();\n  var tests = [\n    typeof sommeIntervalle === 'function',\n    sommeIntervalle(2, 5) === 14,\n    sommeIntervalle(-4, -1) === -10,\n  ];\n  application.remote._send(null, tests); // 1 point per passing test => 3 pts per exercise\n})();\n"
           ],
           "mdVariants": [
-            "Définir une fonction `repeter` qui affiche `n` fois `'Bonjour!'` dans la console, puis qui retourne `n`, `n` étant un paramètre de cette fonction.\n\nRespecter les conventions et règles d'indentation vues en cours.\n\n"
+            "Définir une fonction `sommeIntervalle` qui retourne la somme de tous les nombres entiers compris entre les nombres `premier` et `dernier` (compris) passés en paramètres.\n\nExemple d'appel: `sommeIntervalle(2, 5);` doit retourner `14` (résultat de `2 + 3 + 4 + 5`).\n\n"
           ],
-          "mdSolution": "\n\nSolution:\n```js\nfunction repeter(n) {\n  for (var i = 0; i < n; i++) {\n    console.log('Bonjour!');\n  }\n  return n;\n}\n```\n"
+          "mdSolution": "\n\nSolution:\n```js\nfunction sommeIntervalle(premier, dernier) {\n  var somme = 0;\n  for (var i = premier; i <= dernier; i++) {\n    somme = somme + i;\n  }\n  return somme;\n}\n```\n"
         }
       ]
     }
