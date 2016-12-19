@@ -89,7 +89,7 @@ function makeCodeEvaluator(jailed, codeGradingOptions) {
       console.log([ '// STUDENT CODE:', studentCode ].join('\n\n'));
       runCodeInSandbox(code, function(err, res) {
         if (err) console.log('=> test runner err:', err);
-        var scoreArray;
+        var scoreArray = [ 0 ];
         if (res) {
           if (res[0]) {
             console.log('\n// -> STUDENT CODE ERROR:', res[0]);
