@@ -15,7 +15,9 @@
 
   function computeQuizzScore(studentAnswers, exercise, callback) {
     var score = 0;
+    var maxScore = 0;
     for (var qId in exercise.solutions) {
+      maxScore += app.config.quizzGrading.ptsRight;
       if (studentAnswers[qId] === undefined) {
         score += app.config.quizzGrading.ptsNull;
       } else if (studentAnswers[qId] == exercise.solutions[qId]) {
@@ -24,15 +26,16 @@
         score += app.config.quizzGrading.ptsWrong;
       }
     }
-    callback(null, score);
+    callback(null, {
+      length: maxScore,
+      score: score
+    });
   }
 
   function computeCodeScore(studentAnswers, exercise, callback) {
     var CodeEvaluator = makeCodeEvaluator(jailed, async, app.config.codeGrading);
     var codeEvaluator = new CodeEvaluator(exercise.questions);
-    codeEvaluator.evaluateAnswers(studentAnswers, function(err, res){
-      callback(null, res.score);
-    });
+    codeEvaluator.evaluateAnswers(studentAnswers, callback);
   }
 
   function computeStudentScores(studentAnswers, callback) {
@@ -77,7 +80,8 @@
       // display expected solutions
       app.myAnswers = Object.assign({}, app.myAnswers, {
         _submitted: true,
-        _score: res[0] + res[1], // sum of quizz and code scores
+        _maxScore: res[0].length + res[1].length,
+        _score: res[0].score + res[1].score, // sum of quizz and code scores
       });
       app._toggleButton(document.getElementById('submitConfirmation'), true);
       app.scrollPageToTop();
