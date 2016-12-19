@@ -193,8 +193,10 @@
                 <section>
                   <paper-material elevation="1">
                     <h2>Rendu de copie</h2>
-                    <p>La copie doit être rendue <strong>avant</strong> l'heure de fin d'examen, telle qu'annoncée par l'enseignant.</p>
-                    <p>Une fois votre copie rendue, vous ne pourrez plus modifier vos réponses.</p>
+                    <zero-md file="./data/rendu.md">
+                      <!-- Remember to pass in empty container of class="md-html". -->
+                      <div class="md-html"></div>
+                    </zero-md>
                     <paper-button id="btnSubmitExam" on-click="onSubmitExam" raised class="green">
                       <iron-icon icon="check"></iron-icon>&nbsp;
                       <span>Rendre la copie</span>
