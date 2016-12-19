@@ -35,7 +35,7 @@
   }
 
   function computeCodeScore(studentAnswers, exercise, callback) {
-    var CodeEvaluator = makeCodeEvaluator(jailed, app.config.codeGrading);
+    var CodeEvaluator = makeCodeEvaluator(jailed, async, app.config.codeGrading);
     var codeEvaluator = new CodeEvaluator(exercise.questions);
     codeEvaluator.evaluateAnswers(studentAnswers, function(err, res){
       callback(null, res.score);
@@ -43,8 +43,8 @@
   }
 
   function computeStudentScores(studentAnswers, studentIndex) {
-    console.log('computeStudentScores', studentAnswers);
-    mapSeries(app.exercises, function(ex, callback){
+    console.log('computeStudentScores', studentIndex, studentAnswers);
+    async.mapSeries(app.exercises, function(ex, callback){
       var computeExerciseScore = ex.isQuizz ? computeQuizzScore : computeCodeScore;
       computeExerciseScore(studentAnswers, ex, callback);
     }, function onDone(err, scores) {

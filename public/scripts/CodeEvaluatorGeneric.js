@@ -1,23 +1,6 @@
-// inspired by caolan's async.mapSeries
-function mapSeries(_arr, handler, callback) {
-  var arr = _arr.slice(); // clone
-  var results = [];
-  function next() {
-    if (!arr.length) {
-      callback(null, results);
-    } else {
-      var item = arr.shift();
-      handler(item, function(err, res) {
-        // TODO: also handle errors
-        results.push(res);
-        next();
-      });
-    }
-  }
-  next();
-}
+// requires caolan's async
 
-function makeCodeEvaluator(jailed, codeGradingOptions) {
+function makeCodeEvaluator(jailed, async, codeGradingOptions) {
 
   var COEF = codeGradingOptions.ptsPerExercise;
 
@@ -119,7 +102,7 @@ function makeCodeEvaluator(jailed, codeGradingOptions) {
       console.log('\n------------- EXERCISE:', exEval.id, '(variant:', variantNumber + ') -------------\n');
       runTest(evalTest, answers[exEval.id], callback);
     }
-    mapSeries(this.tests, runExEval, function done(err, res) {
+    async.mapSeries(this.tests, runExEval, function done(err, res) {
       var ptsPerExercise = res.map(function(scoreArray){
         return scoreArray.reduce(sum) * COEF / scoreArray.length;
       });
