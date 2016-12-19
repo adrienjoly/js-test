@@ -9,7 +9,7 @@
   app.user = null;
   app.submissions = null;
   app.students = [];
-  app.firebaseDB = firebase.initializeApp(app.config.FIREBASE_CONFIG).database();
+  app.firebaseDB = firebase.initializeApp(app.config.backend.FIREBASE_CONFIG).database();
 
   // Scroll page to top (used by routing.html)
   app.scrollPageToTop = function() {
