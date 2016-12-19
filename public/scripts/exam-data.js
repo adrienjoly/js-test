@@ -25,16 +25,8 @@
   };
   app.exercises = [
     {
-      "_info": "generated from ex.1.quizz.template.md",
+      "_info": "generated from ex.1.code.template.md",
       "i": "1",
-      "isQuizz": true,
-      "title": "QCM",
-      "questions": [],
-      "solutions": {}
-    },
-    {
-      "_info": "generated from ex.2.code.template.md",
-      "i": "2",
       "isCode": true,
       "title": "Exercices de codage",
       "questions": [
