@@ -49,6 +49,10 @@ paper-radio-button {
   margin-top: 20px;
 }
 
+.question-points {
+  color: blue;
+}
+
 @media print {
   body {
     height: auto !important;

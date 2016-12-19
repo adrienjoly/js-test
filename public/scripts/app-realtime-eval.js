@@ -11,22 +11,34 @@
     app.myAnswers._uid = app.user.id;
   };
 
+  app.myPoints = function(myAnswers, questionId) {
+    var points = myAnswers[questionId + '_points'];
+    return points !== undefined && (points + ' points');
+  };
+
   // code evaluation
 
   function computeQuizzScore(studentAnswers, exercise, callback) {
+    var log = [];
     var score = 0;
     var maxScore = 0;
     for (var qId in exercise.solutions) {
+      var points;
       maxScore += app.config.quizzGrading.ptsRight;
       if (studentAnswers[qId] === undefined) {
-        score += app.config.quizzGrading.ptsNull;
+        points = app.config.quizzGrading.ptsNull;
       } else if (studentAnswers[qId] == exercise.solutions[qId]) {
-        score += app.config.quizzGrading.ptsRight
+        points = app.config.quizzGrading.ptsRight
       } else {
-        score += app.config.quizzGrading.ptsWrong;
+        points = app.config.quizzGrading.ptsWrong;
       }
+      score += points;
+      log.push({
+        points: points
+      });
     }
     callback(null, {
+      log: log,
       length: maxScore,
       score: score
     });
@@ -78,11 +90,17 @@
     computeStudentScores(app.myAnswers, function(err, res){
       console.log('computeStudentScores =>', err || res);
       // display expected solutions
-      app.myAnswers = Object.assign({}, app.myAnswers, {
+      var quizzPoints = res[0].log.map(function(ent) { return ent.points; });
+      var upd = {
         _submitted: true,
         _maxScore: res[0].length + res[1].length,
         _score: res[0].score + res[1].score, // sum of quizz and code scores
+      };
+      for (var qId in app.exercises[0].solutions) {
+        upd[qId + '_points'] = quizzPoints.shift();
+      }
       });
+      app.myAnswers = Object.assign({}, app.myAnswers, upd);
       app._toggleButton(document.getElementById('submitConfirmation'), true);
       app.scrollPageToTop();
     });

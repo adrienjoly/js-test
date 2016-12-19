@@ -146,7 +146,13 @@
                     <template is="dom-repeat" items="{{exercise.questions}}" as="question">
                       <section id="[[question.id]]" class="quizz-question">
                         <paper-material elevation="0">
-                          <h3>Question {{question.i}}</h3>
+                          <h3>Question {{question.i}}
+                            <template is="dom-if" if="[[myPoints(myAnswers, question.id)]]">
+                              <span class="question-points">
+                                ([[myPoints(myAnswers, question.id)]])
+                              </span>
+                            </template>
+                          </h3>
                           <paper-spinner-lite active></paper-spinner-lite>
 
                           <zero-md text="{{question.md}}" file="{{question.mdFile}}">
