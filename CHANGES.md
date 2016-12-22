@@ -1,3 +1,10 @@
+== v2.3.0 Student auto-evaluation, thanks to `realtime-eval` backend mode
+ * backend logic selected from config (e.g. firebase, realtime-eval, or none)
+ * dashboard: display NaN instead of 0, until a score was evaluated
+ * dashboard: sequential evaluation of students, one by one
+ * fixed evaluation script, to match new firebase config
+ * possibility to edit the submission explainer, using a markdown file
+
 == v2.2.0 Teacher dashboard with real-time client-side evaluation of students' answers
  * Feature: https://github.com/cours-javascript-eemi-2016-2017/js-test/issues/5
 
