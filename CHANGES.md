@@ -1,3 +1,6 @@
+== v2.4.0 (WIP)
+ * `_studentCode` string can be used for code evaluation tests
+
 == v2.3.0 Student auto-evaluation, thanks to `realtime-eval` backend mode
  * backend logic selected from config (e.g. firebase, realtime-eval, or none)
  * dashboard: display NaN instead of 0, until a score was evaluated
