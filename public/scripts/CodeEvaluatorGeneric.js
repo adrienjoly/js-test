@@ -84,6 +84,7 @@ function makeCodeEvaluator(jailed, async, codeGradingOptions) {
           } else {
             scoreArray = [ testResult || 0 ];
           }
+          console.log('\n// -> STUDENT SCORE ARRAY:', scoreArray);
         }
         callback(null, scoreArray); // sum of array must be <= config.codeGrading.ptsPerExercise
       });
