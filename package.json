@@ -25,7 +25,7 @@
     "eval-students": "src/score-students.sh ./students/*.json",
     "eval-student-groups": "src/score-student-groups.sh ./student-groups/*.json",
     "eval-groups-from-firebase": "src/score-groups.sh",
-    "init-heroku": "git remote rm heroku; heroku create js-qcm",
+    "init-heroku": "git remote rm heroku; heroku create js-code",
     "deploy": "git push heroku master"
   },
   "author": "Adrien Joly <adrien.joly@gmail.com>",
