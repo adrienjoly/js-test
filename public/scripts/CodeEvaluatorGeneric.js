@@ -60,6 +60,7 @@ function makeCodeEvaluator(jailed, async, codeGradingOptions) {
       callback(null, [ 0 ]);
     } else {
       var code = testCode
+        .replace(/`_studentCode`/g, '`' + studentCode.replace(/`/g, '\\\`') + '`')
         .replace(/_runStudentCode\(\)/g, [
           '// <STUDENT-CODE>',
           studentCode,

@@ -141,9 +141,9 @@
       el.setAttribute('src', src);
       document.body.appendChild(el);
     }
-    require('/scripts/CodeEvaluatorGeneric.js'); // TODO: use relative paths instead
-    require('/bower_components/async/lib/async.js');
-    require('/bower_components/jailed/lib/jailed.js');
+    require('scripts/CodeEvaluatorGeneric.js?_t=' + new Date().getTime()); // load latest version despite cache
+    require('bower_components/async/lib/async.js');
+    require('bower_components/jailed/lib/jailed.js');
   });
 
 })(document);
