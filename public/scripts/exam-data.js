@@ -8,7 +8,7 @@
     "backend": {
       "type": "realtime-eval"
     },
-    "title": "JavaScript QCM 5",
+    "title": "JavaScript Partiel 1",
     "teacherEmail": "adrien.joly@eemi.com",
     "emailSubject": "JS EXAM DATA",
     "GOOGLE_CLIENT_ID": "247219641427-ifeq88p7rgor9al5ksduds7ug0ba7djr.apps.googleusercontent.com",
@@ -37,12 +37,12 @@
             {}
           ],
           "testVariants": [
-            "\n// automatic student evaluation code\n(function evaluateStudentCode(){\n  _runStudentCode();\n  var tests = [\n    nombres[0] === 1,\n    nombres.length === 3,\n    nombres.join(',') === '1,2,3',\n  ];\n  application.remote._send(null, tests); // 1 point per passing test => 3 pts per exercise\n})();\n"
+            "\n// automatic student evaluation code\n(function evaluateStudentCode(){\n  var res = [];\n  var console = { log: function(p){\n    res.push(p);\n  } };\n  var tests = [];\n  var monNombre = 4;\n  _runStudentCode();\n  tests = tests.concat([\n    res.length === 0,\n  ]);\n  monNombre = 5.5;\n  _runStudentCode();\n  tests = tests.concat([\n    res.length === 1, \n    res[0] === 'plus grand que 4',\n  ]);\n  application.remote._send(null, tests); // 1 point per passing test => 3 pts per exercise\n})();\n"
           ],
           "mdVariants": [
-            "Créez une variable `nombres` de type tableau et contenant les nombres `1`, `2` et `3`.\n\n"
+            "## Condition simple\n\nSupposons qu'une variable `monNombre` ait été créée et contienne un nombre.\n\nImplémenter une condition qui affiche `'plus grand que 4'` dans la console, si `monNombre` est strictement supérieur à `4`.\n\n"
           ],
-          "mdSolution": "\n\nSolution:\n```js\nvar nombres = [1, 2, 3];\n```\n"
+          "mdSolution": "\n\nSolution:\n```js\nif (monNombre > 4) {\n  console.log('plus grand que 4');\n}\n```\n"
         },
         {
           "i": 2,
@@ -51,12 +51,12 @@
             {}
           ],
           "testVariants": [
-            "\n// automatic student evaluation code\n(function evaluateStudentCode(){\n  var _fruits = ['pomme', 'orange', 'kiwi'];\n  var fruits = _fruits.slice(); // clone\n  _runStudentCode();\n  var tests = [\n    troisieme === _fruits[2],\n    fruits.join(',') === _fruits.join(','),\n    `_studentCode`.replace(/[\\(\\) ]/g, '').indexOf('[2]') !== -1,\n  ];\n  application.remote._send(null, tests); // 1 point per passing test => 3 pts per exercise\n})();\n"
+            "\n// automatic student evaluation code\n(function evaluateStudentCode(){\n  var res;\n  var tests = [];\n  var console = { log: function(){} }; // tolerate console.log() calls\n  var prompt, alert = (p) => res.push(p);\n  // test 1\n  res = [];\n  prompt = () => 'paris';\n  _runStudentCode();\n  tests.push(res.length === 1 && res[0] === 'nuageux');\n  // test 2\n  res = [];\n  prompt = () => 'marseille';\n  _runStudentCode();\n  tests.push(res.length === 1 && res[0] === 'soleil');\n  // test 3\n  res = [];\n  prompt = () => 'brest';\n  _runStudentCode();\n  tests.push(res.length === 1 && res[0] === 'je n\\'ai pas compris');\n  application.remote._send(null, tests); // 1 point per passing test => 3 pts per exercise\n})();\n"
           ],
           "mdVariants": [
-            "Vous disposez d'une variable `fruits` contenant un tableau de chaînes de caractères.\n\nSaisissez le code JavaScript pour créer une variable `troisieme` et lui affecter la valeur du 3ème élément de ce tableau.\n\n"
+            "## Condition avancée\n\nNous allons écrire un programme qui donne la météo à l'utilisateur, pour la ville de son choix.\n\nCe programme devra:\n\n - Inviter l'utilisateur à saisir le nom d'une ville;\n - Dans le cas où l'utilisateur a saisi `paris`, répondre `nuageux`;\n - Dans le cas où l'utilisateur a saisi `marseille`, répondre `soleil`;\n - Sinon, répondre `je n'ai pas compris`.\n\nLes réponses sont à afficher à l'aide de la fonction `alert()`. Respecter les textes fournis à la lettre. (y compris la casse, espaces et ponctuation)\n\n"
           ],
-          "mdSolution": "\n\nSolution:\n```js\nvar troisieme = fruits[2];\n```\n"
+          "mdSolution": "\n\nSolution:\n```js\nvar reponse = prompt('saisissez le nom d\\'une ville svp');\nif (reponse === 'paris') {\n  alert('nuageux');\n} else if (reponse === 'marseille') {\n  alert('soleil');\n} else {\n  alert('je n\\'ai pas compris');\n}\n```\n"
         },
         {
           "i": 3,
@@ -65,12 +65,12 @@
             {}
           ],
           "testVariants": [
-            "\n// automatic student evaluation code\n(function evaluateStudentCode(){\n  var _fruits = ['pomme', 'orange', 'kiwi'];\n  var fruits = _fruits.slice(); // clone\n  var out;\n  var console = { log: function(value){\n    out = value;\n  } };\n  _runStudentCode();\n  var tests = [\n    out === _fruits.pop(),\n    fruits.join(',') === _fruits.join(','),\n    `_studentCode`.toString().replace(/[\\(\\) ]/g, '').indexOf('.pop') !== -1,\n  ];\n  application.remote._log('3', tests);\n  application.remote._send(null, tests); // 1 point per passing test => 3 pts per exercise\n})();\n"
+            "\n// automatic student evaluation code\n(function evaluateStudentCode(){\n  var console = { log: function(){} }; // tolerate console.log() calls\n  _runStudentCode();\n  var tests = [\n    typeof produit === 'function', \n    produit(1, 3, -2) === -6,\n    produit(4, 100, 0.5) === 200,\n  ];\n  application.remote._send(null, tests); // 1 point per passing test => 3 pts per exercise\n})();\n"
           ],
           "mdVariants": [
-            "Vous disposez d'une variable `fruits` contenant un tableau de chaînes de caractères.\n\nSaisissez le code JavaScript permettant de retirer le dernier élément de ce tableau, et d'afficher la valeur de cet élément dans la console.\n\n"
+            "## Fonctions\n\nDéfinir une fonction `produit` qui retourne le résultat de la multiplication des trois nombres passés en paramètres.\n\nExemple d'appel: `produit(1, 3, -2);` doit retourner `-6` (`1 * 3 * -2`).\n\n"
           ],
-          "mdSolution": "\n\nSolution:\n```js\nconsole.log(fruits.pop());\n```\n"
+          "mdSolution": "\n\nSolution:\n```js\nfunction produit(a, b, c) {\n  return a * b * c;\n}\n```\n"
         },
         {
           "i": 4,
@@ -79,12 +79,26 @@
             {}
           ],
           "testVariants": [
-            "\n// automatic student evaluation code\n(function evaluateStudentCode(){\n  var console = { log: function(){} }; // tolerate console.log() calls\n  _runStudentCode();\n  var tests = [\n    typeof tableauContient === 'function',\n    tableauContient(['a', 'b', 'c'], 'b') === 1,\n    tableauContient(['a', 'b', 'c'], 'd') === false,\n  ];\n  application.remote._send(null, tests); // 1 point per passing test => 3 pts per exercise\n})();\n"
+            "\n// automatic student evaluation code\n(function evaluateStudentCode(){\n  var console = { log: function(){} }; // tolerate console.log() calls\n  _runStudentCode();\n  var tests = [\n    repeterChaine(3, 'bonjour!') === 'bonjour!bonjour!bonjour!',\n    repeterChaine(0, 'bonjour!') === '',\n    repeterChaine(12, 'a') === 'aaaaaaaaaaaa',\n  ];\n  application.remote._send(null, tests); // 1 point per passing test => 3 pts per exercise\n})();\n"
           ],
           "mdVariants": [
-            "Définir une fonction `tableauContient` qui prend deux paramètres:\n - `tableau`: un tableau de chaînes de caractères\n - `chaine`: une chaîne de caractères\n\n...et retourne:\n - `false` si la valeur `chaine` n'a pas été trouvée dans le tableau `tableau`,\n - ou le premier indice (à partir de 0) auquel a été trouvé la valeur `chaine` dans le tableau `tableau`.\n\nExemples d'appels:\n - `tableauContient(['a', 'b', 'c'], 'b');` doit retourner `1`.\n - `tableauContient(['a', 'b', 'c'], 'd');` doit retourner `false`.\n\n"
+            "## Boucles\n\nDéfinir une fonction `repeterChaine` qui prend comme paramètres un nombre `n` et une chaîne de caractères `message`, et retourne une chaîne de caractères contenant `n` fois `message`, en utilisant la concaténation.\n\nExemple d'appel: `repeterChaine(3, 'bonjour!');` doit retourner `'bonjour!bonjour!bonjour!'`.\n\n"
           ],
-          "mdSolution": "\n\nSolution:\n```js\nfunction tableauContient(tableau, chaine) {\n  var indice = tableau.indexOf(chaine);\n  if (indice === -1) {\n    return false;\n  } else {\n    return indice;\n  }\n}\n```\n"
+          "mdSolution": "\n\nSolution:\n```js\nfunction repeterChaine(n, message) {\n  var resultat = '';\n  for (var i = 0; i < n; i++) {\n    resultat = resultat + message;\n  }\n  return resultat;\n}\n```\n"
+        },
+        {
+          "i": 5,
+          "id": "code5",
+          "variants": [
+            {}
+          ],
+          "testVariants": [
+            "\n// automatic student evaluation code\n(function evaluateStudentCode(){\n  var console = { log: function(){} }; // tolerate console.log() calls\n  _runStudentCode();\n  var tests = [\n    typeof tableauContient === 'function',\n    tableauContient([3, 4, 5, 4], 4) === true,\n    tableauContient([3, 4, 5, 4], 2) === false,\n  ];\n  application.remote._send(null, tests); // 1 point per passing test => 3 pts per exercise\n})();\n"
+          ],
+          "mdVariants": [
+            "## Tableaux\n\nDéfinir une fonction `tableauContient` qui prend deux paramètres:\n - `tableau`: un tableau de nombres\n - `nombre`: un nombre\n\n...et retourne:\n - `true` s'il existe au moins un élément ayant la valeur `nombre` dans le tableau `tableau`,\n - ou `false` sinon.\n \nExemples d'appels:\n - `tableauContient([1, 2, 3], 2);` doit retourner `true`.\n - `tableauContient([1, 2, 3], 4);` doit retourner `false`.\n\n"
+          ],
+          "mdSolution": "\n\nSolution:\n```js\nfunction tableauContient(tableau, nombre) {\n  var indice = tableau.indexOf(nombre);\n  if (indice === -1) {\n    return false;\n  } else {\n    return true;\n  }\n}\n```\n\n...ou:\n```js\nfunction tableauContient(tableau, nombre) {\n  return tableau.indexOf(nombre) !== -1;\n}\n```\n"
         }
       ]
     }
