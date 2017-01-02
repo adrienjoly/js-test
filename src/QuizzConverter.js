@@ -3,6 +3,11 @@
 var _ = require('lodash');
 var mustache = require('mustache');
 
+function renderVariant(variantData) {
+  var template = this.toString();
+  return template && mustache.render(template, variantData);
+}
+
 function renderCodeExercise(exerciseData, exNumber) {
 
   var evalTests = [];
@@ -21,21 +26,19 @@ function renderCodeExercise(exerciseData, exNumber) {
       exSolution = parts.pop();
     }
     var id = 'code' + (q + 1); // TODO: allow each question to override this id
-    solutions[id] = exSolution.split(/```.*\n/g)[1]; // TODO: render one solution per variant? (like for testVariants)
+    var rawSolution = exSolution.split(/```.*\n/g)[1];
+    solutions[id] = variants.map(renderVariant.bind(rawSolution)); // render one solution per variant
     var exerciseData = {
       i: q + 1, // TODO: prevent id collisions if more than one code.template.md file is used
       id: id,
       variants: variants,
-      testVariants: variants.map(function renderVariant(variantData, i) {
-        return exEval && mustache.render(exEval, variantData);
-      })
+      testVariants: variants.map(renderVariant.bind(exEval))
     };
     evalTests.push(exerciseData);
     return Object.assign({}, exerciseData, {
-      mdVariants: variants.map(function renderVariant(variantData, i) {
-        return mustache.render(exText, variantData);
-      }),
-      mdSolution: exSolution // TODO: one exSolution per variant? (like for testVariants)
+      mdVariants: variants.map(renderVariant.bind(exText)),
+      mdSolutions: variants.map(renderVariant.bind(exSolution)),
+      mdSolution: exSolution // deprecated => use mdSolutions instead (one per variant)
     });
     // TODO: obfuscate solution and tests on client-side
   });
