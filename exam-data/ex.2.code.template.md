@@ -1,15 +1,19 @@
 ## Condition simple
 
-Supposons qu'une variable `monNombre` ait été créée et contienne un nombre.
+Supposons qu'une variable `{{varName}}` ait été créée et contienne un nombre.
 
-Implémenter une condition qui affiche `'plus grand que 4'` dans la console, si `monNombre` est strictement supérieur à `4`.
+Implémenter une condition qui affiche `'plus grand que {{threshold}}'` dans la console, si `{{varName}}` est strictement supérieur à `{{threshold}}`.
+
+- { "varName": "monNombre", "threshold": 4 }
+- { "varName": "monNumero", "threshold": 4 }
+- { "varName": "monNumero", "threshold": 6 }
 
 ???
 
 Solution:
 ```js
-if (monNombre > 4) {
-  console.log('plus grand que 4');
+if ({{varName}} > {{threshold}}) {
+  console.log('plus grand que {{threshold}}');
 }
 ```
 
@@ -23,16 +27,16 @@ if (monNombre > 4) {
     res.push(p);
   } };
   var tests = [];
-  var monNombre = 4;
+  var {{varName}} = {{threshold}};
   _runStudentCode();
   tests = tests.concat([
     res.length === 0,
   ]);
-  monNombre = 5.5;
+  {{varName}} = 7.5;
   _runStudentCode();
   tests = tests.concat([
     res.length === 1, 
-    res[0] === 'plus grand que 4',
+    res[0] === 'plus grand que {{threshold}}',
   ]);
   application.remote._send(null, tests); // 1 point per passing test => 3 pts per exercise
 })();
