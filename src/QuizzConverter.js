@@ -6,6 +6,7 @@ var mustache = require('mustache');
 function renderCodeExercise(exerciseData, exNumber) {
 
   var evalTests = [];
+  var solutions = {};
 
   var questions = exerciseData.renderJsonQuestions().map(function(question, q) {
     var variants = _.map(question.choices, 'text').map(JSON.parse);
@@ -19,9 +20,11 @@ function renderCodeExercise(exerciseData, exNumber) {
       exEval = exEval.replace(/```js\n*/g, '').replace(/```\n*/g, '');
       exSolution = parts.pop();
     }
+    var id = 'code' + (q + 1); // TODO: allow each question to override this id
+    solutions[id] = exSolution.split(/```.*\n/g)[1]; // TODO: render one solution per variant? (like for testVariants)
     var exerciseData = {
       i: q + 1, // TODO: prevent id collisions if more than one code.template.md file is used
-      id: 'code' + (q + 1), // TODO: allow each question to override this id
+      id: id,
       variants: variants,
       testVariants: variants.map(function renderVariant(variantData, i) {
         return exEval && mustache.render(exEval, variantData);
@@ -39,6 +42,7 @@ function renderCodeExercise(exerciseData, exNumber) {
   
   return {
     questions: questions,
+    solutions: solutions,
     evalTests: evalTests,
   };
 }
