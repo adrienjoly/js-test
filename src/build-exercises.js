@@ -3,18 +3,12 @@
 var _ = require('lodash');
 var fs = require('fs');
 var mustache = require('mustache');
-var QuizzRenderer = require('./QuizzRenderer');
+var QuizzEnumerator = require('./QuizzEnumerator');
 
 var PATH_SOURCE = './exam-data/';
 var OUTPUT_FILE = './public/scripts/exam-data.js';
 
 var CONFIG_FILE = '../' + PATH_SOURCE + 'exam-config.js';
-
-var RE_TEMPLATE_FILE = /ex\.(\d+)\.(code|quizz)\.template\.md/;
-
-function makeRegexTester(regex) {
-  return regex.test.bind(regex);
-}
 
 function renderExercisesFile(exercises) {
   var config = require(CONFIG_FILE);
@@ -73,6 +67,8 @@ function renderCodeExercise(exerciseData, exNumber) {
   fs.writeFileSync(solFile, JSON.stringify(evalTests, null, 2));
 
   return {
+    _info: exerciseData._info,
+    i: exNumber,
     isCode: true,
     title: 'Exercices de codage',
     questions: questions,
@@ -86,6 +82,8 @@ function renderQuizzExercise(exerciseData, exNumber) {
   fs.writeFileSync(solFile, JSON.stringify(solutions, null, 2));
   // return rendered questions, for web client
   return {
+    _info: exerciseData._info,
+    i: exNumber,
     isQuizz: true,
     title: 'QCM',
     questions: exerciseData.renderJsonQuestions(),
@@ -100,19 +98,8 @@ var converters = {
 
 // actual script
 
-var files = fs.readdirSync(PATH_SOURCE).sort();
-var exercises = [];
-
-files.filter(makeRegexTester(RE_TEMPLATE_FILE)).forEach(function(file){
-  var fileParts = RE_TEMPLATE_FILE.exec(file);
-  var exNumber = fileParts[1];
-  var exType = fileParts[2];
-  console.log('Rendering exam and solution files from', file, '...');
-  var exerciseData = new QuizzRenderer().readFromFile(PATH_SOURCE + file);
-  exercises.push(_.extend({
-    _info: 'generated from ' + file,
-    i: exNumber
-  }, converters[exType](exerciseData, exNumber)));
+var exercises = QuizzEnumerator.parseAllFrom(PATH_SOURCE).map(function(exData) {
+  return converters[exData._type](exData, exData.i);
 });
 
 // the exercisePack file will be loaded by index.html, then processed by app.js for rendering
