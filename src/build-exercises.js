@@ -1,8 +1,7 @@
 // This scripts generates ./public/scripts/exercices.js based on ./*.md files
 
-var _ = require('lodash');
 var fs = require('fs');
-var mustache = require('mustache');
+var QuizzConverter = require('./QuizzConverter');
 var QuizzEnumerator = require('./QuizzEnumerator');
 
 var PATH_SOURCE = './exam-data/';
@@ -28,72 +27,38 @@ function renderExercisesFile(exercises) {
 
 // converters
 
-function renderCodeExercise(exerciseData, exNumber) {
-
-  var evalTests = [];
-
-  var questions = exerciseData.renderJsonQuestions().map(function(question, q) {
-    var variants = _.map(question.choices, 'text').map(JSON.parse);
-    variants = variants.length > 0 ? variants : [{}]; // also render coding questions that don't have any variants
-    var exText = question.md;
-    var exEval = question.mdSolution;
-    var exSolution = null;
-    if (exEval) {
-      var parts = exEval.split('\n--\n');
-      exEval = parts.pop(); // evaluation code
-      exEval = exEval.replace(/```js\n*/g, '').replace(/```\n*/g, '');
-      exSolution = parts.pop();
-    }
-    var exerciseData = {
-      i: q + 1, // TODO: prevent id collisions if more than one code.template.md file is used
-      id: 'code' + (q + 1), // TODO: allow each question to override this id
-      variants: variants,
-      testVariants: variants.map(function renderVariant(variantData, i) {
-        return exEval && mustache.render(exEval, variantData);
-      })
-    };
-    evalTests.push(exerciseData);
-    return Object.assign({}, exerciseData, {
-      mdVariants: variants.map(function renderVariant(variantData, i) {
-        return mustache.render(exText, variantData);
-      }),
-      mdSolution: exSolution // TODO: one exSolution per variant? (like for testVariants)
-    });
-    // TODO: obfuscate solution and tests on client-side
-  });
-
-  // generate solution file, for evaluation of students' answers using QuizzEvaluator.js
-  var solFile = PATH_SOURCE + 'ex.' + exNumber + '.code.tests.json';
-  fs.writeFileSync(solFile, JSON.stringify(evalTests, null, 2));
-
-  return {
-    _info: exerciseData._info,
-    i: exNumber,
-    isCode: true,
-    title: 'Exercices de codage',
-    questions: questions,
-  };
-}
-
-function renderQuizzExercise(exerciseData, exNumber) {
-  var solutions = exerciseData.getSolutions();
-  // generate solution file, for evaluation of students' answers using QuizzEvaluator.js
-  var solFile = PATH_SOURCE + 'ex.' + exNumber + '.quizz.solutions.json';
-  fs.writeFileSync(solFile, JSON.stringify(solutions, null, 2));
-  // return rendered questions, for web client
-  return {
-    _info: exerciseData._info,
-    i: exNumber,
-    isQuizz: true,
-    title: 'QCM',
-    questions: exerciseData.renderJsonQuestions(),
-    solutions: solutions
-  };
-}
-
 var converters = {
-  code: renderCodeExercise,
-  quizz: renderQuizzExercise
+
+  code: function(exerciseData, exNumber) {
+    var rendered = QuizzConverter.renderCodeExercise(exerciseData, exNumber);
+    // generate solution file, for evaluation of students' answers using QuizzEvaluator.js
+    var solFile = PATH_SOURCE + 'ex.' + exNumber + '.code.tests.json';
+    fs.writeFileSync(solFile, JSON.stringify(rendered.evalTests, null, 2));
+    // generate data for exercise pack
+    return {
+      _info: exerciseData._info,
+      i: exNumber,
+      isCode: true,
+      title: 'Exercices de codage',
+      questions: rendered.questions,
+    };
+  },
+
+  quizz: function(exerciseData, exNumber) {
+    var rendered = QuizzConverter.renderQuizzExercise(exerciseData, exNumber);
+    // generate solution file, for evaluation of students' answers using QuizzEvaluator.js
+    var solFile = PATH_SOURCE + 'ex.' + exNumber + '.quizz.solutions.json';
+    fs.writeFileSync(solFile, JSON.stringify(rendered.solutions, null, 2));
+    // generate data for exercise pack
+    return {
+      _info: exerciseData._info,
+      i: exNumber,
+      isQuizz: true,
+      title: 'QCM',
+      questions: rendered.questions,
+      solutions: rendered.solutions
+    };
+  },
 };
 
 // actual script
