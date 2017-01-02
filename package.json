@@ -20,6 +20,7 @@
   "scripts": {
     "postinstall": "bower install",
     "build": "node ./src/build-exercises.js",
+    "test": "node ./src/test-solutions.js",
     "start": "npm run build; node src/server.js",
     "eval": "node ./src/evaluate.js",
     "eval-students": "src/score-students.sh ./students/*.json",
