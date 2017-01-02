@@ -12,3 +12,4 @@ CodeEvaluator.prototype.readTestsFromFile = function(filePath) {
 };
 
 module.exports = CodeEvaluator;
+module.exports.getVariantByStudentId = CodeEvaluatorGeneric.getVariantByStudentId;
