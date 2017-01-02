@@ -11,7 +11,6 @@ var SCORES_FILE = PATH_SOURCE + 'scores.csv';
 
 // inputs
 
-
 var SOLUTIONS_FILE = PATH_SOURCE + 'ex.1.quizz.solutions.json';
 var TESTS_FILE = PATH_SOURCE + 'ex.2.code.tests.json';
 
@@ -72,3 +71,4 @@ function evaluateStudent(student, next) {
 // exports
 
 module.exports = evaluateStudent;
+module.exports.getVariantByStudentId = CodeEvaluator.getVariantByStudentId;

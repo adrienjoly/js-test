@@ -1,5 +1,19 @@
 // requires caolan's async
 
+// fixed version of variant3() => returns 0, 1 or 2, depending on the value of number
+function getVariantByStudentId (id, variants) {
+  // modulo that also works for big integers
+  var modulo = function(divident, divisor) {
+      var partLength = 10;
+      while (divident.length > partLength) {
+          var part = divident.substring(0, partLength);
+          divident = (part % divisor) +  divident.substring(partLength);          
+      }
+      return divident % divisor;
+  };
+  return modulo(id, variants.length);
+};
+
 function makeCodeEvaluator(jailed, async, codeGradingOptions) {
 
   var COEF = codeGradingOptions.ptsPerExercise;
@@ -36,20 +50,6 @@ function makeCodeEvaluator(jailed, async, codeGradingOptions) {
     //plugin.whenConnected(onDone);
     timeout = setTimeout(function(){ onDone(timeoutMessage); }, 2000);
   }
-
-  // fixed version of variant3() => returns 0, 1 or 2, depending on the value of number
-  function getVariantByStudentId (id, variants) {
-    // modulo that also works for big integers
-    var modulo = function(divident, divisor) {
-        var partLength = 10;
-        while (divident.length > partLength) {
-            var part = divident.substring(0, partLength);
-            divident = (part % divisor) +  divident.substring(partLength);          
-        }
-        return divident % divisor;
-    };
-    return modulo(id, variants.length);
-  };
 
   function runTest(testCode, studentCode, callback) {
     if (!testCode) {
@@ -120,5 +120,6 @@ function makeCodeEvaluator(jailed, async, codeGradingOptions) {
 };
 
 try {
-  exports.makeCodeEvaluator = makeCodeEvaluator
+  exports.makeCodeEvaluator = makeCodeEvaluator;
+  exports.getVariantByStudentId = getVariantByStudentId;
 } catch(e) {}
