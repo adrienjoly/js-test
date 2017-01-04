@@ -324,8 +324,8 @@
       "title": "TP 2 - Code",
       "questions": [
         {
-          "i": 1,
-          "id": "code1",
+          "i": 12,
+          "id": "code12",
           "variants": [
             {}
           ],
@@ -349,8 +349,8 @@
       "title": "TP 3 - QCM",
       "questions": [
         {
-          "i": 12,
-          "id": "qcm12",
+          "i": 13,
+          "id": "qcm13",
           "md": "\nCombien de fois les instructions vont-elles être exécutées ?\n\n```js\nfor ( var i = 0; i < 4; i++ ) {\n  // instructions\n}\n```\n\n\n",
           "mdSolution": "\n\nLes instructions vont être exécutées pour chaque valeur de `i` entre `0` et `4` (non compris), soit 0, 1, 2, puis 3.\n\nCe qui fait 4 itérations.",
           "choices": [
@@ -373,8 +373,8 @@
           ]
         },
         {
-          "i": 13,
-          "id": "qcm13",
+          "i": 14,
+          "id": "qcm14",
           "md": "Combien de fois les instructions vont-elles être exécutées ?\n\n```js\nfor ( var i = 3; i >= 1; i-- ) {\n  // instructions\n}\n```\n\n\n",
           "mdSolution": "\n\nLes instructions vont être exécutées pour chaque valeur de `i` entre `3` et `1` (compris), soit 3, 2, puis 1.\n\nCe qui fait 3 itérations.",
           "choices": [
@@ -398,8 +398,8 @@
         }
       ],
       "solutions": {
-        "qcm12": 4,
-        "qcm13": 3
+        "qcm13": 4,
+        "qcm14": 3
       }
     },
     {
@@ -409,8 +409,8 @@
       "title": "TP 3 - Code",
       "questions": [
         {
-          "i": 2,
-          "id": "code2",
+          "i": 15,
+          "id": "code15",
           "variants": [
             {}
           ],
@@ -434,8 +434,8 @@
       "title": "TP 4 - QCM",
       "questions": [
         {
-          "i": 14,
-          "id": "qcm14",
+          "i": 16,
+          "id": "qcm16",
           "md": "\n```js\nfunction maFonction(param) {\n  return param + 2;\n}\n```\n\nCeci est:\n\n\n",
           "mdSolution": "\n\nC'est une définition de fonction.\n\nOn la reconnait à l'usage du mot clé `function` et des accolades entourant le code qui sera exécuté lorsque cette fonction sera appelée.",
           "choices": [
@@ -458,8 +458,8 @@
           ]
         },
         {
-          "i": 15,
-          "id": "qcm15",
+          "i": 17,
+          "id": "qcm17",
           "md": "```js\nmaFonction(4);\n```\n\nCeci est:\n\n\n",
           "mdSolution": "\n\nC'est un appel de fonction.\n\nUn appel de fonction = le nom de la fonction, suivi par les paramètres entre parenthèses. Sans le mot clé `function`.\n\nCette instruction va exécuter le code défini dans la fonction, et affecter les valeurs fournies à chaque paramètre.",
           "choices": [
@@ -482,8 +482,8 @@
           ]
         },
         {
-          "i": 16,
-          "id": "qcm16",
+          "i": 18,
+          "id": "qcm18",
           "md": "```\n// cette fonction concatène un zéro à la fin de la valeur passée en paramètre\nfunction maFonction(param) {\n  return param + '0';\n}\n```\n\nComment savoir si cette fonction fonctionne bien ? (c.a.d. sans bug)\n\n\n",
           "mdSolution": "\n\nPour vérifier le bon fonctionnement il faut définir et exécuter des tests unitaires.\n\nCeux-ci permettent de comparer le résultat attendu d'une fonction, à celui effectivement retourné par l'implémentation actuelle de cette fonction.\n\n`maFonction(1) === '10';` est un bon test unitaire car son exécution retourne `true` si la fonction retourne le résultat attendu (`10`) lorsqu'on lui passe `1` en paramètre.",
           "choices": [
@@ -506,8 +506,8 @@
           ]
         },
         {
-          "i": 17,
-          "id": "qcm17",
+          "i": 19,
+          "id": "qcm19",
           "md": "Supposons que nous avons défini une fonction `doubler()` qui retourne le double du nombre passé en paramètre, lors de son appel.\n\nQue se passe-t-il si on exécute l'instruction suivante:\n\n```js\nvar maVariable = doubler(3);\n```\n\n\n",
           "mdSolution": "\n\nIl s'agit ici d'un appel de fonction. De la même façon que pour une opération élémentaire (ex: `2 + 2`), tout appel de fonction sera remplacé par la valeur retourné par l'exécution de cette fonction.\n\nIci, le résultat de l'exécution de la fonction `doubler` avec le paramètre `3`, soit la valeur `6`, va être affectée à `maVariable`.",
           "choices": [
@@ -531,10 +531,10 @@
         }
       ],
       "solutions": {
-        "qcm14": 2,
-        "qcm15": 1,
-        "qcm16": 3,
-        "qcm17": 1
+        "qcm16": 2,
+        "qcm17": 1,
+        "qcm18": 3,
+        "qcm19": 1
       }
     },
     {
@@ -544,8 +544,8 @@
       "title": "TP 4 - Code",
       "questions": [
         {
-          "i": 3,
-          "id": "code3",
+          "i": 20,
+          "id": "code20",
           "variants": [
             {}
           ],
@@ -561,8 +561,8 @@
           "mdSolution": "\n\nSolution:\n```js\nfunction soustraire(a, b) {\n  return a - b;\n}\n```\n"
         },
         {
-          "i": 4,
-          "id": "code4",
+          "i": 21,
+          "id": "code21",
           "variants": [
             {}
           ],
@@ -586,8 +586,8 @@
       "title": "TP 5 - Code",
       "questions": [
         {
-          "i": 5,
-          "id": "code5",
+          "i": 22,
+          "id": "code22",
           "variants": [
             {}
           ],
@@ -603,8 +603,8 @@
           "mdSolution": "\n\nSolution:\n```js\nvar nombres = [1, 2, 3];\n```\n"
         },
         {
-          "i": 6,
-          "id": "code6",
+          "i": 23,
+          "id": "code23",
           "variants": [
             {}
           ],
@@ -620,8 +620,8 @@
           "mdSolution": "\n\nSolution:\n```js\nvar troisieme = fruits[2];\n```\n"
         },
         {
-          "i": 7,
-          "id": "code7",
+          "i": 24,
+          "id": "code24",
           "variants": [
             {}
           ],
@@ -637,8 +637,8 @@
           "mdSolution": "\n\nSolution:\n```js\nconsole.log(fruits.pop());\n```\n"
         },
         {
-          "i": 8,
-          "id": "code8",
+          "i": 25,
+          "id": "code25",
           "variants": [
             {}
           ],
@@ -662,8 +662,8 @@
       "title": "Controle 1 - QCM",
       "questions": [
         {
-          "i": 18,
-          "id": "qcm18",
+          "i": 26,
+          "id": "qcm26",
           "md": "\nComment créer une variable en JavaScript ?\n  \t\t  \n\n",
           "mdSolution": "\n\nRéponse: il faut utiliser le mot clé `var` suivi du nom de la variable à créer.",
           "choices": [
@@ -686,8 +686,8 @@
           ]
         },
         {
-          "i": 19,
-          "id": "qcm19",
+          "i": 27,
+          "id": "qcm27",
           "md": "Quel est le type de cette variable:\n\n```\nvar maVariable = 3.2;\n```\n\n\n",
           "mdSolution": "\n\nRéponse: en Javascript, les nombres décimaux sont aussi de type `number`.",
           "choices": [
@@ -710,8 +710,8 @@
           ]
         },
         {
-          "i": 20,
-          "id": "qcm20",
+          "i": 28,
+          "id": "qcm28",
           "md": "Quel est le type de cette variable:\n\n```\nvar maVariable = '3.2';\n```\n\n\n",
           "mdSolution": "\n\nRéponse: la valeur est entourée d'apostrophes => c'est une chaîne de caractères (`string`).",
           "choices": [
@@ -734,8 +734,8 @@
           ]
         },
         {
-          "i": 21,
-          "id": "qcm21",
+          "i": 29,
+          "id": "qcm29",
           "md": "Que vaut cette expression de comparaison de valeur ?\n\n```\n3.2 === '3.2'\n```\n\n\n",
           "mdSolution": "\n\nRéponse: le triple égal est une comparaison stricte: elle renvoie `false` ici car les deux valeurs ne sont pas du même type.",
           "choices": [
@@ -758,8 +758,8 @@
           ]
         },
         {
-          "i": 22,
-          "id": "qcm22",
+          "i": 30,
+          "id": "qcm30",
           "md": "En respectant les conventions indiquées en cours, quelle affectation faut-il exécuter pour que `J'ai tout compris !` s'affiche à l'écran ?\n\n```\nalert(message);\n```\n\n\n",
           "mdSolution": "\n\nRéponse: `'J\\'ai tout compris !'` car nous utilisons des apostrophes autour des chaînes de caractères, et antislash pour afficher des apostrophes à l'intérieur de chaînes de caractères.",
           "choices": [
@@ -782,8 +782,8 @@
           ]
         },
         {
-          "i": 23,
-          "id": "qcm23",
+          "i": 31,
+          "id": "qcm31",
           "md": "Quelles sections vont être exécutées, si on exécute le code suivant ?\n\n```\nvar nb = 2;\nif (nb === 2) {\n  // A\n} else if (nb > 1) {\n  // B\n} else {\n  // C\n}\n```\n\n\n",
           "mdSolution": "\n\nRéponse: seulement A, car les trois blocs conditionnels (`if {}`, `else if {}` et `else {}`) sont liés par des `else`. Donc seule la première alternative dont l'expression conditionnelle est vérifiée sera exécutée.",
           "choices": [
@@ -807,12 +807,12 @@
         }
       ],
       "solutions": {
-        "qcm18": 2,
-        "qcm19": 2,
-        "qcm20": 1,
-        "qcm21": 2,
-        "qcm22": 3,
-        "qcm23": 1
+        "qcm26": 2,
+        "qcm27": 2,
+        "qcm28": 1,
+        "qcm29": 2,
+        "qcm30": 3,
+        "qcm31": 1
       }
     },
     {
@@ -822,8 +822,8 @@
       "title": "Controle 1 - Code",
       "questions": [
         {
-          "i": 9,
-          "id": "code9",
+          "i": 32,
+          "id": "code32",
           "variants": [
             {
               "n": 1,
@@ -876,8 +876,8 @@
       "title": "Entrainement vacances fin d'année - Code",
       "questions": [
         {
-          "i": 10,
-          "id": "code10",
+          "i": 33,
+          "id": "code33",
           "variants": [
             {}
           ],
@@ -893,8 +893,8 @@
           "mdSolution": "\n\nSolution:\n```js\nfunction somme(a, b, c) {\n  return a + b + c;\n}\n```\n"
         },
         {
-          "i": 11,
-          "id": "code11",
+          "i": 34,
+          "id": "code34",
           "variants": [
             {}
           ],
@@ -910,8 +910,8 @@
           "mdSolution": "\n\nSolution:\n```js\nfunction sommeIntervalle(premier, dernier) {\n  var somme = 0;\n  for (var i = premier; i <= dernier; i++) {\n    somme = somme + i;\n  }\n  return somme;\n}\n```\n"
         },
         {
-          "i": 12,
-          "id": "code12",
+          "i": 35,
+          "id": "code35",
           "variants": [
             {}
           ],
