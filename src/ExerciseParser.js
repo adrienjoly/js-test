@@ -1,6 +1,4 @@
-// This class transforms de quizz.template.md file into a JSON definition for the web client
-// and a solutions file (for evaluation of students' answers).
-// It is also used by evaluate.js for parsing and transforming code.template.md files.
+// This class parses and transforms template.md files into JSON.
 
 // helpers
 
@@ -42,8 +40,6 @@ function renderQuestion(lines, index) {
   var mdTextParts = mdText.join('\n').split(PARTS_SEPARATOR);
   // 3) output:
   return {
-    i: index + 1,
-    id: 'qcm' + (index + 1),
     md: mdTextParts[0],
     mdSolution: mdTextParts[1], // TODO: store solution in a separate file (like for code exercises)
     choices: choices.map(renderOption)
@@ -52,11 +48,11 @@ function renderQuestion(lines, index) {
 
 // class
 
-function QuizzRenderer() {
+function ExerciseParser() {
   this.questionLines = [];
 }
 
-QuizzRenderer.prototype.readFromFile = function (filepath) {
+ExerciseParser.prototype.readFromFile = function (filepath) {
   this.questionLines = require('fs').readFileSync(filepath).toString()
     .split('---')
     .map(getTrimmedLines)
@@ -64,18 +60,16 @@ QuizzRenderer.prototype.readFromFile = function (filepath) {
   return this;
 };
 
-QuizzRenderer.prototype.renderJsonQuestions = function () {
+ExerciseParser.prototype.renderJsonQuestions = function () {
   return this.questionLines.map(renderQuestion);
 };
 
-QuizzRenderer.prototype.getSolutions = function () {
-  var solutions = {};
-  this.questionLines.forEach(function(lines, index){
-    solutions['qcm' + (index + 1)] = lines.filter(isChoice).map(getFirstChar).join('').indexOf('*') + 1;
+ExerciseParser.prototype.getSolutions = function () {
+  return this.questionLines.map(function(lines){
+    return lines.filter(isChoice).map(getFirstChar).join('').indexOf('*') + 1;
   });
-  return solutions;
 };
 
 // exports
 
-module.exports = QuizzRenderer;
+module.exports = ExerciseParser;
