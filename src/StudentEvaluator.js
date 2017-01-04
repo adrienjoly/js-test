@@ -1,5 +1,8 @@
 var fs = require('fs');
 var util = require('util');
+var async = require('async');
+var QuizzConverter = require('./QuizzConverter');
+var QuizzEnumerator = require('./QuizzEnumerator');
 var QuizzEvaluator = require('./QuizzEvaluator.js');
 var CodeEvaluator = require('./CodeEvaluator.js');
 
@@ -8,11 +11,6 @@ var PATH_SOURCE = './exam-data/';
 // outputs
 
 var SCORES_FILE = PATH_SOURCE + 'scores.csv';
-
-// inputs
-
-var SOLUTIONS_FILE = PATH_SOURCE + 'ex.1.quizz.solutions.json';
-var TESTS_FILE = PATH_SOURCE + 'ex.2.code.tests.json';
 
 // helpers
 
@@ -32,10 +30,46 @@ function setConsolePrefix(prefix) {
   }
 }
 
-// evaluation logic
+// init: generate evaluators from exercise definition files
 
-var quizzEvaluator = new QuizzEvaluator().readSolutionsFromFile(SOLUTIONS_FILE);
-var codeEvaluator = new CodeEvaluator().readTestsFromFile(TESTS_FILE);
+var converters = {
+
+  code: function(exerciseData, exNumber) {
+    var rendered = QuizzConverter.renderCodeExercise(exerciseData, exNumber);
+    var evaluator = new CodeEvaluator(rendered.evalTests);
+    return function (studentAnswers, callback) {
+      console.log('\n  -  code evaluation:');
+      setConsolePrefix('  | ');
+      evaluator.evaluateAnswers(studentAnswers, function(err, res) {
+        setConsolePrefix();
+        console.log('\n  => code score:', res.score, '/', res.length, 'pts');
+        callback(err, res);
+      });
+    };
+  },
+
+  quizz: function(exerciseData, exNumber) {
+    var rendered = QuizzConverter.renderQuizzExercise(exerciseData, exNumber);
+    var evaluator = new QuizzEvaluator(rendered.solutions);
+    return function (studentAnswers, callback) {
+      console.log('\n  -  quizz answers:');
+      setConsolePrefix('  | ');
+      var res = evaluator.evaluateAnswers(studentAnswers);
+      res.log.map(function(q){
+        console.log(q.questionId, ':', q.answer, '(solution: ' + q.solution + ') =>', q.points, 'pts');
+      });
+      setConsolePrefix();
+      console.log('\n  => quizz score:', res.score, '/', res.length, 'pts');
+      callback(null, res);
+    };
+  },
+};
+
+var evaluators = QuizzEnumerator.parseAllFrom(PATH_SOURCE).map(function(exData) {
+  return converters[exData._type](exData, exData.i);
+});
+
+// evaluation logic
 
 function evaluateStudent(student, next) {
   var totalScore = 0;
@@ -43,29 +77,22 @@ function evaluateStudent(student, next) {
   console.log('\n\n================================\n')
   console.log('STUDENT:', student.key/*, '(' + student._uid + ')', '...'*/);
 
-  var res = quizzEvaluator.evaluateAnswers(student);
-  console.log('\n  -  quizz answers:');
-  setConsolePrefix('  | ');
-  res.log.map(function(q){
-    console.log(q.questionId, ':', q.answer, '(solution: ' + q.solution + ') =>', q.points, 'pts');
-  });
-  setConsolePrefix();
-  totalScore += res.score;
-  totalPoints += res.length;
-  console.log('\n  => quizz score:', res.score, '/', res.length, 'pts');
-
-  console.log('\n  -  code evaluation:');
-  setConsolePrefix('  | ');
-  codeEvaluator.evaluateAnswers(student, function(err, res){
-    totalScore += res.score;
-    totalPoints += res.length;
-    setConsolePrefix();
-    console.log('\n  => code score:', res.score, '/', res.length, 'pts');
+  function whenDone() {
     console.log();
     console.log('=> TOTAL STUDENT SCORE:', totalScore, '/', totalPoints);
     var csv = [ student.key, totalScore ];
     fs.appendFile(SCORES_FILE, csv.toString() + '\n', next);
-  });
+  }
+
+  function evaluateExercise(evaluator, callback) {
+    evaluator(student, function(err, res){
+      totalScore += res.score;
+      totalPoints += res.length;
+      callback(err, res);
+    });
+  }
+
+  async.mapSeries(evaluators, evaluateExercise, whenDone);
 }
 
 // exports
