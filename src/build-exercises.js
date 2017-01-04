@@ -1,10 +1,11 @@
-// This scripts generates ./public/scripts/exercices.js based on ./*.md files
+// This scripts generates ./public/scripts/exam-data.js (for the web client)
+// based on ./exam-data/*.md definition files and exam-config.js.
 
 var fs = require('fs');
 var ExerciseConverter = require('./ExerciseConverter');
 var ExerciseEnumerator = require('./ExerciseEnumerator');
 
-var GENERATE_SOLUTION_FILES = false;
+var GENERATE_SOLUTION_FILES = false; // if true, will generate a solution file for each .md file
 
 var PATH_SOURCE = './exam-data/';
 var OUTPUT_FILE = './public/scripts/exam-data.js';
@@ -40,7 +41,7 @@ var converters = {
     // generate data for exercise pack
     return {
       _info: exerciseData._info,
-      i: exNumber,
+      i: parseInt(exNumber),
       isCode: true,
       title: 'Exercices de codage',
       questions: rendered.questions,
@@ -56,7 +57,7 @@ var converters = {
     // generate data for exercise pack
     return {
       _info: exerciseData._info,
-      i: exNumber,
+      i: parseInt(exNumber),
       isQuizz: true,
       title: 'QCM',
       questions: rendered.questions,
