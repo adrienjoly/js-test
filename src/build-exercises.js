@@ -4,6 +4,8 @@ var fs = require('fs');
 var QuizzConverter = require('./QuizzConverter');
 var QuizzEnumerator = require('./QuizzEnumerator');
 
+var GENERATE_SOLUTION_FILES = false;
+
 var PATH_SOURCE = './exam-data/';
 var OUTPUT_FILE = './public/scripts/exam-data.js';
 
@@ -31,9 +33,10 @@ var converters = {
 
   code: function(exerciseData, exNumber) {
     var rendered = QuizzConverter.renderCodeExercise(exerciseData, exNumber);
-    // generate solution file, for evaluation of students' answers using QuizzEvaluator.js
-    var solFile = PATH_SOURCE + 'ex.' + exNumber + '.code.tests.json';
-    fs.writeFileSync(solFile, JSON.stringify(rendered.evalTests, null, 2));
+    if (GENERATE_SOLUTION_FILES) {
+      var solFile = PATH_SOURCE + 'ex.' + exNumber + '.code.tests.json';
+      fs.writeFileSync(solFile, JSON.stringify(rendered.evalTests, null, 2));
+    }
     // generate data for exercise pack
     return {
       _info: exerciseData._info,
@@ -46,9 +49,10 @@ var converters = {
 
   quizz: function(exerciseData, exNumber) {
     var rendered = QuizzConverter.renderQuizzExercise(exerciseData, exNumber);
-    // generate solution file, for evaluation of students' answers using QuizzEvaluator.js
-    var solFile = PATH_SOURCE + 'ex.' + exNumber + '.quizz.solutions.json';
-    fs.writeFileSync(solFile, JSON.stringify(rendered.solutions, null, 2));
+    if (GENERATE_SOLUTION_FILES) {
+      var solFile = PATH_SOURCE + 'ex.' + exNumber + '.quizz.solutions.json';
+      fs.writeFileSync(solFile, JSON.stringify(rendered.solutions, null, 2));
+    }
     // generate data for exercise pack
     return {
       _info: exerciseData._info,
