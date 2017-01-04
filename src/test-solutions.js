@@ -13,8 +13,8 @@ var PATH_SOURCE = './exam-data/';
 var converter = new ExerciseConverter();
 
 var converters = {
-  code: converter.renderCodeExercise,
-  quizz: converter.renderQuizzExercise,
+  code: converter.renderCodeExercise.bind(converter),
+  quizz: converter.renderQuizzExercise.bind(converter),
 };
 
 var exercises = ExerciseEnumerator.parseAllFrom(PATH_SOURCE).map(function(exData) {
