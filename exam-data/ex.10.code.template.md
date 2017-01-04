@@ -1,5 +1,3 @@
----
-
 Implémenter un chat-bot à partir de l'arbre de décision suivant:
 
 ![arbre de décision](data/arbre{{n}}.jpg)
@@ -14,23 +12,24 @@ Vous serez noté(e) sur:
  - le respect des règles d'indentation et autres conventions vues en cours. (ex: 2 espaces par niveau d'indentation)
  - le bon fonctionnement de votre code, sans erreurs, depuis la console JavaScript de Google Chrome, pour chacun des cas illustrés dans l'arbre de décision.
 
-- { "n": 1, "prompts": "gris,foncé", "expected": "ah bon?" }
-- { "n": 2, "prompts": "gris,foncé", "expected": "c'est bien!" }
-- { "n": 3, "prompts": "bleu,foncé", "expected": "OK" }
+- { "n": 1, "p0": "bleu", "e0": "OK", "prompt1": "gris", "prompt2": "foncé", "expected": "ah bon?" }
+- { "n": 2, "p0": "bleu", "e0": "OK", "prompt1": "gris", "prompt2": "foncé", "expected": "c'est bien!" }
+- { "n": 3, "p0": "rouge", "e0": "bien!", "prompt1": "bleu", "prompt2": "foncé", "expected": "OK" }
 
 ???
 
 Solution:
+
 ```js
 var reponse = prompt('Ta couleur préférée ?');
-if (reponse === 'bleu') {
-  alert('OK');
-} else if (reponse === 'gris') {
+if (reponse === '{{p0}}') {
+  alert('{{e0}}');
+} else if (reponse === '{{prompt1}}') {
   var reponse2 = prompt('clair ou foncé ?');
   if (reponse2 === 'clair') {
     alert('comme le ciel');
-  } else if (reponse2 === 'foncé') {
-    alert('c\'est bien!');
+  } else if (reponse2 === '{{prompt2}}') {
+    alert('{{expected}}');
   } 
 } else {
   alert('je connais pas');
@@ -44,7 +43,7 @@ if (reponse === 'bleu') {
   var done = application.remote._sendOnce; // to call upon code evaluation
   // student's variant -> test inputs and expected outputs
   var variant = {
-    prompts: '{{prompts}}'.split(','),
+    prompts: [ '{{prompt1}}', '{{prompt2}}' ],
     expected: '{{expected}}',
   };
   // exercise requirements
