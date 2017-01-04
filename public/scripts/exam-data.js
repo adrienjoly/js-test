@@ -6,7 +6,7 @@
     "PUBLIC_TEST_MODE": false,
     "DISPLAY_SOLUTIONS_AFTER_SUBMIT": true,
     "backend": {
-      "type": "realtime-eval"
+      "type": "auto-eval"
     },
     "title": "JavaScript Révisions",
     "GOOGLE_CLIENT_ID": "247219641427-ifeq88p7rgor9al5ksduds7ug0ba7djr.apps.googleusercontent.com",

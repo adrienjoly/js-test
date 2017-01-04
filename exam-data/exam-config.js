@@ -6,7 +6,7 @@ module.exports = {
 
   // Back-end config
   backend: {
-    type: 'realtime-eval',
+    type: 'auto-eval',
     /*
     type: 'firebase',
     FIREBASE_CONFIG: {
