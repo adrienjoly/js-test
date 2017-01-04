@@ -32,7 +32,7 @@ ExerciseConverter.prototype.renderCodeExercise = function renderCodeExercise(exe
       exSolution = parts.pop();
     }
     _this.codeExNumber++;
-  var id = 'code' + _this.codeExNumber;
+    var id = 'code' + _this.codeExNumber;
     var rawSolution = exSolution.split(/```.*\n/g)[1];
     solutions[id] = variants.map(renderVariant.bind(rawSolution)); // render one solution per variant
     var exerciseData = {
