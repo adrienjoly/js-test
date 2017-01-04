@@ -99,6 +99,136 @@
           "mdSolution": "\n\nSolution:\n```js\nfunction tableauContient(tableau, chaine) {\n  var indice = tableau.indexOf(chaine);\n  if (indice === -1) {\n    return false;\n  } else {\n    return indice;\n  }\n}\n```\n"
         }
       ]
+    },
+    {
+      "_info": "generated from ex.2.quizz.template.md",
+      "i": "2",
+      "isQuizz": true,
+      "title": "QCM",
+      "questions": [
+        {
+          "i": 1,
+          "id": "qcm1",
+          "md": "```js\nfunction bonjour() {\n  return 'bonjour !';\n}\nvar resultat = bonjour();\n```\n\nQu'est-ce que ce code ne contient PAS:\n",
+          "choices": [
+            {
+              "name": 1,
+              "text": "Affectation"
+            },
+            {
+              "name": 2,
+              "text": "Définition de fonction"
+            },
+            {
+              "name": 3,
+              "text": "Appel de fonction"
+            },
+            {
+              "name": 4,
+              "text": "Concaténation"
+            }
+          ]
+        },
+        {
+          "i": 2,
+          "id": "qcm2",
+          "md": "```js\nfor (var i = -1; i < 1; i++) {\n  console.log('bonjour');\n}\n```\n\nCombien de fois `'bonjour'` va-t-il être affiché dans la console ?\n",
+          "choices": [
+            {
+              "name": 1,
+              "text": "0 fois"
+            },
+            {
+              "name": 2,
+              "text": "1 fois"
+            },
+            {
+              "name": 3,
+              "text": "2 fois"
+            },
+            {
+              "name": 4,
+              "text": "3 fois"
+            }
+          ]
+        },
+        {
+          "i": 3,
+          "id": "qcm3",
+          "md": "```js\nif (a === 1) {\n  if (b === 1) {\n    // code sans importance\n  } else {\n    // code sans importance\n  }\n} else {\n  // code sans importance\n}\n```\n\nSi on voulait représenter ces conditions sous forme d'un arbre de décision, combien contiendrait-il de niveaux ?\n",
+          "choices": [
+            {
+              "name": 1,
+              "text": "1"
+            },
+            {
+              "name": 2,
+              "text": "2"
+            },
+            {
+              "name": 3,
+              "text": "3"
+            },
+            {
+              "name": 4,
+              "text": "4"
+            }
+          ]
+        },
+        {
+          "i": 4,
+          "id": "qcm4",
+          "md": "Supposons que nous ayons un tableau `fruits` ayant la valeur suivante:\n\n```js\n[ 'kiwi', 'prune', 'abricot', 'fraise' ]\n```\n\nQue se passe-t-il si on exécute l'instruction suivante:\n\n```js\nfruits[3] = 'litchi';\n```\n",
+          "choices": [
+            {
+              "name": 1,
+              "text": "\"litchi\" va être ajouté à la fin du tableau"
+            },
+            {
+              "name": 2,
+              "text": "\"litchi\" va remplacer l'abricot"
+            },
+            {
+              "name": 3,
+              "text": "\"litchi\" va remplacer la fraise"
+            },
+            {
+              "name": 4,
+              "text": "cette expression vaut false"
+            }
+          ]
+        },
+        {
+          "i": 5,
+          "id": "qcm5",
+          "md": "Supposons que nous ayons un tableau `fruits` ayant la valeur suivante:\n\n```js\n[ 'kiwi', 'prune', 'abricot', 'fraise' ]\n```\n\nQue se passe-t-il si on exécute l'instruction suivante:\n\n```js\nfruits.splice(1, 0, 'mûre');\n```\n",
+          "choices": [
+            {
+              "name": 1,
+              "text": "un élément \"mûre\" sera inséré entre kiwi et prune"
+            },
+            {
+              "name": 2,
+              "text": "un élément \"mûre\" sera inséré juste avant kiwi"
+            },
+            {
+              "name": 3,
+              "text": "le deuxième élément (prune) va être remplacé par \"mûre\""
+            },
+            {
+              "name": 4,
+              "text": "le tableau restera inchangé"
+            }
+          ]
+        }
+      ],
+      "solutions": {
+        "qcm1": 4,
+        "qcm2": 3,
+        "qcm3": 2,
+        "qcm4": 3,
+        "qcm5": 1
+      }
     }
   ];
 })(document);
