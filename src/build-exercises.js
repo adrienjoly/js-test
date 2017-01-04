@@ -30,10 +30,12 @@ function renderExercisesFile(exercises) {
 
 // converters
 
+var converter = new ExerciseConverter();
+
 var converters = {
 
   code: function(exerciseData, exNumber) {
-    var rendered = ExerciseConverter.renderCodeExercise(exerciseData, exNumber);
+    var rendered = converter.renderCodeExercise(exerciseData, exNumber);
     if (GENERATE_SOLUTION_FILES) {
       var solFile = PATH_SOURCE + 'ex.' + exNumber + '.code.tests.json';
       fs.writeFileSync(solFile, JSON.stringify(rendered.evalTests, null, 2));
@@ -49,7 +51,7 @@ var converters = {
   },
 
   quizz: function(exerciseData, exNumber) {
-    var rendered = ExerciseConverter.renderQuizzExercise(exerciseData, exNumber);
+    var rendered = converter.renderQuizzExercise(exerciseData, exNumber);
     if (GENERATE_SOLUTION_FILES) {
       var solFile = PATH_SOURCE + 'ex.' + exNumber + '.quizz.solutions.json';
       fs.writeFileSync(solFile, JSON.stringify(rendered.solutions, null, 2));

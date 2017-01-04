@@ -8,12 +8,14 @@ function renderVariant(variantData) {
   return template && mustache.render(template, variantData);
 }
 
-// global counters to prevent id collisions, if more than one template.md file per type is used
-var codeExNumber = 0; 
-var quizzExNumber = 0; 
+function ExerciseConverter() {
+  // global counters to prevent id collisions, if more than one template.md file per type is used
+  this.codeExNumber = 0; 
+  this.quizzExNumber = 0; 
+}
 
-function renderCodeExercise(exerciseData, exNumber) {
-
+ExerciseConverter.prototype.renderCodeExercise = function renderCodeExercise(exerciseData, exNumber) {
+  var _this = this;
   var evalTests = [];
   var solutions = {};
 
@@ -29,12 +31,12 @@ function renderCodeExercise(exerciseData, exNumber) {
       exEval = exEval.replace(/```js\n*/g, '').replace(/```\n*/g, '');
       exSolution = parts.pop();
     }
-    codeExNumber++;
-    var id = 'code' + codeExNumber;
+    _this.codeExNumber++;
+  var id = 'code' + _this.codeExNumber;
     var rawSolution = exSolution.split(/```.*\n/g)[1];
     solutions[id] = variants.map(renderVariant.bind(rawSolution)); // render one solution per variant
     var exerciseData = {
-      i: codeExNumber,
+      i: _this.codeExNumber,
       id: id,
       variants: variants,
       testVariants: variants.map(renderVariant.bind(exEval))
@@ -53,25 +55,25 @@ function renderCodeExercise(exerciseData, exNumber) {
     solutions: solutions,
     evalTests: evalTests,
   };
-}
+};
 
-function renderQuizzExercise(exerciseData, exNumber) {
+ExerciseConverter.prototype.renderQuizzExercise = function renderQuizzExercise(exerciseData, exNumber) {
+  var _this = this;
   var solutionSet = {};
   var solutions = exerciseData.getSolutions();
   return {
     questions: exerciseData.renderJsonQuestions().map(function(question, i) {
-      quizzExNumber++;
-      solutionSet['qcm' + quizzExNumber] = solutions[i];
+      _this.quizzExNumber++;
+      var id = 'qcm' + _this.quizzExNumber;
+      solutionSet[id] = solutions[i];
       return Object.assign({
-        i: quizzExNumber,
-        id: 'qcm' + quizzExNumber,
+        i: _this.quizzExNumber,
+        id: id,
       }, question);
     }),
     solutions: solutionSet,
   };
-}
-
-module.exports = {
-  renderCodeExercise: renderCodeExercise,
-  renderQuizzExercise: renderQuizzExercise,
 };
+
+
+module.exports = ExerciseConverter;
