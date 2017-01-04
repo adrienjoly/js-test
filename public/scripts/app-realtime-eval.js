@@ -90,8 +90,22 @@
     app.myAnswers[id] = value;
     console.log(app.myAnswers);
     app._toggleLoadingSpinner(id, true);
-    computeStudentScores(app.myAnswers, function(err, res){
-      console.log('=>', err || res);
+    var answers = app.myAnswers; // TODO: only evaluated modified answers
+    computeStudentScores(answers, function(err, res){
+      console.log('computeStudentScores =>', err || res);
+      var upd = {
+        _maxScore: res.map(pickProp('length')).reduce(sum),
+        _score: res.map(pickProp('score')).reduce(sum), // sum of quizz and code scores
+      };
+      // compute each exercise points, for display
+      res.forEach(function(exResult, i) {
+        var points = exResult.log.map(pickProp('points'));
+        app.exercises[i].questions.forEach(function(q, i) {
+          upd[q.id + '_points'] = points.shift();
+        });
+      });
+      // update display
+      app.myAnswers = Object.assign({}, app.myAnswers, upd);
       app._toggleLoadingSpinner(id, false);
     });
   }
@@ -112,26 +126,9 @@
 
   // when user presses exam submit button
   app.onSubmitExam = function(evt) {
-    app._toggleButton(document.getElementById('submitConfirmation'), false);
-    computeStudentScores(app.myAnswers, function(err, res){
-      console.log('computeStudentScores =>', err || res);
-      var upd = {
-        _submitted: true, // display expected solutions
-        _maxScore: res.map(pickProp('length')).reduce(sum),
-        _score: res.map(pickProp('score')).reduce(sum), // sum of quizz and code scores
-      };
-      // compute each exercise points, for display
-      res.forEach(function(exResult, i) {
-        var points = exResult.log.map(pickProp('points'));
-        app.exercises[i].questions.forEach(function(q, i) {
-          upd[q.id + '_points'] = points.shift();
-        });
-      });
-      // update display
-      app.myAnswers = Object.assign({}, app.myAnswers, upd);
-      app._toggleButton(document.getElementById('submitConfirmation'), true);
-      app.scrollPageToTop();
-    });
+    // display solutions, total score, and hide submit button
+    app.myAnswers = Object.assign({ _submitted: true }, app.myAnswers);
+    app.scrollPageToTop();
   };
 
   // load dependencies for code evaluation
