@@ -24,7 +24,7 @@
   app.exercises = [
     {
       "_info": "generated from ex.01.quizz.template.md",
-      "i": "01",
+      "i": 1,
       "isQuizz": true,
       "title": "QCM",
       "questions": [
@@ -209,7 +209,7 @@
     },
     {
       "_info": "generated from ex.02.quizz.template.md",
-      "i": "02",
+      "i": 2,
       "isQuizz": true,
       "title": "QCM",
       "questions": [
@@ -319,7 +319,7 @@
     },
     {
       "_info": "generated from ex.03.code.template.md",
-      "i": "03",
+      "i": 3,
       "isCode": true,
       "title": "Exercices de codage",
       "questions": [
@@ -344,7 +344,7 @@
     },
     {
       "_info": "generated from ex.04.quizz.template.md",
-      "i": "04",
+      "i": 4,
       "isQuizz": true,
       "title": "QCM",
       "questions": [
@@ -404,7 +404,7 @@
     },
     {
       "_info": "generated from ex.05.code.template.md",
-      "i": "05",
+      "i": 5,
       "isCode": true,
       "title": "Exercices de codage",
       "questions": [
@@ -429,7 +429,7 @@
     },
     {
       "_info": "generated from ex.06.quizz.template.md",
-      "i": "06",
+      "i": 6,
       "isQuizz": true,
       "title": "QCM",
       "questions": [
@@ -539,7 +539,7 @@
     },
     {
       "_info": "generated from ex.07.code.template.md",
-      "i": "07",
+      "i": 7,
       "isCode": true,
       "title": "Exercices de codage",
       "questions": [
@@ -581,7 +581,7 @@
     },
     {
       "_info": "generated from ex.08.code.template.md",
-      "i": "08",
+      "i": 8,
       "isCode": true,
       "title": "Exercices de codage",
       "questions": [
@@ -657,7 +657,7 @@
     },
     {
       "_info": "generated from ex.09.quizz.template.md",
-      "i": "09",
+      "i": 9,
       "isQuizz": true,
       "title": "QCM",
       "questions": [
@@ -811,7 +811,7 @@
     },
     {
       "_info": "generated from ex.10.code.template.md",
-      "i": "10",
+      "i": 10,
       "isCode": true,
       "title": "Exercices de codage",
       "questions": [
@@ -856,7 +856,7 @@
     },
     {
       "_info": "generated from ex.11.code.template.md",
-      "i": "11",
+      "i": 11,
       "isCode": true,
       "title": "Exercices de codage",
       "questions": [
