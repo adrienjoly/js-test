@@ -2,7 +2,7 @@
 
 var fs = require('fs');
 var ExerciseConverter = require('./ExerciseConverter');
-var QuizzEnumerator = require('./QuizzEnumerator');
+var ExerciseEnumerator = require('./ExerciseEnumerator');
 
 var GENERATE_SOLUTION_FILES = false;
 
@@ -67,7 +67,7 @@ var converters = {
 
 // actual script
 
-var exercises = QuizzEnumerator.parseAllFrom(PATH_SOURCE).map(function(exData) {
+var exercises = ExerciseEnumerator.parseAllFrom(PATH_SOURCE).map(function(exData) {
   return converters[exData._type](exData, exData.i);
 });
 

@@ -2,7 +2,7 @@ var fs = require('fs');
 var util = require('util');
 var async = require('async');
 var ExerciseConverter = require('./ExerciseConverter');
-var QuizzEnumerator = require('./QuizzEnumerator');
+var ExerciseEnumerator = require('./ExerciseEnumerator');
 var QuizzEvaluator = require('./QuizzEvaluator.js');
 var CodeEvaluator = require('./CodeEvaluator.js');
 
@@ -65,7 +65,7 @@ var converters = {
   },
 };
 
-var evaluators = QuizzEnumerator.parseAllFrom(PATH_SOURCE).map(function(exData) {
+var evaluators = ExerciseEnumerator.parseAllFrom(PATH_SOURCE).map(function(exData) {
   return converters[exData._type](exData, exData.i);
 });
 
