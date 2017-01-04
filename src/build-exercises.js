@@ -45,7 +45,7 @@ var converters = {
       _info: exerciseData._info,
       i: parseInt(exNumber),
       isCode: true,
-      title: 'Exercices de codage',
+      title: exerciseData.title || 'Exercices de codage',
       questions: rendered.questions,
     };
   },
@@ -61,7 +61,7 @@ var converters = {
       _info: exerciseData._info,
       i: parseInt(exNumber),
       isQuizz: true,
-      title: 'QCM',
+      title: exerciseData.title || 'QCM',
       questions: rendered.questions,
       solutions: rendered.solutions
     };
