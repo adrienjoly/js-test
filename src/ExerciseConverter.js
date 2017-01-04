@@ -44,7 +44,7 @@ ExerciseConverter.prototype.renderCodeExercise = function renderCodeExercise(exe
     return Object.assign({}, exerciseData, {
       mdVariants: variants.map(renderVariant.bind(exText)),
       mdSolutions: variants.map(renderVariant.bind(exSolution)),
-      mdSolution: exSolution // deprecated => use mdSolutions instead (one per variant)
+      //mdSolution: exSolution // deprecated => use mdSolutions instead (one per variant)
     });
     // TODO: obfuscate solution and tests on client-side
   });
