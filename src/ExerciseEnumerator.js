@@ -1,7 +1,5 @@
 // finds all (markdown) exercise definition files and parse them into an array
 
-// TODO: rename to ExerciseEnumerator.js
-
 var fs = require('fs');
 var _ = require('lodash');
 var ExerciseParser = require('./ExerciseParser');
