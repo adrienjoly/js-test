@@ -1,7 +1,5 @@
 // parses and renders a markdown exercise definition
 
-// TODO: rename to ExerciseConverter.js
-
 var _ = require('lodash');
 var mustache = require('mustache');
 

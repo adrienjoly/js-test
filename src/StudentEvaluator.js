@@ -1,7 +1,7 @@
 var fs = require('fs');
 var util = require('util');
 var async = require('async');
-var QuizzConverter = require('./QuizzConverter');
+var ExerciseConverter = require('./ExerciseConverter');
 var QuizzEnumerator = require('./QuizzEnumerator');
 var QuizzEvaluator = require('./QuizzEvaluator.js');
 var CodeEvaluator = require('./CodeEvaluator.js');
@@ -35,7 +35,7 @@ function setConsolePrefix(prefix) {
 var converters = {
 
   code: function(exerciseData, exNumber) {
-    var rendered = QuizzConverter.renderCodeExercise(exerciseData, exNumber);
+    var rendered = ExerciseConverter.renderCodeExercise(exerciseData, exNumber);
     var evaluator = new CodeEvaluator(rendered.evalTests);
     return function (studentAnswers, callback) {
       console.log('\n  -  code evaluation:');
@@ -49,7 +49,7 @@ var converters = {
   },
 
   quizz: function(exerciseData, exNumber) {
-    var rendered = QuizzConverter.renderQuizzExercise(exerciseData, exNumber);
+    var rendered = ExerciseConverter.renderQuizzExercise(exerciseData, exNumber);
     var evaluator = new QuizzEvaluator(rendered.solutions);
     return function (studentAnswers, callback) {
       console.log('\n  -  quizz answers:');

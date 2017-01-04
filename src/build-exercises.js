@@ -1,7 +1,7 @@
 // This scripts generates ./public/scripts/exercices.js based on ./*.md files
 
 var fs = require('fs');
-var QuizzConverter = require('./QuizzConverter');
+var ExerciseConverter = require('./ExerciseConverter');
 var QuizzEnumerator = require('./QuizzEnumerator');
 
 var GENERATE_SOLUTION_FILES = false;
@@ -32,7 +32,7 @@ function renderExercisesFile(exercises) {
 var converters = {
 
   code: function(exerciseData, exNumber) {
-    var rendered = QuizzConverter.renderCodeExercise(exerciseData, exNumber);
+    var rendered = ExerciseConverter.renderCodeExercise(exerciseData, exNumber);
     if (GENERATE_SOLUTION_FILES) {
       var solFile = PATH_SOURCE + 'ex.' + exNumber + '.code.tests.json';
       fs.writeFileSync(solFile, JSON.stringify(rendered.evalTests, null, 2));
@@ -48,7 +48,7 @@ var converters = {
   },
 
   quizz: function(exerciseData, exNumber) {
-    var rendered = QuizzConverter.renderQuizzExercise(exerciseData, exNumber);
+    var rendered = ExerciseConverter.renderQuizzExercise(exerciseData, exNumber);
     if (GENERATE_SOLUTION_FILES) {
       var solFile = PATH_SOURCE + 'ex.' + exNumber + '.quizz.solutions.json';
       fs.writeFileSync(solFile, JSON.stringify(rendered.solutions, null, 2));

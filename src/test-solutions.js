@@ -2,7 +2,7 @@
 
 var _ = require('lodash');
 var async = require('async');
-var QuizzConverter = require('./QuizzConverter');
+var ExerciseConverter = require('./ExerciseConverter');
 var QuizzEnumerator = require('./QuizzEnumerator');
 var evaluateStudent = require('./StudentEvaluator');
 
@@ -11,8 +11,8 @@ var PATH_SOURCE = './exam-data/';
 // 1) render solutions from exercise definition files
 
 var converters = {
-  code: QuizzConverter.renderCodeExercise,
-  quizz: QuizzConverter.renderQuizzExercise,
+  code: ExerciseConverter.renderCodeExercise,
+  quizz: ExerciseConverter.renderQuizzExercise,
 };
 
 var exercises = QuizzEnumerator.parseAllFrom(PATH_SOURCE).map(function(exData) {
