@@ -1,5 +1,7 @@
 // parses and renders a markdown exercise definition
 
+// TODO: rename to ExerciseConverter.js
+
 var _ = require('lodash');
 var mustache = require('mustache');
 
@@ -7,6 +9,10 @@ function renderVariant(variantData) {
   var template = this.toString();
   return template && mustache.render(template, variantData);
 }
+
+// global counters to prevent id collisions, if more than one template.md file per type is used
+var codeExNumber = 0; 
+var quizzExNumber = 0; 
 
 function renderCodeExercise(exerciseData, exNumber) {
 
@@ -25,11 +31,12 @@ function renderCodeExercise(exerciseData, exNumber) {
       exEval = exEval.replace(/```js\n*/g, '').replace(/```\n*/g, '');
       exSolution = parts.pop();
     }
-    var id = 'code' + (q + 1); // TODO: allow each question to override this id
+    codeExNumber++;
+    var id = 'code' + codeExNumber;
     var rawSolution = exSolution.split(/```.*\n/g)[1];
     solutions[id] = variants.map(renderVariant.bind(rawSolution)); // render one solution per variant
     var exerciseData = {
-      i: q + 1, // TODO: prevent id collisions if more than one code.template.md file is used
+      i: codeExNumber,
       id: id,
       variants: variants,
       testVariants: variants.map(renderVariant.bind(exEval))
@@ -51,9 +58,18 @@ function renderCodeExercise(exerciseData, exNumber) {
 }
 
 function renderQuizzExercise(exerciseData, exNumber) {
+  var solutionSet = {};
+  var solutions = exerciseData.getSolutions();
   return {
-    questions: exerciseData.renderJsonQuestions(),
-    solutions: exerciseData.getSolutions(),
+    questions: exerciseData.renderJsonQuestions().map(function(question, i) {
+      quizzExNumber++;
+      solutionSet['qcm' + quizzExNumber] = solutions[i];
+      return Object.assign({
+        i: quizzExNumber,
+        id: 'qcm' + quizzExNumber,
+      }, question);
+    }),
+    solutions: solutionSet,
   };
 }
 

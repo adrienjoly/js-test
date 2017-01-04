@@ -8,9 +8,7 @@
     "backend": {
       "type": "realtime-eval"
     },
-    "title": "JavaScript QCM 5",
-    "teacherEmail": "adrien.joly@eemi.com",
-    "emailSubject": "JS EXAM DATA",
+    "title": "JavaScript Révisions",
     "GOOGLE_CLIENT_ID": "247219641427-ifeq88p7rgor9al5ksduds7ug0ba7djr.apps.googleusercontent.com",
     "GOOGLE_CLIENT_DOMAIN": "eemi.com",
     "LOGIN_INVITE": "Se connecter à son compte EEMI:",
@@ -216,8 +214,8 @@
       "title": "QCM",
       "questions": [
         {
-          "i": 1,
-          "id": "qcm1",
+          "i": 8,
+          "id": "qcm8",
           "md": "# TP 2\n\nQuel section va être exécutée, si on exécute le code suivant ?\n\n```\nvar nb = 2;\nif (nb === 1) {\n  // A\n} else {\n  // B\n}\n```\n\n\n",
           "mdSolution": "\n\nRéponse: B, car l'expression d'égalité `nb === 1` de la premiere condition est fausse,\ndonc ce sont les intructions rattachées à l'alternative par défaut (`else`) qui sont exécutées.",
           "choices": [
@@ -240,8 +238,8 @@
           ]
         },
         {
-          "i": 2,
-          "id": "qcm2",
+          "i": 9,
+          "id": "qcm9",
           "md": "Quel section de va être exécutée, si on exécute le code suivant ?\n\n```\nvar nb = 2;\nif (nb === 2) {\n  // A\n} else if (nb > 1) {\n  // B\n} else {\n  // C\n}\n```\n\n\n",
           "mdSolution": "\n\nRéponse: A. Une seule des trois alternatives peut s'exécuter, car elles sont liées par des `else`.\nSachant que les conditions sont évaluées de haut en bas, et que la première expression est vraie,\nc'est donc la section A qui va s'exécuter.",
           "choices": [
@@ -264,8 +262,8 @@
           ]
         },
         {
-          "i": 3,
-          "id": "qcm3",
+          "i": 10,
+          "id": "qcm10",
           "md": "À quoi ressemblerait l'arbre de décision correspondant à ce code:\n\n```\nvar reponse = prompt('as-tu faim ?')\nif (reponse === 'oui') {\n  var reponse2 = prompt('aimes-tu les burgers ?');\n  if (reponse2 === 'oui') {\n    alert('alors je t\\'en offre un !');\n  } else {\n    alert('dommage !');\n  }\n} else {\n  alert('désolé');\n}\n```\n\n\n",
           "mdSolution": "\n\nRéponse: Une première boîte (niveau 1) représente la question `as-tu faim ?`, et a deux branches: `oui` et *autre*.\nLiée à la première branche, une deuxième boîte (niveau 2) représente la question `aimes-tu les burgers ?`, et\na elle-aussi deux branches: `oui` et *autre*.",
           "choices": [
@@ -288,8 +286,8 @@
           ]
         },
         {
-          "i": 4,
-          "id": "qcm4",
+          "i": 11,
+          "id": "qcm11",
           "md": "Pourquoi faut-il éviter d'utiliser les opérateurs `==` et `!=` ?\n\n\n",
           "mdSolution": "\n\nRéponse: Ils sont trop laxistes, dans le sens où deux valeurs de types différents (ex: `1` et `'1'`) peuvent\nêtre vus comme égaux par l'opérateur `==`. Cet excès de tolérance peut occasionner des comportements imprévus\nqui font perdre beaucoup de temps à diagnostiquer et à corriger. Idem pour `!=`.",
           "choices": [
@@ -313,10 +311,10 @@
         }
       ],
       "solutions": {
-        "qcm1": 2,
-        "qcm2": 1,
-        "qcm3": 3,
-        "qcm4": 3
+        "qcm8": 2,
+        "qcm9": 1,
+        "qcm10": 3,
+        "qcm11": 3
       }
     },
     {
@@ -351,8 +349,8 @@
       "title": "QCM",
       "questions": [
         {
-          "i": 1,
-          "id": "qcm1",
+          "i": 12,
+          "id": "qcm12",
           "md": "# TP 3\n\nCombien de fois les instructions vont-elles être exécutées ?\n\n```js\nfor ( var i = 0; i < 4; i++ ) {\n  // instructions\n}\n```\n\n\n",
           "mdSolution": "\n\nLes instructions vont être exécutées pour chaque valeur de `i` entre `0` et `4` (non compris), soit 0, 1, 2, puis 3.\n\nCe qui fait 4 itérations.",
           "choices": [
@@ -375,8 +373,8 @@
           ]
         },
         {
-          "i": 2,
-          "id": "qcm2",
+          "i": 13,
+          "id": "qcm13",
           "md": "Combien de fois les instructions vont-elles être exécutées ?\n\n```js\nfor ( var i = 3; i >= 1; i-- ) {\n  // instructions\n}\n```\n\n\n",
           "mdSolution": "\n\nLes instructions vont être exécutées pour chaque valeur de `i` entre `3` et `1` (compris), soit 3, 2, puis 1.\n\nCe qui fait 3 itérations.",
           "choices": [
@@ -400,8 +398,8 @@
         }
       ],
       "solutions": {
-        "qcm1": 4,
-        "qcm2": 3
+        "qcm12": 4,
+        "qcm13": 3
       }
     },
     {
@@ -411,8 +409,8 @@
       "title": "Exercices de codage",
       "questions": [
         {
-          "i": 1,
-          "id": "code1",
+          "i": 2,
+          "id": "code2",
           "variants": [
             {}
           ],
@@ -436,8 +434,8 @@
       "title": "QCM",
       "questions": [
         {
-          "i": 1,
-          "id": "qcm1",
+          "i": 14,
+          "id": "qcm14",
           "md": "# TP 4\n\n```js\nfunction maFonction(param) {\n  return param + 2;\n}\n```\n\nCeci est:\n\n\n",
           "mdSolution": "\n\nC'est une définition de fonction.\n\nOn la reconnait à l'usage du mot clé `function` et des accolades entourant le code qui sera exécuté lorsque cette fonction sera appelée.",
           "choices": [
@@ -460,8 +458,8 @@
           ]
         },
         {
-          "i": 2,
-          "id": "qcm2",
+          "i": 15,
+          "id": "qcm15",
           "md": "```js\nmaFonction(4);\n```\n\nCeci est:\n\n\n",
           "mdSolution": "\n\nC'est un appel de fonction.\n\nUn appel de fonction = le nom de la fonction, suivi par les paramètres entre parenthèses. Sans le mot clé `function`.\n\nCette instruction va exécuter le code défini dans la fonction, et affecter les valeurs fournies à chaque paramètre.",
           "choices": [
@@ -484,8 +482,8 @@
           ]
         },
         {
-          "i": 3,
-          "id": "qcm3",
+          "i": 16,
+          "id": "qcm16",
           "md": "```\n// cette fonction concatène un zéro à la fin de la valeur passée en paramètre\nfunction maFonction(param) {\n  return param + '0';\n}\n```\n\nComment savoir si cette fonction fonctionne bien ? (c.a.d. sans bug)\n\n\n",
           "mdSolution": "\n\nPour vérifier le bon fonctionnement il faut définir et exécuter des tests unitaires.\n\nCeux-ci permettent de comparer le résultat attendu d'une fonction, à celui effectivement retourné par l'implémentation actuelle de cette fonction.\n\n`maFonction(1) === '10';` est un bon test unitaire car son exécution retourne `true` si la fonction retourne le résultat attendu (`10`) lorsqu'on lui passe `1` en paramètre.",
           "choices": [
@@ -508,8 +506,8 @@
           ]
         },
         {
-          "i": 4,
-          "id": "qcm4",
+          "i": 17,
+          "id": "qcm17",
           "md": "Supposons que nous avons défini une fonction `doubler()` qui retourne le double du nombre passé en paramètre, lors de son appel.\n\nQue se passe-t-il si on exécute l'instruction suivante:\n\n```js\nvar maVariable = doubler(3);\n```\n\n\n",
           "mdSolution": "\n\nIl s'agit ici d'un appel de fonction. De la même façon que pour une opération élémentaire (ex: `2 + 2`), tout appel de fonction sera remplacé par la valeur retourné par l'exécution de cette fonction.\n\nIci, le résultat de l'exécution de la fonction `doubler` avec le paramètre `3`, soit la valeur `6`, va être affectée à `maVariable`.",
           "choices": [
@@ -533,10 +531,10 @@
         }
       ],
       "solutions": {
-        "qcm1": 2,
-        "qcm2": 1,
-        "qcm3": 3,
-        "qcm4": 1
+        "qcm14": 2,
+        "qcm15": 1,
+        "qcm16": 3,
+        "qcm17": 1
       }
     },
     {
@@ -546,8 +544,8 @@
       "title": "Exercices de codage",
       "questions": [
         {
-          "i": 1,
-          "id": "code1",
+          "i": 3,
+          "id": "code3",
           "variants": [
             {}
           ],
@@ -563,8 +561,8 @@
           "mdSolution": "\n\nSolution:\n```js\nfunction soustraire(a, b) {\n  return a - b;\n}\n```\n"
         },
         {
-          "i": 2,
-          "id": "code2",
+          "i": 4,
+          "id": "code4",
           "variants": [
             {}
           ],
@@ -588,8 +586,8 @@
       "title": "Exercices de codage",
       "questions": [
         {
-          "i": 1,
-          "id": "code1",
+          "i": 5,
+          "id": "code5",
           "variants": [
             {}
           ],
@@ -605,8 +603,8 @@
           "mdSolution": "\n\nSolution:\n```js\nvar nombres = [1, 2, 3];\n```\n"
         },
         {
-          "i": 2,
-          "id": "code2",
+          "i": 6,
+          "id": "code6",
           "variants": [
             {}
           ],
@@ -622,8 +620,8 @@
           "mdSolution": "\n\nSolution:\n```js\nvar troisieme = fruits[2];\n```\n"
         },
         {
-          "i": 3,
-          "id": "code3",
+          "i": 7,
+          "id": "code7",
           "variants": [
             {}
           ],
@@ -639,8 +637,8 @@
           "mdSolution": "\n\nSolution:\n```js\nconsole.log(fruits.pop());\n```\n"
         },
         {
-          "i": 4,
-          "id": "code4",
+          "i": 8,
+          "id": "code8",
           "variants": [
             {}
           ],
@@ -664,8 +662,8 @@
       "title": "QCM",
       "questions": [
         {
-          "i": 1,
-          "id": "qcm1",
+          "i": 18,
+          "id": "qcm18",
           "md": "# Controle 1\n\nComment créer une variable en JavaScript ?\n  \t\t  ",
           "choices": [
             {
@@ -687,8 +685,8 @@
           ]
         },
         {
-          "i": 2,
-          "id": "qcm2",
+          "i": 19,
+          "id": "qcm19",
           "md": "Quel est le type de cette variable:\n\n```\nvar maVariable = 3.2;\n```\n",
           "choices": [
             {
@@ -710,8 +708,8 @@
           ]
         },
         {
-          "i": 3,
-          "id": "qcm3",
+          "i": 20,
+          "id": "qcm20",
           "md": "Quel est le type de cette variable:\n\n```\nvar maVariable = '3.2';\n```\n",
           "choices": [
             {
@@ -733,8 +731,8 @@
           ]
         },
         {
-          "i": 4,
-          "id": "qcm4",
+          "i": 21,
+          "id": "qcm21",
           "md": "Que vaut cette expression de comparaison de valeur ?\n\n```\n3.2 === '3.2'\n```\n",
           "choices": [
             {
@@ -756,8 +754,8 @@
           ]
         },
         {
-          "i": 5,
-          "id": "qcm5",
+          "i": 22,
+          "id": "qcm22",
           "md": "En respectant les conventions indiquées en cours, quelle affectation faut-il exécuter pour que `J'ai tout compris !` s'affiche à l'écran ?\n\n```\nalert(message);\n```\n",
           "choices": [
             {
@@ -779,8 +777,8 @@
           ]
         },
         {
-          "i": 6,
-          "id": "qcm6",
+          "i": 23,
+          "id": "qcm23",
           "md": "Quelles sections vont être exécutées, si on exécute le code suivant ?\n\n```\nvar nb = 2;\nif (nb === 2) {\n  // A\n} else if (nb > 1) {\n  // B\n} else {\n  // C\n}\n```\n",
           "choices": [
             {
@@ -803,12 +801,12 @@
         }
       ],
       "solutions": {
-        "qcm1": 2,
-        "qcm2": 2,
-        "qcm3": 1,
-        "qcm4": 2,
-        "qcm5": 3,
-        "qcm6": 1
+        "qcm18": 2,
+        "qcm19": 2,
+        "qcm20": 1,
+        "qcm21": 2,
+        "qcm22": 3,
+        "qcm23": 1
       }
     },
     {
@@ -818,8 +816,8 @@
       "title": "Exercices de codage",
       "questions": [
         {
-          "i": 1,
-          "id": "code1",
+          "i": 9,
+          "id": "code9",
           "variants": [
             {
               "n": 1,
@@ -863,8 +861,8 @@
       "title": "Exercices de codage",
       "questions": [
         {
-          "i": 1,
-          "id": "code1",
+          "i": 10,
+          "id": "code10",
           "variants": [
             {}
           ],
@@ -880,8 +878,8 @@
           "mdSolution": "\n\nSolution:\n```js\nfunction somme(a, b, c) {\n  return a + b + c;\n}\n```\n"
         },
         {
-          "i": 2,
-          "id": "code2",
+          "i": 11,
+          "id": "code11",
           "variants": [
             {}
           ],
@@ -897,8 +895,8 @@
           "mdSolution": "\n\nSolution:\n```js\nfunction sommeIntervalle(premier, dernier) {\n  var somme = 0;\n  for (var i = premier; i <= dernier; i++) {\n    somme = somme + i;\n  }\n  return somme;\n}\n```\n"
         },
         {
-          "i": 3,
-          "id": "code3",
+          "i": 12,
+          "id": "code12",
           "variants": [
             {}
           ],
