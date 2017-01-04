@@ -9,9 +9,8 @@ function renderVariant(variantData) {
 }
 
 function ExerciseConverter() {
-  // global counters to prevent id collisions, if more than one template.md file per type is used
-  this.codeExNumber = 0; 
-  this.quizzExNumber = 0; 
+  // one global question counter, accross exercises
+  this.questionNumber = 0;
 }
 
 ExerciseConverter.prototype.renderCodeExercise = function renderCodeExercise(exerciseData, exNumber) {
@@ -31,12 +30,12 @@ ExerciseConverter.prototype.renderCodeExercise = function renderCodeExercise(exe
       exEval = exEval.replace(/```js\n*/g, '').replace(/```\n*/g, '');
       exSolution = parts.pop();
     }
-    _this.codeExNumber++;
-    var id = 'code' + _this.codeExNumber;
+    _this.questionNumber++;
+    var id = 'code' + _this.questionNumber;
     var rawSolution = exSolution.split(/```.*\n/g)[1];
     solutions[id] = variants.map(renderVariant.bind(rawSolution)); // render one solution per variant
     var exerciseData = {
-      i: _this.codeExNumber,
+      i: _this.questionNumber,
       id: id,
       variants: variants,
       testVariants: variants.map(renderVariant.bind(exEval))
@@ -63,11 +62,11 @@ ExerciseConverter.prototype.renderQuizzExercise = function renderQuizzExercise(e
   var solutions = exerciseData.getSolutions();
   return {
     questions: exerciseData.renderJsonQuestions().map(function(question, i) {
-      _this.quizzExNumber++;
-      var id = 'qcm' + _this.quizzExNumber;
+      _this.questionNumber++;
+      var id = 'qcm' + _this.questionNumber;
       solutionSet[id] = solutions[i];
       return Object.assign({
-        i: _this.quizzExNumber,
+        i: _this.questionNumber,
         id: id,
       }, question);
     }),
