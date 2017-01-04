@@ -664,7 +664,8 @@
         {
           "i": 18,
           "id": "qcm18",
-          "md": "# Controle 1\n\nComment créer une variable en JavaScript ?\n  \t\t  ",
+          "md": "# Controle 1\n\nComment créer une variable en JavaScript ?\n  \t\t  \n\n",
+          "mdSolution": "\n\nRéponse: il faut utiliser le mot clé `var` suivi du nom de la variable à créer.",
           "choices": [
             {
               "name": 1,
@@ -687,7 +688,8 @@
         {
           "i": 19,
           "id": "qcm19",
-          "md": "Quel est le type de cette variable:\n\n```\nvar maVariable = 3.2;\n```\n",
+          "md": "Quel est le type de cette variable:\n\n```\nvar maVariable = 3.2;\n```\n\n\n",
+          "mdSolution": "\n\nRéponse: en Javascript, les nombres décimaux sont aussi de type `number`.",
           "choices": [
             {
               "name": 1,
@@ -710,7 +712,8 @@
         {
           "i": 20,
           "id": "qcm20",
-          "md": "Quel est le type de cette variable:\n\n```\nvar maVariable = '3.2';\n```\n",
+          "md": "Quel est le type de cette variable:\n\n```\nvar maVariable = '3.2';\n```\n\n\n",
+          "mdSolution": "\n\nRéponse: la valeur est entourée d'apostrophes => c'est une chaîne de caractères (`string`).",
           "choices": [
             {
               "name": 1,
@@ -733,7 +736,8 @@
         {
           "i": 21,
           "id": "qcm21",
-          "md": "Que vaut cette expression de comparaison de valeur ?\n\n```\n3.2 === '3.2'\n```\n",
+          "md": "Que vaut cette expression de comparaison de valeur ?\n\n```\n3.2 === '3.2'\n```\n\n\n",
+          "mdSolution": "\n\nRéponse: le triple égal est une comparaison stricte: elle renvoie `false` ici car les deux valeurs ne sont pas du même type.",
           "choices": [
             {
               "name": 1,
@@ -756,7 +760,8 @@
         {
           "i": 22,
           "id": "qcm22",
-          "md": "En respectant les conventions indiquées en cours, quelle affectation faut-il exécuter pour que `J'ai tout compris !` s'affiche à l'écran ?\n\n```\nalert(message);\n```\n",
+          "md": "En respectant les conventions indiquées en cours, quelle affectation faut-il exécuter pour que `J'ai tout compris !` s'affiche à l'écran ?\n\n```\nalert(message);\n```\n\n\n",
+          "mdSolution": "\n\nRéponse: `'J\\'ai tout compris !'` car nous utilisons des apostrophes autour des chaînes de caractères, et antislash pour afficher des apostrophes à l'intérieur de chaînes de caractères.",
           "choices": [
             {
               "name": 1,
@@ -779,7 +784,8 @@
         {
           "i": 23,
           "id": "qcm23",
-          "md": "Quelles sections vont être exécutées, si on exécute le code suivant ?\n\n```\nvar nb = 2;\nif (nb === 2) {\n  // A\n} else if (nb > 1) {\n  // B\n} else {\n  // C\n}\n```\n",
+          "md": "Quelles sections vont être exécutées, si on exécute le code suivant ?\n\n```\nvar nb = 2;\nif (nb === 2) {\n  // A\n} else if (nb > 1) {\n  // B\n} else {\n  // C\n}\n```\n\n\n",
+          "mdSolution": "\n\nRéponse: seulement A, car les trois blocs conditionnels (`if {}`, `else if {}` et `else {}`) sont liés par des `else`. Donc seule la première alternative dont l'expression conditionnelle est vérifiée sera exécutée.",
           "choices": [
             {
               "name": 1,
