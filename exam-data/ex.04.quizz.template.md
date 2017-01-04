@@ -1,4 +1,4 @@
-# TP 3
+# TP 3 - QCM
 
 Combien de fois les instructions vont-elles être exécutées ?
 

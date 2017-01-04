@@ -1,3 +1,5 @@
+# TP 4 - Code
+
 Définir une fonction `soustraire` qui retourne le résultat de la soustraction `a - b`, `a` et `b` étant des paramètres de cette fonction.
 
 Respecter les conventions et règles d'indentation vues en cours.

@@ -1,4 +1,4 @@
-# TP 5
+# TP 5 - Code
 
 Créez une variable `nombres` de type tableau et contenant les nombres `1`, `2` et `3`.
 

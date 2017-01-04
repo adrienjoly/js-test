@@ -1,4 +1,4 @@
-# TP 4
+# TP 4 - QCM
 
 ```js
 function maFonction(param) {

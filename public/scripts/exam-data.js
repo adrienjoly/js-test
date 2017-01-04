@@ -26,12 +26,12 @@
       "_info": "generated from ex.01.quizz.template.md",
       "i": 1,
       "isQuizz": true,
-      "title": "QCM",
+      "title": "TP 1 - QCM",
       "questions": [
         {
           "i": 1,
           "id": "qcm1",
-          "md": "# TP 1\n\nComment ouvrir la console JavaScript dans Google Chrome ?\n\n\n",
+          "md": "\nComment ouvrir la console JavaScript dans Google Chrome ?\n\n\n",
           "mdSolution": "\n\nRéponse: *en pressant Cmd-Alt-J ou Ctrl-Shift-J*",
           "choices": [
             {
@@ -211,12 +211,12 @@
       "_info": "generated from ex.02.quizz.template.md",
       "i": 2,
       "isQuizz": true,
-      "title": "QCM",
+      "title": "TP 2 - QCM",
       "questions": [
         {
           "i": 8,
           "id": "qcm8",
-          "md": "# TP 2\n\nQuel section va être exécutée, si on exécute le code suivant ?\n\n```\nvar nb = 2;\nif (nb === 1) {\n  // A\n} else {\n  // B\n}\n```\n\n\n",
+          "md": "\nQuel section va être exécutée, si on exécute le code suivant ?\n\n```\nvar nb = 2;\nif (nb === 1) {\n  // A\n} else {\n  // B\n}\n```\n\n\n",
           "mdSolution": "\n\nRéponse: B, car l'expression d'égalité `nb === 1` de la premiere condition est fausse,\ndonc ce sont les intructions rattachées à l'alternative par défaut (`else`) qui sont exécutées.",
           "choices": [
             {
@@ -321,7 +321,7 @@
       "_info": "generated from ex.03.code.template.md",
       "i": 3,
       "isCode": true,
-      "title": "Exercices de codage",
+      "title": "TP 2 - Code",
       "questions": [
         {
           "i": 1,
@@ -333,7 +333,7 @@
             "\n// automatic student evaluation code\n(function evaluateStudentCode(){\n  var console = { log: function(){} }; // tolerate console.log() calls\n  var tests = [];\n  var nombre, resultat;\n  resultat = undefined; nombre = 4; _runStudentCode(); tests.push(resultat === 'egal');\n  resultat = undefined; nombre = 3; _runStudentCode(); tests.push(resultat != 'egal');\n  resultat = undefined; nombre = 5; _runStudentCode(); tests.push(resultat != 'egal');\n  application.remote._send(null, tests); // 1 point per passing test => 3 pts per exercise\n})();\n"
           ],
           "mdVariants": [
-            "Implémenter une condition qui affecte `'egal'` à une variable `resultat` seulement si une autre variable `nombre` vaut strictement `4`. Indenter correctement.\n\n"
+            "\nImplémenter une condition qui affecte `'egal'` à une variable `resultat` seulement si une autre variable `nombre` vaut strictement `4`. Indenter correctement.\n\n"
           ],
           "mdSolutions": [
             "\n\nSolution:\n\n```js\nif (nombre === 4) {\n  resultat = 'egal';\n}\n```\n"
@@ -346,12 +346,12 @@
       "_info": "generated from ex.04.quizz.template.md",
       "i": 4,
       "isQuizz": true,
-      "title": "QCM",
+      "title": "TP 3 - QCM",
       "questions": [
         {
           "i": 12,
           "id": "qcm12",
-          "md": "# TP 3\n\nCombien de fois les instructions vont-elles être exécutées ?\n\n```js\nfor ( var i = 0; i < 4; i++ ) {\n  // instructions\n}\n```\n\n\n",
+          "md": "\nCombien de fois les instructions vont-elles être exécutées ?\n\n```js\nfor ( var i = 0; i < 4; i++ ) {\n  // instructions\n}\n```\n\n\n",
           "mdSolution": "\n\nLes instructions vont être exécutées pour chaque valeur de `i` entre `0` et `4` (non compris), soit 0, 1, 2, puis 3.\n\nCe qui fait 4 itérations.",
           "choices": [
             {
@@ -406,7 +406,7 @@
       "_info": "generated from ex.05.code.template.md",
       "i": 5,
       "isCode": true,
-      "title": "Exercices de codage",
+      "title": "TP 3 - Code",
       "questions": [
         {
           "i": 2,
@@ -418,7 +418,7 @@
             "\n// automatic student evaluation code\n(function evaluateStudentCode(){\n  var nb = 0;\n  var lastLog;\n  var console = {\n    log: function(t){\n      lastLog = t;\n      nb++;\n    }\n  };\n  _runStudentCode();\n  var tests = [\n    `_studentCode`.indexOf('for') !== -1,\n    nb === 50,\n    lastLog === 'Bonjour!',\n  ];\n  application.remote._send(null, tests); // 1 point per passing test => 3 pts per exercise\n})();\n"
           ],
           "mdVariants": [
-            "Implémenter un programme de moins de 4 lignes qui affiche 50 fois `'Bonjour!'` dans la console. Respecter les conventions et règles d'indentation vues en cours.\n\n"
+            "\nImplémenter un programme de moins de 4 lignes qui affiche 50 fois `'Bonjour!'` dans la console. Respecter les conventions et règles d'indentation vues en cours.\n\n"
           ],
           "mdSolutions": [
             "\n\nSolution:\n```js\nfor ( var i = 0; i < 50; i++ ) {\n  console.log('Bonjour!');\n}\n```\n"
@@ -431,12 +431,12 @@
       "_info": "generated from ex.06.quizz.template.md",
       "i": 6,
       "isQuizz": true,
-      "title": "QCM",
+      "title": "TP 4 - QCM",
       "questions": [
         {
           "i": 14,
           "id": "qcm14",
-          "md": "# TP 4\n\n```js\nfunction maFonction(param) {\n  return param + 2;\n}\n```\n\nCeci est:\n\n\n",
+          "md": "\n```js\nfunction maFonction(param) {\n  return param + 2;\n}\n```\n\nCeci est:\n\n\n",
           "mdSolution": "\n\nC'est une définition de fonction.\n\nOn la reconnait à l'usage du mot clé `function` et des accolades entourant le code qui sera exécuté lorsque cette fonction sera appelée.",
           "choices": [
             {
@@ -541,7 +541,7 @@
       "_info": "generated from ex.07.code.template.md",
       "i": 7,
       "isCode": true,
-      "title": "Exercices de codage",
+      "title": "TP 4 - Code",
       "questions": [
         {
           "i": 3,
@@ -553,7 +553,7 @@
             "\n// automatic student evaluation code\n(function evaluateStudentCode(){\n  var console = { log: function(){} }; // tolerate console.log() calls\n  _runStudentCode();\n  var tests = [\n    typeof soustraire === 'function', \n    soustraire(2, 1) === 1,\n    soustraire(2, -1) === 3,\n  ];\n  application.remote._send(null, tests); // 1 point per passing test => 3 pts per exercise\n})();\n"
           ],
           "mdVariants": [
-            "Définir une fonction `soustraire` qui retourne le résultat de la soustraction `a - b`, `a` et `b` étant des paramètres de cette fonction.\n\nRespecter les conventions et règles d'indentation vues en cours.\n\n"
+            "\nDéfinir une fonction `soustraire` qui retourne le résultat de la soustraction `a - b`, `a` et `b` étant des paramètres de cette fonction.\n\nRespecter les conventions et règles d'indentation vues en cours.\n\n"
           ],
           "mdSolutions": [
             "\n\nSolution:\n```js\nfunction soustraire(a, b) {\n  return a - b;\n}\n```\n"
@@ -583,7 +583,7 @@
       "_info": "generated from ex.08.code.template.md",
       "i": 8,
       "isCode": true,
-      "title": "Exercices de codage",
+      "title": "TP 5 - Code",
       "questions": [
         {
           "i": 5,
@@ -595,7 +595,7 @@
             "\n// automatic student evaluation code\n(function evaluateStudentCode(){\n  _runStudentCode();\n  var tests = [\n    nombres[0] === 1,\n    nombres.length === 3,\n    nombres.join(',') === '1,2,3',\n  ];\n  application.remote._send(null, tests); // 1 point per passing test => 3 pts per exercise\n})();\n"
           ],
           "mdVariants": [
-            "# TP 5\n\nCréez une variable `nombres` de type tableau et contenant les nombres `1`, `2` et `3`.\n\n"
+            "\nCréez une variable `nombres` de type tableau et contenant les nombres `1`, `2` et `3`.\n\n"
           ],
           "mdSolutions": [
             "\n\nSolution:\n```js\nvar nombres = [1, 2, 3];\n```\n"
@@ -659,12 +659,12 @@
       "_info": "generated from ex.09.quizz.template.md",
       "i": 9,
       "isQuizz": true,
-      "title": "QCM",
+      "title": "Controle 1 - QCM",
       "questions": [
         {
           "i": 18,
           "id": "qcm18",
-          "md": "# Controle 1\n\nComment créer une variable en JavaScript ?\n  \t\t  \n\n",
+          "md": "\nComment créer une variable en JavaScript ?\n  \t\t  \n\n",
           "mdSolution": "\n\nRéponse: il faut utiliser le mot clé `var` suivi du nom de la variable à créer.",
           "choices": [
             {
@@ -819,7 +819,7 @@
       "_info": "generated from ex.10.code.template.md",
       "i": 10,
       "isCode": true,
-      "title": "Exercices de codage",
+      "title": "Controle 1 - Code",
       "questions": [
         {
           "i": 9,
@@ -856,9 +856,9 @@
             "\n(function evaluateStudentCode(){\n  var done = application.remote._sendOnce; // to call upon code evaluation\n  // student's variant -> test inputs and expected outputs\n  var variant = {\n    prompts: [ 'bleu', 'foncé' ],\n    expected: 'OK',\n  };\n  // exercise requirements\n  var req = 'si l\\'utilisateur tape ' + variant.prompts.join(' puis ')\n    + ', alert devrait afficher \"' + variant.expected + '\"';\n  application.remote._setTimeoutMessage(req\n    + ', mais alert n\\'a pas été appelé...');\n  // test environment\n  var prompts = variant.prompts.slice(); // clone the array\n  function prompt() {\n    return prompts.shift();\n  }\n  function alert(message) {\n    if (message !== variant.expected) {\n      done(req + ' au lieu de \"' + message + '\"', 0.5);\n      // give a half point to the student, because her code runs\n    } else {\n      done(null, 1); // passed test => give the point to the student\n    }\n  };\n  var console = { log: function(){} }; // tolerate calls to console.log()\n  // run the test\n  _runStudentCode(); // student call should call prompt() and alert()\n})();\n"
           ],
           "mdVariants": [
-            "Implémenter un chat-bot à partir de l'arbre de décision suivant:\n\n![arbre de décision](data/arbre1.jpg)\n\nComme vu et pratiqué en cours:\n - Les questions posées par l'ordinateur sont représentées par des rectangles, et sont à implémenter à l'aide de la fonction `prompt()`.\n - Les réponses comprises par l'ordinateur sont écrites à côté de chaque branche, et sont à implémenter à l'aide de conditions.\n - Les messages à afficher par l'ordinateur sont représentés par des cercles, et sont à implémenter à l'aide de la fonction `alert()`.\n\nVous serez noté(e) sur:\n - le respect **à la lettre** du texte des questions et des réponses (espaces, accents, et majuscules/minuscules compris).\n - le respect des règles d'indentation et autres conventions vues en cours. (ex: 2 espaces par niveau d'indentation)\n - le bon fonctionnement de votre code, sans erreurs, depuis la console JavaScript de Google Chrome, pour chacun des cas illustrés dans l'arbre de décision.\n\n\n",
-            "Implémenter un chat-bot à partir de l'arbre de décision suivant:\n\n![arbre de décision](data/arbre2.jpg)\n\nComme vu et pratiqué en cours:\n - Les questions posées par l'ordinateur sont représentées par des rectangles, et sont à implémenter à l'aide de la fonction `prompt()`.\n - Les réponses comprises par l'ordinateur sont écrites à côté de chaque branche, et sont à implémenter à l'aide de conditions.\n - Les messages à afficher par l'ordinateur sont représentés par des cercles, et sont à implémenter à l'aide de la fonction `alert()`.\n\nVous serez noté(e) sur:\n - le respect **à la lettre** du texte des questions et des réponses (espaces, accents, et majuscules/minuscules compris).\n - le respect des règles d'indentation et autres conventions vues en cours. (ex: 2 espaces par niveau d'indentation)\n - le bon fonctionnement de votre code, sans erreurs, depuis la console JavaScript de Google Chrome, pour chacun des cas illustrés dans l'arbre de décision.\n\n\n",
-            "Implémenter un chat-bot à partir de l'arbre de décision suivant:\n\n![arbre de décision](data/arbre3.jpg)\n\nComme vu et pratiqué en cours:\n - Les questions posées par l'ordinateur sont représentées par des rectangles, et sont à implémenter à l'aide de la fonction `prompt()`.\n - Les réponses comprises par l'ordinateur sont écrites à côté de chaque branche, et sont à implémenter à l'aide de conditions.\n - Les messages à afficher par l'ordinateur sont représentés par des cercles, et sont à implémenter à l'aide de la fonction `alert()`.\n\nVous serez noté(e) sur:\n - le respect **à la lettre** du texte des questions et des réponses (espaces, accents, et majuscules/minuscules compris).\n - le respect des règles d'indentation et autres conventions vues en cours. (ex: 2 espaces par niveau d'indentation)\n - le bon fonctionnement de votre code, sans erreurs, depuis la console JavaScript de Google Chrome, pour chacun des cas illustrés dans l'arbre de décision.\n\n\n"
+            "\nImplémenter un chat-bot à partir de l'arbre de décision suivant:\n\n![arbre de décision](data/arbre1.jpg)\n\nComme vu et pratiqué en cours:\n - Les questions posées par l'ordinateur sont représentées par des rectangles, et sont à implémenter à l'aide de la fonction `prompt()`.\n - Les réponses comprises par l'ordinateur sont écrites à côté de chaque branche, et sont à implémenter à l'aide de conditions.\n - Les messages à afficher par l'ordinateur sont représentés par des cercles, et sont à implémenter à l'aide de la fonction `alert()`.\n\nVous serez noté(e) sur:\n - le respect **à la lettre** du texte des questions et des réponses (espaces, accents, et majuscules/minuscules compris).\n - le respect des règles d'indentation et autres conventions vues en cours. (ex: 2 espaces par niveau d'indentation)\n - le bon fonctionnement de votre code, sans erreurs, depuis la console JavaScript de Google Chrome, pour chacun des cas illustrés dans l'arbre de décision.\n\n\n",
+            "\nImplémenter un chat-bot à partir de l'arbre de décision suivant:\n\n![arbre de décision](data/arbre2.jpg)\n\nComme vu et pratiqué en cours:\n - Les questions posées par l'ordinateur sont représentées par des rectangles, et sont à implémenter à l'aide de la fonction `prompt()`.\n - Les réponses comprises par l'ordinateur sont écrites à côté de chaque branche, et sont à implémenter à l'aide de conditions.\n - Les messages à afficher par l'ordinateur sont représentés par des cercles, et sont à implémenter à l'aide de la fonction `alert()`.\n\nVous serez noté(e) sur:\n - le respect **à la lettre** du texte des questions et des réponses (espaces, accents, et majuscules/minuscules compris).\n - le respect des règles d'indentation et autres conventions vues en cours. (ex: 2 espaces par niveau d'indentation)\n - le bon fonctionnement de votre code, sans erreurs, depuis la console JavaScript de Google Chrome, pour chacun des cas illustrés dans l'arbre de décision.\n\n\n",
+            "\nImplémenter un chat-bot à partir de l'arbre de décision suivant:\n\n![arbre de décision](data/arbre3.jpg)\n\nComme vu et pratiqué en cours:\n - Les questions posées par l'ordinateur sont représentées par des rectangles, et sont à implémenter à l'aide de la fonction `prompt()`.\n - Les réponses comprises par l'ordinateur sont écrites à côté de chaque branche, et sont à implémenter à l'aide de conditions.\n - Les messages à afficher par l'ordinateur sont représentés par des cercles, et sont à implémenter à l'aide de la fonction `alert()`.\n\nVous serez noté(e) sur:\n - le respect **à la lettre** du texte des questions et des réponses (espaces, accents, et majuscules/minuscules compris).\n - le respect des règles d'indentation et autres conventions vues en cours. (ex: 2 espaces par niveau d'indentation)\n - le bon fonctionnement de votre code, sans erreurs, depuis la console JavaScript de Google Chrome, pour chacun des cas illustrés dans l'arbre de décision.\n\n\n"
           ],
           "mdSolutions": [
             "\n\nSolution:\n\n```js\nvar reponse = prompt('Ta couleur préférée ?');\nif (reponse === 'bleu') {\n  alert('OK');\n} else if (reponse === 'gris') {\n  var reponse2 = prompt('clair ou foncé ?');\n  if (reponse2 === 'clair') {\n    alert('comme le ciel');\n  } else if (reponse2 === 'foncé') {\n    alert('ah bon?');\n  } \n} else {\n  alert('je connais pas');\n}\n```\n",
@@ -873,7 +873,7 @@
       "_info": "generated from ex.11.code.template.md",
       "i": 11,
       "isCode": true,
-      "title": "Exercices de codage",
+      "title": "Entrainement vacances fin d'année - Code",
       "questions": [
         {
           "i": 10,
@@ -885,7 +885,7 @@
             "\n// automatic student evaluation code\n(function evaluateStudentCode(){\n  var console = { log: function(){} }; // tolerate console.log() calls\n  _runStudentCode();\n  var tests = [\n    typeof somme === 'function', \n    somme(1, 3, -2) === 2,\n    somme(4, 100, 0.5) === 104.5,\n  ];\n  application.remote._send(null, tests); // 1 point per passing test => 3 pts per exercise\n})();\n"
           ],
           "mdVariants": [
-            "# Entrainement vacances fin d'année\n\nDéfinir une fonction `somme` qui retourne la somme des trois nombres passés en paramètres.\n\nExemple d'appel: `somme(1, 3, -2);` doit retourner `2`.\n\n"
+            "\nDéfinir une fonction `somme` qui retourne la somme des trois nombres passés en paramètres.\n\nExemple d'appel: `somme(1, 3, -2);` doit retourner `2`.\n\n"
           ],
           "mdSolutions": [
             "\n\nSolution:\n```js\nfunction somme(a, b, c) {\n  return a + b + c;\n}\n```\n"

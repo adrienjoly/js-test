@@ -1,4 +1,4 @@
-# TP 2
+# TP 2 - QCM
 
 Quel section va être exécutée, si on exécute le code suivant ?
 

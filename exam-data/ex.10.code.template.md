@@ -1,3 +1,5 @@
+# Controle 1 - Code
+
 Implémenter un chat-bot à partir de l'arbre de décision suivant:
 
 ![arbre de décision](data/arbre{{n}}.jpg)

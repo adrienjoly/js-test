@@ -1,4 +1,4 @@
-# TP 1
+# TP 1 - QCM
 
 Comment ouvrir la console JavaScript dans Google Chrome ?
 

@@ -1,4 +1,4 @@
-# Controle 1
+# Controle 1 - QCM
 
 Comment créer une variable en JavaScript ?
   		  

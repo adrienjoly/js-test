@@ -1,5 +1,7 @@
 // This class parses and transforms template.md files into JSON.
 
+var fs = require('fs');
+
 // helpers
 
 var PARTS_SEPARATOR = '???';
@@ -53,10 +55,14 @@ function ExerciseParser() {
 }
 
 ExerciseParser.prototype.readFromFile = function (filepath) {
-  this.questionLines = require('fs').readFileSync(filepath).toString()
+  this.questionLines = fs.readFileSync(filepath).toString()
     .split('---')
     .map(getTrimmedLines)
     .filter(nonEmptySection);
+  // parse exercise title (optional)
+  if (this.questionLines[0][0].indexOf('# ') === 0) {
+    this.exerciseTitle = this.questionLines[0].shift().replace(/^# /, '');
+  }
   return this;
 };
 

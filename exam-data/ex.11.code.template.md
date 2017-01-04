@@ -1,4 +1,4 @@
-# Entrainement vacances fin d'année
+# Entrainement vacances fin d'année - Code
 
 Définir une fonction `somme` qui retourne la somme des trois nombres passés en paramètres.
 

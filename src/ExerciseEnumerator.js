@@ -19,9 +19,11 @@ exports.parseAllFrom = function(sourcePath) {
     var exNumber = fileParts[1];
     var exType = fileParts[2];
     console.log('Parsing', file, '...');
-    var exData = new ExerciseParser().readFromFile(sourcePath + file);
+    var parser = new ExerciseParser();
+    var exData = parser.readFromFile(sourcePath + file);
     exercises.push(_.extend({
       i: exNumber,
+      title: parser.exerciseTitle,
       _type: exType,
       _info: 'generated from ' + file,
     }, exData));
