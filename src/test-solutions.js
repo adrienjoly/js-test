@@ -10,9 +10,11 @@ var PATH_SOURCE = './exam-data/';
 
 // 1) render solutions from exercise definition files
 
+var converter = new ExerciseConverter();
+
 var converters = {
-  code: ExerciseConverter.renderCodeExercise,
-  quizz: ExerciseConverter.renderQuizzExercise,
+  code: converter.renderCodeExercise,
+  quizz: converter.renderQuizzExercise,
 };
 
 var exercises = ExerciseEnumerator.parseAllFrom(PATH_SOURCE).map(function(exData) {

@@ -32,10 +32,12 @@ function setConsolePrefix(prefix) {
 
 // init: generate evaluators from exercise definition files
 
+var converter = new ExerciseConverter();
+
 var converters = {
 
   code: function(exerciseData, exNumber) {
-    var rendered = ExerciseConverter.renderCodeExercise(exerciseData, exNumber);
+    var rendered = converter.renderCodeExercise(exerciseData, exNumber);
     var evaluator = new CodeEvaluator(rendered.evalTests);
     return function (studentAnswers, callback) {
       console.log('\n  -  code evaluation:');
@@ -49,7 +51,7 @@ var converters = {
   },
 
   quizz: function(exerciseData, exNumber) {
-    var rendered = ExerciseConverter.renderQuizzExercise(exerciseData, exNumber);
+    var rendered = converter.renderQuizzExercise(exerciseData, exNumber);
     var evaluator = new QuizzEvaluator(rendered.solutions);
     return function (studentAnswers, callback) {
       console.log('\n  -  quizz answers:');
