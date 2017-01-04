@@ -131,16 +131,19 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     app.active = true;
   }
 
-  // load backend
-  app.async(function(){
-    console.log('init backend:', (app.config.backend || {}).type || 'none');
-    if (app.config.backend && app.config.backend.type && app.config.backend.type !== 'none') {
-      var el = document.createElement('script');
-      el.setAttribute('src', 'scripts/app-' + app.config.backend.type + '.js');
-      this.appendChild(el);
-    } else {
-      app.active = true;
-    }
-  });
+  app.ready = function(){
+    console.log('ready');
+    // load backend
+    app.async(function(){
+      console.log('init backend:', (app.config.backend || {}).type || 'none');
+      if (app.config.backend && app.config.backend.type && app.config.backend.type !== 'none') {
+        var el = document.createElement('script');
+        el.setAttribute('src', 'scripts/app-' + app.config.backend.type + '.js');
+        this.appendChild(el);
+      } else {
+        app.active = true;
+      }
+    });
+  }
 
 })(document);
