@@ -79,12 +79,14 @@ function applyUserVariant(subm) {
   // replace array-typed properties by picking one, based on variant index
   for (var exKey in fixedSubm) {
     var exVal = fixedSubm[exKey];
+    // exVal is an array => pick variant from array
     if (typeof exVal === 'object' && typeof exVal.map === 'function') {
       var exVariants = exVal;
       var variant = evaluateStudent.getVariantByStudentId(subm._uid, exVariants);
       fixedSubm[exKey] = exVariants[variant];
     }
   }
+  //console.log('fixed submission (answers):', fixedSubm);
   return fixedSubm;
 }
 
