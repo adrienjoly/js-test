@@ -1,0 +1,42 @@
+[
+  {
+    "i": 1,
+    "id": "code1",
+    "variants": [
+      {}
+    ],
+    "testVariants": [
+      "\n// automatic student evaluation code\n(function evaluateStudentCode(){\n  _runStudentCode();\n  var tests = [\n    nombres[0] === 1,\n    nombres.length === 3,\n    nombres.join(',') === '1,2,3',\n  ];\n  application.remote._send(null, tests); // 1 point per passing test => 3 pts per exercise\n})();\n"
+    ]
+  },
+  {
+    "i": 2,
+    "id": "code2",
+    "variants": [
+      {}
+    ],
+    "testVariants": [
+      "\n// automatic student evaluation code\n(function evaluateStudentCode(){\n  var _fruits = ['pomme', 'orange', 'kiwi'];\n  var fruits = _fruits.slice(); // clone\n  _runStudentCode();\n  var tests = [\n    troisieme === _fruits[2],\n    fruits.join(',') === _fruits.join(','),\n    `_studentCode`.replace(/[\\(\\) ]/g, '').indexOf('[2]') !== -1,\n  ];\n  application.remote._send(null, tests); // 1 point per passing test => 3 pts per exercise\n})();\n"
+    ]
+  },
+  {
+    "i": 3,
+    "id": "code3",
+    "variants": [
+      {}
+    ],
+    "testVariants": [
+      "\n// automatic student evaluation code\n(function evaluateStudentCode(){\n  var _fruits = ['pomme', 'orange', 'kiwi'];\n  var fruits = _fruits.slice(); // clone\n  var out;\n  var console = { log: function(value){\n    out = value;\n  } };\n  _runStudentCode();\n  var tests = [\n    out === _fruits.pop(),\n    fruits.join(',') === _fruits.join(','),\n    `_studentCode`.toString().replace(/[\\(\\) ]/g, '').indexOf('.pop') !== -1,\n  ];\n  application.remote._log('3', tests);\n  application.remote._send(null, tests); // 1 point per passing test => 3 pts per exercise\n})();\n"
+    ]
+  },
+  {
+    "i": 4,
+    "id": "code4",
+    "variants": [
+      {}
+    ],
+    "testVariants": [
+      "\n// automatic student evaluation code\n(function evaluateStudentCode(){\n  var console = { log: function(){} }; // tolerate console.log() calls\n  _runStudentCode();\n  var tests = [\n    typeof tableauContient === 'function',\n    tableauContient(['a', 'b', 'c'], 'b') === 1,\n    tableauContient(['a', 'b', 'c'], 'd') === false,\n  ];\n  application.remote._send(null, tests); // 1 point per passing test => 3 pts per exercise\n})();\n"
+    ]
+  }
+]
