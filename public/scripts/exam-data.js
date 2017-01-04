@@ -337,8 +337,7 @@
           ],
           "mdSolutions": [
             "\n\nSolution:\n\n```js\nif (nombre === 4) {\n  resultat = 'egal';\n}\n```\n"
-          ],
-          "mdSolution": "\n\nSolution:\n\n```js\nif (nombre === 4) {\n  resultat = 'egal';\n}\n```\n"
+          ]
         }
       ]
     },
@@ -422,8 +421,7 @@
           ],
           "mdSolutions": [
             "\n\nSolution:\n```js\nfor ( var i = 0; i < 50; i++ ) {\n  console.log('Bonjour!');\n}\n```\n"
-          ],
-          "mdSolution": "\n\nSolution:\n```js\nfor ( var i = 0; i < 50; i++ ) {\n  console.log('Bonjour!');\n}\n```\n"
+          ]
         }
       ]
     },
@@ -557,8 +555,7 @@
           ],
           "mdSolutions": [
             "\n\nSolution:\n```js\nfunction soustraire(a, b) {\n  return a - b;\n}\n```\n"
-          ],
-          "mdSolution": "\n\nSolution:\n```js\nfunction soustraire(a, b) {\n  return a - b;\n}\n```\n"
+          ]
         },
         {
           "i": 21,
@@ -574,8 +571,7 @@
           ],
           "mdSolutions": [
             "\n\nSolution:\n```js\nfunction repeter(n) {\n  for (var i = 0; i < n; i++) {\n    console.log('Bonjour!');\n  }\n  return n;\n}\n```\n"
-          ],
-          "mdSolution": "\n\nSolution:\n```js\nfunction repeter(n) {\n  for (var i = 0; i < n; i++) {\n    console.log('Bonjour!');\n  }\n  return n;\n}\n```\n"
+          ]
         }
       ]
     },
@@ -599,8 +595,7 @@
           ],
           "mdSolutions": [
             "\n\nSolution:\n```js\nvar nombres = [1, 2, 3];\n```\n"
-          ],
-          "mdSolution": "\n\nSolution:\n```js\nvar nombres = [1, 2, 3];\n```\n"
+          ]
         },
         {
           "i": 23,
@@ -616,8 +611,7 @@
           ],
           "mdSolutions": [
             "\n\nSolution:\n```js\nvar troisieme = fruits[2];\n```\n"
-          ],
-          "mdSolution": "\n\nSolution:\n```js\nvar troisieme = fruits[2];\n```\n"
+          ]
         },
         {
           "i": 24,
@@ -633,8 +627,7 @@
           ],
           "mdSolutions": [
             "\n\nSolution:\n```js\nconsole.log(fruits.pop());\n```\n"
-          ],
-          "mdSolution": "\n\nSolution:\n```js\nconsole.log(fruits.pop());\n```\n"
+          ]
         },
         {
           "i": 25,
@@ -650,8 +643,7 @@
           ],
           "mdSolutions": [
             "\n\nSolution:\n```js\nfunction tableauContient(tableau, chaine) {\n  var indice = tableau.indexOf(chaine);\n  if (indice === -1) {\n    return false;\n  } else {\n    return indice;\n  }\n}\n```\n"
-          ],
-          "mdSolution": "\n\nSolution:\n```js\nfunction tableauContient(tableau, chaine) {\n  var indice = tableau.indexOf(chaine);\n  if (indice === -1) {\n    return false;\n  } else {\n    return indice;\n  }\n}\n```\n"
+          ]
         }
       ]
     },
@@ -864,8 +856,7 @@
             "\n\nSolution:\n\n```js\nvar reponse = prompt('Ta couleur préférée ?');\nif (reponse === 'bleu') {\n  alert('OK');\n} else if (reponse === 'gris') {\n  var reponse2 = prompt('clair ou foncé ?');\n  if (reponse2 === 'clair') {\n    alert('comme le ciel');\n  } else if (reponse2 === 'foncé') {\n    alert('ah bon?');\n  } \n} else {\n  alert('je connais pas');\n}\n```\n",
             "\n\nSolution:\n\n```js\nvar reponse = prompt('Ta couleur préférée ?');\nif (reponse === 'bleu') {\n  alert('OK');\n} else if (reponse === 'gris') {\n  var reponse2 = prompt('clair ou foncé ?');\n  if (reponse2 === 'clair') {\n    alert('comme le ciel');\n  } else if (reponse2 === 'foncé') {\n    alert('c&#39;est bien!');\n  } \n} else {\n  alert('je connais pas');\n}\n```\n",
             "\n\nSolution:\n\n```js\nvar reponse = prompt('Ta couleur préférée ?');\nif (reponse === 'rouge') {\n  alert('bien!');\n} else if (reponse === 'bleu') {\n  var reponse2 = prompt('clair ou foncé ?');\n  if (reponse2 === 'clair') {\n    alert('comme le ciel');\n  } else if (reponse2 === 'foncé') {\n    alert('OK');\n  } \n} else {\n  alert('je connais pas');\n}\n```\n"
-          ],
-          "mdSolution": "\n\nSolution:\n\n```js\nvar reponse = prompt('Ta couleur préférée ?');\nif (reponse === '{{p0}}') {\n  alert('{{e0}}');\n} else if (reponse === '{{prompt1}}') {\n  var reponse2 = prompt('clair ou foncé ?');\n  if (reponse2 === 'clair') {\n    alert('comme le ciel');\n  } else if (reponse2 === '{{prompt2}}') {\n    alert('{{expected}}');\n  } \n} else {\n  alert('je connais pas');\n}\n```\n"
+          ]
         }
       ]
     },
@@ -889,8 +880,7 @@
           ],
           "mdSolutions": [
             "\n\nSolution:\n```js\nfunction somme(a, b, c) {\n  return a + b + c;\n}\n```\n"
-          ],
-          "mdSolution": "\n\nSolution:\n```js\nfunction somme(a, b, c) {\n  return a + b + c;\n}\n```\n"
+          ]
         },
         {
           "i": 34,
@@ -906,8 +896,7 @@
           ],
           "mdSolutions": [
             "\n\nSolution:\n```js\nfunction sommeIntervalle(premier, dernier) {\n  var somme = 0;\n  for (var i = premier; i <= dernier; i++) {\n    somme = somme + i;\n  }\n  return somme;\n}\n```\n"
-          ],
-          "mdSolution": "\n\nSolution:\n```js\nfunction sommeIntervalle(premier, dernier) {\n  var somme = 0;\n  for (var i = premier; i <= dernier; i++) {\n    somme = somme + i;\n  }\n  return somme;\n}\n```\n"
+          ]
         },
         {
           "i": 35,
@@ -923,8 +912,7 @@
           ],
           "mdSolutions": [
             "\n\nSolution:\n```js\nfunction tableauContient(tableau, chaine) {\n  var indice = tableau.indexOf(chaine);\n  if (indice === -1) {\n    return false;\n  } else {\n    return indice;\n  }\n}\n```\n"
-          ],
-          "mdSolution": "\n\nSolution:\n```js\nfunction tableauContient(tableau, chaine) {\n  var indice = tableau.indexOf(chaine);\n  if (indice === -1) {\n    return false;\n  } else {\n    return indice;\n  }\n}\n```\n"
+          ]
         }
       ]
     }

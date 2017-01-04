@@ -62,7 +62,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       return Polymer.Base.extend(ex, {
         questions: ex.questions.map(function applyVariant(question) {
           return Polymer.Base.extend(question, {
-            md: question.md || pickVariant(question.mdVariants, app.user.id)
+            md: question.md || pickVariant(question.mdVariants, app.user.id),
+            mdSolution: question.mdSolution || pickVariant(question.mdSolutions, app.user.id),
           });
         })
       });
