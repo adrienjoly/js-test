@@ -336,9 +336,9 @@
             "Implémenter une condition qui affecte `'egal'` à une variable `resultat` seulement si une autre variable `nombre` vaut strictement `4`. Indenter correctement.\n\n"
           ],
           "mdSolutions": [
-            "\n\nSolution:\n```js\nif (nombre === 4) {\n  resultat = 'egal';\n}\n```\n"
+            "\n\nSolution:\n\n```js\nif (nombre === 4) {\n  resultat = 'egal';\n}\n```\n"
           ],
-          "mdSolution": "\n\nSolution:\n```js\nif (nombre === 4) {\n  resultat = 'egal';\n}\n```\n"
+          "mdSolution": "\n\nSolution:\n\n```js\nif (nombre === 4) {\n  resultat = 'egal';\n}\n```\n"
         }
       ]
     },
