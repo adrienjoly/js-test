@@ -62,13 +62,13 @@ function makeCodeEvaluator(jailed, async, codeGradingOptions) {
       var code = testCode
         .replace(/`_studentCode`/g, '`' + studentCode.replace(/`/g, '\\\`') + '`')
         .replace(/_runStudentCode\(\)/g, [
-          '// <STUDENT-CODE>',
+          '/* <STUDENT-CODE> */',
           studentCode,
-          '// </STUDENT-CODE>' ].join('\n'))
+          '/* </STUDENT-CODE> */' ].join('\n'))
         .replace(/_runStudentCodeAgain\(\)/g, [
-          '// <STUDENT-CODE>',
+          '/* <STUDENT-CODE> */',
           studentCode.replace(/function ([^ \(]+)/g, '$1 = function'),
-          '// </STUDENT-CODE>' ].join('\n'));
+          '/* </STUDENT-CODE> */' ].join('\n'));
       //console.log(code);
       console.log([ '// STUDENT CODE:', studentCode ].join('\n\n'));
       runCodeInSandbox(code, function(err, res) {
