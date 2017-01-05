@@ -1,3 +1,6 @@
+== v2.5.0 (WIP)
+ * 
+
 == v2.4.0 Robustness and adaptivity
  * Change: question numbering is now global: no more id collisions
  * Feature: no longer limited to 1 quizz + 1 code exercises
