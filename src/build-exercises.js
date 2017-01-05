@@ -76,5 +76,6 @@ var exercises = ExerciseEnumerator.parseAllFrom(PATH_SOURCE).map(function(exData
 
 // the exercisePack file will be loaded by index.html, then processed by app.js for rendering
 // exercises and student-id-based variants
+console.log('Generating', OUTPUT_FILE, '...');
 var exercisePack = renderExercisesFile(exercises);
 fs.writeFileSync(OUTPUT_FILE, exercisePack);
