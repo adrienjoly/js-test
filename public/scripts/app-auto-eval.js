@@ -140,7 +140,7 @@
     }
     require('scripts/CodeEvaluatorGeneric.js?_t=' + new Date().getTime()); // load latest version despite cache
     require('bower_components/async/lib/async.js');
-    require('bower_components/jailed/lib/jailed.js');
+    //require('bower_components/jailed/lib/jailed.js'); // TODO: load from here instead of index.html, when jailed will be able to initialize after window.onload
   });
 
 })(document);

@@ -38,7 +38,8 @@
   <link rel="import" href="elements/elements.html">
   <!-- endreplace-->
 
-  <script src="https://www.gstatic.com/firebasejs/3.6.0/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.6.0/firebase.js"></script> <!-- TODO: load from app-firebase.js -->
+  <script src="bower_components/jailed/lib/jailed.js"></script> <!-- TODO: load instead from backend scripts that need it, when jailed will be able to initialize after window.onload -->
 
   <!-- For shared styles, shared-styles.html import in elements.html -->
   <style is="custom-style" include="shared-styles"></style>
