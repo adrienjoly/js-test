@@ -1,6 +1,15 @@
-== v2.4.0 (WIP)
- * `_studentCode` string can be used for code evaluation tests
- * `npm test` tests the evaluation on provided exercise solutions
+== v2.4.0 Robustness and adaptivity
+ * Change: question numbering is now global: no more id collisions
+ * Feature: no longer limited to 1 quizz + 1 code exercises
+ * Feature: variants are applied on solutions too, when displayed
+ * Feature: custom exercise titles using Markdown (optional)
+ * Feature: new auto-evaluation backend: `auto-eval` (on submit only)
+ * Feature: `npm test` tests the evaluation on provided exercise solutions
+ * Feature: `_studentCode` string can be used for code evaluation tests
+ * Bug fix: allow evaluation code on same line of `_runStudentCode()`
+ * Bug fix: better browser support for Firefox and Safari
+ * Optimization: disabled Polymer routing, buggy and useless
+ * Refactoring: renamed classes and scripts, more self-explanatory
 
 == v2.3.0 Student auto-evaluation, thanks to `realtime-eval` backend mode
  * backend logic selected from config (e.g. firebase, realtime-eval, or none)
