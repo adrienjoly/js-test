@@ -1,7 +1,7 @@
 module.exports = {
 
   // General settings
-  PUBLIC_TEST_MODE: false, // set to false to restrict acccess and identify students using Google Login
+  PUBLIC_TEST_MODE: true, // set to false to restrict acccess and identify students using Google Login
   DISPLAY_SOLUTIONS_AFTER_SUBMIT: true, // set to false, for real exams
 
   // Back-end config
@@ -27,11 +27,13 @@ module.exports = {
   emailSubject: 'JS EXAM DATA',
   */
   
+  /*
   // Authentication
   GOOGLE_CLIENT_ID: '247219641427-ifeq88p7rgor9al5ksduds7ug0ba7djr.apps.googleusercontent.com', // generated from https://console.developers.google.com/apis/credentials?project=eemi-own-exam&authuser=1
   GOOGLE_CLIENT_DOMAIN: 'eemi.com', // to restrict access to users from a certain domain only
   LOGIN_INVITE: 'Se connecter à son compte EEMI:',
-
+  */
+  
   // Evaluation / grading
   quizzGrading: {
     ptsRight: 1,

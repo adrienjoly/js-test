@@ -3,15 +3,12 @@
   'use strict';
   var app = document.querySelector('#app');
   app.config = {
-    "PUBLIC_TEST_MODE": false,
+    "PUBLIC_TEST_MODE": true,
     "DISPLAY_SOLUTIONS_AFTER_SUBMIT": true,
     "backend": {
       "type": "realtime-eval"
     },
     "title": "JavaScript Révisions",
-    "GOOGLE_CLIENT_ID": "247219641427-ifeq88p7rgor9al5ksduds7ug0ba7djr.apps.googleusercontent.com",
-    "GOOGLE_CLIENT_DOMAIN": "eemi.com",
-    "LOGIN_INVITE": "Se connecter à son compte EEMI:",
     "quizzGrading": {
       "ptsRight": 1,
       "ptsWrong": 0,
