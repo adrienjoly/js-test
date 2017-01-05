@@ -105,7 +105,7 @@
                 <template is="dom-if" if="{{myAnswers._d}}">
                   <p>Date/heure de rendu: {{myAnswers._d}}</p>
                 </template>
-                <template is="dom-if" if="{{myAnswers._score !== null}}">
+                <template is="dom-if" if="{{myAnswers._score}}">
                   <p class="total-points">Note obtenue: {{myAnswers._score}} / {{myAnswers._maxScore}}</p>
                 </template>
               </template>
