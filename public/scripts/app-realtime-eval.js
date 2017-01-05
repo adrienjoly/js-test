@@ -25,8 +25,9 @@
   app._score = null;
 
   app._onLogin = function() {
+    console.log('_onLogin');
     app.set('active', true);
-    app.myAnswers._uid = app.user.id;
+    app.myAnswers = Object.assign({ _uid: app.user.id }, app.myAnswers);
   };
 
   app.myPoints = function(myAnswers, questionId) {

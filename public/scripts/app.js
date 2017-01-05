@@ -121,27 +121,32 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
   // FOR PUBLIC TESTING: fakes Google Login
   if (app.config.PUBLIC_TEST_MODE) {
-    var id = Math.floor(999 * Math.random()); // variant is based on user id => randomize it
-    onLogin({
-      id: id,
-      name: 'Demo User #' + id,
-      email: 'demo-user-' + id + '@example.com',
-      token: 'XXX'
-    }/*, true*/);
-    app.loggedIn = true;
-    app.active = true;
+    app.onBackendLoaded = function() {
+      var id = Math.floor(999 * Math.random()); // variant is based on user id => randomize it
+      onLogin({
+        id: id,
+        name: 'Demo User #' + id,
+        email: 'demo-user-' + id + '@example.com',
+        token: 'XXX'
+      }/*, true*/);
+      app.loggedIn = true;
+      app.active = true;
+    };
   }
 
   app.ready = function(){
     console.log('ready');
+    app.ready = null; // prevent this function from running twice
     // load backend
     app.async(function(){
       console.log('init backend:', (app.config.backend || {}).type || 'none');
       if (app.config.backend && app.config.backend.type && app.config.backend.type !== 'none') {
         var el = document.createElement('script');
         el.setAttribute('src', 'scripts/app-' + app.config.backend.type + '.js');
+        el.onload = app.onBackendLoaded;
         this.appendChild(el);
       } else {
+        app.onBackendLoaded && app.onBackendLoaded();
         app.active = true;
       }
     });
