@@ -11,7 +11,7 @@ function getVariantByStudentId (id, variants) {
       }
       return divident % divisor;
   };
-  return modulo(id, variants.length);
+  return modulo('' + id, variants.length);
 };
 
 function makeCodeEvaluator(jailed, async, codeGradingOptions) {
