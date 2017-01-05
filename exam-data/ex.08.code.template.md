@@ -1,10 +1,11 @@
-# TP 5 - Code
+# Tableaux - Code
 
 Créez une variable `nombres` de type tableau et contenant les nombres `1`, `2` et `3`.
 
 ???
 
 Solution:
+
 ```js
 var nombres = [1, 2, 3];
 ```
@@ -33,6 +34,7 @@ Saisissez le code JavaScript pour créer une variable `troisieme` et lui affecte
 ???
 
 Solution:
+
 ```js
 var troisieme = fruits[2];
 ```
@@ -63,6 +65,7 @@ Saisissez le code JavaScript permettant de retirer le dernier élément de ce ta
 ???
 
 Solution:
+
 ```js
 console.log(fruits.pop());
 ```
@@ -106,6 +109,7 @@ Exemples d'appels:
 ???
 
 Solution:
+
 ```js
 function tableauContient(tableau, chaine) {
   var indice = tableau.indexOf(chaine);

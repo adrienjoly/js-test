@@ -1,10 +1,11 @@
-# TP 3 - Code
+# Algo / Boucles - Code
 
 Implémenter un programme de moins de 4 lignes qui affiche 50 fois `'Bonjour!'` dans la console. Respecter les conventions et règles d'indentation vues en cours.
 
 ???
 
 Solution:
+
 ```js
 for ( var i = 0; i < 50; i++ ) {
   console.log('Bonjour!');

@@ -1,4 +1,4 @@
-# TP 4 - QCM
+# Fonctions - QCM
 
 ```js
 function maFonction(param) {
@@ -42,7 +42,7 @@ Cette instruction va exécuter le code défini dans la fonction, et affecter les
 
 ---
 
-```
+```js
 // cette fonction concatène un zéro à la fin de la valeur passée en paramètre
 function maFonction(param) {
   return param + '0';

@@ -1,4 +1,4 @@
-# TP 3 - QCM
+# Algo / Boucles - QCM
 
 Combien de fois les instructions vont-elles être exécutées ?
 

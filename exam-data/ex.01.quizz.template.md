@@ -1,4 +1,4 @@
-# TP 1 - QCM
+# Les bases - QCM
 
 Comment ouvrir la console JavaScript dans Google Chrome ?
 
@@ -58,6 +58,40 @@ Il est aussi possible d'affecter une valeur à cette variable au moment de sa cr
 
 ---
 
+Quel est le type de cette variable:
+
+```js
+var maVariable = 3.2;
+```
+
+- string
+* number
+- decimal
+- boolean
+
+???
+
+Réponse: en Javascript, les nombres décimaux sont aussi de type `number`.
+
+---
+
+Quel est le type de cette variable:
+
+```js
+var maVariable = '3.2';
+```
+
+* string
+- number
+- decimal
+- boolean
+
+???
+
+Réponse: la valeur est entourée d'apostrophes => c'est une chaîne de caractères (`string`).
+
+---
+
 Comment afficher la valeur d'une variable appelée `maVariable` depuis la console ?
 
 * maVariable;
@@ -102,3 +136,20 @@ Réponse: *la valeur de la variable va être remplacée par la chaine de caract�
 L'affectation consiste à utiliser l'opérateur `=` pour remplacer la valeur d'une variable par une autre valeur.
 Pour effectuer une concaténation, il faut utiliser l'opérateur `+`, et non l'opérateur d'affectation.
 JavaScript est un langage faiblement typé, il est donc possible d'affecter une valeur de n'importe quel type à n'importe quelle variable.  
+
+---
+
+En respectant les conventions indiquées en cours, quelle affectation faut-il exécuter pour que `J'ai tout compris !` s'affiche à l'écran ?
+
+```js
+alert(message);
+```
+
+- message = "J'ai tout compris !";
+- message = 'J"ai tout compris !';
+* message = 'J\'ai tout compris !';
+- message = J'ai tout compris !
+
+???
+
+Réponse: `'J\'ai tout compris !'` car nous utilisons des apostrophes autour des chaînes de caractères, et antislash pour afficher des apostrophes à l'intérieur de chaînes de caractères.

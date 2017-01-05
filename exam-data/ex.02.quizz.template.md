@@ -1,8 +1,25 @@
-# TP 2 - QCM
+# Conditions - QCM
 
-Quel section va être exécutée, si on exécute le code suivant ?
+Que vaut cette expression de comparaison de valeur ?
 
+```js
+3.2 === '3.2'
 ```
+
+- true
+* false
+- undefined
+- c'est une affectation
+
+???
+
+Réponse: le triple égal est une comparaison stricte: elle renvoie `false` ici car les deux valeurs ne sont pas du même type.
+
+---
+
+Quelle section va être exécutée, si on exécute le code suivant ?
+
+```js
 var nb = 2;
 if (nb === 1) {
   // A
@@ -23,9 +40,9 @@ donc ce sont les intructions rattachées à l'alternative par défaut (`else`) q
 
 ---
 
-Quel section de va être exécutée, si on exécute le code suivant ?
+Quelle section de va être exécutée, si on exécute le code suivant ?
 
-```
+```js
 var nb = 2;
 if (nb === 2) {
   // A
@@ -51,7 +68,7 @@ c'est donc la section A qui va s'exécuter.
 
 À quoi ressemblerait l'arbre de décision correspondant à ce code:
 
-```
+```js
 var reponse = prompt('as-tu faim ?')
 if (reponse === 'oui') {
   var reponse2 = prompt('aimes-tu les burgers ?');

@@ -26,7 +26,7 @@
       "_info": "generated from ex.01.quizz.template.md",
       "i": 1,
       "isQuizz": true,
-      "title": "TP 1 - QCM",
+      "title": "Les bases - QCM",
       "questions": [
         {
           "i": 1,
@@ -127,6 +127,54 @@
         {
           "i": 5,
           "id": "qcm5",
+          "md": "Quel est le type de cette variable:\n\n```js\nvar maVariable = 3.2;\n```\n\n\n",
+          "mdSolution": "\n\nRéponse: en Javascript, les nombres décimaux sont aussi de type `number`.",
+          "choices": [
+            {
+              "name": 1,
+              "text": "string"
+            },
+            {
+              "name": 2,
+              "text": "number"
+            },
+            {
+              "name": 3,
+              "text": "decimal"
+            },
+            {
+              "name": 4,
+              "text": "boolean"
+            }
+          ]
+        },
+        {
+          "i": 6,
+          "id": "qcm6",
+          "md": "Quel est le type de cette variable:\n\n```js\nvar maVariable = '3.2';\n```\n\n\n",
+          "mdSolution": "\n\nRéponse: la valeur est entourée d'apostrophes => c'est une chaîne de caractères (`string`).",
+          "choices": [
+            {
+              "name": 1,
+              "text": "string"
+            },
+            {
+              "name": 2,
+              "text": "number"
+            },
+            {
+              "name": 3,
+              "text": "decimal"
+            },
+            {
+              "name": 4,
+              "text": "boolean"
+            }
+          ]
+        },
+        {
+          "i": 7,
+          "id": "qcm7",
           "md": "Comment afficher la valeur d'une variable appelée `maVariable` depuis la console ?\n\n\n",
           "mdSolution": "\n\nRéponse: `maVariable;`\nDans la console JavaScript, il suffit de taper le nom du variable pour afficher sa valeur, de la même façon que taper `1+1` provoquera l'affichage de `2`.\nLe point virgule n'est pas imposé par la console JavaScript, mais c'est une convention à suivre.",
           "choices": [
@@ -149,8 +197,8 @@
           ]
         },
         {
-          "i": 6,
-          "id": "qcm6",
+          "i": 8,
+          "id": "qcm8",
           "md": "Comment changer la valeur d'une variable existante ? (déjà créée)\n\n\n",
           "mdSolution": "\n\nRéponse: `maVariable = 4;`\nLe mot-clé `var` n'est à utiliser que lorsque la variable n'a pas encore été créée.\nL'usage des parenthèses dans `maVariable(4);` provoque l'appel d'une fonction appelée `maVariable` en passant la valeur `4` en paramètre.\nEnfin, l'opérateur d'affectation stocke la valeur à droite du `=` dans la variable à gauche du `=`, donc `4 = maVariable` n'a pas de sens car `4` n'est pas une variable.",
           "choices": [
@@ -173,8 +221,8 @@
           ]
         },
         {
-          "i": 7,
-          "id": "qcm7",
+          "i": 9,
+          "id": "qcm9",
           "md": "Si j'ai créé une variable dont la valeur est un nombre, que se passera-t-il si je lui affecte ensuite une chaine de caractères ?\n\n\n",
           "mdSolution": "\n\nRéponse: *la valeur de la variable va être remplacée par la chaine de caractères.*\nL'affectation consiste à utiliser l'opérateur `=` pour remplacer la valeur d'une variable par une autre valeur.\nPour effectuer une concaténation, il faut utiliser l'opérateur `+`, et non l'opérateur d'affectation.\nJavaScript est un langage faiblement typé, il est donc possible d'affecter une valeur de n'importe quel type à n'importe quelle variable.",
           "choices": [
@@ -195,6 +243,30 @@
               "text": "les deux valeurs vont être concaténées."
             }
           ]
+        },
+        {
+          "i": 10,
+          "id": "qcm10",
+          "md": "En respectant les conventions indiquées en cours, quelle affectation faut-il exécuter pour que `J'ai tout compris !` s'affiche à l'écran ?\n\n```js\nalert(message);\n```\n\n\n",
+          "mdSolution": "\n\nRéponse: `'J\\'ai tout compris !'` car nous utilisons des apostrophes autour des chaînes de caractères, et antislash pour afficher des apostrophes à l'intérieur de chaînes de caractères.",
+          "choices": [
+            {
+              "name": 1,
+              "text": "message = \"J'ai tout compris !\";"
+            },
+            {
+              "name": 2,
+              "text": "message = 'J\"ai tout compris !';"
+            },
+            {
+              "name": 3,
+              "text": "message = 'J\\'ai tout compris !';"
+            },
+            {
+              "name": 4,
+              "text": "message = J'ai tout compris !"
+            }
+          ]
         }
       ],
       "solutions": {
@@ -202,21 +274,48 @@
         "qcm2": 1,
         "qcm3": 3,
         "qcm4": 2,
-        "qcm5": 1,
-        "qcm6": 2,
-        "qcm7": 3
+        "qcm5": 2,
+        "qcm6": 1,
+        "qcm7": 1,
+        "qcm8": 2,
+        "qcm9": 3,
+        "qcm10": 3
       }
     },
     {
       "_info": "generated from ex.02.quizz.template.md",
       "i": 2,
       "isQuizz": true,
-      "title": "TP 2 - QCM",
+      "title": "Conditions - QCM",
       "questions": [
         {
-          "i": 8,
-          "id": "qcm8",
-          "md": "\nQuel section va être exécutée, si on exécute le code suivant ?\n\n```\nvar nb = 2;\nif (nb === 1) {\n  // A\n} else {\n  // B\n}\n```\n\n\n",
+          "i": 11,
+          "id": "qcm11",
+          "md": "\nQue vaut cette expression de comparaison de valeur ?\n\n```js\n3.2 === '3.2'\n```\n\n\n",
+          "mdSolution": "\n\nRéponse: le triple égal est une comparaison stricte: elle renvoie `false` ici car les deux valeurs ne sont pas du même type.",
+          "choices": [
+            {
+              "name": 1,
+              "text": "true"
+            },
+            {
+              "name": 2,
+              "text": "false"
+            },
+            {
+              "name": 3,
+              "text": "undefined"
+            },
+            {
+              "name": 4,
+              "text": "c'est une affectation"
+            }
+          ]
+        },
+        {
+          "i": 12,
+          "id": "qcm12",
+          "md": "Quelle section va être exécutée, si on exécute le code suivant ?\n\n```js\nvar nb = 2;\nif (nb === 1) {\n  // A\n} else {\n  // B\n}\n```\n\n\n",
           "mdSolution": "\n\nRéponse: B, car l'expression d'égalité `nb === 1` de la premiere condition est fausse,\ndonc ce sont les intructions rattachées à l'alternative par défaut (`else`) qui sont exécutées.",
           "choices": [
             {
@@ -238,9 +337,9 @@
           ]
         },
         {
-          "i": 9,
-          "id": "qcm9",
-          "md": "Quel section de va être exécutée, si on exécute le code suivant ?\n\n```\nvar nb = 2;\nif (nb === 2) {\n  // A\n} else if (nb > 1) {\n  // B\n} else {\n  // C\n}\n```\n\n\n",
+          "i": 13,
+          "id": "qcm13",
+          "md": "Quelle section de va être exécutée, si on exécute le code suivant ?\n\n```js\nvar nb = 2;\nif (nb === 2) {\n  // A\n} else if (nb > 1) {\n  // B\n} else {\n  // C\n}\n```\n\n\n",
           "mdSolution": "\n\nRéponse: A. Une seule des trois alternatives peut s'exécuter, car elles sont liées par des `else`.\nSachant que les conditions sont évaluées de haut en bas, et que la première expression est vraie,\nc'est donc la section A qui va s'exécuter.",
           "choices": [
             {
@@ -262,9 +361,9 @@
           ]
         },
         {
-          "i": 10,
-          "id": "qcm10",
-          "md": "À quoi ressemblerait l'arbre de décision correspondant à ce code:\n\n```\nvar reponse = prompt('as-tu faim ?')\nif (reponse === 'oui') {\n  var reponse2 = prompt('aimes-tu les burgers ?');\n  if (reponse2 === 'oui') {\n    alert('alors je t\\'en offre un !');\n  } else {\n    alert('dommage !');\n  }\n} else {\n  alert('désolé');\n}\n```\n\n\n",
+          "i": 14,
+          "id": "qcm14",
+          "md": "À quoi ressemblerait l'arbre de décision correspondant à ce code:\n\n```js\nvar reponse = prompt('as-tu faim ?')\nif (reponse === 'oui') {\n  var reponse2 = prompt('aimes-tu les burgers ?');\n  if (reponse2 === 'oui') {\n    alert('alors je t\\'en offre un !');\n  } else {\n    alert('dommage !');\n  }\n} else {\n  alert('désolé');\n}\n```\n\n\n",
           "mdSolution": "\n\nRéponse: Une première boîte (niveau 1) représente la question `as-tu faim ?`, et a deux branches: `oui` et *autre*.\nLiée à la première branche, une deuxième boîte (niveau 2) représente la question `aimes-tu les burgers ?`, et\na elle-aussi deux branches: `oui` et *autre*.",
           "choices": [
             {
@@ -286,8 +385,8 @@
           ]
         },
         {
-          "i": 11,
-          "id": "qcm11",
+          "i": 15,
+          "id": "qcm15",
           "md": "Pourquoi faut-il éviter d'utiliser les opérateurs `==` et `!=` ?\n\n\n",
           "mdSolution": "\n\nRéponse: Ils sont trop laxistes, dans le sens où deux valeurs de types différents (ex: `1` et `'1'`) peuvent\nêtre vus comme égaux par l'opérateur `==`. Cet excès de tolérance peut occasionner des comportements imprévus\nqui font perdre beaucoup de temps à diagnostiquer et à corriger. Idem pour `!=`.",
           "choices": [
@@ -311,21 +410,22 @@
         }
       ],
       "solutions": {
-        "qcm8": 2,
-        "qcm9": 1,
-        "qcm10": 3,
-        "qcm11": 3
+        "qcm11": 2,
+        "qcm12": 2,
+        "qcm13": 1,
+        "qcm14": 3,
+        "qcm15": 3
       }
     },
     {
       "_info": "generated from ex.03.code.template.md",
       "i": 3,
       "isCode": true,
-      "title": "TP 2 - Code",
+      "title": "Conditions - Code",
       "questions": [
         {
-          "i": 12,
-          "id": "code12",
+          "i": 16,
+          "id": "code16",
           "variants": [
             {}
           ],
@@ -338,484 +438,10 @@
           "mdSolutions": [
             "\n\nSolution:\n\n```js\nif (nombre === 4) {\n  resultat = 'egal';\n}\n```\n"
           ]
-        }
-      ]
-    },
-    {
-      "_info": "generated from ex.04.quizz.template.md",
-      "i": 4,
-      "isQuizz": true,
-      "title": "TP 3 - QCM",
-      "questions": [
-        {
-          "i": 13,
-          "id": "qcm13",
-          "md": "\nCombien de fois les instructions vont-elles être exécutées ?\n\n```js\nfor ( var i = 0; i < 4; i++ ) {\n  // instructions\n}\n```\n\n\n",
-          "mdSolution": "\n\nLes instructions vont être exécutées pour chaque valeur de `i` entre `0` et `4` (non compris), soit 0, 1, 2, puis 3.\n\nCe qui fait 4 itérations.",
-          "choices": [
-            {
-              "name": 1,
-              "text": "0 fois"
-            },
-            {
-              "name": 2,
-              "text": "1 fois"
-            },
-            {
-              "name": 3,
-              "text": "3 fois"
-            },
-            {
-              "name": 4,
-              "text": "4 fois"
-            }
-          ]
-        },
-        {
-          "i": 14,
-          "id": "qcm14",
-          "md": "Combien de fois les instructions vont-elles être exécutées ?\n\n```js\nfor ( var i = 3; i >= 1; i-- ) {\n  // instructions\n}\n```\n\n\n",
-          "mdSolution": "\n\nLes instructions vont être exécutées pour chaque valeur de `i` entre `3` et `1` (compris), soit 3, 2, puis 1.\n\nCe qui fait 3 itérations.",
-          "choices": [
-            {
-              "name": 1,
-              "text": "0 fois"
-            },
-            {
-              "name": 2,
-              "text": "1 fois"
-            },
-            {
-              "name": 3,
-              "text": "3 fois"
-            },
-            {
-              "name": 4,
-              "text": "4 fois"
-            }
-          ]
-        }
-      ],
-      "solutions": {
-        "qcm13": 4,
-        "qcm14": 3
-      }
-    },
-    {
-      "_info": "generated from ex.05.code.template.md",
-      "i": 5,
-      "isCode": true,
-      "title": "TP 3 - Code",
-      "questions": [
-        {
-          "i": 15,
-          "id": "code15",
-          "variants": [
-            {}
-          ],
-          "testVariants": [
-            "\n// automatic student evaluation code\n(function evaluateStudentCode(){\n  var nb = 0;\n  var lastLog;\n  var console = {\n    log: function(t){\n      lastLog = t;\n      nb++;\n    }\n  };\n  _runStudentCode();\n  var tests = [\n    `_studentCode`.indexOf('for') !== -1,\n    nb === 50,\n    lastLog === 'Bonjour!',\n  ];\n  application.remote._send(null, tests); // 1 point per passing test => 3 pts per exercise\n})();\n"
-          ],
-          "mdVariants": [
-            "\nImplémenter un programme de moins de 4 lignes qui affiche 50 fois `'Bonjour!'` dans la console. Respecter les conventions et règles d'indentation vues en cours.\n\n"
-          ],
-          "mdSolutions": [
-            "\n\nSolution:\n```js\nfor ( var i = 0; i < 50; i++ ) {\n  console.log('Bonjour!');\n}\n```\n"
-          ]
-        }
-      ]
-    },
-    {
-      "_info": "generated from ex.06.quizz.template.md",
-      "i": 6,
-      "isQuizz": true,
-      "title": "TP 4 - QCM",
-      "questions": [
-        {
-          "i": 16,
-          "id": "qcm16",
-          "md": "\n```js\nfunction maFonction(param) {\n  return param + 2;\n}\n```\n\nCeci est:\n\n\n",
-          "mdSolution": "\n\nC'est une définition de fonction.\n\nOn la reconnait à l'usage du mot clé `function` et des accolades entourant le code qui sera exécuté lorsque cette fonction sera appelée.",
-          "choices": [
-            {
-              "name": 1,
-              "text": "un appel de fonction"
-            },
-            {
-              "name": 2,
-              "text": "une définition de fonction"
-            },
-            {
-              "name": 3,
-              "text": "une affectation de fonction"
-            },
-            {
-              "name": 4,
-              "text": "une fonction qui ne fonctionne pas"
-            }
-          ]
         },
         {
           "i": 17,
-          "id": "qcm17",
-          "md": "```js\nmaFonction(4);\n```\n\nCeci est:\n\n\n",
-          "mdSolution": "\n\nC'est un appel de fonction.\n\nUn appel de fonction = le nom de la fonction, suivi par les paramètres entre parenthèses. Sans le mot clé `function`.\n\nCette instruction va exécuter le code défini dans la fonction, et affecter les valeurs fournies à chaque paramètre.",
-          "choices": [
-            {
-              "name": 1,
-              "text": "un appel de fonction"
-            },
-            {
-              "name": 2,
-              "text": "une définition de fonction"
-            },
-            {
-              "name": 3,
-              "text": "une affectation de fonction"
-            },
-            {
-              "name": 4,
-              "text": "une fonction qui ne fonctionne pas"
-            }
-          ]
-        },
-        {
-          "i": 18,
-          "id": "qcm18",
-          "md": "```\n// cette fonction concatène un zéro à la fin de la valeur passée en paramètre\nfunction maFonction(param) {\n  return param + '0';\n}\n```\n\nComment savoir si cette fonction fonctionne bien ? (c.a.d. sans bug)\n\n\n",
-          "mdSolution": "\n\nPour vérifier le bon fonctionnement il faut définir et exécuter des tests unitaires.\n\nCeux-ci permettent de comparer le résultat attendu d'une fonction, à celui effectivement retourné par l'implémentation actuelle de cette fonction.\n\n`maFonction(1) === '10';` est un bon test unitaire car son exécution retourne `true` si la fonction retourne le résultat attendu (`10`) lorsqu'on lui passe `1` en paramètre.",
-          "choices": [
-            {
-              "name": 1,
-              "text": "il suffit de la copier-coller dans la console"
-            },
-            {
-              "name": 2,
-              "text": "il faut taper maFonction dans la console"
-            },
-            {
-              "name": 3,
-              "text": "vérifier que le test passe: maFonction(1) === '10';"
-            },
-            {
-              "name": 4,
-              "text": "vérifier que maFonction(1) renvoie bien true"
-            }
-          ]
-        },
-        {
-          "i": 19,
-          "id": "qcm19",
-          "md": "Supposons que nous avons défini une fonction `doubler()` qui retourne le double du nombre passé en paramètre, lors de son appel.\n\nQue se passe-t-il si on exécute l'instruction suivante:\n\n```js\nvar maVariable = doubler(3);\n```\n\n\n",
-          "mdSolution": "\n\nIl s'agit ici d'un appel de fonction. De la même façon que pour une opération élémentaire (ex: `2 + 2`), tout appel de fonction sera remplacé par la valeur retourné par l'exécution de cette fonction.\n\nIci, le résultat de l'exécution de la fonction `doubler` avec le paramètre `3`, soit la valeur `6`, va être affectée à `maVariable`.",
-          "choices": [
-            {
-              "name": 1,
-              "text": "le résultat va être affecté à maVariable"
-            },
-            {
-              "name": 2,
-              "text": "le résultat va s'afficher dans la console"
-            },
-            {
-              "name": 3,
-              "text": "maVariable contient la définition de la fonction"
-            },
-            {
-              "name": 4,
-              "text": "maVariable contient l'appel de la fonction"
-            }
-          ]
-        }
-      ],
-      "solutions": {
-        "qcm16": 2,
-        "qcm17": 1,
-        "qcm18": 3,
-        "qcm19": 1
-      }
-    },
-    {
-      "_info": "generated from ex.07.code.template.md",
-      "i": 7,
-      "isCode": true,
-      "title": "TP 4 - Code",
-      "questions": [
-        {
-          "i": 20,
-          "id": "code20",
-          "variants": [
-            {}
-          ],
-          "testVariants": [
-            "\n// automatic student evaluation code\n(function evaluateStudentCode(){\n  var console = { log: function(){} }; // tolerate console.log() calls\n  _runStudentCode();\n  var tests = [\n    typeof soustraire === 'function', \n    soustraire(2, 1) === 1,\n    soustraire(2, -1) === 3,\n  ];\n  application.remote._send(null, tests); // 1 point per passing test => 3 pts per exercise\n})();\n"
-          ],
-          "mdVariants": [
-            "\nDéfinir une fonction `soustraire` qui retourne le résultat de la soustraction `a - b`, `a` et `b` étant des paramètres de cette fonction.\n\nRespecter les conventions et règles d'indentation vues en cours.\n\n"
-          ],
-          "mdSolutions": [
-            "\n\nSolution:\n```js\nfunction soustraire(a, b) {\n  return a - b;\n}\n```\n"
-          ]
-        },
-        {
-          "i": 21,
-          "id": "code21",
-          "variants": [
-            {}
-          ],
-          "testVariants": [
-            "\n// automatic student evaluation code\n(function evaluateStudentCode(){\n  var nb = 0;\n  var console = {\n    log: function(t){\n      if (t === 'Bonjour!') {\n        nb++;\n      }\n    }\n  };\n  _runStudentCode();\n  var res = repeter(25);\n  var tests = [\n    typeof repeter === 'function',\n    nb === 25,\n    res === 25,\n  ];\n  application.remote._send(null, tests); // 1 point per passing test => 3 pts per exercise\n})();\n"
-          ],
-          "mdVariants": [
-            "Définir une fonction `repeter` qui affiche `n` fois `'Bonjour!'` dans la console, puis qui retourne `n`, `n` étant un paramètre de cette fonction.\n\nRespecter les conventions et règles d'indentation vues en cours.\n\n"
-          ],
-          "mdSolutions": [
-            "\n\nSolution:\n```js\nfunction repeter(n) {\n  for (var i = 0; i < n; i++) {\n    console.log('Bonjour!');\n  }\n  return n;\n}\n```\n"
-          ]
-        }
-      ]
-    },
-    {
-      "_info": "generated from ex.08.code.template.md",
-      "i": 8,
-      "isCode": true,
-      "title": "TP 5 - Code",
-      "questions": [
-        {
-          "i": 22,
-          "id": "code22",
-          "variants": [
-            {}
-          ],
-          "testVariants": [
-            "\n// automatic student evaluation code\n(function evaluateStudentCode(){\n  _runStudentCode();\n  var tests = [\n    nombres[0] === 1,\n    nombres.length === 3,\n    nombres.join(',') === '1,2,3',\n  ];\n  application.remote._send(null, tests); // 1 point per passing test => 3 pts per exercise\n})();\n"
-          ],
-          "mdVariants": [
-            "\nCréez une variable `nombres` de type tableau et contenant les nombres `1`, `2` et `3`.\n\n"
-          ],
-          "mdSolutions": [
-            "\n\nSolution:\n```js\nvar nombres = [1, 2, 3];\n```\n"
-          ]
-        },
-        {
-          "i": 23,
-          "id": "code23",
-          "variants": [
-            {}
-          ],
-          "testVariants": [
-            "\n// automatic student evaluation code\n(function evaluateStudentCode(){\n  var _fruits = ['pomme', 'orange', 'kiwi'];\n  var fruits = _fruits.slice(); // clone\n  _runStudentCode();\n  var tests = [\n    troisieme === _fruits[2],\n    fruits.join(',') === _fruits.join(','),\n    `_studentCode`.replace(/[\\(\\) ]/g, '').indexOf('[2]') !== -1,\n  ];\n  application.remote._send(null, tests); // 1 point per passing test => 3 pts per exercise\n})();\n"
-          ],
-          "mdVariants": [
-            "Vous disposez d'une variable `fruits` contenant un tableau de chaînes de caractères.\n\nSaisissez le code JavaScript pour créer une variable `troisieme` et lui affecter la valeur du 3ème élément de ce tableau.\n\n"
-          ],
-          "mdSolutions": [
-            "\n\nSolution:\n```js\nvar troisieme = fruits[2];\n```\n"
-          ]
-        },
-        {
-          "i": 24,
-          "id": "code24",
-          "variants": [
-            {}
-          ],
-          "testVariants": [
-            "\n// automatic student evaluation code\n(function evaluateStudentCode(){\n  var _fruits = ['pomme', 'orange', 'kiwi'];\n  var fruits = _fruits.slice(); // clone\n  var out;\n  var console = { log: function(value){\n    out = value;\n  } };\n  _runStudentCode();\n  var tests = [\n    out === _fruits.pop(),\n    fruits.join(',') === _fruits.join(','),\n    `_studentCode`.toString().replace(/[\\(\\) ]/g, '').indexOf('.pop') !== -1,\n  ];\n  application.remote._log('3', tests);\n  application.remote._send(null, tests); // 1 point per passing test => 3 pts per exercise\n})();\n"
-          ],
-          "mdVariants": [
-            "Vous disposez d'une variable `fruits` contenant un tableau de chaînes de caractères.\n\nSaisissez le code JavaScript permettant de retirer le dernier élément de ce tableau, et d'afficher la valeur de cet élément dans la console.\n\n"
-          ],
-          "mdSolutions": [
-            "\n\nSolution:\n```js\nconsole.log(fruits.pop());\n```\n"
-          ]
-        },
-        {
-          "i": 25,
-          "id": "code25",
-          "variants": [
-            {}
-          ],
-          "testVariants": [
-            "\n// automatic student evaluation code\n(function evaluateStudentCode(){\n  var console = { log: function(){} }; // tolerate console.log() calls\n  _runStudentCode();\n  var tests = [\n    typeof tableauContient === 'function',\n    tableauContient(['a', 'b', 'c'], 'b') === 1,\n    tableauContient(['a', 'b', 'c'], 'd') === false,\n  ];\n  application.remote._send(null, tests); // 1 point per passing test => 3 pts per exercise\n})();\n"
-          ],
-          "mdVariants": [
-            "Définir une fonction `tableauContient` qui prend deux paramètres:\n - `tableau`: un tableau de chaînes de caractères\n - `chaine`: une chaîne de caractères\n\n...et retourne:\n - `false` si la valeur `chaine` n'a pas été trouvée dans le tableau `tableau`,\n - ou le premier indice (à partir de 0) auquel a été trouvé la valeur `chaine` dans le tableau `tableau`.\n\nExemples d'appels:\n - `tableauContient(['a', 'b', 'c'], 'b');` doit retourner `1`.\n - `tableauContient(['a', 'b', 'c'], 'd');` doit retourner `false`.\n\n"
-          ],
-          "mdSolutions": [
-            "\n\nSolution:\n```js\nfunction tableauContient(tableau, chaine) {\n  var indice = tableau.indexOf(chaine);\n  if (indice === -1) {\n    return false;\n  } else {\n    return indice;\n  }\n}\n```\n"
-          ]
-        }
-      ]
-    },
-    {
-      "_info": "generated from ex.09.quizz.template.md",
-      "i": 9,
-      "isQuizz": true,
-      "title": "Controle 1 - QCM",
-      "questions": [
-        {
-          "i": 26,
-          "id": "qcm26",
-          "md": "\nComment créer une variable en JavaScript ?\n  \t\t  \n\n",
-          "mdSolution": "\n\nRéponse: il faut utiliser le mot clé `var` suivi du nom de la variable à créer.",
-          "choices": [
-            {
-              "name": 1,
-              "text": "maVariable;"
-            },
-            {
-              "name": 2,
-              "text": "var maVariable;"
-            },
-            {
-              "name": 3,
-              "text": "x = 0;"
-            },
-            {
-              "name": 4,
-              "text": "maVariable = 'bonjour';"
-            }
-          ]
-        },
-        {
-          "i": 27,
-          "id": "qcm27",
-          "md": "Quel est le type de cette variable:\n\n```\nvar maVariable = 3.2;\n```\n\n\n",
-          "mdSolution": "\n\nRéponse: en Javascript, les nombres décimaux sont aussi de type `number`.",
-          "choices": [
-            {
-              "name": 1,
-              "text": "string"
-            },
-            {
-              "name": 2,
-              "text": "number"
-            },
-            {
-              "name": 3,
-              "text": "decimal"
-            },
-            {
-              "name": 4,
-              "text": "boolean"
-            }
-          ]
-        },
-        {
-          "i": 28,
-          "id": "qcm28",
-          "md": "Quel est le type de cette variable:\n\n```\nvar maVariable = '3.2';\n```\n\n\n",
-          "mdSolution": "\n\nRéponse: la valeur est entourée d'apostrophes => c'est une chaîne de caractères (`string`).",
-          "choices": [
-            {
-              "name": 1,
-              "text": "string"
-            },
-            {
-              "name": 2,
-              "text": "number"
-            },
-            {
-              "name": 3,
-              "text": "decimal"
-            },
-            {
-              "name": 4,
-              "text": "boolean"
-            }
-          ]
-        },
-        {
-          "i": 29,
-          "id": "qcm29",
-          "md": "Que vaut cette expression de comparaison de valeur ?\n\n```\n3.2 === '3.2'\n```\n\n\n",
-          "mdSolution": "\n\nRéponse: le triple égal est une comparaison stricte: elle renvoie `false` ici car les deux valeurs ne sont pas du même type.",
-          "choices": [
-            {
-              "name": 1,
-              "text": "true"
-            },
-            {
-              "name": 2,
-              "text": "false"
-            },
-            {
-              "name": 3,
-              "text": "undefined"
-            },
-            {
-              "name": 4,
-              "text": "c'est une affectation"
-            }
-          ]
-        },
-        {
-          "i": 30,
-          "id": "qcm30",
-          "md": "En respectant les conventions indiquées en cours, quelle affectation faut-il exécuter pour que `J'ai tout compris !` s'affiche à l'écran ?\n\n```\nalert(message);\n```\n\n\n",
-          "mdSolution": "\n\nRéponse: `'J\\'ai tout compris !'` car nous utilisons des apostrophes autour des chaînes de caractères, et antislash pour afficher des apostrophes à l'intérieur de chaînes de caractères.",
-          "choices": [
-            {
-              "name": 1,
-              "text": "message = \"J'ai tout compris !\";"
-            },
-            {
-              "name": 2,
-              "text": "message = 'J\"ai tout compris !';"
-            },
-            {
-              "name": 3,
-              "text": "message = 'J\\'ai tout compris !';"
-            },
-            {
-              "name": 4,
-              "text": "message = J'ai tout compris !"
-            }
-          ]
-        },
-        {
-          "i": 31,
-          "id": "qcm31",
-          "md": "Quelles sections vont être exécutées, si on exécute le code suivant ?\n\n```\nvar nb = 2;\nif (nb === 2) {\n  // A\n} else if (nb > 1) {\n  // B\n} else {\n  // C\n}\n```\n\n\n",
-          "mdSolution": "\n\nRéponse: seulement A, car les trois blocs conditionnels (`if {}`, `else if {}` et `else {}`) sont liés par des `else`. Donc seule la première alternative dont l'expression conditionnelle est vérifiée sera exécutée.",
-          "choices": [
-            {
-              "name": 1,
-              "text": "seulement A"
-            },
-            {
-              "name": 2,
-              "text": "seulement B"
-            },
-            {
-              "name": 3,
-              "text": "A et B"
-            },
-            {
-              "name": 4,
-              "text": "A, B et C"
-            }
-          ]
-        }
-      ],
-      "solutions": {
-        "qcm26": 2,
-        "qcm27": 2,
-        "qcm28": 1,
-        "qcm29": 2,
-        "qcm30": 3,
-        "qcm31": 1
-      }
-    },
-    {
-      "_info": "generated from ex.10.code.template.md",
-      "i": 10,
-      "isCode": true,
-      "title": "Controle 1 - Code",
-      "questions": [
-        {
-          "i": 32,
-          "id": "code32",
+          "id": "code17",
           "variants": [
             {
               "n": 1,
@@ -848,9 +474,9 @@
             "\n(function evaluateStudentCode(){\n  var done = application.remote._sendOnce; // to call upon code evaluation\n  // student's variant -> test inputs and expected outputs\n  var variant = {\n    prompts: [ 'bleu', 'foncé' ],\n    expected: 'OK',\n  };\n  // exercise requirements\n  var req = 'si l\\'utilisateur tape ' + variant.prompts.join(' puis ')\n    + ', alert devrait afficher \"' + variant.expected + '\"';\n  application.remote._setTimeoutMessage(req\n    + ', mais alert n\\'a pas été appelé...');\n  // test environment\n  var prompts = variant.prompts.slice(); // clone the array\n  function prompt() {\n    return prompts.shift();\n  }\n  function alert(message) {\n    if (message !== variant.expected) {\n      done(req + ' au lieu de \"' + message + '\"', 0.5);\n      // give a half point to the student, because her code runs\n    } else {\n      done(null, 1); // passed test => give the point to the student\n    }\n  };\n  var console = { log: function(){} }; // tolerate calls to console.log()\n  // run the test\n  _runStudentCode(); // student call should call prompt() and alert()\n})();\n"
           ],
           "mdVariants": [
-            "\nImplémenter un chat-bot à partir de l'arbre de décision suivant:\n\n![arbre de décision](data/arbre1.jpg)\n\nComme vu et pratiqué en cours:\n - Les questions posées par l'ordinateur sont représentées par des rectangles, et sont à implémenter à l'aide de la fonction `prompt()`.\n - Les réponses comprises par l'ordinateur sont écrites à côté de chaque branche, et sont à implémenter à l'aide de conditions.\n - Les messages à afficher par l'ordinateur sont représentés par des cercles, et sont à implémenter à l'aide de la fonction `alert()`.\n\nVous serez noté(e) sur:\n - le respect **à la lettre** du texte des questions et des réponses (espaces, accents, et majuscules/minuscules compris).\n - le respect des règles d'indentation et autres conventions vues en cours. (ex: 2 espaces par niveau d'indentation)\n - le bon fonctionnement de votre code, sans erreurs, depuis la console JavaScript de Google Chrome, pour chacun des cas illustrés dans l'arbre de décision.\n\n\n",
-            "\nImplémenter un chat-bot à partir de l'arbre de décision suivant:\n\n![arbre de décision](data/arbre2.jpg)\n\nComme vu et pratiqué en cours:\n - Les questions posées par l'ordinateur sont représentées par des rectangles, et sont à implémenter à l'aide de la fonction `prompt()`.\n - Les réponses comprises par l'ordinateur sont écrites à côté de chaque branche, et sont à implémenter à l'aide de conditions.\n - Les messages à afficher par l'ordinateur sont représentés par des cercles, et sont à implémenter à l'aide de la fonction `alert()`.\n\nVous serez noté(e) sur:\n - le respect **à la lettre** du texte des questions et des réponses (espaces, accents, et majuscules/minuscules compris).\n - le respect des règles d'indentation et autres conventions vues en cours. (ex: 2 espaces par niveau d'indentation)\n - le bon fonctionnement de votre code, sans erreurs, depuis la console JavaScript de Google Chrome, pour chacun des cas illustrés dans l'arbre de décision.\n\n\n",
-            "\nImplémenter un chat-bot à partir de l'arbre de décision suivant:\n\n![arbre de décision](data/arbre3.jpg)\n\nComme vu et pratiqué en cours:\n - Les questions posées par l'ordinateur sont représentées par des rectangles, et sont à implémenter à l'aide de la fonction `prompt()`.\n - Les réponses comprises par l'ordinateur sont écrites à côté de chaque branche, et sont à implémenter à l'aide de conditions.\n - Les messages à afficher par l'ordinateur sont représentés par des cercles, et sont à implémenter à l'aide de la fonction `alert()`.\n\nVous serez noté(e) sur:\n - le respect **à la lettre** du texte des questions et des réponses (espaces, accents, et majuscules/minuscules compris).\n - le respect des règles d'indentation et autres conventions vues en cours. (ex: 2 espaces par niveau d'indentation)\n - le bon fonctionnement de votre code, sans erreurs, depuis la console JavaScript de Google Chrome, pour chacun des cas illustrés dans l'arbre de décision.\n\n\n"
+            "Implémenter un chat-bot à partir de l'arbre de décision suivant:\n\n![arbre de décision](data/arbre1.jpg)\n\nComme vu et pratiqué en cours:\n - Les questions posées par l'ordinateur sont représentées par des rectangles, et sont à implémenter à l'aide de la fonction `prompt()`.\n - Les réponses comprises par l'ordinateur sont écrites à côté de chaque branche, et sont à implémenter à l'aide de conditions.\n - Les messages à afficher par l'ordinateur sont représentés par des cercles, et sont à implémenter à l'aide de la fonction `alert()`.\n\nVous serez noté(e) sur:\n - le respect **à la lettre** du texte des questions et des réponses (espaces, accents, et majuscules/minuscules compris).\n - le respect des règles d'indentation et autres conventions vues en cours. (ex: 2 espaces par niveau d'indentation)\n - le bon fonctionnement de votre code, sans erreurs, depuis la console JavaScript de Google Chrome, pour chacun des cas illustrés dans l'arbre de décision.\n\n\n",
+            "Implémenter un chat-bot à partir de l'arbre de décision suivant:\n\n![arbre de décision](data/arbre2.jpg)\n\nComme vu et pratiqué en cours:\n - Les questions posées par l'ordinateur sont représentées par des rectangles, et sont à implémenter à l'aide de la fonction `prompt()`.\n - Les réponses comprises par l'ordinateur sont écrites à côté de chaque branche, et sont à implémenter à l'aide de conditions.\n - Les messages à afficher par l'ordinateur sont représentés par des cercles, et sont à implémenter à l'aide de la fonction `alert()`.\n\nVous serez noté(e) sur:\n - le respect **à la lettre** du texte des questions et des réponses (espaces, accents, et majuscules/minuscules compris).\n - le respect des règles d'indentation et autres conventions vues en cours. (ex: 2 espaces par niveau d'indentation)\n - le bon fonctionnement de votre code, sans erreurs, depuis la console JavaScript de Google Chrome, pour chacun des cas illustrés dans l'arbre de décision.\n\n\n",
+            "Implémenter un chat-bot à partir de l'arbre de décision suivant:\n\n![arbre de décision](data/arbre3.jpg)\n\nComme vu et pratiqué en cours:\n - Les questions posées par l'ordinateur sont représentées par des rectangles, et sont à implémenter à l'aide de la fonction `prompt()`.\n - Les réponses comprises par l'ordinateur sont écrites à côté de chaque branche, et sont à implémenter à l'aide de conditions.\n - Les messages à afficher par l'ordinateur sont représentés par des cercles, et sont à implémenter à l'aide de la fonction `alert()`.\n\nVous serez noté(e) sur:\n - le respect **à la lettre** du texte des questions et des réponses (espaces, accents, et majuscules/minuscules compris).\n - le respect des règles d'indentation et autres conventions vues en cours. (ex: 2 espaces par niveau d'indentation)\n - le bon fonctionnement de votre code, sans erreurs, depuis la console JavaScript de Google Chrome, pour chacun des cas illustrés dans l'arbre de décision.\n\n\n"
           ],
           "mdSolutions": [
             "\n\nSolution:\n\n```js\nvar reponse = prompt('Ta couleur préférée ?');\nif (reponse === 'bleu') {\n  alert('OK');\n} else if (reponse === 'gris') {\n  var reponse2 = prompt('clair ou foncé ?');\n  if (reponse2 === 'clair') {\n    alert('comme le ciel');\n  } else if (reponse2 === 'foncé') {\n    alert('ah bon?');\n  } \n} else {\n  alert('je connais pas');\n}\n```\n",
@@ -861,14 +487,224 @@
       ]
     },
     {
-      "_info": "generated from ex.11.code.template.md",
-      "i": 11,
-      "isCode": true,
-      "title": "Entrainement vacances fin d'année - Code",
+      "_info": "generated from ex.04.quizz.template.md",
+      "i": 4,
+      "isQuizz": true,
+      "title": "Algo / Boucles - QCM",
       "questions": [
         {
-          "i": 33,
-          "id": "code33",
+          "i": 18,
+          "id": "qcm18",
+          "md": "\nCombien de fois les instructions vont-elles être exécutées ?\n\n```js\nfor ( var i = 0; i < 4; i++ ) {\n  // instructions\n}\n```\n\n\n",
+          "mdSolution": "\n\nLes instructions vont être exécutées pour chaque valeur de `i` entre `0` et `4` (non compris), soit 0, 1, 2, puis 3.\n\nCe qui fait 4 itérations.",
+          "choices": [
+            {
+              "name": 1,
+              "text": "0 fois"
+            },
+            {
+              "name": 2,
+              "text": "1 fois"
+            },
+            {
+              "name": 3,
+              "text": "3 fois"
+            },
+            {
+              "name": 4,
+              "text": "4 fois"
+            }
+          ]
+        },
+        {
+          "i": 19,
+          "id": "qcm19",
+          "md": "Combien de fois les instructions vont-elles être exécutées ?\n\n```js\nfor ( var i = 3; i >= 1; i-- ) {\n  // instructions\n}\n```\n\n\n",
+          "mdSolution": "\n\nLes instructions vont être exécutées pour chaque valeur de `i` entre `3` et `1` (compris), soit 3, 2, puis 1.\n\nCe qui fait 3 itérations.",
+          "choices": [
+            {
+              "name": 1,
+              "text": "0 fois"
+            },
+            {
+              "name": 2,
+              "text": "1 fois"
+            },
+            {
+              "name": 3,
+              "text": "3 fois"
+            },
+            {
+              "name": 4,
+              "text": "4 fois"
+            }
+          ]
+        }
+      ],
+      "solutions": {
+        "qcm18": 4,
+        "qcm19": 3
+      }
+    },
+    {
+      "_info": "generated from ex.05.code.template.md",
+      "i": 5,
+      "isCode": true,
+      "title": "Algo / Boucles - Code",
+      "questions": [
+        {
+          "i": 20,
+          "id": "code20",
+          "variants": [
+            {}
+          ],
+          "testVariants": [
+            "\n// automatic student evaluation code\n(function evaluateStudentCode(){\n  var nb = 0;\n  var lastLog;\n  var console = {\n    log: function(t){\n      lastLog = t;\n      nb++;\n    }\n  };\n  _runStudentCode();\n  var tests = [\n    `_studentCode`.indexOf('for') !== -1,\n    nb === 50,\n    lastLog === 'Bonjour!',\n  ];\n  application.remote._send(null, tests); // 1 point per passing test => 3 pts per exercise\n})();\n"
+          ],
+          "mdVariants": [
+            "\nImplémenter un programme de moins de 4 lignes qui affiche 50 fois `'Bonjour!'` dans la console. Respecter les conventions et règles d'indentation vues en cours.\n\n"
+          ],
+          "mdSolutions": [
+            "\n\nSolution:\n\n```js\nfor ( var i = 0; i < 50; i++ ) {\n  console.log('Bonjour!');\n}\n```\n"
+          ]
+        }
+      ]
+    },
+    {
+      "_info": "generated from ex.06.quizz.template.md",
+      "i": 6,
+      "isQuizz": true,
+      "title": "Fonctions - QCM",
+      "questions": [
+        {
+          "i": 21,
+          "id": "qcm21",
+          "md": "\n```js\nfunction maFonction(param) {\n  return param + 2;\n}\n```\n\nCeci est:\n\n\n",
+          "mdSolution": "\n\nC'est une définition de fonction.\n\nOn la reconnait à l'usage du mot clé `function` et des accolades entourant le code qui sera exécuté lorsque cette fonction sera appelée.",
+          "choices": [
+            {
+              "name": 1,
+              "text": "un appel de fonction"
+            },
+            {
+              "name": 2,
+              "text": "une définition de fonction"
+            },
+            {
+              "name": 3,
+              "text": "une affectation de fonction"
+            },
+            {
+              "name": 4,
+              "text": "une fonction qui ne fonctionne pas"
+            }
+          ]
+        },
+        {
+          "i": 22,
+          "id": "qcm22",
+          "md": "```js\nmaFonction(4);\n```\n\nCeci est:\n\n\n",
+          "mdSolution": "\n\nC'est un appel de fonction.\n\nUn appel de fonction = le nom de la fonction, suivi par les paramètres entre parenthèses. Sans le mot clé `function`.\n\nCette instruction va exécuter le code défini dans la fonction, et affecter les valeurs fournies à chaque paramètre.",
+          "choices": [
+            {
+              "name": 1,
+              "text": "un appel de fonction"
+            },
+            {
+              "name": 2,
+              "text": "une définition de fonction"
+            },
+            {
+              "name": 3,
+              "text": "une affectation de fonction"
+            },
+            {
+              "name": 4,
+              "text": "une fonction qui ne fonctionne pas"
+            }
+          ]
+        },
+        {
+          "i": 23,
+          "id": "qcm23",
+          "md": "```js\n// cette fonction concatène un zéro à la fin de la valeur passée en paramètre\nfunction maFonction(param) {\n  return param + '0';\n}\n```\n\nComment savoir si cette fonction fonctionne bien ? (c.a.d. sans bug)\n\n\n",
+          "mdSolution": "\n\nPour vérifier le bon fonctionnement il faut définir et exécuter des tests unitaires.\n\nCeux-ci permettent de comparer le résultat attendu d'une fonction, à celui effectivement retourné par l'implémentation actuelle de cette fonction.\n\n`maFonction(1) === '10';` est un bon test unitaire car son exécution retourne `true` si la fonction retourne le résultat attendu (`10`) lorsqu'on lui passe `1` en paramètre.",
+          "choices": [
+            {
+              "name": 1,
+              "text": "il suffit de la copier-coller dans la console"
+            },
+            {
+              "name": 2,
+              "text": "il faut taper maFonction dans la console"
+            },
+            {
+              "name": 3,
+              "text": "vérifier que le test passe: maFonction(1) === '10';"
+            },
+            {
+              "name": 4,
+              "text": "vérifier que maFonction(1) renvoie bien true"
+            }
+          ]
+        },
+        {
+          "i": 24,
+          "id": "qcm24",
+          "md": "Supposons que nous avons défini une fonction `doubler()` qui retourne le double du nombre passé en paramètre, lors de son appel.\n\nQue se passe-t-il si on exécute l'instruction suivante:\n\n```js\nvar maVariable = doubler(3);\n```\n\n\n",
+          "mdSolution": "\n\nIl s'agit ici d'un appel de fonction. De la même façon que pour une opération élémentaire (ex: `2 + 2`), tout appel de fonction sera remplacé par la valeur retourné par l'exécution de cette fonction.\n\nIci, le résultat de l'exécution de la fonction `doubler` avec le paramètre `3`, soit la valeur `6`, va être affectée à `maVariable`.",
+          "choices": [
+            {
+              "name": 1,
+              "text": "le résultat va être affecté à maVariable"
+            },
+            {
+              "name": 2,
+              "text": "le résultat va s'afficher dans la console"
+            },
+            {
+              "name": 3,
+              "text": "maVariable contient la définition de la fonction"
+            },
+            {
+              "name": 4,
+              "text": "maVariable contient l'appel de la fonction"
+            }
+          ]
+        }
+      ],
+      "solutions": {
+        "qcm21": 2,
+        "qcm22": 1,
+        "qcm23": 3,
+        "qcm24": 1
+      }
+    },
+    {
+      "_info": "generated from ex.07.code.template.md",
+      "i": 7,
+      "isCode": true,
+      "title": "Fonctions - Code",
+      "questions": [
+        {
+          "i": 25,
+          "id": "code25",
+          "variants": [
+            {}
+          ],
+          "testVariants": [
+            "\n// automatic student evaluation code\n(function evaluateStudentCode(){\n  var console = { log: function(){} }; // tolerate console.log() calls\n  _runStudentCode();\n  var tests = [\n    typeof soustraire === 'function', \n    soustraire(2, 1) === 1,\n    soustraire(2, -1) === 3,\n  ];\n  application.remote._send(null, tests); // 1 point per passing test => 3 pts per exercise\n})();\n"
+          ],
+          "mdVariants": [
+            "\nDéfinir une fonction `soustraire` qui retourne le résultat de la soustraction `a - b`, `a` et `b` étant des paramètres de cette fonction.\n\nRespecter les conventions et règles d'indentation vues en cours.\n\n"
+          ],
+          "mdSolutions": [
+            "\n\nSolution:\n\n```js\nfunction soustraire(a, b) {\n  return a - b;\n}\n```\n"
+          ]
+        },
+        {
+          "i": 26,
+          "id": "code26",
           "variants": [
             {}
           ],
@@ -876,15 +712,31 @@
             "\n// automatic student evaluation code\n(function evaluateStudentCode(){\n  var console = { log: function(){} }; // tolerate console.log() calls\n  _runStudentCode();\n  var tests = [\n    typeof somme === 'function', \n    somme(1, 3, -2) === 2,\n    somme(4, 100, 0.5) === 104.5,\n  ];\n  application.remote._send(null, tests); // 1 point per passing test => 3 pts per exercise\n})();\n"
           ],
           "mdVariants": [
-            "\nDéfinir une fonction `somme` qui retourne la somme des trois nombres passés en paramètres.\n\nExemple d'appel: `somme(1, 3, -2);` doit retourner `2`.\n\n"
+            "Définir une fonction `somme` qui retourne la somme des trois nombres passés en paramètres.\n\nExemple d'appel: `somme(1, 3, -2);` doit retourner `2`.\n\n"
           ],
           "mdSolutions": [
-            "\n\nSolution:\n```js\nfunction somme(a, b, c) {\n  return a + b + c;\n}\n```\n"
+            "\n\nSolution:\n\n```js\nfunction somme(a, b, c) {\n  return a + b + c;\n}\n```\n"
           ]
         },
         {
-          "i": 34,
-          "id": "code34",
+          "i": 27,
+          "id": "code27",
+          "variants": [
+            {}
+          ],
+          "testVariants": [
+            "\n// automatic student evaluation code\n(function evaluateStudentCode(){\n  var nb = 0;\n  var console = {\n    log: function(t){\n      if (t === 'Bonjour!') {\n        nb++;\n      }\n    }\n  };\n  _runStudentCode();\n  var res = repeter(25);\n  var tests = [\n    typeof repeter === 'function',\n    nb === 25,\n    res === 25,\n  ];\n  application.remote._send(null, tests); // 1 point per passing test => 3 pts per exercise\n})();\n"
+          ],
+          "mdVariants": [
+            "Définir une fonction `repeter` qui affiche `n` fois `'Bonjour!'` dans la console, puis qui retourne `n`, `n` étant un paramètre de cette fonction.\n\nRespecter les conventions et règles d'indentation vues en cours.\n\n"
+          ],
+          "mdSolutions": [
+            "\n\nSolution:\n\n```js\nfunction repeter(n) {\n  for (var i = 0; i < n; i++) {\n    console.log('Bonjour!');\n  }\n  return n;\n}\n```\n"
+          ]
+        },
+        {
+          "i": 28,
+          "id": "code28",
           "variants": [
             {}
           ],
@@ -895,12 +747,68 @@
             "Définir une fonction `sommeIntervalle` qui retourne la somme de tous les nombres entiers compris entre les nombres `premier` et `dernier` (compris) passés en paramètres.\n\nExemple d'appel: `sommeIntervalle(2, 5);` doit retourner `14` (résultat de `2 + 3 + 4 + 5`).\n\n"
           ],
           "mdSolutions": [
-            "\n\nSolution:\n```js\nfunction sommeIntervalle(premier, dernier) {\n  var somme = 0;\n  for (var i = premier; i <= dernier; i++) {\n    somme = somme + i;\n  }\n  return somme;\n}\n```\n"
+            "\n\nSolution:\n\n```js\nfunction sommeIntervalle(premier, dernier) {\n  var somme = 0;\n  for (var i = premier; i <= dernier; i++) {\n    somme = somme + i;\n  }\n  return somme;\n}\n```\n"
+          ]
+        }
+      ]
+    },
+    {
+      "_info": "generated from ex.08.code.template.md",
+      "i": 8,
+      "isCode": true,
+      "title": "Tableaux - Code",
+      "questions": [
+        {
+          "i": 29,
+          "id": "code29",
+          "variants": [
+            {}
+          ],
+          "testVariants": [
+            "\n// automatic student evaluation code\n(function evaluateStudentCode(){\n  _runStudentCode();\n  var tests = [\n    nombres[0] === 1,\n    nombres.length === 3,\n    nombres.join(',') === '1,2,3',\n  ];\n  application.remote._send(null, tests); // 1 point per passing test => 3 pts per exercise\n})();\n"
+          ],
+          "mdVariants": [
+            "\nCréez une variable `nombres` de type tableau et contenant les nombres `1`, `2` et `3`.\n\n"
+          ],
+          "mdSolutions": [
+            "\n\nSolution:\n\n```js\nvar nombres = [1, 2, 3];\n```\n"
           ]
         },
         {
-          "i": 35,
-          "id": "code35",
+          "i": 30,
+          "id": "code30",
+          "variants": [
+            {}
+          ],
+          "testVariants": [
+            "\n// automatic student evaluation code\n(function evaluateStudentCode(){\n  var _fruits = ['pomme', 'orange', 'kiwi'];\n  var fruits = _fruits.slice(); // clone\n  _runStudentCode();\n  var tests = [\n    troisieme === _fruits[2],\n    fruits.join(',') === _fruits.join(','),\n    `_studentCode`.replace(/[\\(\\) ]/g, '').indexOf('[2]') !== -1,\n  ];\n  application.remote._send(null, tests); // 1 point per passing test => 3 pts per exercise\n})();\n"
+          ],
+          "mdVariants": [
+            "Vous disposez d'une variable `fruits` contenant un tableau de chaînes de caractères.\n\nSaisissez le code JavaScript pour créer une variable `troisieme` et lui affecter la valeur du 3ème élément de ce tableau.\n\n"
+          ],
+          "mdSolutions": [
+            "\n\nSolution:\n\n```js\nvar troisieme = fruits[2];\n```\n"
+          ]
+        },
+        {
+          "i": 31,
+          "id": "code31",
+          "variants": [
+            {}
+          ],
+          "testVariants": [
+            "\n// automatic student evaluation code\n(function evaluateStudentCode(){\n  var _fruits = ['pomme', 'orange', 'kiwi'];\n  var fruits = _fruits.slice(); // clone\n  var out;\n  var console = { log: function(value){\n    out = value;\n  } };\n  _runStudentCode();\n  var tests = [\n    out === _fruits.pop(),\n    fruits.join(',') === _fruits.join(','),\n    `_studentCode`.toString().replace(/[\\(\\) ]/g, '').indexOf('.pop') !== -1,\n  ];\n  application.remote._log('3', tests);\n  application.remote._send(null, tests); // 1 point per passing test => 3 pts per exercise\n})();\n"
+          ],
+          "mdVariants": [
+            "Vous disposez d'une variable `fruits` contenant un tableau de chaînes de caractères.\n\nSaisissez le code JavaScript permettant de retirer le dernier élément de ce tableau, et d'afficher la valeur de cet élément dans la console.\n\n"
+          ],
+          "mdSolutions": [
+            "\n\nSolution:\n\n```js\nconsole.log(fruits.pop());\n```\n"
+          ]
+        },
+        {
+          "i": 32,
+          "id": "code32",
           "variants": [
             {}
           ],
@@ -911,7 +819,7 @@
             "Définir une fonction `tableauContient` qui prend deux paramètres:\n - `tableau`: un tableau de chaînes de caractères\n - `chaine`: une chaîne de caractères\n\n...et retourne:\n - `false` si la valeur `chaine` n'a pas été trouvée dans le tableau `tableau`,\n - ou le premier indice (à partir de 0) auquel a été trouvé la valeur `chaine` dans le tableau `tableau`.\n\nExemples d'appels:\n - `tableauContient(['a', 'b', 'c'], 'b');` doit retourner `1`.\n - `tableauContient(['a', 'b', 'c'], 'd');` doit retourner `false`.\n\n"
           ],
           "mdSolutions": [
-            "\n\nSolution:\n```js\nfunction tableauContient(tableau, chaine) {\n  var indice = tableau.indexOf(chaine);\n  if (indice === -1) {\n    return false;\n  } else {\n    return indice;\n  }\n}\n```\n"
+            "\n\nSolution:\n\n```js\nfunction tableauContient(tableau, chaine) {\n  var indice = tableau.indexOf(chaine);\n  if (indice === -1) {\n    return false;\n  } else {\n    return indice;\n  }\n}\n```\n"
           ]
         }
       ]
