@@ -3,12 +3,20 @@
   'use strict';
   var app = document.querySelector('#app');
   app.config = {
-    "PUBLIC_TEST_MODE": true,
+    "PUBLIC_TEST_MODE": false,
     "DISPLAY_SOLUTIONS_AFTER_SUBMIT": true,
     "backend": {
-      "type": "realtime-eval"
+      "type": "firebase",
+      "FIREBASE_CONFIG": {
+        "apiKey": "AIzaSyCBkfcodGHJEJDsnh99KgpP_F3cxU58P9I",
+        "databaseURL": "https://js-test-2.firebaseio.com",
+        "messagingSenderId": "730428017661"
+      }
     },
-    "title": "JavaScript Révisions",
+    "title": "Évaluation connaissances JavaScript",
+    "GOOGLE_CLIENT_ID": "247219641427-ifeq88p7rgor9al5ksduds7ug0ba7djr.apps.googleusercontent.com",
+    "GOOGLE_CLIENT_DOMAIN": "eemi.com",
+    "LOGIN_INVITE": "Se connecter à son compte EEMI:",
     "quizzGrading": {
       "ptsRight": 1,
       "ptsWrong": 0,
