@@ -81,28 +81,13 @@
               <h2>Bonjour, {{user.name}}</h2>
 
               <template is="dom-if" if="{{myAnswers._submitted}}">
+                <zero-md text="{{mdSubmitted}}">
+                  <!-- Remember to pass in empty container of class="md-html". -->
+                  <div class="md-html"></div>
+                </zero-md>
                 <!--
-                <p>Pour rendre votre copie, envoyez un email en suivant attentivement les étapes ci-dessous.</p>
-                <p>Pour éviter toute erreur, il est conseillé d'effectuer des copier-coller.</p>
-
-                <h3>Destinataire de l'email:</h3>
-                <paper-material elevation="1">
-                  <p style="font-family: monospace; margin: 0;">{{config.teacherEmail}}</p>
-                </paper-material>
-
-                <h3>Sujet de l'email:</h3>
-                <paper-material elevation="1">
-                  <p style="font-family: monospace; margin: 0;">{{config.emailSubject}}</p>
-                </paper-material>
-
-                <h3>Contenu de l'email:</h3>
-                <paper-material elevation="1">
-                  <pre style="font-family: monospace; margin: 0; overflow-x: scroll; white-space: pre-wrap;">{{hashedAnswers}}</pre>
-                </paper-material>
-
-                <p>Une fois votre email bien envoyé, vous pouvez quitter la salle d'examen. Merci !</p>
-                -->
                 <p>Votre copie a bien été rendue. Merci !</p>
+                -->
                 <template is="dom-if" if="{{myAnswers._d}}">
                   <p>Date/heure de rendu: {{myAnswers._d}}</p>
                 </template>

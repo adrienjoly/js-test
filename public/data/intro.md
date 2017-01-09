@@ -4,5 +4,6 @@
 - Lisez attentivement les énoncés et choix proposés.
 - Il est recommandé d'utiliser la console JavaScript pour tester vos solutions.
 - Le respect des règles d'indentation et conventions vues en cours sera noté.
+- ** Veuillez conserver une copie locale de vos réponses, en cas d'anomalie. **
 
 À vous de jouer !

@@ -3,6 +3,7 @@
   'use strict';
   var app = document.querySelector('#app');
   app.config = {
+    "title": "JavaScript Partiel 1",
     "PUBLIC_TEST_MODE": false,
     "DISPLAY_SOLUTIONS_AFTER_SUBMIT": false,
     "examPack": {
@@ -10,17 +11,10 @@
       "publishEvalTests": false
     },
     "backend": {
-      "type": "firebase",
-      "FIREBASE_CONFIG": {
-        "apiKey": "AIzaSyCDeq8BT9A5BWk6mfUP4mRabSFxw83ARnE",
-        "databaseURL": "https://js-partiel.firebaseio.com",
-        "messagingSenderId": "864469962174"
+      "type": "email-submit",
+      "EMAIL_SUBMIT_CONFIG": {
+        "mdTemplate": "Pour rendre votre copie, envoyez un email en suivant attentivement les étapes ci-dessous.\n\nPour éviter toute erreur, il est conseillé d'effectuer des copier-coller.\n\n## Destinataire de l'email:\n\n<pre style=\"font-family: monospace; margin: 0; overflow-x: scroll; white-space: pre-wrap;\">adrien.joly@eemi.com</pre>\n\n## Sujet de l'email:\n\n<pre style=\"font-family: monospace; margin: 0; overflow-x: scroll; white-space: pre-wrap;\">JS PARTIEL 1 DATA</pre>\n\n## Contenu de l'email:\n\n<pre style=\"font-family: monospace; margin: 0; overflow-x: scroll; white-space: pre-wrap;\">{{hashedAnswers}}</pre>\n\nUne fois votre email bien envoyé, vous pouvez quitter la salle d'examen.\n\nMerci !\n"
       }
-    },
-    "title": "JavaScript Partiel 1",
-    "emailSubmission": {
-      "teacherEmail": "adrien.joly@eemi.com",
-      "emailSubject": "JS PARTIEL 1 DATA"
     },
     "GOOGLE_CLIENT_ID": "247219641427-pq1bbfkkpqvvsgps5t1fh1sjivb61dt4.apps.googleusercontent.com",
     "GOOGLE_CLIENT_DOMAIN": "eemi.com",
