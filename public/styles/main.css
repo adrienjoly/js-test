@@ -13,6 +13,11 @@ body {
   color: #333;
 }
 
+.student-name {
+  position: absolute;
+  right: 16px;
+}
+
 paper-radio-button {
   display: block;
 }
