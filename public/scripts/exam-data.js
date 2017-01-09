@@ -3,21 +3,26 @@
   'use strict';
   var app = document.querySelector('#app');
   app.config = {
-    "PUBLIC_TEST_MODE": true,
-    "DISPLAY_SOLUTIONS_AFTER_SUBMIT": true,
+    "PUBLIC_TEST_MODE": false,
+    "DISPLAY_SOLUTIONS_AFTER_SUBMIT": false,
     "examPack": {
       "publishSolutions": false,
       "publishEvalTests": false
     },
     "backend": {
-      "type": "realtime-eval"
+      "type": "firebase",
+      "FIREBASE_CONFIG": {
+        "apiKey": "AIzaSyCDeq8BT9A5BWk6mfUP4mRabSFxw83ARnE",
+        "databaseURL": "https://js-partiel.firebaseio.com",
+        "messagingSenderId": "864469962174"
+      }
     },
     "title": "JavaScript Partiel 1",
     "emailSubmission": {
       "teacherEmail": "adrien.joly@eemi.com",
       "emailSubject": "JS PARTIEL 1 DATA"
     },
-    "GOOGLE_CLIENT_ID": "247219641427-ifeq88p7rgor9al5ksduds7ug0ba7djr.apps.googleusercontent.com",
+    "GOOGLE_CLIENT_ID": "247219641427-pq1bbfkkpqvvsgps5t1fh1sjivb61dt4.apps.googleusercontent.com",
     "GOOGLE_CLIENT_DOMAIN": "eemi.com",
     "LOGIN_INVITE": "Se connecter à son compte EEMI:",
     "quizzGrading": {
