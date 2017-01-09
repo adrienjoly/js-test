@@ -1,7 +1,7 @@
 module.exports = {
 
   // General settings
-  PUBLIC_TEST_MODE: false, // set to false to restrict acccess and identify students using Google Login
+  PUBLIC_TEST_MODE: true, // set to false to restrict acccess and identify students using Google Login
   DISPLAY_SOLUTIONS_AFTER_SUBMIT: true, // set to false, for real exams
 
   // Back-end config
