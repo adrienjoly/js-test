@@ -14,10 +14,10 @@ module.exports = {
   backend: {
     type: 'firebase', // 'realtime-eval', 'auto-eval', or 'firebase' (with FIREBASE_CONFIG)
     FIREBASE_CONFIG: {
-      apiKey: "AIzaSyDCqocdoU81PhB9m2zZhYg_DpiTzEcqEfY",
-      databaseURL: "https://js-partiel-2.firebaseio.com",
-      messagingSenderId: "425303280065"
-      // admin/dashboard: https://console.firebase.google.com/project/js-partiel-2/database/data
+      apiKey: "AIzaSyAhpXX_dZGkFLmTMFZUbKlUSTZdAIwH2hY",
+      databaseURL: "https://js-partiel-3.firebaseio.com",
+      messagingSenderId: "935470302144"
+      // admin/dashboard: https://console.firebase.google.com/project/js-partiel-3/database/data
     },
   },
 

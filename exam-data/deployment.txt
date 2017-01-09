@@ -2,12 +2,4 @@ deployment info
 
 https://js-partiel-1.herokuapp.com/ => https://js-partiel.firebaseio.com
 https://js-partiel-2.herokuapp.com/ => https://js-partiel-2.firebaseio.com
-
-firebase db config:
-
-{
-  "rules": {
-    ".read": "true",
-    ".write": "true"
-  }
-}
+https://js-partiel-3.herokuapp.com/ => https://js-partiel-3.firebaseio.com
