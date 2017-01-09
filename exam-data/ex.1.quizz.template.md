@@ -16,11 +16,11 @@ Qu'est-ce que ce code ne contient PAS:
 
 ```js
 for (var i = -1; i < 1; i++) {
-  console.log('bonjour');
+  bonjour();
 }
 ```
 
-Combien de fois `'bonjour'` va-t-il être affiché dans la console ?
+Combien de fois la fonction `'bonjour'` va-t-elle être appelée ?
 
 - 0 fois
 - 1 fois

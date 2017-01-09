@@ -11,6 +11,7 @@ Implémenter une condition qui affiche `'plus grand que {{threshold}}'` dans la 
 ???
 
 Solution:
+
 ```js
 if ({{varName}} > {{threshold}}) {
   console.log('plus grand que {{threshold}}');
@@ -51,23 +52,29 @@ Nous allons écrire un programme qui donne la météo à l'utilisateur, pour la 
 Ce programme devra:
 
  - Inviter l'utilisateur à saisir le nom d'une ville;
- - Dans le cas où l'utilisateur a saisi `paris`, répondre `nuageux`;
- - Dans le cas où l'utilisateur a saisi `marseille`, répondre `soleil`;
- - Sinon, répondre `je n'ai pas compris`.
+ - Dans le cas où l'utilisateur a saisi `{{city1}}`, répondre `{{weather1}}`;
+ - Dans le cas où l'utilisateur a saisi `{{city2}}`, répondre `{{weather2}}`;
+ - Sinon, répondre `{{else}}`.
 
 Les réponses sont à afficher à l'aide de la fonction `alert()`. Respecter les textes fournis à la lettre. (y compris la casse, espaces et ponctuation)
+
+- { "city1": "paris", "weather1": "nuageux", "city2": "marseille", "weather2": "soleil", "else": "mauvaise saisie" }
+- { "city1": "paris", "weather1": "pluvieux", "city2": "roubaix", "weather2": "nuageux", "else": "paris ou roubaix ?" }
+- { "city1": "paris", "weather1": "soleil", "city2": "marseille", "weather2": "nuageux", "else": "paris ou marseille ?" }
+- { "city1": "roubaix", "weather1": "nuageux", "city2": "marseille", "weather2": "soleil", "else": "mauvaise saisie" }
 
 ???
 
 Solution:
+
 ```js
 var reponse = prompt('saisissez le nom d\'une ville svp');
-if (reponse === 'paris') {
-  alert('nuageux');
-} else if (reponse === 'marseille') {
-  alert('soleil');
+if (reponse === '{{city1}}') {
+  alert('{{weather1}}');
+} else if (reponse === '{{city2}}') {
+  alert('{{weather2}}');
 } else {
-  alert('je n\'ai pas compris');
+  alert("{{else}}");
 }
 ```
 
@@ -82,19 +89,19 @@ if (reponse === 'paris') {
   var prompt, alert = (p) => res.push(p);
   // test 1
   res = [];
-  prompt = () => 'paris';
+  prompt = () => '{{city1}}';
   _runStudentCode();
-  tests.push(res.length === 1 && res[0] === 'nuageux');
+  tests.push(res.length === 1 && res[0] === '{{weather1}}');
   // test 2
   res = [];
-  prompt = () => 'marseille';
+  prompt = () => '{{city2}}';
   _runStudentCode();
-  tests.push(res.length === 1 && res[0] === 'soleil');
+  tests.push(res.length === 1 && res[0] === '{{weather2}}');
   // test 3
   res = [];
   prompt = () => 'brest';
   _runStudentCode();
-  tests.push(res.length === 1 && res[0] === 'je n\'ai pas compris');
+  tests.push(res.length === 1 && res[0] === "{{else}}");
   application.remote._send(null, tests); // 1 point per passing test => 3 pts per exercise
 })();
 ```
@@ -103,15 +110,19 @@ if (reponse === 'paris') {
 
 ## Fonctions
 
-Définir une fonction `produit` qui retourne le résultat de la multiplication des trois nombres passés en paramètres.
+Définir une fonction `{{fctName}}` qui retourne le résultat de la multiplication des trois nombres passés en paramètres.
 
-Exemple d'appel: `produit(1, 3, -2);` doit retourner `-6` (`1 * 3 * -2`).
+Exemple d'appel: `{{fctName}}(1, 3, -2);` doit retourner `-6` (`1 * 3 * -2`).
+
+- { "fctName": "produit" }
+- { "fctName": "multiplier" }
 
 ???
 
 Solution:
+
 ```js
-function produit(a, b, c) {
+function {{fctName}}(a, b, c) {
   return a * b * c;
 }
 ```
@@ -124,9 +135,9 @@ function produit(a, b, c) {
   var console = { log: function(){} }; // tolerate console.log() calls
   _runStudentCode();
   var tests = [
-    typeof produit === 'function', 
-    produit(1, 3, -2) === -6,
-    produit(4, 100, 0.5) === 200,
+    typeof {{fctName}} === 'function', 
+    {{fctName}}(1, 3, -2) === -6,
+    {{fctName}}(4, 100, 0.5) === 200,
   ];
   application.remote._send(null, tests); // 1 point per passing test => 3 pts per exercise
 })();
@@ -136,15 +147,20 @@ function produit(a, b, c) {
 
 ## Boucles
 
-Définir une fonction `repeterChaine` qui prend comme paramètres un nombre `n` et une chaîne de caractères `message`, et retourne une chaîne de caractères contenant `n` fois `message`, en utilisant la concaténation.
+Définir une fonction `{{fctName}}` qui prend comme paramètres un nombre `n` et une chaîne de caractères `message`, et retourne une chaîne de caractères contenant `n` fois `message`, en utilisant la concaténation.
 
-Exemple d'appel: `repeterChaine(3, 'bonjour!');` doit retourner `'bonjour!bonjour!bonjour!'`.
+Exemple d'appel: `{{fctName}}(3, 'bonjour!');` doit retourner `'bonjour!bonjour!bonjour!'`.
+
+- { "fctName": "repeterChaine" }
+- { "fctName": "nFois" }
+- { "fctName": "repeter" }
 
 ???
 
 Solution:
+
 ```js
-function repeterChaine(n, message) {
+function {{fctName}}(n, message) {
   var resultat = '';
   for (var i = 0; i < n; i++) {
     resultat = resultat + message;
@@ -161,9 +177,9 @@ function repeterChaine(n, message) {
   var console = { log: function(){} }; // tolerate console.log() calls
   _runStudentCode();
   var tests = [
-    repeterChaine(3, 'bonjour!') === 'bonjour!bonjour!bonjour!',
-    repeterChaine(0, 'bonjour!') === '',
-    repeterChaine(12, 'a') === 'aaaaaaaaaaaa',
+    {{fctName}}(3, 'bonjour!') === 'bonjour!bonjour!bonjour!',
+    {{fctName}}(0, 'bonjour!') === '',
+    {{fctName}}(12, 'a') === 'aaaaaaaaaaaa',
   ];
   application.remote._send(null, tests); // 1 point per passing test => 3 pts per exercise
 })();
@@ -175,22 +191,26 @@ function repeterChaine(n, message) {
 
 Définir une fonction `tableauContient` qui prend deux paramètres:
  - `tableau`: un tableau de nombres
- - `nombre`: un nombre
+ - `{{paramName}}`: un nombre
 
 ...et retourne:
- - `true` s'il existe au moins un élément ayant la valeur `nombre` dans le tableau `tableau`,
+ - `true` s'il existe au moins un élément ayant la valeur `{{paramName}}` dans le tableau `tableau`,
  - ou `false` sinon.
  
 Exemples d'appels:
  - `tableauContient([1, 2, 3], 2);` doit retourner `true`.
  - `tableauContient([1, 2, 3], 4);` doit retourner `false`.
 
+- { "paramName": "nombre" }
+- { "paramName": "val" }
+
 ???
 
 Solution:
+
 ```js
-function tableauContient(tableau, nombre) {
-  var indice = tableau.indexOf(nombre);
+function tableauContient(tableau, {{paramName}}) {
+  var indice = tableau.indexOf({{paramName}});
   if (indice === -1) {
     return false;
   } else {
@@ -200,9 +220,10 @@ function tableauContient(tableau, nombre) {
 ```
 
 ...ou:
+
 ```js
-function tableauContient(tableau, nombre) {
-  return tableau.indexOf(nombre) !== -1;
+function tableauContient(tableau, {{paramName}}) {
+  return tableau.indexOf({{paramName}}) !== -1;
 }
 ```
 
@@ -214,7 +235,7 @@ function tableauContient(tableau, nombre) {
   var console = { log: function(){} }; // tolerate console.log() calls
   _runStudentCode();
   var tests = [
-    typeof tableauContient === 'function',
+    tableauContient.toString().replace(/[ \t]/g, '').indexOf('functiontableauContient(tableau,{{paramName}}') !== -1,
     tableauContient([3, 4, 5, 4], 4) === true,
     tableauContient([3, 4, 5, 4], 2) === false,
   ];
