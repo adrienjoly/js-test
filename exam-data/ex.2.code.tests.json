@@ -1,0 +1,65 @@
+[
+  {
+    "i": 1,
+    "id": "code1",
+    "variants": [
+      {
+        "varName": "monNombre",
+        "threshold": 4
+      },
+      {
+        "varName": "monNumero",
+        "threshold": 4
+      },
+      {
+        "varName": "monNumero",
+        "threshold": 6
+      }
+    ],
+    "testVariants": [
+      "\n// automatic student evaluation code\n(function evaluateStudentCode(){\n  var res = [];\n  var console = { log: function(p){\n    res.push(p);\n  } };\n  var tests = [];\n  var monNombre = 4;\n  _runStudentCode();\n  tests = tests.concat([\n    res.length === 0,\n  ]);\n  monNombre = 7.5;\n  _runStudentCode();\n  tests = tests.concat([\n    res.length === 1, \n    res[0] === 'plus grand que 4',\n  ]);\n  application.remote._send(null, tests); // 1 point per passing test => 3 pts per exercise\n})();\n",
+      "\n// automatic student evaluation code\n(function evaluateStudentCode(){\n  var res = [];\n  var console = { log: function(p){\n    res.push(p);\n  } };\n  var tests = [];\n  var monNumero = 4;\n  _runStudentCode();\n  tests = tests.concat([\n    res.length === 0,\n  ]);\n  monNumero = 7.5;\n  _runStudentCode();\n  tests = tests.concat([\n    res.length === 1, \n    res[0] === 'plus grand que 4',\n  ]);\n  application.remote._send(null, tests); // 1 point per passing test => 3 pts per exercise\n})();\n",
+      "\n// automatic student evaluation code\n(function evaluateStudentCode(){\n  var res = [];\n  var console = { log: function(p){\n    res.push(p);\n  } };\n  var tests = [];\n  var monNumero = 6;\n  _runStudentCode();\n  tests = tests.concat([\n    res.length === 0,\n  ]);\n  monNumero = 7.5;\n  _runStudentCode();\n  tests = tests.concat([\n    res.length === 1, \n    res[0] === 'plus grand que 6',\n  ]);\n  application.remote._send(null, tests); // 1 point per passing test => 3 pts per exercise\n})();\n"
+    ]
+  },
+  {
+    "i": 2,
+    "id": "code2",
+    "variants": [
+      {}
+    ],
+    "testVariants": [
+      "\n// automatic student evaluation code\n(function evaluateStudentCode(){\n  var res;\n  var tests = [];\n  var console = { log: function(){} }; // tolerate console.log() calls\n  var prompt, alert = (p) => res.push(p);\n  // test 1\n  res = [];\n  prompt = () => 'paris';\n  _runStudentCode();\n  tests.push(res.length === 1 && res[0] === 'nuageux');\n  // test 2\n  res = [];\n  prompt = () => 'marseille';\n  _runStudentCode();\n  tests.push(res.length === 1 && res[0] === 'soleil');\n  // test 3\n  res = [];\n  prompt = () => 'brest';\n  _runStudentCode();\n  tests.push(res.length === 1 && res[0] === 'je n\\'ai pas compris');\n  application.remote._send(null, tests); // 1 point per passing test => 3 pts per exercise\n})();\n"
+    ]
+  },
+  {
+    "i": 3,
+    "id": "code3",
+    "variants": [
+      {}
+    ],
+    "testVariants": [
+      "\n// automatic student evaluation code\n(function evaluateStudentCode(){\n  var console = { log: function(){} }; // tolerate console.log() calls\n  _runStudentCode();\n  var tests = [\n    typeof produit === 'function', \n    produit(1, 3, -2) === -6,\n    produit(4, 100, 0.5) === 200,\n  ];\n  application.remote._send(null, tests); // 1 point per passing test => 3 pts per exercise\n})();\n"
+    ]
+  },
+  {
+    "i": 4,
+    "id": "code4",
+    "variants": [
+      {}
+    ],
+    "testVariants": [
+      "\n// automatic student evaluation code\n(function evaluateStudentCode(){\n  var console = { log: function(){} }; // tolerate console.log() calls\n  _runStudentCode();\n  var tests = [\n    repeterChaine(3, 'bonjour!') === 'bonjour!bonjour!bonjour!',\n    repeterChaine(0, 'bonjour!') === '',\n    repeterChaine(12, 'a') === 'aaaaaaaaaaaa',\n  ];\n  application.remote._send(null, tests); // 1 point per passing test => 3 pts per exercise\n})();\n"
+    ]
+  },
+  {
+    "i": 5,
+    "id": "code5",
+    "variants": [
+      {}
+    ],
+    "testVariants": [
+      "\n// automatic student evaluation code\n(function evaluateStudentCode(){\n  var console = { log: function(){} }; // tolerate console.log() calls\n  _runStudentCode();\n  var tests = [\n    typeof tableauContient === 'function',\n    tableauContient([3, 4, 5, 4], 4) === true,\n    tableauContient([3, 4, 5, 4], 2) === false,\n  ];\n  application.remote._send(null, tests); // 1 point per passing test => 3 pts per exercise\n})();\n"
+    ]
+  }
+]
