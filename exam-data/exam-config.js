@@ -4,6 +4,12 @@ module.exports = {
   PUBLIC_TEST_MODE: true, // set to false to restrict acccess and identify students using Google Login
   DISPLAY_SOLUTIONS_AFTER_SUBMIT: true, // set to false, for real exams
 
+  // Settings for conversion and publication of exercise templates
+  examPack: {
+    publishSolutions: false, // `true` required for realtime-eval/auto-eval back-ends and/or DISPLAY_SOLUTIONS_AFTER_SUBMIT
+    publishEvalTests: false, // `true` required for realtime-eval/auto-eval back-ends and/or DISPLAY_SOLUTIONS_AFTER_SUBMIT
+  },
+
   // Back-end config
   backend: {
     type: 'realtime-eval', // 'realtime-eval', 'auto-eval', or 'firebase' (with FIREBASE_CONFIG)
