@@ -60,7 +60,7 @@ if (reponse === '{{p0}}') {
   if (reponse2 === 'clair') {
     alert('comme le ciel');
   } else if (reponse2 === '{{prompt2}}') {
-    alert('{{expected}}');
+    alert(`{{{expected}}}`); // /!\ utiliser \' si besoin d'intégrer une apostrophe
   } 
 } else {
   alert('je connais pas');
@@ -75,7 +75,7 @@ if (reponse === '{{p0}}') {
   // student's variant -> test inputs and expected outputs
   var variant = {
     prompts: [ '{{prompt1}}', '{{prompt2}}' ],
-    expected: '{{expected}}',
+    expected: `{{{expected}}}`,
   };
   // exercise requirements
   var req = 'si l\'utilisateur tape ' + variant.prompts.join(' puis ')
