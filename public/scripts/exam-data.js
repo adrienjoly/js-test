@@ -408,7 +408,9 @@
               "e0": "OK",
               "prompt1": "gris",
               "prompt2": "foncé",
-              "expected": "ah bon?"
+              "expected": "ah bon?",
+              "e1": "presque blanc",
+              "e2": "comment ?"
             },
             {
               "n": 2,
@@ -416,7 +418,9 @@
               "e0": "OK",
               "prompt1": "gris",
               "prompt2": "foncé",
-              "expected": "c'est bien!"
+              "expected": "c'est bien!",
+              "e1": "comme le ciel",
+              "e2": "je connais pas"
             },
             {
               "n": 3,
@@ -424,7 +428,9 @@
               "e0": "bien!",
               "prompt1": "bleu",
               "prompt2": "foncé",
-              "expected": "OK"
+              "expected": "OK",
+              "e1": "comme le ciel",
+              "e2": "j'ai pas compris"
             }
           ],
           "mdVariants": [

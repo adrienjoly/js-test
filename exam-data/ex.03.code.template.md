@@ -43,9 +43,9 @@ Vous serez noté(e) sur:
  - le respect des règles d'indentation et autres conventions vues en cours. (ex: 2 espaces par niveau d'indentation)
  - le bon fonctionnement de votre code, sans erreurs, depuis la console JavaScript de Google Chrome, pour chacun des cas illustrés dans l'arbre de décision.
 
-- { "n": 1, "p0": "bleu", "e0": "OK", "prompt1": "gris", "prompt2": "foncé", "expected": "ah bon?" }
-- { "n": 2, "p0": "bleu", "e0": "OK", "prompt1": "gris", "prompt2": "foncé", "expected": "c'est bien!" }
-- { "n": 3, "p0": "rouge", "e0": "bien!", "prompt1": "bleu", "prompt2": "foncé", "expected": "OK" }
+- { "n": 1, "p0": "bleu", "e0": "OK", "prompt1": "gris", "prompt2": "foncé", "expected": "ah bon?", "e1": "presque blanc", "e2": "comment ?" }
+- { "n": 2, "p0": "bleu", "e0": "OK", "prompt1": "gris", "prompt2": "foncé", "expected": "c'est bien!", "e1": "comme le ciel", "e2": "je connais pas" }
+- { "n": 3, "p0": "rouge", "e0": "bien!", "prompt1": "bleu", "prompt2": "foncé", "expected": "OK", "e1": "comme le ciel", "e2": "j'ai pas compris" }
 
 ???
 
@@ -58,12 +58,12 @@ if (reponse === '{{p0}}') {
 } else if (reponse === '{{prompt1}}') {
   var reponse2 = prompt('clair ou foncé ?');
   if (reponse2 === 'clair') {
-    alert('comme le ciel');
+    alert('{{e1}}');
   } else if (reponse2 === '{{prompt2}}') {
     alert(`{{{expected}}}`); // /!\ utiliser \' si besoin d'intégrer une apostrophe
   } 
 } else {
-  alert('je connais pas');
+  alert(`{{{e2}}}`); // /!\ utiliser \' si besoin d'intégrer une apostrophe
 }
 ```
 
