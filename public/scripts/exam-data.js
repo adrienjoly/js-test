@@ -176,9 +176,9 @@
             }
           ],
           "mdVariants": [
-            "## Condition simple\n\nSupposons qu'une variable `monNombre` ait été créée et contienne un nombre.\n\nImplémenter une condition qui affiche `'plus grand que 4'` dans la console, si `monNombre` est strictement supérieur à `4`.\n\n\n",
-            "## Condition simple\n\nSupposons qu'une variable `monNumero` ait été créée et contienne un nombre.\n\nImplémenter une condition qui affiche `'plus grand que 4'` dans la console, si `monNumero` est strictement supérieur à `4`.\n\n\n",
-            "## Condition simple\n\nSupposons qu'une variable `monNumero` ait été créée et contienne un nombre.\n\nImplémenter une condition qui affiche `'plus grand que 6'` dans la console, si `monNumero` est strictement supérieur à `6`.\n\n\n"
+            "<!-- Condition simple -->\n\nSupposons qu'une variable `monNombre` ait été créée et contienne un nombre.\n\nImplémenter une condition qui affiche `'plus grand que 4'` dans la console, si `monNombre` est strictement supérieur à `4`.\n\n\n",
+            "<!-- Condition simple -->\n\nSupposons qu'une variable `monNumero` ait été créée et contienne un nombre.\n\nImplémenter une condition qui affiche `'plus grand que 4'` dans la console, si `monNumero` est strictement supérieur à `4`.\n\n\n",
+            "<!-- Condition simple -->\n\nSupposons qu'une variable `monNumero` ait été créée et contienne un nombre.\n\nImplémenter une condition qui affiche `'plus grand que 6'` dans la console, si `monNumero` est strictement supérieur à `6`.\n\n\n"
           ]
         },
         {
@@ -215,10 +215,10 @@
             }
           ],
           "mdVariants": [
-            "## Condition avancée\n\nNous allons écrire un programme qui donne la météo à l'utilisateur, pour la ville de son choix.\n\nCe programme devra:\n\n - Inviter l'utilisateur à saisir le nom d'une ville;\n - Dans le cas où l'utilisateur a saisi `paris`, répondre `nuageux`;\n - Dans le cas où l'utilisateur a saisi `marseille`, répondre `soleil`;\n - Sinon, répondre `mauvaise saisie`.\n\nLes réponses sont à afficher à l'aide de la fonction `alert()`. Respecter les textes fournis à la lettre. (y compris la casse, espaces et ponctuation)\n\n\n",
-            "## Condition avancée\n\nNous allons écrire un programme qui donne la météo à l'utilisateur, pour la ville de son choix.\n\nCe programme devra:\n\n - Inviter l'utilisateur à saisir le nom d'une ville;\n - Dans le cas où l'utilisateur a saisi `paris`, répondre `pluvieux`;\n - Dans le cas où l'utilisateur a saisi `roubaix`, répondre `nuageux`;\n - Sinon, répondre `paris ou roubaix ?`.\n\nLes réponses sont à afficher à l'aide de la fonction `alert()`. Respecter les textes fournis à la lettre. (y compris la casse, espaces et ponctuation)\n\n\n",
-            "## Condition avancée\n\nNous allons écrire un programme qui donne la météo à l'utilisateur, pour la ville de son choix.\n\nCe programme devra:\n\n - Inviter l'utilisateur à saisir le nom d'une ville;\n - Dans le cas où l'utilisateur a saisi `paris`, répondre `soleil`;\n - Dans le cas où l'utilisateur a saisi `marseille`, répondre `nuageux`;\n - Sinon, répondre `paris ou marseille ?`.\n\nLes réponses sont à afficher à l'aide de la fonction `alert()`. Respecter les textes fournis à la lettre. (y compris la casse, espaces et ponctuation)\n\n\n",
-            "## Condition avancée\n\nNous allons écrire un programme qui donne la météo à l'utilisateur, pour la ville de son choix.\n\nCe programme devra:\n\n - Inviter l'utilisateur à saisir le nom d'une ville;\n - Dans le cas où l'utilisateur a saisi `roubaix`, répondre `nuageux`;\n - Dans le cas où l'utilisateur a saisi `marseille`, répondre `soleil`;\n - Sinon, répondre `mauvaise saisie`.\n\nLes réponses sont à afficher à l'aide de la fonction `alert()`. Respecter les textes fournis à la lettre. (y compris la casse, espaces et ponctuation)\n\n\n"
+            "<!-- Condition avancée -->\n\nNous allons écrire un programme qui donne la météo à l'utilisateur, pour la ville de son choix.\n\nCe programme devra:\n\n - Inviter l'utilisateur à saisir le nom d'une ville;\n - Dans le cas où l'utilisateur a saisi `paris`, répondre `nuageux`;\n - Dans le cas où l'utilisateur a saisi `marseille`, répondre `soleil`;\n - Sinon, répondre `mauvaise saisie`.\n\nLes réponses sont à afficher à l'aide de la fonction `alert()`. Respecter les textes fournis à la lettre. (y compris la casse, espaces et ponctuation)\n\n\n",
+            "<!-- Condition avancée -->\n\nNous allons écrire un programme qui donne la météo à l'utilisateur, pour la ville de son choix.\n\nCe programme devra:\n\n - Inviter l'utilisateur à saisir le nom d'une ville;\n - Dans le cas où l'utilisateur a saisi `paris`, répondre `pluvieux`;\n - Dans le cas où l'utilisateur a saisi `roubaix`, répondre `nuageux`;\n - Sinon, répondre `paris ou roubaix ?`.\n\nLes réponses sont à afficher à l'aide de la fonction `alert()`. Respecter les textes fournis à la lettre. (y compris la casse, espaces et ponctuation)\n\n\n",
+            "<!-- Condition avancée -->\n\nNous allons écrire un programme qui donne la météo à l'utilisateur, pour la ville de son choix.\n\nCe programme devra:\n\n - Inviter l'utilisateur à saisir le nom d'une ville;\n - Dans le cas où l'utilisateur a saisi `paris`, répondre `soleil`;\n - Dans le cas où l'utilisateur a saisi `marseille`, répondre `nuageux`;\n - Sinon, répondre `paris ou marseille ?`.\n\nLes réponses sont à afficher à l'aide de la fonction `alert()`. Respecter les textes fournis à la lettre. (y compris la casse, espaces et ponctuation)\n\n\n",
+            "<!-- Condition avancée -->\n\nNous allons écrire un programme qui donne la météo à l'utilisateur, pour la ville de son choix.\n\nCe programme devra:\n\n - Inviter l'utilisateur à saisir le nom d'une ville;\n - Dans le cas où l'utilisateur a saisi `roubaix`, répondre `nuageux`;\n - Dans le cas où l'utilisateur a saisi `marseille`, répondre `soleil`;\n - Sinon, répondre `mauvaise saisie`.\n\nLes réponses sont à afficher à l'aide de la fonction `alert()`. Respecter les textes fournis à la lettre. (y compris la casse, espaces et ponctuation)\n\n\n"
           ]
         },
         {
@@ -233,8 +233,8 @@
             }
           ],
           "mdVariants": [
-            "## Fonctions\n\nDéfinir une fonction `produit` qui retourne le résultat de la multiplication des trois nombres passés en paramètres.\n\nExemple d'appel: `produit(1, 3, -2);` doit retourner `-6` (`1 * 3 * -2`).\n\n\n",
-            "## Fonctions\n\nDéfinir une fonction `multiplier` qui retourne le résultat de la multiplication des trois nombres passés en paramètres.\n\nExemple d'appel: `multiplier(1, 3, -2);` doit retourner `-6` (`1 * 3 * -2`).\n\n\n"
+            "<!-- Fonctions -->\n\nDéfinir une fonction `produit` qui retourne le résultat de la multiplication des trois nombres passés en paramètres.\n\nExemple d'appel: `produit(1, 3, -2);` doit retourner `-6` (`1 * 3 * -2`).\n\n\n",
+            "<!-- Fonctions -->\n\nDéfinir une fonction `multiplier` qui retourne le résultat de la multiplication des trois nombres passés en paramètres.\n\nExemple d'appel: `multiplier(1, 3, -2);` doit retourner `-6` (`1 * 3 * -2`).\n\n\n"
           ]
         },
         {
@@ -252,9 +252,9 @@
             }
           ],
           "mdVariants": [
-            "## Boucles\n\nDéfinir une fonction `repeterChaine` qui prend comme paramètres un nombre `n` et une chaîne de caractères `message`, et retourne une chaîne de caractères contenant `n` fois `message`, en utilisant la concaténation.\n\nExemple d'appel: `repeterChaine(3, 'bonjour!');` doit retourner `'bonjour!bonjour!bonjour!'`.\n\n\n",
-            "## Boucles\n\nDéfinir une fonction `nFois` qui prend comme paramètres un nombre `n` et une chaîne de caractères `message`, et retourne une chaîne de caractères contenant `n` fois `message`, en utilisant la concaténation.\n\nExemple d'appel: `nFois(3, 'bonjour!');` doit retourner `'bonjour!bonjour!bonjour!'`.\n\n\n",
-            "## Boucles\n\nDéfinir une fonction `repeter` qui prend comme paramètres un nombre `n` et une chaîne de caractères `message`, et retourne une chaîne de caractères contenant `n` fois `message`, en utilisant la concaténation.\n\nExemple d'appel: `repeter(3, 'bonjour!');` doit retourner `'bonjour!bonjour!bonjour!'`.\n\n\n"
+            "<!-- Boucles -->\n\nDéfinir une fonction `repeterChaine` qui prend comme paramètres un nombre `n` et une chaîne de caractères `message`, et retourne une chaîne de caractères contenant `n` fois `message`, en utilisant la concaténation.\n\nExemple d'appel: `repeterChaine(3, 'bonjour!');` doit retourner `'bonjour!bonjour!bonjour!'`.\n\n\n",
+            "<!-- Boucles -->\n\nDéfinir une fonction `nFois` qui prend comme paramètres un nombre `n` et une chaîne de caractères `message`, et retourne une chaîne de caractères contenant `n` fois `message`, en utilisant la concaténation.\n\nExemple d'appel: `nFois(3, 'bonjour!');` doit retourner `'bonjour!bonjour!bonjour!'`.\n\n\n",
+            "<!-- Boucles -->\n\nDéfinir une fonction `repeter` qui prend comme paramètres un nombre `n` et une chaîne de caractères `message`, et retourne une chaîne de caractères contenant `n` fois `message`, en utilisant la concaténation.\n\nExemple d'appel: `repeter(3, 'bonjour!');` doit retourner `'bonjour!bonjour!bonjour!'`.\n\n\n"
           ]
         },
         {
@@ -269,8 +269,8 @@
             }
           ],
           "mdVariants": [
-            "## Tableaux\n\nDéfinir une fonction `tableauContient` qui prend deux paramètres:\n - `tableau`: un tableau de nombres\n - `nombre`: un nombre\n\n...et retourne:\n - `true` s'il existe au moins un élément ayant la valeur `nombre` dans le tableau `tableau`,\n - ou `false` sinon.\n \nExemples d'appels:\n - `tableauContient([1, 2, 3], 2);` doit retourner `true`.\n - `tableauContient([1, 2, 3], 4);` doit retourner `false`.\n\n\n",
-            "## Tableaux\n\nDéfinir une fonction `tableauContient` qui prend deux paramètres:\n - `tableau`: un tableau de nombres\n - `val`: un nombre\n\n...et retourne:\n - `true` s'il existe au moins un élément ayant la valeur `val` dans le tableau `tableau`,\n - ou `false` sinon.\n \nExemples d'appels:\n - `tableauContient([1, 2, 3], 2);` doit retourner `true`.\n - `tableauContient([1, 2, 3], 4);` doit retourner `false`.\n\n\n"
+            "<!-- Tableaux -->\n\nDéfinir une fonction `tableauContient` qui prend deux paramètres:\n - `tableau`: un tableau de nombres\n - `nombre`: un nombre\n\n...et retourne:\n - `true` s'il existe au moins un élément ayant la valeur `nombre` dans le tableau `tableau`,\n - ou `false` sinon.\n \nExemples d'appels:\n - `tableauContient([1, 2, 3], 2);` doit retourner `true`.\n - `tableauContient([1, 2, 3], 4);` doit retourner `false`.\n\n\n",
+            "<!-- Tableaux -->\n\nDéfinir une fonction `tableauContient` qui prend deux paramètres:\n - `tableau`: un tableau de nombres\n - `val`: un nombre\n\n...et retourne:\n - `true` s'il existe au moins un élément ayant la valeur `val` dans le tableau `tableau`,\n - ou `false` sinon.\n \nExemples d'appels:\n - `tableauContient([1, 2, 3], 2);` doit retourner `true`.\n - `tableauContient([1, 2, 3], 4);` doit retourner `false`.\n\n\n"
           ]
         }
       ]

@@ -1,4 +1,4 @@
-## Condition simple
+<!-- Condition simple -->
 
 Supposons qu'une variable `{{varName}}` ait été créée et contienne un nombre.
 
@@ -45,7 +45,7 @@ if ({{varName}} > {{threshold}}) {
 
 ---
 
-## Condition avancée
+<!-- Condition avancée -->
 
 Nous allons écrire un programme qui donne la météo à l'utilisateur, pour la ville de son choix.
 
@@ -108,7 +108,7 @@ if (reponse === '{{city1}}') {
 
 ---
 
-## Fonctions
+<!-- Fonctions -->
 
 Définir une fonction `{{fctName}}` qui retourne le résultat de la multiplication des trois nombres passés en paramètres.
 
@@ -145,7 +145,7 @@ function {{fctName}}(a, b, c) {
 
 ---
 
-## Boucles
+<!-- Boucles -->
 
 Définir une fonction `{{fctName}}` qui prend comme paramètres un nombre `n` et une chaîne de caractères `message`, et retourne une chaîne de caractères contenant `n` fois `message`, en utilisant la concaténation.
 
@@ -187,7 +187,7 @@ function {{fctName}}(n, message) {
 
 ---
 
-## Tableaux
+<!-- Tableaux -->
 
 Définir une fonction `tableauContient` qui prend deux paramètres:
  - `tableau`: un tableau de nombres
