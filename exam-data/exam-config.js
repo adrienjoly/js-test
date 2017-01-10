@@ -11,6 +11,8 @@ module.exports = {
   PUBLIC_TEST_MODE: false, // set to false to restrict acccess and identify students using Google Login
   DISPLAY_SOLUTIONS_AFTER_SUBMIT: false, // set to false, for real exams
 
+  redirectToHttps: true,
+
   // Settings for conversion and publication of exercise templates
   examPack: {
     publishSolutions: false, // `true` required for realtime-eval/auto-eval back-ends and/or DISPLAY_SOLUTIONS_AFTER_SUBMIT
