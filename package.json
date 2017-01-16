@@ -27,7 +27,7 @@
     "eval-student-groups": "src/score-student-groups.sh ./student-groups/*.json",
     "eval-groups-from-firebase": "src/score-groups.sh",
     "deploy-firebase-hosting": "firebase deploy; # alternative to heroku, but did not scale over 20 simultaneous connections",
-    "init-heroku": "git remote rm heroku; heroku create js-partiel-email",
+    "init-heroku": "heroku git:remote -a js-partiel-__INSTANCE__NUMBER__ # (re)sets current heroku git remote",
     "deploy": "git push heroku master"
   },
   "author": "Adrien Joly <adrien.joly@gmail.com>",
