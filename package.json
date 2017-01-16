@@ -26,6 +26,7 @@
     "eval-students": "src/score-students.sh ./students/*.json",
     "eval-student-groups": "src/score-student-groups.sh ./student-groups/*.json",
     "eval-groups-from-firebase": "src/score-groups.sh",
+    "deploy-firebase-hosting": "firebase deploy; # alternative to heroku, but did not scale over 20 simultaneous connections",
     "init-heroku": "git remote rm heroku; heroku create js-revisions",
     "deploy": "git push heroku master"
   },
