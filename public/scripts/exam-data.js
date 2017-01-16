@@ -16,8 +16,8 @@
     "backend": {
       "type": "firebase",
       "FIREBASE_CONFIG": {
-        "apiKey": "AIzaSyAhpXX_dZGkFLmTMFZUbKlUSTZdAIwH2hY",
         "databaseURL": "https://js-partiel-3.firebaseio.com",
+        "apiKey": "AIzaSyAhpXX_dZGkFLmTMFZUbKlUSTZdAIwH2hY",
         "messagingSenderId": "935470302144"
       }
     },
