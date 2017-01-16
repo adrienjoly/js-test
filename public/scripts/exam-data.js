@@ -5,7 +5,7 @@
     window.location.href = window.location.href.replace('http:', 'https:');
   var app = document.querySelector('#app');
   app.config = {
-    "title": "JavaScript Partiel 1",
+    "title": "JavaScript Partiel 1 - Classe 3",
     "PUBLIC_TEST_MODE": false,
     "DISPLAY_SOLUTIONS_AFTER_SUBMIT": false,
     "redirectToHttps": true,
@@ -14,9 +14,11 @@
       "publishEvalTests": false
     },
     "backend": {
-      "type": "email-submit",
-      "EMAIL_SUBMIT_CONFIG": {
-        "mdTemplate": "Pour rendre votre copie, envoyez un email en suivant attentivement les étapes ci-dessous.\n\nPour éviter toute erreur, il est conseillé d'effectuer des copier-coller.\n\n## Destinataire de l'email:\n\n<pre style=\"font-family: monospace; margin: 0; overflow-x: scroll; white-space: pre-wrap;\">adrien.joly@eemi.com</pre>\n\n## Sujet de l'email:\n\n<pre style=\"font-family: monospace; margin: 0; overflow-x: scroll; white-space: pre-wrap;\">JS PARTIEL 1 DATA</pre>\n\n## Contenu de l'email:\n\n<pre style=\"font-family: monospace; margin: 0; overflow-x: scroll; white-space: pre-wrap;\">{{hashedAnswers}}</pre>\n\nUne fois votre email bien envoyé, vous pouvez quitter la salle d'examen.\n\nMerci !\n"
+      "type": "firebase",
+      "FIREBASE_CONFIG": {
+        "apiKey": "AIzaSyAhpXX_dZGkFLmTMFZUbKlUSTZdAIwH2hY",
+        "databaseURL": "https://js-partiel-3.firebaseio.com",
+        "messagingSenderId": "935470302144"
       }
     },
     "GOOGLE_CLIENT_ID": "247219641427-pq1bbfkkpqvvsgps5t1fh1sjivb61dt4.apps.googleusercontent.com",

@@ -1,11 +1,13 @@
+/*
 function readfile(filePath) {
   return require('fs').readFileSync(filePath).toString();
 }
+*/
 
 module.exports = {
 
   // Front-end config
-  title: 'JavaScript Partiel 1 (rendu par email)',
+  title: 'JavaScript Partiel 1 - Classe __INSTANCE__NUMBER__',
 
   // General settings
   PUBLIC_TEST_MODE: false, // set to false to restrict acccess and identify students using Google Login
@@ -21,16 +23,24 @@ module.exports = {
 
   // Back-end config
   backend: {
-    type: 'email-submit', // 'email-submit', 'realtime-eval', 'auto-eval', or 'firebase' (with FIREBASE_CONFIG)
-    EMAIL_SUBMIT_CONFIG: {
-      mdTemplate: readfile('public/data/submitted.md'),
+    type: 'firebase', // 'email-submit', 'realtime-eval', 'auto-eval', or 'firebase' (with FIREBASE_CONFIG)
+    FIREBASE_CONFIG: {
+      databaseURL: "https://js-partiel-__INSTANCE__NUMBER__.firebaseio.com",
+      apiKey: [
+        "AIzaSyCnQ929mAaejgnncBTddNrcExMMlaxCLww",
+        "AIzaSyDCqocdoU81PhB9m2zZhYg_DpiTzEcqEfY",
+        "AIzaSyAhpXX_dZGkFLmTMFZUbKlUSTZdAIwH2hY",
+      ][__INSTANCE__NUMBER__],
+      messagingSenderId: [
+        "896858434570",
+        "425303280065",
+        "935470302144",
+      ][__INSTANCE__NUMBER__]
+      // admin/dashboard: https://console.firebase.google.com/project/js-partiel-__INSTANCE__NUMBER__/database/data
     },
     /*
-    FIREBASE_CONFIG: {
-      apiKey: "AIzaSyAhpXX_dZGkFLmTMFZUbKlUSTZdAIwH2hY",
-      databaseURL: "https://js-partiel-3.firebaseio.com",
-      messagingSenderId: "935470302144"
-      // admin/dashboard: https://console.firebase.google.com/project/js-partiel-3/database/data
+    EMAIL_SUBMIT_CONFIG: {
+      mdTemplate: readfile('public/data/submitted.md'),
     },
     */
   },
