@@ -1,38 +1,44 @@
+function readfile(filePath) {
+  return require('fs').readFileSync(filePath).toString();
+}
+
 module.exports = {
 
+  // Front-end config
+  title: 'JavaScript Partiel 1',
+
   // General settings
-  PUBLIC_TEST_MODE: true, // set to false to restrict acccess and identify students using Google Login
-  DISPLAY_SOLUTIONS_AFTER_SUBMIT: true, // set to false, for real exams
+  PUBLIC_TEST_MODE: false, // set to false to restrict acccess and identify students using Google Login
+  DISPLAY_SOLUTIONS_AFTER_SUBMIT: false, // set to false, for real exams
+
+  redirectToHttps: true,
+
+  // Settings for conversion and publication of exercise templates
+  examPack: {
+    publishSolutions: false, // `true` required for realtime-eval/auto-eval back-ends and/or DISPLAY_SOLUTIONS_AFTER_SUBMIT
+    publishEvalTests: false, // `true` required for realtime-eval/auto-eval back-ends and/or DISPLAY_SOLUTIONS_AFTER_SUBMIT
+  },
 
   // Back-end config
   backend: {
-    type: 'realtime-eval', // or 'auto-eval', or 'firebase' (with FIREBASE_CONFIG)
+    type: 'email-submit', // 'email-submit', 'realtime-eval', 'auto-eval', or 'firebase' (with FIREBASE_CONFIG)
+    EMAIL_SUBMIT_CONFIG: {
+      mdTemplate: readfile('public/data/submitted.md'),
+    },
     /*
-    type: 'firebase',
     FIREBASE_CONFIG: {
-      apiKey: "AIzaSyCBkfcodGHJEJDsnh99KgpP_F3cxU58P9I",
-      databaseURL: "https://js-test-2.firebaseio.com",
-      messagingSenderId: "730428017661"
-      // admin/dashboard: https://console.firebase.google.com/project/js-test-2/database/data
+      apiKey: "AIzaSyAhpXX_dZGkFLmTMFZUbKlUSTZdAIwH2hY",
+      databaseURL: "https://js-partiel-3.firebaseio.com",
+      messagingSenderId: "935470302144"
+      // admin/dashboard: https://console.firebase.google.com/project/js-partiel-3/database/data
     },
     */
   },
 
-  // Front-end config
-  title: 'JavaScript Révisions',
-
-  /*
-  // For email submission only
-  teacherEmail: 'adrien.joly@eemi.com',
-  emailSubject: 'JS EXAM DATA',
-  */
-  
-  /*
   // Authentication
-  GOOGLE_CLIENT_ID: '247219641427-ifeq88p7rgor9al5ksduds7ug0ba7djr.apps.googleusercontent.com', // generated from https://console.developers.google.com/apis/credentials?project=eemi-own-exam&authuser=1
+  GOOGLE_CLIENT_ID: '247219641427-pq1bbfkkpqvvsgps5t1fh1sjivb61dt4.apps.googleusercontent.com', // generated from https://console.developers.google.com/apis/credentials?project=eemi-own-exam&authuser=1
   GOOGLE_CLIENT_DOMAIN: 'eemi.com', // to restrict access to users from a certain domain only
   LOGIN_INVITE: 'Se connecter à son compte EEMI:',
-  */
   
   // Evaluation / grading
   quizzGrading: {
