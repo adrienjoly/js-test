@@ -26,13 +26,11 @@ do
 
   npm run build
   npm run init-heroku
-  git status
-  git diff
-  pause # give a last opportunity to cancel before actual deployment
+  git status -s
   
   # Push them to Heroku instance, then repent of the commit (cf http://rhodesmill.org/brandon/2012/quietly-pushing-to-heroku/)
   #git add .
-  git commit . -m 'Temporary Heroku-only deployment commit'
+  git commit -am 'Temporary Heroku-only deployment commit'
   npm run deploy #git push heroku master --force
   git reset --soft HEAD~1
 

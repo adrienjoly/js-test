@@ -27,11 +27,13 @@ module.exports = {
     FIREBASE_CONFIG: {
       databaseURL: "https://js-partiel-__INSTANCE__NUMBER__.firebaseio.com",
       apiKey: [
+        "", // no instance at index 0
         "AIzaSyCnQ929mAaejgnncBTddNrcExMMlaxCLww",
         "AIzaSyDCqocdoU81PhB9m2zZhYg_DpiTzEcqEfY",
         "AIzaSyAhpXX_dZGkFLmTMFZUbKlUSTZdAIwH2hY",
       ][__INSTANCE__NUMBER__],
       messagingSenderId: [
+        "", // no instance at index 0
         "896858434570",
         "425303280065",
         "935470302144",
