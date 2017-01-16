@@ -31,7 +31,7 @@ do
   # Push them to Heroku instance, then repent of the commit (cf http://rhodesmill.org/brandon/2012/quietly-pushing-to-heroku/)
   #git add .
   git commit -am 'Temporary Heroku-only deployment commit'
-  npm run deploy #git push heroku master --force
+  git push heroku master --force
   git reset --soft HEAD~1
 
   for f in "${files[@]}"
