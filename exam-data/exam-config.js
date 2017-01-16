@@ -5,7 +5,7 @@ function readfile(filePath) {
 module.exports = {
 
   // Front-end config
-  title: 'JavaScript Partiel 1',
+  title: 'JavaScript Partiel 1 (rendu par email)',
 
   // General settings
   PUBLIC_TEST_MODE: false, // set to false to restrict acccess and identify students using Google Login
