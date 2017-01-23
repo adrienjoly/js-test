@@ -1,0 +1,2300 @@
+Parsing ex.1.quizz.template.md ...
+Parsing ex.2.code.template.md ...
+Reading and evaluating answers from: ../student-groups/js-partiel-3-export.json ...
+
+
+================================
+
+STUDENT: adrien_joly
+
+  -  quizz answers:
+  | qcm1 : 4 (solution: 4) => 1 pts
+  | qcm2 : 4 (solution: 3) => 0 pts
+  | qcm3 : 4 (solution: 2) => 0 pts
+  | qcm4 :  (solution: 3) => 0 pts
+  | qcm5 :  (solution: 1) => 0 pts
+
+  => quizz score: 1 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code6 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code7 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | ergerge
+Mon, 23 Jan 2017 09:33:51 GMT jailed:sandbox ReferenceError: ergerge is not defined
+    at evaluateStudentCode (DYNAMIC PLUGIN:13:1)
+    at DYNAMIC PLUGIN:31:3
+    at ContextifyScript.Script.runInContext (vm.js:35:29)
+    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
+    at Object.exports.runInNewContext (vm.js:72:17)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:106:13)
+    at process.emit (events.js:191:7)
+  | => test runner err: ReferenceError: ergerge is not defined
+  | 
+  | ------------- EXERCISE: code8 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code9 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | qqqqq
+Mon, 23 Jan 2017 09:33:51 GMT jailed:sandbox ReferenceError: qqqqq is not defined
+    at evaluateStudentCode (DYNAMIC PLUGIN:7:1)
+    at DYNAMIC PLUGIN:15:3
+    at ContextifyScript.Script.runInContext (vm.js:35:29)
+    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
+    at Object.exports.runInNewContext (vm.js:72:17)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:106:13)
+    at process.emit (events.js:191:7)
+  | => test runner err: ReferenceError: qqqqq is not defined
+  | 
+  | ------------- EXERCISE: code10 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | ergerger222111
+Mon, 23 Jan 2017 09:33:51 GMT jailed:sandbox ReferenceError: ergerger222111 is not defined
+    at evaluateStudentCode (DYNAMIC PLUGIN:7:1)
+    at DYNAMIC PLUGIN:15:3
+    at ContextifyScript.Script.runInContext (vm.js:35:29)
+    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
+    at Object.exports.runInNewContext (vm.js:72:17)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:106:13)
+    at process.emit (events.js:191:7)
+  | => test runner err: ReferenceError: ergerger222111 is not defined
+
+  => code score: 0 / 15 pts
+
+=> TOTAL STUDENT SCORE: 1 / 20
+
+
+================================
+
+STUDENT: aubin_keravel
+
+  -  quizz answers:
+  | qcm1 : 4 (solution: 4) => 1 pts
+  | qcm2 : 3 (solution: 3) => 1 pts
+  | qcm3 : 2 (solution: 2) => 1 pts
+  | qcm4 : 3 (solution: 3) => 1 pts
+  | qcm5 : 1 (solution: 1) => 1 pts
+
+  => quizz score: 5 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code6 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  |     var monNumero = 6; 
+  |         if (monNumero > 4) {
+  |             console.log('Plus grand que 4');
+  |         } 
+  | /* Commentaire : alternative à if proposée
+  |         else {
+  |             console.log('Moins grand que 4');
+  |         }    
+  |         */
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0 ]
+  | 
+  | ------------- EXERCISE: code7 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var userChoice = ['paris', 'roubaix'];
+  | var userChoice = prompt ('Pour quelle ville voulez vous connaître la météo ?');
+  |     if (userChoice === 'paris') {
+  |         alert ('pluvieux');
+  |     } else if (userChoice === 'roubaix') {
+  |         alert ('nuageux');
+  |     } else {
+  |         alert ('paris ou roubaix ?')
+  |     }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | ------------- EXERCISE: code8 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function multiplier (a, b, c) {
+  | return a * b * c;
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | ------------- EXERCISE: code9 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function nFois(n, message) {
+  | return n * message;
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0 ]
+  | 
+  | ------------- EXERCISE: code10 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function tableauContient (tableau, val) {
+  |     var excludeOrInclude = tableau.indexOf(val);
+  |     if (excludeOrInclude === -1) {
+  |     return false;
+  |     } else {
+  |     return true;
+  |     }
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+
+  => code score: 9 / 15 pts
+
+=> TOTAL STUDENT SCORE: 14 / 20
+
+
+================================
+
+STUDENT: bastien_bigot
+
+  -  quizz answers:
+  | qcm1 : 2 (solution: 4) => 0 pts
+  | qcm2 : 2 (solution: 3) => 0 pts
+  | qcm3 : 2 (solution: 2) => 1 pts
+  | qcm4 : 3 (solution: 3) => 1 pts
+  | qcm5 : 1 (solution: 1) => 1 pts
+
+  => quizz score: 3 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code6 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var plus4 = (monNombre !==5);
+  |   if (plus4) {
+  |     alert ('plus grand que 4')
+  |   }
+  | 
+Mon, 23 Jan 2017 09:33:52 GMT jailed:sandbox ReferenceError: alert is not defined
+    at evaluateStudentCode (DYNAMIC PLUGIN:14:5)
+    at DYNAMIC PLUGIN:34:3
+    at ContextifyScript.Script.runInContext (vm.js:35:29)
+    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
+    at Object.exports.runInNewContext (vm.js:72:17)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:106:13)
+    at process.emit (events.js:191:7)
+  | => test runner err: ReferenceError: alert is not defined
+  | 
+  | ------------- EXERCISE: code7 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var reponse = prompt('Saisissez le nom de la ville de votre choix');
+  | if (reponse === 'marseille') {
+  |     alert('soleil');
+  | } else if (reponse === 'paris') {
+  |     alert('nuageux');
+  | } else {
+  |   alert('mauvaise saisie');
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | ------------- EXERCISE: code8 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function produit (a,b,c) {
+  | return a*b*c;
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | ------------- EXERCISE: code9 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code10 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function tableauContient(tableau, nombre) {
+  |   var indice = tableau.inderOf(nombre);
+  |   if (indice === -1) {
+  |     return false;
+  |   } else {
+  |     return indice;
+  |   }
+  | )
+Mon, 23 Jan 2017 09:33:52 GMT jailed:sandbox DYNAMIC PLUGIN:14
+)
+^
+SyntaxError: Unexpected token )
+    at Object.exports.runInNewContext (vm.js:71:16)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:106:13)
+    at process.emit (events.js:191:7)
+    at process.nextTick (internal/child_process.js:744:12)
+    at _combinedTickCallback (internal/process/next_tick.js:67:7)
+    at process._tickCallback (internal/process/next_tick.js:98:9)
+  | => test runner err: SyntaxError: Unexpected token )
+
+  => code score: 6 / 15 pts
+
+=> TOTAL STUDENT SCORE: 9 / 20
+
+
+================================
+
+STUDENT: benjamin_kissous
+
+  -  quizz answers:
+  | qcm1 : 3 (solution: 4) => 0 pts
+  | qcm2 : 3 (solution: 3) => 1 pts
+  | qcm3 : 2 (solution: 2) => 1 pts
+  | qcm4 : 3 (solution: 3) => 1 pts
+  | qcm5 : 1 (solution: 1) => 1 pts
+
+  => quizz score: 4 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code6 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | if (monNumero > 4) {
+  |   alert('plus grand que 4');
+  | }
+Mon, 23 Jan 2017 09:33:52 GMT jailed:sandbox ReferenceError: alert is not defined
+    at evaluateStudentCode (DYNAMIC PLUGIN:22:3)
+    at DYNAMIC PLUGIN:30:3
+    at ContextifyScript.Script.runInContext (vm.js:35:29)
+    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
+    at Object.exports.runInNewContext (vm.js:72:17)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:106:13)
+    at process.emit (events.js:191:7)
+  | => test runner err: ReferenceError: alert is not defined
+  | 
+  | ------------- EXERCISE: code7 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var reponse = prompt('choisissez une ville');
+  | if (reponse === 'paris') {
+  |   alert('soleil');
+  | } else if (reponse === 'marseille') {
+  |   alert('nuageux');
+  | } else {
+  |   alert('paris ou marseille ?');
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | ------------- EXERCISE: code8 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function produit(a, b, c){
+  |   return a * b * c;
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | ------------- EXERCISE: code9 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function nFois(n, message) {
+  |   for (var i = 0; i < n; i++) {
+  |     console.log('message');
+  |   }
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0 ]
+  | 
+  | ------------- EXERCISE: code10 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function tableauContient(tableau, nombre) {
+  |   var indice = tableau.indexOf(nombre);
+  |   if (indice >= 0) {
+  |     return true;
+  |   } else {
+  |     return false;
+  |   }
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+
+  => code score: 9 / 15 pts
+
+=> TOTAL STUDENT SCORE: 13 / 20
+
+
+================================
+
+STUDENT: charles_kiefer
+
+  -  quizz answers:
+  | qcm1 : 3 (solution: 4) => 0 pts
+  | qcm2 : 3 (solution: 3) => 1 pts
+  | qcm3 : 2 (solution: 2) => 1 pts
+  | qcm4 : 3 (solution: 3) => 1 pts
+  | qcm5 : 1 (solution: 1) => 1 pts
+
+  => quizz score: 4 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code6 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | if (monNumero > 4) {
+  |   console.log('plus grand que 4');
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | ------------- EXERCISE: code7 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var reponse1 = prompt ('Saisissez le nom de votre ville');
+  |    if (reponse1 === 'paris') {
+  |      alert('pluvieux');
+  |  }
+  |    else if (reponse1 === 'roubaix') {
+  |    	 alert('nuageux');
+  |  }
+  |    else {
+  |    	 alert('paris ou roubaix ?');
+  |  }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | ------------- EXERCISE: code8 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function multiplier(nombre1, nombre2, nombre3) {
+  |     return  nombre1 * nombre2 * nombre3;
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | ------------- EXERCISE: code9 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function nFois (n, message) {
+  |   for (var i=0; i<=n; i++) {
+  |   message = message + message;
+  |   }
+  |   return message;
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0 ]
+  | 
+  | ------------- EXERCISE: code10 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function tableauContient (tableau, val);
+  |   if () {
+  |   return true;
+  | }
+  |   else {
+  |   return false;
+  | }
+Mon, 23 Jan 2017 09:33:53 GMT jailed:sandbox DYNAMIC PLUGIN:7
+function tableauContient (tableau, val);
+                                       ^
+SyntaxError: Unexpected token ;
+    at Object.exports.runInNewContext (vm.js:71:16)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:106:13)
+    at process.emit (events.js:191:7)
+    at process.nextTick (internal/child_process.js:744:12)
+    at _combinedTickCallback (internal/process/next_tick.js:67:7)
+    at process._tickCallback (internal/process/next_tick.js:98:9)
+  | => test runner err: SyntaxError: Unexpected token ;
+
+  => code score: 9 / 15 pts
+
+=> TOTAL STUDENT SCORE: 13 / 20
+
+
+================================
+
+STUDENT: edouard_duchesnedelamotte
+
+  -  quizz answers:
+  | qcm1 : 3 (solution: 4) => 0 pts
+  | qcm2 : 3 (solution: 3) => 1 pts
+  | qcm3 : 3 (solution: 2) => 0 pts
+  | qcm4 : 3 (solution: 3) => 1 pts
+  | qcm5 : 1 (solution: 1) => 1 pts
+
+  => quizz score: 3 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code6 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | if (monNumero > 4) {
+  |     console.log('plus grand que 4');
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | ------------- EXERCISE: code7 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var reponse = prompt('Entrez le nom d\'une ville');
+  | if (reponse === 'paris') {
+  |     alert('soleil');
+  | } else if (reponse === 'marseille') {
+  |     alert('nuageux');
+  | } else {
+  |     alert('paris ou marseille ?');
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | ------------- EXERCISE: code8 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function multiplication(a, b, c) {
+  |     return a * b * c;
+  | }
+Mon, 23 Jan 2017 09:33:53 GMT jailed:sandbox ReferenceError: produit is not defined
+    at evaluateStudentCode (DYNAMIC PLUGIN:13:5)
+    at DYNAMIC PLUGIN:17:3
+    at ContextifyScript.Script.runInContext (vm.js:35:29)
+    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
+    at Object.exports.runInNewContext (vm.js:72:17)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:106:13)
+    at process.emit (events.js:191:7)
+  | => test runner err: ReferenceError: produit is not defined
+  | 
+  | ------------- EXERCISE: code9 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function nFois(n, message) {
+  |     for (var i = 0; i < n; i++) {
+  | 
+  |     }
+  |     return message.repeat(n)
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | ------------- EXERCISE: code10 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function tableauContient(tableau, nombre) {
+  |     var indice = tableau.indexOf(nombre);
+  |     if (indice === -1) {
+  |         return false;
+  |     } else {
+  |         return true;
+  |     }
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+
+  => code score: 12 / 15 pts
+
+=> TOTAL STUDENT SCORE: 15 / 20
+
+
+================================
+
+STUDENT: florian_compiegne
+
+  -  quizz answers:
+  | qcm1 : 4 (solution: 4) => 1 pts
+  | qcm2 : 3 (solution: 3) => 1 pts
+  | qcm3 : 2 (solution: 2) => 1 pts
+  | qcm4 : 3 (solution: 3) => 1 pts
+  | qcm5 : 1 (solution: 1) => 1 pts
+
+  => quizz score: 5 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code6 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | if (monNumero > 4) {
+  |     console.log('plus grand que 4');
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | ------------- EXERCISE: code7 (variant: 3) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var choixUtilisateur = prompt('saisir le nom de la ville');
+  | if (choixUtilisateur === 'roubaix') {
+  |     alert('nuageux');
+  | } else if (choixUtilisateur === 'marseille') {
+  |     alert('soleil');
+  | } else
+  |     alert('mauvaise saisie');
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | ------------- EXERCISE: code8 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function mutiplier(a, b, c) {
+  |     return a * b * c;
+  | }
+Mon, 23 Jan 2017 09:33:53 GMT jailed:sandbox ReferenceError: multiplier is not defined
+    at evaluateStudentCode (DYNAMIC PLUGIN:13:5)
+    at DYNAMIC PLUGIN:17:3
+    at ContextifyScript.Script.runInContext (vm.js:35:29)
+    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
+    at Object.exports.runInNewContext (vm.js:72:17)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:106:13)
+    at process.emit (events.js:191:7)
+  | => test runner err: ReferenceError: multiplier is not defined
+  | 
+  | ------------- EXERCISE: code9 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function nFois(n, message) {
+  |     for (var i = 0; 1 * n; i++) {
+  |         var mot = message + mot;
+  |     }
+  |     return mot;
+  | }
+  | => test runner err: TIMEOUT: infinite loop?
+  | 
+  | ------------- EXERCISE: code10 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function tableauContient (tableau,val) {
+  | 	var indice  = tableau.indexOf(val);
+  | 	if (index === -1){
+  | 		return false
+  | 	} else {
+  | 		return indice;
+  | 	}
+  | }
+Mon, 23 Jan 2017 09:33:55 GMT jailed:sandbox ReferenceError: index is not defined
+    at tableauContient (DYNAMIC PLUGIN:9:6)
+    at evaluateStudentCode (DYNAMIC PLUGIN:18:5)
+    at DYNAMIC PLUGIN:22:3
+    at ContextifyScript.Script.runInContext (vm.js:35:29)
+    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
+    at Object.exports.runInNewContext (vm.js:72:17)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:106:13)
+  | => test runner err: ReferenceError: index is not defined
+
+  => code score: 6 / 15 pts
+
+=> TOTAL STUDENT SCORE: 11 / 20
+
+
+================================
+
+STUDENT: guillaume_martin
+
+  -  quizz answers:
+  | qcm1 : 4 (solution: 4) => 1 pts
+  | qcm2 : 2 (solution: 3) => 0 pts
+  | qcm3 : 2 (solution: 2) => 1 pts
+  | qcm4 : 3 (solution: 3) => 1 pts
+  | qcm5 : 1 (solution: 1) => 1 pts
+
+  => quizz score: 4 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code6 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var sup4 = (monNumero !== 5);
+  | if (sup4) {
+  |     alert('plus grand que 4');
+  | }
+Mon, 23 Jan 2017 09:33:55 GMT jailed:sandbox ReferenceError: alert is not defined
+    at evaluateStudentCode (DYNAMIC PLUGIN:14:5)
+    at DYNAMIC PLUGIN:32:3
+    at ContextifyScript.Script.runInContext (vm.js:35:29)
+    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
+    at Object.exports.runInNewContext (vm.js:72:17)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:106:13)
+    at process.emit (events.js:191:7)
+  | => test runner err: ReferenceError: alert is not defined
+  | 
+  | ------------- EXERCISE: code7 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var ville = {
+  |     paris: 'nuageux',
+  |     marseille: 'soleil',
+  |     stop
+  | };
+  | 
+  | 
+  | for (var choix; choix !== 'stop';) {
+  |     choix = prompt('Ville: \n paris, \n marseille, \n stop?');
+  |     if (choix === 'paris') {
+  |         var nom = alert('nuageux');
+  |     } else if (choix === 'marseille') {
+  |         alert('soleil')
+  |     } else {
+  |         alert('mauvaise saise')
+  |     }
+  | }
+Mon, 23 Jan 2017 09:33:55 GMT jailed:sandbox ReferenceError: stop is not defined
+    at evaluateStudentCode (DYNAMIC PLUGIN:16:5)
+    at DYNAMIC PLUGIN:79:3
+    at ContextifyScript.Script.runInContext (vm.js:35:29)
+    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
+    at Object.exports.runInNewContext (vm.js:72:17)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:106:13)
+    at process.emit (events.js:191:7)
+  | => test runner err: ReferenceError: stop is not defined
+  | 
+  | ------------- EXERCISE: code8 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function produit(a, b; c) {
+  |     return a * b * c;
+  | }
+Mon, 23 Jan 2017 09:33:55 GMT jailed:sandbox DYNAMIC PLUGIN:7
+function produit(a, b; c) {
+                     ^
+SyntaxError: Unexpected token ;
+    at Object.exports.runInNewContext (vm.js:71:16)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:106:13)
+    at process.emit (events.js:191:7)
+    at process.nextTick (internal/child_process.js:744:12)
+    at _combinedTickCallback (internal/process/next_tick.js:67:7)
+    at process._tickCallback (internal/process/next_tick.js:98:9)
+  | => test runner err: SyntaxError: Unexpected token ;
+  | 
+  | ------------- EXERCISE: code9 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function nFois(n, message) {
+  |     var i = 0;
+  |     do {
+  |         i += 1;
+  |         console.log(i);
+  |     } while (i < n);
+  |     return message * n
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0 ]
+  | 
+  | ------------- EXERCISE: code10 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 15 pts
+
+=> TOTAL STUDENT SCORE: 4 / 20
+
+
+================================
+
+STUDENT: ilana_bloch
+
+  -  quizz answers:
+  | qcm1 : 4 (solution: 4) => 1 pts
+  | qcm2 : 3 (solution: 3) => 1 pts
+  | qcm3 : 2 (solution: 2) => 1 pts
+  | qcm4 : 3 (solution: 3) => 1 pts
+  | qcm5 : 1 (solution: 1) => 1 pts
+
+  => quizz score: 5 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code6 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | if ( monNumero > 6 ) {
+  |   console.log('plus grand que 6');
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | ------------- EXERCISE: code7 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var ville = prompt('Veuillez saisir le nom d\'une ville');
+  | 
+  | if ( ville === 'paris') {
+  |   alert('nuageux');
+  | } else if (ville === 'marseille') {
+  |   alert('soleil');
+  | } else {
+  |   alert('mauvaise saisie');
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | ------------- EXERCISE: code8 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function produit(a, b, c){
+  |   return a * b * c;
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | ------------- EXERCISE: code9 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function repeter(n, message) {
+  |   for(var i=1; i <= n; i++) {
+  |     var rep = message + rep;
+  |   };
+  |   return rep;
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0 ]
+  | 
+  | ------------- EXERCISE: code10 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function tableauContient(tableau, nombre) {
+  |   var indice = tableau.indexOf(nombre);
+  |   if (indice === -1) {
+  |     return false;
+  |   } else {
+  |     return true;
+  |   };
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+
+  => code score: 12 / 15 pts
+
+=> TOTAL STUDENT SCORE: 17 / 20
+
+
+================================
+
+STUDENT: jeanne_vinay
+
+  -  quizz answers:
+  | qcm1 : 4 (solution: 4) => 1 pts
+  | qcm2 : 3 (solution: 3) => 1 pts
+  | qcm3 : 2 (solution: 2) => 1 pts
+  | qcm4 : 3 (solution: 3) => 1 pts
+  | qcm5 : 1 (solution: 1) => 1 pts
+
+  => quizz score: 5 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code6 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | if (monNumero>4) {
+  |   console.log('plus grand que 4');
+  | }
+  | 
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | ------------- EXERCISE: code7 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var ville = prompt('De quelle ville voulez vous connaître la météo?'); 
+  | if (ville ==='paris'){
+  |   alert ('nuageux');
+  | }else if (ville === 'marseille') {
+  |     alert ('soleil');
+  | }else{
+  |   alert('mauvaise saisie');
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | ------------- EXERCISE: code8 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function produit(a, b, c){
+  |   return a*b*c; 
+  |  }
+  |  
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | ------------- EXERCISE: code9 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | 
+  | function nFois(n, message){
+  |   for(var i=0; i<n; i++){
+  |     return (message.concat(message));
+  |   } 
+  |   return  ; 
+  | }
+  | nFois(4,'oui'); 
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0 ]
+  | 
+  | ------------- EXERCISE: code10 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function tableauContient(tableau, nombre) {
+  |   var test = tableau.indexOf(nombre);
+  |   if (test === -1) {
+  |     return false;
+  |   } else {
+  |     return true;
+  |   }
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+
+  => code score: 12 / 15 pts
+
+=> TOTAL STUDENT SCORE: 17 / 20
+
+
+================================
+
+STUDENT: jessy_hachet
+
+  -  quizz answers:
+  | qcm1 : 4 (solution: 4) => 1 pts
+  | qcm2 : 3 (solution: 3) => 1 pts
+  | qcm3 : 2 (solution: 2) => 1 pts
+  | qcm4 : 3 (solution: 3) => 1 pts
+  | qcm5 : 1 (solution: 1) => 1 pts
+
+  => quizz score: 5 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code6 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | if (monNombre > 4) {
+  |   console.log('plus grand que 4')
+  | } else if (monNombre < 4) {
+  |   console.log('plus petit que 4')
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | ------------- EXERCISE: code7 (variant: 3) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var meteo = prompt('Veuillez saisir le nom d\'une ville');
+  |   if (meteo === 'roubaix') {
+  |     alert('nuageux');
+  |   } else if (meteo === 'marseille') {
+  |     alert('soleil');
+  |   } else {
+  |   alert('mauvaise saisie');
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | ------------- EXERCISE: code8 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function multiplier(a, b, c) {
+  |   return a * b * c;
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | ------------- EXERCISE: code9 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function repeter(n) {
+  |   for (var i = 0; i < n; i++) {
+  |     console.log('Bonjour!');
+  |   }
+  |   return n;
+  | }
+Mon, 23 Jan 2017 09:33:57 GMT jailed:sandbox ReferenceError: repeterChaine is not defined
+    at evaluateStudentCode (DYNAMIC PLUGIN:15:5)
+    at DYNAMIC PLUGIN:20:3
+    at ContextifyScript.Script.runInContext (vm.js:35:29)
+    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
+    at Object.exports.runInNewContext (vm.js:72:17)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:106:13)
+    at process.emit (events.js:191:7)
+  | => test runner err: ReferenceError: repeterChaine is not defined
+  | 
+  | ------------- EXERCISE: code10 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function tableauContient(tableau, val) {
+  |   var indice = tableau.indexOf(val);
+  |   if (indice === val) {
+  |     return true;
+  |   } else {
+  |     return false;
+  |   }
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 0, 1 ]
+
+  => code score: 11 / 15 pts
+
+=> TOTAL STUDENT SCORE: 16 / 20
+
+
+================================
+
+STUDENT: kamil_izaret
+
+  -  quizz answers:
+  | qcm1 : 3 (solution: 4) => 0 pts
+  | qcm2 : 3 (solution: 3) => 1 pts
+  | qcm3 : 2 (solution: 2) => 1 pts
+  | qcm4 : 3 (solution: 3) => 1 pts
+  | qcm5 : 1 (solution: 1) => 1 pts
+
+  => quizz score: 4 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code6 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | if (monNumero>6) {
+  |   alert('plus grand que 6');
+  | }
+Mon, 23 Jan 2017 09:33:57 GMT jailed:sandbox ReferenceError: alert is not defined
+    at evaluateStudentCode (DYNAMIC PLUGIN:22:3)
+    at DYNAMIC PLUGIN:30:3
+    at ContextifyScript.Script.runInContext (vm.js:35:29)
+    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
+    at Object.exports.runInNewContext (vm.js:72:17)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:106:13)
+    at process.emit (events.js:191:7)
+  | => test runner err: ReferenceError: alert is not defined
+  | 
+  | ------------- EXERCISE: code7 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var reponse1 = prompt('saisisez le nom d\'une ville')
+  |   if (reponse1==='paris') {
+  |   	alert('soleil');
+  |   }else if (reponse1==='marseille') {
+  |   	alert('nuageux');
+  |   }else {
+  |   	alert('paris ou marseille ?')
+  |   }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | ------------- EXERCISE: code8 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function produit(a, b, c) {
+  |   return a*b*c;
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | ------------- EXERCISE: code9 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var newmessage = '';
+  | 
+  | function repeter(n, message) {
+  |   for (var i = 0; i < n; i++) {
+  |     newmessage = newmessage + message;
+  |   }
+  |   return newmessage;
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 0, 0 ]
+  | 
+  | ------------- EXERCISE: code10 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function tableauContient(tableau, nombre) {
+  |   var indice = tableau.indexOf(nombre);
+  |   if (indice === -1) {
+  |     return false;
+  |   } else {
+  |     return true;
+  |   }
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+
+  => code score: 10 / 15 pts
+
+=> TOTAL STUDENT SCORE: 14 / 20
+
+
+================================
+
+STUDENT: lara_kounowski
+
+  -  quizz answers:
+  | qcm1 : 4 (solution: 4) => 1 pts
+  | qcm2 : 2 (solution: 3) => 0 pts
+  | qcm3 : 2 (solution: 2) => 1 pts
+  | qcm4 : 3 (solution: 3) => 1 pts
+  | qcm5 : 1 (solution: 1) => 1 pts
+
+  => quizz score: 4 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code6 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | if(monNombre > 4) {
+  | resultat = 'plus grand que 4';
+  | }
+  | 
+Mon, 23 Jan 2017 09:33:57 GMT jailed:sandbox ReferenceError: resultat is not defined
+    at evaluateStudentCode (DYNAMIC PLUGIN:23:10)
+    at DYNAMIC PLUGIN:32:3
+    at ContextifyScript.Script.runInContext (vm.js:35:29)
+    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
+    at Object.exports.runInNewContext (vm.js:72:17)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:106:13)
+    at process.emit (events.js:191:7)
+  | => test runner err: ReferenceError: resultat is not defined
+  | 
+  | ------------- EXERCISE: code7 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var reponse = prompt('Quelle est la ville que tu cherches?');
+  |     if (reponse === 'paris') { 
+  | 	alert('nuageux');
+  |   } else if (reponse === 'marseille') {
+  |   	alert('soleil');
+  |     } else {
+  | 	alert('mauvaise saisie');
+  | 	}
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | ------------- EXERCISE: code8 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function produit(a, b, c) {
+  | 	return a * b * c;
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | ------------- EXERCISE: code9 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function repeterChaine(n) {
+  |   for (var i = 0; i<n, i++) {
+  |     console.log('message');
+  |   }
+  |   return n;
+  | }
+Mon, 23 Jan 2017 09:33:57 GMT jailed:sandbox DYNAMIC PLUGIN:8
+  for (var i = 0; i<n, i++) {
+                          ^
+SyntaxError: Unexpected token )
+    at Object.exports.runInNewContext (vm.js:71:16)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:106:13)
+    at process.emit (events.js:191:7)
+    at process.nextTick (internal/child_process.js:744:12)
+    at _combinedTickCallback (internal/process/next_tick.js:67:7)
+    at process._tickCallback (internal/process/next_tick.js:98:9)
+  | => test runner err: SyntaxError: Unexpected token )
+  | 
+  | ------------- EXERCISE: code10 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function tableauContient(tableau, nombre) {
+  | 	var indice = tableau.indexOf(nombre);
+  | 	if (indice === 0) {
+  | 		return true;
+  |     } else {
+  | 		return false;
+  |     }
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 0, 1 ]
+
+  => code score: 8 / 15 pts
+
+=> TOTAL STUDENT SCORE: 12 / 20
+
+
+================================
+
+STUDENT: louis_gosse
+
+  -  quizz answers:
+  | qcm1 : 4 (solution: 4) => 1 pts
+  | qcm2 : 3 (solution: 3) => 1 pts
+  | qcm3 : 2 (solution: 2) => 1 pts
+  | qcm4 : 3 (solution: 3) => 1 pts
+  | qcm5 : 1 (solution: 1) => 1 pts
+
+  => quizz score: 5 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code6 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | if (monNumero > 6) {
+  |     resultat = 'plus grand que 6';
+  | }
+Mon, 23 Jan 2017 09:33:57 GMT jailed:sandbox ReferenceError: resultat is not defined
+    at evaluateStudentCode (DYNAMIC PLUGIN:22:14)
+    at DYNAMIC PLUGIN:30:3
+    at ContextifyScript.Script.runInContext (vm.js:35:29)
+    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
+    at Object.exports.runInNewContext (vm.js:72:17)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:106:13)
+    at process.emit (events.js:191:7)
+  | => test runner err: ReferenceError: resultat is not defined
+  | 
+  | ------------- EXERCISE: code7 (variant: 3) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var meteo = prompt('Choisissez une ville');
+  | if (meteo === 'roubaix') {
+  |     alert('nuageux');
+  | } else if (meteo === 'marseille') {
+  |     alert('soleil');
+  | } else {
+  |     alert('mauvaise saisie');
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | ------------- EXERCISE: code8 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function multiplier (a, b, c) {
+  |  return (1 * 3 * -2);
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 0 ]
+  | 
+  | ------------- EXERCISE: code9 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function repeter(n, message) {
+  |     for (var i = 0; i < n; i++) {
+  |         console.log('message');
+  |     } 
+  |   { return n.concat('message');
+  |    }
+  | }
+Mon, 23 Jan 2017 09:33:58 GMT jailed:sandbox TypeError: n.concat is not a function
+    at repeter (DYNAMIC PLUGIN:11:14)
+    at evaluateStudentCode (DYNAMIC PLUGIN:16:5)
+    at DYNAMIC PLUGIN:21:3
+    at ContextifyScript.Script.runInContext (vm.js:35:29)
+    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
+    at Object.exports.runInNewContext (vm.js:72:17)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:106:13)
+  | => test runner err: TypeError: n.concat is not a function
+  | 
+  | ------------- EXERCISE: code10 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function tableauContient(tableau, val) {
+  |     var indice = tableau.indexOf(val);
+  |     if (indice >= 0) {
+  |         return true;
+  |     } else {
+  |         return false
+  |     }
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+
+  => code score: 8 / 15 pts
+
+=> TOTAL STUDENT SCORE: 13 / 20
+
+
+================================
+
+STUDENT: louis_malrieu
+
+  -  quizz answers:
+  | qcm1 : 4 (solution: 4) => 1 pts
+  | qcm2 : 2 (solution: 3) => 0 pts
+  | qcm3 : 3 (solution: 2) => 0 pts
+  | qcm4 : 2 (solution: 3) => 0 pts
+  | qcm5 : 1 (solution: 1) => 1 pts
+
+  => quizz score: 2 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code6 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var monNombre = 5 ;
+  | if (monNombre > 4) {
+  |   résultat = 'plus grand que 4';
+  | } 
+Mon, 23 Jan 2017 09:33:58 GMT jailed:sandbox ReferenceError: résultat is not defined
+    at evaluateStudentCode (DYNAMIC PLUGIN:14:12)
+    at DYNAMIC PLUGIN:32:3
+    at ContextifyScript.Script.runInContext (vm.js:35:29)
+    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
+    at Object.exports.runInNewContext (vm.js:72:17)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:106:13)
+    at process.emit (events.js:191:7)
+  | => test runner err: ReferenceError: résultat is not defined
+  | 
+  | ------------- EXERCISE: code7 (variant: 3) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var reponse = prompt('Allez choisit ta ville');
+  | if (reponse === 'roubais') {
+  |  alert('nuageux');
+  | } else if (reponse === 'marseille') {
+  |  var reponse2 = prompt('soleil');
+  | } else {
+  |  alert('mauvaise saisie');
+  | }
+  | 
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 0, 1 ]
+  | 
+  | ------------- EXERCISE: code8 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function multiplier(1, 2, 3) {
+  |  return 6(1*2*3);
+  | }
+  | 
+Mon, 23 Jan 2017 09:33:58 GMT jailed:sandbox DYNAMIC PLUGIN:7
+function multiplier(1, 2, 3) {
+                    ^
+SyntaxError: Unexpected number
+    at Object.exports.runInNewContext (vm.js:71:16)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:106:13)
+    at process.emit (events.js:191:7)
+    at process.nextTick (internal/child_process.js:744:12)
+    at _combinedTickCallback (internal/process/next_tick.js:67:7)
+    at process._tickCallback (internal/process/next_tick.js:98:9)
+  | => test runner err: SyntaxError: Unexpected number
+  | 
+  | ------------- EXERCISE: code9 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function repeterChaine(2, 'message'){
+  | if concat(repeterChaine);
+  |  return [2*'message' ]
+  | }
+Mon, 23 Jan 2017 09:33:58 GMT jailed:sandbox DYNAMIC PLUGIN:7
+function repeterChaine(2, 'message'){
+                       ^
+SyntaxError: Unexpected number
+    at Object.exports.runInNewContext (vm.js:71:16)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:106:13)
+    at process.emit (events.js:191:7)
+    at process.nextTick (internal/child_process.js:744:12)
+    at _combinedTickCallback (internal/process/next_tick.js:67:7)
+    at process._tickCallback (internal/process/next_tick.js:98:9)
+  | => test runner err: SyntaxError: Unexpected number
+  | 
+  | ------------- EXERCISE: code10 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function tableauContient(tableau, val) {
+  | var indice = tableau.indexOf(val);
+  | if (indice === -1) {
+  | return true;
+  | } else {
+  | return false;
+  | }
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 0, 0 ]
+
+  => code score: 2 / 15 pts
+
+=> TOTAL STUDENT SCORE: 4 / 20
+
+
+================================
+
+STUDENT: madison_hayat
+
+  -  quizz answers:
+  | qcm1 : 4 (solution: 4) => 1 pts
+  | qcm2 : 1 (solution: 3) => 0 pts
+  | qcm3 : 2 (solution: 2) => 1 pts
+  | qcm4 : 3 (solution: 3) => 1 pts
+  | qcm5 : 1 (solution: 1) => 1 pts
+
+  => quizz score: 4 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code6 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | if monNombre > 4 {
+  |   console.log('plus grand que 4');
+  | }
+Mon, 23 Jan 2017 09:33:58 GMT jailed:sandbox DYNAMIC PLUGIN:12
+if monNombre > 4 {
+   ^^^^^^^^^
+SyntaxError: Unexpected identifier
+    at Object.exports.runInNewContext (vm.js:71:16)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:106:13)
+    at process.emit (events.js:191:7)
+    at process.nextTick (internal/child_process.js:744:12)
+    at _combinedTickCallback (internal/process/next_tick.js:67:7)
+    at process._tickCallback (internal/process/next_tick.js:98:9)
+  | => test runner err: SyntaxError: Unexpected identifier
+  | 
+  | ------------- EXERCISE: code7 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var ville = prompt('Saisir la ville');
+  |   if (ville === 'paris') {
+  |     alert('nuageux');
+  | }
+  |   else if (ville === 'marseille') {
+  |     alert('soleil');
+  | }
+  |   else {
+  | alert('mauvaise saisie');
+  | }
+  | 
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | ------------- EXERCISE: code8 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function produit (1, 3, 5){
+  |   return (1*3*5);
+  | }
+  | 
+Mon, 23 Jan 2017 09:33:58 GMT jailed:sandbox DYNAMIC PLUGIN:7
+function produit (1, 3, 5){
+                  ^
+SyntaxError: Unexpected number
+    at Object.exports.runInNewContext (vm.js:71:16)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:106:13)
+    at process.emit (events.js:191:7)
+    at process.nextTick (internal/child_process.js:744:12)
+    at _combinedTickCallback (internal/process/next_tick.js:67:7)
+    at process._tickCallback (internal/process/next_tick.js:98:9)
+  | => test runner err: SyntaxError: Unexpected number
+  | 
+  | ------------- EXERCISE: code9 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function repeterChaine(n) {
+  | for (var i = n; i === n; i++) {
+  |   console.log ('Bonjour!');
+  | }
+  |   return n;
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0 ]
+  | 
+  | ------------- EXERCISE: code10 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function tableauContient(tableau, nombre) {
+  |   var valeur = tableau.indexOf(nombre);
+  |   if (valeur === -1){
+  |     return false; 
+  |   }else{
+  |     return valeur ;
+  |   }
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 0, 1 ]
+
+  => code score: 5 / 15 pts
+
+=> TOTAL STUDENT SCORE: 9 / 20
+
+
+================================
+
+STUDENT: mickael_chekroun
+
+  -  quizz answers:
+  | qcm1 : 4 (solution: 4) => 1 pts
+  | qcm2 : 3 (solution: 3) => 1 pts
+  | qcm3 : 2 (solution: 2) => 1 pts
+  | qcm4 : 3 (solution: 3) => 1 pts
+  | qcm5 : 2 (solution: 1) => 0 pts
+
+  => quizz score: 4 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code6 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | if (monNombre > 4) {
+  |   console.log('plus grand que 4');
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | ------------- EXERCISE: code7 (variant: 3) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var choixVille = prompt('Saisissez le nom d\'une ville');
+  | if (choixVille === 'roubaix') {
+  |   alert('nuageux');
+  | } else if (choixVille === 'marseille') {
+  |   alert('soleil');
+  | } else {
+  |   alert('mauvaise saisie');
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | ------------- EXERCISE: code8 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function multiplier (a, b, c) {
+  |   return a * b * c;
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | ------------- EXERCISE: code9 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function repeterChaine (n, message) {
+  |   for (var i = 0; i < n; i++) {
+  |     var mot = message + mot;
+  |   } 
+  |   return mot;	
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0 ]
+  | 
+  | ------------- EXERCISE: code10 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function tableauContient (tableau, val) {
+  |   var indice = tableau.indexOf(val);
+  |   if (indice !== -1) {
+  |     return true;
+  |   } else {
+  |   return false;
+  |   }
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+
+  => code score: 12 / 15 pts
+
+=> TOTAL STUDENT SCORE: 16 / 20
+
+
+================================
+
+STUDENT: quentin_champenois
+
+  -  quizz answers:
+  | qcm1 : 4 (solution: 4) => 1 pts
+  | qcm2 : 3 (solution: 3) => 1 pts
+  | qcm3 : 2 (solution: 2) => 1 pts
+  | qcm4 : 3 (solution: 3) => 1 pts
+  | qcm5 : 1 (solution: 1) => 1 pts
+
+  => quizz score: 5 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code6 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | if (monNumero > 6){
+  |   console.log('plus grand que 6');
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | ------------- EXERCISE: code7 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var choixVille = prompt('Saisissez le nom d\'une ville');
+  | if (choixVille === 'paris'){
+  | 	alert('pluvieux');
+  | } else if (choixVille === 'roubaix'){
+  | 	alert('nuageux');
+  | } else {
+  | 	alert('paris ou roubaix ?');
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | ------------- EXERCISE: code8 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function multiplier(a, b, c){
+  | 	return a * b * c;
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | ------------- EXERCISE: code9 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function repeter(n, message){
+  | 	var string = parseInt(message);
+  | 	for (var i = 0; i <= n; i++){
+  | 		var resultat = n * string;
+  | 	}
+  | 	return resultat;
+  | } 
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0 ]
+  | 
+  | ------------- EXERCISE: code10 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function tableauContient(tableau, val){
+  | 	var index = tableau.indexOf(val);
+  | 	if (index !== -1){
+  | 		return true;
+  | 	} else {
+  | 		return false;
+  | 	}
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+
+  => code score: 12 / 15 pts
+
+=> TOTAL STUDENT SCORE: 17 / 20
+
+
+================================
+
+STUDENT: raphael_parets
+
+  -  quizz answers:
+  | qcm1 : 4 (solution: 4) => 1 pts
+  | qcm2 : 3 (solution: 3) => 1 pts
+  | qcm3 : 3 (solution: 2) => 0 pts
+  | qcm4 : 3 (solution: 3) => 1 pts
+  | qcm5 : 1 (solution: 1) => 1 pts
+
+  => quizz score: 4 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code6 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | if (monNumero > 4){
+  |   console.log('plus grand que 4');
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | ------------- EXERCISE: code7 (variant: 3) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var choix = prompt ('Quelle ville habitez-vous ?')
+  | if (choix === 'roubaix'){
+  |   alert('nuageux');
+  | }
+  | else if (choix === 'marseille'){
+  |   alert('soleil');
+  | }
+  | else {
+  |   alert('mauvaise saisie');
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | ------------- EXERCISE: code8 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function multiplier(a, b, c){
+  |   return a * b * c;
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | ------------- EXERCISE: code9 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function nFois(n, message){
+  |   var chaine = '';
+  |   for (i = 1; i <= n; i++){
+  |     chaine = chaine + message;
+  |   }
+  |   return chaine;
+  | }
+Mon, 23 Jan 2017 09:33:59 GMT jailed:sandbox ReferenceError: i is not defined
+    at nFois (DYNAMIC PLUGIN:9:10)
+    at evaluateStudentCode (DYNAMIC PLUGIN:16:5)
+    at DYNAMIC PLUGIN:21:3
+    at ContextifyScript.Script.runInContext (vm.js:35:29)
+    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
+    at Object.exports.runInNewContext (vm.js:72:17)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:106:13)
+  | => test runner err: ReferenceError: i is not defined
+  | 
+  | ------------- EXERCISE: code10 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function tableauContient(tableau, val){
+  |   if (tableau.indexOf(val) !== -1){
+  |     return true;
+  |   }
+  |   else {
+  |     return false;
+  |   }
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+
+  => code score: 12 / 15 pts
+
+=> TOTAL STUDENT SCORE: 16 / 20
+
+
+================================
+
+STUDENT: theo_geay
+
+  -  quizz answers:
+  | qcm1 : 4 (solution: 4) => 1 pts
+  | qcm2 : 3 (solution: 3) => 1 pts
+  | qcm3 : 2 (solution: 2) => 1 pts
+  | qcm4 : 3 (solution: 3) => 1 pts
+  | qcm5 : 1 (solution: 1) => 1 pts
+
+  => quizz score: 5 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code6 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | if (monNumero > 4) {
+  |     console.log('plus grand que 4');
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | ------------- EXERCISE: code7 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | ville = prompt("Veuillez saisir le nom d'une ville");
+  | if (ville === 'paris') {
+  |     alert('pluvieux');
+  | }
+  | else if (ville === 'roubaix'){
+  |     alert('nuageux');
+  | }
+  | else {
+  |     alert('paris ou roubaix ?');
+  | }
+Mon, 23 Jan 2017 09:34:00 GMT jailed:sandbox ReferenceError: ville is not defined
+    at evaluateStudentCode (DYNAMIC PLUGIN:13:7)
+    at DYNAMIC PLUGIN:58:3
+    at ContextifyScript.Script.runInContext (vm.js:35:29)
+    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
+    at Object.exports.runInNewContext (vm.js:72:17)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:106:13)
+    at process.emit (events.js:191:7)
+  | => test runner err: ReferenceError: ville is not defined
+  | 
+  | ------------- EXERCISE: code8 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function multiplier(a, b, c) {
+  |     var d = a*b*c;
+  |     return d;
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | ------------- EXERCISE: code9 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function nFois(n, a) {
+  |     n = n/2;
+  |     for (var i = 0; i < n; i++) {
+  |         var a = a + a
+  |     }
+  |     return a;
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0 ]
+  | 
+  | ------------- EXERCISE: code10 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function tableauContient(tableau, val) {
+  |   var aze = tableau.indexOf(val);
+  |   if (aze === 1) {
+  |     return true;
+  |   } else {
+  |     return false;
+  |   }
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+
+  => code score: 9 / 15 pts
+
+=> TOTAL STUDENT SCORE: 14 / 20
+
+
+================================
+
+STUDENT: thibault_chambrillon
+
+  -  quizz answers:
+  | qcm1 : 4 (solution: 4) => 1 pts
+  | qcm2 : 3 (solution: 3) => 1 pts
+  | qcm3 : 2 (solution: 2) => 1 pts
+  | qcm4 : 3 (solution: 3) => 1 pts
+  | qcm5 : 1 (solution: 1) => 1 pts
+
+  => quizz score: 5 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code6 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var monNumero=5, resultat;
+  | if (monNumero > 4) {
+  | 	resultat = 'plus grand que 4';
+  | } else {
+  | 	resultat = 'plus petit que 4';
+  | } 
+  | console.log(resultat);
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 0, 1 ]
+  | 
+  | ------------- EXERCISE: code7 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var reponse = prompt('quelles Villes ?');
+  | if (reponse === 'paris') {
+  |    	alert('soleil')
+  | } else if (reponse === 'marseille') {
+  |   	alert('nuageux')
+  | } else {
+  | 	alert('paris ou marseille ?')
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | ------------- EXERCISE: code8 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function produit(nombre1, nombre2, nombre3){
+  | 	return nombre1*nombre2*nombre3
+  | } 
+  | var resultat = produit(1, 3, -2)
+  | resultat;
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | ------------- EXERCISE: code9 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function nFois(n, message) {
+  |  for (var i=0 ; i>n ; i++) 
+  | 		return n * message
+  | }
+  | var resultat = nFois(3,'message')
+  | resultat;
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0 ]
+  | 
+  | ------------- EXERCISE: code10 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function tableauContient(tableau, nombre) {
+  | 	var indice = tableau.indexOf(nombre)
+  | 	if (indice >= 0) {
+  | 		return true 
+  | 	} else {
+  | 		return false
+  | 	}
+  | } 
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+
+  => code score: 10 / 15 pts
+
+=> TOTAL STUDENT SCORE: 15 / 20
+
+
+================================
+
+STUDENT: timothee_ong
+
+  -  quizz answers:
+  | qcm1 : 4 (solution: 4) => 1 pts
+  | qcm2 : 3 (solution: 3) => 1 pts
+  | qcm3 : 2 (solution: 2) => 1 pts
+  | qcm4 : 3 (solution: 3) => 1 pts
+  | qcm5 : 1 (solution: 1) => 1 pts
+
+  => quizz score: 5 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code6 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var monNumero = 6;
+  |   if (nb > 4) {
+  |     console.log('plus grand que 4')
+  |   }
+Mon, 23 Jan 2017 09:34:00 GMT jailed:sandbox ReferenceError: nb is not defined
+    at evaluateStudentCode (DYNAMIC PLUGIN:13:7)
+    at DYNAMIC PLUGIN:32:3
+    at ContextifyScript.Script.runInContext (vm.js:35:29)
+    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
+    at Object.exports.runInNewContext (vm.js:72:17)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:106:13)
+    at process.emit (events.js:191:7)
+  | => test runner err: ReferenceError: nb is not defined
+  | 
+  | ------------- EXERCISE: code7 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var reponse = prompt('Bonjour, quelle ville veux-tu ?');
+  | if (reponse === 'paris') {
+  |   alert('nuageux');
+  | } else if (reponse === 'marseille') {
+  |   alert('soleil');
+  | } else {
+  |   alert('mauvaise saisie')
+  | };
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | ------------- EXERCISE: code8 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function produit (nombre1,nombre2,nombre3) {
+  |   return nombre1*nombre2*nombre3;
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | ------------- EXERCISE: code9 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function nFois(n,message){
+  |   return n*message;
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0 ]
+  | 
+  | ------------- EXERCISE: code10 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function tableauContient(tableau, nombre) {
+  |       var indice = tableau.indexOf(nombre);
+  |       if (indice === -1) {
+  |         return false;
+  |       } else {
+  |         return true;
+  |       }
+  |     }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+
+  => code score: 9 / 15 pts
+
+=> TOTAL STUDENT SCORE: 14 / 20
+
+
+================================
+
+STUDENT: victor_legac
+
+  -  quizz answers:
+  | qcm1 : 4 (solution: 4) => 1 pts
+  | qcm2 : 2 (solution: 3) => 0 pts
+  | qcm3 : 2 (solution: 2) => 1 pts
+  | qcm4 : 3 (solution: 3) => 1 pts
+  | qcm5 : 1 (solution: 1) => 1 pts
+
+  => quizz score: 4 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code6 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var monNumero = prompt('choix du nombre');
+  | if (monNumero > 6) {
+  |   console.log('plus grand que 6');	
+  | }
+Mon, 23 Jan 2017 09:34:01 GMT jailed:sandbox ReferenceError: prompt is not defined
+    at evaluateStudentCode (DYNAMIC PLUGIN:12:17)
+    at DYNAMIC PLUGIN:32:3
+    at ContextifyScript.Script.runInContext (vm.js:35:29)
+    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
+    at Object.exports.runInNewContext (vm.js:72:17)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:106:13)
+    at process.emit (events.js:191:7)
+  | => test runner err: ReferenceError: prompt is not defined
+  | 
+  | ------------- EXERCISE: code7 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var user = prompt('Saisir le nom d\'une ville ?');
+  | if (user === 'paris') {
+  |   alert('soleil');	
+  | } else if (user === 'marseille') {
+  | 	alert('nuageux');
+  | } else {
+  | 	alert('paris ou marseille ?');
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | ------------- EXERCISE: code8 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function produit(a,b) {
+  |   return a*b;
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 0, 0 ]
+  | 
+  | ------------- EXERCISE: code9 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function repeter(n) {
+  |   for (var i = 0; i < n; i++) {
+  |     console.log('message');
+  |   } return n;
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0 ]
+  | 
+  | ------------- EXERCISE: code10 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function tableauContient(tableau, chaine) {
+  |   var indice = tableau.indexOf(chaine);
+  |   if (indice === -1) {
+  |     return false;
+  |   } else {
+  |   return true;
+  |   }
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 1, 1 ]
+
+  => code score: 6 / 15 pts
+
+=> TOTAL STUDENT SCORE: 10 / 20
+
+
+================================
+
+STUDENT: victoria_antalis
+
+  -  quizz answers:
+  | qcm1 : 1 (solution: 4) => 0 pts
+  | qcm2 : 2 (solution: 3) => 0 pts
+  | qcm3 : 2 (solution: 2) => 1 pts
+  | qcm4 : 3 (solution: 3) => 1 pts
+  | qcm5 : 1 (solution: 1) => 1 pts
+
+  => quizz score: 3 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code6 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | for (var i = 0; i < monNombre; ++i) {
+  |   if (monNombre > 4) {
+  |     console.log('plus grand que 4');
+  |   }
+Mon, 23 Jan 2017 09:34:01 GMT jailed:sandbox DYNAMIC PLUGIN:32
+})();
+ ^
+SyntaxError: Unexpected token )
+    at Object.exports.runInNewContext (vm.js:71:16)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:106:13)
+    at process.emit (events.js:191:7)
+    at process.nextTick (internal/child_process.js:744:12)
+    at _combinedTickCallback (internal/process/next_tick.js:67:7)
+    at process._tickCallback (internal/process/next_tick.js:98:9)
+  | => test runner err: SyntaxError: Unexpected token )
+  | 
+  | ------------- EXERCISE: code7 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var reponse = prompt('Saisissez le nom de la ville de votre choix');
+  | if (reponse === 'paris'){
+  | 	alert('nuageux');
+  | } else if (reponse === 'marseille'){
+  | 	alert('soleil');
+  | }else{
+  | 	alert('mauvaise saisie');
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | ------------- EXERCISE: code8 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function produit(a, b, c){
+  | 	return a * b * c;
+  | }
+  | produit(1, 3, -2);
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | ------------- EXERCISE: code9 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function repeterChaine(n) {
+  |   for (var i = 0; i < n; i++) {
+  |     console.log('message');
+  |   }
+  |   return n;
+  | }
+  | 
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0 ]
+  | 
+  | ------------- EXERCISE: code10 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | 
+  | function tableauContient(tableau, nombre) {
+  |   var indice = tableau.indexOf(nombre);
+  |   if (indice === 1) {
+  |     return true;
+  |   } else {
+  |     return false;
+  |   }
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+
+  => code score: 9 / 15 pts
+
+=> TOTAL STUDENT SCORE: 12 / 20
