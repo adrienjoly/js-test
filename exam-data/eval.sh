@@ -15,6 +15,7 @@ done
 src/score-student-groups.sh ./student-data/*.json
 
 echo "- restoring mentions to $placeholder"
-git reset --soft HEAD~1
-git pull
-git reset --hard
+for f in "${files[@]}"
+do
+  git checkout -- $f
+done
