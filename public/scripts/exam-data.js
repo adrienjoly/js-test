@@ -5,21 +5,16 @@
     window.location.href = window.location.href.replace('http:', 'https:');
   var app = document.querySelector('#app');
   app.config = {
-    "title": "JavaScript Partiel 1 - Classe 3",
-    "PUBLIC_TEST_MODE": false,
-    "DISPLAY_SOLUTIONS_AFTER_SUBMIT": false,
+    "title": "JavaScript QCM",
+    "PUBLIC_TEST_MODE": true,
+    "DISPLAY_SOLUTIONS_AFTER_SUBMIT": true,
     "redirectToHttps": true,
     "examPack": {
-      "publishSolutions": false,
-      "publishEvalTests": false
+      "publishSolutions": true,
+      "publishEvalTests": true
     },
     "backend": {
-      "type": "firebase",
-      "FIREBASE_CONFIG": {
-        "databaseURL": "https://js-partiel-3.firebaseio.com",
-        "apiKey": "AIzaSyAhpXX_dZGkFLmTMFZUbKlUSTZdAIwH2hY",
-        "messagingSenderId": "935470302144"
-      }
+      "type": "auto-eval"
     },
     "GOOGLE_CLIENT_ID": "247219641427-pq1bbfkkpqvvsgps5t1fh1sjivb61dt4.apps.googleusercontent.com",
     "GOOGLE_CLIENT_DOMAIN": "eemi.com",
@@ -43,119 +38,106 @@
         {
           "i": 1,
           "id": "qcm1",
-          "md": "```js\nfunction bonjour() {\n  return 'bonjour !';\n}\nvar resultat = bonjour();\n```\n\nQu'est-ce que ce code ne contient PAS:\n",
+          "md": "Laquelle de ces instructions constitue un objet JavaScript valide:\n\n\n",
+          "mdSolution": "\n\nUn objet JavaScript:\n\n - accolades\n - propriétés définis par paires clé-valeur (syntaxe: `clé: valeur`)\n - propriétés séparées par des virgules",
           "choices": [
             {
               "name": 1,
-              "text": "Affectation"
+              "text": "[ prop1: 3, prop2: 4 ]"
             },
             {
               "name": 2,
-              "text": "Définition de fonction"
+              "text": "{ prop1: 3, prop2: 4 }"
             },
             {
               "name": 3,
-              "text": "Appel de fonction"
+              "text": "{ 2, true, 'bonjour' }"
             },
             {
               "name": 4,
-              "text": "Concaténation"
+              "text": "{ 'a': 1; 'b': 2 }"
             }
           ]
         },
         {
           "i": 2,
           "id": "qcm2",
-          "md": "```js\nfor (var i = -1; i < 1; i++) {\n  bonjour();\n}\n```\n\nCombien de fois la fonction `'bonjour'` va-t-elle être appelée ?\n",
+          "md": "Comment récupérer la valeur de la propriété `nom` d'un objet affecté à une variable `personne` ?\n\n\n",
+          "mdSolution": "\n\nSachant qu'on connaît littéralement la clé de la propriété (il s'agit de `nom`), on peut utiliser la notation pointée.",
           "choices": [
             {
               "name": 1,
-              "text": "0 fois"
+              "text": "personne.get('nom');"
             },
             {
               "name": 2,
-              "text": "1 fois"
+              "text": "personne.[nom];"
             },
             {
               "name": 3,
-              "text": "2 fois"
+              "text": "personne[nom];"
             },
             {
               "name": 4,
-              "text": "3 fois"
+              "text": "personne.nom;"
             }
           ]
         },
         {
           "i": 3,
           "id": "qcm3",
-          "md": "```js\nif (a === 1) {\n  if (b === 1) {\n    // code sans importance\n  } else {\n    // code sans importance\n  }\n} else {\n  // code sans importance\n}\n```\n\nSi on voulait représenter ces conditions sous forme d'un arbre de décision, combien contiendrait-il de niveaux ?\n",
+          "md": "Toujours dans notre objet `personne`, comment récupérer la valeur d'une propriété dont la clé est stockée dans la variable `laCle` ?\n\n\n",
+          "mdSolution": "\n\nSachant qu'on ne connaît pas a priori la clé de la propriété (car elle est stockée dans une variable), on ne peut PAS utiliser la notation pointée. => Il faut utiliser les crochets, comme pour récupérer la valeur d'un élément de tableau.\n\nEt, sachant que `laCle` est une variable, et non la valeur littérale de notre clé, il ne faut pas l'écrire entre apostrophes.",
           "choices": [
             {
               "name": 1,
-              "text": "1"
+              "text": "personne.get(laCle);"
             },
             {
               "name": 2,
-              "text": "2"
+              "text": "personne.laCle;"
             },
             {
               "name": 3,
-              "text": "3"
+              "text": "personne[laCle];"
             },
             {
               "name": 4,
-              "text": "4"
+              "text": "personne['laCle'];"
             }
           ]
         },
         {
           "i": 4,
           "id": "qcm4",
-          "md": "Supposons que nous ayons un tableau `fruits` ayant la valeur suivante:\n\n```js\n[ 'kiwi', 'prune', 'abricot', 'fraise' ]\n```\n\nQue se passe-t-il si on exécute l'instruction suivante:\n\n```js\nfruits[3] = 'litchi';\n```\n",
+          "md": "```js\nvar compteFacebook = {\n  groupes: {\n    maitresJedi: {},\n    lolcats: {\n      titre: 'Vive les chats !',\n      membres: [ 'Patrick' ],\n    },\n  },\n};\n```\n\nQuelle instruction faut-il saisir pour accéder à la valeur `'Patrick'` ?\n\n\n",
+          "mdSolution": "\n\nIl faut préciser tout le cheminement à effectuer, niveau par niveau, en partant de la racine de l'arbre: la variable qui contient l'objet principal.\n\nVu qu'on connaît les clés de chaque propriété de cet objet hiérarchique (objets imbriqués), on peut utiliser la notation pointée, sauf pour accéder au premier élément du tableau contenant la valeur `'Patrick'`.\n\nIl est possible d'utiliser des crochets au lieu de la notation pointée, à condition de mettre les noms de chaque clé entre apostrophes (car on connaît leur valeur littérale à priori), et de ne pas mettre le nom de la variable contenant l'objet (`compteFacebook`) entre crochets, car ce n'est pas une clé de propriété.",
           "choices": [
             {
               "name": 1,
-              "text": "\"litchi\" va être ajouté à la fin du tableau"
+              "text": "compteFacebook.groupes.lolcats.membres[0]"
             },
             {
               "name": 2,
-              "text": "\"litchi\" va remplacer l'abricot"
+              "text": "compteFacebook.membres[0]"
             },
             {
               "name": 3,
-              "text": "\"litchi\" va remplacer la fraise"
+              "text": "[comptesFacebook][groupes][localcats][membres][0]"
             },
             {
               "name": 4,
-              "text": "cette expression vaut false"
-            }
-          ]
-        },
-        {
-          "i": 5,
-          "id": "qcm5",
-          "md": "Supposons que nous ayons un tableau `fruits` ayant la valeur suivante:\n\n```js\n[ 'kiwi', 'prune', 'abricot', 'fraise' ]\n```\n\nQue se passe-t-il si on exécute l'instruction suivante:\n\n```js\nfruits.splice(1, 0, 'mûre');\n```\n",
-          "choices": [
-            {
-              "name": 1,
-              "text": "un élément \"mûre\" sera inséré entre kiwi et prune"
-            },
-            {
-              "name": 2,
-              "text": "un élément \"mûre\" sera inséré juste avant kiwi"
-            },
-            {
-              "name": 3,
-              "text": "le deuxième élément (prune) va être remplacé par \"mûre\""
-            },
-            {
-              "name": 4,
-              "text": "le tableau restera inchangé"
+              "text": "['comptesFacebook']['groupes']['localcats']['membres'][0]"
             }
           ]
         }
-      ]
+      ],
+      "solutions": {
+        "qcm1": 2,
+        "qcm2": 3,
+        "qcm3": 3,
+        "qcm4": 1
+      }
     },
     {
       "_info": "generated from ex.2.code.template.md",
@@ -164,118 +146,19 @@
       "title": "Exercices de codage",
       "questions": [
         {
-          "i": 6,
-          "id": "code6",
+          "i": 5,
+          "id": "code5",
           "variants": [
-            {
-              "varName": "monNombre",
-              "threshold": 4
-            },
-            {
-              "varName": "monNumero",
-              "threshold": 4
-            },
-            {
-              "varName": "monNumero",
-              "threshold": 6
-            }
+            {}
+          ],
+          "testVariants": [
+            "\n// automatic student evaluation code\n(function evaluateStudentCode(){\n  var res = [];\n  function alert(p){\n    res.push(p);\n  };\n  _runStudentCode();\n  var tests = [\n    res.length === 1,\n    res[0] === 'bonjour',\n    `_studentCode`.match(/alert\\(message[\\.\\[]/),\n  ];\n  application.remote._send(null, tests); // 1 point per passing test => 3 pts per exercise\n})();\n"
           ],
           "mdVariants": [
-            "<!-- Condition simple -->\n\nSupposons qu'une variable `monNombre` ait été créée et contienne un nombre.\n\nImplémenter une condition qui affiche `'plus grand que 4'` dans la console, si `monNombre` est strictement supérieur à `4`.\n\n\n",
-            "<!-- Condition simple -->\n\nSupposons qu'une variable `monNumero` ait été créée et contienne un nombre.\n\nImplémenter une condition qui affiche `'plus grand que 4'` dans la console, si `monNumero` est strictement supérieur à `4`.\n\n\n",
-            "<!-- Condition simple -->\n\nSupposons qu'une variable `monNumero` ait été créée et contienne un nombre.\n\nImplémenter une condition qui affiche `'plus grand que 6'` dans la console, si `monNumero` est strictement supérieur à `6`.\n\n\n"
-          ]
-        },
-        {
-          "i": 7,
-          "id": "code7",
-          "variants": [
-            {
-              "city1": "paris",
-              "weather1": "nuageux",
-              "city2": "marseille",
-              "weather2": "soleil",
-              "else": "mauvaise saisie"
-            },
-            {
-              "city1": "paris",
-              "weather1": "pluvieux",
-              "city2": "roubaix",
-              "weather2": "nuageux",
-              "else": "paris ou roubaix ?"
-            },
-            {
-              "city1": "paris",
-              "weather1": "soleil",
-              "city2": "marseille",
-              "weather2": "nuageux",
-              "else": "paris ou marseille ?"
-            },
-            {
-              "city1": "roubaix",
-              "weather1": "nuageux",
-              "city2": "marseille",
-              "weather2": "soleil",
-              "else": "mauvaise saisie"
-            }
+            "Définir un objet contenant une propriété `texte` ayant `'bonjour'` comme valeur, et stocker cet objet dans une variable `message`.\n\nAjouter l'instruction permettant d'afficher avec `alert()` la valeur de la propriété `texte` de l'objet `message`, en récupérant cette valeur depuis l'objet.\n\n"
           ],
-          "mdVariants": [
-            "<!-- Condition avancée -->\n\nNous allons écrire un programme qui donne la météo à l'utilisateur, pour la ville de son choix.\n\nCe programme devra:\n\n - Inviter l'utilisateur à saisir le nom d'une ville;\n - Dans le cas où l'utilisateur a saisi `paris`, répondre `nuageux`;\n - Dans le cas où l'utilisateur a saisi `marseille`, répondre `soleil`;\n - Sinon, répondre `mauvaise saisie`.\n\nLes réponses sont à afficher à l'aide de la fonction `alert()`. Respecter les textes fournis à la lettre. (y compris la casse, espaces et ponctuation)\n\n\n",
-            "<!-- Condition avancée -->\n\nNous allons écrire un programme qui donne la météo à l'utilisateur, pour la ville de son choix.\n\nCe programme devra:\n\n - Inviter l'utilisateur à saisir le nom d'une ville;\n - Dans le cas où l'utilisateur a saisi `paris`, répondre `pluvieux`;\n - Dans le cas où l'utilisateur a saisi `roubaix`, répondre `nuageux`;\n - Sinon, répondre `paris ou roubaix ?`.\n\nLes réponses sont à afficher à l'aide de la fonction `alert()`. Respecter les textes fournis à la lettre. (y compris la casse, espaces et ponctuation)\n\n\n",
-            "<!-- Condition avancée -->\n\nNous allons écrire un programme qui donne la météo à l'utilisateur, pour la ville de son choix.\n\nCe programme devra:\n\n - Inviter l'utilisateur à saisir le nom d'une ville;\n - Dans le cas où l'utilisateur a saisi `paris`, répondre `soleil`;\n - Dans le cas où l'utilisateur a saisi `marseille`, répondre `nuageux`;\n - Sinon, répondre `paris ou marseille ?`.\n\nLes réponses sont à afficher à l'aide de la fonction `alert()`. Respecter les textes fournis à la lettre. (y compris la casse, espaces et ponctuation)\n\n\n",
-            "<!-- Condition avancée -->\n\nNous allons écrire un programme qui donne la météo à l'utilisateur, pour la ville de son choix.\n\nCe programme devra:\n\n - Inviter l'utilisateur à saisir le nom d'une ville;\n - Dans le cas où l'utilisateur a saisi `roubaix`, répondre `nuageux`;\n - Dans le cas où l'utilisateur a saisi `marseille`, répondre `soleil`;\n - Sinon, répondre `mauvaise saisie`.\n\nLes réponses sont à afficher à l'aide de la fonction `alert()`. Respecter les textes fournis à la lettre. (y compris la casse, espaces et ponctuation)\n\n\n"
-          ]
-        },
-        {
-          "i": 8,
-          "id": "code8",
-          "variants": [
-            {
-              "fctName": "produit"
-            },
-            {
-              "fctName": "multiplier"
-            }
-          ],
-          "mdVariants": [
-            "<!-- Fonctions -->\n\nDéfinir une fonction `produit` qui retourne le résultat de la multiplication des trois nombres passés en paramètres.\n\nExemple d'appel: `produit(1, 3, -2);` doit retourner `-6` (`1 * 3 * -2`).\n\n\n",
-            "<!-- Fonctions -->\n\nDéfinir une fonction `multiplier` qui retourne le résultat de la multiplication des trois nombres passés en paramètres.\n\nExemple d'appel: `multiplier(1, 3, -2);` doit retourner `-6` (`1 * 3 * -2`).\n\n\n"
-          ]
-        },
-        {
-          "i": 9,
-          "id": "code9",
-          "variants": [
-            {
-              "fctName": "repeterChaine"
-            },
-            {
-              "fctName": "nFois"
-            },
-            {
-              "fctName": "repeter"
-            }
-          ],
-          "mdVariants": [
-            "<!-- Boucles -->\n\nDéfinir une fonction `repeterChaine` qui prend comme paramètres un nombre `n` et une chaîne de caractères `message`, et retourne une chaîne de caractères contenant `n` fois `message`, en utilisant la concaténation.\n\nExemple d'appel: `repeterChaine(3, 'bonjour!');` doit retourner `'bonjour!bonjour!bonjour!'`.\n\n\n",
-            "<!-- Boucles -->\n\nDéfinir une fonction `nFois` qui prend comme paramètres un nombre `n` et une chaîne de caractères `message`, et retourne une chaîne de caractères contenant `n` fois `message`, en utilisant la concaténation.\n\nExemple d'appel: `nFois(3, 'bonjour!');` doit retourner `'bonjour!bonjour!bonjour!'`.\n\n\n",
-            "<!-- Boucles -->\n\nDéfinir une fonction `repeter` qui prend comme paramètres un nombre `n` et une chaîne de caractères `message`, et retourne une chaîne de caractères contenant `n` fois `message`, en utilisant la concaténation.\n\nExemple d'appel: `repeter(3, 'bonjour!');` doit retourner `'bonjour!bonjour!bonjour!'`.\n\n\n"
-          ]
-        },
-        {
-          "i": 10,
-          "id": "code10",
-          "variants": [
-            {
-              "paramName": "nombre"
-            },
-            {
-              "paramName": "val"
-            }
-          ],
-          "mdVariants": [
-            "<!-- Tableaux -->\n\nDéfinir une fonction `tableauContient` qui prend deux paramètres:\n - `tableau`: un tableau de nombres\n - `nombre`: un nombre\n\n...et retourne:\n - `true` s'il existe au moins un élément ayant la valeur `nombre` dans le tableau `tableau`,\n - ou `false` sinon.\n \nExemples d'appels:\n - `tableauContient([1, 2, 3], 2);` doit retourner `true`.\n - `tableauContient([1, 2, 3], 4);` doit retourner `false`.\n\n\n",
-            "<!-- Tableaux -->\n\nDéfinir une fonction `tableauContient` qui prend deux paramètres:\n - `tableau`: un tableau de nombres\n - `val`: un nombre\n\n...et retourne:\n - `true` s'il existe au moins un élément ayant la valeur `val` dans le tableau `tableau`,\n - ou `false` sinon.\n \nExemples d'appels:\n - `tableauContient([1, 2, 3], 2);` doit retourner `true`.\n - `tableauContient([1, 2, 3], 4);` doit retourner `false`.\n\n\n"
+          "mdSolutions": [
+            "\n\nSolution:\n\n```js\nvar message = { texte: 'bonjour' };\nalert(message.texte);\n```\n"
           ]
         }
       ]

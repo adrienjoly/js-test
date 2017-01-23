@@ -7,23 +7,27 @@ function readfile(filePath) {
 module.exports = {
 
   // Front-end config
-  title: 'JavaScript Partiel 1 - Classe __INSTANCE__NUMBER__',
+  title: 'JavaScript QCM',
 
   // General settings
-  PUBLIC_TEST_MODE: false, // set to false to restrict acccess and identify students using Google Login
-  DISPLAY_SOLUTIONS_AFTER_SUBMIT: false, // set to false, for real exams
+  PUBLIC_TEST_MODE: true, // set to false to restrict acccess and identify students using Google Login
+  DISPLAY_SOLUTIONS_AFTER_SUBMIT: true, // set to false, for real exams
 
   redirectToHttps: true,
 
   // Settings for conversion and publication of exercise templates
   examPack: {
-    publishSolutions: false, // `true` required for realtime-eval/auto-eval back-ends and/or DISPLAY_SOLUTIONS_AFTER_SUBMIT
-    publishEvalTests: false, // `true` required for realtime-eval/auto-eval back-ends and/or DISPLAY_SOLUTIONS_AFTER_SUBMIT
+    publishSolutions: true, // `true` required for realtime-eval/auto-eval back-ends and/or DISPLAY_SOLUTIONS_AFTER_SUBMIT
+    publishEvalTests: true, // `true` required for realtime-eval/auto-eval back-ends and/or DISPLAY_SOLUTIONS_AFTER_SUBMIT
   },
 
   // Back-end config
   backend: {
-    type: 'firebase', // 'email-submit', 'realtime-eval', 'auto-eval', or 'firebase' (with FIREBASE_CONFIG)
+    type: 'auto-eval', // 'email-submit', 'realtime-eval', 'auto-eval', or 'firebase' (with FIREBASE_CONFIG)
+    /*
+    EMAIL_SUBMIT_CONFIG: {
+      mdTemplate: readfile('public/data/submitted.md'),
+    },
     FIREBASE_CONFIG: {
       databaseURL: "https://js-partiel-__INSTANCE__NUMBER__.firebaseio.com",
       apiKey: [
@@ -39,10 +43,6 @@ module.exports = {
         "935470302144",
       ][__INSTANCE__NUMBER__]
       // admin/dashboard: https://console.firebase.google.com/project/js-partiel-__INSTANCE__NUMBER__/database/data
-    },
-    /*
-    EMAIL_SUBMIT_CONFIG: {
-      mdTemplate: readfile('public/data/submitted.md'),
     },
     */
   },
