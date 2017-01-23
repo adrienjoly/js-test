@@ -1,5 +1,14 @@
-== v2.5.0 (WIP)
- * 
+== v2.5.0 Multi-instance deployment and evaluation
+ * Feature: `npm run deploy-instances` => batch deployment to several herokuapp.com apps
+ * Feature: `redirectToHttps`, `publishSolutions` and `publishEvalTests` config flags
+ * Feature: `email-submit` back-end (to hash answers for email delivery)
+ * Feature: display student name in header
+ * Feature: scores.csv splitted into one part per group
+ * Bug fix: `auto-eval` and `realtime-eval` now also works on Firefox and Safari
+ * Bug fix: Multi-variant exercises now also work using `auto-eval` in `PUBLIC_TEST` mode
+ * Bug fix: don't display score if null/undefined
+ * Bug fix: prevent crash with quizz questions that do not have a solution
+ * Refactoring: solutions and tests files are no longer necessary
 
 == v2.4.0 Robustness and adaptivity
  * Change: question numbering is now global: no more id collisions
