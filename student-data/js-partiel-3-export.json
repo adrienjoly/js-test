@@ -1,6 +1,20 @@
 {
   "active" : 0,
   "submissions" : {
+    "pierre_salesse" : {
+      "_uid": "112793317213724843677",
+      "_uha": "pierre_salesse",
+      "qcm1": "4",
+      "qcm2": "3",
+      "qcm3": "2",
+      "qcm4": "3",
+      "qcm5": "1",
+      "code6": "if (monNumero > 4) {\n    console.log('plus grand que 4');\n}",
+      "code7": "var reponse = prompt('Qu\\'elle ville souhaitez-vous ?');\nif (reponse === 'paris') {\n    alert('pluvieux');\n} else if (reponse === 'roubaix') {\n    alert('nuageux');\n} else {\n    alert('paris ou roubaix ?');\n}",
+      "code8": "function multiplier(nombre1, nombre2, nombre3) {\n    return nombre1 * nombre2 * nombre3;\n}",
+      "code9": "function nFois(n, message) {\n    for (var i = 0; i < n; i++) {\n        console.log(message);\n    }\n    return n * message\n}",
+      "code10": "function tableauContient(tableau, val) {\n    var indice = tableau.indexOf(val);\n    if (val === -1) {\n        return false;\n    } else {\n        return true;\n    }\n}"
+    },
     "adrien_joly" : {
       "_d" : "Tue Jan 17 2017 14:28:09 GMT+0100 (CET)",
       "_f" : "Mon Jan 09 2017 16:11:32 GMT+0100 (CET)",
