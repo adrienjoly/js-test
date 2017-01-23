@@ -1,6 +1,6 @@
 Parsing ex.1.quizz.template.md ...
 Parsing ex.2.code.template.md ...
-Reading and evaluating answers from: ../student-groups/js-partiel-3-export.json ...
+Reading and evaluating answers from: ../student-data/js-partiel-3-export.json ...
 
 
 ================================
@@ -27,7 +27,7 @@ STUDENT: adrien_joly
   | // STUDENT CODE:
   | 
   | ergerge
-Mon, 23 Jan 2017 09:33:51 GMT jailed:sandbox ReferenceError: ergerge is not defined
+Mon, 23 Jan 2017 09:42:52 GMT jailed:sandbox ReferenceError: ergerge is not defined
     at evaluateStudentCode (DYNAMIC PLUGIN:13:1)
     at DYNAMIC PLUGIN:31:3
     at ContextifyScript.Script.runInContext (vm.js:35:29)
@@ -49,7 +49,7 @@ Mon, 23 Jan 2017 09:33:51 GMT jailed:sandbox ReferenceError: ergerge is not defi
   | // STUDENT CODE:
   | 
   | qqqqq
-Mon, 23 Jan 2017 09:33:51 GMT jailed:sandbox ReferenceError: qqqqq is not defined
+Mon, 23 Jan 2017 09:42:52 GMT jailed:sandbox ReferenceError: qqqqq is not defined
     at evaluateStudentCode (DYNAMIC PLUGIN:7:1)
     at DYNAMIC PLUGIN:15:3
     at ContextifyScript.Script.runInContext (vm.js:35:29)
@@ -67,7 +67,7 @@ Mon, 23 Jan 2017 09:33:51 GMT jailed:sandbox ReferenceError: qqqqq is not define
   | // STUDENT CODE:
   | 
   | ergerger222111
-Mon, 23 Jan 2017 09:33:51 GMT jailed:sandbox ReferenceError: ergerger222111 is not defined
+Mon, 23 Jan 2017 09:42:52 GMT jailed:sandbox ReferenceError: ergerger222111 is not defined
     at evaluateStudentCode (DYNAMIC PLUGIN:7:1)
     at DYNAMIC PLUGIN:15:3
     at ContextifyScript.Script.runInContext (vm.js:35:29)
@@ -196,7 +196,7 @@ STUDENT: bastien_bigot
   |     alert ('plus grand que 4')
   |   }
   | 
-Mon, 23 Jan 2017 09:33:52 GMT jailed:sandbox ReferenceError: alert is not defined
+Mon, 23 Jan 2017 09:42:53 GMT jailed:sandbox ReferenceError: alert is not defined
     at evaluateStudentCode (DYNAMIC PLUGIN:14:5)
     at DYNAMIC PLUGIN:34:3
     at ContextifyScript.Script.runInContext (vm.js:35:29)
@@ -250,7 +250,7 @@ Mon, 23 Jan 2017 09:33:52 GMT jailed:sandbox ReferenceError: alert is not define
   |     return indice;
   |   }
   | )
-Mon, 23 Jan 2017 09:33:52 GMT jailed:sandbox DYNAMIC PLUGIN:14
+Mon, 23 Jan 2017 09:42:53 GMT jailed:sandbox DYNAMIC PLUGIN:14
 )
 ^
 SyntaxError: Unexpected token )
@@ -292,7 +292,7 @@ STUDENT: benjamin_kissous
   | if (monNumero > 4) {
   |   alert('plus grand que 4');
   | }
-Mon, 23 Jan 2017 09:33:52 GMT jailed:sandbox ReferenceError: alert is not defined
+Mon, 23 Jan 2017 09:42:53 GMT jailed:sandbox ReferenceError: alert is not defined
     at evaluateStudentCode (DYNAMIC PLUGIN:22:3)
     at DYNAMIC PLUGIN:30:3
     at ContextifyScript.Script.runInContext (vm.js:35:29)
@@ -438,7 +438,7 @@ STUDENT: charles_kiefer
   |   else {
   |   return false;
   | }
-Mon, 23 Jan 2017 09:33:53 GMT jailed:sandbox DYNAMIC PLUGIN:7
+Mon, 23 Jan 2017 09:42:54 GMT jailed:sandbox DYNAMIC PLUGIN:7
 function tableauContient (tableau, val);
                                        ^
 SyntaxError: Unexpected token ;
@@ -505,7 +505,7 @@ STUDENT: edouard_duchesnedelamotte
   | function multiplication(a, b, c) {
   |     return a * b * c;
   | }
-Mon, 23 Jan 2017 09:33:53 GMT jailed:sandbox ReferenceError: produit is not defined
+Mon, 23 Jan 2017 09:42:54 GMT jailed:sandbox ReferenceError: produit is not defined
     at evaluateStudentCode (DYNAMIC PLUGIN:13:5)
     at DYNAMIC PLUGIN:17:3
     at ContextifyScript.Script.runInContext (vm.js:35:29)
@@ -597,7 +597,7 @@ STUDENT: florian_compiegne
   | function mutiplier(a, b, c) {
   |     return a * b * c;
   | }
-Mon, 23 Jan 2017 09:33:53 GMT jailed:sandbox ReferenceError: multiplier is not defined
+Mon, 23 Jan 2017 09:42:55 GMT jailed:sandbox ReferenceError: multiplier is not defined
     at evaluateStudentCode (DYNAMIC PLUGIN:13:5)
     at DYNAMIC PLUGIN:17:3
     at ContextifyScript.Script.runInContext (vm.js:35:29)
@@ -634,7 +634,7 @@ Mon, 23 Jan 2017 09:33:53 GMT jailed:sandbox ReferenceError: multiplier is not d
   | 		return indice;
   | 	}
   | }
-Mon, 23 Jan 2017 09:33:55 GMT jailed:sandbox ReferenceError: index is not defined
+Mon, 23 Jan 2017 09:42:57 GMT jailed:sandbox ReferenceError: index is not defined
     at tableauContient (DYNAMIC PLUGIN:9:6)
     at evaluateStudentCode (DYNAMIC PLUGIN:18:5)
     at DYNAMIC PLUGIN:22:3
@@ -675,7 +675,7 @@ STUDENT: guillaume_martin
   | if (sup4) {
   |     alert('plus grand que 4');
   | }
-Mon, 23 Jan 2017 09:33:55 GMT jailed:sandbox ReferenceError: alert is not defined
+Mon, 23 Jan 2017 09:42:57 GMT jailed:sandbox ReferenceError: alert is not defined
     at evaluateStudentCode (DYNAMIC PLUGIN:14:5)
     at DYNAMIC PLUGIN:32:3
     at ContextifyScript.Script.runInContext (vm.js:35:29)
@@ -709,7 +709,7 @@ Mon, 23 Jan 2017 09:33:55 GMT jailed:sandbox ReferenceError: alert is not define
   |         alert('mauvaise saise')
   |     }
   | }
-Mon, 23 Jan 2017 09:33:55 GMT jailed:sandbox ReferenceError: stop is not defined
+Mon, 23 Jan 2017 09:42:57 GMT jailed:sandbox ReferenceError: stop is not defined
     at evaluateStudentCode (DYNAMIC PLUGIN:16:5)
     at DYNAMIC PLUGIN:79:3
     at ContextifyScript.Script.runInContext (vm.js:35:29)
@@ -729,7 +729,7 @@ Mon, 23 Jan 2017 09:33:55 GMT jailed:sandbox ReferenceError: stop is not defined
   | function produit(a, b; c) {
   |     return a * b * c;
   | }
-Mon, 23 Jan 2017 09:33:55 GMT jailed:sandbox DYNAMIC PLUGIN:7
+Mon, 23 Jan 2017 09:42:57 GMT jailed:sandbox DYNAMIC PLUGIN:7
 function produit(a, b; c) {
                      ^
 SyntaxError: Unexpected token ;
@@ -1001,7 +1001,7 @@ STUDENT: jessy_hachet
   |   }
   |   return n;
   | }
-Mon, 23 Jan 2017 09:33:57 GMT jailed:sandbox ReferenceError: repeterChaine is not defined
+Mon, 23 Jan 2017 09:42:58 GMT jailed:sandbox ReferenceError: repeterChaine is not defined
     at evaluateStudentCode (DYNAMIC PLUGIN:15:5)
     at DYNAMIC PLUGIN:20:3
     at ContextifyScript.Script.runInContext (vm.js:35:29)
@@ -1056,7 +1056,7 @@ STUDENT: kamil_izaret
   | if (monNumero>6) {
   |   alert('plus grand que 6');
   | }
-Mon, 23 Jan 2017 09:33:57 GMT jailed:sandbox ReferenceError: alert is not defined
+Mon, 23 Jan 2017 09:42:58 GMT jailed:sandbox ReferenceError: alert is not defined
     at evaluateStudentCode (DYNAMIC PLUGIN:22:3)
     at DYNAMIC PLUGIN:30:3
     at ContextifyScript.Script.runInContext (vm.js:35:29)
@@ -1152,7 +1152,7 @@ STUDENT: lara_kounowski
   | resultat = 'plus grand que 4';
   | }
   | 
-Mon, 23 Jan 2017 09:33:57 GMT jailed:sandbox ReferenceError: resultat is not defined
+Mon, 23 Jan 2017 09:42:58 GMT jailed:sandbox ReferenceError: resultat is not defined
     at evaluateStudentCode (DYNAMIC PLUGIN:23:10)
     at DYNAMIC PLUGIN:32:3
     at ContextifyScript.Script.runInContext (vm.js:35:29)
@@ -1200,7 +1200,7 @@ Mon, 23 Jan 2017 09:33:57 GMT jailed:sandbox ReferenceError: resultat is not def
   |   }
   |   return n;
   | }
-Mon, 23 Jan 2017 09:33:57 GMT jailed:sandbox DYNAMIC PLUGIN:8
+Mon, 23 Jan 2017 09:42:59 GMT jailed:sandbox DYNAMIC PLUGIN:8
   for (var i = 0; i<n, i++) {
                           ^
 SyntaxError: Unexpected token )
@@ -1257,7 +1257,7 @@ STUDENT: louis_gosse
   | if (monNumero > 6) {
   |     resultat = 'plus grand que 6';
   | }
-Mon, 23 Jan 2017 09:33:57 GMT jailed:sandbox ReferenceError: resultat is not defined
+Mon, 23 Jan 2017 09:42:59 GMT jailed:sandbox ReferenceError: resultat is not defined
     at evaluateStudentCode (DYNAMIC PLUGIN:22:14)
     at DYNAMIC PLUGIN:30:3
     at ContextifyScript.Script.runInContext (vm.js:35:29)
@@ -1306,7 +1306,7 @@ Mon, 23 Jan 2017 09:33:57 GMT jailed:sandbox ReferenceError: resultat is not def
   |   { return n.concat('message');
   |    }
   | }
-Mon, 23 Jan 2017 09:33:58 GMT jailed:sandbox TypeError: n.concat is not a function
+Mon, 23 Jan 2017 09:42:59 GMT jailed:sandbox TypeError: n.concat is not a function
     at repeter (DYNAMIC PLUGIN:11:14)
     at evaluateStudentCode (DYNAMIC PLUGIN:16:5)
     at DYNAMIC PLUGIN:21:3
@@ -1362,7 +1362,7 @@ STUDENT: louis_malrieu
   | if (monNombre > 4) {
   |   résultat = 'plus grand que 4';
   | } 
-Mon, 23 Jan 2017 09:33:58 GMT jailed:sandbox ReferenceError: résultat is not defined
+Mon, 23 Jan 2017 09:42:59 GMT jailed:sandbox ReferenceError: résultat is not defined
     at evaluateStudentCode (DYNAMIC PLUGIN:14:12)
     at DYNAMIC PLUGIN:32:3
     at ContextifyScript.Script.runInContext (vm.js:35:29)
@@ -1399,7 +1399,7 @@ Mon, 23 Jan 2017 09:33:58 GMT jailed:sandbox ReferenceError: résultat is not de
   |  return 6(1*2*3);
   | }
   | 
-Mon, 23 Jan 2017 09:33:58 GMT jailed:sandbox DYNAMIC PLUGIN:7
+Mon, 23 Jan 2017 09:42:59 GMT jailed:sandbox DYNAMIC PLUGIN:7
 function multiplier(1, 2, 3) {
                     ^
 SyntaxError: Unexpected number
@@ -1422,7 +1422,7 @@ SyntaxError: Unexpected number
   | if concat(repeterChaine);
   |  return [2*'message' ]
   | }
-Mon, 23 Jan 2017 09:33:58 GMT jailed:sandbox DYNAMIC PLUGIN:7
+Mon, 23 Jan 2017 09:42:59 GMT jailed:sandbox DYNAMIC PLUGIN:7
 function repeterChaine(2, 'message'){
                        ^
 SyntaxError: Unexpected number
@@ -1479,7 +1479,7 @@ STUDENT: madison_hayat
   | if monNombre > 4 {
   |   console.log('plus grand que 4');
   | }
-Mon, 23 Jan 2017 09:33:58 GMT jailed:sandbox DYNAMIC PLUGIN:12
+Mon, 23 Jan 2017 09:42:59 GMT jailed:sandbox DYNAMIC PLUGIN:12
 if monNombre > 4 {
    ^^^^^^^^^
 SyntaxError: Unexpected identifier
@@ -1520,7 +1520,7 @@ SyntaxError: Unexpected identifier
   |   return (1*3*5);
   | }
   | 
-Mon, 23 Jan 2017 09:33:58 GMT jailed:sandbox DYNAMIC PLUGIN:7
+Mon, 23 Jan 2017 09:43:00 GMT jailed:sandbox DYNAMIC PLUGIN:7
 function produit (1, 3, 5){
                   ^
 SyntaxError: Unexpected number
@@ -1798,7 +1798,7 @@ STUDENT: raphael_parets
   |   }
   |   return chaine;
   | }
-Mon, 23 Jan 2017 09:33:59 GMT jailed:sandbox ReferenceError: i is not defined
+Mon, 23 Jan 2017 09:43:01 GMT jailed:sandbox ReferenceError: i is not defined
     at nFois (DYNAMIC PLUGIN:9:10)
     at evaluateStudentCode (DYNAMIC PLUGIN:16:5)
     at DYNAMIC PLUGIN:21:3
@@ -1870,7 +1870,7 @@ STUDENT: theo_geay
   | else {
   |     alert('paris ou roubaix ?');
   | }
-Mon, 23 Jan 2017 09:34:00 GMT jailed:sandbox ReferenceError: ville is not defined
+Mon, 23 Jan 2017 09:43:01 GMT jailed:sandbox ReferenceError: ville is not defined
     at evaluateStudentCode (DYNAMIC PLUGIN:13:7)
     at DYNAMIC PLUGIN:58:3
     at ContextifyScript.Script.runInContext (vm.js:35:29)
@@ -2040,7 +2040,7 @@ STUDENT: timothee_ong
   |   if (nb > 4) {
   |     console.log('plus grand que 4')
   |   }
-Mon, 23 Jan 2017 09:34:00 GMT jailed:sandbox ReferenceError: nb is not defined
+Mon, 23 Jan 2017 09:43:02 GMT jailed:sandbox ReferenceError: nb is not defined
     at evaluateStudentCode (DYNAMIC PLUGIN:13:7)
     at DYNAMIC PLUGIN:32:3
     at ContextifyScript.Script.runInContext (vm.js:35:29)
@@ -2131,7 +2131,7 @@ STUDENT: victor_legac
   | if (monNumero > 6) {
   |   console.log('plus grand que 6');	
   | }
-Mon, 23 Jan 2017 09:34:01 GMT jailed:sandbox ReferenceError: prompt is not defined
+Mon, 23 Jan 2017 09:43:02 GMT jailed:sandbox ReferenceError: prompt is not defined
     at evaluateStudentCode (DYNAMIC PLUGIN:12:17)
     at DYNAMIC PLUGIN:32:3
     at ContextifyScript.Script.runInContext (vm.js:35:29)
@@ -2224,7 +2224,7 @@ STUDENT: victoria_antalis
   |   if (monNombre > 4) {
   |     console.log('plus grand que 4');
   |   }
-Mon, 23 Jan 2017 09:34:01 GMT jailed:sandbox DYNAMIC PLUGIN:32
+Mon, 23 Jan 2017 09:43:02 GMT jailed:sandbox DYNAMIC PLUGIN:32
 })();
  ^
 SyntaxError: Unexpected token )
