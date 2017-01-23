@@ -2,6 +2,8 @@
 
 # syntax: ./score-student-groups.sh ./student-groups/*.json
 
+rm ./exam-data/scores.csv
+
 for f in $*;
 do
   echo Evaluating $f to $f.eval.log ...
