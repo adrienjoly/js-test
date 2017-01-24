@@ -123,18 +123,18 @@
             },
             {
               "name": 3,
-              "text": "[comptesFacebook][groupes][localcats][membres][0]"
+              "text": "[comptesFacebook][groupes][lolcats][membres][0]"
             },
             {
               "name": 4,
-              "text": "['comptesFacebook']['groupes']['localcats']['membres'][0]"
+              "text": "['comptesFacebook']['groupes']['lolcats']['membres'][0]"
             }
           ]
         }
       ],
       "solutions": {
         "qcm1": 2,
-        "qcm2": 3,
+        "qcm2": 4,
         "qcm3": 3,
         "qcm4": 1
       }

@@ -19,8 +19,8 @@ Comment récupérer la valeur de la propriété `nom` d'un objet affecté à une
 
 - personne.get('nom');
 - personne.[nom];
-* personne[nom];
-- personne.nom;
+- personne[nom];
+* personne.nom;
 
 ???
 
@@ -59,8 +59,8 @@ Quelle instruction faut-il saisir pour accéder à la valeur `'Patrick'` ?
 
 * compteFacebook.groupes.lolcats.membres[0]
 - compteFacebook.membres[0]
-- [comptesFacebook][groupes][localcats][membres][0]
-- ['comptesFacebook']['groupes']['localcats']['membres'][0]
+- [comptesFacebook][groupes][lolcats][membres][0]
+- ['comptesFacebook']['groupes']['lolcats']['membres'][0]
 
 ???
 
