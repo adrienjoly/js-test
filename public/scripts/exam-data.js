@@ -38,96 +38,108 @@
         {
           "i": 1,
           "id": "qcm1",
-          "md": "Laquelle de ces instructions constitue un objet JavaScript valide:\n\n\n",
-          "mdSolution": "\n\nUn objet JavaScript:\n\n - accolades\n - propriétés définis par paires clé-valeur (syntaxe: `clé: valeur`)\n - propriétés séparées par des virgules",
+          "md": "Quel est le nom de l'attribut à utiliser pour donner le nom du fichier .js à charger dans une page HTML:\n\n\n",
+          "mdSolution": "\n\n\nL'attribut `src` est à utiliser dans l'élément `<script>`, et il ne faut pas oublier d'ajouter une balise de fermeture `</script>`.",
           "choices": [
             {
               "name": 1,
-              "text": "[ prop1: 3, prop2: 4 ]"
+              "text": "href"
             },
             {
               "name": 2,
-              "text": "{ prop1: 3, prop2: 4 }"
+              "text": "src"
             },
             {
               "name": 3,
-              "text": "{ 2, true, 'bonjour' }"
+              "text": "scr"
             },
             {
               "name": 4,
-              "text": "{ 'a': 1; 'b': 2 }"
+              "text": "type"
+            },
+            {
+              "name": 5,
+              "text": "href est utilisé dans les éléments <link> et <a>"
+            },
+            {
+              "name": 6,
+              "text": "scr est mal épelé"
+            },
+            {
+              "name": 7,
+              "text": "type (optionnel) permet d'expliciter le langage employé dans le fichier, si autre que JavaScript"
             }
           ]
         },
         {
           "i": 2,
           "id": "qcm2",
-          "md": "Comment récupérer la valeur de la propriété `nom` d'un objet affecté à une variable `personne` ?\n\n\n",
-          "mdSolution": "\n\nSachant qu'on connaît littéralement la clé de la propriété (il s'agit de `nom`), on peut utiliser la notation pointée.",
+          "md": "Si je crée une fichier .js qui ne contient que la ligne `alert('bonjour');` et que j'intègre ce fichier à une page HTML, que se passera-t-il ?\n\n\n",
+          "mdSolution": "\n\nQuand on intègre un fichier .js à une page HTML (à l'aide de l'élément `<script>`), cela a pour effet d'exécuter les instructions du fichier à chaque (re)chargement de la page dans le navigateur.\n\nPour que l'`alert` soit déclenché par un clic de l'utilisateur, il faut écrire l'instruction à l'intérieur d'une définition de fonction affectée à la propriété `onclick` d'un élément (ex: `<button>`).",
           "choices": [
             {
               "name": 1,
-              "text": "personne.get('nom');"
+              "text": "rien"
             },
             {
               "name": 2,
-              "text": "personne.[nom];"
+              "text": "l'alert ne s'affichera que si on copie-colle le code dans la console"
             },
             {
               "name": 3,
-              "text": "personne[nom];"
+              "text": "l'alert s'affichera quand l'utilisateur cliquera sur un bouton"
             },
             {
               "name": 4,
-              "text": "personne.nom;"
+              "text": "l'alert s'affichera à chaque (re)chargement de la page"
             }
           ]
         },
         {
           "i": 3,
           "id": "qcm3",
-          "md": "Toujours dans notre objet `personne`, comment récupérer la valeur d'une propriété dont la clé est stockée dans la variable `laCle` ?\n\n\n",
-          "mdSolution": "\n\nSachant qu'on ne connaît pas a priori la clé de la propriété (car elle est stockée dans une variable), on ne peut PAS utiliser la notation pointée. => Il faut utiliser les crochets, comme pour récupérer la valeur d'un élément de tableau.\n\nEt, sachant que `laCle` est une variable, et non la valeur littérale de notre clé, il ne faut pas l'écrire entre apostrophes.",
+          "md": "Soit la page HTML suivante:\n\n```html\n<body>\n  <p id=\"premier-paragraphe\">Bonjour</p>\n  <p id=\"deuxieme-paragraphe\">le monde</p>\n</body>\n```\n\nQuelle instruction JavaScript dois-je exécuter pour accéder au deuxième paragraphe ?\n\n\n",
+          "mdSolution": "\n\nL'API du DOM fournit la fonction `getElementById()` pour accéder à un élément en connaissant son identifiant. Il suffit de passer l'identifiant en paramètre.",
           "choices": [
             {
               "name": 1,
-              "text": "personne.get(laCle);"
+              "text": "document.paragraphes[1];"
             },
             {
               "name": 2,
-              "text": "personne.laCle;"
+              "text": "document.getElementById(1);"
             },
             {
               "name": 3,
-              "text": "personne[laCle];"
+              "text": "document.getElementById('deuxieme-paragraphe');"
             },
             {
               "name": 4,
-              "text": "personne['laCle'];"
+              "text": "document.deuxieme-paragraphe;"
             }
           ]
         },
         {
           "i": 4,
           "id": "qcm4",
-          "md": "```js\nvar compteFacebook = {\n  groupes: {\n    maitresJedi: {},\n    lolcats: {\n      titre: 'Vive les chats !',\n      membres: [ 'Patrick' ],\n    },\n  },\n};\n```\n\nQuelle instruction faut-il saisir pour accéder à la valeur `'Patrick'` ?\n\n\n",
-          "mdSolution": "\n\nIl faut préciser tout le cheminement à effectuer, niveau par niveau, en partant de la racine de l'arbre: la variable qui contient l'objet principal.\n\nVu qu'on connaît les clés de chaque propriété de cet objet hiérarchique (objets imbriqués), on peut utiliser la notation pointée, sauf pour accéder au premier élément du tableau contenant la valeur `'Patrick'`.\n\nIl est possible d'utiliser des crochets au lieu de la notation pointée, à condition de mettre les noms de chaque clé entre apostrophes (car on connaît leur valeur littérale à priori), et de ne pas mettre le nom de la variable contenant l'objet (`compteFacebook`) entre crochets, car ce n'est pas une clé de propriété.",
+          "md": "Soit la page HTML suivante:\n\n```html\n<body>\n  <form>\n    <input id=\"nom\" value=\"Michel\" />\n    <input id=\"prenom\" value=\"Jean\" />\n  </form>\n</body>\n```\n\nQuelle instruction JavaScript dois-je exécuter pour modifier la valeur du champ `<input>` dont l'identifiant est `prenom` ?\n\n\n",
+          "mdSolution": "\n\nSeule la première solution est valide.\n\nComme d'habitude, on commence par accéder au champ `<input>` en spécifiant son `id`, puis on affecte une nouvelle valeur à la propriété `value` de l'objet retourné par `getElementById()`.",
           "choices": [
             {
               "name": 1,
-              "text": "compteFacebook.groupes.lolcats.membres[0]"
+              "text": "document.getElementById('prenom').value = 'nouveau prénom';"
             },
             {
               "name": 2,
-              "text": "compteFacebook.membres[0]"
+              "text": "document.getElementById('prenom', 'nouveau prénom');"
             },
             {
               "name": 3,
-              "text": "[comptesFacebook][groupes][lolcats][membres][0]"
+              "text": "document.prenom = 'nouveau prénom';"
             },
             {
               "name": 4,
-              "text": "['comptesFacebook']['groupes']['lolcats']['membres'][0]"
+              "text": "document.input = '<input id=\"prenom\" value=\"nouveau prénom\" />'"
             }
           ]
         }
@@ -152,13 +164,13 @@
             {}
           ],
           "testVariants": [
-            "\n// automatic student evaluation code\n(function evaluateStudentCode(){\n  var res = [];\n  function alert(p){\n    res.push(p);\n  };\n  _runStudentCode();\n  var tests = [\n    res.length === 1,\n    res[0] === 'bonjour',\n    `_studentCode`.match(/alert\\(message[\\.\\[]/),\n  ];\n  application.remote._send(null, tests); // 1 point per passing test => 3 pts per exercise\n})();\n"
+            "\n// automatic student evaluation code\n(function evaluateStudentCode(){\n  var res = [];\n  var _button = {\n    onclick: function() {}\n  };\n  var document = {\n    getElementById: function(id) {\n      return id === 'pouet' ? _button : null;\n    }\n  };\n  function alert(p){\n    res.push(p);\n  };\n  _runStudentCode();\n  var tests = [];\n  tests.push(res.length === 0);\n  setTimeout(function(){\n    _button.onclick()\n    tests.push(res.length === 1);\n    setTimeout(function(){\n      _button.onclick()\n      tests.push(res.length === 2);\n      application.remote._send(null, tests);\n      // 1 point per passing test => 3 pts per exercise\n    }, 50)\n  }, 50)\n})();\n"
           ],
           "mdVariants": [
-            "Définir un objet contenant une propriété `texte` ayant `'bonjour'` comme valeur, et stocker cet objet dans une variable `message`.\n\nAjouter l'instruction permettant d'afficher avec `alert()` la valeur de la propriété `texte` de l'objet `message`, en récupérant cette valeur depuis l'objet.\n\n"
+            "Imaginez que vous disposez de la page HTML suivante:\n\n```html\n<bouton id=\"pouet\">cliquez ici !</bouton>\n```\n\nÉcrivez le code JavaScript nécéssaire pour que le message `pouet !` s'affiche dans un `alert` à chaque fois que l'utilisateur cliquera sur le bouton:\n\n"
           ],
           "mdSolutions": [
-            "\n\nSolution:\n\n```js\nvar message = { texte: 'bonjour' };\nalert(message.texte);\n```\n"
+            "\n\nSolution:\n\n```js\ndocument.getElementById('pouet').onclick = function() {\n  alert('pouet !');\n};\n```\n"
           ]
         }
       ]

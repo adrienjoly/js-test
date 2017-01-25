@@ -1,71 +1,77 @@
-Laquelle de ces instructions constitue un objet JavaScript valide:
+Quel est le nom de l'attribut à utiliser pour donner le nom du fichier .js à charger dans une page HTML:
 
-- [ prop1: 3, prop2: 4 ]
-* { prop1: 3, prop2: 4 }
-- { 2, true, 'bonjour' }
-- { 'a': 1; 'b': 2 }
-
-???
-
-Un objet JavaScript:
-
- - accolades
- - propriétés définis par paires clé-valeur (syntaxe: `clé: valeur`)
- - propriétés séparées par des virgules
-
----
-
-Comment récupérer la valeur de la propriété `nom` d'un objet affecté à une variable `personne` ?
-
-- personne.get('nom');
-- personne.[nom];
-- personne[nom];
-* personne.nom;
+- href
+* src
+- scr
+- type
 
 ???
 
-Sachant qu'on connaît littéralement la clé de la propriété (il s'agit de `nom`), on peut utiliser la notation pointée.
+- `href` est utilisé dans les éléments `<link>` et `<a>`
+- `scr` est mal épelé
+- `type` (optionnel) permet d'expliciter le langage employé dans le fichier, si autre que JavaScript
+
+L'attribut `src` est à utiliser dans l'élément `<script>`, et il ne faut pas oublier d'ajouter une balise de fermeture `</script>`.
 
 ---
 
-Toujours dans notre objet `personne`, comment récupérer la valeur d'une propriété dont la clé est stockée dans la variable `laCle` ?
+Si je crée une fichier .js qui ne contient que la ligne `alert('bonjour');` et que j'intègre ce fichier à une page HTML, que se passera-t-il ?
 
-- personne.get(laCle);
-- personne.laCle;
-* personne[laCle];
-- personne['laCle'];
+- rien
+- l'alert ne s'affichera que si on copie-colle le code dans la console
+- l'alert s'affichera quand l'utilisateur cliquera sur un bouton
+* l'alert s'affichera à chaque (re)chargement de la page
 
 ???
 
-Sachant qu'on ne connaît pas a priori la clé de la propriété (car elle est stockée dans une variable), on ne peut PAS utiliser la notation pointée. => Il faut utiliser les crochets, comme pour récupérer la valeur d'un élément de tableau.
+Quand on intègre un fichier .js à une page HTML (à l'aide de l'élément `<script>`), cela a pour effet d'exécuter les instructions du fichier à chaque (re)chargement de la page dans le navigateur.
 
-Et, sachant que `laCle` est une variable, et non la valeur littérale de notre clé, il ne faut pas l'écrire entre apostrophes.
+Pour que l'`alert` soit déclenché par un clic de l'utilisateur, il faut écrire l'instruction à l'intérieur d'une définition de fonction affectée à la propriété `onclick` d'un élément (ex: `<button>`).
 
 ---
 
-```js
-var compteFacebook = {
-  groupes: {
-    maitresJedi: {},
-    lolcats: {
-      titre: 'Vive les chats !',
-      membres: [ 'Patrick' ],
-    },
-  },
-};
+Soit la page HTML suivante:
+
+```html
+<body>
+  <p id="premier-paragraphe">Bonjour</p>
+  <p id="deuxieme-paragraphe">le monde</p>
+</body>
 ```
 
-Quelle instruction faut-il saisir pour accéder à la valeur `'Patrick'` ?
+Quelle instruction JavaScript dois-je exécuter pour accéder au deuxième paragraphe ?
 
-* compteFacebook.groupes.lolcats.membres[0]
-- compteFacebook.membres[0]
-- [comptesFacebook][groupes][lolcats][membres][0]
-- ['comptesFacebook']['groupes']['lolcats']['membres'][0]
+- document.paragraphes[1];
+- document.getElementById(1);
+* document.getElementById('deuxieme-paragraphe');
+- document.deuxieme-paragraphe;
 
 ???
 
-Il faut préciser tout le cheminement à effectuer, niveau par niveau, en partant de la racine de l'arbre: la variable qui contient l'objet principal.
+L'API du DOM fournit la fonction `getElementById()` pour accéder à un élément en connaissant son identifiant. Il suffit de passer l'identifiant en paramètre.
 
-Vu qu'on connaît les clés de chaque propriété de cet objet hiérarchique (objets imbriqués), on peut utiliser la notation pointée, sauf pour accéder au premier élément du tableau contenant la valeur `'Patrick'`.
+---
 
-Il est possible d'utiliser des crochets au lieu de la notation pointée, à condition de mettre les noms de chaque clé entre apostrophes (car on connaît leur valeur littérale à priori), et de ne pas mettre le nom de la variable contenant l'objet (`compteFacebook`) entre crochets, car ce n'est pas une clé de propriété.
+Soit la page HTML suivante:
+
+```html
+<body>
+  <form>
+    <input id="nom" value="Michel" />
+    <input id="prenom" value="Jean" />
+  </form>
+</body>
+```
+
+Quelle instruction JavaScript dois-je exécuter pour modifier la valeur du champ `<input>` dont l'identifiant est `prenom` ?
+
+* document.getElementById('prenom').value = 'nouveau prénom';
+- document.getElementById('prenom', 'nouveau prénom');
+- document.prenom = 'nouveau prénom';
+- document.input = '<input id="prenom" value="nouveau prénom" />'
+
+???
+
+Seule la première solution est valide.
+
+Comme d'habitude, on commence par accéder au champ `<input>` en spécifiant son `id`, puis on affecte une nouvelle valeur à la propriété `value` de l'objet retourné par `getElementById()`.
