@@ -39,7 +39,7 @@
           "i": 1,
           "id": "qcm1",
           "md": "Quel est le nom de l'attribut à utiliser pour donner le nom du fichier .js à charger dans une page HTML:\n\n\n",
-          "mdSolution": "\n\n\nL'attribut `src` est à utiliser dans l'élément `<script>`, et il ne faut pas oublier d'ajouter une balise de fermeture `</script>`.",
+          "mdSolution": "\n\n - `href` est utilisé dans les éléments `<link>` et `<a>`\n - `scr` est mal épelé\n - `type` (optionnel) permet d'expliciter le langage employé dans le fichier, si autre que JavaScript\n\nL'attribut `src` est à utiliser dans l'élément `<script>`, et il ne faut pas oublier d'ajouter une balise de fermeture `</script>`.",
           "choices": [
             {
               "name": 1,
@@ -56,18 +56,6 @@
             {
               "name": 4,
               "text": "type"
-            },
-            {
-              "name": 5,
-              "text": "href est utilisé dans les éléments <link> et <a>"
-            },
-            {
-              "name": 6,
-              "text": "scr est mal épelé"
-            },
-            {
-              "name": 7,
-              "text": "type (optionnel) permet d'expliciter le langage employé dans le fichier, si autre que JavaScript"
             }
           ]
         },
