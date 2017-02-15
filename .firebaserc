@@ -1,5 +1,6 @@
 {
   "projects": {
-    "staging": "js-qcm"
+    "staging": "js-qcm",
+    "default": "js-qcm"
   }
 }
