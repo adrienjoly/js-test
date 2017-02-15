@@ -43,30 +43,105 @@
         {
           "i": 1,
           "id": "qcm1",
-          "md": "Quel est le nom de l'attribut à utiliser pour donner le nom du fichier .js à charger dans une page HTML:\n\n\n",
-          "mdSolution": "\n\n - `href` est utilisé dans les éléments `<link>` et `<a>`\n - `scr` est mal épelé\n - `type` (optionnel) permet d'expliciter le langage employé dans le fichier, si autre que JavaScript\n\nL'attribut `src` est à utiliser dans l'élément `<script>`, et il ne faut pas oublier d'ajouter une balise de fermeture `</script>`.",
+          "md": "Soit le fichier HTML suivant:\n\n```html\n<ul>\n  <li class=\"displayed\" id=\"first-item\">premier</li>\n  <li class=\"hidden\">deuxième</li>\n  <li class=\"hidden\">troisième</li>\n</ul>\n```\n\nQuelle est la fonction du DOM la plus directe pour:\n\n1) accéder au premier élément `<li>` depuis JavaScript ?\n\n\n",
+          "mdSolution": "\n\n - le deuxième choix n'existe pas, car getElement**s**ByClassName() prend un **s**;\n - le premier choix est plus direct, car le premier élément `<li>` porte un attribut `id` (unique), et que `getElementById()` a l'avantage de le retourner directement, alors que les autres retournent un tableau d'éléments.",
           "choices": [
             {
               "name": 1,
-              "text": "href"
+              "text": "getElementById()"
             },
             {
               "name": 2,
-              "text": "src"
+              "text": "getElementByClassName()"
             },
             {
               "name": 3,
-              "text": "scr"
+              "text": "getElementsByClassName()"
             },
             {
               "name": 4,
-              "text": "type"
+              "text": "getElementsByTagName()"
+            }
+          ]
+        },
+        {
+          "i": 2,
+          "id": "qcm2",
+          "md": "2) accéder à tous les éléments `<li>` portant la classe `\"hidden\"` ?\n\n\n",
+          "mdSolution": "\n\n Pour référencer les éléments par classe, il faut utiliser `getElementsByClassName()`.\n\n Note: Cette fonction retourne un tableau d'éléments.",
+          "choices": [
+            {
+              "name": 1,
+              "text": "getElementById()"
+            },
+            {
+              "name": 2,
+              "text": "getElementByClassName()"
+            },
+            {
+              "name": 3,
+              "text": "getElementsByClassName()"
+            },
+            {
+              "name": 4,
+              "text": "getElementsByTagName()"
+            }
+          ]
+        },
+        {
+          "i": 3,
+          "id": "qcm3",
+          "md": "3) accéder à tous les éléments `<li>` ?\n\n\n",
+          "mdSolution": "\n\nPour référencer les éléments par nom d'élément (appelé *tag name* en anglais), il faut utiliser `getElementsByTagName()`.\n\n Note: Cette fonction retourne un tableau d'éléments.",
+          "choices": [
+            {
+              "name": 1,
+              "text": "getElementById()"
+            },
+            {
+              "name": 2,
+              "text": "getElementByClassName()"
+            },
+            {
+              "name": 3,
+              "text": "getElementsByClassName()"
+            },
+            {
+              "name": 4,
+              "text": "getElementsByTagName()"
+            }
+          ]
+        },
+        {
+          "i": 4,
+          "id": "qcm4",
+          "md": "Comment retirer la classe `\"hidden\"` des deux derniers éléments `<li>` ?\n\n\n",
+          "mdSolution": "\n\n[`className`](https://developer.mozilla.org/fr/docs/Web/API/Element/className), [`setAttribute()`](https://developer.mozilla.org/fr/docs/Web/API/Element/setAttribute) et [`classList`](https://developer.mozilla.org/fr/docs/Web/API/Element/classList) ne sont applicables que sur un objet JavaScript représentant un élément HTML (ex: retourné par `getElementById()`), or `document.getElementsByClassName('hidden')` retourne un tableau d'éléments.\n\nDonc on ne peut pas utiliser ces propriétés/fonctions directement sur le tableau retourné par `document.getElementsByClassName('hidden')` => Il faut utiliser une boucle pour appeler `classList.remove('hidden')` sur chaque élément du tableau.",
+          "choices": [
+            {
+              "name": 1,
+              "text": "document.getElementsByClassName('hidden').className = '';"
+            },
+            {
+              "name": 2,
+              "text": "document.getElementsByClassName('hidden').setAttribute('class', '');"
+            },
+            {
+              "name": 3,
+              "text": "document.getElementsByClassName('hidden').classList.remove('hidden');"
+            },
+            {
+              "name": 4,
+              "text": "(il faut utiliser une boucle)"
             }
           ]
         }
       ],
       "solutions": {
-        "qcm1": 2
+        "qcm1": 1,
+        "qcm2": 3,
+        "qcm3": 4,
+        "qcm4": 4
       }
     },
     {
@@ -76,19 +151,19 @@
       "title": "Exercices de codage",
       "questions": [
         {
-          "i": 2,
-          "id": "code2",
+          "i": 5,
+          "id": "code5",
           "variants": [
             {}
           ],
           "testVariants": [
-            "\n// automatic student evaluation code\n(function evaluateStudentCode(){\n  var res = [];\n  var _button = {\n    onclick: function() {}\n  };\n  var document = {\n    getElementById: function(id) {\n      return id === 'pouet' ? _button : null;\n    }\n  };\n  function alert(p){\n    res.push(p);\n  };\n  _runStudentCode();\n  var tests = [];\n  tests.push(res.length === 0);\n  setTimeout(function(){\n    _button.onclick()\n    tests.push(res.length === 1);\n    setTimeout(function(){\n      _button.onclick()\n      tests.push(res.length === 2);\n      application.remote._send(null, tests);\n      // 1 point per passing test => 3 pts per exercise\n    }, 50)\n  }, 50)\n})();\n"
+            "\n// automatic student evaluation code\n(function evaluateStudentCode(){\n  var res = [];\n  var _button = {\n    onclick: function() {},\n    classList: { add: res.push.bind(res) }\n  };\n  var document = {\n    getElementById: function(id) {\n      return id === 'mon-bouton' ? _button : null;\n    }\n  };\n  _runStudentCode();\n  var tests = [];\n  tests.push(res.length === 0);\n  setTimeout(function(){\n    _button.onclick()\n    tests.push(res.length === 1 && res[0] === 'hidden');\n    setTimeout(function(){\n      _button.onclick()\n      tests.push(res.length === 2 && res[1] === 'hidden');\n      application.remote._send(null, tests);\n      // 1 point per passing test => 3 pts per exercise\n    }, 50)\n  }, 50)\n})();\n"
           ],
           "mdVariants": [
-            "Imaginez que vous disposez de la page HTML suivante:\n\n```html\n<bouton id=\"pouet\">cliquez ici !</bouton>\n```\n\nÉcrivez le code JavaScript nécéssaire pour que le message `pouet !` s'affiche dans un `alert` à chaque fois que l'utilisateur cliquera sur le bouton:\n\n"
+            "Imaginez que vous disposez de la page HTML suivante:\n\n```html\n<bouton id=\"mon-bouton\">cliquez ici !</bouton>\n```\n\nEt de la règle CSS suivante:\n\n```css\n.hidden {\n  display: none;\n}\n```\n\nÉcrivez le code JavaScript nécéssaire pour que la classe `hidden` soit ajoutée au bouton une fois que l'utilisateur aura cliqué dessus, à l'aide de la propriété `classList`.\n\n"
           ],
           "mdSolutions": [
-            "\n\nSolution:\n\n```js\ndocument.getElementById('pouet').onclick = function() {\n  alert('pouet !');\n};\n```\n"
+            "\n\nSolution:\n\n```js\nvar bouton = document.getElementById('mon-bouton');\nbouton.onclick = function() {\n  bouton.classList.add('hidden');\n};\n```\n"
           ]
         }
       ]

@@ -1,18 +1,27 @@
 Imaginez que vous disposez de la page HTML suivante:
 
 ```html
-<bouton id="pouet">cliquez ici !</bouton>
+<bouton id="mon-bouton">cliquez ici !</bouton>
 ```
 
-Écrivez le code JavaScript nécéssaire pour que le message `pouet !` s'affiche dans un `alert` à chaque fois que l'utilisateur cliquera sur le bouton:
+Et de la règle CSS suivante:
+
+```css
+.hidden {
+  display: none;
+}
+```
+
+Écrivez le code JavaScript nécéssaire pour que la classe `hidden` soit ajoutée au bouton une fois que l'utilisateur aura cliqué dessus, à l'aide de la propriété `classList`.
 
 ???
 
 Solution:
 
 ```js
-document.getElementById('pouet').onclick = function() {
-  alert('pouet !');
+var bouton = document.getElementById('mon-bouton');
+bouton.onclick = function() {
+  bouton.classList.add('hidden');
 };
 ```
 
@@ -23,25 +32,23 @@ document.getElementById('pouet').onclick = function() {
 (function evaluateStudentCode(){
   var res = [];
   var _button = {
-    onclick: function() {}
+    onclick: function() {},
+    classList: { add: res.push.bind(res) }
   };
   var document = {
     getElementById: function(id) {
-      return id === 'pouet' ? _button : null;
+      return id === 'mon-bouton' ? _button : null;
     }
-  };
-  function alert(p){
-    res.push(p);
   };
   _runStudentCode();
   var tests = [];
   tests.push(res.length === 0);
   setTimeout(function(){
     _button.onclick()
-    tests.push(res.length === 1);
+    tests.push(res.length === 1 && res[0] === 'hidden');
     setTimeout(function(){
       _button.onclick()
-      tests.push(res.length === 2);
+      tests.push(res.length === 2 && res[1] === 'hidden');
       application.remote._send(null, tests);
       // 1 point per passing test => 3 pts per exercise
     }, 50)
