@@ -6,7 +6,7 @@
   var app = document.querySelector('#app');
   app.config = {
     "title": "JavaScript QCM",
-    "PUBLIC_TEST_MODE": true,
+    "PUBLIC_TEST_MODE": false,
     "DISPLAY_SOLUTIONS_AFTER_SUBMIT": true,
     "redirectToHttps": true,
     "examPack": {
@@ -14,9 +14,14 @@
       "publishEvalTests": true
     },
     "backend": {
-      "type": "auto-eval"
+      "type": "firebase",
+      "FIREBASE_CONFIG": {
+        "databaseURL": "https://js-qcm.firebaseio.com",
+        "apiKey": "AIzaSyBWrb4UMjyrSyzp_kqauvFGLi3QaWvDPus",
+        "messagingSenderId": "988306760740"
+      }
     },
-    "GOOGLE_CLIENT_ID": "247219641427-pq1bbfkkpqvvsgps5t1fh1sjivb61dt4.apps.googleusercontent.com",
+    "GOOGLE_CLIENT_ID": "247219641427-ifeq88p7rgor9al5ksduds7ug0ba7djr.apps.googleusercontent.com",
     "GOOGLE_CLIENT_DOMAIN": "eemi.com",
     "LOGIN_INVITE": "Se connecter à son compte EEMI:",
     "quizzGrading": {
@@ -58,85 +63,10 @@
               "text": "type"
             }
           ]
-        },
-        {
-          "i": 2,
-          "id": "qcm2",
-          "md": "Si je crée une fichier .js qui ne contient que la ligne `alert('bonjour');` et que j'intègre ce fichier à une page HTML, que se passera-t-il ?\n\n\n",
-          "mdSolution": "\n\nQuand on intègre un fichier .js à une page HTML (à l'aide de l'élément `<script>`), cela a pour effet d'exécuter les instructions du fichier à chaque (re)chargement de la page dans le navigateur.\n\nPour que l'`alert` soit déclenché par un clic de l'utilisateur, il faut écrire l'instruction à l'intérieur d'une définition de fonction affectée à la propriété `onclick` d'un élément (ex: `<button>`).",
-          "choices": [
-            {
-              "name": 1,
-              "text": "rien"
-            },
-            {
-              "name": 2,
-              "text": "l'alert ne s'affichera que si on copie-colle le code dans la console"
-            },
-            {
-              "name": 3,
-              "text": "l'alert s'affichera quand l'utilisateur cliquera sur un bouton"
-            },
-            {
-              "name": 4,
-              "text": "l'alert s'affichera à chaque (re)chargement de la page"
-            }
-          ]
-        },
-        {
-          "i": 3,
-          "id": "qcm3",
-          "md": "Soit la page HTML suivante:\n\n```html\n<body>\n  <p id=\"premier-paragraphe\">Bonjour</p>\n  <p id=\"deuxieme-paragraphe\">le monde</p>\n</body>\n```\n\nQuelle instruction JavaScript dois-je exécuter pour accéder au deuxième paragraphe ?\n\n\n",
-          "mdSolution": "\n\nL'API du DOM fournit la fonction `getElementById()` pour accéder à un élément en connaissant son identifiant. Il suffit de passer l'identifiant en paramètre.",
-          "choices": [
-            {
-              "name": 1,
-              "text": "document.paragraphes[1];"
-            },
-            {
-              "name": 2,
-              "text": "document.getElementById(1);"
-            },
-            {
-              "name": 3,
-              "text": "document.getElementById('deuxieme-paragraphe');"
-            },
-            {
-              "name": 4,
-              "text": "document.deuxieme-paragraphe;"
-            }
-          ]
-        },
-        {
-          "i": 4,
-          "id": "qcm4",
-          "md": "Soit la page HTML suivante:\n\n```html\n<body>\n  <form>\n    <input id=\"nom\" value=\"Michel\" />\n    <input id=\"prenom\" value=\"Jean\" />\n  </form>\n</body>\n```\n\nQuelle instruction JavaScript dois-je exécuter pour modifier la valeur du champ `<input>` dont l'identifiant est `prenom` ?\n\n\n",
-          "mdSolution": "\n\nSeule la première solution est valide.\n\nComme d'habitude, on commence par accéder au champ `<input>` en spécifiant son `id`, puis on affecte une nouvelle valeur à la propriété `value` de l'objet retourné par `getElementById()`.",
-          "choices": [
-            {
-              "name": 1,
-              "text": "document.getElementById('prenom').value = 'nouveau prénom';"
-            },
-            {
-              "name": 2,
-              "text": "document.getElementById('prenom', 'nouveau prénom');"
-            },
-            {
-              "name": 3,
-              "text": "document.prenom = 'nouveau prénom';"
-            },
-            {
-              "name": 4,
-              "text": "document.input = '<input id=\"prenom\" value=\"nouveau prénom\" />'"
-            }
-          ]
         }
       ],
       "solutions": {
-        "qcm1": 2,
-        "qcm2": 4,
-        "qcm3": 3,
-        "qcm4": 1
+        "qcm1": 2
       }
     },
     {
@@ -146,8 +76,8 @@
       "title": "Exercices de codage",
       "questions": [
         {
-          "i": 5,
-          "id": "code5",
+          "i": 2,
+          "id": "code2",
           "variants": [
             {}
           ],

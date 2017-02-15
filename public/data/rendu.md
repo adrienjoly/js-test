@@ -1,1 +1,1 @@
-Rendez votre copie pour obtenir votre note !
+Rendez votre copie pour obtenir la solution des exercices.
