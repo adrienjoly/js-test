@@ -5,7 +5,7 @@
     window.location.href = window.location.href.replace('http:', 'https:');
   var app = document.querySelector('#app');
   app.config = {
-    "title": "JavaScript QCM",
+    "title": "JavaScript QCM 9",
     "PUBLIC_TEST_MODE": false,
     "DISPLAY_SOLUTIONS_AFTER_SUBMIT": true,
     "redirectToHttps": true,
@@ -14,12 +14,7 @@
       "publishEvalTests": true
     },
     "backend": {
-      "type": "firebase",
-      "FIREBASE_CONFIG": {
-        "databaseURL": "https://js-qcm.firebaseio.com",
-        "apiKey": "AIzaSyBWrb4UMjyrSyzp_kqauvFGLi3QaWvDPus",
-        "messagingSenderId": "988306760740"
-      }
+      "type": "auto-eval"
     },
     "GOOGLE_CLIENT_ID": "247219641427-ifeq88p7rgor9al5ksduds7ug0ba7djr.apps.googleusercontent.com",
     "GOOGLE_CLIENT_DOMAIN": "eemi.com",
@@ -43,130 +38,177 @@
         {
           "i": 1,
           "id": "qcm1",
-          "md": "Soit le fichier HTML suivant:\n\n```html\n<ul>\n  <li class=\"displayed\" id=\"first-item\">premier</li>\n  <li class=\"hidden\">deuxième</li>\n  <li class=\"hidden\">troisième</li>\n</ul>\n```\n\nQuelle est la fonction du DOM la plus directe pour:\n\n1) accéder au premier élément `<li>` depuis JavaScript ?\n\n\n",
-          "mdSolution": "\n\n - le deuxième choix n'existe pas, car getElement**s**ByClassName() prend un **s**;\n - le premier choix est plus direct, car le premier élément `<li>` porte un attribut `id` (unique), et que `getElementById()` a l'avantage de le retourner directement, alors que les autres retournent un tableau d'éléments.",
+          "md": "Qu'est-ce qu'un composant ?\n\n\n",
+          "mdSolution": "\n\nUn composant est un module qui a été conçu pour être intégré par d'autres développeurs.\n\nSur le Web, un composant est généralement composé d'un script JavaScript, et éventuellement d'un fichier CSS en plus. Il est aussi accompagné d'une page qui explique aux développeurs comment intégrer ce composant sur leur page.",
           "choices": [
             {
               "name": 1,
-              "text": "getElementById()"
+              "text": "c'est le nom qu'on donne à tout programme JavaScript"
             },
             {
               "name": 2,
-              "text": "getElementByClassName()"
+              "text": "c'est le nom qu'on donne à tout div d'une page HTML"
             },
             {
               "name": 3,
-              "text": "getElementsByClassName()"
+              "text": "c'est un module qui a été conçu pour être intégré par d'autres développeurs"
             },
             {
               "name": 4,
-              "text": "getElementsByTagName()"
+              "text": "c'est une page web de documentation"
             }
           ]
         },
         {
           "i": 2,
           "id": "qcm2",
-          "md": "2) accéder à tous les éléments `<li>` portant la classe `\"hidden\"` ?\n\n\n",
-          "mdSolution": "\n\n Pour référencer les éléments par classe, il faut utiliser `getElementsByClassName()`.\n\n Note: Cette fonction retourne un tableau d'éléments.",
+          "md": "Nous avons vu en cours que tout composant devait être conçu de manière à pouvoir être intégré plusieurs fois sur une même page.\n\nParmi ces stratégies de conception, laquelle ne permet PAS l'intégration multiple d'un composant:\n\n\n",
+          "mdSolution": "\n\nTout composant doit être conçu de manière à ce que l'intégrateur n'ait pas besoin de modifier le code source du composant, ni même de lire ce code source.\n\nAfin que le composant puisse s'instancier plus d'une fois sur une même page, le développeur du composant peut s'y prendre de différentes manières, notamment:\n\n - faire en sorte que le composant s'intègre à partir de groupes d'éléments. (exemple d'instructions: *chaque `<div>` contenant des `<img>` sera transformé en galerie*, au lieu de *toutes les `<img>` de la page seront regroupées dans une même galerie*)\n - ou demander à l'intégrateur d'appeler une fonction pour chaque intégration. (exemple d'instructions: *pour chaque galerie à intégrer sur votre page, appeler la fonction `creerGalerie()` en passant le `<div>` concerné en paramètre*)",
           "choices": [
             {
               "name": 1,
-              "text": "getElementById()"
+              "text": "Faire en sorte que le composant s'applique sur des éléments groupés"
             },
             {
               "name": 2,
-              "text": "getElementByClassName()"
+              "text": "Demander à l'intégrateur d'appeler une fonction pour chaque intégration"
             },
             {
               "name": 3,
-              "text": "getElementsByClassName()"
-            },
-            {
-              "name": 4,
-              "text": "getElementsByTagName()"
+              "text": "Demander à l'intégrateur de modifier le code source du composant"
             }
           ]
         },
         {
           "i": 3,
           "id": "qcm3",
-          "md": "3) accéder à tous les éléments `<li>` ?\n\n\n",
-          "mdSolution": "\n\nPour référencer les éléments par nom d'élément (appelé *tag name* en anglais), il faut utiliser `getElementsByTagName()`.\n\n Note: Cette fonction retourne un tableau d'éléments.",
+          "md": "Soit le fichier HTML suivant:\n\n```html\n<ul>\n  <li data-number=\"1\">premier</li>\n  <li data-number=\"2\">deuxième</li>\n</ul>\n```\n\nComment récupérer la valeur de l'attribut `data-number` du deuxième élément `<li>` ?\n\n\n",
+          "mdSolution": "\n\n - pour accéder au deuxième élément `<li>`, il faut utiliser la fonction `getElementsByClassName()` puis accéder au 2ème élément du tableau retourné par cet appel à l'aide de `[1]`\n - seuls les attributs standard définis par le DOM (ex: id, href, src...) sont accessibles directement par des propriétés d'objet de classe Element, via la notation pointée.\n - comme `data-number` n'est pas une propriété standard, il faut appeler la méthode `getAttribute()` sur l'objet de classe Element pour y accéder.",
           "choices": [
             {
               "name": 1,
-              "text": "getElementById()"
+              "text": "document.getElementById('2').data-number"
             },
             {
               "name": 2,
-              "text": "getElementByClassName()"
+              "text": "document.getElementsByTagName('li')[1].data-number"
             },
             {
               "name": 3,
-              "text": "getElementsByClassName()"
+              "text": "document.getElementsByTagName('li').getAttribute('data-number')[1]"
             },
             {
               "name": 4,
-              "text": "getElementsByTagName()"
+              "text": "document.getElementsByTagName('li')[1].getAttribute('data-number')"
             }
           ]
         },
         {
           "i": 4,
           "id": "qcm4",
-          "md": "Comment retirer la classe `\"hidden\"` des deux derniers éléments `<li>` ?\n\n\n",
-          "mdSolution": "\n\n[`className`](https://developer.mozilla.org/fr/docs/Web/API/Element/className), [`setAttribute()`](https://developer.mozilla.org/fr/docs/Web/API/Element/setAttribute) et [`classList`](https://developer.mozilla.org/fr/docs/Web/API/Element/classList) ne sont applicables que sur un objet JavaScript représentant un élément HTML (ex: retourné par `getElementById()`), or `document.getElementsByClassName('hidden')` retourne un tableau d'éléments.\n\nDonc on ne peut pas utiliser ces propriétés/fonctions directement sur le tableau retourné par `document.getElementsByClassName('hidden')` => Il faut utiliser une boucle pour appeler `classList.remove('hidden')` sur chaque élément du tableau.",
+          "md": "```js\nvar lien = document.getElementById('mon-lien-a');\n```\n\nComment changer le titre du lien `<a>` (tel qu'il sera affiché à l'écran) référencé par la variable `lien` ?\n\n\n",
+          "mdSolution": "\n\n - en HTML, le titre visible d'un lien est défini par le contenu de l'élément (ce qu'il y a entre les balises `<a>` et `</a>`); il ne faut donc pas modifier un attribut de ce lien (ex: `title` et `href`) mais son contenu.\n - pour modifier le contenu d'un élément, il faut utiliser la propriété `innerHTML`.",
           "choices": [
             {
               "name": 1,
-              "text": "document.getElementsByClassName('hidden').className = '';"
+              "text": "lien.title = 'nouveau titre';"
             },
             {
               "name": 2,
-              "text": "document.getElementsByClassName('hidden').setAttribute('class', '');"
+              "text": "lien.innerHTML = 'nouveau titre';"
             },
             {
               "name": 3,
-              "text": "document.getElementsByClassName('hidden').classList.remove('hidden');"
+              "text": "lien.href = 'nouveau titre';"
             },
             {
               "name": 4,
-              "text": "(il faut utiliser une boucle)"
+              "text": "lien.setAttribute('title', 'nouveau titre');"
+            }
+          ]
+        },
+        {
+          "i": 5,
+          "id": "qcm5",
+          "md": "Soit le code JS suivant:\n\n ```js\n// supposons que boutons référence un ensemble de boutons\nfor (var i = 0; i < boutons.length; i++) {\n  boutons[i].onclick = function() {\n    alert('vous avez cliqué sur le bouton nº' + i);\n  }\n}\n```\n\nQue se passera-t-il quand on cliquera sur chaque bouton ?\n\n\n",
+          "mdSolution": "\n\nréponse: un numéro de bouton incorrect apparaitra dans un alert",
+          "choices": [
+            {
+              "name": 1,
+              "text": "on verra l'alerte: \"vous avez cliqué sur le bouton nºi\""
+            },
+            {
+              "name": 2,
+              "text": "le numéro du bouton cliqué apparaitra dans un alert"
+            },
+            {
+              "name": 3,
+              "text": "un numéro de bouton incorrect apparaitra dans un alert"
+            },
+            {
+              "name": 4,
+              "text": "il ne se passera rien"
+            }
+          ]
+        },
+        {
+          "i": 6,
+          "id": "qcm6",
+          "md": "Expliquez la raison du comportement observé à la question ci-dessus.\n\n\n",
+          "mdSolution": "\n\n - Au moment du clic sur un élément, le navigateur appelle la fonction rattachée à sa propriété `onclick`. Notre fonction `onclick` a bien accès à la variable `i`, car cette fonction est définie dans le même contexte (*scope*) que celui dans lequel cette variable a été créée.\n - Par contre, lorsque le navigateur appellera cette fonction (au moment où l'utilisateur aura cliqué sur un bouton), la boucle aura déjà fini d'itérer, et valeur de `i` aura donc atteint sa valeur maximale: `boutons.length`.",
+          "choices": [
+            {
+              "name": 1,
+              "text": "il y a une erreur de syntaxe dans le code"
+            },
+            {
+              "name": 2,
+              "text": "au moment du clic, la variable i vaudra boutons.length"
+            },
+            {
+              "name": 3,
+              "text": "au moment du clic, la variable i vaudra 0"
+            },
+            {
+              "name": 4,
+              "text": "la variable i n'est pas accessible dans le contexte de la fonction onclick"
+            }
+          ]
+        },
+        {
+          "i": 7,
+          "id": "qcm7",
+          "md": "Quelle est la meilleure manière de résoudre le problème de la question ci-dessus ?\n\n\n",
+          "mdSolution": "\n\nPour que la fonction `onclick` qu'on définit pour chaque bouton conserve la valeur de la variable `i`, il faut que cette fonction soit définie dans un contexte où la valeur sera stockée dans une variable séparée.\n\nVu que, en JavaScript, chaque variable est rattachée à la fonction dans laquelle elle est créée, la bonne pratique consiste à définir une fonction qui prendra la valeur de `i` en paramètre, puis retournera la fonction `onclick` qui utilisera cette valeur.",
+          "choices": [
+            {
+              "name": 1,
+              "text": "il faut ralentir les itérations de la boucle"
+            },
+            {
+              "name": 2,
+              "text": "il faut écrire une fonction onclick par bouton"
+            },
+            {
+              "name": 3,
+              "text": "il faut passer la valeur de i en paramètre de notre fonction onclick"
+            },
+            {
+              "name": 4,
+              "text": "il faut passer la valeur de i en paramètre d'une autre fonction, à chaque itération de la boucle"
             }
           ]
         }
       ],
       "solutions": {
-        "qcm1": 1,
+        "qcm1": 3,
         "qcm2": 3,
         "qcm3": 4,
-        "qcm4": 4
+        "qcm4": 2,
+        "qcm5": 3,
+        "qcm6": 2,
+        "qcm7": 4
       }
-    },
-    {
-      "_info": "generated from ex.2.code.template.md",
-      "i": 2,
-      "isCode": true,
-      "title": "Exercices de codage",
-      "questions": [
-        {
-          "i": 5,
-          "id": "code5",
-          "variants": [
-            {}
-          ],
-          "testVariants": [
-            "\n// automatic student evaluation code\n(function evaluateStudentCode(){\n  var res = [];\n  var _button = {\n    onclick: function() {},\n    classList: { add: res.push.bind(res) }\n  };\n  var document = {\n    getElementById: function(id) {\n      return id === 'mon-bouton' ? _button : null;\n    }\n  };\n  _runStudentCode();\n  var tests = [];\n  tests.push(res.length === 0);\n  setTimeout(function(){\n    _button.onclick()\n    tests.push(res.length === 1 && res[0] === 'hidden');\n    setTimeout(function(){\n      _button.onclick()\n      tests.push(res.length === 2 && res[1] === 'hidden');\n      application.remote._send(null, tests);\n      // 1 point per passing test => 3 pts per exercise\n    }, 50)\n  }, 50)\n})();\n"
-          ],
-          "mdVariants": [
-            "Imaginez que vous disposez de la page HTML suivante:\n\n```html\n<bouton id=\"mon-bouton\">cliquez ici !</bouton>\n```\n\nEt de la règle CSS suivante:\n\n```css\n.hidden {\n  display: none;\n}\n```\n\nÉcrivez le code JavaScript nécéssaire pour que la classe `hidden` soit ajoutée au bouton une fois que l'utilisateur aura cliqué dessus, à l'aide de la propriété `classList`.\n\n"
-          ],
-          "mdSolutions": [
-            "\n\nSolution:\n\n```js\nvar bouton = document.getElementById('mon-bouton');\nbouton.onclick = function() {\n  bouton.classList.add('hidden');\n};\n```\n"
-          ]
-        }
-      ]
     }
   ];
 })(document);

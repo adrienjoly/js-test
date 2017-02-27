@@ -7,7 +7,7 @@ function readfile(filePath) {
 module.exports = {
 
   // Front-end config
-  title: 'JavaScript QCM',
+  title: 'JavaScript QCM 9',
 
   // General settings
   PUBLIC_TEST_MODE: false, // set to false to restrict acccess and identify students using Google Login
@@ -23,18 +23,18 @@ module.exports = {
 
   // Back-end config
   backend: {
-    type: 'firebase', // 'email-submit', 'realtime-eval', 'auto-eval', or 'firebase' (with FIREBASE_CONFIG)
+    type: 'auto-eval', // 'email-submit', 'realtime-eval', 'auto-eval', or 'firebase' (with FIREBASE_CONFIG)
     /*
     EMAIL_SUBMIT_CONFIG: {
       mdTemplate: readfile('public/data/submitted.md'),
     },
-    */
     FIREBASE_CONFIG: {
       databaseURL: "https://js-qcm.firebaseio.com",
       apiKey: "AIzaSyBWrb4UMjyrSyzp_kqauvFGLi3QaWvDPus",
       messagingSenderId: "988306760740"
       // admin/dashboard: https://console.firebase.google.com/project/js-qcm/database/data
     },
+    */
   },
 
   // Authentication
