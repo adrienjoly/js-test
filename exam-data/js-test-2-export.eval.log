@@ -1,0 +1,5467 @@
+Parsing ex.01.quizz.template.md ...
+Parsing ex.02.quizz.template.md ...
+Parsing ex.03.code.template.md ...
+Parsing ex.04.quizz.template.md ...
+Parsing ex.05.code.template.md ...
+Parsing ex.06.quizz.template.md ...
+Parsing ex.07.code.template.md ...
+Parsing ex.08.code.template.md ...
+Reading and evaluating answers from: ../exam-data/js-test-2-export.json ...
+
+
+================================
+
+STUDENT: adrien_joly
+
+  -  quizz answers:
+  | qcm1 : 4 (solution: 4) => 1 pts
+  | qcm2 : 1 (solution: 1) => 1 pts
+  | qcm3 :  (solution: 3) => 0 pts
+  | qcm4 :  (solution: 2) => 0 pts
+  | qcm5 :  (solution: 2) => 0 pts
+  | qcm6 :  (solution: 1) => 0 pts
+  | qcm7 :  (solution: 1) => 0 pts
+  | qcm8 :  (solution: 2) => 0 pts
+  | qcm9 :  (solution: 3) => 0 pts
+  | qcm10 :  (solution: 3) => 0 pts
+
+  => quizz score: 2 / 10 pts
+
+  -  quizz answers:
+  | qcm11 :  (solution: 2) => 0 pts
+  | qcm12 :  (solution: 2) => 0 pts
+  | qcm13 :  (solution: 1) => 0 pts
+  | qcm14 :  (solution: 3) => 0 pts
+  | qcm15 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code16 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | if(nombre ===4) resultat = 'egal';
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | ------------- EXERCISE: code17 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 3 / 6 pts
+
+  -  quizz answers:
+  | qcm18 :  (solution: 4) => 0 pts
+  | qcm19 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 2 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code20 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 3 pts
+
+  -  quizz answers:
+  | qcm21 :  (solution: 2) => 0 pts
+  | qcm22 :  (solution: 1) => 0 pts
+  | qcm23 :  (solution: 3) => 0 pts
+  | qcm24 :  (solution: 1) => 0 pts
+
+  => quizz score: 0 / 4 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code25 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code26 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code27 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code28 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code29 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code30 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code31 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code32 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+=> TOTAL STUDENT SCORE: 5 / 54
+
+
+================================
+
+STUDENT: alexandre_blanc
+
+  -  quizz answers:
+  | qcm1 :  (solution: 4) => 0 pts
+  | qcm2 :  (solution: 1) => 0 pts
+  | qcm3 :  (solution: 3) => 0 pts
+  | qcm4 :  (solution: 2) => 0 pts
+  | qcm5 :  (solution: 2) => 0 pts
+  | qcm6 :  (solution: 1) => 0 pts
+  | qcm7 :  (solution: 1) => 0 pts
+  | qcm8 :  (solution: 2) => 0 pts
+  | qcm9 :  (solution: 3) => 0 pts
+  | qcm10 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 10 pts
+
+  -  quizz answers:
+  | qcm11 :  (solution: 2) => 0 pts
+  | qcm12 :  (solution: 2) => 0 pts
+  | qcm13 :  (solution: 1) => 0 pts
+  | qcm14 :  (solution: 3) => 0 pts
+  | qcm15 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code16 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code17 (variant: 2) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 6 pts
+
+  -  quizz answers:
+  | qcm18 :  (solution: 4) => 0 pts
+  | qcm19 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 2 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code20 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 3 pts
+
+  -  quizz answers:
+  | qcm21 :  (solution: 2) => 0 pts
+  | qcm22 :  (solution: 1) => 0 pts
+  | qcm23 :  (solution: 3) => 0 pts
+  | qcm24 :  (solution: 1) => 0 pts
+
+  => quizz score: 0 / 4 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code25 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code26 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code27 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code28 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code29 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code30 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code31 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code32 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+=> TOTAL STUDENT SCORE: 0 / 54
+
+
+================================
+
+STUDENT: amaury_thouvenot
+
+  -  quizz answers:
+  | qcm1 : 4 (solution: 4) => 1 pts
+  | qcm2 :  (solution: 1) => 0 pts
+  | qcm3 :  (solution: 3) => 0 pts
+  | qcm4 :  (solution: 2) => 0 pts
+  | qcm5 :  (solution: 2) => 0 pts
+  | qcm6 :  (solution: 1) => 0 pts
+  | qcm7 :  (solution: 1) => 0 pts
+  | qcm8 :  (solution: 2) => 0 pts
+  | qcm9 :  (solution: 3) => 0 pts
+  | qcm10 :  (solution: 3) => 0 pts
+
+  => quizz score: 1 / 10 pts
+
+  -  quizz answers:
+  | qcm11 :  (solution: 2) => 0 pts
+  | qcm12 :  (solution: 2) => 0 pts
+  | qcm13 :  (solution: 1) => 0 pts
+  | qcm14 :  (solution: 3) => 0 pts
+  | qcm15 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code16 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code17 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 6 pts
+
+  -  quizz answers:
+  | qcm18 :  (solution: 4) => 0 pts
+  | qcm19 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 2 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code20 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 3 pts
+
+  -  quizz answers:
+  | qcm21 :  (solution: 2) => 0 pts
+  | qcm22 :  (solution: 1) => 0 pts
+  | qcm23 :  (solution: 3) => 0 pts
+  | qcm24 :  (solution: 1) => 0 pts
+
+  => quizz score: 0 / 4 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code25 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code26 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code27 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code28 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code29 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code30 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code31 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code32 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+=> TOTAL STUDENT SCORE: 1 / 54
+
+
+================================
+
+STUDENT: anais_desmero
+
+  -  quizz answers:
+  | qcm1 :  (solution: 4) => 0 pts
+  | qcm2 : 2 (solution: 1) => 0 pts
+  | qcm3 : 3 (solution: 3) => 1 pts
+  | qcm4 : 4 (solution: 2) => 0 pts
+  | qcm5 : 2 (solution: 2) => 1 pts
+  | qcm6 : 1 (solution: 1) => 1 pts
+  | qcm7 : 1 (solution: 1) => 1 pts
+  | qcm8 : 2 (solution: 2) => 1 pts
+  | qcm9 : 3 (solution: 3) => 1 pts
+  | qcm10 : 1 (solution: 3) => 0 pts
+
+  => quizz score: 6 / 10 pts
+
+  -  quizz answers:
+  | qcm11 : 2 (solution: 2) => 1 pts
+  | qcm12 : 2 (solution: 2) => 1 pts
+  | qcm13 : 3 (solution: 1) => 0 pts
+  | qcm14 :  (solution: 3) => 0 pts
+  | qcm15 :  (solution: 3) => 0 pts
+
+  => quizz score: 2 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code16 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code17 (variant: 1) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 6 pts
+
+  -  quizz answers:
+  | qcm18 : 3 (solution: 4) => 0 pts
+  | qcm19 : 3 (solution: 3) => 1 pts
+
+  => quizz score: 1 / 2 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code20 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 3 pts
+
+  -  quizz answers:
+  | qcm21 : 2 (solution: 2) => 1 pts
+  | qcm22 : 3 (solution: 1) => 0 pts
+  | qcm23 : 2 (solution: 3) => 0 pts
+  | qcm24 : 4 (solution: 1) => 0 pts
+
+  => quizz score: 1 / 4 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code25 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code26 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code27 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code28 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code29 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code30 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code31 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code32 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+=> TOTAL STUDENT SCORE: 10 / 54
+
+
+================================
+
+STUDENT: avi_dahan
+
+  -  quizz answers:
+  | qcm1 :  (solution: 4) => 0 pts
+  | qcm2 :  (solution: 1) => 0 pts
+  | qcm3 :  (solution: 3) => 0 pts
+  | qcm4 :  (solution: 2) => 0 pts
+  | qcm5 :  (solution: 2) => 0 pts
+  | qcm6 :  (solution: 1) => 0 pts
+  | qcm7 :  (solution: 1) => 0 pts
+  | qcm8 :  (solution: 2) => 0 pts
+  | qcm9 :  (solution: 3) => 0 pts
+  | qcm10 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 10 pts
+
+  -  quizz answers:
+  | qcm11 :  (solution: 2) => 0 pts
+  | qcm12 :  (solution: 2) => 0 pts
+  | qcm13 :  (solution: 1) => 0 pts
+  | qcm14 :  (solution: 3) => 0 pts
+  | qcm15 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code16 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code17 (variant: 2) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 6 pts
+
+  -  quizz answers:
+  | qcm18 :  (solution: 4) => 0 pts
+  | qcm19 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 2 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code20 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 3 pts
+
+  -  quizz answers:
+  | qcm21 :  (solution: 2) => 0 pts
+  | qcm22 :  (solution: 1) => 0 pts
+  | qcm23 :  (solution: 3) => 0 pts
+  | qcm24 :  (solution: 1) => 0 pts
+
+  => quizz score: 0 / 4 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code25 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code26 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code27 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code28 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code29 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code30 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code31 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code32 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+=> TOTAL STUDENT SCORE: 0 / 54
+
+
+================================
+
+STUDENT: benoit_boureau
+
+  -  quizz answers:
+  | qcm1 :  (solution: 4) => 0 pts
+  | qcm2 :  (solution: 1) => 0 pts
+  | qcm3 :  (solution: 3) => 0 pts
+  | qcm4 :  (solution: 2) => 0 pts
+  | qcm5 :  (solution: 2) => 0 pts
+  | qcm6 :  (solution: 1) => 0 pts
+  | qcm7 :  (solution: 1) => 0 pts
+  | qcm8 :  (solution: 2) => 0 pts
+  | qcm9 :  (solution: 3) => 0 pts
+  | qcm10 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 10 pts
+
+  -  quizz answers:
+  | qcm11 :  (solution: 2) => 0 pts
+  | qcm12 :  (solution: 2) => 0 pts
+  | qcm13 :  (solution: 1) => 0 pts
+  | qcm14 :  (solution: 3) => 0 pts
+  | qcm15 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code16 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code17 (variant: 1) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 6 pts
+
+  -  quizz answers:
+  | qcm18 :  (solution: 4) => 0 pts
+  | qcm19 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 2 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code20 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 3 pts
+
+  -  quizz answers:
+  | qcm21 :  (solution: 2) => 0 pts
+  | qcm22 :  (solution: 1) => 0 pts
+  | qcm23 :  (solution: 3) => 0 pts
+  | qcm24 :  (solution: 1) => 0 pts
+
+  => quizz score: 0 / 4 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code25 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code26 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code27 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code28 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code29 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code30 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code31 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code32 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+=> TOTAL STUDENT SCORE: 0 / 54
+
+
+================================
+
+STUDENT: c_ondrejec
+
+  -  quizz answers:
+  | qcm1 :  (solution: 4) => 0 pts
+  | qcm2 :  (solution: 1) => 0 pts
+  | qcm3 :  (solution: 3) => 0 pts
+  | qcm4 :  (solution: 2) => 0 pts
+  | qcm5 :  (solution: 2) => 0 pts
+  | qcm6 :  (solution: 1) => 0 pts
+  | qcm7 :  (solution: 1) => 0 pts
+  | qcm8 :  (solution: 2) => 0 pts
+  | qcm9 :  (solution: 3) => 0 pts
+  | qcm10 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 10 pts
+
+  -  quizz answers:
+  | qcm11 :  (solution: 2) => 0 pts
+  | qcm12 :  (solution: 2) => 0 pts
+  | qcm13 :  (solution: 1) => 0 pts
+  | qcm14 :  (solution: 3) => 0 pts
+  | qcm15 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code16 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code17 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 6 pts
+
+  -  quizz answers:
+  | qcm18 :  (solution: 4) => 0 pts
+  | qcm19 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 2 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code20 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 3 pts
+
+  -  quizz answers:
+  | qcm21 :  (solution: 2) => 0 pts
+  | qcm22 :  (solution: 1) => 0 pts
+  | qcm23 :  (solution: 3) => 0 pts
+  | qcm24 :  (solution: 1) => 0 pts
+
+  => quizz score: 0 / 4 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code25 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code26 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code27 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code28 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code29 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code30 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code31 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code32 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+=> TOTAL STUDENT SCORE: 0 / 54
+
+
+================================
+
+STUDENT: caroline_auclair
+
+  -  quizz answers:
+  | qcm1 :  (solution: 4) => 0 pts
+  | qcm2 :  (solution: 1) => 0 pts
+  | qcm3 :  (solution: 3) => 0 pts
+  | qcm4 :  (solution: 2) => 0 pts
+  | qcm5 :  (solution: 2) => 0 pts
+  | qcm6 :  (solution: 1) => 0 pts
+  | qcm7 :  (solution: 1) => 0 pts
+  | qcm8 :  (solution: 2) => 0 pts
+  | qcm9 :  (solution: 3) => 0 pts
+  | qcm10 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 10 pts
+
+  -  quizz answers:
+  | qcm11 :  (solution: 2) => 0 pts
+  | qcm12 :  (solution: 2) => 0 pts
+  | qcm13 :  (solution: 1) => 0 pts
+  | qcm14 :  (solution: 3) => 0 pts
+  | qcm15 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code16 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code17 (variant: 2) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 6 pts
+
+  -  quizz answers:
+  | qcm18 :  (solution: 4) => 0 pts
+  | qcm19 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 2 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code20 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 3 pts
+
+  -  quizz answers:
+  | qcm21 :  (solution: 2) => 0 pts
+  | qcm22 :  (solution: 1) => 0 pts
+  | qcm23 :  (solution: 3) => 0 pts
+  | qcm24 :  (solution: 1) => 0 pts
+
+  => quizz score: 0 / 4 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code25 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code26 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code27 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code28 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code29 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code30 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code31 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code32 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+=> TOTAL STUDENT SCORE: 0 / 54
+
+
+================================
+
+STUDENT: demo_user_378
+
+  -  quizz answers:
+  | qcm1 :  (solution: 4) => 0 pts
+  | qcm2 :  (solution: 1) => 0 pts
+  | qcm3 :  (solution: 3) => 0 pts
+  | qcm4 :  (solution: 2) => 0 pts
+  | qcm5 :  (solution: 2) => 0 pts
+  | qcm6 :  (solution: 1) => 0 pts
+  | qcm7 :  (solution: 1) => 0 pts
+  | qcm8 :  (solution: 2) => 0 pts
+  | qcm9 :  (solution: 3) => 0 pts
+  | qcm10 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 10 pts
+
+  -  quizz answers:
+  | qcm11 :  (solution: 2) => 0 pts
+  | qcm12 :  (solution: 2) => 0 pts
+  | qcm13 :  (solution: 1) => 0 pts
+  | qcm14 :  (solution: 3) => 0 pts
+  | qcm15 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code16 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code17 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 6 pts
+
+  -  quizz answers:
+  | qcm18 :  (solution: 4) => 0 pts
+  | qcm19 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 2 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code20 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 3 pts
+
+  -  quizz answers:
+  | qcm21 :  (solution: 2) => 0 pts
+  | qcm22 :  (solution: 1) => 0 pts
+  | qcm23 :  (solution: 3) => 0 pts
+  | qcm24 :  (solution: 1) => 0 pts
+
+  => quizz score: 0 / 4 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code25 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code26 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code27 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code28 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code29 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code30 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code31 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code32 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+=> TOTAL STUDENT SCORE: 0 / 54
+
+
+================================
+
+STUDENT: demo_user_991
+
+  -  quizz answers:
+  | qcm1 :  (solution: 4) => 0 pts
+  | qcm2 :  (solution: 1) => 0 pts
+  | qcm3 :  (solution: 3) => 0 pts
+  | qcm4 :  (solution: 2) => 0 pts
+  | qcm5 :  (solution: 2) => 0 pts
+  | qcm6 :  (solution: 1) => 0 pts
+  | qcm7 :  (solution: 1) => 0 pts
+  | qcm8 :  (solution: 2) => 0 pts
+  | qcm9 :  (solution: 3) => 0 pts
+  | qcm10 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 10 pts
+
+  -  quizz answers:
+  | qcm11 :  (solution: 2) => 0 pts
+  | qcm12 :  (solution: 2) => 0 pts
+  | qcm13 :  (solution: 1) => 0 pts
+  | qcm14 :  (solution: 3) => 0 pts
+  | qcm15 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code16 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code17 (variant: 1) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 6 pts
+
+  -  quizz answers:
+  | qcm18 :  (solution: 4) => 0 pts
+  | qcm19 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 2 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code20 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 3 pts
+
+  -  quizz answers:
+  | qcm21 :  (solution: 2) => 0 pts
+  | qcm22 :  (solution: 1) => 0 pts
+  | qcm23 :  (solution: 3) => 0 pts
+  | qcm24 :  (solution: 1) => 0 pts
+
+  => quizz score: 0 / 4 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code25 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code26 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code27 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code28 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code29 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code30 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code31 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code32 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+=> TOTAL STUDENT SCORE: 0 / 54
+
+
+================================
+
+STUDENT: edouard_duchesnedelamotte
+
+  -  quizz answers:
+  | qcm1 :  (solution: 4) => 0 pts
+  | qcm2 :  (solution: 1) => 0 pts
+  | qcm3 :  (solution: 3) => 0 pts
+  | qcm4 :  (solution: 2) => 0 pts
+  | qcm5 :  (solution: 2) => 0 pts
+  | qcm6 :  (solution: 1) => 0 pts
+  | qcm7 :  (solution: 1) => 0 pts
+  | qcm8 :  (solution: 2) => 0 pts
+  | qcm9 :  (solution: 3) => 0 pts
+  | qcm10 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 10 pts
+
+  -  quizz answers:
+  | qcm11 :  (solution: 2) => 0 pts
+  | qcm12 :  (solution: 2) => 0 pts
+  | qcm13 :  (solution: 1) => 0 pts
+  | qcm14 :  (solution: 3) => 0 pts
+  | qcm15 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code16 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code17 (variant: 1) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 6 pts
+
+  -  quizz answers:
+  | qcm18 :  (solution: 4) => 0 pts
+  | qcm19 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 2 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code20 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 3 pts
+
+  -  quizz answers:
+  | qcm21 :  (solution: 2) => 0 pts
+  | qcm22 :  (solution: 1) => 0 pts
+  | qcm23 :  (solution: 3) => 0 pts
+  | qcm24 :  (solution: 1) => 0 pts
+
+  => quizz score: 0 / 4 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code25 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code26 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code27 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code28 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code29 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code30 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code31 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code32 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+=> TOTAL STUDENT SCORE: 0 / 54
+
+
+================================
+
+STUDENT: elsa_haddad
+
+  -  quizz answers:
+  | qcm1 : 4 (solution: 4) => 1 pts
+  | qcm2 : 1 (solution: 1) => 1 pts
+  | qcm3 : 3 (solution: 3) => 1 pts
+  | qcm4 : 2 (solution: 2) => 1 pts
+  | qcm5 : 2 (solution: 2) => 1 pts
+  | qcm6 : 1 (solution: 1) => 1 pts
+  | qcm7 : 1 (solution: 1) => 1 pts
+  | qcm8 : 2 (solution: 2) => 1 pts
+  | qcm9 : 3 (solution: 3) => 1 pts
+  | qcm10 : 3 (solution: 3) => 1 pts
+
+  => quizz score: 10 / 10 pts
+
+  -  quizz answers:
+  | qcm11 : 2 (solution: 2) => 1 pts
+  | qcm12 : 2 (solution: 2) => 1 pts
+  | qcm13 : 1 (solution: 1) => 1 pts
+  | qcm14 : 3 (solution: 3) => 1 pts
+  | qcm15 : 3 (solution: 3) => 1 pts
+
+  => quizz score: 5 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code16 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | If nombre === 4 {
+  |   Var resultat
+  | }
+Mon, 27 Feb 2017 14:50:58 GMT jailed:sandbox DYNAMIC PLUGIN:9
+If nombre === 4 {
+   ^^^^^^
+SyntaxError: Unexpected identifier
+    at Object.exports.runInNewContext (vm.js:71:16)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:106:13)
+    at process.emit (events.js:191:7)
+    at process.nextTick (internal/child_process.js:744:12)
+    at _combinedTickCallback (internal/process/next_tick.js:67:7)
+    at process._tickCallback (internal/process/next_tick.js:98:9)
+  | => test runner err: SyntaxError: Unexpected identifier
+  | 
+  | ------------- EXERCISE: code17 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 6 pts
+
+  -  quizz answers:
+  | qcm18 :  (solution: 4) => 0 pts
+  | qcm19 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 2 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code20 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 3 pts
+
+  -  quizz answers:
+  | qcm21 :  (solution: 2) => 0 pts
+  | qcm22 :  (solution: 1) => 0 pts
+  | qcm23 :  (solution: 3) => 0 pts
+  | qcm24 :  (solution: 1) => 0 pts
+
+  => quizz score: 0 / 4 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code25 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code26 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code27 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code28 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code29 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code30 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code31 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code32 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+=> TOTAL STUDENT SCORE: 15 / 54
+
+
+================================
+
+STUDENT: florian_compiegne
+
+  -  quizz answers:
+  | qcm1 : 4 (solution: 4) => 1 pts
+  | qcm2 : 1 (solution: 1) => 1 pts
+  | qcm3 : 1 (solution: 3) => 0 pts
+  | qcm4 : 2 (solution: 2) => 1 pts
+  | qcm5 : 2 (solution: 2) => 1 pts
+  | qcm6 : 1 (solution: 1) => 1 pts
+  | qcm7 : 1 (solution: 1) => 1 pts
+  | qcm8 : 2 (solution: 2) => 1 pts
+  | qcm9 : 3 (solution: 3) => 1 pts
+  | qcm10 : 3 (solution: 3) => 1 pts
+
+  => quizz score: 9 / 10 pts
+
+  -  quizz answers:
+  | qcm11 :  (solution: 2) => 0 pts
+  | qcm12 :  (solution: 2) => 0 pts
+  | qcm13 :  (solution: 1) => 0 pts
+  | qcm14 :  (solution: 3) => 0 pts
+  | qcm15 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code16 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code17 (variant: 1) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 6 pts
+
+  -  quizz answers:
+  | qcm18 :  (solution: 4) => 0 pts
+  | qcm19 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 2 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code20 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 3 pts
+
+  -  quizz answers:
+  | qcm21 :  (solution: 2) => 0 pts
+  | qcm22 :  (solution: 1) => 0 pts
+  | qcm23 :  (solution: 3) => 0 pts
+  | qcm24 :  (solution: 1) => 0 pts
+
+  => quizz score: 0 / 4 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code25 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code26 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code27 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code28 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code29 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code30 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code31 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code32 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+=> TOTAL STUDENT SCORE: 9 / 54
+
+
+================================
+
+STUDENT: guillaume_ceyssac
+
+  -  quizz answers:
+  | qcm1 :  (solution: 4) => 0 pts
+  | qcm2 :  (solution: 1) => 0 pts
+  | qcm3 :  (solution: 3) => 0 pts
+  | qcm4 :  (solution: 2) => 0 pts
+  | qcm5 :  (solution: 2) => 0 pts
+  | qcm6 :  (solution: 1) => 0 pts
+  | qcm7 :  (solution: 1) => 0 pts
+  | qcm8 :  (solution: 2) => 0 pts
+  | qcm9 :  (solution: 3) => 0 pts
+  | qcm10 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 10 pts
+
+  -  quizz answers:
+  | qcm11 :  (solution: 2) => 0 pts
+  | qcm12 :  (solution: 2) => 0 pts
+  | qcm13 :  (solution: 1) => 0 pts
+  | qcm14 :  (solution: 3) => 0 pts
+  | qcm15 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code16 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code17 (variant: 2) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 6 pts
+
+  -  quizz answers:
+  | qcm18 :  (solution: 4) => 0 pts
+  | qcm19 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 2 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code20 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 3 pts
+
+  -  quizz answers:
+  | qcm21 :  (solution: 2) => 0 pts
+  | qcm22 :  (solution: 1) => 0 pts
+  | qcm23 :  (solution: 3) => 0 pts
+  | qcm24 :  (solution: 1) => 0 pts
+
+  => quizz score: 0 / 4 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code25 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code26 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code27 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code28 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code29 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code30 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code31 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code32 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+=> TOTAL STUDENT SCORE: 0 / 54
+
+
+================================
+
+STUDENT: guillaume_martin
+
+  -  quizz answers:
+  | qcm1 :  (solution: 4) => 0 pts
+  | qcm2 :  (solution: 1) => 0 pts
+  | qcm3 :  (solution: 3) => 0 pts
+  | qcm4 :  (solution: 2) => 0 pts
+  | qcm5 :  (solution: 2) => 0 pts
+  | qcm6 :  (solution: 1) => 0 pts
+  | qcm7 :  (solution: 1) => 0 pts
+  | qcm8 :  (solution: 2) => 0 pts
+  | qcm9 :  (solution: 3) => 0 pts
+  | qcm10 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 10 pts
+
+  -  quizz answers:
+  | qcm11 :  (solution: 2) => 0 pts
+  | qcm12 :  (solution: 2) => 0 pts
+  | qcm13 :  (solution: 1) => 0 pts
+  | qcm14 :  (solution: 3) => 0 pts
+  | qcm15 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code16 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code17 (variant: 1) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 6 pts
+
+  -  quizz answers:
+  | qcm18 :  (solution: 4) => 0 pts
+  | qcm19 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 2 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code20 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 3 pts
+
+  -  quizz answers:
+  | qcm21 :  (solution: 2) => 0 pts
+  | qcm22 :  (solution: 1) => 0 pts
+  | qcm23 :  (solution: 3) => 0 pts
+  | qcm24 :  (solution: 1) => 0 pts
+
+  => quizz score: 0 / 4 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code25 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code26 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code27 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code28 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code29 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code30 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code31 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code32 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+=> TOTAL STUDENT SCORE: 0 / 54
+
+
+================================
+
+STUDENT: haroon_hassan
+
+  -  quizz answers:
+  | qcm1 :  (solution: 4) => 0 pts
+  | qcm2 :  (solution: 1) => 0 pts
+  | qcm3 :  (solution: 3) => 0 pts
+  | qcm4 :  (solution: 2) => 0 pts
+  | qcm5 :  (solution: 2) => 0 pts
+  | qcm6 :  (solution: 1) => 0 pts
+  | qcm7 :  (solution: 1) => 0 pts
+  | qcm8 :  (solution: 2) => 0 pts
+  | qcm9 :  (solution: 3) => 0 pts
+  | qcm10 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 10 pts
+
+  -  quizz answers:
+  | qcm11 :  (solution: 2) => 0 pts
+  | qcm12 :  (solution: 2) => 0 pts
+  | qcm13 :  (solution: 1) => 0 pts
+  | qcm14 :  (solution: 3) => 0 pts
+  | qcm15 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code16 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code17 (variant: 2) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 6 pts
+
+  -  quizz answers:
+  | qcm18 :  (solution: 4) => 0 pts
+  | qcm19 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 2 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code20 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 3 pts
+
+  -  quizz answers:
+  | qcm21 :  (solution: 2) => 0 pts
+  | qcm22 :  (solution: 1) => 0 pts
+  | qcm23 :  (solution: 3) => 0 pts
+  | qcm24 :  (solution: 1) => 0 pts
+
+  => quizz score: 0 / 4 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code25 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code26 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code27 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code28 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code29 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code30 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code31 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code32 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+=> TOTAL STUDENT SCORE: 0 / 54
+
+
+================================
+
+STUDENT: ilana_bloch
+
+  -  quizz answers:
+  | qcm1 :  (solution: 4) => 0 pts
+  | qcm2 :  (solution: 1) => 0 pts
+  | qcm3 :  (solution: 3) => 0 pts
+  | qcm4 :  (solution: 2) => 0 pts
+  | qcm5 :  (solution: 2) => 0 pts
+  | qcm6 :  (solution: 1) => 0 pts
+  | qcm7 :  (solution: 1) => 0 pts
+  | qcm8 :  (solution: 2) => 0 pts
+  | qcm9 :  (solution: 3) => 0 pts
+  | qcm10 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 10 pts
+
+  -  quizz answers:
+  | qcm11 :  (solution: 2) => 0 pts
+  | qcm12 :  (solution: 2) => 0 pts
+  | qcm13 :  (solution: 1) => 0 pts
+  | qcm14 :  (solution: 3) => 0 pts
+  | qcm15 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code16 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code17 (variant: 2) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 6 pts
+
+  -  quizz answers:
+  | qcm18 :  (solution: 4) => 0 pts
+  | qcm19 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 2 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code20 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 3 pts
+
+  -  quizz answers:
+  | qcm21 :  (solution: 2) => 0 pts
+  | qcm22 :  (solution: 1) => 0 pts
+  | qcm23 :  (solution: 3) => 0 pts
+  | qcm24 :  (solution: 1) => 0 pts
+
+  => quizz score: 0 / 4 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code25 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code26 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code27 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code28 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code29 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code30 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code31 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code32 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+=> TOTAL STUDENT SCORE: 0 / 54
+
+
+================================
+
+STUDENT: jacques_hovine
+
+  -  quizz answers:
+  | qcm1 :  (solution: 4) => 0 pts
+  | qcm2 :  (solution: 1) => 0 pts
+  | qcm3 :  (solution: 3) => 0 pts
+  | qcm4 :  (solution: 2) => 0 pts
+  | qcm5 :  (solution: 2) => 0 pts
+  | qcm6 :  (solution: 1) => 0 pts
+  | qcm7 :  (solution: 1) => 0 pts
+  | qcm8 :  (solution: 2) => 0 pts
+  | qcm9 :  (solution: 3) => 0 pts
+  | qcm10 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 10 pts
+
+  -  quizz answers:
+  | qcm11 :  (solution: 2) => 0 pts
+  | qcm12 :  (solution: 2) => 0 pts
+  | qcm13 :  (solution: 1) => 0 pts
+  | qcm14 :  (solution: 3) => 0 pts
+  | qcm15 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code16 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code17 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 6 pts
+
+  -  quizz answers:
+  | qcm18 :  (solution: 4) => 0 pts
+  | qcm19 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 2 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code20 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 3 pts
+
+  -  quizz answers:
+  | qcm21 :  (solution: 2) => 0 pts
+  | qcm22 :  (solution: 1) => 0 pts
+  | qcm23 :  (solution: 3) => 0 pts
+  | qcm24 :  (solution: 1) => 0 pts
+
+  => quizz score: 0 / 4 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code25 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code26 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code27 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code28 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code29 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code30 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code31 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code32 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+=> TOTAL STUDENT SCORE: 0 / 54
+
+
+================================
+
+STUDENT: jeanne_vinay
+
+  -  quizz answers:
+  | qcm1 : 4 (solution: 4) => 1 pts
+  | qcm2 : 1 (solution: 1) => 1 pts
+  | qcm3 : 3 (solution: 3) => 1 pts
+  | qcm4 : 2 (solution: 2) => 1 pts
+  | qcm5 : 2 (solution: 2) => 1 pts
+  | qcm6 : 1 (solution: 1) => 1 pts
+  | qcm7 : 1 (solution: 1) => 1 pts
+  | qcm8 : 2 (solution: 2) => 1 pts
+  | qcm9 :  (solution: 3) => 0 pts
+  | qcm10 :  (solution: 3) => 0 pts
+
+  => quizz score: 8 / 10 pts
+
+  -  quizz answers:
+  | qcm11 :  (solution: 2) => 0 pts
+  | qcm12 :  (solution: 2) => 0 pts
+  | qcm13 :  (solution: 1) => 0 pts
+  | qcm14 :  (solution: 3) => 0 pts
+  | qcm15 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code16 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code17 (variant: 1) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 6 pts
+
+  -  quizz answers:
+  | qcm18 :  (solution: 4) => 0 pts
+  | qcm19 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 2 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code20 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 3 pts
+
+  -  quizz answers:
+  | qcm21 :  (solution: 2) => 0 pts
+  | qcm22 :  (solution: 1) => 0 pts
+  | qcm23 :  (solution: 3) => 0 pts
+  | qcm24 :  (solution: 1) => 0 pts
+
+  => quizz score: 0 / 4 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code25 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code26 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code27 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code28 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code29 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code30 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code31 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code32 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+=> TOTAL STUDENT SCORE: 8 / 54
+
+
+================================
+
+STUDENT: johanne_bordeaux
+
+  -  quizz answers:
+  | qcm1 :  (solution: 4) => 0 pts
+  | qcm2 :  (solution: 1) => 0 pts
+  | qcm3 :  (solution: 3) => 0 pts
+  | qcm4 :  (solution: 2) => 0 pts
+  | qcm5 :  (solution: 2) => 0 pts
+  | qcm6 :  (solution: 1) => 0 pts
+  | qcm7 :  (solution: 1) => 0 pts
+  | qcm8 :  (solution: 2) => 0 pts
+  | qcm9 :  (solution: 3) => 0 pts
+  | qcm10 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 10 pts
+
+  -  quizz answers:
+  | qcm11 :  (solution: 2) => 0 pts
+  | qcm12 :  (solution: 2) => 0 pts
+  | qcm13 :  (solution: 1) => 0 pts
+  | qcm14 :  (solution: 3) => 0 pts
+  | qcm15 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code16 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code17 (variant: 2) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 6 pts
+
+  -  quizz answers:
+  | qcm18 :  (solution: 4) => 0 pts
+  | qcm19 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 2 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code20 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 3 pts
+
+  -  quizz answers:
+  | qcm21 :  (solution: 2) => 0 pts
+  | qcm22 :  (solution: 1) => 0 pts
+  | qcm23 :  (solution: 3) => 0 pts
+  | qcm24 :  (solution: 1) => 0 pts
+
+  => quizz score: 0 / 4 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code25 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code26 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code27 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code28 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code29 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code30 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code31 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code32 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+=> TOTAL STUDENT SCORE: 0 / 54
+
+
+================================
+
+STUDENT: jules_varnier
+
+  -  quizz answers:
+  | qcm1 : 4 (solution: 4) => 1 pts
+  | qcm2 : 2 (solution: 1) => 0 pts
+  | qcm3 : 3 (solution: 3) => 1 pts
+  | qcm4 : 2 (solution: 2) => 1 pts
+  | qcm5 : 2 (solution: 2) => 1 pts
+  | qcm6 : 1 (solution: 1) => 1 pts
+  | qcm7 : 4 (solution: 1) => 0 pts
+  | qcm8 : 3 (solution: 2) => 0 pts
+  | qcm9 : 4 (solution: 3) => 0 pts
+  | qcm10 : 3 (solution: 3) => 1 pts
+
+  => quizz score: 6 / 10 pts
+
+  -  quizz answers:
+  | qcm11 : 3 (solution: 2) => 0 pts
+  | qcm12 : 2 (solution: 2) => 1 pts
+  | qcm13 : 3 (solution: 1) => 0 pts
+  | qcm14 : 3 (solution: 3) => 1 pts
+  | qcm15 : 2 (solution: 3) => 0 pts
+
+  => quizz score: 2 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code16 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code17 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 6 pts
+
+  -  quizz answers:
+  | qcm18 :  (solution: 4) => 0 pts
+  | qcm19 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 2 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code20 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 3 pts
+
+  -  quizz answers:
+  | qcm21 :  (solution: 2) => 0 pts
+  | qcm22 :  (solution: 1) => 0 pts
+  | qcm23 :  (solution: 3) => 0 pts
+  | qcm24 :  (solution: 1) => 0 pts
+
+  => quizz score: 0 / 4 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code25 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code26 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code27 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code28 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code29 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code30 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code31 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code32 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+=> TOTAL STUDENT SCORE: 8 / 54
+
+
+================================
+
+STUDENT: kamil_izaret
+
+  -  quizz answers:
+  | qcm1 : 4 (solution: 4) => 1 pts
+  | qcm2 :  (solution: 1) => 0 pts
+  | qcm3 :  (solution: 3) => 0 pts
+  | qcm4 :  (solution: 2) => 0 pts
+  | qcm5 :  (solution: 2) => 0 pts
+  | qcm6 :  (solution: 1) => 0 pts
+  | qcm7 :  (solution: 1) => 0 pts
+  | qcm8 :  (solution: 2) => 0 pts
+  | qcm9 :  (solution: 3) => 0 pts
+  | qcm10 :  (solution: 3) => 0 pts
+
+  => quizz score: 1 / 10 pts
+
+  -  quizz answers:
+  | qcm11 :  (solution: 2) => 0 pts
+  | qcm12 :  (solution: 2) => 0 pts
+  | qcm13 :  (solution: 1) => 0 pts
+  | qcm14 :  (solution: 3) => 0 pts
+  | qcm15 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code16 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code17 (variant: 2) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 6 pts
+
+  -  quizz answers:
+  | qcm18 :  (solution: 4) => 0 pts
+  | qcm19 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 2 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code20 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 3 pts
+
+  -  quizz answers:
+  | qcm21 :  (solution: 2) => 0 pts
+  | qcm22 :  (solution: 1) => 0 pts
+  | qcm23 :  (solution: 3) => 0 pts
+  | qcm24 :  (solution: 1) => 0 pts
+
+  => quizz score: 0 / 4 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code25 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code26 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code27 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code28 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code29 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code30 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code31 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code32 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+=> TOTAL STUDENT SCORE: 1 / 54
+
+
+================================
+
+STUDENT: lara_kounowski
+
+  -  quizz answers:
+  | qcm1 : 4 (solution: 4) => 1 pts
+  | qcm2 : 1 (solution: 1) => 1 pts
+  | qcm3 : 3 (solution: 3) => 1 pts
+  | qcm4 : 2 (solution: 2) => 1 pts
+  | qcm5 : 2 (solution: 2) => 1 pts
+  | qcm6 : 1 (solution: 1) => 1 pts
+  | qcm7 : 1 (solution: 1) => 1 pts
+  | qcm8 : 2 (solution: 2) => 1 pts
+  | qcm9 : 3 (solution: 3) => 1 pts
+  | qcm10 : 3 (solution: 3) => 1 pts
+
+  => quizz score: 10 / 10 pts
+
+  -  quizz answers:
+  | qcm11 : 2 (solution: 2) => 1 pts
+  | qcm12 : 2 (solution: 2) => 1 pts
+  | qcm13 : 1 (solution: 1) => 1 pts
+  | qcm14 : 3 (solution: 3) => 1 pts
+  | qcm15 : 3 (solution: 3) => 1 pts
+
+  => quizz score: 5 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code16 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | 
+  | var Resultat = 'egal';
+  | var nombre = 4 
+  | if (nombre === 4) { 
+  | resultat === 'egal' 
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 1, 1 ]
+  | 
+  | ------------- EXERCISE: code17 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var reponse = prompt('Quelle est ta couleur préférée?');
+  | if (reponse === 'bleu') { 
+  | 	alert('ok');
+  |   } else if (reponse === 'gris') {
+  | 	alert('clair ou foncé?');
+  | 	var reponse3 = prompt('Réponse attendue');
+  |  	if (reponse3 === 'clair') {
+  |  	alert('Comme le ciel.');
+  | 	} else if (reponse3 === 'foncé') {
+  | 	alert('C\'est bien!'); 
+  | 	} else {
+  | 	alert('Désolé, je n\'ai pas compris ...');
+  |     }} else {
+  | 	alert('Je ne connais pas');
+  | 	}
+  | 
+  | 
+  | // -> STUDENT CODE ERROR: si l'utilisateur tape gris puis foncé, alert devrait afficher "ah bon?" au lieu de "clair ou foncé?"
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0.5 ]
+
+  => code score: 3.5 / 6 pts
+
+  -  quizz answers:
+  | qcm18 : 4 (solution: 4) => 1 pts
+  | qcm19 : 3 (solution: 3) => 1 pts
+
+  => quizz score: 2 / 2 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code20 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 3 pts
+
+  -  quizz answers:
+  | qcm21 :  (solution: 2) => 0 pts
+  | qcm22 :  (solution: 1) => 0 pts
+  | qcm23 :  (solution: 3) => 0 pts
+  | qcm24 :  (solution: 1) => 0 pts
+
+  => quizz score: 0 / 4 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code25 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code26 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code27 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code28 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code29 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code30 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code31 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code32 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+=> TOTAL STUDENT SCORE: 20.5 / 54
+
+
+================================
+
+STUDENT: leo_martin
+
+  -  quizz answers:
+  | qcm1 :  (solution: 4) => 0 pts
+  | qcm2 :  (solution: 1) => 0 pts
+  | qcm3 :  (solution: 3) => 0 pts
+  | qcm4 :  (solution: 2) => 0 pts
+  | qcm5 :  (solution: 2) => 0 pts
+  | qcm6 :  (solution: 1) => 0 pts
+  | qcm7 :  (solution: 1) => 0 pts
+  | qcm8 :  (solution: 2) => 0 pts
+  | qcm9 :  (solution: 3) => 0 pts
+  | qcm10 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 10 pts
+
+  -  quizz answers:
+  | qcm11 :  (solution: 2) => 0 pts
+  | qcm12 :  (solution: 2) => 0 pts
+  | qcm13 :  (solution: 1) => 0 pts
+  | qcm14 :  (solution: 3) => 0 pts
+  | qcm15 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code16 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code17 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 6 pts
+
+  -  quizz answers:
+  | qcm18 :  (solution: 4) => 0 pts
+  | qcm19 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 2 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code20 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 3 pts
+
+  -  quizz answers:
+  | qcm21 :  (solution: 2) => 0 pts
+  | qcm22 :  (solution: 1) => 0 pts
+  | qcm23 :  (solution: 3) => 0 pts
+  | qcm24 :  (solution: 1) => 0 pts
+
+  => quizz score: 0 / 4 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code25 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code26 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code27 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code28 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code29 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code30 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code31 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code32 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+=> TOTAL STUDENT SCORE: 0 / 54
+
+
+================================
+
+STUDENT: loa_diaz
+
+  -  quizz answers:
+  | qcm1 : 4 (solution: 4) => 1 pts
+  | qcm2 : 1 (solution: 1) => 1 pts
+  | qcm3 : 3 (solution: 3) => 1 pts
+  | qcm4 : 2 (solution: 2) => 1 pts
+  | qcm5 : 2 (solution: 2) => 1 pts
+  | qcm6 : 1 (solution: 1) => 1 pts
+  | qcm7 : 1 (solution: 1) => 1 pts
+  | qcm8 : 2 (solution: 2) => 1 pts
+  | qcm9 : 3 (solution: 3) => 1 pts
+  | qcm10 : 3 (solution: 3) => 1 pts
+
+  => quizz score: 10 / 10 pts
+
+  -  quizz answers:
+  | qcm11 : 2 (solution: 2) => 1 pts
+  | qcm12 : 2 (solution: 2) => 1 pts
+  | qcm13 : 1 (solution: 1) => 1 pts
+  | qcm14 : 3 (solution: 3) => 1 pts
+  | qcm15 : 3 (solution: 3) => 1 pts
+
+  => quizz score: 5 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code16 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var resultat = 'egal';
+  | var nombre = 4;
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 0, 0 ]
+  | 
+  | ------------- EXERCISE: code17 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var reponse = prompt('Ta couleur préférée?');
+  | if (reponse === 'rouge'){
+  | 	alert ('Bien!');
+  | } if (reponse === 'bleu') {
+  | 	prompt('clair ou foncé?');
+  | if (reponse === 'clair') {
+  | 	alert('comme le ciel');
+  | } else if('foncé'){
+  | 	alert('ok');
+  | }
+  | }else{
+  | 	alert('j\'ai pas compris');
+  | }
+  | 
+  | // -> STUDENT CODE ERROR: si l'utilisateur tape bleu puis foncé, alert devrait afficher "OK" au lieu de "ok"
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0.5 ]
+
+  => code score: 2.5 / 6 pts
+
+  -  quizz answers:
+  | qcm18 : 4 (solution: 4) => 1 pts
+  | qcm19 : 3 (solution: 3) => 1 pts
+
+  => quizz score: 2 / 2 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code20 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | for (var i=0, i<50, i++){
+  | console.log('Bonjour!');
+  | }
+Mon, 27 Feb 2017 14:50:58 GMT jailed:sandbox DYNAMIC PLUGIN:14
+for (var i=0, i<50, i++){
+               ^
+SyntaxError: Unexpected token <
+    at Object.exports.runInNewContext (vm.js:71:16)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:106:13)
+    at process.emit (events.js:191:7)
+    at process.nextTick (internal/child_process.js:744:12)
+    at _combinedTickCallback (internal/process/next_tick.js:67:7)
+    at process._tickCallback (internal/process/next_tick.js:98:9)
+  | => test runner err: SyntaxError: Unexpected token <
+
+  => code score: 0 / 3 pts
+
+  -  quizz answers:
+  | qcm21 : 2 (solution: 2) => 1 pts
+  | qcm22 : 1 (solution: 1) => 1 pts
+  | qcm23 : 3 (solution: 3) => 1 pts
+  | qcm24 : 4 (solution: 1) => 0 pts
+
+  => quizz score: 3 / 4 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code25 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | fonction soustraire (a, b){
+  | return a - b;
+  | }
+Mon, 27 Feb 2017 14:50:59 GMT jailed:sandbox DYNAMIC PLUGIN:7
+fonction soustraire (a, b){
+         ^^^^^^^^^^
+SyntaxError: Unexpected identifier
+    at Object.exports.runInNewContext (vm.js:71:16)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:106:13)
+    at process.emit (events.js:191:7)
+    at process.nextTick (internal/child_process.js:744:12)
+    at _combinedTickCallback (internal/process/next_tick.js:67:7)
+    at process._tickCallback (internal/process/next_tick.js:98:9)
+  | => test runner err: SyntaxError: Unexpected identifier
+  | 
+  | ------------- EXERCISE: code26 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function somme (a, b, c){
+  | return somme + 'a, b, c';
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 0, 0 ]
+  | 
+  | ------------- EXERCISE: code27 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function repeter (n){
+  | console.log('Bonjour!');
+  | return n;
+  | } 
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 0, 1 ]
+  | 
+  | ------------- EXERCISE: code28 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | functions sommeIntervalle(premier, dernier){
+  | return 'premier'+'dernier';
+  | }
+Mon, 27 Feb 2017 14:50:59 GMT jailed:sandbox DYNAMIC PLUGIN:7
+functions sommeIntervalle(premier, dernier){
+          ^^^^^^^^^^^^^^^
+SyntaxError: Unexpected identifier
+    at Object.exports.runInNewContext (vm.js:71:16)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:106:13)
+    at process.emit (events.js:191:7)
+    at process.nextTick (internal/child_process.js:744:12)
+    at _combinedTickCallback (internal/process/next_tick.js:67:7)
+    at process._tickCallback (internal/process/next_tick.js:98:9)
+  | => test runner err: SyntaxError: Unexpected identifier
+
+  => code score: 3 / 12 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code29 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var nombres =[1, 2, 3];
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | ------------- EXERCISE: code30 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var fruits[];
+  | fruits[2];
+Mon, 27 Feb 2017 14:50:59 GMT jailed:sandbox DYNAMIC PLUGIN:8
+var fruits[];
+          ^
+SyntaxError: Unexpected token [
+    at Object.exports.runInNewContext (vm.js:71:16)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:106:13)
+    at process.emit (events.js:191:7)
+    at process.nextTick (internal/child_process.js:744:12)
+    at _combinedTickCallback (internal/process/next_tick.js:67:7)
+    at process._tickCallback (internal/process/next_tick.js:98:9)
+  | => test runner err: SyntaxError: Unexpected token [
+  | 
+  | ------------- EXERCISE: code31 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var fruits[];
+  | var f = fruits.pop();
+  | console.log('fruits');
+Mon, 27 Feb 2017 14:50:59 GMT jailed:sandbox DYNAMIC PLUGIN:12
+var fruits[];
+          ^
+SyntaxError: Unexpected token [
+    at Object.exports.runInNewContext (vm.js:71:16)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:106:13)
+    at process.emit (events.js:191:7)
+    at process.nextTick (internal/child_process.js:744:12)
+    at _combinedTickCallback (internal/process/next_tick.js:67:7)
+    at process._tickCallback (internal/process/next_tick.js:98:9)
+  | => test runner err: SyntaxError: Unexpected token [
+  | 
+  | ------------- EXERCISE: code32 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function tableauContient(tableau, chaine){
+  | if (chaine === -1){
+  | return 'false';
+  | }else if (chaine === 0){
+  | return 'true';
+  | }
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 0, 0 ]
+
+  => code score: 4 / 12 pts
+
+=> TOTAL STUDENT SCORE: 29.5 / 54
+
+
+================================
+
+STUDENT: louis_gosse
+
+  -  quizz answers:
+  | qcm1 : 4 (solution: 4) => 1 pts
+  | qcm2 : 4 (solution: 1) => 0 pts
+  | qcm3 : 3 (solution: 3) => 1 pts
+  | qcm4 : 2 (solution: 2) => 1 pts
+  | qcm5 : 2 (solution: 2) => 1 pts
+  | qcm6 : 1 (solution: 1) => 1 pts
+  | qcm7 : 1 (solution: 1) => 1 pts
+  | qcm8 : 2 (solution: 2) => 1 pts
+  | qcm9 : 3 (solution: 3) => 1 pts
+  | qcm10 : 3 (solution: 3) => 1 pts
+
+  => quizz score: 9 / 10 pts
+
+  -  quizz answers:
+  | qcm11 : 2 (solution: 2) => 1 pts
+  | qcm12 : 2 (solution: 2) => 1 pts
+  | qcm13 : 1 (solution: 1) => 1 pts
+  | qcm14 : 3 (solution: 3) => 1 pts
+  | qcm15 : 3 (solution: 3) => 1 pts
+
+  => quizz score: 5 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code16 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code17 (variant: 2) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 6 pts
+
+  -  quizz answers:
+  | qcm18 : 4 (solution: 4) => 1 pts
+  | qcm19 :  (solution: 3) => 0 pts
+
+  => quizz score: 1 / 2 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code20 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 3 pts
+
+  -  quizz answers:
+  | qcm21 :  (solution: 2) => 0 pts
+  | qcm22 :  (solution: 1) => 0 pts
+  | qcm23 :  (solution: 3) => 0 pts
+  | qcm24 :  (solution: 1) => 0 pts
+
+  => quizz score: 0 / 4 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code25 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code26 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code27 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code28 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code29 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code30 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code31 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code32 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+=> TOTAL STUDENT SCORE: 15 / 54
+
+
+================================
+
+STUDENT: louis_malrieu
+
+  -  quizz answers:
+  | qcm1 :  (solution: 4) => 0 pts
+  | qcm2 :  (solution: 1) => 0 pts
+  | qcm3 :  (solution: 3) => 0 pts
+  | qcm4 :  (solution: 2) => 0 pts
+  | qcm5 :  (solution: 2) => 0 pts
+  | qcm6 :  (solution: 1) => 0 pts
+  | qcm7 :  (solution: 1) => 0 pts
+  | qcm8 :  (solution: 2) => 0 pts
+  | qcm9 :  (solution: 3) => 0 pts
+  | qcm10 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 10 pts
+
+  -  quizz answers:
+  | qcm11 :  (solution: 2) => 0 pts
+  | qcm12 :  (solution: 2) => 0 pts
+  | qcm13 :  (solution: 1) => 0 pts
+  | qcm14 :  (solution: 3) => 0 pts
+  | qcm15 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code16 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code17 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 6 pts
+
+  -  quizz answers:
+  | qcm18 :  (solution: 4) => 0 pts
+  | qcm19 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 2 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code20 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 3 pts
+
+  -  quizz answers:
+  | qcm21 :  (solution: 2) => 0 pts
+  | qcm22 :  (solution: 1) => 0 pts
+  | qcm23 :  (solution: 3) => 0 pts
+  | qcm24 :  (solution: 1) => 0 pts
+
+  => quizz score: 0 / 4 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code25 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code26 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code27 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code28 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code29 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code30 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code31 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code32 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+=> TOTAL STUDENT SCORE: 0 / 54
+
+
+================================
+
+STUDENT: lucas_lacheny
+
+  -  quizz answers:
+  | qcm1 :  (solution: 4) => 0 pts
+  | qcm2 :  (solution: 1) => 0 pts
+  | qcm3 :  (solution: 3) => 0 pts
+  | qcm4 :  (solution: 2) => 0 pts
+  | qcm5 :  (solution: 2) => 0 pts
+  | qcm6 :  (solution: 1) => 0 pts
+  | qcm7 :  (solution: 1) => 0 pts
+  | qcm8 :  (solution: 2) => 0 pts
+  | qcm9 :  (solution: 3) => 0 pts
+  | qcm10 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 10 pts
+
+  -  quizz answers:
+  | qcm11 :  (solution: 2) => 0 pts
+  | qcm12 :  (solution: 2) => 0 pts
+  | qcm13 :  (solution: 1) => 0 pts
+  | qcm14 :  (solution: 3) => 0 pts
+  | qcm15 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code16 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code17 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 6 pts
+
+  -  quizz answers:
+  | qcm18 :  (solution: 4) => 0 pts
+  | qcm19 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 2 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code20 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 3 pts
+
+  -  quizz answers:
+  | qcm21 :  (solution: 2) => 0 pts
+  | qcm22 :  (solution: 1) => 0 pts
+  | qcm23 :  (solution: 3) => 0 pts
+  | qcm24 :  (solution: 1) => 0 pts
+
+  => quizz score: 0 / 4 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code25 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code26 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code27 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code28 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code29 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code30 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code31 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code32 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+=> TOTAL STUDENT SCORE: 0 / 54
+
+
+================================
+
+STUDENT: lucille_vanlaer
+
+  -  quizz answers:
+  | qcm1 : 4 (solution: 4) => 1 pts
+  | qcm2 : 1 (solution: 1) => 1 pts
+  | qcm3 : 3 (solution: 3) => 1 pts
+  | qcm4 : 2 (solution: 2) => 1 pts
+  | qcm5 : 2 (solution: 2) => 1 pts
+  | qcm6 : 1 (solution: 1) => 1 pts
+  | qcm7 : 1 (solution: 1) => 1 pts
+  | qcm8 : 2 (solution: 2) => 1 pts
+  | qcm9 : 3 (solution: 3) => 1 pts
+  | qcm10 : 3 (solution: 3) => 1 pts
+
+  => quizz score: 10 / 10 pts
+
+  -  quizz answers:
+  | qcm11 : 2 (solution: 2) => 1 pts
+  | qcm12 : 2 (solution: 2) => 1 pts
+  | qcm13 : 1 (solution: 1) => 1 pts
+  | qcm14 : 3 (solution: 3) => 1 pts
+  | qcm15 : 3 (solution: 3) => 1 pts
+
+  => quizz score: 5 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code16 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | if (nombre === 4) {
+  |   resultat = 'egal';
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | ------------- EXERCISE: code17 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var reponse = prompt('Ta couleur préférée ?');
+  | if (reponse === 'bleu'){
+  |   alert('OK');
+  | } else if (reponse === 'gris'){
+  |   var reponse1 = prompt('clair ou foncé ?');
+  |   if (reponse1 === 'clair') {
+  |     alert('presque blanc');
+  |   } else if (reponse1 === 'foncé'){
+  |     alert('ah bon?');
+  |   }
+  | } else {
+  |   alert('comment ?')
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1 ]
+
+  => code score: 6 / 6 pts
+
+  -  quizz answers:
+  | qcm18 : 4 (solution: 4) => 1 pts
+  | qcm19 : 3 (solution: 3) => 1 pts
+
+  => quizz score: 2 / 2 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code20 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | for(var i=1;i<=50;i++) {
+  |   console.log('Bonjour!');
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+
+  => code score: 3 / 3 pts
+
+  -  quizz answers:
+  | qcm21 : 2 (solution: 2) => 1 pts
+  | qcm22 : 1 (solution: 1) => 1 pts
+  | qcm23 : 3 (solution: 3) => 1 pts
+  | qcm24 : 1 (solution: 1) => 1 pts
+
+  => quizz score: 4 / 4 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code25 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function soustraire(a,b){
+  |   return a-b;
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | ------------- EXERCISE: code26 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function somme(a,b,c){
+  |   return a+b+c;
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | ------------- EXERCISE: code27 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function repeter(n) {
+  |   for(var i=1;i<=n;i++){
+  |   console.log('Bonjour');
+  |   }
+  |   return n;
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 0, 1 ]
+  | 
+  | ------------- EXERCISE: code28 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function sommeIntervalle(premier,dernier){
+  |   var somme=0;
+  |   for(var i=premier;i<=dernier;i++){
+  |   return somme + i;
+  |   }
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 0, 0 ]
+
+  => code score: 9 / 12 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code29 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var nombres = [1,2,3];
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | ------------- EXERCISE: code30 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var troisieme = fruits[2];
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | ------------- EXERCISE: code31 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | console.log(fruits.pop())
+  | 3 [ true, true, true ]
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | ------------- EXERCISE: code32 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function tableauContient(tableau,chaine){
+  | var indice= tableau.indexOf(chaine);
+  | if (indice===-1){
+  |   return 'false';
+  | } else {
+  |   return indice;
+  | }
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 0 ]
+
+  => code score: 11 / 12 pts
+
+=> TOTAL STUDENT SCORE: 50 / 54
+
+
+================================
+
+STUDENT: madison_hayat
+
+  -  quizz answers:
+  | qcm1 : 4 (solution: 4) => 1 pts
+  | qcm2 : 2 (solution: 1) => 0 pts
+  | qcm3 : 3 (solution: 3) => 1 pts
+  | qcm4 : 2 (solution: 2) => 1 pts
+  | qcm5 : 2 (solution: 2) => 1 pts
+  | qcm6 : 1 (solution: 1) => 1 pts
+  | qcm7 : 1 (solution: 1) => 1 pts
+  | qcm8 : 2 (solution: 2) => 1 pts
+  | qcm9 : 3 (solution: 3) => 1 pts
+  | qcm10 : 3 (solution: 3) => 1 pts
+
+  => quizz score: 9 / 10 pts
+
+  -  quizz answers:
+  | qcm11 : 2 (solution: 2) => 1 pts
+  | qcm12 : 2 (solution: 2) => 1 pts
+  | qcm13 : 1 (solution: 1) => 1 pts
+  | qcm14 : 3 (solution: 3) => 1 pts
+  | qcm15 : 3 (solution: 3) => 1 pts
+
+  => quizz score: 5 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code16 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var nombre;
+  | if (nombre === 4){
+  |   var resultat = 'egal';
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | ------------- EXERCISE: code17 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var couleur = prompt('Ta couleur préférée?');
+  | if (couleur === 'bleu') {
+  |   alert('OK');
+  | }
+  | else if (couleur === 'gris') {
+  |   var gris = prompt('clair ou foncé ?');
+  |     if (gris === 'clair') {
+  |       alert('presque blanc');
+  | }
+  |     else if (gris === 'foncé') {
+  |          alert('ah bon ?');
+  | }
+  | }
+  | else {
+  |   alert('comment ?');
+  |      }
+  | 
+  | 
+  | // -> STUDENT CODE ERROR: si l'utilisateur tape gris puis foncé, alert devrait afficher "ah bon?" au lieu de "ah bon ?"
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0.5 ]
+
+  => code score: 4.5 / 6 pts
+
+  -  quizz answers:
+  | qcm18 : 4 (solution: 4) => 1 pts
+  | qcm19 : 3 (solution: 3) => 1 pts
+
+  => quizz score: 2 / 2 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code20 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | for ( var i = 1; i<=50; i++) {
+  |   console.log ('Bonjour!');
+  | }
+  |                              
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+
+  => code score: 3 / 3 pts
+
+  -  quizz answers:
+  | qcm21 : 2 (solution: 2) => 1 pts
+  | qcm22 : 1 (solution: 1) => 1 pts
+  | qcm23 : 3 (solution: 3) => 1 pts
+  | qcm24 : 1 (solution: 1) => 1 pts
+
+  => quizz score: 4 / 4 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code25 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function soustraire (a, b) {
+  |   return a-b;
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | ------------- EXERCISE: code26 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function somme (a, b, d) {
+  |   return a+b+d;
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | ------------- EXERCISE: code27 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function repeter(n) {
+  | for (var i = 1; i <= n; i++) {
+  |   console.log ('Bonjour!');
+  | }
+  |   return n;
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | ------------- EXERCISE: code28 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function sommeIntervalle (1, 4){
+  |   return 10 
+  | }
+Mon, 27 Feb 2017 14:51:01 GMT jailed:sandbox DYNAMIC PLUGIN:7
+function sommeIntervalle (1, 4){
+                          ^
+SyntaxError: Unexpected number
+    at Object.exports.runInNewContext (vm.js:71:16)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:106:13)
+    at process.emit (events.js:191:7)
+    at process.nextTick (internal/child_process.js:744:12)
+    at _combinedTickCallback (internal/process/next_tick.js:67:7)
+    at process._tickCallback (internal/process/next_tick.js:98:9)
+  | => test runner err: SyntaxError: Unexpected number
+
+  => code score: 9 / 12 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code29 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var nombres = [1, 2, 3];
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | ------------- EXERCISE: code30 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var fruit = ['poire', 'fraise', 'kiwi', 'banane'];
+  | var troisieme = fruit[2];
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | ------------- EXERCISE: code31 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var fruit = ['poire', 'fraise', 'kiwi', 'banane'];
+  | fruit.pop();
+  | console.log(fruit); // ['poire', 'fraise', 'kiwi']
+  | ;
+  | 3 [ false, false, true ]
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 0, 1 ]
+  | 
+  | ------------- EXERCISE: code32 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function tableauContient(tableau, chaine) {
+  |   var valeur = tableau.indexOf(chaine);
+  |   if (valeur === -1){
+  |     return false; 
+  |   }else{
+  |     return valeur ;
+  |   }
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+
+  => code score: 10 / 12 pts
+
+=> TOTAL STUDENT SCORE: 46.5 / 54
+
+
+================================
+
+STUDENT: maelle_bellazar
+
+  -  quizz answers:
+  | qcm1 : 4 (solution: 4) => 1 pts
+  | qcm2 :  (solution: 1) => 0 pts
+  | qcm3 :  (solution: 3) => 0 pts
+  | qcm4 :  (solution: 2) => 0 pts
+  | qcm5 :  (solution: 2) => 0 pts
+  | qcm6 :  (solution: 1) => 0 pts
+  | qcm7 :  (solution: 1) => 0 pts
+  | qcm8 :  (solution: 2) => 0 pts
+  | qcm9 :  (solution: 3) => 0 pts
+  | qcm10 :  (solution: 3) => 0 pts
+
+  => quizz score: 1 / 10 pts
+
+  -  quizz answers:
+  | qcm11 :  (solution: 2) => 0 pts
+  | qcm12 :  (solution: 2) => 0 pts
+  | qcm13 :  (solution: 1) => 0 pts
+  | qcm14 :  (solution: 3) => 0 pts
+  | qcm15 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code16 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code17 (variant: 2) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 6 pts
+
+  -  quizz answers:
+  | qcm18 :  (solution: 4) => 0 pts
+  | qcm19 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 2 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code20 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 3 pts
+
+  -  quizz answers:
+  | qcm21 :  (solution: 2) => 0 pts
+  | qcm22 :  (solution: 1) => 0 pts
+  | qcm23 :  (solution: 3) => 0 pts
+  | qcm24 :  (solution: 1) => 0 pts
+
+  => quizz score: 0 / 4 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code25 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code26 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code27 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code28 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code29 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code30 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code31 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code32 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+=> TOTAL STUDENT SCORE: 1 / 54
+
+
+================================
+
+STUDENT: marc_antoine_poisier
+
+  -  quizz answers:
+  | qcm1 : 4 (solution: 4) => 1 pts
+  | qcm2 : 2 (solution: 1) => 0 pts
+  | qcm3 :  (solution: 3) => 0 pts
+  | qcm4 :  (solution: 2) => 0 pts
+  | qcm5 :  (solution: 2) => 0 pts
+  | qcm6 :  (solution: 1) => 0 pts
+  | qcm7 :  (solution: 1) => 0 pts
+  | qcm8 :  (solution: 2) => 0 pts
+  | qcm9 :  (solution: 3) => 0 pts
+  | qcm10 :  (solution: 3) => 0 pts
+
+  => quizz score: 1 / 10 pts
+
+  -  quizz answers:
+  | qcm11 :  (solution: 2) => 0 pts
+  | qcm12 :  (solution: 2) => 0 pts
+  | qcm13 :  (solution: 1) => 0 pts
+  | qcm14 :  (solution: 3) => 0 pts
+  | qcm15 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code16 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code17 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 6 pts
+
+  -  quizz answers:
+  | qcm18 :  (solution: 4) => 0 pts
+  | qcm19 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 2 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code20 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 3 pts
+
+  -  quizz answers:
+  | qcm21 :  (solution: 2) => 0 pts
+  | qcm22 :  (solution: 1) => 0 pts
+  | qcm23 :  (solution: 3) => 0 pts
+  | qcm24 :  (solution: 1) => 0 pts
+
+  => quizz score: 0 / 4 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code25 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code26 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code27 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code28 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code29 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code30 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code31 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code32 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+=> TOTAL STUDENT SCORE: 1 / 54
+
+
+================================
+
+STUDENT: martin_callonnec
+
+  -  quizz answers:
+  | qcm1 : 4 (solution: 4) => 1 pts
+  | qcm2 : 1 (solution: 1) => 1 pts
+  | qcm3 : 1 (solution: 3) => 0 pts
+  | qcm4 : 2 (solution: 2) => 1 pts
+  | qcm5 : 2 (solution: 2) => 1 pts
+  | qcm6 : 1 (solution: 1) => 1 pts
+  | qcm7 : 2 (solution: 1) => 0 pts
+  | qcm8 : 2 (solution: 2) => 1 pts
+  | qcm9 : 3 (solution: 3) => 1 pts
+  | qcm10 : 3 (solution: 3) => 1 pts
+
+  => quizz score: 8 / 10 pts
+
+  -  quizz answers:
+  | qcm11 : 2 (solution: 2) => 1 pts
+  | qcm12 : 4 (solution: 2) => 0 pts
+  | qcm13 : 1 (solution: 1) => 1 pts
+  | qcm14 : 3 (solution: 3) => 1 pts
+  | qcm15 : 3 (solution: 3) => 1 pts
+
+  => quizz score: 4 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code16 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code17 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 6 pts
+
+  -  quizz answers:
+  | qcm18 :  (solution: 4) => 0 pts
+  | qcm19 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 2 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code20 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 3 pts
+
+  -  quizz answers:
+  | qcm21 :  (solution: 2) => 0 pts
+  | qcm22 :  (solution: 1) => 0 pts
+  | qcm23 :  (solution: 3) => 0 pts
+  | qcm24 :  (solution: 1) => 0 pts
+
+  => quizz score: 0 / 4 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code25 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code26 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code27 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code28 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code29 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code30 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code31 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code32 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+=> TOTAL STUDENT SCORE: 12 / 54
+
+
+================================
+
+STUDENT: nathan_dumaine
+
+  -  quizz answers:
+  | qcm1 :  (solution: 4) => 0 pts
+  | qcm2 :  (solution: 1) => 0 pts
+  | qcm3 :  (solution: 3) => 0 pts
+  | qcm4 :  (solution: 2) => 0 pts
+  | qcm5 :  (solution: 2) => 0 pts
+  | qcm6 :  (solution: 1) => 0 pts
+  | qcm7 :  (solution: 1) => 0 pts
+  | qcm8 :  (solution: 2) => 0 pts
+  | qcm9 :  (solution: 3) => 0 pts
+  | qcm10 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 10 pts
+
+  -  quizz answers:
+  | qcm11 :  (solution: 2) => 0 pts
+  | qcm12 :  (solution: 2) => 0 pts
+  | qcm13 :  (solution: 1) => 0 pts
+  | qcm14 :  (solution: 3) => 0 pts
+  | qcm15 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code16 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code17 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 6 pts
+
+  -  quizz answers:
+  | qcm18 :  (solution: 4) => 0 pts
+  | qcm19 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 2 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code20 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 3 pts
+
+  -  quizz answers:
+  | qcm21 :  (solution: 2) => 0 pts
+  | qcm22 :  (solution: 1) => 0 pts
+  | qcm23 :  (solution: 3) => 0 pts
+  | qcm24 :  (solution: 1) => 0 pts
+
+  => quizz score: 0 / 4 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code25 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code26 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code27 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code28 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code29 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code30 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code31 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code32 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+=> TOTAL STUDENT SCORE: 0 / 54
+
+
+================================
+
+STUDENT: nina_pellan
+
+  -  quizz answers:
+  | qcm1 : 4 (solution: 4) => 1 pts
+  | qcm2 : 3 (solution: 1) => 0 pts
+  | qcm3 : 2 (solution: 3) => 0 pts
+  | qcm4 : 4 (solution: 2) => 0 pts
+  | qcm5 : 2 (solution: 2) => 1 pts
+  | qcm6 : 2 (solution: 1) => 0 pts
+  | qcm7 : 3 (solution: 1) => 0 pts
+  | qcm8 : 2 (solution: 2) => 1 pts
+  | qcm9 : 2 (solution: 3) => 0 pts
+  | qcm10 : 2 (solution: 3) => 0 pts
+
+  => quizz score: 3 / 10 pts
+
+  -  quizz answers:
+  | qcm11 : 1 (solution: 2) => 0 pts
+  | qcm12 : 3 (solution: 2) => 0 pts
+  | qcm13 : 2 (solution: 1) => 0 pts
+  | qcm14 : 3 (solution: 3) => 1 pts
+  | qcm15 : 1 (solution: 3) => 0 pts
+
+  => quizz score: 1 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code16 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code17 (variant: 1) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 6 pts
+
+  -  quizz answers:
+  | qcm18 : 2 (solution: 4) => 0 pts
+  | qcm19 : 2 (solution: 3) => 0 pts
+
+  => quizz score: 0 / 2 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code20 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 3 pts
+
+  -  quizz answers:
+  | qcm21 : 2 (solution: 2) => 1 pts
+  | qcm22 : 3 (solution: 1) => 0 pts
+  | qcm23 : 2 (solution: 3) => 0 pts
+  | qcm24 : 1 (solution: 1) => 1 pts
+
+  => quizz score: 2 / 4 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code25 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code26 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code27 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code28 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code29 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code30 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code31 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code32 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+=> TOTAL STUDENT SCORE: 6 / 54
+
+
+================================
+
+STUDENT: noelie_roux
+
+  -  quizz answers:
+  | qcm1 :  (solution: 4) => 0 pts
+  | qcm2 :  (solution: 1) => 0 pts
+  | qcm3 :  (solution: 3) => 0 pts
+  | qcm4 :  (solution: 2) => 0 pts
+  | qcm5 :  (solution: 2) => 0 pts
+  | qcm6 :  (solution: 1) => 0 pts
+  | qcm7 :  (solution: 1) => 0 pts
+  | qcm8 :  (solution: 2) => 0 pts
+  | qcm9 :  (solution: 3) => 0 pts
+  | qcm10 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 10 pts
+
+  -  quizz answers:
+  | qcm11 :  (solution: 2) => 0 pts
+  | qcm12 :  (solution: 2) => 0 pts
+  | qcm13 :  (solution: 1) => 0 pts
+  | qcm14 :  (solution: 3) => 0 pts
+  | qcm15 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code16 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code17 (variant: 1) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 6 pts
+
+  -  quizz answers:
+  | qcm18 :  (solution: 4) => 0 pts
+  | qcm19 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 2 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code20 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 3 pts
+
+  -  quizz answers:
+  | qcm21 :  (solution: 2) => 0 pts
+  | qcm22 :  (solution: 1) => 0 pts
+  | qcm23 :  (solution: 3) => 0 pts
+  | qcm24 :  (solution: 1) => 0 pts
+
+  => quizz score: 0 / 4 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code25 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code26 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code27 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code28 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code29 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code30 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code31 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code32 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+=> TOTAL STUDENT SCORE: 0 / 54
+
+
+================================
+
+STUDENT: paul_erwan_ferry
+
+  -  quizz answers:
+  | qcm1 : 4 (solution: 4) => 1 pts
+  | qcm2 :  (solution: 1) => 0 pts
+  | qcm3 :  (solution: 3) => 0 pts
+  | qcm4 :  (solution: 2) => 0 pts
+  | qcm5 :  (solution: 2) => 0 pts
+  | qcm6 :  (solution: 1) => 0 pts
+  | qcm7 :  (solution: 1) => 0 pts
+  | qcm8 :  (solution: 2) => 0 pts
+  | qcm9 :  (solution: 3) => 0 pts
+  | qcm10 :  (solution: 3) => 0 pts
+
+  => quizz score: 1 / 10 pts
+
+  -  quizz answers:
+  | qcm11 :  (solution: 2) => 0 pts
+  | qcm12 :  (solution: 2) => 0 pts
+  | qcm13 :  (solution: 1) => 0 pts
+  | qcm14 :  (solution: 3) => 0 pts
+  | qcm15 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code16 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code17 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 6 pts
+
+  -  quizz answers:
+  | qcm18 :  (solution: 4) => 0 pts
+  | qcm19 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 2 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code20 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 3 pts
+
+  -  quizz answers:
+  | qcm21 :  (solution: 2) => 0 pts
+  | qcm22 :  (solution: 1) => 0 pts
+  | qcm23 :  (solution: 3) => 0 pts
+  | qcm24 :  (solution: 1) => 0 pts
+
+  => quizz score: 0 / 4 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code25 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code26 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code27 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code28 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code29 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code30 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code31 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code32 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+=> TOTAL STUDENT SCORE: 1 / 54
+
+
+================================
+
+STUDENT: paul_ray
+
+  -  quizz answers:
+  | qcm1 :  (solution: 4) => 0 pts
+  | qcm2 :  (solution: 1) => 0 pts
+  | qcm3 :  (solution: 3) => 0 pts
+  | qcm4 :  (solution: 2) => 0 pts
+  | qcm5 :  (solution: 2) => 0 pts
+  | qcm6 :  (solution: 1) => 0 pts
+  | qcm7 :  (solution: 1) => 0 pts
+  | qcm8 :  (solution: 2) => 0 pts
+  | qcm9 :  (solution: 3) => 0 pts
+  | qcm10 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 10 pts
+
+  -  quizz answers:
+  | qcm11 :  (solution: 2) => 0 pts
+  | qcm12 :  (solution: 2) => 0 pts
+  | qcm13 :  (solution: 1) => 0 pts
+  | qcm14 :  (solution: 3) => 0 pts
+  | qcm15 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code16 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code17 (variant: 2) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 6 pts
+
+  -  quizz answers:
+  | qcm18 :  (solution: 4) => 0 pts
+  | qcm19 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 2 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code20 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 3 pts
+
+  -  quizz answers:
+  | qcm21 :  (solution: 2) => 0 pts
+  | qcm22 :  (solution: 1) => 0 pts
+  | qcm23 :  (solution: 3) => 0 pts
+  | qcm24 :  (solution: 1) => 0 pts
+
+  => quizz score: 0 / 4 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code25 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code26 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code27 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code28 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code29 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code30 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code31 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code32 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+=> TOTAL STUDENT SCORE: 0 / 54
+
+
+================================
+
+STUDENT: pierry_lim
+
+  -  quizz answers:
+  | qcm1 : 4 (solution: 4) => 1 pts
+  | qcm2 : 1 (solution: 1) => 1 pts
+  | qcm3 : 3 (solution: 3) => 1 pts
+  | qcm4 : 2 (solution: 2) => 1 pts
+  | qcm5 : 2 (solution: 2) => 1 pts
+  | qcm6 : 1 (solution: 1) => 1 pts
+  | qcm7 : 1 (solution: 1) => 1 pts
+  | qcm8 : 2 (solution: 2) => 1 pts
+  | qcm9 : 3 (solution: 3) => 1 pts
+  | qcm10 : 3 (solution: 3) => 1 pts
+
+  => quizz score: 10 / 10 pts
+
+  -  quizz answers:
+  | qcm11 : 2 (solution: 2) => 1 pts
+  | qcm12 : 2 (solution: 2) => 1 pts
+  | qcm13 : 1 (solution: 1) => 1 pts
+  | qcm14 : 3 (solution: 3) => 1 pts
+  | qcm15 : 3 (solution: 3) => 1 pts
+
+  => quizz score: 5 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code16 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | if ( nombre === 4 ){
+  |   resultat = 'egal';
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | ------------- EXERCISE: code17 (variant: 1) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 3 / 6 pts
+
+  -  quizz answers:
+  | qcm18 :  (solution: 4) => 0 pts
+  | qcm19 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 2 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code20 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 3 pts
+
+  -  quizz answers:
+  | qcm21 :  (solution: 2) => 0 pts
+  | qcm22 :  (solution: 1) => 0 pts
+  | qcm23 :  (solution: 3) => 0 pts
+  | qcm24 :  (solution: 1) => 0 pts
+
+  => quizz score: 0 / 4 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code25 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code26 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code27 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code28 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code29 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code30 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code31 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code32 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+=> TOTAL STUDENT SCORE: 18 / 54
+
+
+================================
+
+STUDENT: raphael_parets
+
+  -  quizz answers:
+  | qcm1 : 4 (solution: 4) => 1 pts
+  | qcm2 : 1 (solution: 1) => 1 pts
+  | qcm3 : 3 (solution: 3) => 1 pts
+  | qcm4 : 2 (solution: 2) => 1 pts
+  | qcm5 : 2 (solution: 2) => 1 pts
+  | qcm6 : 1 (solution: 1) => 1 pts
+  | qcm7 : 1 (solution: 1) => 1 pts
+  | qcm8 : 2 (solution: 2) => 1 pts
+  | qcm9 : 3 (solution: 3) => 1 pts
+  | qcm10 : 3 (solution: 3) => 1 pts
+
+  => quizz score: 10 / 10 pts
+
+  -  quizz answers:
+  | qcm11 : 2 (solution: 2) => 1 pts
+  | qcm12 : 2 (solution: 2) => 1 pts
+  | qcm13 : 1 (solution: 1) => 1 pts
+  | qcm14 : 3 (solution: 3) => 1 pts
+  | qcm15 : 3 (solution: 3) => 1 pts
+
+  => quizz score: 5 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code16 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var resultat;
+  | if (nombre === 4){
+  |   resultat = 'egal';
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | ------------- EXERCISE: code17 (variant: 1) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 3 / 6 pts
+
+  -  quizz answers:
+  | qcm18 :  (solution: 4) => 0 pts
+  | qcm19 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 2 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code20 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 3 pts
+
+  -  quizz answers:
+  | qcm21 :  (solution: 2) => 0 pts
+  | qcm22 :  (solution: 1) => 0 pts
+  | qcm23 :  (solution: 3) => 0 pts
+  | qcm24 :  (solution: 1) => 0 pts
+
+  => quizz score: 0 / 4 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code25 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code26 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code27 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code28 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code29 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code30 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code31 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code32 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+=> TOTAL STUDENT SCORE: 18 / 54
+
+
+================================
+
+STUDENT: theo_geay
+
+  -  quizz answers:
+  | qcm1 :  (solution: 4) => 0 pts
+  | qcm2 :  (solution: 1) => 0 pts
+  | qcm3 :  (solution: 3) => 0 pts
+  | qcm4 :  (solution: 2) => 0 pts
+  | qcm5 :  (solution: 2) => 0 pts
+  | qcm6 :  (solution: 1) => 0 pts
+  | qcm7 :  (solution: 1) => 0 pts
+  | qcm8 :  (solution: 2) => 0 pts
+  | qcm9 :  (solution: 3) => 0 pts
+  | qcm10 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 10 pts
+
+  -  quizz answers:
+  | qcm11 :  (solution: 2) => 0 pts
+  | qcm12 :  (solution: 2) => 0 pts
+  | qcm13 :  (solution: 1) => 0 pts
+  | qcm14 :  (solution: 3) => 0 pts
+  | qcm15 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code16 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code17 (variant: 1) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 6 pts
+
+  -  quizz answers:
+  | qcm18 :  (solution: 4) => 0 pts
+  | qcm19 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 2 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code20 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 3 pts
+
+  -  quizz answers:
+  | qcm21 :  (solution: 2) => 0 pts
+  | qcm22 :  (solution: 1) => 0 pts
+  | qcm23 :  (solution: 3) => 0 pts
+  | qcm24 :  (solution: 1) => 0 pts
+
+  => quizz score: 0 / 4 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code25 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code26 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code27 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code28 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code29 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code30 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code31 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code32 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+=> TOTAL STUDENT SCORE: 0 / 54
+
+
+================================
+
+STUDENT: thibault_chambrillon
+
+  -  quizz answers:
+  | qcm1 :  (solution: 4) => 0 pts
+  | qcm2 :  (solution: 1) => 0 pts
+  | qcm3 :  (solution: 3) => 0 pts
+  | qcm4 :  (solution: 2) => 0 pts
+  | qcm5 :  (solution: 2) => 0 pts
+  | qcm6 :  (solution: 1) => 0 pts
+  | qcm7 :  (solution: 1) => 0 pts
+  | qcm8 :  (solution: 2) => 0 pts
+  | qcm9 :  (solution: 3) => 0 pts
+  | qcm10 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 10 pts
+
+  -  quizz answers:
+  | qcm11 :  (solution: 2) => 0 pts
+  | qcm12 :  (solution: 2) => 0 pts
+  | qcm13 :  (solution: 1) => 0 pts
+  | qcm14 :  (solution: 3) => 0 pts
+  | qcm15 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code16 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code17 (variant: 1) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 6 pts
+
+  -  quizz answers:
+  | qcm18 :  (solution: 4) => 0 pts
+  | qcm19 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 2 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code20 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 3 pts
+
+  -  quizz answers:
+  | qcm21 :  (solution: 2) => 0 pts
+  | qcm22 :  (solution: 1) => 0 pts
+  | qcm23 :  (solution: 3) => 0 pts
+  | qcm24 :  (solution: 1) => 0 pts
+
+  => quizz score: 0 / 4 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code25 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code26 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code27 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code28 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code29 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code30 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code31 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code32 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+=> TOTAL STUDENT SCORE: 0 / 54
+
+
+================================
+
+STUDENT: thibault_meillassoux
+
+  -  quizz answers:
+  | qcm1 :  (solution: 4) => 0 pts
+  | qcm2 :  (solution: 1) => 0 pts
+  | qcm3 :  (solution: 3) => 0 pts
+  | qcm4 :  (solution: 2) => 0 pts
+  | qcm5 :  (solution: 2) => 0 pts
+  | qcm6 :  (solution: 1) => 0 pts
+  | qcm7 :  (solution: 1) => 0 pts
+  | qcm8 :  (solution: 2) => 0 pts
+  | qcm9 :  (solution: 3) => 0 pts
+  | qcm10 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 10 pts
+
+  -  quizz answers:
+  | qcm11 :  (solution: 2) => 0 pts
+  | qcm12 :  (solution: 2) => 0 pts
+  | qcm13 :  (solution: 1) => 0 pts
+  | qcm14 :  (solution: 3) => 0 pts
+  | qcm15 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code16 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code17 (variant: 2) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 6 pts
+
+  -  quizz answers:
+  | qcm18 :  (solution: 4) => 0 pts
+  | qcm19 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 2 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code20 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 3 pts
+
+  -  quizz answers:
+  | qcm21 :  (solution: 2) => 0 pts
+  | qcm22 :  (solution: 1) => 0 pts
+  | qcm23 :  (solution: 3) => 0 pts
+  | qcm24 :  (solution: 1) => 0 pts
+
+  => quizz score: 0 / 4 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code25 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code26 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code27 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code28 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code29 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code30 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code31 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code32 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+=> TOTAL STUDENT SCORE: 0 / 54
+
+
+================================
+
+STUDENT: thomas_bonnet
+
+  -  quizz answers:
+  | qcm1 : 4 (solution: 4) => 1 pts
+  | qcm2 : 1 (solution: 1) => 1 pts
+  | qcm3 : 3 (solution: 3) => 1 pts
+  | qcm4 : 2 (solution: 2) => 1 pts
+  | qcm5 : 2 (solution: 2) => 1 pts
+  | qcm6 : 1 (solution: 1) => 1 pts
+  | qcm7 : 1 (solution: 1) => 1 pts
+  | qcm8 : 2 (solution: 2) => 1 pts
+  | qcm9 : 3 (solution: 3) => 1 pts
+  | qcm10 : 3 (solution: 3) => 1 pts
+
+  => quizz score: 10 / 10 pts
+
+  -  quizz answers:
+  | qcm11 : 2 (solution: 2) => 1 pts
+  | qcm12 : 2 (solution: 2) => 1 pts
+  | qcm13 : 1 (solution: 1) => 1 pts
+  | qcm14 : 3 (solution: 3) => 1 pts
+  | qcm15 : 3 (solution: 3) => 1 pts
+
+  => quizz score: 5 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code16 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | if (nombre === 4){
+  |   resultat = 'égal';
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 1, 1 ]
+  | 
+  | ------------- EXERCISE: code17 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var reponse = prompt ('Ta couleur préférée ?');
+  | if (reponse === 'rouge'){
+  |   alert = ('bien!);
+  | } else if (reponse === 'bleu'){
+  | var reponse2 = prompt ('clair ou foncé ?');
+  | if (reponse2 === 'clair'){
+  |   alert = ('comme le ciel');
+  | }else if (reponse2 === 'foncé'){
+  |   alert = ('OK');
+  | }
+  | }else{
+  |   alert = ('j\'ai pas compris');
+  | }
+Mon, 27 Feb 2017 14:51:01 GMT jailed:sandbox DYNAMIC PLUGIN:33
+  alert = ('bien!);
+           ^^^^^^^^
+SyntaxError: Invalid or unexpected token
+    at Object.exports.runInNewContext (vm.js:71:16)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:106:13)
+    at process.emit (events.js:191:7)
+    at process.nextTick (internal/child_process.js:744:12)
+    at _combinedTickCallback (internal/process/next_tick.js:67:7)
+    at process._tickCallback (internal/process/next_tick.js:98:9)
+  | => test runner err: SyntaxError: Invalid or unexpected token
+
+  => code score: 2 / 6 pts
+
+  -  quizz answers:
+  | qcm18 : 4 (solution: 4) => 1 pts
+  | qcm19 : 3 (solution: 3) => 1 pts
+
+  => quizz score: 2 / 2 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code20 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 3 pts
+
+  -  quizz answers:
+  | qcm21 : 2 (solution: 2) => 1 pts
+  | qcm22 : 1 (solution: 1) => 1 pts
+  | qcm23 : 3 (solution: 3) => 1 pts
+  | qcm24 : 4 (solution: 1) => 0 pts
+
+  => quizz score: 3 / 4 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code25 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function soustraire (a, b) {
+  | 	return a-b;
+  | }
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | ------------- EXERCISE: code26 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function somme (2, 2, 1){
+  | 	return 2 + 2 + 1;
+  | }
+Mon, 27 Feb 2017 14:51:01 GMT jailed:sandbox DYNAMIC PLUGIN:7
+function somme (2, 2, 1){
+                ^
+SyntaxError: Unexpected number
+    at Object.exports.runInNewContext (vm.js:71:16)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:106:13)
+    at process.emit (events.js:191:7)
+    at process.nextTick (internal/child_process.js:744:12)
+    at _combinedTickCallback (internal/process/next_tick.js:67:7)
+    at process._tickCallback (internal/process/next_tick.js:98:9)
+  | => test runner err: SyntaxError: Unexpected number
+  | 
+  | ------------- EXERCISE: code27 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code28 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 3 / 12 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code29 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var nombres = [1, 2, 3];
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | ------------- EXERCISE: code30 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | 
+  | 
+Mon, 27 Feb 2017 14:51:02 GMT jailed:sandbox ReferenceError: troisieme is not defined
+    at evaluateStudentCode (DYNAMIC PLUGIN:12:5)
+    at DYNAMIC PLUGIN:18:3
+    at ContextifyScript.Script.runInContext (vm.js:35:29)
+    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
+    at Object.exports.runInNewContext (vm.js:72:17)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:106:13)
+    at process.emit (events.js:191:7)
+  | => test runner err: ReferenceError: troisieme is not defined
+  | 
+  | ------------- EXERCISE: code31 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code32 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 3 / 12 pts
+
+=> TOTAL STUDENT SCORE: 28 / 54
+
+
+================================
+
+STUDENT: timothee_ong
+
+  -  quizz answers:
+  | qcm1 :  (solution: 4) => 0 pts
+  | qcm2 :  (solution: 1) => 0 pts
+  | qcm3 :  (solution: 3) => 0 pts
+  | qcm4 :  (solution: 2) => 0 pts
+  | qcm5 :  (solution: 2) => 0 pts
+  | qcm6 :  (solution: 1) => 0 pts
+  | qcm7 :  (solution: 1) => 0 pts
+  | qcm8 :  (solution: 2) => 0 pts
+  | qcm9 :  (solution: 3) => 0 pts
+  | qcm10 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 10 pts
+
+  -  quizz answers:
+  | qcm11 :  (solution: 2) => 0 pts
+  | qcm12 :  (solution: 2) => 0 pts
+  | qcm13 :  (solution: 1) => 0 pts
+  | qcm14 :  (solution: 3) => 0 pts
+  | qcm15 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code16 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code17 (variant: 1) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 6 pts
+
+  -  quizz answers:
+  | qcm18 :  (solution: 4) => 0 pts
+  | qcm19 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 2 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code20 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 3 pts
+
+  -  quizz answers:
+  | qcm21 :  (solution: 2) => 0 pts
+  | qcm22 :  (solution: 1) => 0 pts
+  | qcm23 :  (solution: 3) => 0 pts
+  | qcm24 :  (solution: 1) => 0 pts
+
+  => quizz score: 0 / 4 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code25 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code26 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code27 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code28 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code29 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code30 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code31 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code32 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+=> TOTAL STUDENT SCORE: 0 / 54
+
+
+================================
+
+STUDENT: valentine_piol
+
+  -  quizz answers:
+  | qcm1 : 4 (solution: 4) => 1 pts
+  | qcm2 : 1 (solution: 1) => 1 pts
+  | qcm3 : 3 (solution: 3) => 1 pts
+  | qcm4 : 2 (solution: 2) => 1 pts
+  | qcm5 :  (solution: 2) => 0 pts
+  | qcm6 :  (solution: 1) => 0 pts
+  | qcm7 :  (solution: 1) => 0 pts
+  | qcm8 :  (solution: 2) => 0 pts
+  | qcm9 :  (solution: 3) => 0 pts
+  | qcm10 :  (solution: 3) => 0 pts
+
+  => quizz score: 4 / 10 pts
+
+  -  quizz answers:
+  | qcm11 :  (solution: 2) => 0 pts
+  | qcm12 :  (solution: 2) => 0 pts
+  | qcm13 :  (solution: 1) => 0 pts
+  | qcm14 :  (solution: 3) => 0 pts
+  | qcm15 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code16 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code17 (variant: 2) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 6 pts
+
+  -  quizz answers:
+  | qcm18 :  (solution: 4) => 0 pts
+  | qcm19 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 2 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code20 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 3 pts
+
+  -  quizz answers:
+  | qcm21 :  (solution: 2) => 0 pts
+  | qcm22 :  (solution: 1) => 0 pts
+  | qcm23 :  (solution: 3) => 0 pts
+  | qcm24 :  (solution: 1) => 0 pts
+
+  => quizz score: 0 / 4 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code25 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code26 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code27 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code28 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code29 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code30 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code31 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code32 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+=> TOTAL STUDENT SCORE: 4 / 54
+
+
+================================
+
+STUDENT: victor_delataillade
+
+  -  quizz answers:
+  | qcm1 :  (solution: 4) => 0 pts
+  | qcm2 :  (solution: 1) => 0 pts
+  | qcm3 :  (solution: 3) => 0 pts
+  | qcm4 :  (solution: 2) => 0 pts
+  | qcm5 :  (solution: 2) => 0 pts
+  | qcm6 :  (solution: 1) => 0 pts
+  | qcm7 :  (solution: 1) => 0 pts
+  | qcm8 :  (solution: 2) => 0 pts
+  | qcm9 :  (solution: 3) => 0 pts
+  | qcm10 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 10 pts
+
+  -  quizz answers:
+  | qcm11 :  (solution: 2) => 0 pts
+  | qcm12 :  (solution: 2) => 0 pts
+  | qcm13 :  (solution: 1) => 0 pts
+  | qcm14 :  (solution: 3) => 0 pts
+  | qcm15 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code16 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code17 (variant: 2) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 6 pts
+
+  -  quizz answers:
+  | qcm18 :  (solution: 4) => 0 pts
+  | qcm19 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 2 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code20 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 3 pts
+
+  -  quizz answers:
+  | qcm21 :  (solution: 2) => 0 pts
+  | qcm22 :  (solution: 1) => 0 pts
+  | qcm23 :  (solution: 3) => 0 pts
+  | qcm24 :  (solution: 1) => 0 pts
+
+  => quizz score: 0 / 4 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code25 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code26 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code27 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code28 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code29 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code30 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code31 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code32 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+=> TOTAL STUDENT SCORE: 0 / 54
+
+
+================================
+
+STUDENT: victor_legac
+
+  -  quizz answers:
+  | qcm1 :  (solution: 4) => 0 pts
+  | qcm2 :  (solution: 1) => 0 pts
+  | qcm3 :  (solution: 3) => 0 pts
+  | qcm4 :  (solution: 2) => 0 pts
+  | qcm5 : 4 (solution: 2) => 0 pts
+  | qcm6 :  (solution: 1) => 0 pts
+  | qcm7 :  (solution: 1) => 0 pts
+  | qcm8 :  (solution: 2) => 0 pts
+  | qcm9 :  (solution: 3) => 0 pts
+  | qcm10 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 10 pts
+
+  -  quizz answers:
+  | qcm11 :  (solution: 2) => 0 pts
+  | qcm12 :  (solution: 2) => 0 pts
+  | qcm13 :  (solution: 1) => 0 pts
+  | qcm14 :  (solution: 3) => 0 pts
+  | qcm15 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code16 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code17 (variant: 2) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 6 pts
+
+  -  quizz answers:
+  | qcm18 :  (solution: 4) => 0 pts
+  | qcm19 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 2 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code20 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 3 pts
+
+  -  quizz answers:
+  | qcm21 :  (solution: 2) => 0 pts
+  | qcm22 :  (solution: 1) => 0 pts
+  | qcm23 :  (solution: 3) => 0 pts
+  | qcm24 :  (solution: 1) => 0 pts
+
+  => quizz score: 0 / 4 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code25 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code26 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code27 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code28 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code29 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code30 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code31 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code32 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 12 pts
+
+=> TOTAL STUDENT SCORE: 0 / 54
