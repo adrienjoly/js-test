@@ -28,6 +28,10 @@ QuizzEvaluator.prototype.getAnswerSet = function(answers) {
   return set;
 };
 
+QuizzEvaluator.prototype.getMaxScore = function() {
+  return Object.keys(this.solutions).length * PTS_RIGHT;
+};
+
 QuizzEvaluator.prototype.evaluateAnswers = function(answers) {
   var log = [];
   var score = 0;
@@ -42,7 +46,7 @@ QuizzEvaluator.prototype.evaluateAnswers = function(answers) {
     });
   }
   return {
-    length: Object.keys(this.solutions).length * PTS_RIGHT, // = maximum score
+    length: this.getMaxScore(),
     score: score,
     log: log,    
   };
