@@ -4,6 +4,8 @@
 var fs = require('fs');
 var ExerciseConverter = require('./ExerciseConverter');
 var ExerciseEnumerator = require('./ExerciseEnumerator');
+var QuizzEvaluator = require('./QuizzEvaluator');
+var CodeEvaluator = require('./CodeEvaluator');
 
 var GENERATE_SOLUTION_FILES = false; // if true, will generate a solution file for each .md file
 
@@ -82,6 +84,7 @@ var converters = {
       i: parseInt(exNumber),
       isCode: true,
       title: exerciseData.title || 'Exercices de codage',
+      maxScore: new CodeEvaluator(rendered.evalTests).getMaxScore(),
       questions: rendered.questions,
     };
   },
@@ -98,6 +101,7 @@ var converters = {
       i: parseInt(exNumber),
       isQuizz: true,
       title: exerciseData.title || 'QCM',
+      maxScore: new QuizzEvaluator(rendered.solutions).getMaxScore(),
       questions: rendered.questions,
       solutions: rendered.solutions
     };

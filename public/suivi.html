@@ -91,7 +91,7 @@
                   <th>Student</th>
                   <th>Submitted</th>
                   <template is="dom-repeat" items="{{exercises}}" as="ex">
-                    <th>{{ex.title}}</th>
+                    <th>{{ex.title}} (/{{ex.maxScore}} pts)</th>
                   </template>
                 </tr>
                 <template is="dom-repeat" items="{{students}}" as="student">
