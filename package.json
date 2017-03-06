@@ -24,6 +24,7 @@
     "start": "npm run build; node src/server.js",
     "eval": "node ./src/evaluate.js",
     "eval-students": "src/score-students.sh ./students/*.json",
+    "eval-firebase-export": "node ./src/evaluateGroupFile.js ../exam-data/js-test-2-export.json &>./exam-data/js-test-2-export.eval.log",
     "eval-student-groups": "src/score-student-groups.sh ./student-groups/*.json",
     "eval-groups-from-firebase": "src/score-groups.sh",
     "deploy-firebase-hosting": "firebase deploy; # alternative to heroku, but did not scale over 20 simultaneous connections",
