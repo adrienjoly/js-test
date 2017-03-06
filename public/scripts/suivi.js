@@ -16,12 +16,19 @@
     app.$.headerPanelMain.scrollToTop(true);
   };
 
+  if (!app.config.teacherEmail) {
+    throw new Error('config.teacherEmail is required but not set');
+  }
+
   app.isAdmin = function(user) {
     return app.config && user && user.email === app.config.teacherEmail;
   };
 
   function computeQuizzScore(studentAnswers, exercise, callback) {
     var score = 0;
+    if (!exercise.solutions) {
+      throw new Error('missing solutions for quizz exercises => enable `examPack.publishEvalTests` in exam-config, re-build, and retry');
+    }
     for (var qId in exercise.solutions) {
       if (studentAnswers[qId] === undefined) {
         score += app.config.quizzGrading.ptsNull;
@@ -36,6 +43,10 @@
 
   function computeCodeScore(studentAnswers, exercise, callback) {
     var CodeEvaluator = makeCodeEvaluator(jailed, async, app.config.codeGrading);
+    console.log('building code evaluator with', exercise.questions);
+    for (var i in exercise.questions) {
+      if (!exercise.questions[i].testVariants) throw new Error('missing tests for code exercise ' + i + ' => enable `examPack.publishEvalTests` in exam-config, re-build, and retry');
+    }
     var codeEvaluator = new CodeEvaluator(exercise.questions);
     codeEvaluator.evaluateAnswers(studentAnswers, function(err, res){
       callback(null, res.score);
