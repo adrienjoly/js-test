@@ -97,7 +97,12 @@ function makeCodeEvaluator(jailed, async, codeGradingOptions) {
     this.tests = tests;
   }
 
+  CodeEvaluator.prototype.getMaxScore = function() {
+    return this.tests.length * COEF;
+  };
+
   CodeEvaluator.prototype.evaluateAnswers = function(answers, callback) {
+    var _this = this;
     function runExEval(exEval, callback) {
       var variantNumber = getVariantByStudentId(answers._uid, exEval.variants);
       var evalTest = exEval.testVariants[variantNumber];
@@ -110,7 +115,7 @@ function makeCodeEvaluator(jailed, async, codeGradingOptions) {
       });
       callback(null, {
         score: ptsPerExercise.reduce(sum),
-        length: res.length * COEF
+        length: _this.getMaxScore(),
       });
     });
   };
