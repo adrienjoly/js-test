@@ -1,3 +1,8 @@
+== v2.5.1 Fixes
+ * Feature: added `eval-firebase-export` npm script
+ * Feature: display max score per question on "suivi" dashboard
+ * Bug fix: display error messages if config will make suivi/dashboard fail
+
 == v2.5.0 Multi-instance deployment and evaluation
  * Feature: `npm run deploy-instances` => batch deployment to several herokuapp.com apps
  * Feature: `redirectToHttps`, `publishSolutions` and `publishEvalTests` config flags
