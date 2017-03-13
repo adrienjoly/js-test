@@ -59,7 +59,7 @@ var profilInstagram = {
 console.log(chemin);
 ```
 
-Par quoi faut-il remplacer `chemin`, pour obtenir l'`url` de la {{ indexLabel }} photo de François ?
+Tapez l'expression qu'il faudrait saisir à la place de `chemin`, afin d'afficher dans la console l'`url` de la {{ indexLabel }} photo de François:
 
 (utilisez la notation pointée à partir de l'objet `profilInstagram`)
 
