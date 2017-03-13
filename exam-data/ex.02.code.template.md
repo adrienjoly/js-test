@@ -1,18 +1,24 @@
 # Exercices de codage (3 pts par question)
 
-Créez une variable `obj` et affectez-lui un objet contenant deux propriétés:
+Créez une variable `{{ varName }}` et affectez-lui un objet contenant deux propriétés:
 
- - une propriété `nom` ayant `'sause'` comme valeur (type: chaîne de caractères),
- - et une propriété `age` ayant `46` comme valeur (type: nombre).
+ - une propriété `{{ prop1Name }}` ayant `'sause'` comme valeur (type: chaîne de caractères),
+ - et une propriété `age` ayant `{{ prop2Val }}` comme valeur (type: nombre).
+
+<!-- variantes: -->
+
+- { "varName": "obj", "prop1Name": "nom", "prop2Val": 46 }
+- { "varName": "obj", "prop1Name": "name", "prop2Val": 46 }
+- { "varName": "personne", "prop1Name": "nom", "prop2Val": 64 }
 
 ???
 
 Solution:
 
 ```js
-var obj = {
-  nom: 'sause',
-  age: 46,
+var {{ varName }} = {
+  {{ prop1Name }}: 'sause',
+  age: {{ prop2Val }},
 };
 ```
 
@@ -23,10 +29,10 @@ var obj = {
 (function evaluateStudentCode(){
   _runStudentCode();
   var tests = [
-    typeof obj === 'object',
-    obj.nom === 'sause',
-    obj.age == 46,
-    obj.age === 46,
+    typeof {{ varName }} === 'object',
+    {{ varName }}.{{ prop1Name }} === 'sause',
+    {{ varName }}.age == {{ prop2Val }},
+    {{ varName }}.age === {{ prop2Val }},
   ];
   application.remote._send(null, tests);
 })();

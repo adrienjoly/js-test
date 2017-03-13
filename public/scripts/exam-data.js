@@ -170,10 +170,26 @@
           "i": 6,
           "id": "code6",
           "variants": [
-            {}
+            {
+              "varName": "obj",
+              "prop1Name": "nom",
+              "prop2Val": 46
+            },
+            {
+              "varName": "obj",
+              "prop1Name": "name",
+              "prop2Val": 46
+            },
+            {
+              "varName": "personne",
+              "prop1Name": "nom",
+              "prop2Val": 64
+            }
           ],
           "mdVariants": [
-            "\nCréez une variable `obj` et affectez-lui un objet contenant deux propriétés:\n\n - une propriété `nom` ayant `'sause'` comme valeur (type: chaîne de caractères),\n - et une propriété `age` ayant `46` comme valeur (type: nombre).\n\n"
+            "\nCréez une variable `obj` et affectez-lui un objet contenant deux propriétés:\n\n - une propriété `nom` ayant `'sause'` comme valeur (type: chaîne de caractères),\n - et une propriété `age` ayant `46` comme valeur (type: nombre).\n\n<!-- variantes: -->\n\n\n",
+            "\nCréez une variable `obj` et affectez-lui un objet contenant deux propriétés:\n\n - une propriété `name` ayant `'sause'` comme valeur (type: chaîne de caractères),\n - et une propriété `age` ayant `46` comme valeur (type: nombre).\n\n<!-- variantes: -->\n\n\n",
+            "\nCréez une variable `personne` et affectez-lui un objet contenant deux propriétés:\n\n - une propriété `nom` ayant `'sause'` comme valeur (type: chaîne de caractères),\n - et une propriété `age` ayant `64` comme valeur (type: nombre).\n\n<!-- variantes: -->\n\n\n"
           ]
         },
         {
