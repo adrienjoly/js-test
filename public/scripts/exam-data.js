@@ -31,7 +31,7 @@
       "ptsNull": 0
     },
     "codeGrading": {
-      "ptsPerExercise": 2
+      "ptsPerExercise": 4
     }
   };
   app.exercises = [
@@ -107,7 +107,7 @@
             },
             {
               "name": 4,
-              "text": "Il faut passer i à une fonction génératrice"
+              "text": "Il faut passer i en paramètre d'une fonction génératrice"
             }
           ]
         },
@@ -140,8 +140,8 @@
       "_info": "generated from ex.02.code.template.md",
       "i": 2,
       "isCode": true,
-      "title": "Exercices de codage (2 pts par question)",
-      "maxScore": 8,
+      "title": "Exercices de codage (4 pts par question)",
+      "maxScore": 16,
       "questions": [
         {
           "i": 5,
@@ -170,7 +170,7 @@
             {}
           ],
           "mdVariants": [
-            "```html\n<li>1er produit</li>\n<li>2ème produit</li>\n<li>3ème produit</li>\n```\n\nÉcrivez le code JavaScript permettant d'afficher \"`ok`\" dans un `alert` à chaque fois que l'utilisateur cliquera sur un de ces trois éléments.\n\n"
+            "```html\n<li>1er produit</li>\n<li>2ème produit</li>\n<li>3ème produit</li>\n```\n\nÉcrivez le code JavaScript permettant d'afficher \"`ok`\" (sans les guillemets) dans un `alert` à chaque fois que l'utilisateur cliquera sur n'importe lequel de ces trois éléments.\n\nPour définir le comportement au clic, utiliser la propriété `onclick`.\n\n"
           ]
         },
         {
@@ -180,7 +180,7 @@
             {}
           ],
           "mdVariants": [
-            "Je souhaite intégrer une galerie d'images sur mon site, en utilisant un composant déjà existant.\n\nVoici un extrait de la documentation du composant:\n\n> Pour instancier une galerie sur votre page, appelez la fonction `initGallery(element, images)`, avec en paramètres:\n> \n> - `element`(*type: objet*): élément du DOM dans lequel intégrer la galerie,\n> - `images`(*type: tableau de chaînes de caractères*): URLs des images à intégrer dans la galerie.\n\nMon fichier HTML contient ces éléments:\n\n```html\n<script src=\"https://controle.js/fake-gallery.js\"></script>\n<div id=\"my-gallery\"></div>\n```\n\nJe souhaite intégrer la galerie dans le `<div>`, avec les images suivantes:\n\n - `https://i.imgur.com/ydi5jMh.jpg`\n - `https://i.imgur.com/emRrCLd.jpg`\n - `https://i.imgur.com/HdsQ3fe.jpg`\n\nQuel code JavaScript dois-je exécuter pour intégrer cette galerie ?\n\n"
+            "Je souhaite intégrer une galerie d'images sur mon site, en utilisant un composant déjà existant.\n\nVoici un extrait de la documentation du composant:\n\n> Pour instancier une galerie sur votre page, appelez la fonction `initGallery(element, images)`, avec en paramètres:\n> \n> - `element`(*type: objet*): élément du DOM dans lequel intégrer la galerie,\n> - `images`(*type: tableau de chaînes de caractères*): URLs des images à intégrer dans la galerie.\n\nMon fichier HTML contient ces éléments:\n\n```html\n<script src=\"https://controle.js/gallery.js\"></script>\n<div id=\"my-gallery\"></div>\n```\n\nJe souhaite intégrer la galerie dans le `<div>`, avec les images suivantes:\n\n - `https://i.imgur.com/ydi5jMh.jpg`\n - `https://i.imgur.com/emRrCLd.jpg`\n - `https://i.imgur.com/HdsQ3fe.jpg`\n\nQuel code JavaScript dois-je exécuter pour intégrer la galerie dans ma page ?\n\n"
           ]
         }
       ]

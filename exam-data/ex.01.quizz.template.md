@@ -45,7 +45,7 @@ Comment pourrait-on s'assurer que la valeur de `i` correspondante à chaque él�
 - Il n'y a rien à changer
 - Il faut créer une deuxième boucle
 - Il faut utiliser "this"
-* Il faut passer i à une fonction génératrice
+* Il faut passer i en paramètre d'une fonction génératrice
 
 ---
 
@@ -56,6 +56,6 @@ var point = new Point(4, 3);
 Comment appelle-t-on l'opération à droite du signe `=` ?
 
 - Une génération de fonction
-- Une instanciation de classe
+* Une instanciation de classe
 - Un appel de fonction
 - Une concaténation de nombres
