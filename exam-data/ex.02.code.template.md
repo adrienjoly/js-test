@@ -59,16 +59,21 @@ var profilInstagram = {
 console.log(chemin);
 ```
 
-Par quoi faut-il remplacer `chemin`, pour obtenir l'`url` de la deuxième photo de François ?
+Par quoi faut-il remplacer `chemin`, pour obtenir l'`url` de la {{ indexLabel }} photo de François ?
 
 (utilisez la notation pointée à partir de l'objet `profilInstagram`)
+
+<!-- variantes: -->
+
+- { "index": 0, "indexLabel": "première" }
+- { "index": 1, "indexLabel": "deuxième" }
 
 ???
 
 Solution:
 
 ```js
-profilInstagram.photos[1].url
+profilInstagram.photos[{{ index }}].url
 ```
 
 --
@@ -92,8 +97,8 @@ profilInstagram.photos[1].url
   var studentCode = `_studentCode`.trim();
   var result = eval(studentCode);
   var tests = [
-    studentCode === 'profilInstagram.photos[1].url', // notation pointée
-    result === 'http://imgur.com/img/2', // valeur finale
+    studentCode === 'profilInstagram.photos[{{ index }}].url', // notation pointée
+    result === profilInstagram.photos[{{ index }}].url, // valeur finale
   ];
   application.remote._send(null, tests);
 })();
@@ -101,20 +106,26 @@ profilInstagram.photos[1].url
 
 ---
 
-Supposons qu'une variable `element` a été initialisée de la manière suivante:
+Supposons qu'une variable `{{ varName }}` a été initialisée de la manière suivante:
 
 ```js
-var element = document.getElementById('mon-element');
+var {{ varName }} = document.getElementById('mon-element');
 ```
 
-Écrivez l'instruction JavaScript permettant d'ajouter la classe `highlight` à cet élément, en utilisant la variable `element` fournie.
+Écrivez l'instruction JavaScript permettant d'ajouter la classe `{{ className }}` à cet élément, en utilisant la variable `{{ varName }}` fournie.
+
+<!-- variantes: -->
+
+- { "varName": "element", "className": "highlight" }
+- { "varName": "element", "className": "surbrillance" }
+- { "varName": "monElement", "className": "surbrillance" }
 
 ???
 
 Solution:
 
 ```js
-element.classList.add('highlight');
+{{ varName }}.classList.add('{{ className }}');
 ```
 
 --
@@ -122,17 +133,17 @@ element.classList.add('highlight');
 ```js
 // automatic student evaluation code
 (function evaluateStudentCode(){
-  var element = {
+  var {{ varName }} = {
     classList: {
       add: function(className) {
-        element.className += ' ' + className;
+        {{ varName }}.className += ' ' + className;
       },
     },
     className: '',
   };
   _runStudentCode();
   var tests = [
-    element.className.indexOf('highlight') !== -1,
+    {{ varName }}.className.indexOf('{{ className }}') !== -1,
   ];
   application.remote._send(null, tests);
 })();
@@ -146,9 +157,14 @@ element.classList.add('highlight');
 <li>3ème produit</li>
 ```
 
-Écrivez le code JavaScript permettant d'afficher "`ok`" (sans les guillemets) dans un `alert` à chaque fois que l'utilisateur cliquera sur n'importe lequel de ces trois éléments.
+Écrivez le code JavaScript permettant d'afficher "`ok`" (sans les guillemets) dans {{ outputLabel }} à chaque fois que l'utilisateur cliquera sur n'importe lequel de ces trois éléments.
 
 Pour définir le comportement au clic, utiliser la propriété `onclick`.
+
+<!-- variantes: -->
+
+- { "outputLabel": "un `alert`", "outputFct": "alert" }
+- { "outputLabel": "la console", "outputFct": "console.log" }
 
 ???
 
@@ -158,7 +174,7 @@ Solution:
 var lis = document.getElementsByTagName('li');
 for (var i = 0; i < lis.length; i++) {
   lis[i].onclick = function() {
-    alert('ok');
+    {{ outputFct }}('ok');
   };
 }
 ```
@@ -174,10 +190,11 @@ for (var i = 0; i < lis.length; i++) {
     { onclick: null },
     { onclick: null },
   ];
-  var console = { log: function(){} }; // tolerate console.log
-  var alert = function(msg) {
+  function add(msg) {
     _alerts.push(msg);
   }
+  var console = { log: '{{ outputFct }}' === 'console.log' ? add : function(){} };
+  var alert = '{{ outputFct }}' === 'alert' ? add : function(){};
   var document = {
     getElementsByTagName: function(tagName) {
       return (tagName || '').toLowerCase() === 'li' ? _lis : [];
@@ -213,7 +230,7 @@ Je souhaite intégrer une galerie d'images sur mon site, en utilisant un composa
 
 Voici un extrait de la documentation du composant:
 
-> Pour instancier une galerie sur votre page, appelez la fonction `initGallery(element, images)`, avec en paramètres:
+> Pour instancier une galerie sur votre page, appelez la fonction `{{ fctName }}(element, images)`, avec en paramètres:
 > 
 > - `element`(*type: objet*): élément du DOM dans lequel intégrer la galerie,
 > - `images`(*type: tableau de chaînes de caractères*): URLs des images à intégrer dans la galerie.
@@ -228,10 +245,16 @@ Mon fichier HTML contient ces éléments:
 Je souhaite intégrer la galerie dans le `<div>`, avec les images suivantes:
 
  - `https://i.imgur.com/ydi5jMh.jpg`
- - `https://i.imgur.com/emRrCLd.jpg`
+ - `{{{ url2 }}}`
  - `https://i.imgur.com/HdsQ3fe.jpg`
 
 Quel code JavaScript dois-je exécuter pour intégrer la galerie dans ma page ?
+
+<!-- variantes: -->
+
+- { "fctName": "initGallery", "url2": "https://i.imgur.com/emRrCLd.jpg" }
+- { "fctName": "embedGallery", "url2": "https://i.imgur.com/emRrCLd.jpg" }
+- { "fctName": "initGallery", "url2": "http://i.imgur.com/bdh4Qpn.jpg" }
 
 ???
 
@@ -241,10 +264,10 @@ Solution:
 var element = document.getElementById('my-gallery');
 var images = [
   'https://i.imgur.com/ydi5jMh.jpg',
-  'https://i.imgur.com/emRrCLd.jpg',
+  '{{{ url2 }}}',
   'https://i.imgur.com/HdsQ3fe.jpg', 
 ];
-initGallery(element, images);
+{{ fctName }}(element, images);
 ```
 
 --
@@ -255,13 +278,13 @@ initGallery(element, images);
   var _calls = [];
   var _urls = [
     'https://i.imgur.com/ydi5jMh.jpg',
-    'https://i.imgur.com/emRrCLd.jpg',
+    '{{{ url2 }}}',
     'https://i.imgur.com/HdsQ3fe.jpg', 
   ];
   var _div = {
     id: 'my-gallery',
   };
-  function initGallery(element, images) {
+  function {{ fctName }}(element, images) {
     _calls.push([ element, images ]);
   }
   var console = { log: function(){} }; // tolerate console.log()
@@ -297,5 +320,3 @@ initGallery(element, images);
   application.remote._send(null, tests);
 })();
 ```
-
-<!-- TODO: POO -->

@@ -196,40 +196,82 @@
           "i": 7,
           "id": "code7",
           "variants": [
-            {}
+            {
+              "index": 0,
+              "indexLabel": "première"
+            },
+            {
+              "index": 1,
+              "indexLabel": "deuxième"
+            }
           ],
           "mdVariants": [
-            "On fournit le code JavaScript suivant:\n\n```js\nvar profilInstagram = {\n  prenom: 'François',\n  photos: [\n    {\n      nom: 'mon chien est moi',\n      url: 'http://imgur.com/img/1',\n    },\n    {\n      nom: 'coucher de soleil => such wow!',\n      url: 'http://imgur.com/img/2',\n    },\n  ],\n};\nconsole.log(chemin);\n```\n\nPar quoi faut-il remplacer `chemin`, pour obtenir l'`url` de la deuxième photo de François ?\n\n(utilisez la notation pointée à partir de l'objet `profilInstagram`)\n\n"
+            "On fournit le code JavaScript suivant:\n\n```js\nvar profilInstagram = {\n  prenom: 'François',\n  photos: [\n    {\n      nom: 'mon chien est moi',\n      url: 'http://imgur.com/img/1',\n    },\n    {\n      nom: 'coucher de soleil => such wow!',\n      url: 'http://imgur.com/img/2',\n    },\n  ],\n};\nconsole.log(chemin);\n```\n\nPar quoi faut-il remplacer `chemin`, pour obtenir l'`url` de la première photo de François ?\n\n(utilisez la notation pointée à partir de l'objet `profilInstagram`)\n\n<!-- variantes: -->\n\n\n",
+            "On fournit le code JavaScript suivant:\n\n```js\nvar profilInstagram = {\n  prenom: 'François',\n  photos: [\n    {\n      nom: 'mon chien est moi',\n      url: 'http://imgur.com/img/1',\n    },\n    {\n      nom: 'coucher de soleil => such wow!',\n      url: 'http://imgur.com/img/2',\n    },\n  ],\n};\nconsole.log(chemin);\n```\n\nPar quoi faut-il remplacer `chemin`, pour obtenir l'`url` de la deuxième photo de François ?\n\n(utilisez la notation pointée à partir de l'objet `profilInstagram`)\n\n<!-- variantes: -->\n\n\n"
           ]
         },
         {
           "i": 8,
           "id": "code8",
           "variants": [
-            {}
+            {
+              "varName": "element",
+              "className": "highlight"
+            },
+            {
+              "varName": "element",
+              "className": "surbrillance"
+            },
+            {
+              "varName": "monElement",
+              "className": "surbrillance"
+            }
           ],
           "mdVariants": [
-            "Supposons qu'une variable `element` a été initialisée de la manière suivante:\n\n```js\nvar element = document.getElementById('mon-element');\n```\n\nÉcrivez l'instruction JavaScript permettant d'ajouter la classe `highlight` à cet élément, en utilisant la variable `element` fournie.\n\n"
+            "Supposons qu'une variable `element` a été initialisée de la manière suivante:\n\n```js\nvar element = document.getElementById('mon-element');\n```\n\nÉcrivez l'instruction JavaScript permettant d'ajouter la classe `highlight` à cet élément, en utilisant la variable `element` fournie.\n\n<!-- variantes: -->\n\n\n",
+            "Supposons qu'une variable `element` a été initialisée de la manière suivante:\n\n```js\nvar element = document.getElementById('mon-element');\n```\n\nÉcrivez l'instruction JavaScript permettant d'ajouter la classe `surbrillance` à cet élément, en utilisant la variable `element` fournie.\n\n<!-- variantes: -->\n\n\n",
+            "Supposons qu'une variable `monElement` a été initialisée de la manière suivante:\n\n```js\nvar monElement = document.getElementById('mon-element');\n```\n\nÉcrivez l'instruction JavaScript permettant d'ajouter la classe `surbrillance` à cet élément, en utilisant la variable `monElement` fournie.\n\n<!-- variantes: -->\n\n\n"
           ]
         },
         {
           "i": 9,
           "id": "code9",
           "variants": [
-            {}
+            {
+              "outputLabel": "un alert",
+              "outputFct": "alert"
+            },
+            {
+              "outputLabel": "la console",
+              "outputFct": "console.log"
+            }
           ],
           "mdVariants": [
-            "```html\n<li>1er produit</li>\n<li>2ème produit</li>\n<li>3ème produit</li>\n```\n\nÉcrivez le code JavaScript permettant d'afficher \"`ok`\" (sans les guillemets) dans un `alert` à chaque fois que l'utilisateur cliquera sur n'importe lequel de ces trois éléments.\n\nPour définir le comportement au clic, utiliser la propriété `onclick`.\n\n"
+            "```html\n<li>1er produit</li>\n<li>2ème produit</li>\n<li>3ème produit</li>\n```\n\nÉcrivez le code JavaScript permettant d'afficher \"`ok`\" (sans les guillemets) dans un alert à chaque fois que l'utilisateur cliquera sur n'importe lequel de ces trois éléments.\n\nPour définir le comportement au clic, utiliser la propriété `onclick`.\n\n<!-- variantes: -->\n\n\n",
+            "```html\n<li>1er produit</li>\n<li>2ème produit</li>\n<li>3ème produit</li>\n```\n\nÉcrivez le code JavaScript permettant d'afficher \"`ok`\" (sans les guillemets) dans la console à chaque fois que l'utilisateur cliquera sur n'importe lequel de ces trois éléments.\n\nPour définir le comportement au clic, utiliser la propriété `onclick`.\n\n<!-- variantes: -->\n\n\n"
           ]
         },
         {
           "i": 10,
           "id": "code10",
           "variants": [
-            {}
+            {
+              "fctName": "initGallery",
+              "url2": "https://i.imgur.com/emRrCLd.jpg"
+            },
+            {
+              "fctName": "embedGallery",
+              "url2": "https://i.imgur.com/emRrCLd.jpg"
+            },
+            {
+              "fctName": "initGallery",
+              "url2": "http://i.imgur.com/bdh4Qpn.jpg"
+            }
           ],
           "mdVariants": [
-            "Je souhaite intégrer une galerie d'images sur mon site, en utilisant un composant déjà existant.\n\nVoici un extrait de la documentation du composant:\n\n> Pour instancier une galerie sur votre page, appelez la fonction `initGallery(element, images)`, avec en paramètres:\n> \n> - `element`(*type: objet*): élément du DOM dans lequel intégrer la galerie,\n> - `images`(*type: tableau de chaînes de caractères*): URLs des images à intégrer dans la galerie.\n\nMon fichier HTML contient ces éléments:\n\n```html\n<script src=\"https://controle.js/gallery.js\"></script>\n<div id=\"my-gallery\"></div>\n```\n\nJe souhaite intégrer la galerie dans le `<div>`, avec les images suivantes:\n\n - `https://i.imgur.com/ydi5jMh.jpg`\n - `https://i.imgur.com/emRrCLd.jpg`\n - `https://i.imgur.com/HdsQ3fe.jpg`\n\nQuel code JavaScript dois-je exécuter pour intégrer la galerie dans ma page ?\n\n"
+            "Je souhaite intégrer une galerie d'images sur mon site, en utilisant un composant déjà existant.\n\nVoici un extrait de la documentation du composant:\n\n> Pour instancier une galerie sur votre page, appelez la fonction `initGallery(element, images)`, avec en paramètres:\n> \n> - `element`(*type: objet*): élément du DOM dans lequel intégrer la galerie,\n> - `images`(*type: tableau de chaînes de caractères*): URLs des images à intégrer dans la galerie.\n\nMon fichier HTML contient ces éléments:\n\n```html\n<script src=\"https://controle.js/gallery.js\"></script>\n<div id=\"my-gallery\"></div>\n```\n\nJe souhaite intégrer la galerie dans le `<div>`, avec les images suivantes:\n\n - `https://i.imgur.com/ydi5jMh.jpg`\n - `https://i.imgur.com/emRrCLd.jpg`\n - `https://i.imgur.com/HdsQ3fe.jpg`\n\nQuel code JavaScript dois-je exécuter pour intégrer la galerie dans ma page ?\n\n<!-- variantes: -->\n\n\n",
+            "Je souhaite intégrer une galerie d'images sur mon site, en utilisant un composant déjà existant.\n\nVoici un extrait de la documentation du composant:\n\n> Pour instancier une galerie sur votre page, appelez la fonction `embedGallery(element, images)`, avec en paramètres:\n> \n> - `element`(*type: objet*): élément du DOM dans lequel intégrer la galerie,\n> - `images`(*type: tableau de chaînes de caractères*): URLs des images à intégrer dans la galerie.\n\nMon fichier HTML contient ces éléments:\n\n```html\n<script src=\"https://controle.js/gallery.js\"></script>\n<div id=\"my-gallery\"></div>\n```\n\nJe souhaite intégrer la galerie dans le `<div>`, avec les images suivantes:\n\n - `https://i.imgur.com/ydi5jMh.jpg`\n - `https://i.imgur.com/emRrCLd.jpg`\n - `https://i.imgur.com/HdsQ3fe.jpg`\n\nQuel code JavaScript dois-je exécuter pour intégrer la galerie dans ma page ?\n\n<!-- variantes: -->\n\n\n",
+            "Je souhaite intégrer une galerie d'images sur mon site, en utilisant un composant déjà existant.\n\nVoici un extrait de la documentation du composant:\n\n> Pour instancier une galerie sur votre page, appelez la fonction `initGallery(element, images)`, avec en paramètres:\n> \n> - `element`(*type: objet*): élément du DOM dans lequel intégrer la galerie,\n> - `images`(*type: tableau de chaînes de caractères*): URLs des images à intégrer dans la galerie.\n\nMon fichier HTML contient ces éléments:\n\n```html\n<script src=\"https://controle.js/gallery.js\"></script>\n<div id=\"my-gallery\"></div>\n```\n\nJe souhaite intégrer la galerie dans le `<div>`, avec les images suivantes:\n\n - `https://i.imgur.com/ydi5jMh.jpg`\n - `http://i.imgur.com/bdh4Qpn.jpg`\n - `https://i.imgur.com/HdsQ3fe.jpg`\n\nQuel code JavaScript dois-je exécuter pour intégrer la galerie dans ma page ?\n\n<!-- variantes: -->\n\n\n"
           ]
         }
       ]
