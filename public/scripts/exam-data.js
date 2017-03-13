@@ -31,7 +31,7 @@
       "ptsNull": 0
     },
     "codeGrading": {
-      "ptsPerExercise": 4
+      "ptsPerExercise": 3
     }
   };
   app.exercises = [
@@ -40,7 +40,7 @@
       "i": 1,
       "isQuizz": true,
       "title": "QCM (1 point par bonne réponse)",
-      "maxScore": 4,
+      "maxScore": 5,
       "questions": [
         {
           "i": 1,
@@ -91,6 +91,29 @@
         {
           "i": 3,
           "id": "qcm3",
+          "md": "```html\n<div id=\"monDiv\" class=\"hidden\">contenu</div>\n```\n\nQuelle instruction faut-il exécuter pour retirer la classe `hidden` de cet élément ?\n",
+          "choices": [
+            {
+              "name": 1,
+              "text": "element.class = '';"
+            },
+            {
+              "name": 2,
+              "text": "element.classList = '';"
+            },
+            {
+              "name": 3,
+              "text": "element.classList.remove('hidden');"
+            },
+            {
+              "name": 4,
+              "text": "element.style.display = 'block';"
+            }
+          ]
+        },
+        {
+          "i": 4,
+          "id": "qcm4",
           "md": "Supposons que `elements` soit un tableau d'éléments HTML.\n\n```js\nfor(var i = 0; i < elements.length; i++) {\n  elements[i].onclick = function() {\n    console.log(i);\n  }\n}\n```\n\nComment pourrait-on s'assurer que la valeur de `i` correspondante à chaque élément soit bien affichée dans la console quand l'utilisateur cliquera dessus ?\n",
           "choices": [
             {
@@ -112,8 +135,8 @@
           ]
         },
         {
-          "i": 4,
-          "id": "qcm4",
+          "i": 5,
+          "id": "qcm5",
           "md": "```js\nvar point = new Point(4, 3);\n```\n\nComment appelle-t-on l'opération à droite du signe `=` ?\n",
           "choices": [
             {
@@ -140,19 +163,9 @@
       "_info": "generated from ex.02.code.template.md",
       "i": 2,
       "isCode": true,
-      "title": "Exercices de codage (4 pts par question)",
-      "maxScore": 16,
+      "title": "Exercices de codage (3 pts par question)",
+      "maxScore": 15,
       "questions": [
-        {
-          "i": 5,
-          "id": "code5",
-          "variants": [
-            {}
-          ],
-          "mdVariants": [
-            "\nCréez une variable `obj` et affectez-lui un objet contenant deux propriétés:\n\n - une propriété `nom` ayant `'sause'` comme valeur (type: chaîne de caractères),\n - et une propriété `age` ayant `46` comme valeur (type: nombre).\n\n"
-          ]
-        },
         {
           "i": 6,
           "id": "code6",
@@ -160,7 +173,7 @@
             {}
           ],
           "mdVariants": [
-            "On fournit le code JavaScript suivant:\n\n```js\nvar profilInstagram = {\n  prenom: 'François',\n  photos: [\n    {\n      nom: 'mon chien est moi',\n      url: 'http://imgur.com/img/1',\n    },\n    {\n      nom: 'coucher de soleil => such wow!',\n      url: 'http://imgur.com/img/2',\n    },\n  ],\n};\nconsole.log(chemin);\n```\n\nPar quoi faut-il remplacer `chemin`, pour obtenir l'`url` de la deuxième photo de François ?\n\n(utilisez la notation pointée à partir de l'objet `profilInstagram`)\n\n"
+            "\nCréez une variable `obj` et affectez-lui un objet contenant deux propriétés:\n\n - une propriété `nom` ayant `'sause'` comme valeur (type: chaîne de caractères),\n - et une propriété `age` ayant `46` comme valeur (type: nombre).\n\n"
           ]
         },
         {
@@ -170,12 +183,32 @@
             {}
           ],
           "mdVariants": [
-            "```html\n<li>1er produit</li>\n<li>2ème produit</li>\n<li>3ème produit</li>\n```\n\nÉcrivez le code JavaScript permettant d'afficher \"`ok`\" (sans les guillemets) dans un `alert` à chaque fois que l'utilisateur cliquera sur n'importe lequel de ces trois éléments.\n\nPour définir le comportement au clic, utiliser la propriété `onclick`.\n\n"
+            "On fournit le code JavaScript suivant:\n\n```js\nvar profilInstagram = {\n  prenom: 'François',\n  photos: [\n    {\n      nom: 'mon chien est moi',\n      url: 'http://imgur.com/img/1',\n    },\n    {\n      nom: 'coucher de soleil => such wow!',\n      url: 'http://imgur.com/img/2',\n    },\n  ],\n};\nconsole.log(chemin);\n```\n\nPar quoi faut-il remplacer `chemin`, pour obtenir l'`url` de la deuxième photo de François ?\n\n(utilisez la notation pointée à partir de l'objet `profilInstagram`)\n\n"
           ]
         },
         {
           "i": 8,
           "id": "code8",
+          "variants": [
+            {}
+          ],
+          "mdVariants": [
+            "Supposons qu'une variable `element` a été initialisée de la manière suivante:\n\n```js\nvar element = document.getElementById('mon-element');\n```\n\nÉcrivez l'instruction JavaScript permettant d'ajouter la classe `highlight` à cet élément, en utilisant la variable `element` fournie.\n\n"
+          ]
+        },
+        {
+          "i": 9,
+          "id": "code9",
+          "variants": [
+            {}
+          ],
+          "mdVariants": [
+            "```html\n<li>1er produit</li>\n<li>2ème produit</li>\n<li>3ème produit</li>\n```\n\nÉcrivez le code JavaScript permettant d'afficher \"`ok`\" (sans les guillemets) dans un `alert` à chaque fois que l'utilisateur cliquera sur n'importe lequel de ces trois éléments.\n\nPour définir le comportement au clic, utiliser la propriété `onclick`.\n\n"
+          ]
+        },
+        {
+          "i": 10,
+          "id": "code10",
           "variants": [
             {}
           ],

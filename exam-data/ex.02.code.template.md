@@ -1,4 +1,4 @@
-# Exercices de codage (4 pts par question)
+# Exercices de codage (3 pts par question)
 
 Créez une variable `obj` et affectez-lui un objet contenant deux propriétés:
 
@@ -88,6 +88,45 @@ profilInstagram.photos[1].url
   var tests = [
     studentCode === 'profilInstagram.photos[1].url', // notation pointée
     result === 'http://imgur.com/img/2', // valeur finale
+  ];
+  application.remote._send(null, tests);
+})();
+```
+
+---
+
+Supposons qu'une variable `element` a été initialisée de la manière suivante:
+
+```js
+var element = document.getElementById('mon-element');
+```
+
+Écrivez l'instruction JavaScript permettant d'ajouter la classe `highlight` à cet élément, en utilisant la variable `element` fournie.
+
+???
+
+Solution:
+
+```js
+element.classList.add('highlight');
+```
+
+--
+
+```js
+// automatic student evaluation code
+(function evaluateStudentCode(){
+  var element = {
+    classList: {
+      add: function(className) {
+        element.className += ' ' + className;
+      },
+    },
+    className: '',
+  };
+  _runStudentCode();
+  var tests = [
+    element.className.indexOf('highlight') !== -1,
   ];
   application.remote._send(null, tests);
 })();

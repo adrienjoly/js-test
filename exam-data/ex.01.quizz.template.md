@@ -30,6 +30,19 @@ Quelle serait le type de la valeur retournée par `document.getElementsByClassNa
 
 ---
 
+```html
+<div id="monDiv" class="hidden">contenu</div>
+```
+
+Quelle instruction faut-il exécuter pour retirer la classe `hidden` de cet élément ?
+
+- element.class = '';
+- element.classList = '';
+* element.classList.remove('hidden');
+- element.style.display = 'block';
+
+---
+
 Supposons que `elements` soit un tableau d'éléments HTML.
 
 ```js
