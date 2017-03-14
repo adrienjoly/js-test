@@ -53,7 +53,7 @@ function renderExercisesFile(exercises) {
     '(function(document) {',
     '  \'use strict\';',
     !config.redirectToHttps ? '' : [
-      '  if(window.location.href.match(/^http\\:\\/\\/(?!localhost).*$/))',
+      '  if(window.location.href.match(/^http\\:\\/\\/(?!localhost|(.*\.ngrok.io)).*$/))',
       '    window.location.href = window.location.href.replace(\'http:\', \'https:\');',
     ].join('\n'),
     '  var app = document.querySelector(\'#app\');',
