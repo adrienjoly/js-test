@@ -27,9 +27,8 @@
     "eval-firebase-export": "node ./src/evaluateGroupFile.js ../exam-data/js-test-2-export.json &>./exam-data/js-test-2-export.eval.log",
     "eval-student-groups": "src/score-student-groups.sh ./student-groups/*.json",
     "eval-groups-from-firebase": "src/score-groups.sh",
-    "deploy-firebase-hosting": "firebase deploy; # alternative to heroku, but did not scale over 20 simultaneous connections",
-    "init-heroku": "heroku git:remote -a js-controle-2 # (re)sets current heroku git remote",
-    "deploy": "git push heroku master",
+    "deploy-firebase-hosting": "firebase use default && firebase deploy; # alternative to heroku, but did not scale over 20 simultaneous connections",
+    "deploy-heroku": "heroku git:remote -a js-qcm && git push heroku master",
     "deploy-instances": "./src/multi-instance-deploy.sh",
     "eval-instances": "./src/multi-instance-eval.sh"
   },
