@@ -23,36 +23,37 @@ STUDENT: aubin_keravel
   | // STUDENT CODE:
   | 
   | var obj = (nom, age)
-Mon, 20 Mar 2017 09:27:59 GMT jailed:sandbox ReferenceError: nom is not defined
-    at evaluateStudentCode (DYNAMIC PLUGIN:6:15)
-    at DYNAMIC PLUGIN:15:3
+  | /!\ Execution error: nom is not defined
+Mon, 20 Mar 2017 10:40:03 GMT jailed:sandbox TypeError: Cannot read property 'name' of undefined
+    at evaluateStudentCode (DYNAMIC PLUGIN:13:8)
+    at DYNAMIC PLUGIN:18:3
     at ContextifyScript.Script.runInContext (vm.js:35:29)
     at ContextifyScript.Script.runInNewContext (vm.js:41:15)
     at Object.exports.runInNewContext (vm.js:72:17)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:151:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:165:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:53:7)
     at emitTwo (events.js:106:13)
     at process.emit (events.js:191:7)
-  | => test runner err: ReferenceError: nom is not defined
+  | => test runner err: TypeError: Cannot read property 'name' of undefined at evaluateStudentCode (DYNAMIC PLUGIN:13:8)
   | 
   | ------------- EXERCISE: code7 (variant: 1) -------------
   | 
   | // STUDENT CODE:
   | 
   | profilInstagram.photos.url[0].value
-Mon, 20 Mar 2017 09:27:59 GMT jailed:sandbox TypeError: Cannot read property '0' of undefined
+Mon, 20 Mar 2017 10:40:03 GMT jailed:sandbox TypeError: Cannot read property '0' of undefined
     at eval (eval at evaluateStudentCode (DYNAMIC PLUGIN:20:21), <anonymous>:1:27)
     at evaluateStudentCode (DYNAMIC PLUGIN:20:16)
     at DYNAMIC PLUGIN:27:3
     at ContextifyScript.Script.runInContext (vm.js:35:29)
     at ContextifyScript.Script.runInNewContext (vm.js:41:15)
     at Object.exports.runInNewContext (vm.js:72:17)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:151:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:165:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:53:7)
     at emitTwo (events.js:106:13)
-  | => test runner err: TypeError: Cannot read property '0' of undefined
+  | => test runner err: TypeError: Cannot read property '0' of undefined at eval (eval at evaluateStudentCode (DYNAMIC PLUGIN:20:21), <anonymous>:1:27)
   | 
   | ------------- EXERCISE: code8 (variant: 1) -------------
   | 
@@ -72,18 +73,12 @@ Mon, 20 Mar 2017 09:27:59 GMT jailed:sandbox TypeError: Cannot read property '0'
   |     alert ('ok');
   |   }
   | };
-Mon, 20 Mar 2017 09:27:59 GMT jailed:sandbox ReferenceError: boutons is not defined
-    at evaluateStudentCode (DYNAMIC PLUGIN:25:22)
-    at DYNAMIC PLUGIN:51:3
-    at ContextifyScript.Script.runInContext (vm.js:35:29)
-    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
-    at Object.exports.runInNewContext (vm.js:72:17)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
-    at emitTwo (events.js:106:13)
-    at process.emit (events.js:191:7)
-  | => test runner err: ReferenceError: boutons is not defined
+  | /!\ Execution error: boutons is not defined
+  | /!\ onclick non défini sur 1er <li>
+  | /!\ onclick non défini sur 3ème <li>
+  | /!\ onclick non défini sur 3ème <li>
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 1, 0, 0, 0, 0 ]
   | 
   | ------------- EXERCISE: code10 (variant: 1) -------------
   | 
@@ -92,24 +87,24 @@ Mon, 20 Mar 2017 09:27:59 GMT jailed:sandbox ReferenceError: boutons is not defi
   | var images = div.getElementById('my-galerie');
   | var imageVisible = 0;
   | function
-Mon, 20 Mar 2017 09:27:59 GMT jailed:sandbox DYNAMIC PLUGIN:41
-/* </STUDENT-CODE> */; // should call initGallery() once
-                     ^
-SyntaxError: Unexpected token ;
+Mon, 20 Mar 2017 10:40:03 GMT jailed:sandbox DYNAMIC PLUGIN:43
+}
+^
+SyntaxError: Unexpected token }
     at Object.exports.runInNewContext (vm.js:71:16)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:151:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:165:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:53:7)
     at emitTwo (events.js:106:13)
     at process.emit (events.js:191:7)
     at process.nextTick (internal/child_process.js:744:12)
     at _combinedTickCallback (internal/process/next_tick.js:67:7)
     at process._tickCallback (internal/process/next_tick.js:98:9)
-  | => test runner err: SyntaxError: Unexpected token ;
+  | => test runner err: SyntaxError: Unexpected token }
 
-  => code score: 0 / 15 pts
+  => code score: 0.5 / 15 pts
 
-=> TOTAL STUDENT SCORE: 2 / 20
+=> TOTAL STUDENT SCORE: 2.5 / 20
 
 
 ================================
@@ -161,26 +156,20 @@ STUDENT: bastien_bigot
   | // STUDENT CODE:
   | 
   | onclick="alert('ok');"
-Mon, 20 Mar 2017 09:28:00 GMT jailed:sandbox ReferenceError: onclick is not defined
-    at evaluateStudentCode (DYNAMIC PLUGIN:25:8)
-    at DYNAMIC PLUGIN:47:3
-    at ContextifyScript.Script.runInContext (vm.js:35:29)
-    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
-    at Object.exports.runInNewContext (vm.js:72:17)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
-    at emitTwo (events.js:106:13)
-    at process.emit (events.js:191:7)
-  | => test runner err: ReferenceError: onclick is not defined
+  | /!\ Execution error: onclick is not defined
+  | /!\ onclick non défini sur 1er <li>
+  | /!\ onclick non défini sur 3ème <li>
+  | /!\ onclick non défini sur 3ème <li>
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 1, 0, 0, 0, 0 ]
   | 
   | ------------- EXERCISE: code10 (variant: 0) -------------
   | 
   | // WARNING: NO STUDENT CODE => skipping
 
-  => code score: 3.75 / 15 pts
+  => code score: 4.25 / 15 pts
 
-=> TOTAL STUDENT SCORE: 3.75 / 20
+=> TOTAL STUDENT SCORE: 4.25 / 20
 
 
 ================================
@@ -222,18 +211,9 @@ STUDENT: benjamin_kissous
   | // STUDENT CODE:
   | 
   | element.getElementByClassName('surbrillance');
-Mon, 20 Mar 2017 09:28:00 GMT jailed:sandbox TypeError: element.getElementByClassName is not a function
-    at evaluateStudentCode (DYNAMIC PLUGIN:25:9)
-    at DYNAMIC PLUGIN:32:3
-    at ContextifyScript.Script.runInContext (vm.js:35:29)
-    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
-    at Object.exports.runInNewContext (vm.js:72:17)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
-    at emitTwo (events.js:106:13)
-    at process.emit (events.js:191:7)
-  | => test runner err: TypeError: element.getElementByClassName is not a function
+  | /!\ Execution error: element.getElementByClassName is not a function
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 1 ]
   | 
   | ------------- EXERCISE: code9 (variant: 0) -------------
   | 
@@ -242,9 +222,9 @@ Mon, 20 Mar 2017 09:28:00 GMT jailed:sandbox TypeError: element.getElementByClas
   | document.getElementsByTagName('li').onclick = function ok() {
   |   alert('ok');
   | }
-  | onclick non défini sur 1er <li>
-  | onclick non défini sur 3ème <li>
-  | onclick non défini sur 3ème <li>
+  | /!\ onclick non défini sur 1er <li>
+  | /!\ onclick non défini sur 3ème <li>
+  | /!\ onclick non défini sur 3ème <li>
   | 
   | // -> STUDENT SCORE ARRAY: [ 0, 1, 0, 0, 0, 0 ]
   | 
@@ -257,14 +237,14 @@ Mon, 20 Mar 2017 09:28:00 GMT jailed:sandbox TypeError: element.getElementByClas
   |   element: ,
   |   images:[https://i.imgur.com/ydi5jMh.jpg, https://i.imgur.com/emRrCLd.jpg, https://i.imgur.com/HdsQ3fe.jpg];
   | };
-Mon, 20 Mar 2017 09:28:00 GMT jailed:sandbox DYNAMIC PLUGIN:40
+Mon, 20 Mar 2017 10:40:04 GMT jailed:sandbox DYNAMIC PLUGIN:41
   element: ,
            ^
 SyntaxError: Unexpected token ,
     at Object.exports.runInNewContext (vm.js:71:16)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:151:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:165:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:53:7)
     at emitTwo (events.js:106:13)
     at process.emit (events.js:191:7)
     at process.nextTick (internal/child_process.js:744:12)
@@ -272,9 +252,9 @@ SyntaxError: Unexpected token ,
     at process._tickCallback (internal/process/next_tick.js:98:9)
   | => test runner err: SyntaxError: Unexpected token ,
 
-  => code score: 3.5 / 15 pts
+  => code score: 5 / 15 pts
 
-=> TOTAL STUDENT SCORE: 8.5 / 20
+=> TOTAL STUDENT SCORE: 10 / 20
 
 
 ================================
@@ -338,18 +318,9 @@ STUDENT: charles_kiefer
   | var maGalerie = embedGallery(element, ['https://i.imgur.com/ydi5jMh.jpg', 'https://i.imgur.com/emRrCLd.jpg', 'https://i.imgur.com/HdsQ3fe.jpg']);
   | maGalerie.ajouterImage('img7.jpg');
   | maGalerie.regenerer();
-Mon, 20 Mar 2017 09:28:00 GMT jailed:sandbox ReferenceError: element is not defined
-    at evaluateStudentCode (DYNAMIC PLUGIN:38:30)
-    at DYNAMIC PLUGIN:52:3
-    at ContextifyScript.Script.runInContext (vm.js:35:29)
-    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
-    at Object.exports.runInNewContext (vm.js:72:17)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
-    at emitTwo (events.js:106:13)
-    at process.emit (events.js:191:7)
-  | => test runner err: ReferenceError: element is not defined
+  | /!\ Execution error: element is not defined
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 0 ]
 
   => code score: 11.25 / 15 pts
 
@@ -404,14 +375,14 @@ STUDENT: edouard_duchesnedelamotte
   | https://i.imgur.com/emRrCLd.jpg,
   | https://i.imgur.com/HdsQ3fe.jpg;
   | element:div;
-Mon, 20 Mar 2017 09:28:00 GMT jailed:sandbox DYNAMIC PLUGIN:38
+Mon, 20 Mar 2017 10:40:05 GMT jailed:sandbox DYNAMIC PLUGIN:39
 embedGallery(element, images):
                              ^
 SyntaxError: Unexpected token :
     at Object.exports.runInNewContext (vm.js:71:16)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:151:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:165:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:53:7)
     at emitTwo (events.js:106:13)
     at process.emit (events.js:191:7)
     at process.nextTick (internal/child_process.js:744:12)
@@ -502,18 +473,9 @@ STUDENT: florian_compiegne
   | for (var i = 0; i < carousels.length; i++) {
   |   initialiseCarousel(carousels[i]);
   | }
-Mon, 20 Mar 2017 09:28:01 GMT jailed:sandbox TypeError: document.getElementsByClassName is not a function
-    at evaluateStudentCode (DYNAMIC PLUGIN:55:26)
-    at DYNAMIC PLUGIN:70:3
-    at ContextifyScript.Script.runInContext (vm.js:35:29)
-    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
-    at Object.exports.runInNewContext (vm.js:72:17)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
-    at emitTwo (events.js:106:13)
-    at process.emit (events.js:191:7)
-  | => test runner err: TypeError: document.getElementsByClassName is not a function
+  | /!\ Execution error: document.getElementsByClassName is not a function
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 0 ]
 
   => code score: 9 / 15 pts
 
@@ -540,14 +502,14 @@ STUDENT: guillaume_martin
   | // STUDENT CODE:
   | 
   | var obj = {name='sause', age=46};
-Mon, 20 Mar 2017 09:28:01 GMT jailed:sandbox DYNAMIC PLUGIN:6
+Mon, 20 Mar 2017 10:40:06 GMT jailed:sandbox DYNAMIC PLUGIN:7
 var obj = {name='sause', age=46};
            ^^^^^^^^^^^^
 SyntaxError: Invalid shorthand property initializer
     at Object.exports.runInNewContext (vm.js:71:16)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:151:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:165:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:53:7)
     at emitTwo (events.js:106:13)
     at process.emit (events.js:191:7)
     at process.nextTick (internal/child_process.js:744:12)
@@ -568,14 +530,14 @@ SyntaxError: Invalid shorthand property initializer
   | // STUDENT CODE:
   | 
   | var.className+= " surbrillance";
-Mon, 20 Mar 2017 09:28:01 GMT jailed:sandbox DYNAMIC PLUGIN:25
+Mon, 20 Mar 2017 10:40:06 GMT jailed:sandbox DYNAMIC PLUGIN:26
 var.className+= " surbrillance";
    ^
 SyntaxError: Unexpected token .
     at Object.exports.runInNewContext (vm.js:71:16)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:151:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:165:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:53:7)
     at emitTwo (events.js:106:13)
     at process.emit (events.js:191:7)
     at process.nextTick (internal/child_process.js:744:12)
@@ -588,40 +550,25 @@ SyntaxError: Unexpected token .
   | // STUDENT CODE:
   | 
   | li.onclick = console.log('ok');
-Mon, 20 Mar 2017 09:28:01 GMT jailed:sandbox ReferenceError: li is not defined
-    at evaluateStudentCode (DYNAMIC PLUGIN:25:1)
-    at DYNAMIC PLUGIN:47:3
-    at ContextifyScript.Script.runInContext (vm.js:35:29)
-    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
-    at Object.exports.runInNewContext (vm.js:72:17)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
-    at emitTwo (events.js:106:13)
-    at process.emit (events.js:191:7)
-  | => test runner err: ReferenceError: li is not defined
+  | /!\ Execution error: li is not defined
+  | /!\ onclick non défini sur 1er <li>
+  | /!\ onclick non défini sur 3ème <li>
+  | /!\ onclick non défini sur 3ème <li>
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 1, 0, 0, 0, 0 ]
   | 
   | ------------- EXERCISE: code10 (variant: 1) -------------
   | 
   | // STUDENT CODE:
   | 
   | embedGallery(div, 'https://i.imgur.com/ydi5jMh.jpg', 'https://i.imgur.com/emRrCLd.jpg', 'https://i.imgur.com/HdsQ3fe.jpg');
-Mon, 20 Mar 2017 09:28:01 GMT jailed:sandbox ReferenceError: div is not defined
-    at evaluateStudentCode (DYNAMIC PLUGIN:38:14)
-    at DYNAMIC PLUGIN:50:3
-    at ContextifyScript.Script.runInContext (vm.js:35:29)
-    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
-    at Object.exports.runInNewContext (vm.js:72:17)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
-    at emitTwo (events.js:106:13)
-    at process.emit (events.js:191:7)
-  | => test runner err: ReferenceError: div is not defined
+  | /!\ Execution error: div is not defined
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 0 ]
 
-  => code score: 0 / 15 pts
+  => code score: 0.5 / 15 pts
 
-=> TOTAL STUDENT SCORE: 1 / 20
+=> TOTAL STUDENT SCORE: 1.5 / 20
 
 
 ================================
@@ -675,9 +622,9 @@ STUDENT: ilana_bloch
   | produits.onclick = function() {
   |   alert("ok");
   | };
-  | onclick non défini sur 1er <li>
-  | onclick non défini sur 3ème <li>
-  | onclick non défini sur 3ème <li>
+  | /!\ onclick non défini sur 1er <li>
+  | /!\ onclick non défini sur 3ème <li>
+  | /!\ onclick non défini sur 3ème <li>
   | 
   | // -> STUDENT SCORE ARRAY: [ 0, 1, 0, 0, 0, 0 ]
   | 
@@ -729,18 +676,9 @@ STUDENT: jeanne_vinay
   | // STUDENT CODE:
   | 
   | element.style.backgroundColor='yellow';
-Mon, 20 Mar 2017 09:28:02 GMT jailed:sandbox TypeError: Cannot set property 'backgroundColor' of undefined
-    at evaluateStudentCode (DYNAMIC PLUGIN:25:30)
-    at DYNAMIC PLUGIN:32:3
-    at ContextifyScript.Script.runInContext (vm.js:35:29)
-    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
-    at Object.exports.runInNewContext (vm.js:72:17)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
-    at emitTwo (events.js:106:13)
-    at process.emit (events.js:191:7)
-  | => test runner err: TypeError: Cannot set property 'backgroundColor' of undefined
+  | /!\ Execution error: Cannot set property 'backgroundColor' of undefined
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 1 ]
   | 
   | ------------- EXERCISE: code9 (variant: 0) -------------
   | 
@@ -754,18 +692,12 @@ Mon, 20 Mar 2017 09:28:02 GMT jailed:sandbox TypeError: Cannot set property 'bac
   | 
   | afficher (document.getElementsByTagName('li').onclick); 
   | 
-Mon, 20 Mar 2017 09:28:02 GMT jailed:sandbox TypeError: Cannot read property 'length' of undefined
-    at afficher (DYNAMIC PLUGIN:26:22)
-    at evaluateStudentCode (DYNAMIC PLUGIN:31:1)
-    at DYNAMIC PLUGIN:54:3
-    at ContextifyScript.Script.runInContext (vm.js:35:29)
-    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
-    at Object.exports.runInNewContext (vm.js:72:17)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
-    at emitTwo (events.js:106:13)
-  | => test runner err: TypeError: Cannot read property 'length' of undefined
+  | /!\ Execution error: Cannot read property 'length' of undefined
+  | /!\ onclick non défini sur 1er <li>
+  | /!\ onclick non défini sur 3ème <li>
+  | /!\ onclick non défini sur 3ème <li>
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 1, 0, 0, 0, 0 ]
   | 
   | ------------- EXERCISE: code10 (variant: 1) -------------
   | 
@@ -773,14 +705,14 @@ Mon, 20 Mar 2017 09:28:02 GMT jailed:sandbox TypeError: Cannot read property 'le
   | 
   | embedGallery(document.getElementById('carousel-img'), [https://i.imgur.com/ydi5jMh.jpg, https://i.imgur.com/emRrCLd.jpg, https://i.imgur.com/HdsQ3fe.jpg]); 
   | 
-Mon, 20 Mar 2017 09:28:02 GMT jailed:sandbox DYNAMIC PLUGIN:38
+Mon, 20 Mar 2017 10:40:07 GMT jailed:sandbox DYNAMIC PLUGIN:39
 embedGallery(document.getElementById('carousel-img'), [https://i.imgur.com/ydi5jMh.jpg, https://i.imgur.com/emRrCLd.jpg, https://i.imgur.com/HdsQ3fe.jpg]); 
                                                             ^
 SyntaxError: Unexpected token :
     at Object.exports.runInNewContext (vm.js:71:16)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:151:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:165:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:53:7)
     at emitTwo (events.js:106:13)
     at process.emit (events.js:191:7)
     at process.nextTick (internal/child_process.js:744:12)
@@ -788,9 +720,9 @@ SyntaxError: Unexpected token :
     at process._tickCallback (internal/process/next_tick.js:98:9)
   | => test runner err: SyntaxError: Unexpected token :
 
-  => code score: 6 / 15 pts
+  => code score: 8 / 15 pts
 
-=> TOTAL STUDENT SCORE: 9 / 20
+=> TOTAL STUDENT SCORE: 11 / 20
 
 
 ================================
@@ -853,14 +785,14 @@ STUDENT: jessy_hachet
   | // STUDENT CODE:
   | 
   | var mygallery = initGallery(<div>, ['https://i.imgur.com/ydi5jMh.jpg', 'https://i.imgur.com/emRrCLd.jpg', 'https://i.imgur.com/HdsQ3fe.jpg']);
-Mon, 20 Mar 2017 09:28:02 GMT jailed:sandbox DYNAMIC PLUGIN:38
+Mon, 20 Mar 2017 10:40:08 GMT jailed:sandbox DYNAMIC PLUGIN:39
 var mygallery = initGallery(<div>, ['https://i.imgur.com/ydi5jMh.jpg', 'https://i.imgur.com/emRrCLd.jpg', 'https://i.imgur.com/HdsQ3fe.jpg']);
                             ^
 SyntaxError: Unexpected token <
     at Object.exports.runInNewContext (vm.js:71:16)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:151:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:165:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:53:7)
     at emitTwo (events.js:106:13)
     at process.emit (events.js:191:7)
     at process.nextTick (internal/child_process.js:744:12)
@@ -919,9 +851,9 @@ STUDENT: kamil_izaret
   | document.getElementsByTagName('li').onclick = function() {
   |   alert('ok');
   | };
-  | onclick non défini sur 1er <li>
-  | onclick non défini sur 3ème <li>
-  | onclick non défini sur 3ème <li>
+  | /!\ onclick non défini sur 1er <li>
+  | /!\ onclick non défini sur 3ème <li>
+  | /!\ onclick non défini sur 3ème <li>
   | 
   | // -> STUDENT SCORE ARRAY: [ 0, 1, 0, 0, 0, 0 ]
   | 
@@ -930,14 +862,14 @@ STUDENT: kamil_izaret
   | // STUDENT CODE:
   | 
   | initGallery(document.getElementById('my-gallery'),[https://i.imgur.com/ydi5jMh.jpg, http://i.imgur.com/bdh4Qpn.jpg, https://i.imgur.com/HdsQ3fe.jpg]);
-Mon, 20 Mar 2017 09:28:03 GMT jailed:sandbox DYNAMIC PLUGIN:38
+Mon, 20 Mar 2017 10:40:08 GMT jailed:sandbox DYNAMIC PLUGIN:39
 initGallery(document.getElementById('my-gallery'),[https://i.imgur.com/ydi5jMh.jpg, http://i.imgur.com/bdh4Qpn.jpg, https://i.imgur.com/HdsQ3fe.jpg]);
                                                         ^
 SyntaxError: Unexpected token :
     at Object.exports.runInNewContext (vm.js:71:16)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:151:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:165:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:53:7)
     at emitTwo (events.js:106:13)
     at process.emit (events.js:191:7)
     at process.nextTick (internal/child_process.js:744:12)
@@ -972,14 +904,14 @@ STUDENT: lara_kounowski
   | var obj = new Object();
   | obj.nom = 'sause';
   | obj.age = ;
-Mon, 20 Mar 2017 09:28:03 GMT jailed:sandbox DYNAMIC PLUGIN:8
+Mon, 20 Mar 2017 10:40:08 GMT jailed:sandbox DYNAMIC PLUGIN:9
 obj.age = ;
           ^
 SyntaxError: Unexpected token ;
     at Object.exports.runInNewContext (vm.js:71:16)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:151:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:165:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:53:7)
     at emitTwo (events.js:106:13)
     at process.emit (events.js:191:7)
     at process.nextTick (internal/child_process.js:744:12)
@@ -997,18 +929,9 @@ SyntaxError: Unexpected token ;
   | 
   | var element = document.getElementById('mon-element');
   |   element.style.backgroundColor = 'yellow';
-Mon, 20 Mar 2017 09:28:03 GMT jailed:sandbox TypeError: Cannot set property 'backgroundColor' of undefined
-    at evaluateStudentCode (DYNAMIC PLUGIN:27:33)
-    at DYNAMIC PLUGIN:34:3
-    at ContextifyScript.Script.runInContext (vm.js:35:29)
-    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
-    at Object.exports.runInNewContext (vm.js:72:17)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
-    at emitTwo (events.js:106:13)
-    at process.emit (events.js:191:7)
-  | => test runner err: TypeError: Cannot set property 'backgroundColor' of undefined
+  | /!\ Execution error: Cannot set property 'backgroundColor' of undefined
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 0 ]
   | 
   | ------------- EXERCISE: code9 (variant: 0) -------------
   | 
@@ -1019,18 +942,12 @@ Mon, 20 Mar 2017 09:28:03 GMT jailed:sandbox TypeError: Cannot set property 'bac
   |  boutons[i].onclick = function(event) {
   |     alert('ok' + event.currentTarget.innerHTML);
   | }
-Mon, 20 Mar 2017 09:28:03 GMT jailed:sandbox ReferenceError: i is not defined
-    at evaluateStudentCode (DYNAMIC PLUGIN:27:10)
-    at DYNAMIC PLUGIN:51:3
-    at ContextifyScript.Script.runInContext (vm.js:35:29)
-    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
-    at Object.exports.runInNewContext (vm.js:72:17)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
-    at emitTwo (events.js:106:13)
-    at process.emit (events.js:191:7)
-  | => test runner err: ReferenceError: i is not defined
+  | /!\ Execution error: i is not defined
+  | /!\ onclick non défini sur 1er <li>
+  | /!\ onclick non défini sur 3ème <li>
+  | /!\ onclick non défini sur 3ème <li>
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 0, 0, 0 ]
   | 
   | ------------- EXERCISE: code10 (variant: 0) -------------
   | 
@@ -1042,18 +959,9 @@ Mon, 20 Mar 2017 09:28:03 GMT jailed:sandbox ReferenceError: i is not defined
   |   var images = element[i].getElementsByTagName('my-gallery');
   |   creerGalerie(element, imagesDuGroupe);
   | }
-Mon, 20 Mar 2017 09:28:03 GMT jailed:sandbox TypeError: document.getElementsByClassName is not a function
-    at evaluateStudentCode (DYNAMIC PLUGIN:38:24)
-    at DYNAMIC PLUGIN:55:3
-    at ContextifyScript.Script.runInContext (vm.js:35:29)
-    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
-    at Object.exports.runInNewContext (vm.js:72:17)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
-    at emitTwo (events.js:106:13)
-    at process.emit (events.js:191:7)
-  | => test runner err: TypeError: document.getElementsByClassName is not a function
+  | /!\ Execution error: document.getElementsByClassName is not a function
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 0 ]
 
   => code score: 0 / 15 pts
 
@@ -1093,18 +1001,18 @@ STUDENT: louis_gosse
   | // STUDENT CODE:
   | 
   | profilInstagram.photos.url[1]
-Mon, 20 Mar 2017 09:28:03 GMT jailed:sandbox TypeError: Cannot read property '1' of undefined
+Mon, 20 Mar 2017 10:40:09 GMT jailed:sandbox TypeError: Cannot read property '1' of undefined
     at eval (eval at evaluateStudentCode (DYNAMIC PLUGIN:20:21), <anonymous>:1:27)
     at evaluateStudentCode (DYNAMIC PLUGIN:20:16)
     at DYNAMIC PLUGIN:27:3
     at ContextifyScript.Script.runInContext (vm.js:35:29)
     at ContextifyScript.Script.runInNewContext (vm.js:41:15)
     at Object.exports.runInNewContext (vm.js:72:17)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:151:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:165:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:53:7)
     at emitTwo (events.js:106:13)
-  | => test runner err: TypeError: Cannot read property '1' of undefined
+  | => test runner err: TypeError: Cannot read property '1' of undefined at eval (eval at evaluateStudentCode (DYNAMIC PLUGIN:20:21), <anonymous>:1:27)
   | 
   | ------------- EXERCISE: code8 (variant: 2) -------------
   | 
@@ -1117,9 +1025,9 @@ Mon, 20 Mar 2017 09:28:03 GMT jailed:sandbox TypeError: Cannot read property '1'
   | document.getElementsByTagName("li").onclick = function () {
   |   console.log(ok);
   | };
-  | onclick non défini sur 1er <li>
-  | onclick non défini sur 3ème <li>
-  | onclick non défini sur 3ème <li>
+  | /!\ onclick non défini sur 1er <li>
+  | /!\ onclick non défini sur 3ème <li>
+  | /!\ onclick non défini sur 3ème <li>
   | 
   | // -> STUDENT SCORE ARRAY: [ 0, 1, 0, 0, 0, 0 ]
   | 
@@ -1131,20 +1039,20 @@ Mon, 20 Mar 2017 09:28:03 GMT jailed:sandbox TypeError: Cannot read property '1'
   |  for (var i = 0; i < galerie.lenght; i++) {
   | var image
   | 
-Mon, 20 Mar 2017 09:28:03 GMT jailed:sandbox DYNAMIC PLUGIN:53
-})();
- ^
-SyntaxError: Unexpected token )
+Mon, 20 Mar 2017 10:40:09 GMT jailed:sandbox DYNAMIC PLUGIN:45
+catch(e) { application.remote._log("/!\\ Execution error:", e.message); };; // should call initGallery() once
+^^^^^
+SyntaxError: Unexpected token catch
     at Object.exports.runInNewContext (vm.js:71:16)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:151:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:165:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:53:7)
     at emitTwo (events.js:106:13)
     at process.emit (events.js:191:7)
     at process.nextTick (internal/child_process.js:744:12)
     at _combinedTickCallback (internal/process/next_tick.js:67:7)
     at process._tickCallback (internal/process/next_tick.js:98:9)
-  | => test runner err: SyntaxError: Unexpected token )
+  | => test runner err: SyntaxError: Unexpected token catch
 
   => code score: 2.75 / 15 pts
 
@@ -1174,14 +1082,14 @@ STUDENT: madison_hayat
   | nom = 'sause';
   | age = 46;
   | }
-Mon, 20 Mar 2017 09:28:03 GMT jailed:sandbox DYNAMIC PLUGIN:7
+Mon, 20 Mar 2017 10:40:09 GMT jailed:sandbox DYNAMIC PLUGIN:8
 nom = 'sause';
              ^
 SyntaxError: Unexpected token ;
     at Object.exports.runInNewContext (vm.js:71:16)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:151:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:165:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:53:7)
     at emitTwo (events.js:106:13)
     at process.emit (events.js:191:7)
     at process.nextTick (internal/child_process.js:744:12)
@@ -1194,36 +1102,27 @@ SyntaxError: Unexpected token ;
   | // STUDENT CODE:
   | 
   | document.getElementById('http://imgur.com/img/1');
-Mon, 20 Mar 2017 09:28:03 GMT jailed:sandbox ReferenceError: document is not defined
+Mon, 20 Mar 2017 10:40:09 GMT jailed:sandbox ReferenceError: document is not defined
     at eval (eval at evaluateStudentCode (DYNAMIC PLUGIN:20:21), <anonymous>:1:1)
     at evaluateStudentCode (DYNAMIC PLUGIN:20:16)
     at DYNAMIC PLUGIN:27:3
     at ContextifyScript.Script.runInContext (vm.js:35:29)
     at ContextifyScript.Script.runInNewContext (vm.js:41:15)
     at Object.exports.runInNewContext (vm.js:72:17)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:151:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:165:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:53:7)
     at emitTwo (events.js:106:13)
-  | => test runner err: ReferenceError: document is not defined
+  | => test runner err: ReferenceError: document is not defined at eval (eval at evaluateStudentCode (DYNAMIC PLUGIN:20:21), <anonymous>:1:1)
   | 
   | ------------- EXERCISE: code8 (variant: 0) -------------
   | 
   | // STUDENT CODE:
   | 
   | div.classhighlist.add('element');
-Mon, 20 Mar 2017 09:28:03 GMT jailed:sandbox ReferenceError: div is not defined
-    at evaluateStudentCode (DYNAMIC PLUGIN:25:1)
-    at DYNAMIC PLUGIN:32:3
-    at ContextifyScript.Script.runInContext (vm.js:35:29)
-    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
-    at Object.exports.runInNewContext (vm.js:72:17)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
-    at emitTwo (events.js:106:13)
-    at process.emit (events.js:191:7)
-  | => test runner err: ReferenceError: div is not defined
+  | /!\ Execution error: div is not defined
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 1 ]
   | 
   | ------------- EXERCISE: code9 (variant: 0) -------------
   | 
@@ -1234,14 +1133,14 @@ Mon, 20 Mar 2017 09:28:03 GMT jailed:sandbox ReferenceError: div is not defined
   |     alert('ok');
   |   }
   | }
-Mon, 20 Mar 2017 09:28:04 GMT jailed:sandbox DYNAMIC PLUGIN:26
+Mon, 20 Mar 2017 10:40:10 GMT jailed:sandbox DYNAMIC PLUGIN:27
   elements[i].onclick = function afficher('li') {
                                           ^^^^
 SyntaxError: Unexpected string
     at Object.exports.runInNewContext (vm.js:71:16)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:151:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:165:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:53:7)
     at emitTwo (events.js:106:13)
     at process.emit (events.js:191:7)
     at process.nextTick (internal/child_process.js:744:12)
@@ -1265,14 +1164,14 @@ SyntaxError: Unexpected string
   |     this.urlImages.push(https://i.imgur.com/HdsQ3fe.jpg);
   |   }
   | }
-Mon, 20 Mar 2017 09:28:04 GMT jailed:sandbox DYNAMIC PLUGIN:39
+Mon, 20 Mar 2017 10:40:10 GMT jailed:sandbox DYNAMIC PLUGIN:40
  addImage(https://i.imgur.com/ydi5jMh.jpg) {
                ^
 SyntaxError: Unexpected token :
     at Object.exports.runInNewContext (vm.js:71:16)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:151:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:165:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:53:7)
     at emitTwo (events.js:106:13)
     at process.emit (events.js:191:7)
     at process.nextTick (internal/child_process.js:744:12)
@@ -1280,9 +1179,9 @@ SyntaxError: Unexpected token :
     at process._tickCallback (internal/process/next_tick.js:98:9)
   | => test runner err: SyntaxError: Unexpected token :
 
-  => code score: 0 / 15 pts
+  => code score: 1.5 / 15 pts
 
-=> TOTAL STUDENT SCORE: 3 / 20
+=> TOTAL STUDENT SCORE: 4.5 / 20
 
 
 ================================
@@ -1308,14 +1207,14 @@ STUDENT: mickael_chekroun
   |   nom: 'sauce',
   |   age : 46,
   | }
-Mon, 20 Mar 2017 09:28:04 GMT jailed:sandbox DYNAMIC PLUGIN:6
+Mon, 20 Mar 2017 10:40:10 GMT jailed:sandbox DYNAMIC PLUGIN:7
 var obj {
         ^
 SyntaxError: Unexpected token {
     at Object.exports.runInNewContext (vm.js:71:16)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:151:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:165:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:53:7)
     at emitTwo (events.js:106:13)
     at process.emit (events.js:191:7)
     at process.nextTick (internal/child_process.js:744:12)
@@ -1328,18 +1227,18 @@ SyntaxError: Unexpected token {
   | // STUDENT CODE:
   | 
   | profilInstagram.photos.url[1]
-Mon, 20 Mar 2017 09:28:04 GMT jailed:sandbox TypeError: Cannot read property '1' of undefined
+Mon, 20 Mar 2017 10:40:10 GMT jailed:sandbox TypeError: Cannot read property '1' of undefined
     at eval (eval at evaluateStudentCode (DYNAMIC PLUGIN:20:21), <anonymous>:1:27)
     at evaluateStudentCode (DYNAMIC PLUGIN:20:16)
     at DYNAMIC PLUGIN:27:3
     at ContextifyScript.Script.runInContext (vm.js:35:29)
     at ContextifyScript.Script.runInNewContext (vm.js:41:15)
     at Object.exports.runInNewContext (vm.js:72:17)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:151:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:165:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:53:7)
     at emitTwo (events.js:106:13)
-  | => test runner err: TypeError: Cannot read property '1' of undefined
+  | => test runner err: TypeError: Cannot read property '1' of undefined at eval (eval at evaluateStudentCode (DYNAMIC PLUGIN:20:21), <anonymous>:1:27)
   | 
   | ------------- EXERCISE: code8 (variant: 0) -------------
   | 
@@ -1360,18 +1259,12 @@ Mon, 20 Mar 2017 09:28:04 GMT jailed:sandbox TypeError: Cannot read property '1'
   |       console.log('ok');
   |     }
   |   }
-Mon, 20 Mar 2017 09:28:04 GMT jailed:sandbox ReferenceError: i is not defined
-    at evaluateStudentCode (DYNAMIC PLUGIN:27:9)
-    at DYNAMIC PLUGIN:53:3
-    at ContextifyScript.Script.runInContext (vm.js:35:29)
-    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
-    at Object.exports.runInNewContext (vm.js:72:17)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
-    at emitTwo (events.js:106:13)
-    at process.emit (events.js:191:7)
-  | => test runner err: ReferenceError: i is not defined
+  | /!\ Execution error: i is not defined
+  | /!\ onclick non défini sur 1er <li>
+  | /!\ onclick non défini sur 3ème <li>
+  | /!\ onclick non défini sur 3ème <li>
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 1, 0, 0, 0, 0 ]
   | 
   | ------------- EXERCISE: code10 (variant: 0) -------------
   | 
@@ -1394,22 +1287,13 @@ Mon, 20 Mar 2017 09:28:04 GMT jailed:sandbox ReferenceError: i is not defined
   | for(i=0; i < mesImages.length; i++){
   |   initGallery(maDiv, mesImages);
   | }
-Mon, 20 Mar 2017 09:28:04 GMT jailed:sandbox TypeError: document.createElement is not a function
-    at evaluateStudentCode (DYNAMIC PLUGIN:39:30)
-    at DYNAMIC PLUGIN:66:3
-    at ContextifyScript.Script.runInContext (vm.js:35:29)
-    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
-    at Object.exports.runInNewContext (vm.js:72:17)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
-    at emitTwo (events.js:106:13)
-    at process.emit (events.js:191:7)
-  | => test runner err: TypeError: document.createElement is not a function
+  | /!\ Execution error: document.createElement is not a function
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 0 ]
 
-  => code score: 3 / 15 pts
+  => code score: 3.5 / 15 pts
 
-=> TOTAL STUDENT SCORE: 6 / 20
+=> TOTAL STUDENT SCORE: 6.5 / 20
 
 
 ================================
@@ -1432,14 +1316,14 @@ STUDENT: pierre_salesse
   | // STUDENT CODE:
   | 
   | var obj = {name : 'sauce,' age : 46};
-Mon, 20 Mar 2017 09:28:04 GMT jailed:sandbox DYNAMIC PLUGIN:6
+Mon, 20 Mar 2017 10:40:10 GMT jailed:sandbox DYNAMIC PLUGIN:7
 var obj = {name : 'sauce,' age : 46};
                            ^^^
 SyntaxError: Unexpected identifier
     at Object.exports.runInNewContext (vm.js:71:16)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:151:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:165:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:53:7)
     at emitTwo (events.js:106:13)
     at process.emit (events.js:191:7)
     at process.nextTick (internal/child_process.js:744:12)
@@ -1452,18 +1336,18 @@ SyntaxError: Unexpected identifier
   | // STUDENT CODE:
   | 
   | console.log(profilInstagram.photos.url[1]);
-Mon, 20 Mar 2017 09:28:04 GMT jailed:sandbox TypeError: Cannot read property '1' of undefined
+Mon, 20 Mar 2017 10:40:10 GMT jailed:sandbox TypeError: Cannot read property '1' of undefined
     at eval (eval at evaluateStudentCode (DYNAMIC PLUGIN:20:21), <anonymous>:1:39)
     at evaluateStudentCode (DYNAMIC PLUGIN:20:16)
     at DYNAMIC PLUGIN:27:3
     at ContextifyScript.Script.runInContext (vm.js:35:29)
     at ContextifyScript.Script.runInNewContext (vm.js:41:15)
     at Object.exports.runInNewContext (vm.js:72:17)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:151:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:165:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:53:7)
     at emitTwo (events.js:106:13)
-  | => test runner err: TypeError: Cannot read property '1' of undefined
+  | => test runner err: TypeError: Cannot read property '1' of undefined at eval (eval at evaluateStudentCode (DYNAMIC PLUGIN:20:21), <anonymous>:1:39)
   | 
   | ------------- EXERCISE: code8 (variant: 1) -------------
   | 
@@ -1622,18 +1506,9 @@ STUDENT: raphael_parets
   | // STUDENT CODE:
   | 
   | embedGallery(my-gallery, 'https://i.imgur.com/ydi5jMh.jpg', 'https://i.imgur.com/emRrCLd.jpg', 'https://i.imgur.com/HdsQ3fe.jpg');
-Mon, 20 Mar 2017 09:28:05 GMT jailed:sandbox ReferenceError: my is not defined
-    at evaluateStudentCode (DYNAMIC PLUGIN:38:14)
-    at DYNAMIC PLUGIN:50:3
-    at ContextifyScript.Script.runInContext (vm.js:35:29)
-    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
-    at Object.exports.runInNewContext (vm.js:72:17)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
-    at emitTwo (events.js:106:13)
-    at process.emit (events.js:191:7)
-  | => test runner err: ReferenceError: my is not defined
+  | /!\ Execution error: my is not defined
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 0 ]
 
   => code score: 12 / 15 pts
 
@@ -1702,14 +1577,14 @@ STUDENT: theo_geay
   | var galerie = document.getElementByID('my-gallery');
   | var images = (https://i.imgur.com/ydi5jMh.jpg, https://i.imgur.com/emRrCLd.jpg, https://i.imgur.com/HdsQ3fe.jpg);
   | embedGallery(galerie, images);
-Mon, 20 Mar 2017 09:28:05 GMT jailed:sandbox DYNAMIC PLUGIN:39
+Mon, 20 Mar 2017 10:40:12 GMT jailed:sandbox DYNAMIC PLUGIN:40
 var images = (https://i.imgur.com/ydi5jMh.jpg, https://i.imgur.com/emRrCLd.jpg, https://i.imgur.com/HdsQ3fe.jpg);
                    ^
 SyntaxError: Unexpected token :
     at Object.exports.runInNewContext (vm.js:71:16)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:151:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:165:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:53:7)
     at emitTwo (events.js:106:13)
     at process.emit (events.js:191:7)
     at process.nextTick (internal/child_process.js:744:12)
@@ -1750,18 +1625,18 @@ STUDENT: thibault_chambrillon
   | // STUDENT CODE:
   | 
   | profilInstagram.photos.url[0]
-Mon, 20 Mar 2017 09:28:05 GMT jailed:sandbox TypeError: Cannot read property '0' of undefined
+Mon, 20 Mar 2017 10:40:12 GMT jailed:sandbox TypeError: Cannot read property '0' of undefined
     at eval (eval at evaluateStudentCode (DYNAMIC PLUGIN:20:21), <anonymous>:1:27)
     at evaluateStudentCode (DYNAMIC PLUGIN:20:16)
     at DYNAMIC PLUGIN:27:3
     at ContextifyScript.Script.runInContext (vm.js:35:29)
     at ContextifyScript.Script.runInNewContext (vm.js:41:15)
     at Object.exports.runInNewContext (vm.js:72:17)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:151:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:165:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:53:7)
     at emitTwo (events.js:106:13)
-  | => test runner err: TypeError: Cannot read property '0' of undefined
+  | => test runner err: TypeError: Cannot read property '0' of undefined at eval (eval at evaluateStudentCode (DYNAMIC PLUGIN:20:21), <anonymous>:1:27)
   | 
   | ------------- EXERCISE: code8 (variant: 1) -------------
   | 
@@ -1780,18 +1655,12 @@ Mon, 20 Mar 2017 09:28:05 GMT jailed:sandbox TypeError: Cannot read property '0'
   |     alert('ok');
   |   }
   | }
-Mon, 20 Mar 2017 09:28:06 GMT jailed:sandbox ReferenceError: elements is not defined
-    at evaluateStudentCode (DYNAMIC PLUGIN:25:21)
-    at DYNAMIC PLUGIN:51:3
-    at ContextifyScript.Script.runInContext (vm.js:35:29)
-    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
-    at Object.exports.runInNewContext (vm.js:72:17)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
-    at emitTwo (events.js:106:13)
-    at process.emit (events.js:191:7)
-  | => test runner err: ReferenceError: elements is not defined
+  | /!\ Execution error: elements is not defined
+  | /!\ onclick non défini sur 1er <li>
+  | /!\ onclick non défini sur 3ème <li>
+  | /!\ onclick non défini sur 3ème <li>
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 1, 0, 0, 0, 0 ]
   | 
   | ------------- EXERCISE: code10 (variant: 1) -------------
   | 
@@ -1803,22 +1672,13 @@ Mon, 20 Mar 2017 09:28:06 GMT jailed:sandbox ReferenceError: elements is not def
   |   var element = groupes[i].getElementsByTagName('div');
   |   creerGalerie(element, images); 
   | }
-Mon, 20 Mar 2017 09:28:06 GMT jailed:sandbox TypeError: document.getElementsById is not a function
-    at evaluateStudentCode (DYNAMIC PLUGIN:38:24)
-    at DYNAMIC PLUGIN:55:3
-    at ContextifyScript.Script.runInContext (vm.js:35:29)
-    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
-    at Object.exports.runInNewContext (vm.js:72:17)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
-    at emitTwo (events.js:106:13)
-    at process.emit (events.js:191:7)
-  | => test runner err: TypeError: document.getElementsById is not a function
+  | /!\ Execution error: document.getElementsById is not a function
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 0 ]
 
-  => code score: 5.25 / 15 pts
+  => code score: 5.75 / 15 pts
 
-=> TOTAL STUDENT SCORE: 8.25 / 20
+=> TOTAL STUDENT SCORE: 8.75 / 20
 
 
 ================================
@@ -1860,14 +1720,14 @@ STUDENT: timothee_ong
   | // STUDENT CODE:
   | 
   | element..classList.add('surbrillance');
-Mon, 20 Mar 2017 09:28:06 GMT jailed:sandbox DYNAMIC PLUGIN:25
+Mon, 20 Mar 2017 10:40:13 GMT jailed:sandbox DYNAMIC PLUGIN:26
 element..classList.add('surbrillance');
         ^
 SyntaxError: Unexpected token .
     at Object.exports.runInNewContext (vm.js:71:16)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:151:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:165:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:53:7)
     at emitTwo (events.js:106:13)
     at process.emit (events.js:191:7)
     at process.nextTick (internal/child_process.js:744:12)
@@ -1942,18 +1802,9 @@ STUDENT: victor_legac
   | // STUDENT CODE:
   | 
   | document.getElementById('monElement').classList.add('surbrillance');
-Mon, 20 Mar 2017 09:28:06 GMT jailed:sandbox TypeError: Cannot read property 'classList' of null
-    at evaluateStudentCode (DYNAMIC PLUGIN:25:38)
-    at DYNAMIC PLUGIN:32:3
-    at ContextifyScript.Script.runInContext (vm.js:35:29)
-    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
-    at Object.exports.runInNewContext (vm.js:72:17)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
-    at emitTwo (events.js:106:13)
-    at process.emit (events.js:191:7)
-  | => test runner err: TypeError: Cannot read property 'classList' of null
+  | /!\ Execution error: Cannot read property 'classList' of null
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 0 ]
   | 
   | ------------- EXERCISE: code9 (variant: 0) -------------
   | 
@@ -1980,14 +1831,14 @@ Mon, 20 Mar 2017 09:28:06 GMT jailed:sandbox TypeError: Cannot read property 'cl
   |   url: https://i.imgur.com/HdsQ3fe.jpg,
   | };
   | 
-Mon, 20 Mar 2017 09:28:06 GMT jailed:sandbox DYNAMIC PLUGIN:38
+Mon, 20 Mar 2017 10:40:14 GMT jailed:sandbox DYNAMIC PLUGIN:39
 <div id="my-gallery"></div>
 ^
 SyntaxError: Unexpected token <
     at Object.exports.runInNewContext (vm.js:71:16)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:151:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:165:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:53:7)
     at emitTwo (events.js:106:13)
     at process.emit (events.js:191:7)
     at process.nextTick (internal/child_process.js:744:12)
@@ -2030,18 +1881,18 @@ STUDENT: victoria_antalis
   | // STUDENT CODE:
   | 
   | console.log(profilInstagram.prenom.photos.url);
-Mon, 20 Mar 2017 09:28:07 GMT jailed:sandbox TypeError: Cannot read property 'url' of undefined
+Mon, 20 Mar 2017 10:40:14 GMT jailed:sandbox TypeError: Cannot read property 'url' of undefined
     at eval (eval at evaluateStudentCode (DYNAMIC PLUGIN:20:21), <anonymous>:1:42)
     at evaluateStudentCode (DYNAMIC PLUGIN:20:16)
     at DYNAMIC PLUGIN:27:3
     at ContextifyScript.Script.runInContext (vm.js:35:29)
     at ContextifyScript.Script.runInNewContext (vm.js:41:15)
     at Object.exports.runInNewContext (vm.js:72:17)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:151:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:165:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:53:7)
     at emitTwo (events.js:106:13)
-  | => test runner err: TypeError: Cannot read property 'url' of undefined
+  | => test runner err: TypeError: Cannot read property 'url' of undefined at eval (eval at evaluateStudentCode (DYNAMIC PLUGIN:20:21), <anonymous>:1:42)
   | 
   | ------------- EXERCISE: code8 (variant: 0) -------------
   | 
@@ -2065,9 +1916,9 @@ Mon, 20 Mar 2017 09:28:07 GMT jailed:sandbox TypeError: Cannot read property 'ur
   | document.onclick = function() {
   |   changerDisplay('article', 'block'); // afficher tous les articles
   | };
-  | onclick non défini sur 1er <li>
-  | onclick non défini sur 3ème <li>
-  | onclick non défini sur 3ème <li>
+  | /!\ onclick non défini sur 1er <li>
+  | /!\ onclick non défini sur 3ème <li>
+  | /!\ onclick non défini sur 3ème <li>
   | 
   | // -> STUDENT SCORE ARRAY: [ 0, 1, 0, 0, 0, 0 ]
   | 

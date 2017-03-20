@@ -45,10 +45,40 @@ function makeCodeEvaluator(jailed, async, codeGradingOptions) {
         timeout && onDone(null, arguments);
       },
     };
-    plugin = new jailed.DynamicPlugin(code, api);
+    plugin = new jailed.DynamicPlugin(code, api, { failOnRuntimeError: true });
     plugin.whenFailed(onDone);
     //plugin.whenConnected(onDone);
     timeout = setTimeout(function(){ onDone(timeoutMessage); }, 2000);
+  }
+
+  function runCodeInWrappedSandbox(code, callback) {
+    /*
+    var consoleErrorInitial = console.error; // backup
+    console.error = function(stack) {
+      // TODO: for some reason, this code is never called...
+      console.log('JAILED ERROR:', stack);
+    };
+    */
+    runCodeInSandbox(code, function(err, res) {
+      //console.error = consoleErrorInitial; // restore
+      callback(err, res);
+    });
+  }
+
+  if (codeGradingOptions.wrapper) {
+    // wrapper could be overrided by CodeEvaluator.js, for catching Jailed errors from stderr
+    runCodeInWrappedSandbox = codeGradingOptions.wrapper.bind(runCodeInWrappedSandbox);
+  }
+
+  function wrapStudentCode(studentCode) {
+    return [
+      'try {',
+      '/* <STUDENT-CODE> */',
+      studentCode,
+      '/* </STUDENT-CODE> */',
+      '}',
+      'catch(e) { application.remote._log("/!\\\\ Execution error:", e.message); };',
+    ].join('\n');
   }
 
   function runTest(testCode, studentCode, callback) {
@@ -61,17 +91,13 @@ function makeCodeEvaluator(jailed, async, codeGradingOptions) {
     } else {
       var code = testCode
         .replace(/`_studentCode`/g, '`' + studentCode.replace(/`/g, '\\\`') + '`')
-        .replace(/_runStudentCode\(\)/g, [
-          '/* <STUDENT-CODE> */',
-          studentCode,
-          '/* </STUDENT-CODE> */' ].join('\n'))
-        .replace(/_runStudentCodeAgain\(\)/g, [
-          '/* <STUDENT-CODE> */',
-          studentCode.replace(/function ([^ \(]+)/g, '$1 = function'),
-          '/* </STUDENT-CODE> */' ].join('\n'));
+        .replace(/_runStudentCode\(\)/g, wrapStudentCode(studentCode))
+        .replace(/_runStudentCodeAgain\(\)/g,
+          wrapStudentCode(studentCode).replace(/function ([^ \(]+)/g, '$1 = function')
+        );
       //console.log(code);
       console.log([ '// STUDENT CODE:', studentCode ].join('\n\n'));
-      runCodeInSandbox(code, function(err, res) {
+      runCodeInWrappedSandbox(code, function(err, res) {
         if (err) console.log('=> test runner err:', err);
         var scoreArray = [ 0 ];
         if (res) {

@@ -226,15 +226,15 @@ for (var i = 0; i < lis.length; i++) {
   // test 3: click on first li => one alert
   _alerts = []; // reset/clear array, just in case
   try { _lis[0].onclick(); }
-  catch (e) { application.remote._log('onclick non défini sur 1er <li>'); }
+  catch (e) { application.remote._log('/!\\ onclick non défini sur 1er <li>'); }
   tests.push(_alerts.length === 1);
   tests.push(_alerts[0] === 'ok');
   // test 4: two clicks on last li => two alerts
   _alerts = []; // reset/clear array, just in case
   try { _lis[2].onclick(); }
-  catch (e) { application.remote._log('onclick non défini sur 3ème <li>'); }
+  catch (e) { application.remote._log('/!\\ onclick non défini sur 3ème <li>'); }
   try { _lis[2].onclick(); }
-  catch (e) { application.remote._log('onclick non défini sur 3ème <li>'); }
+  catch (e) { application.remote._log('/!\\ onclick non défini sur 3ème <li>'); }
   tests.push(_alerts.length === 2);
   tests.push(_alerts[0] === 'ok' && _alerts[1] === 'ok');
   application.remote._send(null, tests);
