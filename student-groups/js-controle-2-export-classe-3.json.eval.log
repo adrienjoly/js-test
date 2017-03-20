@@ -5,6 +5,125 @@ Reading and evaluating answers from: ../student-groups/js-controle-2-export-clas
 
 ================================
 
+STUDENT: aubin_keravel
+
+  -  quizz answers:
+  | qcm1 : 2 (solution: 3) => 0 pts
+  | qcm2 : 3 (solution: 1) => 0 pts
+  | qcm3 : 3 (solution: 3) => 1 pts
+  | qcm4 : 4 (solution: 4) => 1 pts
+  | qcm5 : 4 (solution: 2) => 0 pts
+
+  => quizz score: 2 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code6 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var obj = (nom, age)
+Mon, 20 Mar 2017 09:02:24 GMT jailed:sandbox ReferenceError: nom is not defined
+    at evaluateStudentCode (DYNAMIC PLUGIN:6:15)
+    at DYNAMIC PLUGIN:15:3
+    at ContextifyScript.Script.runInContext (vm.js:35:29)
+    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
+    at Object.exports.runInNewContext (vm.js:72:17)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:106:13)
+    at process.emit (events.js:191:7)
+  | => test runner err: ReferenceError: nom is not defined
+  | 
+  | ------------- EXERCISE: code7 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | profilInstagram.photos.url[0].value
+Mon, 20 Mar 2017 09:02:24 GMT jailed:sandbox TypeError: Cannot read property '0' of undefined
+    at eval (eval at evaluateStudentCode (DYNAMIC PLUGIN:19:21), <anonymous>:1:27)
+    at evaluateStudentCode (DYNAMIC PLUGIN:19:16)
+    at DYNAMIC PLUGIN:25:3
+    at ContextifyScript.Script.runInContext (vm.js:35:29)
+    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
+    at Object.exports.runInNewContext (vm.js:72:17)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:106:13)
+  | => test runner err: TypeError: Cannot read property '0' of undefined
+  | 
+  | ------------- EXERCISE: code8 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var element = document.getElementById('mon-element');
+  | element.className += 'highlight';
+Mon, 20 Mar 2017 09:02:24 GMT jailed:sandbox ReferenceError: document is not defined
+    at evaluateStudentCode (DYNAMIC PLUGIN:14:24)
+    at DYNAMIC PLUGIN:21:3
+    at ContextifyScript.Script.runInContext (vm.js:35:29)
+    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
+    at Object.exports.runInNewContext (vm.js:72:17)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:106:13)
+    at process.emit (events.js:191:7)
+  | => test runner err: ReferenceError: document is not defined
+  | 
+  | ------------- EXERCISE: code9 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | for (var i = 0 ; i < boutons.lengths ; i++) {
+  |   li[i].onclick = function () {
+  |     alert ('ok');
+  |   }
+  | };
+Mon, 20 Mar 2017 09:02:24 GMT jailed:sandbox ReferenceError: boutons is not defined
+    at evaluateStudentCode (DYNAMIC PLUGIN:25:22)
+    at DYNAMIC PLUGIN:48:3
+    at ContextifyScript.Script.runInContext (vm.js:35:29)
+    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
+    at Object.exports.runInNewContext (vm.js:72:17)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:106:13)
+    at process.emit (events.js:191:7)
+  | => test runner err: ReferenceError: boutons is not defined
+  | 
+  | ------------- EXERCISE: code10 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var images = div.getElementById('my-galerie');
+  | var imageVisible = 0;
+  | function
+Mon, 20 Mar 2017 09:02:24 GMT jailed:sandbox DYNAMIC PLUGIN:41
+/* </STUDENT-CODE> */; // should call initGallery() once
+                     ^
+SyntaxError: Unexpected token ;
+    at Object.exports.runInNewContext (vm.js:71:16)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
+    at emitTwo (events.js:106:13)
+    at process.emit (events.js:191:7)
+    at process.nextTick (internal/child_process.js:744:12)
+    at _combinedTickCallback (internal/process/next_tick.js:67:7)
+    at process._tickCallback (internal/process/next_tick.js:98:9)
+  | => test runner err: SyntaxError: Unexpected token ;
+
+  => code score: 0 / 15 pts
+
+=> TOTAL STUDENT SCORE: 2 / 20
+
+
+================================
+
 STUDENT: bastien_bigot
 
   -  quizz answers:
@@ -34,7 +153,7 @@ STUDENT: bastien_bigot
   | // STUDENT CODE:
   | 
   | console.log('http://example.com');
-Tue, 14 Mar 2017 13:33:36 GMT jailed:sandbox ReferenceError: console is not defined
+Mon, 20 Mar 2017 09:02:24 GMT jailed:sandbox ReferenceError: console is not defined
     at eval (eval at evaluateStudentCode (DYNAMIC PLUGIN:19:21), <anonymous>:1:1)
     at evaluateStudentCode (DYNAMIC PLUGIN:19:16)
     at DYNAMIC PLUGIN:25:3
@@ -54,7 +173,7 @@ Tue, 14 Mar 2017 13:33:36 GMT jailed:sandbox ReferenceError: console is not defi
   | var element = document.getElementById("mon-element");
   | element.className += " highlight";
   | 
-Tue, 14 Mar 2017 13:33:36 GMT jailed:sandbox ReferenceError: document is not defined
+Mon, 20 Mar 2017 09:02:25 GMT jailed:sandbox ReferenceError: document is not defined
     at evaluateStudentCode (DYNAMIC PLUGIN:14:24)
     at DYNAMIC PLUGIN:22:3
     at ContextifyScript.Script.runInContext (vm.js:35:29)
@@ -72,7 +191,7 @@ Tue, 14 Mar 2017 13:33:36 GMT jailed:sandbox ReferenceError: document is not def
   | // STUDENT CODE:
   | 
   | onclick="alert('ok');"
-Tue, 14 Mar 2017 13:33:36 GMT jailed:sandbox ReferenceError: onclick is not defined
+Mon, 20 Mar 2017 09:02:25 GMT jailed:sandbox ReferenceError: onclick is not defined
     at evaluateStudentCode (DYNAMIC PLUGIN:25:8)
     at DYNAMIC PLUGIN:44:3
     at ContextifyScript.Script.runInContext (vm.js:35:29)
@@ -125,7 +244,7 @@ STUDENT: benjamin_kissous
   | // STUDENT CODE:
   | 
   | console.log(profilInstagram.photos[0].url);
-Tue, 14 Mar 2017 13:33:36 GMT jailed:sandbox ReferenceError: console is not defined
+Mon, 20 Mar 2017 09:02:25 GMT jailed:sandbox ReferenceError: console is not defined
     at eval (eval at evaluateStudentCode (DYNAMIC PLUGIN:19:21), <anonymous>:1:1)
     at evaluateStudentCode (DYNAMIC PLUGIN:19:16)
     at DYNAMIC PLUGIN:25:3
@@ -143,7 +262,7 @@ Tue, 14 Mar 2017 13:33:36 GMT jailed:sandbox ReferenceError: console is not defi
   | // STUDENT CODE:
   | 
   | element.getElementByClassName('surbrillance');
-Tue, 14 Mar 2017 13:33:37 GMT jailed:sandbox TypeError: element.getElementByClassName is not a function
+Mon, 20 Mar 2017 09:02:25 GMT jailed:sandbox TypeError: element.getElementByClassName is not a function
     at evaluateStudentCode (DYNAMIC PLUGIN:14:9)
     at DYNAMIC PLUGIN:20:3
     at ContextifyScript.Script.runInContext (vm.js:35:29)
@@ -163,7 +282,7 @@ Tue, 14 Mar 2017 13:33:37 GMT jailed:sandbox TypeError: element.getElementByClas
   | document.getElementsByTagName('li').onclick = function ok() {
   |   alert('ok');
   | }
-Tue, 14 Mar 2017 13:33:37 GMT jailed:sandbox TypeError: _lis[0].onclick is not a function
+Mon, 20 Mar 2017 09:02:25 GMT jailed:sandbox TypeError: _lis[0].onclick is not a function
     at evaluateStudentCode (DYNAMIC PLUGIN:36:11)
     at DYNAMIC PLUGIN:46:3
     at ContextifyScript.Script.runInContext (vm.js:35:29)
@@ -185,7 +304,7 @@ Tue, 14 Mar 2017 13:33:37 GMT jailed:sandbox TypeError: _lis[0].onclick is not a
   |   element: ,
   |   images:[https://i.imgur.com/ydi5jMh.jpg, https://i.imgur.com/emRrCLd.jpg, https://i.imgur.com/HdsQ3fe.jpg];
   | };
-Tue, 14 Mar 2017 13:33:37 GMT jailed:sandbox DYNAMIC PLUGIN:40
+Mon, 20 Mar 2017 09:02:25 GMT jailed:sandbox DYNAMIC PLUGIN:40
   element: ,
            ^
 SyntaxError: Unexpected token ,
@@ -266,7 +385,7 @@ STUDENT: charles_kiefer
   | var maGalerie = embedGallery(element, ['https://i.imgur.com/ydi5jMh.jpg', 'https://i.imgur.com/emRrCLd.jpg', 'https://i.imgur.com/HdsQ3fe.jpg']);
   | maGalerie.ajouterImage('img7.jpg');
   | maGalerie.regenerer();
-Tue, 14 Mar 2017 13:33:37 GMT jailed:sandbox ReferenceError: element is not defined
+Mon, 20 Mar 2017 09:02:25 GMT jailed:sandbox ReferenceError: element is not defined
     at evaluateStudentCode (DYNAMIC PLUGIN:38:30)
     at DYNAMIC PLUGIN:52:3
     at ContextifyScript.Script.runInContext (vm.js:35:29)
@@ -332,7 +451,7 @@ STUDENT: edouard_duchesnedelamotte
   | https://i.imgur.com/emRrCLd.jpg,
   | https://i.imgur.com/HdsQ3fe.jpg;
   | element:div;
-Tue, 14 Mar 2017 13:33:37 GMT jailed:sandbox DYNAMIC PLUGIN:38
+Mon, 20 Mar 2017 09:02:26 GMT jailed:sandbox DYNAMIC PLUGIN:38
 embedGallery(element, images):
                              ^
 SyntaxError: Unexpected token :
@@ -381,7 +500,7 @@ STUDENT: florian_compiegne
   | // STUDENT CODE:
   | 
   | console.log(profilInstagram.photos[1].url);
-Tue, 14 Mar 2017 13:33:37 GMT jailed:sandbox ReferenceError: console is not defined
+Mon, 20 Mar 2017 09:02:26 GMT jailed:sandbox ReferenceError: console is not defined
     at eval (eval at evaluateStudentCode (DYNAMIC PLUGIN:19:21), <anonymous>:1:1)
     at evaluateStudentCode (DYNAMIC PLUGIN:19:16)
     at DYNAMIC PLUGIN:25:3
@@ -440,7 +559,7 @@ Tue, 14 Mar 2017 13:33:37 GMT jailed:sandbox ReferenceError: console is not defi
   | for (var i = 0; i < carousels.length; i++) {
   |   initialiseCarousel(carousels[i]);
   | }
-Tue, 14 Mar 2017 13:33:38 GMT jailed:sandbox TypeError: document.getElementsByClassName is not a function
+Mon, 20 Mar 2017 09:02:26 GMT jailed:sandbox TypeError: document.getElementsByClassName is not a function
     at evaluateStudentCode (DYNAMIC PLUGIN:55:26)
     at DYNAMIC PLUGIN:70:3
     at ContextifyScript.Script.runInContext (vm.js:35:29)
@@ -478,7 +597,7 @@ STUDENT: guillaume_martin
   | // STUDENT CODE:
   | 
   | var obj = {name='sause', age=46};
-Tue, 14 Mar 2017 13:33:38 GMT jailed:sandbox DYNAMIC PLUGIN:6
+Mon, 20 Mar 2017 09:02:26 GMT jailed:sandbox DYNAMIC PLUGIN:6
 var obj = {name='sause', age=46};
            ^^^^^^^^^^^^
 SyntaxError: Invalid shorthand property initializer
@@ -498,7 +617,7 @@ SyntaxError: Invalid shorthand property initializer
   | // STUDENT CODE:
   | 
   | console.log(profilInstagram.photos);
-Tue, 14 Mar 2017 13:33:38 GMT jailed:sandbox ReferenceError: console is not defined
+Mon, 20 Mar 2017 09:02:26 GMT jailed:sandbox ReferenceError: console is not defined
     at eval (eval at evaluateStudentCode (DYNAMIC PLUGIN:19:21), <anonymous>:1:1)
     at evaluateStudentCode (DYNAMIC PLUGIN:19:16)
     at DYNAMIC PLUGIN:25:3
@@ -516,7 +635,7 @@ Tue, 14 Mar 2017 13:33:38 GMT jailed:sandbox ReferenceError: console is not defi
   | // STUDENT CODE:
   | 
   | var.className+= " surbrillance";
-Tue, 14 Mar 2017 13:33:38 GMT jailed:sandbox DYNAMIC PLUGIN:14
+Mon, 20 Mar 2017 09:02:26 GMT jailed:sandbox DYNAMIC PLUGIN:14
 var.className+= " surbrillance";
    ^
 SyntaxError: Unexpected token .
@@ -536,7 +655,7 @@ SyntaxError: Unexpected token .
   | // STUDENT CODE:
   | 
   | li.onclick = console.log('ok');
-Tue, 14 Mar 2017 13:33:38 GMT jailed:sandbox ReferenceError: li is not defined
+Mon, 20 Mar 2017 09:02:26 GMT jailed:sandbox ReferenceError: li is not defined
     at evaluateStudentCode (DYNAMIC PLUGIN:25:1)
     at DYNAMIC PLUGIN:44:3
     at ContextifyScript.Script.runInContext (vm.js:35:29)
@@ -554,7 +673,7 @@ Tue, 14 Mar 2017 13:33:38 GMT jailed:sandbox ReferenceError: li is not defined
   | // STUDENT CODE:
   | 
   | embedGallery(div, 'https://i.imgur.com/ydi5jMh.jpg', 'https://i.imgur.com/emRrCLd.jpg', 'https://i.imgur.com/HdsQ3fe.jpg');
-Tue, 14 Mar 2017 13:33:38 GMT jailed:sandbox ReferenceError: div is not defined
+Mon, 20 Mar 2017 09:02:26 GMT jailed:sandbox ReferenceError: div is not defined
     at evaluateStudentCode (DYNAMIC PLUGIN:38:14)
     at DYNAMIC PLUGIN:50:3
     at ContextifyScript.Script.runInContext (vm.js:35:29)
@@ -623,7 +742,7 @@ STUDENT: ilana_bloch
   | produits.onclick = function() {
   |   alert("ok");
   | };
-Tue, 14 Mar 2017 13:33:38 GMT jailed:sandbox TypeError: _lis[0].onclick is not a function
+Mon, 20 Mar 2017 09:02:26 GMT jailed:sandbox TypeError: _lis[0].onclick is not a function
     at evaluateStudentCode (DYNAMIC PLUGIN:38:11)
     at DYNAMIC PLUGIN:48:3
     at ContextifyScript.Script.runInContext (vm.js:35:29)
@@ -684,7 +803,7 @@ STUDENT: jeanne_vinay
   | // STUDENT CODE:
   | 
   | element.style.backgroundColor='yellow';
-Tue, 14 Mar 2017 13:33:38 GMT jailed:sandbox TypeError: Cannot set property 'backgroundColor' of undefined
+Mon, 20 Mar 2017 09:02:27 GMT jailed:sandbox TypeError: Cannot set property 'backgroundColor' of undefined
     at evaluateStudentCode (DYNAMIC PLUGIN:14:30)
     at DYNAMIC PLUGIN:20:3
     at ContextifyScript.Script.runInContext (vm.js:35:29)
@@ -709,7 +828,7 @@ Tue, 14 Mar 2017 13:33:38 GMT jailed:sandbox TypeError: Cannot set property 'bac
   | 
   | afficher (document.getElementsByTagName('li').onclick); 
   | 
-Tue, 14 Mar 2017 13:33:39 GMT jailed:sandbox TypeError: Cannot read property 'length' of undefined
+Mon, 20 Mar 2017 09:02:27 GMT jailed:sandbox TypeError: Cannot read property 'length' of undefined
     at afficher (DYNAMIC PLUGIN:26:22)
     at evaluateStudentCode (DYNAMIC PLUGIN:31:1)
     at DYNAMIC PLUGIN:51:3
@@ -728,7 +847,7 @@ Tue, 14 Mar 2017 13:33:39 GMT jailed:sandbox TypeError: Cannot read property 'le
   | 
   | embedGallery(document.getElementById('carousel-img'), [https://i.imgur.com/ydi5jMh.jpg, https://i.imgur.com/emRrCLd.jpg, https://i.imgur.com/HdsQ3fe.jpg]); 
   | 
-Tue, 14 Mar 2017 13:33:39 GMT jailed:sandbox DYNAMIC PLUGIN:38
+Mon, 20 Mar 2017 09:02:27 GMT jailed:sandbox DYNAMIC PLUGIN:38
 embedGallery(document.getElementById('carousel-img'), [https://i.imgur.com/ydi5jMh.jpg, https://i.imgur.com/emRrCLd.jpg, https://i.imgur.com/HdsQ3fe.jpg]); 
                                                             ^
 SyntaxError: Unexpected token :
@@ -808,7 +927,7 @@ STUDENT: jessy_hachet
   | // STUDENT CODE:
   | 
   | var mygallery = initGallery(<div>, ['https://i.imgur.com/ydi5jMh.jpg', 'https://i.imgur.com/emRrCLd.jpg', 'https://i.imgur.com/HdsQ3fe.jpg']);
-Tue, 14 Mar 2017 13:33:39 GMT jailed:sandbox DYNAMIC PLUGIN:38
+Mon, 20 Mar 2017 09:02:27 GMT jailed:sandbox DYNAMIC PLUGIN:38
 var mygallery = initGallery(<div>, ['https://i.imgur.com/ydi5jMh.jpg', 'https://i.imgur.com/emRrCLd.jpg', 'https://i.imgur.com/HdsQ3fe.jpg']);
                             ^
 SyntaxError: Unexpected token <
@@ -874,7 +993,7 @@ STUDENT: kamil_izaret
   | document.getElementsByTagName('li').onclick = function() {
   |   alert('ok');
   | };
-Tue, 14 Mar 2017 13:33:39 GMT jailed:sandbox TypeError: _lis[0].onclick is not a function
+Mon, 20 Mar 2017 09:02:27 GMT jailed:sandbox TypeError: _lis[0].onclick is not a function
     at evaluateStudentCode (DYNAMIC PLUGIN:36:11)
     at DYNAMIC PLUGIN:46:3
     at ContextifyScript.Script.runInContext (vm.js:35:29)
@@ -892,7 +1011,7 @@ Tue, 14 Mar 2017 13:33:39 GMT jailed:sandbox TypeError: _lis[0].onclick is not a
   | // STUDENT CODE:
   | 
   | initGallery(document.getElementById('my-gallery'),[https://i.imgur.com/ydi5jMh.jpg, http://i.imgur.com/bdh4Qpn.jpg, https://i.imgur.com/HdsQ3fe.jpg]);
-Tue, 14 Mar 2017 13:33:39 GMT jailed:sandbox DYNAMIC PLUGIN:38
+Mon, 20 Mar 2017 09:02:28 GMT jailed:sandbox DYNAMIC PLUGIN:38
 initGallery(document.getElementById('my-gallery'),[https://i.imgur.com/ydi5jMh.jpg, http://i.imgur.com/bdh4Qpn.jpg, https://i.imgur.com/HdsQ3fe.jpg]);
                                                         ^
 SyntaxError: Unexpected token :
@@ -934,7 +1053,7 @@ STUDENT: lara_kounowski
   | var obj = new Object();
   | obj.nom = 'sause';
   | obj.age = ;
-Tue, 14 Mar 2017 13:33:39 GMT jailed:sandbox DYNAMIC PLUGIN:8
+Mon, 20 Mar 2017 09:02:28 GMT jailed:sandbox DYNAMIC PLUGIN:8
 obj.age = ;
           ^
 SyntaxError: Unexpected token ;
@@ -959,7 +1078,7 @@ SyntaxError: Unexpected token ;
   | 
   | var element = document.getElementById('mon-element');
   |   element.style.backgroundColor = 'yellow';
-Tue, 14 Mar 2017 13:33:39 GMT jailed:sandbox ReferenceError: document is not defined
+Mon, 20 Mar 2017 09:02:28 GMT jailed:sandbox ReferenceError: document is not defined
     at evaluateStudentCode (DYNAMIC PLUGIN:14:24)
     at DYNAMIC PLUGIN:21:3
     at ContextifyScript.Script.runInContext (vm.js:35:29)
@@ -981,7 +1100,7 @@ Tue, 14 Mar 2017 13:33:39 GMT jailed:sandbox ReferenceError: document is not def
   |  boutons[i].onclick = function(event) {
   |     alert('ok' + event.currentTarget.innerHTML);
   | }
-Tue, 14 Mar 2017 13:33:40 GMT jailed:sandbox ReferenceError: i is not defined
+Mon, 20 Mar 2017 09:02:28 GMT jailed:sandbox ReferenceError: i is not defined
     at evaluateStudentCode (DYNAMIC PLUGIN:27:10)
     at DYNAMIC PLUGIN:48:3
     at ContextifyScript.Script.runInContext (vm.js:35:29)
@@ -1004,7 +1123,7 @@ Tue, 14 Mar 2017 13:33:40 GMT jailed:sandbox ReferenceError: i is not defined
   |   var images = element[i].getElementsByTagName('my-gallery');
   |   creerGalerie(element, imagesDuGroupe);
   | }
-Tue, 14 Mar 2017 13:33:40 GMT jailed:sandbox TypeError: document.getElementsByClassName is not a function
+Mon, 20 Mar 2017 09:02:28 GMT jailed:sandbox TypeError: document.getElementsByClassName is not a function
     at evaluateStudentCode (DYNAMIC PLUGIN:38:24)
     at DYNAMIC PLUGIN:55:3
     at ContextifyScript.Script.runInContext (vm.js:35:29)
@@ -1055,7 +1174,7 @@ STUDENT: louis_gosse
   | // STUDENT CODE:
   | 
   | profilInstagram.photos.url[1]
-Tue, 14 Mar 2017 13:33:40 GMT jailed:sandbox TypeError: Cannot read property '1' of undefined
+Mon, 20 Mar 2017 09:02:28 GMT jailed:sandbox TypeError: Cannot read property '1' of undefined
     at eval (eval at evaluateStudentCode (DYNAMIC PLUGIN:19:21), <anonymous>:1:27)
     at evaluateStudentCode (DYNAMIC PLUGIN:19:16)
     at DYNAMIC PLUGIN:25:3
@@ -1079,7 +1198,7 @@ Tue, 14 Mar 2017 13:33:40 GMT jailed:sandbox TypeError: Cannot read property '1'
   | document.getElementsByTagName("li").onclick = function () {
   |   console.log(ok);
   | };
-Tue, 14 Mar 2017 13:33:40 GMT jailed:sandbox TypeError: _lis[0].onclick is not a function
+Mon, 20 Mar 2017 09:02:28 GMT jailed:sandbox TypeError: _lis[0].onclick is not a function
     at evaluateStudentCode (DYNAMIC PLUGIN:36:11)
     at DYNAMIC PLUGIN:46:3
     at ContextifyScript.Script.runInContext (vm.js:35:29)
@@ -1100,7 +1219,7 @@ Tue, 14 Mar 2017 13:33:40 GMT jailed:sandbox TypeError: _lis[0].onclick is not a
   |  for (var i = 0; i < galerie.lenght; i++) {
   | var image
   | 
-Tue, 14 Mar 2017 13:33:40 GMT jailed:sandbox DYNAMIC PLUGIN:53
+Mon, 20 Mar 2017 09:02:28 GMT jailed:sandbox DYNAMIC PLUGIN:53
 })();
  ^
 SyntaxError: Unexpected token )
@@ -1143,7 +1262,7 @@ STUDENT: madison_hayat
   | nom = 'sause';
   | age = 46;
   | }
-Tue, 14 Mar 2017 13:33:40 GMT jailed:sandbox DYNAMIC PLUGIN:7
+Mon, 20 Mar 2017 09:02:28 GMT jailed:sandbox DYNAMIC PLUGIN:7
 nom = 'sause';
              ^
 SyntaxError: Unexpected token ;
@@ -1163,7 +1282,7 @@ SyntaxError: Unexpected token ;
   | // STUDENT CODE:
   | 
   | document.getElementById('http://imgur.com/img/1');
-Tue, 14 Mar 2017 13:33:40 GMT jailed:sandbox ReferenceError: document is not defined
+Mon, 20 Mar 2017 09:02:28 GMT jailed:sandbox ReferenceError: document is not defined
     at eval (eval at evaluateStudentCode (DYNAMIC PLUGIN:19:21), <anonymous>:1:1)
     at evaluateStudentCode (DYNAMIC PLUGIN:19:16)
     at DYNAMIC PLUGIN:25:3
@@ -1181,7 +1300,7 @@ Tue, 14 Mar 2017 13:33:40 GMT jailed:sandbox ReferenceError: document is not def
   | // STUDENT CODE:
   | 
   | div.classhighlist.add('element');
-Tue, 14 Mar 2017 13:33:40 GMT jailed:sandbox ReferenceError: div is not defined
+Mon, 20 Mar 2017 09:02:28 GMT jailed:sandbox ReferenceError: div is not defined
     at evaluateStudentCode (DYNAMIC PLUGIN:14:1)
     at DYNAMIC PLUGIN:20:3
     at ContextifyScript.Script.runInContext (vm.js:35:29)
@@ -1203,7 +1322,7 @@ Tue, 14 Mar 2017 13:33:40 GMT jailed:sandbox ReferenceError: div is not defined
   |     alert('ok');
   |   }
   | }
-Tue, 14 Mar 2017 13:33:40 GMT jailed:sandbox DYNAMIC PLUGIN:26
+Mon, 20 Mar 2017 09:02:28 GMT jailed:sandbox DYNAMIC PLUGIN:26
   elements[i].onclick = function afficher('li') {
                                           ^^^^
 SyntaxError: Unexpected string
@@ -1234,7 +1353,7 @@ SyntaxError: Unexpected string
   |     this.urlImages.push(https://i.imgur.com/HdsQ3fe.jpg);
   |   }
   | }
-Tue, 14 Mar 2017 13:33:40 GMT jailed:sandbox DYNAMIC PLUGIN:39
+Mon, 20 Mar 2017 09:02:28 GMT jailed:sandbox DYNAMIC PLUGIN:39
  addImage(https://i.imgur.com/ydi5jMh.jpg) {
                ^
 SyntaxError: Unexpected token :
@@ -1277,7 +1396,7 @@ STUDENT: mickael_chekroun
   |   nom: 'sauce',
   |   age : 46,
   | }
-Tue, 14 Mar 2017 13:33:40 GMT jailed:sandbox DYNAMIC PLUGIN:6
+Mon, 20 Mar 2017 09:02:29 GMT jailed:sandbox DYNAMIC PLUGIN:6
 var obj {
         ^
 SyntaxError: Unexpected token {
@@ -1297,7 +1416,7 @@ SyntaxError: Unexpected token {
   | // STUDENT CODE:
   | 
   | profilInstagram.photos.url[1]
-Tue, 14 Mar 2017 13:33:40 GMT jailed:sandbox TypeError: Cannot read property '1' of undefined
+Mon, 20 Mar 2017 09:02:29 GMT jailed:sandbox TypeError: Cannot read property '1' of undefined
     at eval (eval at evaluateStudentCode (DYNAMIC PLUGIN:19:21), <anonymous>:1:27)
     at evaluateStudentCode (DYNAMIC PLUGIN:19:16)
     at DYNAMIC PLUGIN:25:3
@@ -1329,7 +1448,7 @@ Tue, 14 Mar 2017 13:33:40 GMT jailed:sandbox TypeError: Cannot read property '1'
   |       console.log('ok');
   |     }
   |   }
-Tue, 14 Mar 2017 13:33:41 GMT jailed:sandbox ReferenceError: i is not defined
+Mon, 20 Mar 2017 09:02:29 GMT jailed:sandbox ReferenceError: i is not defined
     at evaluateStudentCode (DYNAMIC PLUGIN:27:9)
     at DYNAMIC PLUGIN:50:3
     at ContextifyScript.Script.runInContext (vm.js:35:29)
@@ -1363,7 +1482,7 @@ Tue, 14 Mar 2017 13:33:41 GMT jailed:sandbox ReferenceError: i is not defined
   | for(i=0; i < mesImages.length; i++){
   |   initGallery(maDiv, mesImages);
   | }
-Tue, 14 Mar 2017 13:33:41 GMT jailed:sandbox TypeError: document.createElement is not a function
+Mon, 20 Mar 2017 09:02:29 GMT jailed:sandbox TypeError: document.createElement is not a function
     at evaluateStudentCode (DYNAMIC PLUGIN:39:30)
     at DYNAMIC PLUGIN:66:3
     at ContextifyScript.Script.runInContext (vm.js:35:29)
@@ -1401,7 +1520,7 @@ STUDENT: pierre_salesse
   | // STUDENT CODE:
   | 
   | var obj = {name : 'sauce,' age : 46};
-Tue, 14 Mar 2017 13:33:41 GMT jailed:sandbox DYNAMIC PLUGIN:6
+Mon, 20 Mar 2017 09:02:29 GMT jailed:sandbox DYNAMIC PLUGIN:6
 var obj = {name : 'sauce,' age : 46};
                            ^^^
 SyntaxError: Unexpected identifier
@@ -1421,7 +1540,7 @@ SyntaxError: Unexpected identifier
   | // STUDENT CODE:
   | 
   | console.log(profilInstagram.photos.url[1]);
-Tue, 14 Mar 2017 13:33:41 GMT jailed:sandbox ReferenceError: console is not defined
+Mon, 20 Mar 2017 09:02:29 GMT jailed:sandbox ReferenceError: console is not defined
     at eval (eval at evaluateStudentCode (DYNAMIC PLUGIN:19:21), <anonymous>:1:1)
     at evaluateStudentCode (DYNAMIC PLUGIN:19:16)
     at DYNAMIC PLUGIN:25:3
@@ -1492,7 +1611,7 @@ STUDENT: quentin_champenois
   | // STUDENT CODE:
   | 
   | console.log(profilInstagram.photos[1].url);
-Tue, 14 Mar 2017 13:33:41 GMT jailed:sandbox ReferenceError: console is not defined
+Mon, 20 Mar 2017 09:02:29 GMT jailed:sandbox ReferenceError: console is not defined
     at eval (eval at evaluateStudentCode (DYNAMIC PLUGIN:19:21), <anonymous>:1:1)
     at evaluateStudentCode (DYNAMIC PLUGIN:19:16)
     at DYNAMIC PLUGIN:25:3
@@ -1601,7 +1720,7 @@ STUDENT: raphael_parets
   | // STUDENT CODE:
   | 
   | embedGallery(my-gallery, 'https://i.imgur.com/ydi5jMh.jpg', 'https://i.imgur.com/emRrCLd.jpg', 'https://i.imgur.com/HdsQ3fe.jpg');
-Tue, 14 Mar 2017 13:33:42 GMT jailed:sandbox ReferenceError: my is not defined
+Mon, 20 Mar 2017 09:02:30 GMT jailed:sandbox ReferenceError: my is not defined
     at evaluateStudentCode (DYNAMIC PLUGIN:38:14)
     at DYNAMIC PLUGIN:50:3
     at ContextifyScript.Script.runInContext (vm.js:35:29)
@@ -1681,7 +1800,7 @@ STUDENT: theo_geay
   | var galerie = document.getElementByID('my-gallery');
   | var images = (https://i.imgur.com/ydi5jMh.jpg, https://i.imgur.com/emRrCLd.jpg, https://i.imgur.com/HdsQ3fe.jpg);
   | embedGallery(galerie, images);
-Tue, 14 Mar 2017 13:33:42 GMT jailed:sandbox DYNAMIC PLUGIN:39
+Mon, 20 Mar 2017 09:02:30 GMT jailed:sandbox DYNAMIC PLUGIN:39
 var images = (https://i.imgur.com/ydi5jMh.jpg, https://i.imgur.com/emRrCLd.jpg, https://i.imgur.com/HdsQ3fe.jpg);
                    ^
 SyntaxError: Unexpected token :
@@ -1729,7 +1848,7 @@ STUDENT: thibault_chambrillon
   | // STUDENT CODE:
   | 
   | profilInstagram.photos.url[0]
-Tue, 14 Mar 2017 13:33:43 GMT jailed:sandbox TypeError: Cannot read property '0' of undefined
+Mon, 20 Mar 2017 09:02:30 GMT jailed:sandbox TypeError: Cannot read property '0' of undefined
     at eval (eval at evaluateStudentCode (DYNAMIC PLUGIN:19:21), <anonymous>:1:27)
     at evaluateStudentCode (DYNAMIC PLUGIN:19:16)
     at DYNAMIC PLUGIN:25:3
@@ -1759,7 +1878,7 @@ Tue, 14 Mar 2017 13:33:43 GMT jailed:sandbox TypeError: Cannot read property '0'
   |     alert('ok');
   |   }
   | }
-Tue, 14 Mar 2017 13:33:43 GMT jailed:sandbox ReferenceError: elements is not defined
+Mon, 20 Mar 2017 09:02:30 GMT jailed:sandbox ReferenceError: elements is not defined
     at evaluateStudentCode (DYNAMIC PLUGIN:25:21)
     at DYNAMIC PLUGIN:48:3
     at ContextifyScript.Script.runInContext (vm.js:35:29)
@@ -1782,7 +1901,7 @@ Tue, 14 Mar 2017 13:33:43 GMT jailed:sandbox ReferenceError: elements is not def
   |   var element = groupes[i].getElementsByTagName('div');
   |   creerGalerie(element, images); 
   | }
-Tue, 14 Mar 2017 13:33:43 GMT jailed:sandbox TypeError: document.getElementsById is not a function
+Mon, 20 Mar 2017 09:02:31 GMT jailed:sandbox TypeError: document.getElementsById is not a function
     at evaluateStudentCode (DYNAMIC PLUGIN:38:24)
     at DYNAMIC PLUGIN:55:3
     at ContextifyScript.Script.runInContext (vm.js:35:29)
@@ -1839,7 +1958,7 @@ STUDENT: timothee_ong
   | // STUDENT CODE:
   | 
   | element..classList.add('surbrillance');
-Tue, 14 Mar 2017 13:33:43 GMT jailed:sandbox DYNAMIC PLUGIN:14
+Mon, 20 Mar 2017 09:02:31 GMT jailed:sandbox DYNAMIC PLUGIN:14
 element..classList.add('surbrillance');
         ^
 SyntaxError: Unexpected token .
@@ -1913,7 +2032,7 @@ STUDENT: victor_legac
   | // STUDENT CODE:
   | 
   | console.log(profilInstagram.photos[1]);
-Tue, 14 Mar 2017 13:33:43 GMT jailed:sandbox ReferenceError: console is not defined
+Mon, 20 Mar 2017 09:02:31 GMT jailed:sandbox ReferenceError: console is not defined
     at eval (eval at evaluateStudentCode (DYNAMIC PLUGIN:19:21), <anonymous>:1:1)
     at evaluateStudentCode (DYNAMIC PLUGIN:19:16)
     at DYNAMIC PLUGIN:25:3
@@ -1931,7 +2050,7 @@ Tue, 14 Mar 2017 13:33:43 GMT jailed:sandbox ReferenceError: console is not defi
   | // STUDENT CODE:
   | 
   | document.getElementById('monElement').classList.add('surbrillance');
-Tue, 14 Mar 2017 13:33:43 GMT jailed:sandbox ReferenceError: document is not defined
+Mon, 20 Mar 2017 09:02:31 GMT jailed:sandbox ReferenceError: document is not defined
     at evaluateStudentCode (DYNAMIC PLUGIN:14:1)
     at DYNAMIC PLUGIN:20:3
     at ContextifyScript.Script.runInContext (vm.js:35:29)
@@ -1969,7 +2088,7 @@ Tue, 14 Mar 2017 13:33:43 GMT jailed:sandbox ReferenceError: document is not def
   |   url: https://i.imgur.com/HdsQ3fe.jpg,
   | };
   | 
-Tue, 14 Mar 2017 13:33:44 GMT jailed:sandbox DYNAMIC PLUGIN:38
+Mon, 20 Mar 2017 09:02:31 GMT jailed:sandbox DYNAMIC PLUGIN:38
 <div id="my-gallery"></div>
 ^
 SyntaxError: Unexpected token <
@@ -2019,7 +2138,7 @@ STUDENT: victoria_antalis
   | // STUDENT CODE:
   | 
   | console.log(profilInstagram.prenom.photos.url);
-Tue, 14 Mar 2017 13:33:44 GMT jailed:sandbox ReferenceError: console is not defined
+Mon, 20 Mar 2017 09:02:31 GMT jailed:sandbox ReferenceError: console is not defined
     at eval (eval at evaluateStudentCode (DYNAMIC PLUGIN:19:21), <anonymous>:1:1)
     at evaluateStudentCode (DYNAMIC PLUGIN:19:16)
     at DYNAMIC PLUGIN:25:3
@@ -2054,7 +2173,7 @@ Tue, 14 Mar 2017 13:33:44 GMT jailed:sandbox ReferenceError: console is not defi
   | document.onclick = function() {
   |   changerDisplay('article', 'block'); // afficher tous les articles
   | };
-Tue, 14 Mar 2017 13:33:44 GMT jailed:sandbox TypeError: _lis[0].onclick is not a function
+Mon, 20 Mar 2017 09:02:31 GMT jailed:sandbox TypeError: _lis[0].onclick is not a function
     at evaluateStudentCode (DYNAMIC PLUGIN:42:11)
     at DYNAMIC PLUGIN:52:3
     at ContextifyScript.Script.runInContext (vm.js:35:29)
