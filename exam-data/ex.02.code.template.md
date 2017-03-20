@@ -94,16 +94,16 @@ profilInstagram.photos[{{ index }}].url
       },
     ],
   };
+  var console = { log: function(r){ result = r; } }; // accept use of console.log()
   var studentCode = `_studentCode`.trim();
   var result = eval(studentCode);
   var tests = [
-    studentCode === 'profilInstagram.photos[{{ index }}].url', // notation pointée
     result === profilInstagram.photos[{{ index }}].url, // valeur finale
+    studentCode.indexOf('profilInstagram.photos[{{ index }}].url') === 0, // notation pointée
+    studentCode.indexOf('console.log') === -1, // console.log was not used
   ];
   application.remote._send(null, tests);
 })();
-// TODO: tolerer console.log() ?
-// TODO: tolerer un ; en fin de chaine?
 ```
 
 ---
@@ -143,13 +143,24 @@ Solution:
     },
     className: '',
   };
+  // tolerate use of document.* selectors
+  var document = {
+    getElementById: function(id) {
+      return id === 'mon-element' ? {{ varName }} : null;
+    },
+    querySelector: function(selector) {
+      return (selector || '').toLowerCase() === '#mon-element'
+        ? {{ varName }} : null;
+    },
+  };
+  var studentCode = `_studentCode`.trim();
   _runStudentCode();
   var tests = [
     {{ varName }}.className.indexOf('{{ className }}') !== -1,
+    studentCode.indexOf('document.') === -1, // selectors were not used
   ];
   application.remote._send(null, tests);
 })();
-// TODO: allow document.getElementById('mon-element') ? + getElementsBy...
 ```
 
 ---
