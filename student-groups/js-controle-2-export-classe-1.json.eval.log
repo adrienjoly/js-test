@@ -66,7 +66,7 @@ STUDENT: amaury_thouvenot
   |   nom = 'sause'
   |   age = 46
   | };
-Mon, 20 Mar 2017 09:20:58 GMT jailed:sandbox DYNAMIC PLUGIN:8
+Mon, 20 Mar 2017 09:27:48 GMT jailed:sandbox DYNAMIC PLUGIN:8
   age = 46
   ^^^
 SyntaxError: Unexpected identifier
@@ -99,9 +99,9 @@ SyntaxError: Unexpected identifier
   | 
   | document.getElementByClassName('li').onclick = function ok(){
   |   alert('ok')}; 
-Mon, 20 Mar 2017 09:20:58 GMT jailed:sandbox TypeError: document.getElementByClassName is not a function
+Mon, 20 Mar 2017 09:27:48 GMT jailed:sandbox TypeError: document.getElementByClassName is not a function
     at evaluateStudentCode (DYNAMIC PLUGIN:25:10)
-    at DYNAMIC PLUGIN:45:3
+    at DYNAMIC PLUGIN:48:3
     at ContextifyScript.Script.runInContext (vm.js:35:29)
     at ContextifyScript.Script.runInNewContext (vm.js:41:15)
     at Object.exports.runInNewContext (vm.js:72:17)
@@ -124,7 +124,7 @@ Mon, 20 Mar 2017 09:20:58 GMT jailed:sandbox TypeError: document.getElementByCla
   | https://i.imgur.com/HdsQ3fe.jpg,
   | ],
   | };
-Mon, 20 Mar 2017 09:20:58 GMT jailed:sandbox DYNAMIC PLUGIN:40
+Mon, 20 Mar 2017 09:27:49 GMT jailed:sandbox DYNAMIC PLUGIN:40
 var images = [
     ^^^^^^
 SyntaxError: Unexpected identifier
@@ -192,7 +192,7 @@ STUDENT: benoit_boureau
   |     console.log('ok');
   |   }
   | }
-Mon, 20 Mar 2017 09:20:58 GMT jailed:sandbox DYNAMIC PLUGIN:25
+Mon, 20 Mar 2017 09:27:49 GMT jailed:sandbox DYNAMIC PLUGIN:25
 getElementsByTagName('li'){
                           ^
 SyntaxError: Unexpected token {
@@ -214,7 +214,7 @@ SyntaxError: Unexpected token {
   | getElementsByTagName('my-gallery'){
   |   images=('https://i.imgur.com/ydi5jMh.jpg','https://i.imgur.com/emRrCLd.jpg','https://i.imgur.com/HdsQ3fe.jpg');
   | }
-Mon, 20 Mar 2017 09:20:58 GMT jailed:sandbox DYNAMIC PLUGIN:38
+Mon, 20 Mar 2017 09:27:49 GMT jailed:sandbox DYNAMIC PLUGIN:38
 getElementsByTagName('my-gallery'){
                                   ^
 SyntaxError: Unexpected token {
@@ -254,7 +254,7 @@ STUDENT: erwan_allain
   | // STUDENT CODE:
   | 
   | var personne = 
-Mon, 20 Mar 2017 09:20:58 GMT jailed:sandbox DYNAMIC PLUGIN:7
+Mon, 20 Mar 2017 09:27:49 GMT jailed:sandbox DYNAMIC PLUGIN:7
 /* </STUDENT-CODE> */;
                      ^
 SyntaxError: Unexpected token ;
@@ -274,7 +274,7 @@ SyntaxError: Unexpected token ;
   | // STUDENT CODE:
   | 
   | console.log(profilInstagram.photos(url2))
-Mon, 20 Mar 2017 09:20:59 GMT jailed:sandbox ReferenceError: url2 is not defined
+Mon, 20 Mar 2017 09:27:49 GMT jailed:sandbox ReferenceError: url2 is not defined
     at eval (eval at evaluateStudentCode (DYNAMIC PLUGIN:20:21), <anonymous>:1:36)
     at evaluateStudentCode (DYNAMIC PLUGIN:20:16)
     at DYNAMIC PLUGIN:27:3
@@ -341,7 +341,7 @@ STUDENT: garance_fabre
   |     event.currentTarget.style.backgroundColor = 'yellow';
   |   };
   | }
-Mon, 20 Mar 2017 09:20:59 GMT jailed:sandbox TypeError: document.getElementsId is not a function
+Mon, 20 Mar 2017 09:27:49 GMT jailed:sandbox TypeError: document.getElementsId is not a function
     at evaluateStudentCode (DYNAMIC PLUGIN:30:24)
     at DYNAMIC PLUGIN:42:3
     at ContextifyScript.Script.runInContext (vm.js:35:29)
@@ -361,9 +361,9 @@ Mon, 20 Mar 2017 09:20:59 GMT jailed:sandbox TypeError: document.getElementsId i
   | document.getElementByTagName('li').onclick = function direOk() {
   |   alert('ok');
   | };
-Mon, 20 Mar 2017 09:20:59 GMT jailed:sandbox TypeError: document.getElementByTagName is not a function
+Mon, 20 Mar 2017 09:27:49 GMT jailed:sandbox TypeError: document.getElementByTagName is not a function
     at evaluateStudentCode (DYNAMIC PLUGIN:25:10)
-    at DYNAMIC PLUGIN:46:3
+    at DYNAMIC PLUGIN:49:3
     at ContextifyScript.Script.runInContext (vm.js:35:29)
     at ContextifyScript.Script.runInNewContext (vm.js:41:15)
     at Object.exports.runInNewContext (vm.js:72:17)
@@ -399,7 +399,7 @@ Mon, 20 Mar 2017 09:20:59 GMT jailed:sandbox TypeError: document.getElementByTag
   |   } 
   | 
   | 
-Mon, 20 Mar 2017 09:20:59 GMT jailed:sandbox DYNAMIC PLUGIN:38
+Mon, 20 Mar 2017 09:27:49 GMT jailed:sandbox DYNAMIC PLUGIN:38
 class my-gallery {
         ^
 SyntaxError: Unexpected token -
@@ -441,7 +441,7 @@ STUDENT: gaspard_legrain
   | var personne = new Objet();
   | personne.nom = 'sause';
   | personne.age = "64";
-Mon, 20 Mar 2017 09:20:59 GMT jailed:sandbox ReferenceError: Objet is not defined
+Mon, 20 Mar 2017 09:27:50 GMT jailed:sandbox ReferenceError: Objet is not defined
     at evaluateStudentCode (DYNAMIC PLUGIN:6:20)
     at DYNAMIC PLUGIN:17:3
     at ContextifyScript.Script.runInContext (vm.js:35:29)
@@ -477,9 +477,9 @@ Mon, 20 Mar 2017 09:20:59 GMT jailed:sandbox ReferenceError: Objet is not define
   | document.getElementByTagName('li').onclick = function direOk() {
   |   alert('ok');
   | };
-Mon, 20 Mar 2017 09:20:59 GMT jailed:sandbox TypeError: document.getElementByTagName is not a function
+Mon, 20 Mar 2017 09:27:50 GMT jailed:sandbox TypeError: document.getElementByTagName is not a function
     at evaluateStudentCode (DYNAMIC PLUGIN:25:10)
-    at DYNAMIC PLUGIN:46:3
+    at DYNAMIC PLUGIN:49:3
     at ContextifyScript.Script.runInContext (vm.js:35:29)
     at ContextifyScript.Script.runInNewContext (vm.js:41:15)
     at Object.exports.runInNewContext (vm.js:72:17)
@@ -653,7 +653,7 @@ STUDENT: jonathan_leder
   | var personne ' a'
   |    
   | 
-Mon, 20 Mar 2017 09:21:00 GMT jailed:sandbox DYNAMIC PLUGIN:6
+Mon, 20 Mar 2017 09:27:50 GMT jailed:sandbox DYNAMIC PLUGIN:6
 var personne ' a'
              ^^^^
 SyntaxError: Unexpected string
@@ -673,7 +673,7 @@ SyntaxError: Unexpected string
   | // STUDENT CODE:
   | 
   | profilInstragram.photos[2]'[url]';
-Mon, 20 Mar 2017 09:21:00 GMT jailed:sandbox SyntaxError: Unexpected string
+Mon, 20 Mar 2017 09:27:50 GMT jailed:sandbox SyntaxError: Unexpected string
     at evaluateStudentCode (DYNAMIC PLUGIN:20:21)
     at DYNAMIC PLUGIN:27:3
     at ContextifyScript.Script.runInContext (vm.js:35:29)
@@ -691,7 +691,7 @@ Mon, 20 Mar 2017 09:21:00 GMT jailed:sandbox SyntaxError: Unexpected string
   | // STUDENT CODE:
   | 
   | monElement.class.add('surbrillance');
-Mon, 20 Mar 2017 09:21:00 GMT jailed:sandbox TypeError: Cannot read property 'add' of undefined
+Mon, 20 Mar 2017 09:27:51 GMT jailed:sandbox TypeError: Cannot read property 'add' of undefined
     at evaluateStudentCode (DYNAMIC PLUGIN:25:17)
     at DYNAMIC PLUGIN:32:3
     at ContextifyScript.Script.runInContext (vm.js:35:29)
@@ -710,7 +710,7 @@ Mon, 20 Mar 2017 09:21:00 GMT jailed:sandbox TypeError: Cannot read property 'ad
   | 
   | var Onclick = document getElementbyTagName('li')
   | console.log('ok'); 
-Mon, 20 Mar 2017 09:21:00 GMT jailed:sandbox DYNAMIC PLUGIN:25
+Mon, 20 Mar 2017 09:27:51 GMT jailed:sandbox DYNAMIC PLUGIN:25
 var Onclick = document getElementbyTagName('li')
                        ^^^^^^^^^^^^^^^^^^^
 SyntaxError: Unexpected identifier
@@ -734,7 +734,7 @@ SyntaxError: Unexpected identifier
   | 'https://i.imgur.com/HdsQ3fe.jpg',
   | 
   | 
-Mon, 20 Mar 2017 09:21:00 GMT jailed:sandbox DYNAMIC PLUGIN:43
+Mon, 20 Mar 2017 09:27:51 GMT jailed:sandbox DYNAMIC PLUGIN:43
 /* </STUDENT-CODE> */; // should call initGallery() once
                      ^
 SyntaxError: Unexpected token ;
@@ -777,7 +777,7 @@ STUDENT: kim_nora
   | var name = 'sause';
   | var age = '46';
   | myObj.name = age;
-Mon, 20 Mar 2017 09:21:01 GMT jailed:sandbox ReferenceError: obj is not defined
+Mon, 20 Mar 2017 09:27:51 GMT jailed:sandbox ReferenceError: obj is not defined
     at evaluateStudentCode (DYNAMIC PLUGIN:13:5)
     at DYNAMIC PLUGIN:18:3
     at ContextifyScript.Script.runInContext (vm.js:35:29)
@@ -801,7 +801,7 @@ Mon, 20 Mar 2017 09:21:01 GMT jailed:sandbox ReferenceError: obj is not defined
   | var element = document.getElementById('mon-element');
   | {
   | function surbrillance(element);{
-Mon, 20 Mar 2017 09:21:01 GMT jailed:sandbox DYNAMIC PLUGIN:29
+Mon, 20 Mar 2017 09:27:51 GMT jailed:sandbox DYNAMIC PLUGIN:29
 function surbrillance(element);{
                               ^
 SyntaxError: Unexpected token ;
@@ -824,9 +824,9 @@ SyntaxError: Unexpected token ;
   |    alert(message.texte);
   |   p.onclick = showAlert;
   | 
-Mon, 20 Mar 2017 09:21:01 GMT jailed:sandbox ReferenceError: p is not defined
+Mon, 20 Mar 2017 09:27:51 GMT jailed:sandbox ReferenceError: p is not defined
     at evaluateStudentCode (DYNAMIC PLUGIN:27:3)
-    at DYNAMIC PLUGIN:47:3
+    at DYNAMIC PLUGIN:50:3
     at ContextifyScript.Script.runInContext (vm.js:35:29)
     at ContextifyScript.Script.runInNewContext (vm.js:41:15)
     at Object.exports.runInNewContext (vm.js:72:17)
@@ -898,25 +898,18 @@ STUDENT: leo_martin
   |   var ok = document.getElementsByTagName('li');
   |   console.log('ok');  
   | }
-Mon, 20 Mar 2017 09:21:01 GMT jailed:sandbox TypeError: _lis[0].onclick is not a function
-    at evaluateStudentCode (DYNAMIC PLUGIN:37:11)
-    at DYNAMIC PLUGIN:47:3
-    at ContextifyScript.Script.runInContext (vm.js:35:29)
-    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
-    at Object.exports.runInNewContext (vm.js:72:17)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
-    at emitTwo (events.js:106:13)
-    at process.emit (events.js:191:7)
-  | => test runner err: TypeError: _lis[0].onclick is not a function
+  | onclick non défini sur 1er <li>
+  | onclick non défini sur 3ème <li>
+  | onclick non défini sur 3ème <li>
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 1, 0, 0, 0, 0 ]
   | 
   | ------------- EXERCISE: code10 (variant: 0) -------------
   | 
   | // STUDENT CODE:
   | 
   | var galery = initGallery( element, image, 
-Mon, 20 Mar 2017 09:21:01 GMT jailed:sandbox DYNAMIC PLUGIN:39
+Mon, 20 Mar 2017 09:27:51 GMT jailed:sandbox DYNAMIC PLUGIN:39
 /* </STUDENT-CODE> */; // should call initGallery() once
                      ^
 SyntaxError: Unexpected token ;
@@ -931,9 +924,9 @@ SyntaxError: Unexpected token ;
     at process._tickCallback (internal/process/next_tick.js:98:9)
   | => test runner err: SyntaxError: Unexpected token ;
 
-  => code score: 6.75 / 15 pts
+  => code score: 7.25 / 15 pts
 
-=> TOTAL STUDENT SCORE: 8.75 / 20
+=> TOTAL STUDENT SCORE: 9.25 / 20
 
 
 ================================
@@ -984,7 +977,7 @@ STUDENT: loa_diaz
   | for (var i=0, i<element.length, i++) {
   | 	element[i].onclick
   | }
-Mon, 20 Mar 2017 09:21:01 GMT jailed:sandbox DYNAMIC PLUGIN:27
+Mon, 20 Mar 2017 09:27:51 GMT jailed:sandbox DYNAMIC PLUGIN:27
 for (var i=0, i<element.length, i++) {
                ^
 SyntaxError: Unexpected token <
@@ -1047,7 +1040,7 @@ STUDENT: loic_parisse
   | // STUDENT CODE:
   | 
   | console.log(profilInstagram/prenom/nom/nom/url);
-Mon, 20 Mar 2017 09:21:02 GMT jailed:sandbox ReferenceError: prenom is not defined
+Mon, 20 Mar 2017 09:27:52 GMT jailed:sandbox ReferenceError: prenom is not defined
     at eval (eval at evaluateStudentCode (DYNAMIC PLUGIN:20:21), <anonymous>:1:29)
     at evaluateStudentCode (DYNAMIC PLUGIN:20:16)
     at DYNAMIC PLUGIN:27:3
@@ -1076,9 +1069,9 @@ Mon, 20 Mar 2017 09:21:02 GMT jailed:sandbox ReferenceError: prenom is not defin
   |   li.onclick = function() {
   |     console.log('ok');
   | };
-Mon, 20 Mar 2017 09:21:02 GMT jailed:sandbox TypeError: document.getElementsbyId is not a function
+Mon, 20 Mar 2017 09:27:52 GMT jailed:sandbox TypeError: document.getElementsbyId is not a function
     at evaluateStudentCode (DYNAMIC PLUGIN:25:19)
-    at DYNAMIC PLUGIN:47:3
+    at DYNAMIC PLUGIN:50:3
     at ContextifyScript.Script.runInContext (vm.js:35:29)
     at ContextifyScript.Script.runInNewContext (vm.js:41:15)
     at Object.exports.runInNewContext (vm.js:72:17)
@@ -1109,7 +1102,7 @@ Mon, 20 Mar 2017 09:21:02 GMT jailed:sandbox TypeError: document.getElementsbyId
   |       url: 'https://i.imgur.com/HdsQ3fe.jpg',
   |   ],
   | };
-Mon, 20 Mar 2017 09:21:02 GMT jailed:sandbox DYNAMIC PLUGIN:49
+Mon, 20 Mar 2017 09:27:52 GMT jailed:sandbox DYNAMIC PLUGIN:49
     }
     ^
 SyntaxError: Unexpected token }
@@ -1194,7 +1187,7 @@ STUDENT: lucille_vanlaer
   | var document = getElementById('my-gallery');
   | var image = ['https://i.imgur.com/ydi5jMh.jpg', 'https://i.imgur.com/emRrCLd.jpg', 'https://i.imgur.com/HdsQ3fe.jpg'];
   | initGallery(document, image);
-Mon, 20 Mar 2017 09:21:02 GMT jailed:sandbox ReferenceError: getElementById is not defined
+Mon, 20 Mar 2017 09:27:52 GMT jailed:sandbox ReferenceError: getElementById is not defined
     at evaluateStudentCode (DYNAMIC PLUGIN:38:16)
     at DYNAMIC PLUGIN:52:3
     at ContextifyScript.Script.runInContext (vm.js:35:29)
@@ -1265,9 +1258,9 @@ STUDENT: maelle_bellazar
   |   };
   | }
   | 
-Mon, 20 Mar 2017 09:21:02 GMT jailed:sandbox ReferenceError: boutons is not defined
+Mon, 20 Mar 2017 09:27:53 GMT jailed:sandbox ReferenceError: boutons is not defined
     at evaluateStudentCode (DYNAMIC PLUGIN:27:21)
-    at DYNAMIC PLUGIN:52:3
+    at DYNAMIC PLUGIN:55:3
     at ContextifyScript.Script.runInContext (vm.js:35:29)
     at ContextifyScript.Script.runInNewContext (vm.js:41:15)
     at Object.exports.runInNewContext (vm.js:72:17)
@@ -1329,7 +1322,7 @@ STUDENT: noelie_roux
   | // STUDENT CODE:
   | 
   | profilInstagram.photos.url['http://imgur.com/img/2']
-Mon, 20 Mar 2017 09:21:03 GMT jailed:sandbox TypeError: Cannot read property 'http://imgur.com/img/2' of undefined
+Mon, 20 Mar 2017 09:27:53 GMT jailed:sandbox TypeError: Cannot read property 'http://imgur.com/img/2' of undefined
     at eval (eval at evaluateStudentCode (DYNAMIC PLUGIN:20:21), <anonymous>:1:27)
     at evaluateStudentCode (DYNAMIC PLUGIN:20:16)
     at DYNAMIC PLUGIN:27:3
@@ -1358,7 +1351,7 @@ Mon, 20 Mar 2017 09:21:03 GMT jailed:sandbox TypeError: Cannot read property 'ht
   |   
   |   }
   | };
-Mon, 20 Mar 2017 09:21:03 GMT jailed:sandbox DYNAMIC PLUGIN:28
+Mon, 20 Mar 2017 09:27:53 GMT jailed:sandbox DYNAMIC PLUGIN:28
 };
  ^
 SyntaxError: Unexpected token ;
@@ -1571,26 +1564,19 @@ STUDENT: tristan_machin
   | element.onclick = function() {
   |   alert('ok');
   | };
-Mon, 20 Mar 2017 09:21:04 GMT jailed:sandbox TypeError: _lis[0].onclick is not a function
-    at evaluateStudentCode (DYNAMIC PLUGIN:38:11)
-    at DYNAMIC PLUGIN:48:3
-    at ContextifyScript.Script.runInContext (vm.js:35:29)
-    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
-    at Object.exports.runInNewContext (vm.js:72:17)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
-    at emitTwo (events.js:106:13)
-    at process.emit (events.js:191:7)
-  | => test runner err: TypeError: _lis[0].onclick is not a function
+  | onclick non défini sur 1er <li>
+  | onclick non défini sur 3ème <li>
+  | onclick non défini sur 3ème <li>
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 1, 0, 0, 0, 0 ]
   | 
   | ------------- EXERCISE: code10 (variant: 0) -------------
   | 
   | // WARNING: NO STUDENT CODE => skipping
 
-  => code score: 9 / 15 pts
+  => code score: 9.5 / 15 pts
 
-=> TOTAL STUDENT SCORE: 14 / 20
+=> TOTAL STUDENT SCORE: 14.5 / 20
 
 
 ================================
@@ -1638,18 +1624,11 @@ STUDENT: valentin_guilbaud
   | document.getElementsByTagName("li").onclick = function() {
   |   alert("ok");
   | }
-Mon, 20 Mar 2017 09:21:04 GMT jailed:sandbox TypeError: _lis[0].onclick is not a function
-    at evaluateStudentCode (DYNAMIC PLUGIN:36:11)
-    at DYNAMIC PLUGIN:46:3
-    at ContextifyScript.Script.runInContext (vm.js:35:29)
-    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
-    at Object.exports.runInNewContext (vm.js:72:17)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:145:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:159:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:47:7)
-    at emitTwo (events.js:106:13)
-    at process.emit (events.js:191:7)
-  | => test runner err: TypeError: _lis[0].onclick is not a function
+  | onclick non défini sur 1er <li>
+  | onclick non défini sur 3ème <li>
+  | onclick non défini sur 3ème <li>
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 1, 0, 0, 0, 0 ]
   | 
   | ------------- EXERCISE: code10 (variant: 0) -------------
   | 
@@ -1660,9 +1639,9 @@ Mon, 20 Mar 2017 09:21:04 GMT jailed:sandbox TypeError: _lis[0].onclick is not a
   | 
   | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1 ]
 
-  => code score: 9 / 15 pts
+  => code score: 9.5 / 15 pts
 
-=> TOTAL STUDENT SCORE: 13 / 20
+=> TOTAL STUDENT SCORE: 13.5 / 20
 
 
 ================================
@@ -1706,7 +1685,7 @@ STUDENT: victor_delataillade
   |   ],
   | };
   | console.log(chemin);
-Mon, 20 Mar 2017 09:21:04 GMT jailed:sandbox ReferenceError: chemin is not defined
+Mon, 20 Mar 2017 09:27:54 GMT jailed:sandbox ReferenceError: chemin is not defined
     at eval (eval at evaluateStudentCode (DYNAMIC PLUGIN:33:21), <anonymous>:14:13)
     at evaluateStudentCode (DYNAMIC PLUGIN:33:16)
     at DYNAMIC PLUGIN:40:3
@@ -1724,7 +1703,7 @@ Mon, 20 Mar 2017 09:21:04 GMT jailed:sandbox ReferenceError: chemin is not defin
   | // STUDENT CODE:
   | 
   | var monElement = getElementsbyclassname('mon-element');
-Mon, 20 Mar 2017 09:21:04 GMT jailed:sandbox ReferenceError: getElementsbyclassname is not defined
+Mon, 20 Mar 2017 09:27:54 GMT jailed:sandbox ReferenceError: getElementsbyclassname is not defined
     at evaluateStudentCode (DYNAMIC PLUGIN:25:18)
     at DYNAMIC PLUGIN:32:3
     at ContextifyScript.Script.runInContext (vm.js:35:29)
@@ -1744,9 +1723,9 @@ Mon, 20 Mar 2017 09:21:04 GMT jailed:sandbox ReferenceError: getElementsbyclassn
   | elements[li].onclick = function() {
   |   alert('ok');
   | }
-Mon, 20 Mar 2017 09:21:04 GMT jailed:sandbox ReferenceError: elements is not defined
+Mon, 20 Mar 2017 09:27:54 GMT jailed:sandbox ReferenceError: elements is not defined
     at evaluateStudentCode (DYNAMIC PLUGIN:25:1)
-    at DYNAMIC PLUGIN:46:3
+    at DYNAMIC PLUGIN:49:3
     at ContextifyScript.Script.runInContext (vm.js:35:29)
     at ContextifyScript.Script.runInNewContext (vm.js:41:15)
     at Object.exports.runInNewContext (vm.js:72:17)
