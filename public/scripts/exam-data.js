@@ -5,20 +5,20 @@
     window.location.href = window.location.href.replace('http:', 'https:');
   var app = document.querySelector('#app');
   app.config = {
-    "title": "JavaScript - Contrôle individuel 2",
+    "title": "JavaScript - QCM 6 (Objets)",
     "PUBLIC_TEST_MODE": false,
-    "DISPLAY_SOLUTIONS_AFTER_SUBMIT": false,
+    "DISPLAY_SOLUTIONS_AFTER_SUBMIT": true,
     "redirectToHttps": true,
     "examPack": {
-      "publishSolutions": false,
+      "publishSolutions": true,
       "publishEvalTests": false
     },
     "backend": {
       "type": "firebase",
       "FIREBASE_CONFIG": {
-        "apiKey": "AIzaSyAO3h2quk1PBdbLjnSIhhix7LUsHoKkNbE",
-        "databaseURL": "https://js-controle-2.firebaseio.com",
-        "messagingSenderId": "835236294998"
+        "apiKey": "AIzaSyBWrb4UMjyrSyzp_kqauvFGLi3QaWvDPus",
+        "databaseURL": "https://js-qcm.firebaseio.com",
+        "messagingSenderId": "988306760740"
       }
     },
     "teacherEmail": "adrien.joly@eemi.com",
@@ -39,242 +39,112 @@
       "_info": "generated from ex.01.quizz.template.md",
       "i": 1,
       "isQuizz": true,
-      "title": "QCM (1 point par bonne réponse)",
-      "maxScore": 5,
+      "title": "QCM",
+      "maxScore": 4,
       "questions": [
         {
           "i": 1,
           "id": "qcm1",
-          "md": "\n```js\nvar x = { nb: 1 };\n```\n\nDe quel type est la variable `x` ?\n\n\n",
+          "md": "Laquelle de ces instructions constitue un objet JavaScript valide:\n\n\n",
+          "mdSolution": "\n\nUn objet JavaScript:\n\n - accolades\n - propriétés définis par paires clé-valeur (syntaxe: `clé: valeur`)\n - propriétés séparées par des virgules",
           "choices": [
             {
               "name": 1,
-              "text": "Nombre"
+              "text": "[ prop1: 3, prop2: 4 ]"
             },
             {
               "name": 2,
-              "text": "Entier"
+              "text": "{ prop1: 3, prop2: 4 }"
             },
             {
               "name": 3,
-              "text": "Objet"
+              "text": "{ 2, true, 'bonjour' }"
             },
             {
               "name": 4,
-              "text": "Tableau"
+              "text": "{ 'a': 1; 'b': 2 }"
             }
           ]
         },
         {
           "i": 2,
           "id": "qcm2",
-          "md": "```html\n<div id=\"monDiv\" class=\"hidden\">contenu</div>\n```\n\nQuelle serait le type de la valeur retournée par `document.getElementsByClassName('hidden')` ?\n",
+          "md": "Comment récupérer la valeur de la propriété `nom` d'un objet affecté à une variable `personne` ?\n\n\n",
+          "mdSolution": "\n\nSachant qu'on connaît littéralement la clé de la propriété (il s'agit de `nom`), on peut utiliser la notation pointée.",
           "choices": [
             {
               "name": 1,
-              "text": "Un tableau d'objet(s)"
+              "text": "personne.get('nom');"
             },
             {
               "name": 2,
-              "text": "Un objet représentant l'élément"
+              "text": "personne.[nom];"
             },
             {
               "name": 3,
-              "text": "Une classe"
+              "text": "personne[nom];"
             },
             {
               "name": 4,
-              "text": "Une chaîne de caractères"
+              "text": "personne.nom;"
             }
           ]
         },
         {
           "i": 3,
           "id": "qcm3",
-          "md": "```html\n<div id=\"monDiv\" class=\"hidden\">contenu</div>\n```\n\nQuelle instruction faut-il exécuter pour retirer la classe `hidden` de cet élément ?\n",
+          "md": "Toujours dans notre objet `personne`, comment récupérer la valeur d'une propriété dont la clé est stockée dans la variable `laCle` ?\n\n\n",
+          "mdSolution": "\n\nSachant qu'on ne connaît pas a priori la clé de la propriété (car elle est stockée dans une variable), on ne peut PAS utiliser la notation pointée. => Il faut utiliser les crochets, comme pour récupérer la valeur d'un élément de tableau.\n\nEt, sachant que `laCle` est une variable, et non la valeur littérale de notre clé, il ne faut pas l'écrire entre apostrophes.",
           "choices": [
             {
               "name": 1,
-              "text": "element.class = '';"
+              "text": "personne.get(laCle);"
             },
             {
               "name": 2,
-              "text": "element.classList = '';"
+              "text": "personne.laCle;"
             },
             {
               "name": 3,
-              "text": "element.classList.remove('hidden');"
+              "text": "personne[laCle];"
             },
             {
               "name": 4,
-              "text": "element.style.display = 'block';"
+              "text": "personne['laCle'];"
             }
           ]
         },
         {
           "i": 4,
           "id": "qcm4",
-          "md": "Supposons que `elements` soit un tableau d'éléments HTML.\n\n```js\nfor(var i = 0; i < elements.length; i++) {\n  elements[i].onclick = function() {\n    console.log(i);\n  }\n}\n```\n\nComment pourrait-on s'assurer que la valeur de `i` correspondante à chaque élément soit bien affichée dans la console quand l'utilisateur cliquera dessus ?\n",
+          "md": "```js\nvar compteFacebook = {\n  groupes: {\n    maitresJedi: {},\n    lolcats: {\n      titre: 'Vive les chats !',\n      membres: [ 'Patrick' ],\n    },\n  },\n};\n```\n\nQuelle instruction faut-il saisir pour accéder à la valeur `'Patrick'` ?\n\n\n",
+          "mdSolution": "\n\nIl faut préciser tout le cheminement à effectuer, niveau par niveau, en partant de la racine de l'arbre: la variable qui contient l'objet principal.\n\nVu qu'on connaît les clés de chaque propriété de cet objet hiérarchique (objets imbriqués), on peut utiliser la notation pointée, sauf pour accéder au premier élément du tableau contenant la valeur `'Patrick'`.\n\nIl est possible d'utiliser des crochets au lieu de la notation pointée, à condition de mettre les noms de chaque clé entre apostrophes (car on connaît leur valeur littérale à priori), et de ne pas mettre le nom de la variable contenant l'objet (`compteFacebook`) entre crochets, car ce n'est pas une clé de propriété.",
           "choices": [
             {
               "name": 1,
-              "text": "Il n'y a rien à changer"
+              "text": "compteFacebook.groupes.lolcats.membres[0]"
             },
             {
               "name": 2,
-              "text": "Il faut créer une deuxième boucle"
+              "text": "compteFacebook.membres[0]"
             },
             {
               "name": 3,
-              "text": "Il faut utiliser \"this\""
+              "text": "[comptesFacebook][groupes][lolcats][membres][0]"
             },
             {
               "name": 4,
-              "text": "Il faut passer i en paramètre d'une fonction génératrice"
-            }
-          ]
-        },
-        {
-          "i": 5,
-          "id": "qcm5",
-          "md": "```js\nvar point = new Point(4, 3);\n```\n\nComment appelle-t-on l'opération à droite du signe `=` ?\n",
-          "choices": [
-            {
-              "name": 1,
-              "text": "Une génération de fonction"
-            },
-            {
-              "name": 2,
-              "text": "Une instanciation de classe"
-            },
-            {
-              "name": 3,
-              "text": "Un appel de fonction"
-            },
-            {
-              "name": 4,
-              "text": "Une concaténation de nombres"
+              "text": "['comptesFacebook']['groupes']['lolcats']['membres'][0]"
             }
           ]
         }
-      ]
-    },
-    {
-      "_info": "generated from ex.02.code.template.md",
-      "i": 2,
-      "isCode": true,
-      "title": "Exercices de codage (3 pts par question)",
-      "maxScore": 15,
-      "questions": [
-        {
-          "i": 6,
-          "id": "code6",
-          "variants": [
-            {
-              "varName": "obj",
-              "prop1Name": "nom",
-              "prop2Val": 46
-            },
-            {
-              "varName": "obj",
-              "prop1Name": "name",
-              "prop2Val": 46
-            },
-            {
-              "varName": "personne",
-              "prop1Name": "nom",
-              "prop2Val": 64
-            }
-          ],
-          "mdVariants": [
-            "\nCréez une variable `obj` et affectez-lui un objet contenant deux propriétés:\n\n - une propriété `nom` ayant `'sause'` comme valeur (type: chaîne de caractères),\n - et une propriété `age` ayant `46` comme valeur (type: nombre).\n\n<!-- variantes: -->\n\n\n",
-            "\nCréez une variable `obj` et affectez-lui un objet contenant deux propriétés:\n\n - une propriété `name` ayant `'sause'` comme valeur (type: chaîne de caractères),\n - et une propriété `age` ayant `46` comme valeur (type: nombre).\n\n<!-- variantes: -->\n\n\n",
-            "\nCréez une variable `personne` et affectez-lui un objet contenant deux propriétés:\n\n - une propriété `nom` ayant `'sause'` comme valeur (type: chaîne de caractères),\n - et une propriété `age` ayant `64` comme valeur (type: nombre).\n\n<!-- variantes: -->\n\n\n"
-          ]
-        },
-        {
-          "i": 7,
-          "id": "code7",
-          "variants": [
-            {
-              "index": 0,
-              "indexLabel": "première"
-            },
-            {
-              "index": 1,
-              "indexLabel": "deuxième"
-            }
-          ],
-          "mdVariants": [
-            "On fournit le code JavaScript suivant:\n\n```js\nvar profilInstagram = {\n  prenom: 'François',\n  photos: [\n    {\n      nom: 'mon chien est moi',\n      url: 'http://imgur.com/img/1',\n    },\n    {\n      nom: 'coucher de soleil => such wow!',\n      url: 'http://imgur.com/img/2',\n    },\n  ],\n};\nconsole.log(chemin);\n```\n\nTapez l'expression qu'il faudrait saisir à la place de `chemin`, afin d'afficher dans la console l'`url` de la première photo de François:\n\n(utilisez la notation pointée à partir de l'objet `profilInstagram`)\n\n<!-- variantes: -->\n\n\n",
-            "On fournit le code JavaScript suivant:\n\n```js\nvar profilInstagram = {\n  prenom: 'François',\n  photos: [\n    {\n      nom: 'mon chien est moi',\n      url: 'http://imgur.com/img/1',\n    },\n    {\n      nom: 'coucher de soleil => such wow!',\n      url: 'http://imgur.com/img/2',\n    },\n  ],\n};\nconsole.log(chemin);\n```\n\nTapez l'expression qu'il faudrait saisir à la place de `chemin`, afin d'afficher dans la console l'`url` de la deuxième photo de François:\n\n(utilisez la notation pointée à partir de l'objet `profilInstagram`)\n\n<!-- variantes: -->\n\n\n"
-          ]
-        },
-        {
-          "i": 8,
-          "id": "code8",
-          "variants": [
-            {
-              "varName": "element",
-              "className": "highlight"
-            },
-            {
-              "varName": "element",
-              "className": "surbrillance"
-            },
-            {
-              "varName": "monElement",
-              "className": "surbrillance"
-            }
-          ],
-          "mdVariants": [
-            "Supposons qu'une variable `element` a été initialisée de la manière suivante:\n\n```js\nvar element = document.getElementById('mon-element');\n```\n\nÉcrivez l'instruction JavaScript permettant d'ajouter la classe `highlight` à cet élément, en utilisant la variable `element` fournie.\n\n<!-- variantes: -->\n\n\n",
-            "Supposons qu'une variable `element` a été initialisée de la manière suivante:\n\n```js\nvar element = document.getElementById('mon-element');\n```\n\nÉcrivez l'instruction JavaScript permettant d'ajouter la classe `surbrillance` à cet élément, en utilisant la variable `element` fournie.\n\n<!-- variantes: -->\n\n\n",
-            "Supposons qu'une variable `monElement` a été initialisée de la manière suivante:\n\n```js\nvar monElement = document.getElementById('mon-element');\n```\n\nÉcrivez l'instruction JavaScript permettant d'ajouter la classe `surbrillance` à cet élément, en utilisant la variable `monElement` fournie.\n\n<!-- variantes: -->\n\n\n"
-          ]
-        },
-        {
-          "i": 9,
-          "id": "code9",
-          "variants": [
-            {
-              "outputLabel": "un alert",
-              "outputFct": "alert"
-            },
-            {
-              "outputLabel": "la console",
-              "outputFct": "console.log"
-            }
-          ],
-          "mdVariants": [
-            "```html\n<li>1er produit</li>\n<li>2ème produit</li>\n<li>3ème produit</li>\n```\n\nÉcrivez le code JavaScript permettant d'afficher \"`ok`\" (sans les guillemets) dans un alert à chaque fois que l'utilisateur cliquera sur n'importe lequel de ces trois éléments.\n\nPour définir le comportement au clic, utiliser la propriété `onclick`.\n\n<!-- variantes: -->\n\n\n",
-            "```html\n<li>1er produit</li>\n<li>2ème produit</li>\n<li>3ème produit</li>\n```\n\nÉcrivez le code JavaScript permettant d'afficher \"`ok`\" (sans les guillemets) dans la console à chaque fois que l'utilisateur cliquera sur n'importe lequel de ces trois éléments.\n\nPour définir le comportement au clic, utiliser la propriété `onclick`.\n\n<!-- variantes: -->\n\n\n"
-          ]
-        },
-        {
-          "i": 10,
-          "id": "code10",
-          "variants": [
-            {
-              "fctName": "initGallery",
-              "url2": "https://i.imgur.com/emRrCLd.jpg"
-            },
-            {
-              "fctName": "embedGallery",
-              "url2": "https://i.imgur.com/emRrCLd.jpg"
-            },
-            {
-              "fctName": "initGallery",
-              "url2": "http://i.imgur.com/bdh4Qpn.jpg"
-            }
-          ],
-          "mdVariants": [
-            "Je souhaite intégrer une galerie d'images sur mon site, en utilisant un composant déjà existant.\n\nVoici un extrait de la documentation du composant:\n\n> Pour instancier une galerie sur votre page, appelez la fonction `initGallery(element, images)`, avec en paramètres:\n> \n> - `element`(*type: objet*): élément du DOM dans lequel intégrer la galerie,\n> - `images`(*type: tableau de chaînes de caractères*): URLs des images à intégrer dans la galerie.\n\nMon fichier HTML contient ces éléments:\n\n```html\n<script src=\"https://controle.js/gallery.js\"></script>\n<div id=\"my-gallery\"></div>\n```\n\nJe souhaite intégrer la galerie dans le `<div>`, avec les images suivantes:\n\n - `https://i.imgur.com/ydi5jMh.jpg`\n - `https://i.imgur.com/emRrCLd.jpg`\n - `https://i.imgur.com/HdsQ3fe.jpg`\n\nQuel code JavaScript dois-je exécuter pour intégrer la galerie dans ma page ?\n\n<!-- variantes: -->\n\n\n",
-            "Je souhaite intégrer une galerie d'images sur mon site, en utilisant un composant déjà existant.\n\nVoici un extrait de la documentation du composant:\n\n> Pour instancier une galerie sur votre page, appelez la fonction `embedGallery(element, images)`, avec en paramètres:\n> \n> - `element`(*type: objet*): élément du DOM dans lequel intégrer la galerie,\n> - `images`(*type: tableau de chaînes de caractères*): URLs des images à intégrer dans la galerie.\n\nMon fichier HTML contient ces éléments:\n\n```html\n<script src=\"https://controle.js/gallery.js\"></script>\n<div id=\"my-gallery\"></div>\n```\n\nJe souhaite intégrer la galerie dans le `<div>`, avec les images suivantes:\n\n - `https://i.imgur.com/ydi5jMh.jpg`\n - `https://i.imgur.com/emRrCLd.jpg`\n - `https://i.imgur.com/HdsQ3fe.jpg`\n\nQuel code JavaScript dois-je exécuter pour intégrer la galerie dans ma page ?\n\n<!-- variantes: -->\n\n\n",
-            "Je souhaite intégrer une galerie d'images sur mon site, en utilisant un composant déjà existant.\n\nVoici un extrait de la documentation du composant:\n\n> Pour instancier une galerie sur votre page, appelez la fonction `initGallery(element, images)`, avec en paramètres:\n> \n> - `element`(*type: objet*): élément du DOM dans lequel intégrer la galerie,\n> - `images`(*type: tableau de chaînes de caractères*): URLs des images à intégrer dans la galerie.\n\nMon fichier HTML contient ces éléments:\n\n```html\n<script src=\"https://controle.js/gallery.js\"></script>\n<div id=\"my-gallery\"></div>\n```\n\nJe souhaite intégrer la galerie dans le `<div>`, avec les images suivantes:\n\n - `https://i.imgur.com/ydi5jMh.jpg`\n - `http://i.imgur.com/bdh4Qpn.jpg`\n - `https://i.imgur.com/HdsQ3fe.jpg`\n\nQuel code JavaScript dois-je exécuter pour intégrer la galerie dans ma page ?\n\n<!-- variantes: -->\n\n\n"
-          ]
-        }
-      ]
+      ],
+      "solutions": {
+        "qcm1": 2,
+        "qcm2": 4,
+        "qcm3": 3,
+        "qcm4": 1
+      }
     }
   ];
 })(document);

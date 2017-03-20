@@ -7,17 +7,17 @@ function readfile(filePath) {
 module.exports = {
 
   // Front-end config
-  title: 'JavaScript - Contrôle individuel 2',
+  title: 'JavaScript - QCM 6 (Objets)',
 
   // General settings
   PUBLIC_TEST_MODE: false, // set to false to restrict acccess and identify students using Google Login
-  DISPLAY_SOLUTIONS_AFTER_SUBMIT: false, // set to false, for real exams
+  DISPLAY_SOLUTIONS_AFTER_SUBMIT: true, // set to false, for real exams
 
   redirectToHttps: true,
 
   // Settings for conversion and publication of exercise templates
   examPack: {
-    publishSolutions: false, // `true` required for realtime-eval/auto-eval back-ends, DISPLAY_SOLUTIONS_AFTER_SUBMIT and/or dashboard
+    publishSolutions: true, // `true` required for realtime-eval/auto-eval back-ends, DISPLAY_SOLUTIONS_AFTER_SUBMIT and/or dashboard
     publishEvalTests: false, // `true` required for realtime-eval/auto-eval back-ends, DISPLAY_SOLUTIONS_AFTER_SUBMIT and/or dashboard
   },
 
@@ -30,10 +30,10 @@ module.exports = {
     },
     */
     FIREBASE_CONFIG: {
-      apiKey: "AIzaSyAO3h2quk1PBdbLjnSIhhix7LUsHoKkNbE",
-      databaseURL: "https://js-controle-2.firebaseio.com",
-      messagingSenderId: "835236294998"
-      // admin/dashboard: https://console.firebase.google.com/project/js-controle-2/database/data
+      apiKey: "AIzaSyBWrb4UMjyrSyzp_kqauvFGLi3QaWvDPus",
+      databaseURL: "https://js-qcm.firebaseio.com",
+      messagingSenderId: "988306760740"
+      // admin/dashboard: https://console.firebase.google.com/project/js-qcm/database/data
     },
   },
 
