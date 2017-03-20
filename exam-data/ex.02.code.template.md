@@ -102,6 +102,8 @@ profilInstagram.photos[{{ index }}].url
   ];
   application.remote._send(null, tests);
 })();
+// TODO: tolerer console.log() ?
+// TODO: tolerer un ; en fin de chaine?
 ```
 
 ---
@@ -147,6 +149,7 @@ Solution:
   ];
   application.remote._send(null, tests);
 })();
+// TODO: allow document.getElementById('mon-element') ? + getElementsBy...
 ```
 
 ---
@@ -211,7 +214,7 @@ for (var i = 0; i < lis.length; i++) {
   tests.push(_alerts.length === 0);
   // test 3: click on first li => one alert
   _alerts = []; // reset/clear array, just in case
-  _lis[0].onclick();
+  _lis[0].onclick(); // TODO: try (otherwise, it throws)
   tests.push(_alerts.length === 1);
   tests.push(_alerts[0] === 'ok');
   // test 4: two clicks on last li => two alerts
@@ -320,3 +323,6 @@ var images = [
   application.remote._send(null, tests);
 })();
 ```
+
+// TODO: de manière générale, ne pas laisser une fonction de test crasher à cause d'un appel de fonction non définie !
+
