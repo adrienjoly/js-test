@@ -5,20 +5,20 @@
     window.location.href = window.location.href.replace('http:', 'https:');
   var app = document.querySelector('#app');
   app.config = {
-    "title": "JavaScript - Contrôle individuel 2",
+    "title": "JavaScript - QCM 1",
     "PUBLIC_TEST_MODE": false,
-    "DISPLAY_SOLUTIONS_AFTER_SUBMIT": false,
+    "DISPLAY_SOLUTIONS_AFTER_SUBMIT": true,
     "redirectToHttps": true,
     "examPack": {
-      "publishSolutions": false,
+      "publishSolutions": true,
       "publishEvalTests": false
     },
     "backend": {
       "type": "firebase",
       "FIREBASE_CONFIG": {
-        "apiKey": "AIzaSyAO3h2quk1PBdbLjnSIhhix7LUsHoKkNbE",
-        "databaseURL": "https://js-controle-2.firebaseio.com",
-        "messagingSenderId": "835236294998"
+        "apiKey": "AIzaSyCUIGKvdZ4EdFywDU4a90PupcpBEfvpNPc",
+        "databaseURL": "https://js-qcm-ft.firebaseio.com",
+        "messagingSenderId": "793078387774"
       }
     },
     "teacherEmail": "adrien.joly@eemi.com",
@@ -39,242 +39,187 @@
       "_info": "generated from ex.01.quizz.template.md",
       "i": 1,
       "isQuizz": true,
-      "title": "QCM (1 point par bonne réponse)",
-      "maxScore": 5,
+      "title": "QCM",
+      "maxScore": 7,
       "questions": [
         {
           "i": 1,
           "id": "qcm1",
-          "md": "\n```js\nvar x = { nb: 1 };\n```\n\nDe quel type est la variable `x` ?\n\n\n",
+          "md": "Comment ouvrir la console JavaScript dans Google Chrome ?\n\n\n",
+          "mdSolution": "\n\nRéponse: *en pressant Cmd-Alt-J ou Ctrl-Shift-J*",
           "choices": [
             {
               "name": 1,
-              "text": "Nombre"
+              "text": "En tapant \"console\""
             },
             {
               "name": 2,
-              "text": "Entier"
+              "text": "En appelant le prof"
             },
             {
               "name": 3,
-              "text": "Objet"
+              "text": "En demandant gentiment à Siri"
             },
             {
               "name": 4,
-              "text": "Tableau"
+              "text": "En pressant Cmd-Alt-J ou Ctrl-Shift-J"
             }
           ]
         },
         {
           "i": 2,
           "id": "qcm2",
-          "md": "```html\n<div id=\"monDiv\" class=\"hidden\">contenu</div>\n```\n\nQuelle serait le type de la valeur retournée par `document.getElementsByClassName('hidden')` ?\n",
+          "md": "Que retourne `typeof` quand il est appliqué sur `\"bonjour\"` ?\n\n\n",
+          "mdSolution": "\n\nRéponse: `\"string\"`.\nPour le vérifier, taper `typeof \"bonjour\";` dans la console JavaScript.",
           "choices": [
             {
               "name": 1,
-              "text": "Un tableau d'objet(s)"
+              "text": "\"string\""
             },
             {
               "name": 2,
-              "text": "Un objet représentant l'élément"
+              "text": "string"
             },
             {
               "name": 3,
-              "text": "Une classe"
+              "text": "\"object\""
             },
             {
               "name": 4,
-              "text": "Une chaîne de caractères"
+              "text": "undefined"
             }
           ]
         },
         {
           "i": 3,
           "id": "qcm3",
-          "md": "```html\n<div id=\"monDiv\" class=\"hidden\">contenu</div>\n```\n\nQuelle instruction faut-il exécuter pour retirer la classe `hidden` de cet élément ?\n",
+          "md": "Types de valeurs en JavaScript. Quel est l'intrus ?\n\n\n",
+          "mdSolution": "\n\nRéponse: `decimal` était l'intrus.\nEn JavaScript, les nombres décimaux sont compris dans le type `number`.\nVérifier en tapant `typeof 4.5;` dans la console.",
           "choices": [
             {
               "name": 1,
-              "text": "element.class = '';"
+              "text": "string"
             },
             {
               "name": 2,
-              "text": "element.classList = '';"
+              "text": "boolean"
             },
             {
               "name": 3,
-              "text": "element.classList.remove('hidden');"
+              "text": "decimal"
             },
             {
               "name": 4,
-              "text": "element.style.display = 'block';"
+              "text": "number"
             }
           ]
         },
         {
           "i": 4,
           "id": "qcm4",
-          "md": "Supposons que `elements` soit un tableau d'éléments HTML.\n\n```js\nfor(var i = 0; i < elements.length; i++) {\n  elements[i].onclick = function() {\n    console.log(i);\n  }\n}\n```\n\nComment pourrait-on s'assurer que la valeur de `i` correspondante à chaque élément soit bien affichée dans la console quand l'utilisateur cliquera dessus ?\n",
+          "md": "Comment créer une variable en JavaScript ?\n\n\n",
+          "mdSolution": "\n\nRéponse: `var maVariable;`\nPour créer une variable, il faut utiliser le mot-clé `var`.\nAprès, il est possible de changer la valeur de cette variable sans avoir à utiliser `var`.\nIl est aussi possible d'affecter une valeur à cette variable au moment de sa création: `var maVariable = 4;`",
           "choices": [
             {
               "name": 1,
-              "text": "Il n'y a rien à changer"
+              "text": "maVariable;"
             },
             {
               "name": 2,
-              "text": "Il faut créer une deuxième boucle"
+              "text": "var maVariable;"
             },
             {
               "name": 3,
-              "text": "Il faut utiliser \"this\""
+              "text": "x = 0;"
             },
             {
               "name": 4,
-              "text": "Il faut passer i en paramètre d'une fonction génératrice"
+              "text": "maVariable = 'bonjour';"
             }
           ]
         },
         {
           "i": 5,
           "id": "qcm5",
-          "md": "```js\nvar point = new Point(4, 3);\n```\n\nComment appelle-t-on l'opération à droite du signe `=` ?\n",
+          "md": "Comment afficher la valeur d'une variable appelée `maVariable` depuis la console ?\n\n\n",
+          "mdSolution": "\n\nRéponse: `maVariable;`\nDans la console JavaScript, il suffit de taper le nom du variable pour afficher sa valeur, de la même façon que taper `1+1` provoquera l'affichage de `2`.\nLe point virgule n'est pas imposé par la console JavaScript, mais c'est une convention à suivre.",
           "choices": [
             {
               "name": 1,
-              "text": "Une génération de fonction"
+              "text": "maVariable;"
             },
             {
               "name": 2,
-              "text": "Une instanciation de classe"
+              "text": "var maVariable;"
             },
             {
               "name": 3,
-              "text": "Un appel de fonction"
+              "text": "maVariable?"
             },
             {
               "name": 4,
-              "text": "Une concaténation de nombres"
+              "text": "show maVariable"
             }
           ]
-        }
-      ]
-    },
-    {
-      "_info": "generated from ex.02.code.template.md",
-      "i": 2,
-      "isCode": true,
-      "title": "Exercices de codage (3 pts par question)",
-      "maxScore": 15,
-      "questions": [
+        },
         {
           "i": 6,
-          "id": "code6",
-          "variants": [
+          "id": "qcm6",
+          "md": "Comment changer la valeur d'une variable existante ? (déjà créée)\n\n\n",
+          "mdSolution": "\n\nRéponse: `maVariable = 4;`\nLe mot-clé `var` n'est à utiliser que lorsque la variable n'a pas encore été créée.\nL'usage des parenthèses dans `maVariable(4);` provoque l'appel d'une fonction appelée `maVariable` en passant la valeur `4` en paramètre.\nEnfin, l'opérateur d'affectation stocke la valeur à droite du `=` dans la variable à gauche du `=`, donc `4 = maVariable` n'a pas de sens car `4` n'est pas une variable.",
+          "choices": [
             {
-              "varName": "obj",
-              "prop1Name": "nom",
-              "prop2Val": 46
+              "name": 1,
+              "text": "var maVariable = 4;"
             },
             {
-              "varName": "obj",
-              "prop1Name": "name",
-              "prop2Val": 46
+              "name": 2,
+              "text": "maVariable = 4;"
             },
             {
-              "varName": "personne",
-              "prop1Name": "nom",
-              "prop2Val": 64
+              "name": 3,
+              "text": "maVariable(4);"
+            },
+            {
+              "name": 4,
+              "text": "4 = maVariable;"
             }
-          ],
-          "mdVariants": [
-            "\nCréez une variable `obj` et affectez-lui un objet contenant deux propriétés:\n\n - une propriété `nom` ayant `'sause'` comme valeur (type: chaîne de caractères),\n - et une propriété `age` ayant `46` comme valeur (type: nombre).\n\n<!-- variantes: -->\n\n\n",
-            "\nCréez une variable `obj` et affectez-lui un objet contenant deux propriétés:\n\n - une propriété `name` ayant `'sause'` comme valeur (type: chaîne de caractères),\n - et une propriété `age` ayant `46` comme valeur (type: nombre).\n\n<!-- variantes: -->\n\n\n",
-            "\nCréez une variable `personne` et affectez-lui un objet contenant deux propriétés:\n\n - une propriété `nom` ayant `'sause'` comme valeur (type: chaîne de caractères),\n - et une propriété `age` ayant `64` comme valeur (type: nombre).\n\n<!-- variantes: -->\n\n\n"
           ]
         },
         {
           "i": 7,
-          "id": "code7",
-          "variants": [
+          "id": "qcm7",
+          "md": "Si j'ai créé une variable dont la valeur est un nombre, que se passera-t-il si je lui affecte ensuite une chaine de caractères ?\n\n\n",
+          "mdSolution": "\n\nRéponse: *la valeur de la variable va être remplacée par la chaine de caractères.*\nL'affectation consiste à utiliser l'opérateur `=` pour remplacer la valeur d'une variable par une autre valeur.\nPour effectuer une concaténation, il faut utiliser l'opérateur `+`, et non l'opérateur d'affectation.\nJavaScript est un langage faiblement typé, il est donc possible d'affecter une valeur de n'importe quel type à n'importe quelle variable.",
+          "choices": [
             {
-              "index": 0,
-              "indexLabel": "première"
+              "name": 1,
+              "text": "erreur, car le type est différent."
             },
             {
-              "index": 1,
-              "indexLabel": "deuxième"
+              "name": 2,
+              "text": "erreur, car on ne peut pas changer la valeur d'une variable."
+            },
+            {
+              "name": 3,
+              "text": "la valeur de la variable va être remplacée par la chaine de caractères."
+            },
+            {
+              "name": 4,
+              "text": "les deux valeurs vont être concaténées."
             }
-          ],
-          "mdVariants": [
-            "On fournit le code JavaScript suivant:\n\n```js\nvar profilInstagram = {\n  prenom: 'François',\n  photos: [\n    {\n      nom: 'mon chien est moi',\n      url: 'http://imgur.com/img/1',\n    },\n    {\n      nom: 'coucher de soleil => such wow!',\n      url: 'http://imgur.com/img/2',\n    },\n  ],\n};\nconsole.log(chemin);\n```\n\nTapez l'expression qu'il faudrait saisir à la place de `chemin`, afin d'afficher dans la console l'`url` de la première photo de François:\n\n(utilisez la notation pointée à partir de l'objet `profilInstagram`)\n\n<!-- variantes: -->\n\n\n",
-            "On fournit le code JavaScript suivant:\n\n```js\nvar profilInstagram = {\n  prenom: 'François',\n  photos: [\n    {\n      nom: 'mon chien est moi',\n      url: 'http://imgur.com/img/1',\n    },\n    {\n      nom: 'coucher de soleil => such wow!',\n      url: 'http://imgur.com/img/2',\n    },\n  ],\n};\nconsole.log(chemin);\n```\n\nTapez l'expression qu'il faudrait saisir à la place de `chemin`, afin d'afficher dans la console l'`url` de la deuxième photo de François:\n\n(utilisez la notation pointée à partir de l'objet `profilInstagram`)\n\n<!-- variantes: -->\n\n\n"
-          ]
-        },
-        {
-          "i": 8,
-          "id": "code8",
-          "variants": [
-            {
-              "varName": "element",
-              "className": "highlight"
-            },
-            {
-              "varName": "element",
-              "className": "surbrillance"
-            },
-            {
-              "varName": "monElement",
-              "className": "surbrillance"
-            }
-          ],
-          "mdVariants": [
-            "Supposons qu'une variable `element` a été initialisée de la manière suivante:\n\n```js\nvar element = document.getElementById('mon-element');\n```\n\nÉcrivez l'instruction JavaScript permettant d'ajouter la classe `highlight` à cet élément, en utilisant la variable `element` fournie.\n\n<!-- variantes: -->\n\n\n",
-            "Supposons qu'une variable `element` a été initialisée de la manière suivante:\n\n```js\nvar element = document.getElementById('mon-element');\n```\n\nÉcrivez l'instruction JavaScript permettant d'ajouter la classe `surbrillance` à cet élément, en utilisant la variable `element` fournie.\n\n<!-- variantes: -->\n\n\n",
-            "Supposons qu'une variable `monElement` a été initialisée de la manière suivante:\n\n```js\nvar monElement = document.getElementById('mon-element');\n```\n\nÉcrivez l'instruction JavaScript permettant d'ajouter la classe `surbrillance` à cet élément, en utilisant la variable `monElement` fournie.\n\n<!-- variantes: -->\n\n\n"
-          ]
-        },
-        {
-          "i": 9,
-          "id": "code9",
-          "variants": [
-            {
-              "outputLabel": "un alert",
-              "outputFct": "alert"
-            },
-            {
-              "outputLabel": "la console",
-              "outputFct": "console.log"
-            }
-          ],
-          "mdVariants": [
-            "```html\n<li>1er produit</li>\n<li>2ème produit</li>\n<li>3ème produit</li>\n```\n\nÉcrivez le code JavaScript permettant d'afficher \"`ok`\" (sans les guillemets) dans un alert à chaque fois que l'utilisateur cliquera sur n'importe lequel de ces trois éléments.\n\nPour définir le comportement au clic, utiliser la propriété `onclick`.\n\n<!-- variantes: -->\n\n\n",
-            "```html\n<li>1er produit</li>\n<li>2ème produit</li>\n<li>3ème produit</li>\n```\n\nÉcrivez le code JavaScript permettant d'afficher \"`ok`\" (sans les guillemets) dans la console à chaque fois que l'utilisateur cliquera sur n'importe lequel de ces trois éléments.\n\nPour définir le comportement au clic, utiliser la propriété `onclick`.\n\n<!-- variantes: -->\n\n\n"
-          ]
-        },
-        {
-          "i": 10,
-          "id": "code10",
-          "variants": [
-            {
-              "fctName": "initGallery",
-              "url2": "https://i.imgur.com/emRrCLd.jpg"
-            },
-            {
-              "fctName": "embedGallery",
-              "url2": "https://i.imgur.com/emRrCLd.jpg"
-            },
-            {
-              "fctName": "initGallery",
-              "url2": "http://i.imgur.com/bdh4Qpn.jpg"
-            }
-          ],
-          "mdVariants": [
-            "Je souhaite intégrer une galerie d'images sur mon site, en utilisant un composant déjà existant.\n\nVoici un extrait de la documentation du composant:\n\n> Pour instancier une galerie sur votre page, appelez la fonction `initGallery(element, images)`, avec en paramètres:\n> \n> - `element`(*type: objet*): élément du DOM dans lequel intégrer la galerie,\n> - `images`(*type: tableau de chaînes de caractères*): URLs des images à intégrer dans la galerie.\n\nMon fichier HTML contient ces éléments:\n\n```html\n<script src=\"https://controle.js/gallery.js\"></script>\n<div id=\"my-gallery\"></div>\n```\n\nJe souhaite intégrer la galerie dans le `<div>`, avec les images suivantes:\n\n - `https://i.imgur.com/ydi5jMh.jpg`\n - `https://i.imgur.com/emRrCLd.jpg`\n - `https://i.imgur.com/HdsQ3fe.jpg`\n\nQuel code JavaScript dois-je exécuter pour intégrer la galerie dans ma page ?\n\n<!-- variantes: -->\n\n\n",
-            "Je souhaite intégrer une galerie d'images sur mon site, en utilisant un composant déjà existant.\n\nVoici un extrait de la documentation du composant:\n\n> Pour instancier une galerie sur votre page, appelez la fonction `embedGallery(element, images)`, avec en paramètres:\n> \n> - `element`(*type: objet*): élément du DOM dans lequel intégrer la galerie,\n> - `images`(*type: tableau de chaînes de caractères*): URLs des images à intégrer dans la galerie.\n\nMon fichier HTML contient ces éléments:\n\n```html\n<script src=\"https://controle.js/gallery.js\"></script>\n<div id=\"my-gallery\"></div>\n```\n\nJe souhaite intégrer la galerie dans le `<div>`, avec les images suivantes:\n\n - `https://i.imgur.com/ydi5jMh.jpg`\n - `https://i.imgur.com/emRrCLd.jpg`\n - `https://i.imgur.com/HdsQ3fe.jpg`\n\nQuel code JavaScript dois-je exécuter pour intégrer la galerie dans ma page ?\n\n<!-- variantes: -->\n\n\n",
-            "Je souhaite intégrer une galerie d'images sur mon site, en utilisant un composant déjà existant.\n\nVoici un extrait de la documentation du composant:\n\n> Pour instancier une galerie sur votre page, appelez la fonction `initGallery(element, images)`, avec en paramètres:\n> \n> - `element`(*type: objet*): élément du DOM dans lequel intégrer la galerie,\n> - `images`(*type: tableau de chaînes de caractères*): URLs des images à intégrer dans la galerie.\n\nMon fichier HTML contient ces éléments:\n\n```html\n<script src=\"https://controle.js/gallery.js\"></script>\n<div id=\"my-gallery\"></div>\n```\n\nJe souhaite intégrer la galerie dans le `<div>`, avec les images suivantes:\n\n - `https://i.imgur.com/ydi5jMh.jpg`\n - `http://i.imgur.com/bdh4Qpn.jpg`\n - `https://i.imgur.com/HdsQ3fe.jpg`\n\nQuel code JavaScript dois-je exécuter pour intégrer la galerie dans ma page ?\n\n<!-- variantes: -->\n\n\n"
           ]
         }
-      ]
+      ],
+      "solutions": {
+        "qcm1": 4,
+        "qcm2": 1,
+        "qcm3": 3,
+        "qcm4": 2,
+        "qcm5": 1,
+        "qcm6": 2,
+        "qcm7": 3
+      }
     }
   ];
 })(document);
