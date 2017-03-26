@@ -141,7 +141,7 @@
                           </h3>
                           <paper-spinner-lite active></paper-spinner-lite>
 
-                          <zero-md text="{{question.md}}" file="{{question.mdFile}}">
+                          <zero-md on-marked-render-complete="onMarkedRenderComplete" text="{{question.md}}" file="{{question.mdFile}}">
                             <!-- Remember to pass in empty container of class="md-html". -->
                             <div class="md-html"></div>
                           </zero-md>

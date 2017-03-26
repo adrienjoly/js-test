@@ -1,0 +1,206 @@
+<script>
+    var MathJaxBehavior = (function() {
+        'use strict';
+        return {
+
+            created: function() {
+                console.log('MathJax behavior created!');
+            },
+
+            properties: {
+
+                /**
+                 * @property reference to MathJax library
+                 */
+                MathJax: {
+                    type: Object
+                },
+
+                /**
+                 * @property ref to MathJax.Hub.queue
+                 */
+                MathQueue: {
+                    type: Object
+                },
+
+                /**
+                 * @property the element jax for the math output.
+                 */
+                MathElement: {
+                    type: Object
+                },
+
+                libaryLocation: {
+                    type: String,
+                    value: 'bower_components/MathJax/MathJax.js'
+                }
+            },
+
+            /**
+             * @param {String} libaryLocation
+             */
+            setLibaryLocation: function(libaryLocation) {
+                this.libaryLocation = libaryLocation;
+            },
+
+            /**
+             * If MathJax variable is doesn't defined added a new script tag
+             */
+            loadMathJaxLibrary: function() {
+                if (!window.hasOwnProperty('MathJax')) {
+                    var script = document.createElement('script');
+                    script.type = 'text/javascript';
+                    script.src = this.libaryLocation;
+
+                    document.body.appendChild(script);
+
+                    var self = this;
+                    script.addEventListener('load', function() {
+                        self.initializeMathJaxObjects();
+                    });
+                } else {
+                    this.initializeMathJaxObjects();
+                }
+            },
+
+            /**
+             * Update and create all necessary configurations
+             */
+            initializeMathJaxObjects: function() {
+                // Load MathJax setup
+                this.__setupMathJax();
+
+                this.MathQueue = MathJax.Hub.queue;
+            },
+
+            /**
+             * Added a new element to MathJax queue
+             *
+             * @param {String} id element html id
+             */
+            addElementToMathQueue: function(id) {
+                var self = this;
+                this.MathQueue.Push(function() {
+                    self.MathElement = MathJax.Hub.getAllJax(id)[0];
+                });
+            },
+
+            /**
+             * If you are writing a dynamic web page where content containing mathematics may
+             * appear after MathJax has already typeset the rest of the page,
+             * then you will need to tell MathJax to look for mathematics
+             * in the page again when that new content is produced.
+             * To do that, you need to use the MathJax.Hub.Typeset() method.
+             * This will cause the preprocessors (if any were loaded) to run over the page again,
+             * and then MathJax will look for unprocessed mathematics on the page and typeset it,
+             * leaving unchanged any math that has already been typeset.
+             *
+             * @see http://docs.mathjax.org/en/latest/advanced/typeset.html
+             *
+             * @param {Object} polymerElement
+             */
+            runMathJaxPrepProcessor(polymerElement, text) {
+                this.MathJax.Hub.Queue(['Typeset', this.MathJax.Hub, polymerElement]);
+            },
+
+            /**
+             * These configurations follow TeX-MML-AM_HTMLorMML instructions.
+             *
+             * Configurations loads:
+             * It loads all the main MathJax components, including the TeX,
+             * MathML, and AsciiMath preprocessors and input processors,
+             * the AMSmath, AMSsymbols, noErrors, and noUndefined TeX extensions,
+             * both the native MathML and HTML-CSS output processor definitions,
+             * the fast-preview and AssistiveMML extensions, and the MathMenu
+             * and MathZoom extensions.
+             *
+             * @see http://docs.mathjax.org/en/latest/config-files.html
+             */
+            __setupMathJax: function() {
+                this.__loadOutputSetup();
+
+                // Store MathJax.js reference library
+                this.MathJax = MathJax;
+
+                this.MathJax.Hub.Config({
+                    config: ['MMLorHTML.js'],
+                    jax: ['input/TeX', 'input/MathML', 'input/AsciiMath'],
+                    extensions: [
+                        'tex2jax.js',
+                        'mml2jax.js',
+                        'asciimath2jax.js',
+                        'MathMenu.js',
+                        'MathZoom.js',
+                        'fast-preview.js',
+                        'AssistiveMML.js'
+                    ],
+                    TeX: {
+                        extensions: [
+                            // The AMSmath extension implements AMS math
+                            // environments and macros, and the AMSsymbols extension
+                            // implements macros for accessing the AMS symbol fonts.
+                            // These are already included in the combined
+                            // configuration files that load the TeX input processor.
+                            'AMSmath.js',
+                            'AMSsymbols.js',
+
+                            // The noErrors extension prevents TeX error messages
+                            // from being displayed and shows the original TeX code instead.
+                            'noErrors.js',
+
+                            // The noUndefined extension causes undefined control
+                            // sequences to be shown as their macro names rather than generating
+                            // error messages. So $X_{\xxx}$ would display
+                            // as an “X” with a subscript consisting of the text \xxx in red.
+                            'noUndefined.js'
+                        ],
+
+                        // http://docs.mathjax.org/en/latest/tex.html
+                        Macros: {
+                            RR: '{\\bf R}',
+                            bold: ['{\\bf #1}',1],
+                            Abs: ['\\left\\lvert #2 \\right\\rvert_{\\text{#1}}', 2, '']
+                        }
+                    },
+                    tex2jax: {
+                        inlineMath: [['$','$'], ['\\(','\\)']],
+                        processEscapes: true
+                    }
+                });
+            },
+
+            /**
+             * If you want something that is more backward compatible with MMLorHTML
+             * (i.e., if you have pages that configure MMLorHTML one way and other apges that configure it another way),
+             * here is a version that uses the old MMLorHTML‘s “prefer” object,
+             * and only sets MathML mode if they browser can handle that.
+             */
+            __loadOutputSetup: function() {
+                MathJax.Hub.Register.StartupHook('End Jax', function () {
+                  var BROWSER = MathJax.Hub.Browser;
+
+                  var canUseMML = (BROWSER.isFirefox && BROWSER.versionAtLeast('1.5')) ||
+                                  (BROWSER.isMSIE    && BROWSER.hasMathPlayer) ||
+                                  (BROWSER.isSafari  && BROWSER.versionAtLeast('5.0')) ||
+                                  (BROWSER.isOpera   && BROWSER.versionAtLeast('9.52') &&
+                                                       !BROWSER.versionAtLeast('14.0'));
+
+                  var CONFIG = MathJax.Hub.CombineConfig('MMLorHTML',{
+                    prefer: {
+                      MSIE:'MML',
+                      Firefox:'HTML', Opera:'HTML', Chrome:'HTML', Safari:'HTML',
+                      other:'HTML'
+                    }
+                  });
+
+                  var jax = CONFIG.prefer[BROWSER] || CONFIG.prefer.other;
+                  if (jax === 'HTML') jax = 'HTML-CSS'; else if (jax === 'MML')  jax = 'NativeMML';
+                  if (jax === 'NativeMML' && !canUseMML) jax = CONFIG.prefer.other;
+                  console.log(jax);
+
+                  return MathJax.Hub.setRenderer(jax);
+                });
+            }
+        }
+    })();
+</script>

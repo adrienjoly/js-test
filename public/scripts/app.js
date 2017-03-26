@@ -33,6 +33,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   app.hashedAnswers = '';
   app.active = false;
 
+  app.behaviors = [
+    MathJaxBehavior,
+  ];
+
   app.displayInstalledToast = function() {
     // Check to make sure caching is actually enabled—it won't be in the dev environment.
     if (!Polymer.dom(document).querySelector('platinum-sw-cache').disabled) {
@@ -136,6 +140,26 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
   app.ready = function(){
     console.log('ready');
+
+    if (!app.MathJax) {
+      for (var prop in MathJaxBehavior) {
+        console.log('injecting MathJaxBehavior:', prop)
+        app[prop] = MathJaxBehavior[prop]
+      }
+    }
+
+    app.onMarkedRenderComplete = function(event) {
+      function renderMath() {
+        app.runMathJaxPrepProcessor(event.path[0]);
+      }
+      try {
+        renderMath()
+      } catch(e) {
+        console.warn('failed to run runMathJaxPrepProcessor() => retrying in 1 second...');
+        setInterval(renderMath, 1000);
+      }
+    };
+
     app.ready = null; // prevent this function from running twice
     // load backend
     app.async(function(){
@@ -149,6 +173,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         app.onBackendLoaded && app.onBackendLoaded();
         app.active = true;
       }
+      // Behavior: MyBehaviors.MathJax
+      app.loadMathJaxLibrary();
+      // TODO: provide configuration setting to enable/disable use of MathJax
     });
   }
 
