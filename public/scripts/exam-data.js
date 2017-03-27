@@ -5,7 +5,7 @@
     window.location.href = window.location.href.replace('http:', 'https:');
   var app = document.querySelector('#app');
   app.config = {
-    "title": "JavaScript - QCM 6 (Objets)",
+    "title": "JavaScript - QCM 10 (AJAX GET)",
     "PUBLIC_TEST_MODE": false,
     "DISPLAY_SOLUTIONS_AFTER_SUBMIT": true,
     "redirectToHttps": true,
@@ -45,105 +45,105 @@
         {
           "i": 1,
           "id": "qcm1",
-          "md": "Laquelle de ces instructions constitue un objet JavaScript valide:\n\n\n",
-          "mdSolution": "\n\nUn objet JavaScript:\n\n - accolades\n - propriétés définis par paires clé-valeur (syntaxe: `clé: valeur`)\n - propriétés séparées par des virgules",
+          "md": "Pour effectuer une requête AJAX GET, et afficher la réponse du serveur dans un `alert()`, il faut instancier la classe `XMLHttpRequest` puis...\n\n\n",
+          "mdSolution": "\n\n```js\nvar xhr = new XMLHttpRequest(); \nxhr.open('GET', 'https://jsonplaceholder.typicode.com/users/1');\nxhr.onreadystatechange = function() {\n  if (xhr.readyState === 4) {\n    alert(xhr.responseText);\n  }\n};\nxhr.send();\n```\n\nDans le code de cette requête, on:\n\n - instancie la classe `XMLHttpRequest` dans la variable `xhr`,\n - **définit 1 fonction** qu'on affecte à la propriété `onreadystatechange` de `xhr`,\n - et on **appelle 2 méthodes** de `xhr`: `open()` et `send()`.\n\nÀ noter que `alert()` est un appel de fonction, et non un appel de méthode, car cette fonction n'est pas rattachée à une instance de classe.",
           "choices": [
             {
               "name": 1,
-              "text": "[ prop1: 3, prop2: 4 ]"
+              "text": "... appeler 2 méthodes, et définir 1 fonction"
             },
             {
               "name": 2,
-              "text": "{ prop1: 3, prop2: 4 }"
+              "text": "... appeler 1 méthode, et définir 2 fonctions"
             },
             {
               "name": 3,
-              "text": "{ 2, true, 'bonjour' }"
+              "text": "... appeler 3 méthodes"
             },
             {
               "name": 4,
-              "text": "{ 'a': 1; 'b': 2 }"
+              "text": "... définir 3 fonctions"
             }
           ]
         },
         {
           "i": 2,
           "id": "qcm2",
-          "md": "Comment récupérer la valeur de la propriété `nom` d'un objet affecté à une variable `personne` ?\n\n\n",
-          "mdSolution": "\n\nSachant qu'on connaît littéralement la clé de la propriété (il s'agit de `nom`), on peut utiliser la notation pointée.",
+          "md": "J'ai écrit le code permettant d'envoyer une requête HTTP GET, mais rien ne se passe, et rien n'apparait dans la console.\n\nCela pourrait être dû à:\n\n\n",
+          "mdSolution": "\n\nDans ces trois cas, on aurait obtenu une erreur dans la console:\n\n - *une erreur de syntaxe*\n - *une URL erronée*\n - *l'oubli de l'usage de `JSON.parse()`*\n\nLa bonne réponse est donc: *l'oubli de l'appel à `send()`*.\n\nEn effet, c'est cette méthode qui permet l'envoi de la requête. Sans cela, notre code n'aura eu aucun effet, sauf l'initialisation de la requête dans l'instance `xhr`.",
           "choices": [
             {
               "name": 1,
-              "text": "personne.get('nom');"
+              "text": "une erreur de syntaxe"
             },
             {
               "name": 2,
-              "text": "personne.[nom];"
+              "text": "une URL erronée"
             },
             {
               "name": 3,
-              "text": "personne[nom];"
+              "text": "l'oubli de l'appel à send()"
             },
             {
               "name": 4,
-              "text": "personne.nom;"
+              "text": "l'oubli de l'usage de JSON.parse()"
             }
           ]
         },
         {
           "i": 3,
           "id": "qcm3",
-          "md": "Toujours dans notre objet `personne`, comment récupérer la valeur d'une propriété dont la clé est stockée dans la variable `laCle` ?\n\n\n",
-          "mdSolution": "\n\nSachant qu'on ne connaît pas a priori la clé de la propriété (car elle est stockée dans une variable), on ne peut PAS utiliser la notation pointée. => Il faut utiliser les crochets, comme pour récupérer la valeur d'un élément de tableau.\n\nEt, sachant que `laCle` est une variable, et non la valeur littérale de notre clé, il ne faut pas l'écrire entre apostrophes.",
+          "md": "Quel est le format le plus couramment utilisé de nos jours pour échanger des informations en AJAX avec une API ?\n\n\n",
+          "mdSolution": "\n\nAJAX (*Asynchronous Javascript And XML*) a été initialement conçu pour échanger des informations au format XML, très en vogue dans les années 90, mais il permet d'utiliser n'importe quel format sérialisable sous forme d'une chaine de caractères.\n\nAujourd'hui, on utilise majoritairement le format *JSON* dans les requêtes AJAX, car il a l'avantage d'être concis (et peu consommateur de bande passante), facilement lisible à l'oeil nu, et directement manipulable en JavaScript.",
           "choices": [
             {
               "name": 1,
-              "text": "personne.get(laCle);"
+              "text": "HTML"
             },
             {
               "name": 2,
-              "text": "personne.laCle;"
+              "text": "XML"
             },
             {
               "name": 3,
-              "text": "personne[laCle];"
+              "text": "JSON"
             },
             {
               "name": 4,
-              "text": "personne['laCle'];"
+              "text": "texte brut"
             }
           ]
         },
         {
           "i": 4,
           "id": "qcm4",
-          "md": "```js\nvar compteFacebook = {\n  groupes: {\n    maitresJedi: {},\n    lolcats: {\n      titre: 'Vive les chats !',\n      membres: [ 'Patrick' ],\n    },\n  },\n};\n```\n\nQuelle instruction faut-il saisir pour accéder à la valeur `'Patrick'` ?\n\n\n",
-          "mdSolution": "\n\nIl faut préciser tout le cheminement à effectuer, niveau par niveau, en partant de la racine de l'arbre: la variable qui contient l'objet principal.\n\nVu qu'on connaît les clés de chaque propriété de cet objet hiérarchique (objets imbriqués), on peut utiliser la notation pointée, sauf pour accéder au premier élément du tableau contenant la valeur `'Patrick'`.\n\nIl est possible d'utiliser des crochets au lieu de la notation pointée, à condition de mettre les noms de chaque clé entre apostrophes (car on connaît leur valeur littérale à priori), et de ne pas mettre le nom de la variable contenant l'objet (`compteFacebook`) entre crochets, car ce n'est pas une clé de propriété.",
+          "md": "```js\nvar xhr = new XMLHttpRequest(); \nxhr.open('GET', 'https://jsonplaceholder.typicode.com/users/1');\nxhr.onreadystatechange = function() {\n  if (xhr.readyState === 4) {\n    var reponse = JSON.parse(xhr.responseText);\n    alert(/* A SAISIR */);\n  }\n};\nxhr.send();\n```\n\nSi on veut afficher la propriété `email` de l'objet contenu dans la réponse à notre requête, par quoi faut-il replacer `/* A SAISIR */` ?\n\n\n",
+          "mdSolution": "\n\n - la propriété `xhr.responseText` est de type `string` (c'est la forme *sérialisée* de l'objet contenu dans la réponse à la requête), donc on ne peut pas utiliser directement la notation pointée pour accéder à la propriété `email` demandée.\n - `JSON.parse()` a été appelé sur `xhr.responseText`, et l'objet résultant est stocké dans la variable `reponse`. Il n'est donc pas nécéssaire d'appeler `JSON.parse()` à nouveau.\n - `responseText['email']` causerait une erreur car `responseText` est une propriété de l'objet `xhr`, et non une variable existante.\n\nIl va donc falloir extraire la propriété `email` de l'objet contenu dans la variable `reponse` (qui a été désérialisé par `JSON.parse()`), en utilisant la notation pointée: `reponse.email`.",
           "choices": [
             {
               "name": 1,
-              "text": "compteFacebook.groupes.lolcats.membres[0]"
+              "text": "JSON.parse(xhr.responseText.email)"
             },
             {
               "name": 2,
-              "text": "compteFacebook.membres[0]"
+              "text": "xhr.responseText.email"
             },
             {
               "name": 3,
-              "text": "[comptesFacebook][groupes][lolcats][membres][0]"
+              "text": "reponse.email"
             },
             {
               "name": 4,
-              "text": "['comptesFacebook']['groupes']['lolcats']['membres'][0]"
+              "text": "responseText['email']"
             }
           ]
         }
       ],
       "solutions": {
-        "qcm1": 2,
-        "qcm2": 4,
+        "qcm1": 1,
+        "qcm2": 3,
         "qcm3": 3,
-        "qcm4": 1
+        "qcm4": 3
       }
     }
   ];
