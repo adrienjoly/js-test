@@ -203,7 +203,7 @@ STUDENT: erwan_allain
   | // STUDENT CODE:
   | 
   | console.log(profilInstagram.photos(url2))
-  | => test runner err: ReferenceError: url2 is not defined at eval (eval at evaluateStudentCode (DYNAMIC PLUGIN:20:21), <anonymous>:1:36)
+  | => test runner err: ReferenceError: url2 is not defined at eval (eval at evaluateStudentCode (DYNAMIC PLUGIN:21:17), <anonymous>:1:36)
   | 
   | ------------- EXERCISE: code8 (variant: 2) -------------
   | 
@@ -534,7 +534,7 @@ STUDENT: jonathan_leder
   | // STUDENT CODE:
   | 
   | profilInstragram.photos[2]'[url]';
-  | => test runner err: SyntaxError: Unexpected string at evaluateStudentCode (DYNAMIC PLUGIN:20:21)
+  | => test runner err: SyntaxError: Unexpected string at evaluateStudentCode (DYNAMIC PLUGIN:21:17)
   | 
   | ------------- EXERCISE: code8 (variant: 2) -------------
   | 
@@ -799,7 +799,7 @@ STUDENT: loic_parisse
   | // STUDENT CODE:
   | 
   | console.log(profilInstagram/prenom/nom/nom/url);
-  | => test runner err: ReferenceError: prenom is not defined at eval (eval at evaluateStudentCode (DYNAMIC PLUGIN:20:21), <anonymous>:1:29)
+  | => test runner err: ReferenceError: prenom is not defined at eval (eval at evaluateStudentCode (DYNAMIC PLUGIN:21:17), <anonymous>:1:29)
   | 
   | ------------- EXERCISE: code8 (variant: 2) -------------
   | 
@@ -1036,7 +1036,7 @@ STUDENT: noelie_roux
   | // STUDENT CODE:
   | 
   | profilInstagram.photos.url['http://imgur.com/img/2']
-  | => test runner err: TypeError: Cannot read property 'http://imgur.com/img/2' of undefined at eval (eval at evaluateStudentCode (DYNAMIC PLUGIN:20:21), <anonymous>:1:27)
+  | => test runner err: TypeError: Cannot read property 'http://imgur.com/img/2' of undefined at eval (eval at evaluateStudentCode (DYNAMIC PLUGIN:21:17), <anonymous>:1:27)
   | 
   | ------------- EXERCISE: code8 (variant: 1) -------------
   | 
@@ -1375,7 +1375,7 @@ STUDENT: victor_delataillade
   |   ],
   | };
   | console.log(chemin);
-  | => test runner err: ReferenceError: chemin is not defined at eval (eval at evaluateStudentCode (DYNAMIC PLUGIN:33:21), <anonymous>:14:13)
+  | => test runner err: ReferenceError: chemin is not defined at eval (eval at evaluateStudentCode (DYNAMIC PLUGIN:34:17), <anonymous>:14:13)
   | 
   | ------------- EXERCISE: code8 (variant: 2) -------------
   | 

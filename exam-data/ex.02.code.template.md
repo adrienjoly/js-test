@@ -94,9 +94,10 @@ profilInstagram.photos[{{ index }}].url
       },
     ],
   };
+  var result;
   var console = { log: function(r){ result = r; } }; // accept use of console.log()
   var studentCode = `_studentCode`.trim();
-  var result = eval(studentCode);
+  result = eval(studentCode) || result;
   var tests = [
     result === profilInstagram.photos[{{ index }}].url, // valeur finale
     studentCode.indexOf('profilInstagram.photos[{{ index }}].url') === 0, // notation pointée

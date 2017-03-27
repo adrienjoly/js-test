@@ -31,7 +31,7 @@ STUDENT: aubin_keravel
   | // STUDENT CODE:
   | 
   | profilInstagram.photos.url[0].value
-  | => test runner err: TypeError: Cannot read property '0' of undefined at eval (eval at evaluateStudentCode (DYNAMIC PLUGIN:20:21), <anonymous>:1:27)
+  | => test runner err: TypeError: Cannot read property '0' of undefined at eval (eval at evaluateStudentCode (DYNAMIC PLUGIN:21:17), <anonymous>:1:27)
   | 
   | ------------- EXERCISE: code8 (variant: 1) -------------
   | 
@@ -169,7 +169,7 @@ STUDENT: benjamin_kissous
   | 
   | console.log(profilInstagram.photos[0].url);
   | 
-  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0 ]
+  | // -> STUDENT SCORE ARRAY: [ 1, 0, 0 ]
   | 
   | ------------- EXERCISE: code8 (variant: 1) -------------
   | 
@@ -204,9 +204,9 @@ STUDENT: benjamin_kissous
   | };
   | => test runner err: SyntaxError: Unexpected token ,
 
-  => code score: 5 / 15 pts
+  => code score: 6 / 15 pts
 
-=> TOTAL STUDENT SCORE: 10 / 20
+=> TOTAL STUDENT SCORE: 11 / 20
 
 
 ================================
@@ -364,7 +364,7 @@ STUDENT: florian_compiegne
   | 
   | console.log(profilInstagram.photos[1].url);
   | 
-  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0 ]
+  | // -> STUDENT SCORE ARRAY: [ 1, 0, 0 ]
   | 
   | ------------- EXERCISE: code8 (variant: 1) -------------
   | 
@@ -416,9 +416,9 @@ STUDENT: florian_compiegne
   | 
   | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 0 ]
 
-  => code score: 9 / 15 pts
+  => code score: 10 / 15 pts
 
-=> TOTAL STUDENT SCORE: 14 / 20
+=> TOTAL STUDENT SCORE: 15 / 20
 
 
 ================================
@@ -862,7 +862,7 @@ STUDENT: louis_gosse
   | // STUDENT CODE:
   | 
   | profilInstagram.photos.url[1]
-  | => test runner err: TypeError: Cannot read property '1' of undefined at eval (eval at evaluateStudentCode (DYNAMIC PLUGIN:20:21), <anonymous>:1:27)
+  | => test runner err: TypeError: Cannot read property '1' of undefined at eval (eval at evaluateStudentCode (DYNAMIC PLUGIN:21:17), <anonymous>:1:27)
   | 
   | ------------- EXERCISE: code8 (variant: 2) -------------
   | 
@@ -926,7 +926,7 @@ STUDENT: madison_hayat
   | // STUDENT CODE:
   | 
   | document.getElementById('http://imgur.com/img/1');
-  | => test runner err: ReferenceError: document is not defined at eval (eval at evaluateStudentCode (DYNAMIC PLUGIN:20:21), <anonymous>:1:1)
+  | => test runner err: ReferenceError: document is not defined at eval (eval at evaluateStudentCode (DYNAMIC PLUGIN:21:17), <anonymous>:1:1)
   | 
   | ------------- EXERCISE: code8 (variant: 0) -------------
   | 
@@ -1001,7 +1001,7 @@ STUDENT: mickael_chekroun
   | // STUDENT CODE:
   | 
   | profilInstagram.photos.url[1]
-  | => test runner err: TypeError: Cannot read property '1' of undefined at eval (eval at evaluateStudentCode (DYNAMIC PLUGIN:20:21), <anonymous>:1:27)
+  | => test runner err: TypeError: Cannot read property '1' of undefined at eval (eval at evaluateStudentCode (DYNAMIC PLUGIN:21:17), <anonymous>:1:27)
   | 
   | ------------- EXERCISE: code8 (variant: 0) -------------
   | 
@@ -1086,7 +1086,7 @@ STUDENT: pierre_salesse
   | // STUDENT CODE:
   | 
   | console.log(profilInstagram.photos.url[1]);
-  | => test runner err: TypeError: Cannot read property '1' of undefined at eval (eval at evaluateStudentCode (DYNAMIC PLUGIN:20:21), <anonymous>:1:39)
+  | => test runner err: TypeError: Cannot read property '1' of undefined at eval (eval at evaluateStudentCode (DYNAMIC PLUGIN:21:17), <anonymous>:1:39)
   | 
   | ------------- EXERCISE: code8 (variant: 1) -------------
   | 
@@ -1147,7 +1147,7 @@ STUDENT: quentin_champenois
   | 
   | console.log(profilInstagram.photos[1].url);
   | 
-  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0 ]
+  | // -> STUDENT SCORE ARRAY: [ 1, 0, 0 ]
   | 
   | ------------- EXERCISE: code8 (variant: 2) -------------
   | 
@@ -1178,9 +1178,9 @@ STUDENT: quentin_champenois
   | 
   | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 0 ]
 
-  => code score: 9 / 15 pts
+  => code score: 10 / 15 pts
 
-=> TOTAL STUDENT SCORE: 14 / 20
+=> TOTAL STUDENT SCORE: 15 / 20
 
 
 ================================
@@ -1351,7 +1351,7 @@ STUDENT: thibault_chambrillon
   | // STUDENT CODE:
   | 
   | profilInstagram.photos.url[0]
-  | => test runner err: TypeError: Cannot read property '0' of undefined at eval (eval at evaluateStudentCode (DYNAMIC PLUGIN:20:21), <anonymous>:1:27)
+  | => test runner err: TypeError: Cannot read property '0' of undefined at eval (eval at evaluateStudentCode (DYNAMIC PLUGIN:21:17), <anonymous>:1:27)
   | 
   | ------------- EXERCISE: code8 (variant: 1) -------------
   | 
@@ -1570,7 +1570,7 @@ STUDENT: victoria_antalis
   | // STUDENT CODE:
   | 
   | console.log(profilInstagram.prenom.photos.url);
-  | => test runner err: TypeError: Cannot read property 'url' of undefined at eval (eval at evaluateStudentCode (DYNAMIC PLUGIN:20:21), <anonymous>:1:42)
+  | => test runner err: TypeError: Cannot read property 'url' of undefined at eval (eval at evaluateStudentCode (DYNAMIC PLUGIN:21:17), <anonymous>:1:42)
   | 
   | ------------- EXERCISE: code8 (variant: 0) -------------
   | 
