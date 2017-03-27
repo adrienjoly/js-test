@@ -99,6 +99,8 @@ function makeCodeEvaluator(jailed, async, codeGradingOptions) {
       console.log([ '// STUDENT CODE:', studentCode ].join('\n\n'));
       runCodeInWrappedSandbox(code, function(err, res) {
         if (err) console.log('=> test runner err:', err);
+        // TODO: find a way to display the position of the error in the student's code
+        // (like when nodejs intercepts and displays the error)
         var scoreArray = [ 0 ];
         if (res) {
           if (res[0]) {
