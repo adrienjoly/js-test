@@ -5,7 +5,7 @@
     window.location.href = window.location.href.replace('http:', 'https:');
   var app = document.querySelector('#app');
   app.config = {
-    "title": "JavaScript - QCM 1",
+    "title": "JavaScript - QCM 2",
     "PUBLIC_TEST_MODE": false,
     "DISPLAY_SOLUTIONS_AFTER_SUBMIT": true,
     "redirectToHttps": true,
@@ -40,186 +40,133 @@
       "i": 1,
       "isQuizz": true,
       "title": "QCM",
-      "maxScore": 7,
+      "maxScore": 4,
       "questions": [
         {
           "i": 1,
           "id": "qcm1",
-          "md": "Comment ouvrir la console JavaScript dans Google Chrome ?\n\n\n",
-          "mdSolution": "\n\nRéponse: *en pressant Cmd-Alt-J ou Ctrl-Shift-J*",
+          "md": "Quel section va être exécutée, si on exécute le code suivant ?\n\n```\nvar nb = 2;\nif (nb === 1) {\n  // A\n} else {\n  // B\n}\n```\n\n\n",
+          "mdSolution": "\n\nRéponse: B, car l'expression d'égalité `nb === 1` de la première condition est fausse,\ndonc ce sont les instructions rattachées à l'alternative par défaut (`else`) qui sont exécutées.",
           "choices": [
             {
               "name": 1,
-              "text": "En tapant \"console\""
+              "text": "A"
             },
             {
               "name": 2,
-              "text": "En appelant le prof"
+              "text": "B"
             },
             {
               "name": 3,
-              "text": "En demandant gentiment à Siri"
+              "text": "A et B"
             },
             {
               "name": 4,
-              "text": "En pressant Cmd-Alt-J ou Ctrl-Shift-J"
+              "text": "aucune "
             }
           ]
         },
         {
           "i": 2,
           "id": "qcm2",
-          "md": "Que retourne `typeof` quand il est appliqué sur `\"bonjour\"` ?\n\n\n",
-          "mdSolution": "\n\nRéponse: `\"string\"`.\nPour le vérifier, taper `typeof \"bonjour\";` dans la console JavaScript.",
+          "md": "Quel section de va être exécutée, si on exécute le code suivant ?\n\n```\nvar nb = 2;\nif (nb === 2) {\n  // A\n} else if (nb > 1) {\n  // B\n} else {\n  // C\n}\n```\n\n\n",
+          "mdSolution": "\n\nRéponse: A. Une seule des trois alternatives peut s'exécuter, car elles sont liées par des `else`.\nSachant que les conditions sont évaluées de haut en bas, et que la première expression est vraie,\nc'est donc la section A qui va s'exécuter.",
           "choices": [
             {
               "name": 1,
-              "text": "\"string\""
+              "text": "A"
             },
             {
               "name": 2,
-              "text": "string"
+              "text": "B"
             },
             {
               "name": 3,
-              "text": "\"object\""
+              "text": "A et B"
             },
             {
               "name": 4,
-              "text": "undefined"
+              "text": "A, B et C"
             }
           ]
         },
         {
           "i": 3,
           "id": "qcm3",
-          "md": "Types de valeurs en JavaScript. Quel est l'intrus ?\n\n\n",
-          "mdSolution": "\n\nRéponse: `decimal` était l'intrus.\nEn JavaScript, les nombres décimaux sont compris dans le type `number`.\nVérifier en tapant `typeof 4.5;` dans la console.",
+          "md": "À quoi ressemblerait l'arbre de décision correspondant à ce code:\n\n```\nvar reponse = prompt('as-tu faim ?')\nif (reponse === 'oui') {\n  var reponse2 = prompt('aimes-tu les burgers ?');\n  if (reponse2 === 'oui') {\n    alert('alors je t\\'en offre un !');\n  } else {\n    alert('dommage !');\n  }\n} else {\n  alert('désolé');\n}\n```\n\n\n",
+          "mdSolution": "\n\nRéponse: Une première boîte (niveau 1) représente la question `as-tu faim ?`, et a deux branches: `oui` et *autre*.\nLiée à la première branche, une deuxième boîte (niveau 2) représente la question `aimes-tu les burgers ?`, et\na elle-aussi deux branches: `oui` et *autre*.",
           "choices": [
             {
               "name": 1,
-              "text": "string"
+              "text": "une boîte et deux branches"
             },
             {
               "name": 2,
-              "text": "boolean"
+              "text": "deux boîtes de même niveau"
             },
             {
               "name": 3,
-              "text": "decimal"
+              "text": "une boîte de niveau 1, et une boîte de niveau 2"
             },
             {
               "name": 4,
-              "text": "number"
+              "text": "une boîte et trois branches"
             }
           ]
         },
         {
           "i": 4,
           "id": "qcm4",
-          "md": "Comment créer une variable en JavaScript ?\n\n\n",
-          "mdSolution": "\n\nRéponse: `var maVariable;`\nPour créer une variable, il faut utiliser le mot-clé `var`.\nAprès, il est possible de changer la valeur de cette variable sans avoir à utiliser `var`.\nIl est aussi possible d'affecter une valeur à cette variable au moment de sa création: `var maVariable = 4;`",
+          "md": "Pourquoi faut-il éviter d'utiliser les opérateurs `==` et `!=` ?\n\n\n",
+          "mdSolution": "\n\nRéponse: Ils sont trop laxistes, dans le sens où deux valeurs de types différents (ex: `1` et `'1'`) peuvent\nêtre vus comme égaux par l'opérateur `==`. Cet excès de tolérance peut occasionner des comportements imprévus\nqui font perdre beaucoup de temps à diagnostiquer et à corriger. Idem pour `!=`.",
           "choices": [
             {
               "name": 1,
-              "text": "maVariable;"
+              "text": "car il vaut mieux utiliser une affectation ="
             },
             {
               "name": 2,
-              "text": "var maVariable;"
+              "text": "car ils sont trop stricts"
             },
             {
               "name": 3,
-              "text": "x = 0;"
+              "text": "car ils sont trop laxistes"
             },
             {
               "name": 4,
-              "text": "maVariable = 'bonjour';"
-            }
-          ]
-        },
-        {
-          "i": 5,
-          "id": "qcm5",
-          "md": "Comment afficher la valeur d'une variable appelée `maVariable` depuis la console ?\n\n\n",
-          "mdSolution": "\n\nRéponse: `maVariable;`\nDans la console JavaScript, il suffit de taper le nom du variable pour afficher sa valeur, de la même façon que taper `1+1` provoquera l'affichage de `2`.\nLe point virgule n'est pas imposé par la console JavaScript, mais c'est une convention à suivre.",
-          "choices": [
-            {
-              "name": 1,
-              "text": "maVariable;"
-            },
-            {
-              "name": 2,
-              "text": "var maVariable;"
-            },
-            {
-              "name": 3,
-              "text": "maVariable?"
-            },
-            {
-              "name": 4,
-              "text": "show maVariable"
-            }
-          ]
-        },
-        {
-          "i": 6,
-          "id": "qcm6",
-          "md": "Comment changer la valeur d'une variable existante ? (déjà créée)\n\n\n",
-          "mdSolution": "\n\nRéponse: `maVariable = 4;`\nLe mot-clé `var` n'est à utiliser que lorsque la variable n'a pas encore été créée.\nL'usage des parenthèses dans `maVariable(4);` provoque l'appel d'une fonction appelée `maVariable` en passant la valeur `4` en paramètre.\nEnfin, l'opérateur d'affectation stocke la valeur à droite du `=` dans la variable à gauche du `=`, donc `4 = maVariable` n'a pas de sens car `4` n'est pas une variable.",
-          "choices": [
-            {
-              "name": 1,
-              "text": "var maVariable = 4;"
-            },
-            {
-              "name": 2,
-              "text": "maVariable = 4;"
-            },
-            {
-              "name": 3,
-              "text": "maVariable(4);"
-            },
-            {
-              "name": 4,
-              "text": "4 = maVariable;"
-            }
-          ]
-        },
-        {
-          "i": 7,
-          "id": "qcm7",
-          "md": "Si j'ai créé une variable dont la valeur est un nombre, que se passera-t-il si je lui affecte ensuite une chaine de caractères ?\n\n\n",
-          "mdSolution": "\n\nRéponse: *la valeur de la variable va être remplacée par la chaine de caractères.*\nL'affectation consiste à utiliser l'opérateur `=` pour remplacer la valeur d'une variable par une autre valeur.\nPour effectuer une concaténation, il faut utiliser l'opérateur `+`, et non l'opérateur d'affectation.\nJavaScript est un langage faiblement typé, il est donc possible d'affecter une valeur de n'importe quel type à n'importe quelle variable.",
-          "choices": [
-            {
-              "name": 1,
-              "text": "erreur, car le type est différent."
-            },
-            {
-              "name": 2,
-              "text": "erreur, car on ne peut pas changer la valeur d'une variable."
-            },
-            {
-              "name": 3,
-              "text": "la valeur de la variable va être remplacée par la chaine de caractères."
-            },
-            {
-              "name": 4,
-              "text": "les deux valeurs vont être concaténées."
+              "text": "var === et !== sont plus lisibles"
             }
           ]
         }
       ],
       "solutions": {
-        "qcm1": 4,
+        "qcm1": 2,
         "qcm2": 1,
         "qcm3": 3,
-        "qcm4": 2,
-        "qcm5": 1,
-        "qcm6": 2,
-        "qcm7": 3
+        "qcm4": 3
       }
+    },
+    {
+      "_info": "generated from ex.02.code.template.md",
+      "i": 2,
+      "isCode": true,
+      "title": "Exercices de codage",
+      "maxScore": 3,
+      "questions": [
+        {
+          "i": 5,
+          "id": "code5",
+          "variants": [
+            {}
+          ],
+          "mdVariants": [
+            "Implémenter une condition qui affecte `'oui'` à une variable `resultat` (déjà créée), seulement si une autre variable `nombre` vaut strictement `4`. Indenter correctement.\n\n"
+          ],
+          "mdSolutions": [
+            "\n\nSolution:\n\n```js\nif (nombre === 4) {\n  resultat = 'oui';\n}\n```\n"
+          ]
+        }
+      ]
     }
   ];
 })(document);
