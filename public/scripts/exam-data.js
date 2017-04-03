@@ -5,12 +5,12 @@
     window.location.href = window.location.href.replace('http:', 'https:');
   var app = document.querySelector('#app');
   app.config = {
-    "title": "JavaScript - QCM 2",
+    "title": "JavaScript - Contrôle 1",
     "PUBLIC_TEST_MODE": false,
-    "DISPLAY_SOLUTIONS_AFTER_SUBMIT": true,
+    "DISPLAY_SOLUTIONS_AFTER_SUBMIT": false,
     "redirectToHttps": true,
     "examPack": {
-      "publishSolutions": true,
+      "publishSolutions": false,
       "publishEvalTests": false
     },
     "backend": {
@@ -31,7 +31,7 @@
       "ptsNull": 0
     },
     "codeGrading": {
-      "ptsPerExercise": 3
+      "ptsPerExercise": 5
     }
   };
   app.exercises = [
@@ -203,23 +203,14 @@
             }
           ]
         }
-      ],
-      "solutions": {
-        "qcm1": 3,
-        "qcm2": 4,
-        "qcm3": 1,
-        "qcm4": 2,
-        "qcm5": 2,
-        "qcm6": 3,
-        "qcm7": 3
-      }
+      ]
     },
     {
       "_info": "generated from ex.02.code.template.md",
       "i": 2,
       "isCode": true,
       "title": "Exercices de codage",
-      "maxScore": 6,
+      "maxScore": 10,
       "questions": [
         {
           "i": 8,
@@ -247,12 +238,6 @@
             "Implémenter un programme JavaScript de 3 lignes maximum qui affiche 10 fois `'salut'` dans la console. Respecter les conventions et règles d'indentation vues en cours.\n\n\n",
             "Implémenter un programme JavaScript de 3 lignes maximum qui affiche 20 fois `'coucou'` dans la console. Respecter les conventions et règles d'indentation vues en cours.\n\n\n",
             "Implémenter un programme JavaScript de 3 lignes maximum qui affiche 20 fois `'salut'` dans la console. Respecter les conventions et règles d'indentation vues en cours.\n\n\n"
-          ],
-          "mdSolutions": [
-            "\n\nSolution:\n\n```js\nfor ( var i = 0; i < 10; i++ ) {\n  console.log('coucou');\n}\n```\n",
-            "\n\nSolution:\n\n```js\nfor ( var i = 0; i < 10; i++ ) {\n  console.log('salut');\n}\n```\n",
-            "\n\nSolution:\n\n```js\nfor ( var i = 0; i < 20; i++ ) {\n  console.log('coucou');\n}\n```\n",
-            "\n\nSolution:\n\n```js\nfor ( var i = 0; i < 20; i++ ) {\n  console.log('salut');\n}\n```\n"
           ]
         },
         {
@@ -291,11 +276,6 @@
             "Implémenter un chat-bot à partir de l'arbre de décision suivant:\n\n![arbre de décision](data/arbre1.jpg)\n\nComme vu et pratiqué en cours:\n - Les questions posées par l'ordinateur sont représentées par des rectangles, et sont à implémenter à l'aide de la fonction `prompt()`.\n - Les réponses comprises par l'ordinateur sont écrites à côté de chaque branche, et sont à implémenter à l'aide de conditions.\n - Les messages à afficher par l'ordinateur sont représentés par des cercles, et sont à implémenter à l'aide de la fonction `alert()`.\n\nVous serez noté(e) sur:\n - le respect **à la lettre** du texte des questions et des réponses (espaces, accents, ponctuation, et majuscules/minuscules compris).\n - le bon fonctionnement de votre code, sans erreurs, pour chacun des cas illustrés dans l'arbre de décision. (à tester dans la console)\n - le respect des règles d'indentation et autres conventions vues en cours. (ex: 2 espaces par niveau d'indentation)\n \n\n",
             "Implémenter un chat-bot à partir de l'arbre de décision suivant:\n\n![arbre de décision](data/arbre2.jpg)\n\nComme vu et pratiqué en cours:\n - Les questions posées par l'ordinateur sont représentées par des rectangles, et sont à implémenter à l'aide de la fonction `prompt()`.\n - Les réponses comprises par l'ordinateur sont écrites à côté de chaque branche, et sont à implémenter à l'aide de conditions.\n - Les messages à afficher par l'ordinateur sont représentés par des cercles, et sont à implémenter à l'aide de la fonction `alert()`.\n\nVous serez noté(e) sur:\n - le respect **à la lettre** du texte des questions et des réponses (espaces, accents, ponctuation, et majuscules/minuscules compris).\n - le bon fonctionnement de votre code, sans erreurs, pour chacun des cas illustrés dans l'arbre de décision. (à tester dans la console)\n - le respect des règles d'indentation et autres conventions vues en cours. (ex: 2 espaces par niveau d'indentation)\n \n\n",
             "Implémenter un chat-bot à partir de l'arbre de décision suivant:\n\n![arbre de décision](data/arbre3.jpg)\n\nComme vu et pratiqué en cours:\n - Les questions posées par l'ordinateur sont représentées par des rectangles, et sont à implémenter à l'aide de la fonction `prompt()`.\n - Les réponses comprises par l'ordinateur sont écrites à côté de chaque branche, et sont à implémenter à l'aide de conditions.\n - Les messages à afficher par l'ordinateur sont représentés par des cercles, et sont à implémenter à l'aide de la fonction `alert()`.\n\nVous serez noté(e) sur:\n - le respect **à la lettre** du texte des questions et des réponses (espaces, accents, ponctuation, et majuscules/minuscules compris).\n - le bon fonctionnement de votre code, sans erreurs, pour chacun des cas illustrés dans l'arbre de décision. (à tester dans la console)\n - le respect des règles d'indentation et autres conventions vues en cours. (ex: 2 espaces par niveau d'indentation)\n \n\n"
-          ],
-          "mdSolutions": [
-            "\n\nSolution:\n\n```js\nvar reponse = prompt('Comment vas tu ?');\nif (reponse === 'bien') {\n  alert('super !');\n} else if (reponse === 'mal') {\n  var reponse2 = prompt(`veux-tu une aspirine ?`);\n  if (reponse2 === `oui`) {\n    alert(`voici !`);\n  } else if (reponse2 === `non`) {\n    alert(`tant pis.`);\n  }\n} else {\n  alert('j\\'attendais bien ou mal');\n}\n\n```\n",
-            "\n\nSolution:\n\n```js\nvar reponse = prompt('Comment vas tu ?');\nif (reponse === 'bien') {\n  alert('super !');\n} else if (reponse === 'mal') {\n  var reponse2 = prompt(`c'est contagieux ?`);\n  if (reponse2 === `oui`) {\n    alert(`oh non !`);\n  } else if (reponse2 === `non`) {\n    alert(`ouf !`);\n  }\n} else {\n  alert('j\\'attendais bien ou mal');\n}\n\n```\n",
-            "\n\nSolution:\n\n```js\nvar reponse = prompt('Comment vas tu ?');\nif (reponse === 'bien') {\n  alert('super !');\n} else if (reponse === 'mal') {\n  var reponse2 = prompt(`veux-tu une aspirine ?`);\n  if (reponse2 === `non`) {\n    alert(`ok`);\n  } else if (reponse2 === `oui`) {\n    alert(`voici !`);\n  }\n} else {\n  alert('j\\'attendais bien ou mal');\n}\n\n```\n"
           ]
         }
       ]
