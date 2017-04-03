@@ -40,110 +40,178 @@
       "i": 1,
       "isQuizz": true,
       "title": "QCM",
-      "maxScore": 4,
+      "maxScore": 7,
       "questions": [
         {
           "i": 1,
           "id": "qcm1",
-          "md": "Quel section va être exécutée, si on exécute le code suivant ?\n\n```\nvar nb = 2;\nif (nb === 1) {\n  // A\n} else {\n  // B\n}\n```\n\n\n",
-          "mdSolution": "\n\nRéponse: B, car l'expression d'égalité `nb === 1` de la première condition est fausse,\ndonc ce sont les instructions rattachées à l'alternative par défaut (`else`) qui sont exécutées.",
+          "md": "Quelle instruction JavaScript a pour effet de créer une variable ?\n  \t\t  ",
           "choices": [
             {
               "name": 1,
-              "text": "A"
+              "text": "maVariable;"
             },
             {
               "name": 2,
-              "text": "B"
+              "text": "maVariable = 1;"
             },
             {
               "name": 3,
-              "text": "A et B"
+              "text": "var x = 0;"
             },
             {
               "name": 4,
-              "text": "aucune "
+              "text": "maVariable = 'bonjour';"
             }
           ]
         },
         {
           "i": 2,
           "id": "qcm2",
-          "md": "Quel section de va être exécutée, si on exécute le code suivant ?\n\n```\nvar nb = 2;\nif (nb === 2) {\n  // A\n} else if (nb > 1) {\n  // B\n} else {\n  // C\n}\n```\n\n\n",
-          "mdSolution": "\n\nRéponse: A. Une seule des trois alternatives peut s'exécuter, car elles sont liées par des `else`.\nSachant que les conditions sont évaluées de haut en bas, et que la première expression est vraie,\nc'est donc la section A qui va s'exécuter.",
+          "md": "Quel est le type de cette variable:\n\n```\nvar maVariable = '6.66';\n```\n",
           "choices": [
             {
               "name": 1,
-              "text": "A"
+              "text": "number"
             },
             {
               "name": 2,
-              "text": "B"
+              "text": "decimal"
             },
             {
               "name": 3,
-              "text": "A et B"
+              "text": "boolean"
             },
             {
               "name": 4,
-              "text": "A, B et C"
+              "text": "string"
             }
           ]
         },
         {
           "i": 3,
           "id": "qcm3",
-          "md": "À quoi ressemblerait l'arbre de décision correspondant à ce code:\n\n```\nvar reponse = prompt('as-tu faim ?')\nif (reponse === 'oui') {\n  var reponse2 = prompt('aimes-tu les burgers ?');\n  if (reponse2 === 'oui') {\n    alert('alors je t\\'en offre un !');\n  } else {\n    alert('dommage !');\n  }\n} else {\n  alert('désolé');\n}\n```\n\n\n",
-          "mdSolution": "\n\nRéponse: Une première boîte (niveau 1) représente la question `as-tu faim ?`, et a deux branches: `oui` et *autre*.\nLiée à la première branche, une deuxième boîte (niveau 2) représente la question `aimes-tu les burgers ?`, et\na elle-aussi deux branches: `oui` et *autre*.",
+          "md": "Quel est le type de cette variable:\n\n```\nvar maVariable = 6.66;\n```\n",
           "choices": [
             {
               "name": 1,
-              "text": "une boîte et deux branches"
+              "text": "number"
             },
             {
               "name": 2,
-              "text": "deux boîtes de même niveau"
+              "text": "decimal"
             },
             {
               "name": 3,
-              "text": "une boîte de niveau 1, et une boîte de niveau 2"
+              "text": "boolean"
             },
             {
               "name": 4,
-              "text": "une boîte et trois branches"
+              "text": "string"
             }
           ]
         },
         {
           "i": 4,
           "id": "qcm4",
-          "md": "Pourquoi faut-il éviter d'utiliser les opérateurs `==` et `!=` ?\n\n\n",
-          "mdSolution": "\n\nRéponse: Ils sont trop laxistes, dans le sens où deux valeurs de types différents (ex: `1` et `'1'`) peuvent\nêtre vus comme égaux par l'opérateur `==`. Cet excès de tolérance peut occasionner des comportements imprévus\nqui font perdre beaucoup de temps à diagnostiquer et à corriger. Idem pour `!=`.",
+          "md": "Que vaut cette expression de comparaison de valeur ?\n\n```\n6.66 == '6.66'\n```\n",
           "choices": [
             {
               "name": 1,
-              "text": "car il vaut mieux utiliser une affectation ="
+              "text": "c'est une affectation"
             },
             {
               "name": 2,
-              "text": "car ils sont trop stricts"
+              "text": "true"
             },
             {
               "name": 3,
-              "text": "car ils sont trop laxistes"
+              "text": "false"
             },
             {
               "name": 4,
-              "text": "var === et !== sont plus lisibles"
+              "text": "undefined"
+            }
+          ]
+        },
+        {
+          "i": 5,
+          "id": "qcm5",
+          "md": "En respectant les conventions indiquées en cours, quelle affectation faut-il exécuter pour que `J'aime le code !` s'affiche à l'écran ?\n\n```\nalert(message);\n```\n",
+          "choices": [
+            {
+              "name": 1,
+              "text": "message = J\\'aime le code !"
+            },
+            {
+              "name": 2,
+              "text": "message = 'J\\'aime le code !';"
+            },
+            {
+              "name": 3,
+              "text": "message = 'J\\\"aime le code !';"
+            },
+            {
+              "name": 4,
+              "text": "message = \"J'aime le code !\";"
+            }
+          ]
+        },
+        {
+          "i": 6,
+          "id": "qcm6",
+          "md": "Quelles section(s) de code va/vont être exécutée(s) ?\n\n```\nvar nb = -1;\nif (nb === 2) {\n  // A\n} else if (nb <= -2) {\n  // B\n} else {\n  // C\n}\n```\n",
+          "choices": [
+            {
+              "name": 1,
+              "text": "seulement A"
+            },
+            {
+              "name": 2,
+              "text": "seulement B"
+            },
+            {
+              "name": 3,
+              "text": "seulement C"
+            },
+            {
+              "name": 4,
+              "text": "aucune des trois"
+            }
+          ]
+        },
+        {
+          "i": 7,
+          "id": "qcm7",
+          "md": "Combien de fois les instructions contenues dans la boucle seraient-elles exécutées ?\n\n```js\nfor ( var i = 1; i <= 3; i++ ) {\n  // instructions\n}\n```\n",
+          "choices": [
+            {
+              "name": 1,
+              "text": "0 fois"
+            },
+            {
+              "name": 2,
+              "text": "1 fois"
+            },
+            {
+              "name": 3,
+              "text": "3 fois"
+            },
+            {
+              "name": 4,
+              "text": "4 fois"
             }
           ]
         }
       ],
       "solutions": {
-        "qcm1": 2,
-        "qcm2": 1,
-        "qcm3": 3,
-        "qcm4": 3
+        "qcm1": 3,
+        "qcm2": 4,
+        "qcm3": 1,
+        "qcm4": 2,
+        "qcm5": 2,
+        "qcm6": 3,
+        "qcm7": 3
       }
     },
     {
@@ -151,19 +219,83 @@
       "i": 2,
       "isCode": true,
       "title": "Exercices de codage",
-      "maxScore": 3,
+      "maxScore": 6,
       "questions": [
         {
-          "i": 5,
-          "id": "code5",
+          "i": 8,
+          "id": "code8",
           "variants": [
-            {}
+            {
+              "n": 10,
+              "expected": "coucou"
+            },
+            {
+              "n": 10,
+              "expected": "salut"
+            },
+            {
+              "n": 20,
+              "expected": "coucou"
+            },
+            {
+              "n": 20,
+              "expected": "salut"
+            }
           ],
           "mdVariants": [
-            "Implémenter une condition qui affecte `'oui'` à une variable `resultat` (déjà créée), seulement si une autre variable `nombre` vaut strictement `4`. Indenter correctement.\n\n"
+            "Implémenter un programme JavaScript de 3 lignes maximum qui affiche 10 fois `'coucou'` dans la console. Respecter les conventions et règles d'indentation vues en cours.\n\n\n",
+            "Implémenter un programme JavaScript de 3 lignes maximum qui affiche 10 fois `'salut'` dans la console. Respecter les conventions et règles d'indentation vues en cours.\n\n\n",
+            "Implémenter un programme JavaScript de 3 lignes maximum qui affiche 20 fois `'coucou'` dans la console. Respecter les conventions et règles d'indentation vues en cours.\n\n\n",
+            "Implémenter un programme JavaScript de 3 lignes maximum qui affiche 20 fois `'salut'` dans la console. Respecter les conventions et règles d'indentation vues en cours.\n\n\n"
           ],
           "mdSolutions": [
-            "\n\nSolution:\n\n```js\nif (nombre === 4) {\n  resultat = 'oui';\n}\n```\n"
+            "\n\nSolution:\n\n```js\nfor ( var i = 0; i < 10; i++ ) {\n  console.log('coucou');\n}\n```\n",
+            "\n\nSolution:\n\n```js\nfor ( var i = 0; i < 10; i++ ) {\n  console.log('salut');\n}\n```\n",
+            "\n\nSolution:\n\n```js\nfor ( var i = 0; i < 20; i++ ) {\n  console.log('coucou');\n}\n```\n",
+            "\n\nSolution:\n\n```js\nfor ( var i = 0; i < 20; i++ ) {\n  console.log('salut');\n}\n```\n"
+          ]
+        },
+        {
+          "i": 9,
+          "id": "code9",
+          "variants": [
+            {
+              "n": 1,
+              "prompts": "mal,non",
+              "expected": "tant pis.",
+              "q2": "veux-tu une aspirine ?",
+              "alt1": "oui",
+              "alt2": "non",
+              "other": "voici !"
+            },
+            {
+              "n": 2,
+              "prompts": "mal,non",
+              "expected": "ouf !",
+              "q2": "c'est contagieux ?",
+              "alt1": "oui",
+              "alt2": "non",
+              "other": "oh non !"
+            },
+            {
+              "n": 3,
+              "prompts": "mal,oui",
+              "expected": "voici !",
+              "q2": "veux-tu une aspirine ?",
+              "alt1": "non",
+              "alt2": "oui",
+              "other": "ok"
+            }
+          ],
+          "mdVariants": [
+            "Implémenter un chat-bot à partir de l'arbre de décision suivant:\n\n![arbre de décision](data/arbre1.jpg)\n\nComme vu et pratiqué en cours:\n - Les questions posées par l'ordinateur sont représentées par des rectangles, et sont à implémenter à l'aide de la fonction `prompt()`.\n - Les réponses comprises par l'ordinateur sont écrites à côté de chaque branche, et sont à implémenter à l'aide de conditions.\n - Les messages à afficher par l'ordinateur sont représentés par des cercles, et sont à implémenter à l'aide de la fonction `alert()`.\n\nVous serez noté(e) sur:\n - le respect **à la lettre** du texte des questions et des réponses (espaces, accents, ponctuation, et majuscules/minuscules compris).\n - le bon fonctionnement de votre code, sans erreurs, pour chacun des cas illustrés dans l'arbre de décision. (à tester dans la console)\n - le respect des règles d'indentation et autres conventions vues en cours. (ex: 2 espaces par niveau d'indentation)\n \n\n",
+            "Implémenter un chat-bot à partir de l'arbre de décision suivant:\n\n![arbre de décision](data/arbre2.jpg)\n\nComme vu et pratiqué en cours:\n - Les questions posées par l'ordinateur sont représentées par des rectangles, et sont à implémenter à l'aide de la fonction `prompt()`.\n - Les réponses comprises par l'ordinateur sont écrites à côté de chaque branche, et sont à implémenter à l'aide de conditions.\n - Les messages à afficher par l'ordinateur sont représentés par des cercles, et sont à implémenter à l'aide de la fonction `alert()`.\n\nVous serez noté(e) sur:\n - le respect **à la lettre** du texte des questions et des réponses (espaces, accents, ponctuation, et majuscules/minuscules compris).\n - le bon fonctionnement de votre code, sans erreurs, pour chacun des cas illustrés dans l'arbre de décision. (à tester dans la console)\n - le respect des règles d'indentation et autres conventions vues en cours. (ex: 2 espaces par niveau d'indentation)\n \n\n",
+            "Implémenter un chat-bot à partir de l'arbre de décision suivant:\n\n![arbre de décision](data/arbre3.jpg)\n\nComme vu et pratiqué en cours:\n - Les questions posées par l'ordinateur sont représentées par des rectangles, et sont à implémenter à l'aide de la fonction `prompt()`.\n - Les réponses comprises par l'ordinateur sont écrites à côté de chaque branche, et sont à implémenter à l'aide de conditions.\n - Les messages à afficher par l'ordinateur sont représentés par des cercles, et sont à implémenter à l'aide de la fonction `alert()`.\n\nVous serez noté(e) sur:\n - le respect **à la lettre** du texte des questions et des réponses (espaces, accents, ponctuation, et majuscules/minuscules compris).\n - le bon fonctionnement de votre code, sans erreurs, pour chacun des cas illustrés dans l'arbre de décision. (à tester dans la console)\n - le respect des règles d'indentation et autres conventions vues en cours. (ex: 2 espaces par niveau d'indentation)\n \n\n"
+          ],
+          "mdSolutions": [
+            "\n\nSolution:\n\n```js\nvar reponse = prompt('Comment vas tu ?');\nif (reponse === 'bien') {\n  alert('super !');\n} else if (reponse === 'mal') {\n  var reponse2 = prompt(`veux-tu une aspirine ?`);\n  if (reponse2 === `oui`) {\n    alert(`voici !`);\n  } else if (reponse2 === `non`) {\n    alert(`tant pis.`);\n  }\n} else {\n  alert('j\\'attendais bien ou mal');\n}\n\n```\n",
+            "\n\nSolution:\n\n```js\nvar reponse = prompt('Comment vas tu ?');\nif (reponse === 'bien') {\n  alert('super !');\n} else if (reponse === 'mal') {\n  var reponse2 = prompt(`c'est contagieux ?`);\n  if (reponse2 === `oui`) {\n    alert(`oh non !`);\n  } else if (reponse2 === `non`) {\n    alert(`ouf !`);\n  }\n} else {\n  alert('j\\'attendais bien ou mal');\n}\n\n```\n",
+            "\n\nSolution:\n\n```js\nvar reponse = prompt('Comment vas tu ?');\nif (reponse === 'bien') {\n  alert('super !');\n} else if (reponse === 'mal') {\n  var reponse2 = prompt(`veux-tu une aspirine ?`);\n  if (reponse2 === `non`) {\n    alert(`ok`);\n  } else if (reponse2 === `oui`) {\n    alert(`voici !`);\n  }\n} else {\n  alert('j\\'attendais bien ou mal');\n}\n\n```\n"
           ]
         }
       ]
