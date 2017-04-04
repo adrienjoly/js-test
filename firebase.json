@@ -6,7 +6,7 @@
     "public": "public",
     "headers": [ 
       {
-        "source" : "**/*.js",
+        "source" : "**/*.js,**/data/*.*",
         "headers" : [
           { "key" : "Cache-Control", "value" : "no-cache, must-revalidate" }
         ]
