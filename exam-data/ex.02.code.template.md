@@ -136,7 +136,7 @@ if (reponse === 'bien') {
   try {
     eval(`_studentCode`); // catch syntax errors, if any
   } catch(error) {
-    log('CATCHED ERROR: ' + error.name);
+    //log('CATCHED ERROR: ' + error.name);
     if (error.name === 'SyntaxError') {
       syntaxError = error;
     }

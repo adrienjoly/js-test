@@ -35,9 +35,13 @@ STUDENT: adrien_joly
   | 
   | // -> STUDENT SCORE ARRAY: [ 1, 0, 1, 1, 1 ]
   | 
+  | // -> EXERCISE POINTS: 4 / 5
+  | 
   | ------------- EXERCISE: code9 (variant: 0) -------------
   | 
   | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | // -> EXERCISE POINTS: 0 / 5
 
   => code score: 4 / 10 pts
 
@@ -76,6 +80,8 @@ STUDENT: charlotte_vigneux
   | 
   | // -> STUDENT SCORE ARRAY: [ 1, 0, 0, 1, 0 ]
   | 
+  | // -> EXERCISE POINTS: 2 / 5
+  | 
   | ------------- EXERCISE: code9 (variant: 2) -------------
   | 
   | // STUDENT CODE:
@@ -93,10 +99,11 @@ STUDENT: charlotte_vigneux
   | } else { 
   |   alert('j'attendais bien ou mal');
   | }
-  | CATCHED ERROR: SyntaxError
   | [-] erreur de syntaxe: missing ) after argument list
   | 
   | // -> STUDENT SCORE ARRAY: [ 0 ]
+  | 
+  | // -> EXERCISE POINTS: 0 / 5
 
   => code score: 2 / 10 pts
 
@@ -135,6 +142,8 @@ STUDENT: clement_zerbi
   | 
   | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 1, 0 ]
   | 
+  | // -> EXERCISE POINTS: 1 / 5
+  | 
   | ------------- EXERCISE: code9 (variant: 2) -------------
   | 
   | // STUDENT CODE:
@@ -156,6 +165,8 @@ STUDENT: clement_zerbi
   | [+] si l'utilisateur tape mal puis oui, on obtient bien la réponse "voici !".
   | 
   | // -> STUDENT SCORE ARRAY: [ 1 ]
+  | 
+  | // -> EXERCISE POINTS: 5 / 5
 
   => code score: 6 / 10 pts
 
@@ -196,6 +207,8 @@ STUDENT: gauthier_ailloud
   | 
   | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1 ]
   | 
+  | // -> EXERCISE POINTS: 5 / 5
+  | 
   | ------------- EXERCISE: code9 (variant: 1) -------------
   | 
   | // STUDENT CODE:
@@ -211,10 +224,11 @@ STUDENT: gauthier_ailloud
   |   
   |     
   |    
-  | CATCHED ERROR: SyntaxError
   | [-] erreur de syntaxe: missing ) after argument list
   | 
   | // -> STUDENT SCORE ARRAY: [ 0 ]
+  | 
+  | // -> EXERCISE POINTS: 0 / 5
 
   => code score: 5 / 10 pts
 
@@ -254,9 +268,13 @@ STUDENT: imane_behiri
   | 
   | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 0, 0 ]
   | 
+  | // -> EXERCISE POINTS: 0 / 5
+  | 
   | ------------- EXERCISE: code9 (variant: 0) -------------
   | 
   | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | // -> EXERCISE POINTS: 0 / 5
 
   => code score: 0 / 10 pts
 
@@ -293,6 +311,8 @@ STUDENT: mathias_lachot
   | 
   | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 1, 0 ]
   | 
+  | // -> EXERCISE POINTS: 1 / 5
+  | 
   | ------------- EXERCISE: code9 (variant: 1) -------------
   | 
   | // STUDENT CODE:
@@ -315,6 +335,8 @@ STUDENT: mathias_lachot
   | [-] si l'utilisateur tape mal puis non, alert devrait afficher "ouf !" au lieu de "ouf"
   | 
   | // -> STUDENT SCORE ARRAY: [ 0.5 ]
+  | 
+  | // -> EXERCISE POINTS: 2.5 / 5
 
   => code score: 3.5 / 10 pts
 
@@ -342,6 +364,8 @@ STUDENT: maxime_bonnet
   | 
   | // WARNING: NO STUDENT CODE => skipping
   | 
+  | // -> EXERCISE POINTS: 0 / 5
+  | 
   | ------------- EXERCISE: code9 (variant: 2) -------------
   | 
   | // STUDENT CODE:
@@ -359,10 +383,11 @@ STUDENT: maxime_bonnet
   | } else {
   |  alert('j'attendais bien ou mal);
   | }
-  | CATCHED ERROR: SyntaxError
   | [-] erreur de syntaxe: missing ) after argument list
   | 
   | // -> STUDENT SCORE ARRAY: [ 0 ]
+  | 
+  | // -> EXERCISE POINTS: 0 / 5
 
   => code score: 0 / 10 pts
 
@@ -401,6 +426,8 @@ STUDENT: mike_meimoun
   | 
   | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1 ]
   | 
+  | // -> EXERCISE POINTS: 5 / 5
+  | 
   | ------------- EXERCISE: code9 (variant: 0) -------------
   | 
   | // STUDENT CODE:
@@ -422,6 +449,8 @@ STUDENT: mike_meimoun
   | [+] si l'utilisateur tape mal puis non, on obtient bien la réponse "tant pis.".
   | 
   | // -> STUDENT SCORE ARRAY: [ 1 ]
+  | 
+  | // -> EXERCISE POINTS: 5 / 5
 
   => code score: 10 / 10 pts
 
@@ -461,6 +490,8 @@ STUDENT: nicolas_perrousset
   | 
   | // -> STUDENT SCORE ARRAY: [ 1, 0, 1, 1, 0 ]
   | 
+  | // -> EXERCISE POINTS: 3 / 5
+  | 
   | ------------- EXERCISE: code9 (variant: 2) -------------
   | 
   | // STUDENT CODE:
@@ -476,10 +507,11 @@ STUDENT: nicolas_perrousset
   | else(reponse === 'sinon'){
   | 	alert('jattendais bien ou mal');
   | }
-  | CATCHED ERROR: SyntaxError
   | [-] erreur de syntaxe: Unexpected token }
   | 
   | // -> STUDENT SCORE ARRAY: [ 0 ]
+  | 
+  | // -> EXERCISE POINTS: 0 / 5
 
   => code score: 3 / 10 pts
 
@@ -512,6 +544,8 @@ STUDENT: simon_mimoun
   | console.log( message );
   | => test runner err: TIMEOUT: infinite loop?
   | 
+  | // -> EXERCISE POINTS: 0 / 5
+  | 
   | ------------- EXERCISE: code9 (variant: 2) -------------
   | 
   | // STUDENT CODE:
@@ -535,6 +569,8 @@ STUDENT: simon_mimoun
   | [-] si l'utilisateur tape mal puis oui, alert devrait afficher "voici !" au lieu de "J'attendais bien ou mal"
   | 
   | // -> STUDENT SCORE ARRAY: [ 0.5 ]
+  | 
+  | // -> EXERCISE POINTS: 2.5 / 5
 
   => code score: 2.5 / 10 pts
 
@@ -562,9 +598,13 @@ STUDENT: sonia_beregreg
   | 
   | // WARNING: NO STUDENT CODE => skipping
   | 
+  | // -> EXERCISE POINTS: 0 / 5
+  | 
   | ------------- EXERCISE: code9 (variant: 1) -------------
   | 
   | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | // -> EXERCISE POINTS: 0 / 5
 
   => code score: 0 / 10 pts
 
@@ -592,6 +632,8 @@ STUDENT: thomas_kossowski
   | 
   | // WARNING: NO STUDENT CODE => skipping
   | 
+  | // -> EXERCISE POINTS: 0 / 5
+  | 
   | ------------- EXERCISE: code9 (variant: 1) -------------
   | 
   | // STUDENT CODE:
@@ -603,10 +645,11 @@ STUDENT: thomas_kossowski
   | } if (reponse2 === 'oui') { alert ('oh non ! ')
   | } else if (reponse ==='non') {alert ('ouf')
   | } else { alert ('j\'attendais bien ou mal')
-  | CATCHED ERROR: SyntaxError
   | [-] erreur de syntaxe: Unexpected token var
   | 
   | // -> STUDENT SCORE ARRAY: [ 0 ]
+  | 
+  | // -> EXERCISE POINTS: 0 / 5
 
   => code score: 0 / 10 pts
 
@@ -646,6 +689,8 @@ STUDENT: yassine_baba_slimane
   | 
   | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1 ]
   | 
+  | // -> EXERCISE POINTS: 5 / 5
+  | 
   | ------------- EXERCISE: code9 (variant: 2) -------------
   | 
   | // STUDENT CODE:
@@ -654,10 +699,11 @@ STUDENT: yassine_baba_slimane
   | if (reponse === 'bien') {
   |   alert('super');
   | }else if (reponse === 'mal') {
-  | CATCHED ERROR: SyntaxError
   | [-] erreur de syntaxe: Unexpected end of input
   | 
   | // -> STUDENT SCORE ARRAY: [ 0 ]
+  | 
+  | // -> EXERCISE POINTS: 0 / 5
 
   => code score: 5 / 10 pts
 
