@@ -30,7 +30,7 @@ for ( var i = 0; i < {{ n }}; i++ ) {
   };
   var error = null;
   try {
-    _runStudentCode();
+    eval(`_studentCode`); // catch syntax errors, if any
   } catch(e) {
     error = e;
   }
@@ -123,25 +123,37 @@ if (reponse === 'bien') {
   application.remote._setTimeoutMessage(req + ', mais alert n\'a pas été appelé...');
   // test environment
   var prompts = variant.prompts.slice(); // clone the array
+  var lastAlert = null;
   function prompt() {
     return prompts.shift();
   }
   function alert(message) {
-    if (message !== variant.expected) {
-      done(req + ' au lieu de "' + message + '"', 0.5);
+    lastAlert = message;
+  };
+  var console = { log: function(){} }; // tolerate calls to console.log()
+  // run the test
+  var syntaxError = null;
+  try {
+    eval(`_studentCode`); // catch syntax errors, if any
+  } catch(error) {
+    log('CATCHED ERROR: ' + error.name);
+    if (error.name === 'SyntaxError') {
+      syntaxError = error;
+    }
+  }
+  if (!syntaxError) {
+    log('[+] le programme s\'est exécuté sans erreur.');
+    if (lastAlert !== variant.expected) {
+      log(req + ' au lieu de "' + lastAlert + '"');
+      done(null, 0.5);
       // give a half point to the student, because her code runs
     } else {
       log('[+] ' + ctx + 'on obtient bien la réponse "' + variant.expected + '".');
       done(null, 1); // passed test => give the point to the student
     }
-  };
-  var console = { log: function(){} }; // tolerate calls to console.log()
-  // run the test
-  try {
-    _runStudentCode(); // student call should call prompt() and alert()
-    log('[+] le programme s\'est exécuté sans erreur.');
-  } catch(error) {
-    log('[-] erreur: ' + error.message);
+  } else {
+    log('[-] erreur de syntaxe: ' + syntaxError.message);
+    done(null, 0);
   }
 })();
 ```
