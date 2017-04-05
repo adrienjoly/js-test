@@ -5,51 +5,6 @@ Reading and evaluating answers from: ../exam-data/js-qcm-ft-export-fast-track.js
 
 ================================
 
-STUDENT: adrien_joly
-
-  -  quizz answers:
-  | qcm1 :  (solution: 3) => 0 pts
-  | qcm2 :  (solution: 4) => 0 pts
-  | qcm3 :  (solution: 1) => 0 pts
-  | qcm4 :  (solution: 2) => 0 pts
-  | qcm5 :  (solution: 2) => 0 pts
-  | qcm6 :  (solution: 3) => 0 pts
-  | qcm7 :  (solution: 3) => 0 pts
-
-  => quizz score: 0 / 7 pts
-
-  -  code evaluation:
-  | 
-  | ------------- EXERCISE: code8 (variant: 2) -------------
-  | 
-  | // STUDENT CODE:
-  | 
-  | for ( var i = 1; i < 20; i++ ) {
-  |   console.log('coucou');
-  | }
-  | [+] le programme fonctionne sans erreur
-  | [-] il fallait afficher 20 lignes dans la console
-  | [+] la chaine de caractères 'coucou' a bien été respectée à la lettre
-  | [+] une boucle for a bien été utilisée
-  | [+] indentation: console.log a bien été précédé de 2 espaces
-  | 
-  | // -> STUDENT SCORE ARRAY: [ 1, 0, 1, 1, 1 ]
-  | 
-  | // -> EXERCISE POINTS: 4 / 5
-  | 
-  | ------------- EXERCISE: code9 (variant: 0) -------------
-  | 
-  | // WARNING: NO STUDENT CODE => skipping
-  | 
-  | // -> EXERCISE POINTS: 0 / 5
-
-  => code score: 4 / 10 pts
-
-=> TOTAL STUDENT SCORE: 4 / 17
-
-
-================================
-
 STUDENT: charlotte_vigneux
 
   -  quizz answers:
@@ -99,7 +54,7 @@ STUDENT: charlotte_vigneux
   | } else { 
   |   alert('j'attendais bien ou mal');
   | }
-  | [-] erreur de syntaxe: missing ) after argument list
+  | [-] erreur de syntaxe: missing ) after argument list (il fallait un antislash devant l'apostrophe => pense à tester ton code)
   | 
   | // -> STUDENT SCORE ARRAY: [ 0 ]
   | 
@@ -107,7 +62,11 @@ STUDENT: charlotte_vigneux
 
   => code score: 2 / 10 pts
 
-=> TOTAL STUDENT SCORE: 8 / 17
+  je t'ajoute:
+  + 2 points à l'exercice code9 car tu as bien compris la logique des conditions.
+  + 2 points d'indentation sur 3. il te reste à comprendre l'indentation dans les conditions imbriquées.
+
+=> TOTAL STUDENT SCORE: 12 / 20
 
 
 ================================
@@ -134,7 +93,7 @@ STUDENT: clement_zerbi
   | for (i = 1; i<=10; i++) {
   | console.log('salut');
   | }
-  | [-] erreur: i is not defined
+  | [-] erreur: i is not defined (tu as oublié de mettre var)
   | [-] il fallait afficher 10 lignes dans la console
   | [-] il fallait afficher 'salut', et non 'undefined'
   | [+] une boucle for a bien été utilisée
@@ -170,7 +129,10 @@ STUDENT: clement_zerbi
 
   => code score: 6 / 10 pts
 
-=> TOTAL STUDENT SCORE: 11 / 17
+  je te donne 1 point sur 3 d'indentation car tu as respecté les deux espaces et le placement des accolades.
+  par contre, il va falloir que tu revoies tes règles d'indentation.
+
+=> TOTAL STUDENT SCORE: 12 / 20
 
 
 ================================
@@ -224,7 +186,7 @@ STUDENT: gauthier_ailloud
   |   
   |     
   |    
-  | [-] erreur de syntaxe: missing ) after argument list
+  | [-] erreur de syntaxe: missing ) after argument list (programme incomplet)
   | 
   | // -> STUDENT SCORE ARRAY: [ 0 ]
   | 
@@ -232,7 +194,9 @@ STUDENT: gauthier_ailloud
 
   => code score: 5 / 10 pts
 
-=> TOTAL STUDENT SCORE: 12 / 17
+  je t'ajoute 1 point sur 3 pour la bonne indentation dans l'exercice code 8. tu peux faire mieux!
+
+=> TOTAL STUDENT SCORE: 13 / 20
 
 
 ================================
@@ -260,7 +224,7 @@ STUDENT: imane_behiri
   | if (reponse ='coucou') {
   | 	alert ('coucou');
   | } 
-  | [-] erreur: prompt is not defined
+  | [-] erreur: prompt is not defined (il fallait utiliser une boucle, pas prompt)
   | [-] il fallait afficher 20 lignes dans la console
   | [-] il fallait afficher 'coucou', et non 'undefined'
   | [-] il fallait utiliser une boucle for
@@ -278,7 +242,10 @@ STUDENT: imane_behiri
 
   => code score: 0 / 10 pts
 
-=> TOTAL STUDENT SCORE: 3 / 17
+  je te donne 1 point sur 3 pour l'indentation car tu as bien décalé alert à l'intérieur des accolades du if.
+  par contre, il faut utiliser 2 espaces par indentation, et non une tabulation.
+
+=> TOTAL STUDENT SCORE: 4 / 20
 
 
 ================================
@@ -340,7 +307,10 @@ STUDENT: mathias_lachot
 
   => code score: 3.5 / 10 pts
 
-=> TOTAL STUDENT SCORE: 7.5 / 17
+  je te donne 1.5 points sur 3 pour l'indentation.
+  il te reste à comprendre comment indenter dans des accolades imbriquées.
+
+=> TOTAL STUDENT SCORE: 9 / 20
 
 
 ================================
@@ -383,7 +353,7 @@ STUDENT: maxime_bonnet
   | } else {
   |  alert('j'attendais bien ou mal);
   | }
-  | [-] erreur de syntaxe: missing ) after argument list
+  | [-] erreur de syntaxe: missing ) after argument list (du à l'oubli d'antislash devant l'apostrophe...)
   | 
   | // -> STUDENT SCORE ARRAY: [ 0 ]
   | 
@@ -391,7 +361,11 @@ STUDENT: maxime_bonnet
 
   => code score: 0 / 10 pts
 
-=> TOTAL STUDENT SCORE: 6 / 17
+  je t'ajoute:
+  + 2 points à l'exercice code9 car tu as bien compris la logique des conditions.
+  + 1 point d'indentation sur 3 car tu as bien placé les accolades. par contre, ton indentation est à travailler.
+
+=> TOTAL STUDENT SCORE: 9 / 20
 
 
 ================================
@@ -454,7 +428,10 @@ STUDENT: mike_meimoun
 
   => code score: 10 / 10 pts
 
-=> TOTAL STUDENT SCORE: 16 / 17
+  + 2 points sur 3 pour l'indentation. il te reste à comprendre l'indentation dans les accolades imbriquées.
+  je compte sur toi pour aider tes camarades à progresser !
+
+=> TOTAL STUDENT SCORE: 18 / 20
 
 
 ================================
@@ -507,7 +484,7 @@ STUDENT: nicolas_perrousset
   | else(reponse === 'sinon'){
   | 	alert('jattendais bien ou mal');
   | }
-  | [-] erreur de syntaxe: Unexpected token }
+  | [-] erreur de syntaxe: Unexpected token } (pense à compter tes accolades par paires, et tester ton code dans la console)
   | 
   | // -> STUDENT SCORE ARRAY: [ 0 ]
   | 
@@ -515,7 +492,9 @@ STUDENT: nicolas_perrousset
 
   => code score: 3 / 10 pts
 
-=> TOTAL STUDENT SCORE: 10 / 17
+  + 1 point sur 3 d'indentation car tu as compris le principe. par contre il faut utiliser 2 espaces, et non TAB.
+
+=> TOTAL STUDENT SCORE: 11 / 20
 
 
 ================================
@@ -574,7 +553,9 @@ STUDENT: simon_mimoun
 
   => code score: 2.5 / 10 pts
 
-=> TOTAL STUDENT SCORE: 8.5 / 17
+  + 1 point sur 3 d'indentation, car tu as compris le principe. maintenant regarde comment on indente dans les accolades imbriquées.
+
+=> TOTAL STUDENT SCORE: 9.5 / 20
 
 
 ================================
@@ -608,7 +589,9 @@ STUDENT: sonia_beregreg
 
   => code score: 0 / 10 pts
 
-=> TOTAL STUDENT SCORE: 6 / 17
+  aucun code => aucun points d'indentation
+
+=> TOTAL STUDENT SCORE: 6 / 20
 
 
 ================================
@@ -653,7 +636,9 @@ STUDENT: thomas_kossowski
 
   => code score: 0 / 10 pts
 
-=> TOTAL STUDENT SCORE: 7 / 17
+  il y a de l'idée en termes de logique, par contre tu ne respecte pas les conventions d'indentation et de placement du code entre accolades.
+
+=> TOTAL STUDENT SCORE: 7 / 20
 
 
 ================================
@@ -707,4 +692,8 @@ STUDENT: yassine_baba_slimane
 
   => code score: 5 / 10 pts
 
-=> TOTAL STUDENT SCORE: 11 / 17
+  c'était un bon début, pourquoi n'as tu pas fini l'exercice 9 ?!
+
+  + 1.5 points sur 3 d'indentation.
+
+=> TOTAL STUDENT SCORE: 12.5 / 20
