@@ -72,12 +72,12 @@ function makeCodeEvaluator(jailed, async, codeGradingOptions) {
 
   function wrapStudentCode(studentCode) {
     return [
-      'try {',
+      //'try {',
       '/* <STUDENT-CODE> */',
       studentCode,
       '/* </STUDENT-CODE> */',
-      '}',
-      'catch(e) { application.remote._log("/!\\\\ Execution error:", e.message); };',
+      //'}',
+      //'catch(e) { application.remote._log("/!\\\\ Execution error:", e.message); };',
     ].join('\n');
   }
 
@@ -90,7 +90,7 @@ function makeCodeEvaluator(jailed, async, codeGradingOptions) {
       callback(null, [ 0 ]);
     } else {
       var code = testCode
-        .replace(/`_studentCode`/g, '`' + studentCode.replace(/`/g, '\\\`') + '`')
+        .replace(/`_studentCode`/g, '`' + studentCode.replace(/\\/g, '\\\\').replace(/`/g, '\\\`') + '`')
         .replace(/_runStudentCode\(\)/g, wrapStudentCode(studentCode))
         .replace(/_runStudentCodeAgain\(\)/g,
           wrapStudentCode(studentCode).replace(/function ([^ \(]+)/g, '$1 = function')
