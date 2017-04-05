@@ -6,7 +6,13 @@
     "public": "public",
     "headers": [ 
       {
-        "source" : "**/*.js,**/data/*.*",
+        "source" : "**/*.js",
+        "headers" : [
+          { "key" : "Cache-Control", "value" : "no-cache, must-revalidate" }
+        ]
+      },
+      {
+        "source" : "**/data/*.*",
         "headers" : [
           { "key" : "Cache-Control", "value" : "no-cache, must-revalidate" }
         ]
