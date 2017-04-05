@@ -1,0 +1,735 @@
+Parsing ex.01.quizz.template.md ...
+Parsing ex.02.code.template.md ...
+Reading and evaluating answers from: ../exam-data/js-qcm-ft-export-fast-track.json ...
+
+
+================================
+
+STUDENT: adrien_joly
+
+  -  quizz answers:
+  | qcm1 :  (solution: 3) => 0 pts
+  | qcm2 :  (solution: 4) => 0 pts
+  | qcm3 :  (solution: 1) => 0 pts
+  | qcm4 :  (solution: 2) => 0 pts
+  | qcm5 :  (solution: 2) => 0 pts
+  | qcm6 :  (solution: 3) => 0 pts
+  | qcm7 :  (solution: 3) => 0 pts
+
+  => quizz score: 0 / 7 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code8 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | for ( var i = 1; i < 20; i++ ) {
+  |   console.log('coucou');
+  | }
+  | [+] le programme fonctionne sans erreur
+  | [-] il fallait afficher 20 lignes dans la console
+  | [+] la chaine de caractères 'coucou' a bien été respectée à la lettre
+  | [+] une boucle for a bien été utilisée
+  | [+] indentation: console.log a bien été précédé de 2 espaces
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 0, 1, 1, 1 ]
+  | 
+  | ------------- EXERCISE: code9 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 4 / 10 pts
+
+=> TOTAL STUDENT SCORE: 4 / 17
+
+
+================================
+
+STUDENT: charlotte_vigneux
+
+  -  quizz answers:
+  | qcm1 : 3 (solution: 3) => 1 pts
+  | qcm2 : 4 (solution: 4) => 1 pts
+  | qcm3 : 1 (solution: 1) => 1 pts
+  | qcm4 : 2 (solution: 2) => 1 pts
+  | qcm5 : 2 (solution: 2) => 1 pts
+  | qcm6 : 3 (solution: 3) => 1 pts
+  | qcm7 : 4 (solution: 3) => 0 pts
+
+  => quizz score: 6 / 7 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code8 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | for ( var message = 'coucou' ; message <= 20 ; message++ ) {
+  |   consol.log( message );
+  | }
+  | [+] le programme fonctionne sans erreur
+  | [-] il fallait afficher 20 lignes dans la console
+  | [-] il fallait afficher 'coucou', et non 'undefined'
+  | [+] une boucle for a bien été utilisée
+  | [-] indentation: il fallait précéder console.log de 2 espaces, sur sa propre ligne
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 0, 0, 1, 0 ]
+  | 
+  | ------------- EXERCISE: code9 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var reponse = prompt('Comment vas tu ?');
+  | if (reponse ==='bien') {
+  |   alert('super !');
+  | } else if (reponse ==='mal') {
+  |   var aspirine = prompt('veux-tu une aspirine ?');
+  | if (aspirine ==='non') {
+  |   alert('ok');
+  | } else if (aspirine==='oui') {
+  |   alert('voici !');
+  | }
+  | } else { 
+  |   alert('j'attendais bien ou mal');
+  | }
+Wed, 05 Apr 2017 10:32:40 GMT jailed:sandbox DYNAMIC PLUGIN:45
+  alert('j'attendais bien ou mal');
+        ^^^
+SyntaxError: missing ) after argument list
+    at Object.exports.runInNewContext (vm.js:71:16)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-controle-fast-track/node_modules/jailed-node/sandbox/sandbox.js:151:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-controle-fast-track/node_modules/jailed-node/sandbox/sandbox.js:165:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-controle-fast-track/node_modules/jailed-node/sandbox/sandbox.js:53:7)
+    at emitTwo (events.js:106:13)
+    at process.emit (events.js:191:7)
+    at process.nextTick (internal/child_process.js:744:12)
+    at _combinedTickCallback (internal/process/next_tick.js:67:7)
+    at process._tickCallback (internal/process/next_tick.js:98:9)
+  | => test runner err: SyntaxError: missing ) after argument list
+
+  => code score: 2 / 10 pts
+
+=> TOTAL STUDENT SCORE: 8 / 17
+
+
+================================
+
+STUDENT: clement_zerbi
+
+  -  quizz answers:
+  | qcm1 : 1 (solution: 3) => 0 pts
+  | qcm2 : 4 (solution: 4) => 1 pts
+  | qcm3 : 1 (solution: 1) => 1 pts
+  | qcm4 : 2 (solution: 2) => 1 pts
+  | qcm5 : 2 (solution: 2) => 1 pts
+  | qcm6 : 2 (solution: 3) => 0 pts
+  | qcm7 : 3 (solution: 3) => 1 pts
+
+  => quizz score: 5 / 7 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code8 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | for (i = 1; i<=10; i++) {
+  | console.log('salut');
+  | }
+  | /!\ Execution error: i is not defined
+  | [+] le programme fonctionne sans erreur
+  | [-] il fallait afficher 10 lignes dans la console
+  | [-] il fallait afficher 'salut', et non 'undefined'
+  | [+] une boucle for a bien été utilisée
+  | [-] indentation: il fallait précéder console.log de 2 espaces, sur sa propre ligne
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 0, 0, 1, 0 ]
+  | 
+  | ------------- EXERCISE: code9 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var reponse = prompt('Comment vas tu ?');
+  | if (reponse === 'bien') {
+  | alert('super !');
+  | } else if (reponse === 'mal') {
+  | var reponse2 = prompt('veux-tu une aspirine ?');
+  |   if (reponse2 === 'non') {
+  |   alert('ok');
+  |   } else if (reponse2 === 'oui') {
+  |   alert('voici !');
+  |   }
+  | } else {
+  | alert('j\'attendais bien ou mal');
+  | }
+  | [+] si l'utilisateur tape mal puis oui, on obtient bien la réponse "voici !".
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1 ]
+
+  => code score: 7 / 10 pts
+
+=> TOTAL STUDENT SCORE: 12 / 17
+  | [+] le programme s'est exécuté sans erreur.
+
+
+================================
+
+STUDENT: gauthier_ailloud
+
+  -  quizz answers:
+  | qcm1 : 3 (solution: 3) => 1 pts
+  | qcm2 : 4 (solution: 4) => 1 pts
+  | qcm3 : 1 (solution: 1) => 1 pts
+  | qcm4 : 2 (solution: 2) => 1 pts
+  | qcm5 : 2 (solution: 2) => 1 pts
+  | qcm6 : 3 (solution: 3) => 1 pts
+  | qcm7 : 3 (solution: 3) => 1 pts
+
+  => quizz score: 7 / 7 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code8 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var monMessage= 'coucou';
+  | for (var i= 1;  i<= 10; i++) {
+  |   console.log(monMessage);
+  | }
+  | 
+  | [+] le programme fonctionne sans erreur
+  | [+] 10 lignes ont bien été affichées dans la console
+  | [+] la chaine de caractères 'coucou' a bien été respectée à la lettre
+  | [+] une boucle for a bien été utilisée
+  | [+] indentation: console.log a bien été précédé de 2 espaces
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1 ]
+  | 
+  | ------------- EXERCISE: code9 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var reponse = prompt('comment vas-tu?');
+  | 
+  | if (reponse === 'bien') {
+  |  alert('super!');
+  |  
+  |   if (reponse === 'mal') {
+  | var reponse2 = prompt('c'est contagieux?');
+  |      if (reponse2 === '
+  |   
+  |     
+  |    
+Wed, 05 Apr 2017 10:32:40 GMT jailed:sandbox DYNAMIC PLUGIN:40
+var reponse2 = prompt('c'est contagieux?');
+                      ^^^
+SyntaxError: missing ) after argument list
+    at Object.exports.runInNewContext (vm.js:71:16)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-controle-fast-track/node_modules/jailed-node/sandbox/sandbox.js:151:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-controle-fast-track/node_modules/jailed-node/sandbox/sandbox.js:165:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-controle-fast-track/node_modules/jailed-node/sandbox/sandbox.js:53:7)
+    at emitTwo (events.js:106:13)
+    at process.emit (events.js:191:7)
+    at process.nextTick (internal/child_process.js:744:12)
+    at _combinedTickCallback (internal/process/next_tick.js:67:7)
+    at process._tickCallback (internal/process/next_tick.js:98:9)
+  | => test runner err: SyntaxError: missing ) after argument list
+
+  => code score: 5 / 10 pts
+
+=> TOTAL STUDENT SCORE: 12 / 17
+
+
+================================
+
+STUDENT: imane_behiri
+
+  -  quizz answers:
+  | qcm1 : 4 (solution: 3) => 0 pts
+  | qcm2 : 1 (solution: 4) => 0 pts
+  | qcm3 : 1 (solution: 1) => 1 pts
+  | qcm4 : 2 (solution: 2) => 1 pts
+  | qcm5 : 1 (solution: 2) => 0 pts
+  | qcm6 : 4 (solution: 3) => 0 pts
+  | qcm7 : 3 (solution: 3) => 1 pts
+
+  => quizz score: 3 / 7 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code8 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var reponse = prompt (20)
+  | if (reponse ='coucou') {
+  | 	alert ('coucou');
+  | } 
+  | /!\ Execution error: prompt is not defined
+  | [+] le programme fonctionne sans erreur
+  | [-] il fallait afficher 20 lignes dans la console
+  | [-] il fallait afficher 'coucou', et non 'undefined'
+  | [-] il fallait utiliser une boucle for
+  | [-] indentation: il fallait précéder console.log de 2 espaces, sur sa propre ligne
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 0, 0, 0, 0 ]
+  | 
+  | ------------- EXERCISE: code9 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 1 / 10 pts
+
+=> TOTAL STUDENT SCORE: 4 / 17
+
+
+================================
+
+STUDENT: mathias_lachot
+
+  -  quizz answers:
+  | qcm1 : 4 (solution: 3) => 0 pts
+  | qcm2 : 4 (solution: 4) => 1 pts
+  | qcm3 : 1 (solution: 1) => 1 pts
+  | qcm4 : 3 (solution: 2) => 0 pts
+  | qcm5 : 2 (solution: 2) => 1 pts
+  | qcm6 : 3 (solution: 3) => 1 pts
+  | qcm7 : 4 (solution: 3) => 0 pts
+
+  => quizz score: 4 / 7 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code8 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | for var 
+Wed, 05 Apr 2017 10:32:41 GMT jailed:sandbox DYNAMIC PLUGIN:17
+for var 
+    ^^^
+SyntaxError: Unexpected token var
+    at Object.exports.runInNewContext (vm.js:71:16)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-controle-fast-track/node_modules/jailed-node/sandbox/sandbox.js:151:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-controle-fast-track/node_modules/jailed-node/sandbox/sandbox.js:165:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-controle-fast-track/node_modules/jailed-node/sandbox/sandbox.js:53:7)
+    at emitTwo (events.js:106:13)
+    at process.emit (events.js:191:7)
+    at process.nextTick (internal/child_process.js:744:12)
+    at _combinedTickCallback (internal/process/next_tick.js:67:7)
+    at process._tickCallback (internal/process/next_tick.js:98:9)
+  | => test runner err: SyntaxError: Unexpected token var
+  | 
+  | ------------- EXERCISE: code9 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var reponse = prompt('Comment vas tu ?');
+  | if (reponse === 'bien') {
+  |   alert('super');
+  | } else if (reponse === 'mal') {
+  |   var reponse2 = prompt('c\'est contagieux ?');
+  |   if (reponse2 === 'oui') {
+  |   alert('oh non');
+  |   } else if (reponse2 === 'non') {
+  |   alert('ouf');
+  |   }
+  | } else {
+  |  alert('j\'attendais bien ou mal');
+  | 
+  | }
+  | 
+  | // -> STUDENT CODE ERROR: [-] si l'utilisateur tape mal puis non, alert devrait afficher "ouf !" au lieu de "ouf"
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0.5 ]
+
+  => code score: 2.5 / 10 pts
+
+=> TOTAL STUDENT SCORE: 6.5 / 17
+  | [+] le programme s'est exécuté sans erreur.
+
+
+================================
+
+STUDENT: maxime_bonnet
+
+  -  quizz answers:
+  | qcm1 : 3 (solution: 3) => 1 pts
+  | qcm2 : 4 (solution: 4) => 1 pts
+  | qcm3 : 1 (solution: 1) => 1 pts
+  | qcm4 : 2 (solution: 2) => 1 pts
+  | qcm5 : 2 (solution: 2) => 1 pts
+  | qcm6 : 1 (solution: 3) => 0 pts
+  | qcm7 : 3 (solution: 3) => 1 pts
+
+  => quizz score: 6 / 7 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code8 (variant: 3) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code9 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var reponse = prompt('comment vas tu?');
+  | if (reponse === 'bien') {
+  |  alert('super');
+  | } else if (reponse === 'mal') {
+  |  var reponse2 = prompt('veux-tu une aspirine ?');
+  |  if (reponse2 === 'oui') {
+  |  alert('voici!');
+  |  } else if (reponse2 === 'non') {
+  |  alert('ok');
+  |  }
+  | } else {
+  |  alert('j'attendais bien ou mal);
+  | }
+Wed, 05 Apr 2017 10:32:41 GMT jailed:sandbox DYNAMIC PLUGIN:45
+ alert('j'attendais bien ou mal);
+       ^^^
+SyntaxError: missing ) after argument list
+    at Object.exports.runInNewContext (vm.js:71:16)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-controle-fast-track/node_modules/jailed-node/sandbox/sandbox.js:151:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-controle-fast-track/node_modules/jailed-node/sandbox/sandbox.js:165:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-controle-fast-track/node_modules/jailed-node/sandbox/sandbox.js:53:7)
+    at emitTwo (events.js:106:13)
+    at process.emit (events.js:191:7)
+    at process.nextTick (internal/child_process.js:744:12)
+    at _combinedTickCallback (internal/process/next_tick.js:67:7)
+    at process._tickCallback (internal/process/next_tick.js:98:9)
+  | => test runner err: SyntaxError: missing ) after argument list
+
+  => code score: 0 / 10 pts
+
+=> TOTAL STUDENT SCORE: 6 / 17
+
+
+================================
+
+STUDENT: mike_meimoun
+
+  -  quizz answers:
+  | qcm1 : 3 (solution: 3) => 1 pts
+  | qcm2 : 4 (solution: 4) => 1 pts
+  | qcm3 : 1 (solution: 1) => 1 pts
+  | qcm4 : 2 (solution: 2) => 1 pts
+  | qcm5 : 3 (solution: 2) => 0 pts
+  | qcm6 : 3 (solution: 3) => 1 pts
+  | qcm7 : 3 (solution: 3) => 1 pts
+
+  => quizz score: 6 / 7 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code8 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | for ( var monNombre = 1 ; monNombre <= 20 ; monNombre++ ) {
+  |   console.log( 'coucou' );
+  | }
+  | [+] le programme fonctionne sans erreur
+  | [+] 20 lignes ont bien été affichées dans la console
+  | [+] la chaine de caractères 'coucou' a bien été respectée à la lettre
+  | [+] une boucle for a bien été utilisée
+  | [+] indentation: console.log a bien été précédé de 2 espaces
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1 ]
+  | 
+  | ------------- EXERCISE: code9 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var reponse = prompt('Comment vas-tu?');
+  | if (reponse === 'bien') {
+  |   var reponse2 = alert('super !'); 
+  | } else if (reponse === 'mal') {
+  |   var reponse3 = prompt('veux-tu un aspirine ?');
+  | if (reponse3 === 'oui') {
+  |   alert('voici !');
+  | } else if (reponse3 === 'non') {
+  |   alert('tant pis.')
+  | } else {
+  |   alert('j\attendais bien ou mal');
+  | }
+  | }
+  | [+] si l'utilisateur tape mal puis non, on obtient bien la réponse "tant pis.".
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1 ]
+
+  => code score: 10 / 10 pts
+
+=> TOTAL STUDENT SCORE: 16 / 17
+  | [+] le programme s'est exécuté sans erreur.
+
+
+================================
+
+STUDENT: nicolas_perrousset
+
+  -  quizz answers:
+  | qcm1 : 3 (solution: 3) => 1 pts
+  | qcm2 : 4 (solution: 4) => 1 pts
+  | qcm3 : 1 (solution: 1) => 1 pts
+  | qcm4 : 2 (solution: 2) => 1 pts
+  | qcm5 : 2 (solution: 2) => 1 pts
+  | qcm6 : 3 (solution: 3) => 1 pts
+  | qcm7 : 3 (solution: 3) => 1 pts
+
+  => quizz score: 7 / 7 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code8 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | console.log('coucou')
+  | for (var i = 'coucou'; i <=20;i++ ) {
+  | 	console.log('coucou')
+  | }
+  | [+] le programme fonctionne sans erreur
+  | [-] il fallait afficher 20 lignes dans la console
+  | [+] la chaine de caractères 'coucou' a bien été respectée à la lettre
+  | [+] une boucle for a bien été utilisée
+  | [-] indentation: il fallait précéder console.log de 2 espaces, sur sa propre ligne
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 0, 1, 1, 0 ]
+  | 
+  | ------------- EXERCISE: code9 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var reponse = prompt('comment va tu?');
+  | 
+  | if(reponse === 'bien'){
+  | 	alert('bien');
+  | }
+  | }else if(reponse === 'mal') {
+  | 	alert('veux-tu une aspirine');
+  | }
+  | else(reponse === 'sinon'){
+  | 	alert('jattendais bien ou mal');
+  | }
+Wed, 05 Apr 2017 10:32:41 GMT jailed:sandbox DYNAMIC PLUGIN:39
+}else if(reponse === 'mal') {
+^
+SyntaxError: Missing catch or finally after try
+    at Object.exports.runInNewContext (vm.js:71:16)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-controle-fast-track/node_modules/jailed-node/sandbox/sandbox.js:151:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-controle-fast-track/node_modules/jailed-node/sandbox/sandbox.js:165:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-controle-fast-track/node_modules/jailed-node/sandbox/sandbox.js:53:7)
+    at emitTwo (events.js:106:13)
+    at process.emit (events.js:191:7)
+    at process.nextTick (internal/child_process.js:744:12)
+    at _combinedTickCallback (internal/process/next_tick.js:67:7)
+    at process._tickCallback (internal/process/next_tick.js:98:9)
+  | => test runner err: SyntaxError: Missing catch or finally after try
+
+  => code score: 3 / 10 pts
+
+=> TOTAL STUDENT SCORE: 10 / 17
+
+
+================================
+
+STUDENT: simon_mimoun
+
+  -  quizz answers:
+  | qcm1 : 2 (solution: 3) => 0 pts
+  | qcm2 : 4 (solution: 4) => 1 pts
+  | qcm3 : 1 (solution: 1) => 1 pts
+  | qcm4 : 2 (solution: 2) => 1 pts
+  | qcm5 : 2 (solution: 2) => 1 pts
+  | qcm6 : 3 (solution: 3) => 1 pts
+  | qcm7 : 3 (solution: 3) => 1 pts
+
+  => quizz score: 6 / 7 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code8 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var message = 'coucou';
+  | for (var coucou = 1; coucou < 11; coucou);
+  | console.log( message );
+  | => test runner err: TIMEOUT: infinite loop?
+  | 
+  | ------------- EXERCISE: code9 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var reponse = prompt('Comment vas-tu ?');
+  | if (reponse === 'bien') {
+  | alert('super!');
+  | }
+  | else if(reponse2 === 'mal') {
+  |   var reponse2 = prompt('Veux-tu une aspirine ?');
+  |   if (reponse2 === 'non') {
+  |   alert('ok');
+  |   } else if(reponse2 === 'oui') {
+  |   alert('Voici !');
+  |   }
+  | }
+  | else {
+  | alert('J\'attendais bien ou mal');
+  | }
+  | 
+  | // -> STUDENT CODE ERROR: [-] si l'utilisateur tape mal puis oui, alert devrait afficher "voici !" au lieu de "J'attendais bien ou mal"
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0.5 ]
+
+  => code score: 2.5 / 10 pts
+
+=> TOTAL STUDENT SCORE: 8.5 / 17
+  | [+] le programme s'est exécuté sans erreur.
+
+
+================================
+
+STUDENT: sonia_beregreg
+
+  -  quizz answers:
+  | qcm1 : 3 (solution: 3) => 1 pts
+  | qcm2 : 4 (solution: 4) => 1 pts
+  | qcm3 : 1 (solution: 1) => 1 pts
+  | qcm4 : 2 (solution: 2) => 1 pts
+  | qcm5 : 2 (solution: 2) => 1 pts
+  | qcm6 : 4 (solution: 3) => 0 pts
+  | qcm7 : 3 (solution: 3) => 1 pts
+
+  => quizz score: 6 / 7 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code8 (variant: 2) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code9 (variant: 1) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+
+  => code score: 0 / 10 pts
+
+=> TOTAL STUDENT SCORE: 6 / 17
+
+
+================================
+
+STUDENT: thomas_kossowski
+
+  -  quizz answers:
+  | qcm1 : 3 (solution: 3) => 1 pts
+  | qcm2 : 4 (solution: 4) => 1 pts
+  | qcm3 : 1 (solution: 1) => 1 pts
+  | qcm4 : 2 (solution: 2) => 1 pts
+  | qcm5 : 2 (solution: 2) => 1 pts
+  | qcm6 : 3 (solution: 3) => 1 pts
+  | qcm7 : 3 (solution: 3) => 1 pts
+
+  => quizz score: 7 / 7 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code8 (variant: 2) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | ------------- EXERCISE: code9 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var reponse = prompt('Comment vas tu?');
+  | if (reponse === 'bien') { 
+  |     alert('super !')  
+  | } else if var reponse2 === ('mal') { prompt('c\'est contagieux ?')
+  | } if (reponse2 === 'oui') { alert ('oh non ! ')
+  | } else if (reponse ==='non') {alert ('ouf')
+  | } else { alert ('j\'attendais bien ou mal')
+Wed, 05 Apr 2017 10:32:44 GMT jailed:sandbox DYNAMIC PLUGIN:37
+} else if var reponse2 === ('mal') { prompt('c\'est contagieux ?')
+          ^^^
+SyntaxError: Unexpected token var
+    at Object.exports.runInNewContext (vm.js:71:16)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-controle-fast-track/node_modules/jailed-node/sandbox/sandbox.js:151:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-controle-fast-track/node_modules/jailed-node/sandbox/sandbox.js:165:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-controle-fast-track/node_modules/jailed-node/sandbox/sandbox.js:53:7)
+    at emitTwo (events.js:106:13)
+    at process.emit (events.js:191:7)
+    at process.nextTick (internal/child_process.js:744:12)
+    at _combinedTickCallback (internal/process/next_tick.js:67:7)
+    at process._tickCallback (internal/process/next_tick.js:98:9)
+  | => test runner err: SyntaxError: Unexpected token var
+
+  => code score: 0 / 10 pts
+
+=> TOTAL STUDENT SCORE: 7 / 17
+
+
+================================
+
+STUDENT: yassine_baba_slimane
+
+  -  quizz answers:
+  | qcm1 : 3 (solution: 3) => 1 pts
+  | qcm2 : 4 (solution: 4) => 1 pts
+  | qcm3 : 1 (solution: 1) => 1 pts
+  | qcm4 : 2 (solution: 2) => 1 pts
+  | qcm5 : 2 (solution: 2) => 1 pts
+  | qcm6 : 4 (solution: 3) => 0 pts
+  | qcm7 : 3 (solution: 3) => 1 pts
+
+  => quizz score: 6 / 7 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code8 (variant: 3) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var i = 'salut';
+  | for ( var i = 1 ; i<= 20 ; i++ ) {
+  |   console.log( 'salut' );
+  | }
+  | [+] le programme fonctionne sans erreur
+  | [+] 20 lignes ont bien été affichées dans la console
+  | [+] la chaine de caractères 'salut' a bien été respectée à la lettre
+  | [+] une boucle for a bien été utilisée
+  | [+] indentation: console.log a bien été précédé de 2 espaces
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1 ]
+  | 
+  | ------------- EXERCISE: code9 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var reponse = prompt('comment vas tu ?');
+  | if (reponse === 'bien') {
+  |   alert('super');
+  | }else if (reponse === 'mal') {
+Wed, 05 Apr 2017 10:32:44 GMT jailed:sandbox DYNAMIC PLUGIN:40
+catch(e) { application.remote._log("/!\\ Execution error:", e.message); };; // student call should call prompt() and alert()
+^^^^^
+SyntaxError: Unexpected token catch
+    at Object.exports.runInNewContext (vm.js:71:16)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-controle-fast-track/node_modules/jailed-node/sandbox/sandbox.js:151:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-controle-fast-track/node_modules/jailed-node/sandbox/sandbox.js:165:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-controle-fast-track/node_modules/jailed-node/sandbox/sandbox.js:53:7)
+    at emitTwo (events.js:106:13)
+    at process.emit (events.js:191:7)
+    at process.nextTick (internal/child_process.js:744:12)
+    at _combinedTickCallback (internal/process/next_tick.js:67:7)
+    at process._tickCallback (internal/process/next_tick.js:98:9)
+  | => test runner err: SyntaxError: Unexpected token catch
+
+  => code score: 5 / 10 pts
+
+=> TOTAL STUDENT SCORE: 11 / 17
