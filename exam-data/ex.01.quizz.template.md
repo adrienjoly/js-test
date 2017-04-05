@@ -1,90 +1,84 @@
-Quel section va être exécutée, si on exécute le code suivant ?
-
-```
-var nb = 2;
-if (nb === 1) {
-  // A
-} else {
-  // B
+```js
+function maFonction(param) {
+  return param + 2;
 }
 ```
 
-- A
-* B
-- A et B
-- aucune 
+Ceci est:
+
+- un appel de fonction
+* une définition de fonction
+- une affectation de fonction
+- une fonction qui ne fonctionne pas
 
 ???
 
-Réponse: B, car l'expression d'égalité `nb === 1` de la première condition est fausse,
-donc ce sont les instructions rattachées à l'alternative par défaut (`else`) qui sont exécutées.
+C'est une définition de fonction.
+
+On la reconnait à l'usage du mot clé `function` et des accolades entourant le code qui sera exécuté lorsque cette fonction sera appelée.
 
 ---
 
-Quel section de va être exécutée, si on exécute le code suivant ?
+```js
+maFonction(4);
+```
+
+Ceci est:
+
+* un appel de fonction
+- une définition de fonction
+- une affectation de fonction
+- une fonction qui ne fonctionne pas
+
+???
+
+C'est un appel de fonction.
+
+Un appel de fonction = le nom de la fonction, suivi par les paramètres entre parenthèses. Sans le mot clé `function`.
+
+Cette instruction va exécuter le code défini dans la fonction, et affecter les valeurs fournies à chaque paramètre.
+
+---
 
 ```
-var nb = 2;
-if (nb === 2) {
-  // A
-} else if (nb > 1) {
-  // B
-} else {
-  // C
+// cette fonction concatène un zéro à la fin de la valeur passée en paramètre
+function maFonction(param) {
+  return param + '0';
 }
 ```
 
-* A
-- B
-- A et B
-- A, B et C
+Comment savoir si cette fonction fonctionne bien ? (c.a.d. sans bug)
+
+- il suffit de la copier-coller dans la console
+- il faut taper maFonction dans la console
+* vérifier que le test passe: maFonction(1) === '10';
+- vérifier que maFonction(1) renvoie bien true
 
 ???
 
-Réponse: A. Une seule des trois alternatives peut s'exécuter, car elles sont liées par des `else`.
-Sachant que les conditions sont évaluées de haut en bas, et que la première expression est vraie,
-c'est donc la section A qui va s'exécuter.
+Pour vérifier le bon fonctionnement il faut définir et exécuter des tests unitaires.
+
+Ceux-ci permettent de comparer le résultat attendu d'une fonction, à celui effectivement retourné par l'implémentation actuelle de cette fonction.
+
+`maFonction(1) === '10';` est un bon test unitaire car son exécution retourne `true` si la fonction retourne le résultat attendu (`10`) lorsqu'on lui passe `1` en paramètre.
 
 ---
 
-À quoi ressemblerait l'arbre de décision correspondant à ce code:
+Supposons que nous avons défini une fonction `doubler()` qui retourne le double du nombre passé en paramètre, lors de son appel.
 
-```
-var reponse = prompt('as-tu faim ?')
-if (reponse === 'oui') {
-  var reponse2 = prompt('aimes-tu les burgers ?');
-  if (reponse2 === 'oui') {
-    alert('alors je t\'en offre un !');
-  } else {
-    alert('dommage !');
-  }
-} else {
-  alert('désolé');
-}
+Que se passe-t-il si on exécute l'instruction suivante:
+
+```js
+var maVariable = doubler(3);
 ```
 
-- une boîte et deux branches
-- deux boîtes de même niveau
-* une boîte de niveau 1, et une boîte de niveau 2
-- une boîte et trois branches
+* le résultat va être affecté à maVariable
+- le résultat va s'afficher dans la console
+- maVariable contient la définition de la fonction
+- maVariable contient l'appel de la fonction
 
 ???
 
-Réponse: Une première boîte (niveau 1) représente la question `as-tu faim ?`, et a deux branches: `oui` et *autre*.
-Liée à la première branche, une deuxième boîte (niveau 2) représente la question `aimes-tu les burgers ?`, et
-a elle-aussi deux branches: `oui` et *autre*.
+Il s'agit ici d'un appel de fonction. De la même façon que pour une opération élémentaire (ex: `2 + 2`), tout appel de fonction sera remplacé par la valeur retourné par l'exécution de cette fonction.
 
----
-
-Pourquoi faut-il éviter d'utiliser les opérateurs `==` et `!=` ?
-
-- car il vaut mieux utiliser une affectation `=`
-- car ils sont trop stricts
-* car ils sont trop laxistes
-- var `===` et `!==` sont plus lisibles
-
-???
-
-Réponse: Ils sont trop laxistes, dans le sens où deux valeurs de types différents (ex: `1` et `'1'`) peuvent
-être vus comme égaux par l'opérateur `==`. Cet excès de tolérance peut occasionner des comportements imprévus
-qui font perdre beaucoup de temps à diagnostiquer et à corriger. Idem pour `!=`.
+Ici, le résultat de l'exécution de la fonction `doubler` avec le paramètre `3`, soit la valeur `6`, va être affectée à `maVariable`.

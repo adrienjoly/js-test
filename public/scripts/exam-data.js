@@ -5,7 +5,7 @@
     window.location.href = window.location.href.replace('http:', 'https:');
   var app = document.querySelector('#app');
   app.config = {
-    "title": "JavaScript - QCM 2",
+    "title": "JavaScript - QCM 4",
     "PUBLIC_TEST_MODE": false,
     "DISPLAY_SOLUTIONS_AFTER_SUBMIT": true,
     "redirectToHttps": true,
@@ -45,96 +45,96 @@
         {
           "i": 1,
           "id": "qcm1",
-          "md": "Quel section va être exécutée, si on exécute le code suivant ?\n\n```\nvar nb = 2;\nif (nb === 1) {\n  // A\n} else {\n  // B\n}\n```\n\n\n",
-          "mdSolution": "\n\nRéponse: B, car l'expression d'égalité `nb === 1` de la première condition est fausse,\ndonc ce sont les instructions rattachées à l'alternative par défaut (`else`) qui sont exécutées.",
+          "md": "```js\nfunction maFonction(param) {\n  return param + 2;\n}\n```\n\nCeci est:\n\n\n",
+          "mdSolution": "\n\nC'est une définition de fonction.\n\nOn la reconnait à l'usage du mot clé `function` et des accolades entourant le code qui sera exécuté lorsque cette fonction sera appelée.",
           "choices": [
             {
               "name": 1,
-              "text": "A"
+              "text": "un appel de fonction"
             },
             {
               "name": 2,
-              "text": "B"
+              "text": "une définition de fonction"
             },
             {
               "name": 3,
-              "text": "A et B"
+              "text": "une affectation de fonction"
             },
             {
               "name": 4,
-              "text": "aucune "
+              "text": "une fonction qui ne fonctionne pas"
             }
           ]
         },
         {
           "i": 2,
           "id": "qcm2",
-          "md": "Quel section de va être exécutée, si on exécute le code suivant ?\n\n```\nvar nb = 2;\nif (nb === 2) {\n  // A\n} else if (nb > 1) {\n  // B\n} else {\n  // C\n}\n```\n\n\n",
-          "mdSolution": "\n\nRéponse: A. Une seule des trois alternatives peut s'exécuter, car elles sont liées par des `else`.\nSachant que les conditions sont évaluées de haut en bas, et que la première expression est vraie,\nc'est donc la section A qui va s'exécuter.",
+          "md": "```js\nmaFonction(4);\n```\n\nCeci est:\n\n\n",
+          "mdSolution": "\n\nC'est un appel de fonction.\n\nUn appel de fonction = le nom de la fonction, suivi par les paramètres entre parenthèses. Sans le mot clé `function`.\n\nCette instruction va exécuter le code défini dans la fonction, et affecter les valeurs fournies à chaque paramètre.",
           "choices": [
             {
               "name": 1,
-              "text": "A"
+              "text": "un appel de fonction"
             },
             {
               "name": 2,
-              "text": "B"
+              "text": "une définition de fonction"
             },
             {
               "name": 3,
-              "text": "A et B"
+              "text": "une affectation de fonction"
             },
             {
               "name": 4,
-              "text": "A, B et C"
+              "text": "une fonction qui ne fonctionne pas"
             }
           ]
         },
         {
           "i": 3,
           "id": "qcm3",
-          "md": "À quoi ressemblerait l'arbre de décision correspondant à ce code:\n\n```\nvar reponse = prompt('as-tu faim ?')\nif (reponse === 'oui') {\n  var reponse2 = prompt('aimes-tu les burgers ?');\n  if (reponse2 === 'oui') {\n    alert('alors je t\\'en offre un !');\n  } else {\n    alert('dommage !');\n  }\n} else {\n  alert('désolé');\n}\n```\n\n\n",
-          "mdSolution": "\n\nRéponse: Une première boîte (niveau 1) représente la question `as-tu faim ?`, et a deux branches: `oui` et *autre*.\nLiée à la première branche, une deuxième boîte (niveau 2) représente la question `aimes-tu les burgers ?`, et\na elle-aussi deux branches: `oui` et *autre*.",
+          "md": "```\n// cette fonction concatène un zéro à la fin de la valeur passée en paramètre\nfunction maFonction(param) {\n  return param + '0';\n}\n```\n\nComment savoir si cette fonction fonctionne bien ? (c.a.d. sans bug)\n\n\n",
+          "mdSolution": "\n\nPour vérifier le bon fonctionnement il faut définir et exécuter des tests unitaires.\n\nCeux-ci permettent de comparer le résultat attendu d'une fonction, à celui effectivement retourné par l'implémentation actuelle de cette fonction.\n\n`maFonction(1) === '10';` est un bon test unitaire car son exécution retourne `true` si la fonction retourne le résultat attendu (`10`) lorsqu'on lui passe `1` en paramètre.",
           "choices": [
             {
               "name": 1,
-              "text": "une boîte et deux branches"
+              "text": "il suffit de la copier-coller dans la console"
             },
             {
               "name": 2,
-              "text": "deux boîtes de même niveau"
+              "text": "il faut taper maFonction dans la console"
             },
             {
               "name": 3,
-              "text": "une boîte de niveau 1, et une boîte de niveau 2"
+              "text": "vérifier que le test passe: maFonction(1) === '10';"
             },
             {
               "name": 4,
-              "text": "une boîte et trois branches"
+              "text": "vérifier que maFonction(1) renvoie bien true"
             }
           ]
         },
         {
           "i": 4,
           "id": "qcm4",
-          "md": "Pourquoi faut-il éviter d'utiliser les opérateurs `==` et `!=` ?\n\n\n",
-          "mdSolution": "\n\nRéponse: Ils sont trop laxistes, dans le sens où deux valeurs de types différents (ex: `1` et `'1'`) peuvent\nêtre vus comme égaux par l'opérateur `==`. Cet excès de tolérance peut occasionner des comportements imprévus\nqui font perdre beaucoup de temps à diagnostiquer et à corriger. Idem pour `!=`.",
+          "md": "Supposons que nous avons défini une fonction `doubler()` qui retourne le double du nombre passé en paramètre, lors de son appel.\n\nQue se passe-t-il si on exécute l'instruction suivante:\n\n```js\nvar maVariable = doubler(3);\n```\n\n\n",
+          "mdSolution": "\n\nIl s'agit ici d'un appel de fonction. De la même façon que pour une opération élémentaire (ex: `2 + 2`), tout appel de fonction sera remplacé par la valeur retourné par l'exécution de cette fonction.\n\nIci, le résultat de l'exécution de la fonction `doubler` avec le paramètre `3`, soit la valeur `6`, va être affectée à `maVariable`.",
           "choices": [
             {
               "name": 1,
-              "text": "car il vaut mieux utiliser une affectation ="
+              "text": "le résultat va être affecté à maVariable"
             },
             {
               "name": 2,
-              "text": "car ils sont trop stricts"
+              "text": "le résultat va s'afficher dans la console"
             },
             {
               "name": 3,
-              "text": "car ils sont trop laxistes"
+              "text": "maVariable contient la définition de la fonction"
             },
             {
               "name": 4,
-              "text": "var === et !== sont plus lisibles"
+              "text": "maVariable contient l'appel de la fonction"
             }
           ]
         }
@@ -143,7 +143,7 @@
         "qcm1": 2,
         "qcm2": 1,
         "qcm3": 3,
-        "qcm4": 3
+        "qcm4": 1
       }
     },
     {
@@ -151,7 +151,7 @@
       "i": 2,
       "isCode": true,
       "title": "Exercices de codage",
-      "maxScore": 3,
+      "maxScore": 6,
       "questions": [
         {
           "i": 5,
@@ -160,10 +160,23 @@
             {}
           ],
           "mdVariants": [
-            "Implémenter une condition qui affecte `'oui'` à une variable `resultat` (déjà créée), seulement si une autre variable `nombre` vaut strictement `4`. Indenter correctement.\n\n"
+            "Définir une fonction `soustraire` qui retourne le résultat de la soustraction `a - b`, `a` et `b` étant des paramètres de cette fonction.\n\nRespecter les conventions et règles d'indentation vues en cours.\n\n"
           ],
           "mdSolutions": [
-            "\n\nSolution:\n\n```js\nif (nombre === 4) {\n  resultat = 'oui';\n}\n```\n"
+            "\n\nSolution:\n```js\nfunction soustraire(a, b) {\n  return a - b;\n}\n```\n"
+          ]
+        },
+        {
+          "i": 6,
+          "id": "code6",
+          "variants": [
+            {}
+          ],
+          "mdVariants": [
+            "Définir une fonction `repeter` qui affiche `n` fois `'Bonjour!'` dans la console, puis qui retourne `n`, `n` étant un paramètre de cette fonction.\n\nRespecter les conventions et règles d'indentation vues en cours.\n\n"
+          ],
+          "mdSolutions": [
+            "\n\nSolution:\n```js\nfunction repeter(n) {\n  for (var i = 0; i < n; i++) {\n    console.log('Bonjour!');\n  }\n  return n;\n}\n```\n"
           ]
         }
       ]
