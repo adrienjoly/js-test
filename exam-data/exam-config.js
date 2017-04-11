@@ -7,7 +7,7 @@ function readfile(filePath) {
 module.exports = {
 
   // Front-end config
-  title: 'JavaScript - QCM 4',
+  title: 'JavaScript - QCM 5',
 
   // General settings
   PUBLIC_TEST_MODE: false, // set to false to restrict acccess and identify students using Google Login

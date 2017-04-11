@@ -5,7 +5,7 @@
     window.location.href = window.location.href.replace('http:', 'https:');
   var app = document.querySelector('#app');
   app.config = {
-    "title": "JavaScript - QCM 4",
+    "title": "JavaScript - QCM 5",
     "PUBLIC_TEST_MODE": false,
     "DISPLAY_SOLUTIONS_AFTER_SUBMIT": true,
     "redirectToHttps": true,
@@ -36,147 +36,62 @@
   };
   app.exercises = [
     {
-      "_info": "generated from ex.01.quizz.template.md",
+      "_info": "generated from ex.01.code.template.md",
       "i": 1,
-      "isQuizz": true,
-      "title": "QCM",
-      "maxScore": 4,
+      "isCode": true,
+      "title": "Exercices de codage",
+      "maxScore": 12,
       "questions": [
         {
           "i": 1,
-          "id": "qcm1",
-          "md": "```js\nfunction maFonction(param) {\n  return param + 2;\n}\n```\n\nCeci est:\n\n\n",
-          "mdSolution": "\n\nC'est une définition de fonction.\n\nOn la reconnait à l'usage du mot clé `function` et des accolades entourant le code qui sera exécuté lorsque cette fonction sera appelée.",
-          "choices": [
-            {
-              "name": 1,
-              "text": "un appel de fonction"
-            },
-            {
-              "name": 2,
-              "text": "une définition de fonction"
-            },
-            {
-              "name": 3,
-              "text": "une affectation de fonction"
-            },
-            {
-              "name": 4,
-              "text": "une fonction qui ne fonctionne pas"
-            }
+          "id": "code1",
+          "variants": [
+            {}
+          ],
+          "mdVariants": [
+            "Créez une variable `nombres` de type tableau et contenant les nombres `1`, `2` et `3`.\n\n"
+          ],
+          "mdSolutions": [
+            "\n\nSolution:\n```js\nvar nombres = [1, 2, 3];\n```\n"
           ]
         },
         {
           "i": 2,
-          "id": "qcm2",
-          "md": "```js\nmaFonction(4);\n```\n\nCeci est:\n\n\n",
-          "mdSolution": "\n\nC'est un appel de fonction.\n\nUn appel de fonction = le nom de la fonction, suivi par les paramètres entre parenthèses. Sans le mot clé `function`.\n\nCette instruction va exécuter le code défini dans la fonction, et affecter les valeurs fournies à chaque paramètre.",
-          "choices": [
-            {
-              "name": 1,
-              "text": "un appel de fonction"
-            },
-            {
-              "name": 2,
-              "text": "une définition de fonction"
-            },
-            {
-              "name": 3,
-              "text": "une affectation de fonction"
-            },
-            {
-              "name": 4,
-              "text": "une fonction qui ne fonctionne pas"
-            }
+          "id": "code2",
+          "variants": [
+            {}
+          ],
+          "mdVariants": [
+            "Vous disposez d'une variable `fruits` contenant un tableau de chaînes de caractères.\n\nSaisissez le code JavaScript pour créer une variable `troisieme` et lui affecter la valeur du 3ème élément de ce tableau.\n\n"
+          ],
+          "mdSolutions": [
+            "\n\nSolution:\n```js\nvar troisieme = fruits[2];\n```\n"
           ]
         },
         {
           "i": 3,
-          "id": "qcm3",
-          "md": "```\n// cette fonction concatène un zéro à la fin de la valeur passée en paramètre\nfunction maFonction(param) {\n  return param + '0';\n}\n```\n\nComment savoir si cette fonction fonctionne bien ? (c.a.d. sans bug)\n\n\n",
-          "mdSolution": "\n\nPour vérifier le bon fonctionnement il faut définir et exécuter des tests unitaires.\n\nCeux-ci permettent de comparer le résultat attendu d'une fonction, à celui effectivement retourné par l'implémentation actuelle de cette fonction.\n\n`maFonction(1) === '10';` est un bon test unitaire car son exécution retourne `true` si la fonction retourne le résultat attendu (`10`) lorsqu'on lui passe `1` en paramètre.",
-          "choices": [
-            {
-              "name": 1,
-              "text": "il suffit de la copier-coller dans la console"
-            },
-            {
-              "name": 2,
-              "text": "il faut taper maFonction dans la console"
-            },
-            {
-              "name": 3,
-              "text": "vérifier que le test passe: maFonction(1) === '10';"
-            },
-            {
-              "name": 4,
-              "text": "vérifier que maFonction(1) renvoie bien true"
-            }
+          "id": "code3",
+          "variants": [
+            {}
+          ],
+          "mdVariants": [
+            "Vous disposez d'une variable `fruits` contenant un tableau de chaînes de caractères.\n\nSaisissez le code JavaScript permettant de retirer le dernier élément de ce tableau, et d'afficher la valeur de cet élément dans la console.\n\n"
+          ],
+          "mdSolutions": [
+            "\n\nSolution:\n```js\nconsole.log(fruits.pop());\n```\n"
           ]
         },
         {
           "i": 4,
-          "id": "qcm4",
-          "md": "Supposons que nous avons défini une fonction `doubler()` qui retourne le double du nombre passé en paramètre, lors de son appel.\n\nQue se passe-t-il si on exécute l'instruction suivante:\n\n```js\nvar maVariable = doubler(3);\n```\n\n\n",
-          "mdSolution": "\n\nIl s'agit ici d'un appel de fonction. De la même façon que pour une opération élémentaire (ex: `2 + 2`), tout appel de fonction sera remplacé par la valeur retourné par l'exécution de cette fonction.\n\nIci, le résultat de l'exécution de la fonction `doubler` avec le paramètre `3`, soit la valeur `6`, va être affectée à `maVariable`.",
-          "choices": [
-            {
-              "name": 1,
-              "text": "le résultat va être affecté à maVariable"
-            },
-            {
-              "name": 2,
-              "text": "le résultat va s'afficher dans la console"
-            },
-            {
-              "name": 3,
-              "text": "maVariable contient la définition de la fonction"
-            },
-            {
-              "name": 4,
-              "text": "maVariable contient l'appel de la fonction"
-            }
-          ]
-        }
-      ],
-      "solutions": {
-        "qcm1": 2,
-        "qcm2": 1,
-        "qcm3": 3,
-        "qcm4": 1
-      }
-    },
-    {
-      "_info": "generated from ex.02.code.template.md",
-      "i": 2,
-      "isCode": true,
-      "title": "Exercices de codage",
-      "maxScore": 6,
-      "questions": [
-        {
-          "i": 5,
-          "id": "code5",
+          "id": "code4",
           "variants": [
             {}
           ],
           "mdVariants": [
-            "Définir une fonction `soustraire` qui retourne le résultat de la soustraction `a - b`, `a` et `b` étant des paramètres de cette fonction.\n\nRespecter les conventions et règles d'indentation vues en cours.\n\n"
+            "Définir une fonction `tableauContient` qui prend deux paramètres:\n - `tableau`: un tableau de chaînes de caractères\n - `chaine`: une chaîne de caractères\n\n...et retourne:\n - `false` si la valeur `chaine` n'a pas été trouvée dans le tableau `tableau`,\n - ou le premier indice (à partir de 0) auquel a été trouvé la valeur `chaine` dans le tableau `tableau`.\n\nExemples d'appels:\n - `tableauContient(['a', 'b', 'c'], 'b');` doit retourner `1`.\n - `tableauContient(['a', 'b', 'c'], 'd');` doit retourner `false`.\n\n"
           ],
           "mdSolutions": [
-            "\n\nSolution:\n```js\nfunction soustraire(a, b) {\n  return a - b;\n}\n```\n"
-          ]
-        },
-        {
-          "i": 6,
-          "id": "code6",
-          "variants": [
-            {}
-          ],
-          "mdVariants": [
-            "Définir une fonction `repeter` qui affiche `n` fois `'Bonjour!'` dans la console, puis qui retourne `n`, `n` étant un paramètre de cette fonction.\n\nRespecter les conventions et règles d'indentation vues en cours.\n\n"
-          ],
-          "mdSolutions": [
-            "\n\nSolution:\n```js\nfunction repeter(n) {\n  for (var i = 0; i < n; i++) {\n    console.log('Bonjour!');\n  }\n  return n;\n}\n```\n"
+            "\n\nSolution:\n```js\nfunction tableauContient(tableau, chaine) {\n  var indice = tableau.indexOf(chaine);\n  if (indice === -1) {\n    return false;\n  } else {\n    return indice;\n  }\n}\n```\n"
           ]
         }
       ]
