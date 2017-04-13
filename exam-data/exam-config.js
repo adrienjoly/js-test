@@ -7,17 +7,17 @@ function readfile(filePath) {
 module.exports = {
 
   // Front-end config
-  title: 'JavaScript - QCM 5',
+  title: 'JavaScript - QCM 10 (AJAX GET)',
 
   // General settings
   PUBLIC_TEST_MODE: false, // set to false to restrict acccess and identify students using Google Login
-  DISPLAY_SOLUTIONS_AFTER_SUBMIT: false, // set to false, for real exams
+  DISPLAY_SOLUTIONS_AFTER_SUBMIT: true, // set to false, for real exams
 
   redirectToHttps: true,
 
   // Settings for conversion and publication of exercise templates
   examPack: {
-    publishSolutions: false, // `true` required for realtime-eval/auto-eval back-ends, DISPLAY_SOLUTIONS_AFTER_SUBMIT and/or dashboard
+    publishSolutions: true, // `true` required for realtime-eval/auto-eval back-ends, DISPLAY_SOLUTIONS_AFTER_SUBMIT and/or dashboard
     publishEvalTests: false, // `true` required for realtime-eval/auto-eval back-ends, DISPLAY_SOLUTIONS_AFTER_SUBMIT and/or dashboard
   },
 
@@ -30,10 +30,10 @@ module.exports = {
     },
     */
     FIREBASE_CONFIG: {
-      apiKey: "AIzaSyCUIGKvdZ4EdFywDU4a90PupcpBEfvpNPc",
-      databaseURL: "https://js-qcm-ft.firebaseio.com",
-      messagingSenderId: "793078387774"
-      // admin/dashboard: https://console.firebase.google.com/project/js-qcm-ft/database/data
+      apiKey: "AIzaSyBWrb4UMjyrSyzp_kqauvFGLi3QaWvDPus",
+      databaseURL: "https://js-qcm.firebaseio.com",
+      messagingSenderId: "988306760740"
+      // admin/dashboard: https://console.firebase.google.com/project/js-qcm/database/data
     },
   },
 
@@ -51,7 +51,7 @@ module.exports = {
     ptsNull: 0,
   },
   codeGrading: {
-    ptsPerExercise: 5,
+    ptsPerExercise: 3,
   }
 
 };

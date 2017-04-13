@@ -5,20 +5,20 @@
     window.location.href = window.location.href.replace('http:', 'https:');
   var app = document.querySelector('#app');
   app.config = {
-    "title": "JavaScript - QCM 5",
+    "title": "JavaScript - QCM 10 (AJAX GET)",
     "PUBLIC_TEST_MODE": false,
-    "DISPLAY_SOLUTIONS_AFTER_SUBMIT": false,
+    "DISPLAY_SOLUTIONS_AFTER_SUBMIT": true,
     "redirectToHttps": true,
     "examPack": {
-      "publishSolutions": false,
+      "publishSolutions": true,
       "publishEvalTests": false
     },
     "backend": {
       "type": "firebase",
       "FIREBASE_CONFIG": {
-        "apiKey": "AIzaSyCUIGKvdZ4EdFywDU4a90PupcpBEfvpNPc",
-        "databaseURL": "https://js-qcm-ft.firebaseio.com",
-        "messagingSenderId": "793078387774"
+        "apiKey": "AIzaSyBWrb4UMjyrSyzp_kqauvFGLi3QaWvDPus",
+        "databaseURL": "https://js-qcm.firebaseio.com",
+        "messagingSenderId": "988306760740"
       }
     },
     "teacherEmail": "adrien.joly@eemi.com",
@@ -31,58 +31,120 @@
       "ptsNull": 0
     },
     "codeGrading": {
-      "ptsPerExercise": 5
+      "ptsPerExercise": 3
     }
   };
   app.exercises = [
     {
-      "_info": "generated from ex.01.code.template.md",
+      "_info": "generated from ex.01.quizz.template.md",
       "i": 1,
-      "isCode": true,
-      "title": "Exercices de codage",
-      "maxScore": 20,
+      "isQuizz": true,
+      "title": "QCM",
+      "maxScore": 4,
       "questions": [
         {
           "i": 1,
-          "id": "code1",
-          "variants": [
-            {}
-          ],
-          "mdVariants": [
-            "Créez une variable `nombres` de type tableau et contenant les nombres `1`, `2` et `3`.\n\n"
+          "id": "qcm1",
+          "md": "Pour effectuer une requête AJAX GET, et afficher la réponse du serveur dans un `alert()`, il faut instancier la classe `XMLHttpRequest` puis...\n\n\n",
+          "mdSolution": "\n\n```js\nvar xhr = new XMLHttpRequest(); \nxhr.open('GET', 'https://jsonplaceholder.typicode.com/users/1');\nxhr.onreadystatechange = function() {\n  if (xhr.readyState === 4) {\n    alert(xhr.responseText);\n  }\n};\nxhr.send();\n```\n\nDans le code de cette requête, on:\n\n - instancie la classe `XMLHttpRequest` dans la variable `xhr`,\n - **définit 1 fonction** qu'on affecte à la propriété `onreadystatechange` de `xhr`,\n - et on **appelle 2 méthodes** de `xhr`: `open()` et `send()`.\n\nÀ noter que `alert()` est un appel de fonction, et non un appel de méthode, car cette fonction n'est pas rattachée à une instance de classe.",
+          "choices": [
+            {
+              "name": 1,
+              "text": "... appeler 2 méthodes, et définir 1 fonction"
+            },
+            {
+              "name": 2,
+              "text": "... appeler 1 méthode, et définir 2 fonctions"
+            },
+            {
+              "name": 3,
+              "text": "... appeler 3 méthodes"
+            },
+            {
+              "name": 4,
+              "text": "... définir 3 fonctions"
+            }
           ]
         },
         {
           "i": 2,
-          "id": "code2",
-          "variants": [
-            {}
-          ],
-          "mdVariants": [
-            "Vous disposez d'une variable `fruits` contenant un tableau de chaînes de caractères.\n\nSaisissez le code JavaScript pour créer une variable `troisieme` et lui affecter la valeur du 3ème élément de ce tableau.\n\n"
+          "id": "qcm2",
+          "md": "J'ai écrit le code permettant d'envoyer une requête HTTP GET, mais rien ne se passe, et rien n'apparait dans la console.\n\nCela pourrait être dû à:\n\n\n",
+          "mdSolution": "\n\nDans ces trois cas, on aurait obtenu une erreur dans la console:\n\n - *une erreur de syntaxe*\n - *une URL erronée*\n - *l'oubli de l'usage de `JSON.parse()`*\n\nLa bonne réponse est donc: *l'oubli de l'appel à `send()`*.\n\nEn effet, c'est cette méthode qui permet l'envoi de la requête. Sans cela, notre code n'aura eu aucun effet, sauf l'initialisation de la requête dans l'instance `xhr`.",
+          "choices": [
+            {
+              "name": 1,
+              "text": "une erreur de syntaxe"
+            },
+            {
+              "name": 2,
+              "text": "une URL erronée"
+            },
+            {
+              "name": 3,
+              "text": "l'oubli de l'appel à send()"
+            },
+            {
+              "name": 4,
+              "text": "l'oubli de l'usage de JSON.parse()"
+            }
           ]
         },
         {
           "i": 3,
-          "id": "code3",
-          "variants": [
-            {}
-          ],
-          "mdVariants": [
-            "Vous disposez d'une variable `fruits` contenant un tableau de chaînes de caractères.\n\nSaisissez le code JavaScript permettant de retirer le dernier élément de ce tableau, et d'afficher la valeur de cet élément dans la console.\n\n"
+          "id": "qcm3",
+          "md": "Quel est le format le plus couramment utilisé de nos jours pour échanger des informations en AJAX avec une API ?\n\n\n",
+          "mdSolution": "\n\nAJAX (*Asynchronous Javascript And XML*) a été initialement conçu pour échanger des informations au format XML, très en vogue dans les années 90, mais il permet d'utiliser n'importe quel format sérialisable sous forme d'une chaine de caractères.\n\nAujourd'hui, on utilise majoritairement le format *JSON* dans les requêtes AJAX, car il a l'avantage d'être concis (et peu consommateur de bande passante), facilement lisible à l'oeil nu, et directement manipulable en JavaScript.",
+          "choices": [
+            {
+              "name": 1,
+              "text": "HTML"
+            },
+            {
+              "name": 2,
+              "text": "XML"
+            },
+            {
+              "name": 3,
+              "text": "JSON"
+            },
+            {
+              "name": 4,
+              "text": "texte brut"
+            }
           ]
         },
         {
           "i": 4,
-          "id": "code4",
-          "variants": [
-            {}
-          ],
-          "mdVariants": [
-            "Définir une fonction `tableauContient` qui prend deux paramètres:\n - `tableau`: un tableau de chaînes de caractères\n - `chaine`: une chaîne de caractères\n\n...et retourne:\n - `false` si la valeur `chaine` n'a pas été trouvée dans le tableau `tableau`,\n - ou le premier indice (à partir de 0) auquel a été trouvé la valeur `chaine` dans le tableau `tableau`.\n\nExemples d'appels:\n - `tableauContient(['a', 'b', 'c'], 'b');` doit retourner `1`.\n - `tableauContient(['a', 'b', 'c'], 'd');` doit retourner `false`.\n\n"
+          "id": "qcm4",
+          "md": "```js\nvar xhr = new XMLHttpRequest(); \nxhr.open('GET', 'https://jsonplaceholder.typicode.com/users/1');\nxhr.onreadystatechange = function() {\n  if (xhr.readyState === 4) {\n    var reponse = JSON.parse(xhr.responseText);\n    alert(/* A SAISIR */);\n  }\n};\nxhr.send();\n```\n\nSi on veut afficher la propriété `email` de l'objet contenu dans la réponse à notre requête, par quoi faut-il replacer `/* A SAISIR */` ?\n\n\n",
+          "mdSolution": "\n\n - la propriété `xhr.responseText` est de type `string` (c'est la forme *sérialisée* de l'objet contenu dans la réponse à la requête), donc on ne peut pas utiliser directement la notation pointée pour accéder à la propriété `email` demandée.\n - `JSON.parse()` a été appelé sur `xhr.responseText`, et l'objet résultant est stocké dans la variable `reponse`. Il n'est donc pas nécéssaire d'appeler `JSON.parse()` à nouveau.\n - `responseText['email']` causerait une erreur car `responseText` est une propriété de l'objet `xhr`, et non une variable existante.\n\nIl va donc falloir extraire la propriété `email` de l'objet contenu dans la variable `reponse` (qui a été désérialisé par `JSON.parse()`), en utilisant la notation pointée: `reponse.email`.",
+          "choices": [
+            {
+              "name": 1,
+              "text": "JSON.parse(xhr.responseText.email)"
+            },
+            {
+              "name": 2,
+              "text": "xhr.responseText.email"
+            },
+            {
+              "name": 3,
+              "text": "reponse.email"
+            },
+            {
+              "name": 4,
+              "text": "responseText['email']"
+            }
           ]
         }
-      ]
+      ],
+      "solutions": {
+        "qcm1": 1,
+        "qcm2": 3,
+        "qcm3": 3,
+        "qcm4": 3
+      }
     }
   ];
 })(document);
