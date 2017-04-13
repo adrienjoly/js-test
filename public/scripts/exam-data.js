@@ -5,7 +5,7 @@
     window.location.href = window.location.href.replace('http:', 'https:');
   var app = document.querySelector('#app');
   app.config = {
-    "title": "JavaScript - Contrôle 1",
+    "title": "JavaScript - QCM 5",
     "PUBLIC_TEST_MODE": false,
     "DISPLAY_SOLUTIONS_AFTER_SUBMIT": false,
     "redirectToHttps": true,
@@ -36,246 +36,50 @@
   };
   app.exercises = [
     {
-      "_info": "generated from ex.01.quizz.template.md",
+      "_info": "generated from ex.01.code.template.md",
       "i": 1,
-      "isQuizz": true,
-      "title": "QCM",
-      "maxScore": 7,
+      "isCode": true,
+      "title": "Exercices de codage",
+      "maxScore": 20,
       "questions": [
         {
           "i": 1,
-          "id": "qcm1",
-          "md": "Quelle instruction JavaScript a pour effet de créer une variable ?\n  \t\t  ",
-          "choices": [
-            {
-              "name": 1,
-              "text": "maVariable;"
-            },
-            {
-              "name": 2,
-              "text": "maVariable = 1;"
-            },
-            {
-              "name": 3,
-              "text": "var x = 0;"
-            },
-            {
-              "name": 4,
-              "text": "maVariable = 'bonjour';"
-            }
+          "id": "code1",
+          "variants": [
+            {}
+          ],
+          "mdVariants": [
+            "Créez une variable `nombres` de type tableau et contenant les nombres `1`, `2` et `3`.\n\n"
           ]
         },
         {
           "i": 2,
-          "id": "qcm2",
-          "md": "Quel est le type de cette variable:\n\n```\nvar maVariable = '6.66';\n```\n",
-          "choices": [
-            {
-              "name": 1,
-              "text": "number"
-            },
-            {
-              "name": 2,
-              "text": "decimal"
-            },
-            {
-              "name": 3,
-              "text": "boolean"
-            },
-            {
-              "name": 4,
-              "text": "string"
-            }
+          "id": "code2",
+          "variants": [
+            {}
+          ],
+          "mdVariants": [
+            "Vous disposez d'une variable `fruits` contenant un tableau de chaînes de caractères.\n\nSaisissez le code JavaScript pour créer une variable `troisieme` et lui affecter la valeur du 3ème élément de ce tableau.\n\n"
           ]
         },
         {
           "i": 3,
-          "id": "qcm3",
-          "md": "Quel est le type de cette variable:\n\n```\nvar maVariable = 6.66;\n```\n",
-          "choices": [
-            {
-              "name": 1,
-              "text": "number"
-            },
-            {
-              "name": 2,
-              "text": "decimal"
-            },
-            {
-              "name": 3,
-              "text": "boolean"
-            },
-            {
-              "name": 4,
-              "text": "string"
-            }
+          "id": "code3",
+          "variants": [
+            {}
+          ],
+          "mdVariants": [
+            "Vous disposez d'une variable `fruits` contenant un tableau de chaînes de caractères.\n\nSaisissez le code JavaScript permettant de retirer le dernier élément de ce tableau, et d'afficher la valeur de cet élément dans la console.\n\n"
           ]
         },
         {
           "i": 4,
-          "id": "qcm4",
-          "md": "Que vaut cette expression de comparaison de valeur ?\n\n```\n6.66 == '6.66'\n```\n",
-          "choices": [
-            {
-              "name": 1,
-              "text": "c'est une affectation"
-            },
-            {
-              "name": 2,
-              "text": "true"
-            },
-            {
-              "name": 3,
-              "text": "false"
-            },
-            {
-              "name": 4,
-              "text": "undefined"
-            }
-          ]
-        },
-        {
-          "i": 5,
-          "id": "qcm5",
-          "md": "En respectant les conventions indiquées en cours, quelle affectation faut-il exécuter pour que `J'aime le code !` s'affiche à l'écran ?\n\n```\nalert(message);\n```\n",
-          "choices": [
-            {
-              "name": 1,
-              "text": "message = J\\'aime le code !"
-            },
-            {
-              "name": 2,
-              "text": "message = 'J\\'aime le code !';"
-            },
-            {
-              "name": 3,
-              "text": "message = 'J\\\"aime le code !';"
-            },
-            {
-              "name": 4,
-              "text": "message = \"J'aime le code !\";"
-            }
-          ]
-        },
-        {
-          "i": 6,
-          "id": "qcm6",
-          "md": "Quelles section(s) de code va/vont être exécutée(s) ?\n\n```\nvar nb = -1;\nif (nb === 2) {\n  // A\n} else if (nb <= -2) {\n  // B\n} else {\n  // C\n}\n```\n",
-          "choices": [
-            {
-              "name": 1,
-              "text": "seulement A"
-            },
-            {
-              "name": 2,
-              "text": "seulement B"
-            },
-            {
-              "name": 3,
-              "text": "seulement C"
-            },
-            {
-              "name": 4,
-              "text": "aucune des trois"
-            }
-          ]
-        },
-        {
-          "i": 7,
-          "id": "qcm7",
-          "md": "Combien de fois les instructions contenues dans la boucle seraient-elles exécutées ?\n\n```js\nfor ( var i = 1; i <= 3; i++ ) {\n  // instructions\n}\n```\n",
-          "choices": [
-            {
-              "name": 1,
-              "text": "0 fois"
-            },
-            {
-              "name": 2,
-              "text": "1 fois"
-            },
-            {
-              "name": 3,
-              "text": "3 fois"
-            },
-            {
-              "name": 4,
-              "text": "4 fois"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "_info": "generated from ex.02.code.template.md",
-      "i": 2,
-      "isCode": true,
-      "title": "Exercices de codage",
-      "maxScore": 10,
-      "questions": [
-        {
-          "i": 8,
-          "id": "code8",
+          "id": "code4",
           "variants": [
-            {
-              "n": 10,
-              "expected": "coucou"
-            },
-            {
-              "n": 10,
-              "expected": "salut"
-            },
-            {
-              "n": 20,
-              "expected": "coucou"
-            },
-            {
-              "n": 20,
-              "expected": "salut"
-            }
+            {}
           ],
           "mdVariants": [
-            "Implémenter un programme JavaScript de 3 lignes maximum qui affiche 10 fois `'coucou'` dans la console. Respecter les conventions et règles d'indentation vues en cours.\n\n\n",
-            "Implémenter un programme JavaScript de 3 lignes maximum qui affiche 10 fois `'salut'` dans la console. Respecter les conventions et règles d'indentation vues en cours.\n\n\n",
-            "Implémenter un programme JavaScript de 3 lignes maximum qui affiche 20 fois `'coucou'` dans la console. Respecter les conventions et règles d'indentation vues en cours.\n\n\n",
-            "Implémenter un programme JavaScript de 3 lignes maximum qui affiche 20 fois `'salut'` dans la console. Respecter les conventions et règles d'indentation vues en cours.\n\n\n"
-          ]
-        },
-        {
-          "i": 9,
-          "id": "code9",
-          "variants": [
-            {
-              "n": 1,
-              "prompts": "mal,non",
-              "expected": "tant pis.",
-              "q2": "veux-tu une aspirine ?",
-              "alt1": "oui",
-              "alt2": "non",
-              "other": "voici !"
-            },
-            {
-              "n": 2,
-              "prompts": "mal,non",
-              "expected": "ouf !",
-              "q2": "c'est contagieux ?",
-              "alt1": "oui",
-              "alt2": "non",
-              "other": "oh non !"
-            },
-            {
-              "n": 3,
-              "prompts": "mal,oui",
-              "expected": "voici !",
-              "q2": "veux-tu une aspirine ?",
-              "alt1": "non",
-              "alt2": "oui",
-              "other": "ok"
-            }
-          ],
-          "mdVariants": [
-            "Implémenter un chat-bot à partir de l'arbre de décision suivant:\n\n![arbre de décision](data/arbre1.jpg)\n\nComme vu et pratiqué en cours:\n - Les questions posées par l'ordinateur sont représentées par des rectangles, et sont à implémenter à l'aide de la fonction `prompt()`.\n - Les réponses comprises par l'ordinateur sont écrites à côté de chaque branche, et sont à implémenter à l'aide de conditions.\n - Les messages à afficher par l'ordinateur sont représentés par des cercles, et sont à implémenter à l'aide de la fonction `alert()`.\n\nVous serez noté(e) sur:\n - le respect **à la lettre** du texte des questions et des réponses (espaces, accents, ponctuation, et majuscules/minuscules compris).\n - le bon fonctionnement de votre code, sans erreurs, pour chacun des cas illustrés dans l'arbre de décision. (à tester dans la console)\n - le respect des règles d'indentation et autres conventions vues en cours. (ex: 2 espaces par niveau d'indentation)\n \n\n",
-            "Implémenter un chat-bot à partir de l'arbre de décision suivant:\n\n![arbre de décision](data/arbre2.jpg)\n\nComme vu et pratiqué en cours:\n - Les questions posées par l'ordinateur sont représentées par des rectangles, et sont à implémenter à l'aide de la fonction `prompt()`.\n - Les réponses comprises par l'ordinateur sont écrites à côté de chaque branche, et sont à implémenter à l'aide de conditions.\n - Les messages à afficher par l'ordinateur sont représentés par des cercles, et sont à implémenter à l'aide de la fonction `alert()`.\n\nVous serez noté(e) sur:\n - le respect **à la lettre** du texte des questions et des réponses (espaces, accents, ponctuation, et majuscules/minuscules compris).\n - le bon fonctionnement de votre code, sans erreurs, pour chacun des cas illustrés dans l'arbre de décision. (à tester dans la console)\n - le respect des règles d'indentation et autres conventions vues en cours. (ex: 2 espaces par niveau d'indentation)\n \n\n",
-            "Implémenter un chat-bot à partir de l'arbre de décision suivant:\n\n![arbre de décision](data/arbre3.jpg)\n\nComme vu et pratiqué en cours:\n - Les questions posées par l'ordinateur sont représentées par des rectangles, et sont à implémenter à l'aide de la fonction `prompt()`.\n - Les réponses comprises par l'ordinateur sont écrites à côté de chaque branche, et sont à implémenter à l'aide de conditions.\n - Les messages à afficher par l'ordinateur sont représentés par des cercles, et sont à implémenter à l'aide de la fonction `alert()`.\n\nVous serez noté(e) sur:\n - le respect **à la lettre** du texte des questions et des réponses (espaces, accents, ponctuation, et majuscules/minuscules compris).\n - le bon fonctionnement de votre code, sans erreurs, pour chacun des cas illustrés dans l'arbre de décision. (à tester dans la console)\n - le respect des règles d'indentation et autres conventions vues en cours. (ex: 2 espaces par niveau d'indentation)\n \n\n"
+            "Définir une fonction `tableauContient` qui prend deux paramètres:\n - `tableau`: un tableau de chaînes de caractères\n - `chaine`: une chaîne de caractères\n\n...et retourne:\n - `false` si la valeur `chaine` n'a pas été trouvée dans le tableau `tableau`,\n - ou le premier indice (à partir de 0) auquel a été trouvé la valeur `chaine` dans le tableau `tableau`.\n\nExemples d'appels:\n - `tableauContient(['a', 'b', 'c'], 'b');` doit retourner `1`.\n - `tableauContient(['a', 'b', 'c'], 'd');` doit retourner `false`.\n\n"
           ]
         }
       ]

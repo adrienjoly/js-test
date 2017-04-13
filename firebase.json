@@ -6,7 +6,19 @@
     "public": "public",
     "headers": [ 
       {
-        "source" : "**/*.js,**/data/*.*",
+        "source" : "exam-data.js",
+        "headers" : [
+          { "key" : "Cache-Control", "value" : "max-age=300" }
+        ]
+      },
+      {
+        "source" : "**/*.js",
+        "headers" : [
+          { "key" : "Cache-Control", "value" : "no-cache, must-revalidate" }
+        ]
+      },
+      {
+        "source" : "**/data/*.*",
         "headers" : [
           { "key" : "Cache-Control", "value" : "no-cache, must-revalidate" }
         ]
