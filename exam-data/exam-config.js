@@ -7,7 +7,7 @@ function readfile(filePath) {
 module.exports = {
 
   // Front-end config
-  title: 'JavaScript - Contrôle individuel 2',
+  title: 'JavaScript - Contrôle 1',
 
   // General settings
   PUBLIC_TEST_MODE: false, // set to false to restrict acccess and identify students using Google Login
@@ -30,10 +30,10 @@ module.exports = {
     },
     */
     FIREBASE_CONFIG: {
-      apiKey: "AIzaSyAO3h2quk1PBdbLjnSIhhix7LUsHoKkNbE",
-      databaseURL: "https://js-controle-2.firebaseio.com",
-      messagingSenderId: "835236294998"
-      // admin/dashboard: https://console.firebase.google.com/project/js-controle-2/database/data
+      apiKey: "AIzaSyCUIGKvdZ4EdFywDU4a90PupcpBEfvpNPc",
+      databaseURL: "https://js-qcm-ft.firebaseio.com",
+      messagingSenderId: "793078387774"
+      // admin/dashboard: https://console.firebase.google.com/project/js-qcm-ft/database/data
     },
   },
 
@@ -51,7 +51,7 @@ module.exports = {
     ptsNull: 0,
   },
   codeGrading: {
-    ptsPerExercise: 3,
+    ptsPerExercise: 5,
   }
 
 };

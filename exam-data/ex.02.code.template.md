@@ -1,196 +1,17 @@
-# Exercices de codage (3 pts par question)
+Implémenter un programme JavaScript de 3 lignes maximum qui affiche {{ n }} fois `'{{ expected }}'` dans la console. Respecter les conventions et règles d'indentation vues en cours.
 
-Créez une variable `{{ varName }}` et affectez-lui un objet contenant deux propriétés:
-
- - une propriété `{{ prop1Name }}` ayant `'sause'` comme valeur (type: chaîne de caractères),
- - et une propriété `age` ayant `{{ prop2Val }}` comme valeur (type: nombre).
-
-<!-- variantes: -->
-
-- { "varName": "obj", "prop1Name": "nom", "prop2Val": 46 }
-- { "varName": "obj", "prop1Name": "name", "prop2Val": 46 }
-- { "varName": "personne", "prop1Name": "nom", "prop2Val": 64 }
+- { "n": 10, "expected": "coucou" }
+- { "n": 10, "expected": "salut" }
+- { "n": 20, "expected": "coucou" }
+- { "n": 20, "expected": "salut" }
 
 ???
 
 Solution:
 
 ```js
-var {{ varName }} = {
-  {{ prop1Name }}: 'sause',
-  age: {{ prop2Val }},
-};
-```
-
---
-
-```js
-// automatic student evaluation code
-(function evaluateStudentCode(){
-  _runStudentCode();
-  var tests = [
-    typeof {{ varName }} === 'object',
-    {{ varName }}.{{ prop1Name }} === 'sause',
-    {{ varName }}.age == {{ prop2Val }},
-    {{ varName }}.age === {{ prop2Val }},
-  ];
-  application.remote._send(null, tests);
-})();
-```
-
----
-
-On fournit le code JavaScript suivant:
-
-```js
-var profilInstagram = {
-  prenom: 'François',
-  photos: [
-    {
-      nom: 'mon chien est moi',
-      url: 'http://imgur.com/img/1',
-    },
-    {
-      nom: 'coucher de soleil => such wow!',
-      url: 'http://imgur.com/img/2',
-    },
-  ],
-};
-console.log(chemin);
-```
-
-Tapez l'expression qu'il faudrait saisir à la place de `chemin`, afin d'afficher dans la console l'`url` de la {{ indexLabel }} photo de François:
-
-(utilisez la notation pointée à partir de l'objet `profilInstagram`)
-
-<!-- variantes: -->
-
-- { "index": 0, "indexLabel": "première" }
-- { "index": 1, "indexLabel": "deuxième" }
-
-???
-
-Solution:
-
-```js
-profilInstagram.photos[{{ index }}].url
-```
-
---
-
-```js
-// automatic student evaluation code
-(function evaluateStudentCode(){
-  var profilInstagram = {
-    prenom: 'François',
-    photos: [
-      {
-        nom: 'mon chien est moi',
-        url: 'http://imgur.com/img/1',
-      },
-      {
-        nom: 'coucher de soleil => such wow!',
-        url: 'http://imgur.com/img/2',
-      },
-    ],
-  };
-  var result;
-  var console = { log: function(r){ result = r; } }; // accept use of console.log()
-  var studentCode = `_studentCode`.trim();
-  result = eval(studentCode) || result;
-  var tests = [
-    result === profilInstagram.photos[{{ index }}].url, // valeur finale
-    studentCode.indexOf('profilInstagram.photos[{{ index }}].url') === 0, // notation pointée
-    studentCode.indexOf('console.log') === -1, // console.log was not used
-  ];
-  application.remote._send(null, tests);
-})();
-```
-
----
-
-Supposons qu'une variable `{{ varName }}` a été initialisée de la manière suivante:
-
-```js
-var {{ varName }} = document.getElementById('mon-element');
-```
-
-Écrivez l'instruction JavaScript permettant d'ajouter la classe `{{ className }}` à cet élément, en utilisant la variable `{{ varName }}` fournie.
-
-<!-- variantes: -->
-
-- { "varName": "element", "className": "highlight" }
-- { "varName": "element", "className": "surbrillance" }
-- { "varName": "monElement", "className": "surbrillance" }
-
-???
-
-Solution:
-
-```js
-{{ varName }}.classList.add('{{ className }}');
-```
-
---
-
-```js
-// automatic student evaluation code
-(function evaluateStudentCode(){
-  var {{ varName }} = {
-    classList: {
-      add: function(className) {
-        {{ varName }}.className += ' ' + className;
-      },
-    },
-    className: '',
-  };
-  // tolerate use of document.* selectors
-  var document = {
-    getElementById: function(id) {
-      return id === 'mon-element' ? {{ varName }} : null;
-    },
-    querySelector: function(selector) {
-      return (selector || '').toLowerCase() === '#mon-element'
-        ? {{ varName }} : null;
-    },
-  };
-  var studentCode = `_studentCode`.trim();
-  _runStudentCode();
-  var tests = [
-    {{ varName }}.className.indexOf('{{ className }}') !== -1,
-    studentCode.indexOf('document.') === -1, // selectors were not used
-  ];
-  application.remote._send(null, tests);
-})();
-```
-
----
-
-```html
-<li>1er produit</li>
-<li>2ème produit</li>
-<li>3ème produit</li>
-```
-
-Écrivez le code JavaScript permettant d'afficher "`ok`" (sans les guillemets) dans {{ outputLabel }} à chaque fois que l'utilisateur cliquera sur n'importe lequel de ces trois éléments.
-
-Pour définir le comportement au clic, utiliser la propriété `onclick`.
-
-<!-- variantes: -->
-
-- { "outputLabel": "un `alert`", "outputFct": "alert" }
-- { "outputLabel": "la console", "outputFct": "console.log" }
-
-???
-
-Solution:
-
-```js
-var lis = document.getElementsByTagName('li');
-for (var i = 0; i < lis.length; i++) {
-  lis[i].onclick = function() {
-    {{ outputFct }}('ok');
-  };
+for ( var i = 0; i < {{ n }}; i++ ) {
+  console.log('{{ expected }}');
 }
 ```
 
@@ -199,145 +20,140 @@ for (var i = 0; i < lis.length; i++) {
 ```js
 // automatic student evaluation code
 (function evaluateStudentCode(){
-  var _alerts = [];
-  var _lis = [
-    { onclick: null },
-    { onclick: null },
-    { onclick: null },
-  ];
-  function add(msg) {
-    _alerts.push(msg);
-  }
-  var console = { log: '{{ outputFct }}' === 'console.log' ? add : function(){} };
-  var alert = '{{ outputFct }}' === 'alert' ? add : function(){};
-  var document = {
-    getElementsByTagName: function(tagName) {
-      return (tagName || '').toLowerCase() === 'li' ? _lis : [];
-    },
-    querySelectorAll: function(selector) {
-      return (selector || '').toLowerCase() === 'li' ? _lis : [];
-    },
+  var nb = 0;
+  var lastLog;
+  var console = {
+    log: function(t){
+      lastLog = t;
+      nb++;
+    }
   };
-  _runStudentCode();
-  var tests = [];
-  // test 1: onclick are set
-  tests.push(!!_lis[0].onclick && !!_lis[1].onclick && !!_lis[2].onclick);
-  // test 2: no click yet => no alert
-  tests.push(_alerts.length === 0);
-  // test 3: click on first li => one alert
-  _alerts = []; // reset/clear array, just in case
-  try { _lis[0].onclick(); }
-  catch (e) { application.remote._log('/!\\ onclick non défini sur 1er <li>'); }
-  tests.push(_alerts.length === 1);
-  tests.push(_alerts[0] === 'ok');
-  // test 4: two clicks on last li => two alerts
-  _alerts = []; // reset/clear array, just in case
-  try { _lis[2].onclick(); }
-  catch (e) { application.remote._log('/!\\ onclick non défini sur 3ème <li>'); }
-  try { _lis[2].onclick(); }
-  catch (e) { application.remote._log('/!\\ onclick non défini sur 3ème <li>'); }
-  tests.push(_alerts.length === 2);
-  tests.push(_alerts[0] === 'ok' && _alerts[1] === 'ok');
+  var error = null;
+  try {
+    eval(`_studentCode`); // catch syntax errors, if any
+  } catch(e) {
+    error = e;
+  }
+  function ok(msg) {
+    application.remote._log('[+] ' + msg);
+    return 1;
+  }
+  function nok(msg) {
+    application.remote._log('[-] ' + msg);
+    return 0;
+  }
+  var studentCode = `_studentCode`.trim();
+  //var canonicCode = studentCode.replace(/[ ;\r\n\t]/g, '');
+  var tests = [
+    error
+      ? nok('erreur: ' + error.message)
+      : ok('le programme fonctionne sans erreur'),
+    nb !== {{ n }}
+      ? nok('il fallait afficher {{ n }} lignes dans la console')
+      : ok('{{ n }} lignes ont bien été affichées dans la console'),
+    lastLog !== '{{ expected }}'
+      ? nok('il fallait afficher \'{{ expected }}\', et non \'' + lastLog + '\'')
+      : ok('la chaine de caractères \'{{ expected }}\' a bien été respectée à la lettre'),
+    studentCode.indexOf('for') === -1
+      ? nok('il fallait utiliser une boucle for')
+      : ok('une boucle for a bien été utilisée'),
+    studentCode.indexOf('\n  console.log') === -1
+      ? nok('indentation: il fallait précéder console.log de 2 espaces, sur sa propre ligne')
+      : ok('indentation: console.log a bien été précédé de 2 espaces'),
+  ];
   application.remote._send(null, tests);
 })();
 ```
 
 ---
 
-Je souhaite intégrer une galerie d'images sur mon site, en utilisant un composant déjà existant.
+Implémenter un chat-bot à partir de l'arbre de décision suivant:
 
-Voici un extrait de la documentation du composant:
+![arbre de décision](data/arbre{{n}}.jpg)
 
-> Pour instancier une galerie sur votre page, appelez la fonction `{{ fctName }}(element, images)`, avec en paramètres:
-> 
-> - `element`(*type: objet*): élément du DOM dans lequel intégrer la galerie,
-> - `images`(*type: tableau de chaînes de caractères*): URLs des images à intégrer dans la galerie.
+Comme vu et pratiqué en cours:
+ - Les questions posées par l'ordinateur sont représentées par des rectangles, et sont à implémenter à l'aide de la fonction `prompt()`.
+ - Les réponses comprises par l'ordinateur sont écrites à côté de chaque branche, et sont à implémenter à l'aide de conditions.
+ - Les messages à afficher par l'ordinateur sont représentés par des cercles, et sont à implémenter à l'aide de la fonction `alert()`.
 
-Mon fichier HTML contient ces éléments:
-
-```html
-<script src="https://controle.js/gallery.js"></script>
-<div id="my-gallery"></div>
-```
-
-Je souhaite intégrer la galerie dans le `<div>`, avec les images suivantes:
-
- - `https://i.imgur.com/ydi5jMh.jpg`
- - `{{{ url2 }}}`
- - `https://i.imgur.com/HdsQ3fe.jpg`
-
-Quel code JavaScript dois-je exécuter pour intégrer la galerie dans ma page ?
-
-<!-- variantes: -->
-
-- { "fctName": "initGallery", "url2": "https://i.imgur.com/emRrCLd.jpg" }
-- { "fctName": "embedGallery", "url2": "https://i.imgur.com/emRrCLd.jpg" }
-- { "fctName": "initGallery", "url2": "http://i.imgur.com/bdh4Qpn.jpg" }
+Vous serez noté(e) sur:
+ - le respect **à la lettre** du texte des questions et des réponses (espaces, accents, ponctuation, et majuscules/minuscules compris).
+ - le bon fonctionnement de votre code, sans erreurs, pour chacun des cas illustrés dans l'arbre de décision. (à tester dans la console)
+ - le respect des règles d'indentation et autres conventions vues en cours. (ex: 2 espaces par niveau d'indentation)
+ 
+- { "n": 1, "prompts": "mal,non", "expected": "tant pis.", "q2": "veux-tu une aspirine ?", "alt1": "oui", "alt2": "non", "other": "voici !" }
+- { "n": 2, "prompts": "mal,non", "expected": "ouf !", "q2": "c'est contagieux ?", "alt1": "oui", "alt2": "non", "other": "oh non !" }
+- { "n": 3, "prompts": "mal,oui", "expected": "voici !", "q2": "veux-tu une aspirine ?", "alt1": "non", "alt2": "oui", "other": "ok" }
 
 ???
 
 Solution:
 
 ```js
-var element = document.getElementById('my-gallery');
-var images = [
-  'https://i.imgur.com/ydi5jMh.jpg',
-  '{{{ url2 }}}',
-  'https://i.imgur.com/HdsQ3fe.jpg', 
-];
-{{ fctName }}(element, images);
+var reponse = prompt('Comment vas tu ?');
+if (reponse === 'bien') {
+  alert('super !');
+} else if (reponse === 'mal') {
+  var reponse2 = prompt(`{{{ q2 }}}`);
+  if (reponse2 === `{{{ alt1 }}}`) {
+    alert(`{{{ other }}}`);
+  } else if (reponse2 === `{{{ alt2 }}}`) {
+    alert(`{{{ expected }}}`);
+  }
+} else {
+  alert('j\'attendais bien ou mal');
+}
+
 ```
 
 --
 
 ```js
-// automatic student evaluation code
 (function evaluateStudentCode(){
-  var _calls = [];
-  var _urls = [
-    'https://i.imgur.com/ydi5jMh.jpg',
-    '{{{ url2 }}}',
-    'https://i.imgur.com/HdsQ3fe.jpg', 
-  ];
-  var _div = {
-    id: 'my-gallery',
+  var log = application.remote._log;
+  var done = application.remote._sendOnce; // to call upon code evaluation
+  // student's variant -> test inputs and expected outputs
+  var variant = {
+    prompts: '{{prompts}}'.split(','),
+    expected: '{{expected}}',
   };
-  function {{ fctName }}(element, images) {
-    _calls.push([ element, images ]);
+  // exercise requirements
+  var ctx = 'si l\'utilisateur tape ' + variant.prompts.join(' puis ') + ', ';
+  var req = '[-] ' + ctx + 'alert devrait afficher "' + variant.expected + '"';
+  application.remote._setTimeoutMessage(req + ', mais alert n\'a pas été appelé...');
+  // test environment
+  var prompts = variant.prompts.slice(); // clone the array
+  var lastAlert = null;
+  function prompt() {
+    return prompts.shift();
   }
-  var console = { log: function(){} }; // tolerate console.log()
-  var alert = function(msg) {}; // tolerate alert()
-  var document = {
-    getElementById: function(id) {
-      return id === 'my-gallery' ? _div : null;
-    },
-    getElementsByTagName: function(tagName) {
-      return (tagName || '').toLowerCase() === 'div' ? [ _div ] : [];
-    },
-    querySelector: function(selector) {
-      return (selector || '').toLowerCase() === 'div'
-        || (selector || '').indexOf('#my-gallery') !== -1
-        ? _div : null;
-    },
-    querySelectorAll: function(selector) {
-      return (selector || '').toLowerCase() === 'div'
-        || (selector || '').indexOf('#my-gallery') !== -1
-        ? [ _div ] : null;
-    },
+  function alert(message) {
+    lastAlert = message;
   };
-  _runStudentCode(); // should call initGallery() once
-  var tests = [];
-  // test 1: initGallery was called once
-  tests.push(_calls.length === 1);
-  // test 2: first parameter is the div
-  var _callParams = _calls[0] || [];
-  tests.push((_callParams[0] || {}).id === _div.id);
-  // test 3: second parameter is array of URLs
-  tests.push((_callParams[1] || []).length === 3);
-  tests.push((_callParams[1] || []).join(',') === _urls.join(','));
-  application.remote._send(null, tests);
+  var console = { log: function(){} }; // tolerate calls to console.log()
+  // run the test
+  var syntaxError = null;
+  try {
+    eval(`_studentCode`); // catch syntax errors, if any
+  } catch(error) {
+    //log('CATCHED ERROR: ' + error.name);
+    if (error.name === 'SyntaxError') {
+      syntaxError = error;
+    }
+  }
+  if (!syntaxError) {
+    log('[+] le programme s\'est exécuté sans erreur.');
+    if (lastAlert !== variant.expected) {
+      log(req + ' au lieu de "' + lastAlert + '"');
+      done(null, 0.5);
+      // give a half point to the student, because her code runs
+    } else {
+      log('[+] ' + ctx + 'on obtient bien la réponse "' + variant.expected + '".');
+      done(null, 1); // passed test => give the point to the student
+    }
+  } else {
+    log('[-] erreur de syntaxe: ' + syntaxError.message);
+    done(null, 0);
+  }
 })();
 ```
-
-// TODO: de manière générale, ne pas laisser une fonction de test crasher à cause d'un appel de fonction non définie !
-

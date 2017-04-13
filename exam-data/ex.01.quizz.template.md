@@ -1,74 +1,93 @@
-# QCM (1 point par bonne réponse)
-
-```js
-var x = { nb: 1 };
-```
-
-De quel type est la variable `x` ?
-
-- Nombre
-- Entier
-* Objet
-- Tableau
-
-???
-
-C'est un objet. On le reconnait aux accolades et à la présence d'une propriété dont la clé et la valeur sont séparés par deux points.
+Quelle instruction JavaScript a pour effet de créer une variable ?
+  		  
+- maVariable;
+- maVariable = 1;
+* var x = 0;
+- maVariable = 'bonjour';
 
 ---
 
-```html
-<div id="monDiv" class="hidden">contenu</div>
+Quel est le type de cette variable:
+
+```
+var maVariable = '6.66';
 ```
 
-Quelle serait le type de la valeur retournée par `document.getElementsByClassName('hidden')` ?
-
-* Un tableau d'objet(s)
-- Un objet représentant l'élément
-- Une classe
-- Une chaîne de caractères
+- number
+- decimal
+- boolean
+* string
 
 ---
 
-```html
-<div id="monDiv" class="hidden">contenu</div>
+Quel est le type de cette variable:
+
+```
+var maVariable = 6.66;
 ```
 
-Quelle instruction faut-il exécuter pour retirer la classe `hidden` de cet élément ?
-
-- element.class = '';
-- element.classList = '';
-* element.classList.remove('hidden');
-- element.style.display = 'block';
+* number
+- decimal
+- boolean
+- string
 
 ---
 
-Supposons que `elements` soit un tableau d'éléments HTML.
+Que vaut cette expression de comparaison de valeur ?
 
-```js
-for(var i = 0; i < elements.length; i++) {
-  elements[i].onclick = function() {
-    console.log(i);
-  }
+```
+6.66 == '6.66'
+```
+
+- c'est une affectation
+* true
+- false
+- undefined
+
+---
+
+En respectant les conventions indiquées en cours, quelle affectation faut-il exécuter pour que `J'aime le code !` s'affiche à l'écran ?
+
+```
+alert(message);
+```
+
+- message = J\'aime le code !
+* message = 'J\'aime le code !';
+- message = 'J\"aime le code !';
+- message = "J'aime le code !";
+
+---
+
+Quelles section(s) de code va/vont être exécutée(s) ?
+
+```
+var nb = -1;
+if (nb === 2) {
+  // A
+} else if (nb <= -2) {
+  // B
+} else {
+  // C
 }
 ```
 
-Comment pourrait-on s'assurer que la valeur de `i` correspondante à chaque élément soit bien affichée dans la console quand l'utilisateur cliquera dessus ?
-
-- Il n'y a rien à changer
-- Il faut créer une deuxième boucle
-- Il faut utiliser "this"
-* Il faut passer i en paramètre d'une fonction génératrice
+- seulement A
+- seulement B
+* seulement C
+- aucune des trois
 
 ---
 
+Combien de fois les instructions contenues dans la boucle seraient-elles exécutées ?
+
 ```js
-var point = new Point(4, 3);
+for ( var i = 1; i <= 3; i++ ) {
+  // instructions
+}
 ```
 
-Comment appelle-t-on l'opération à droite du signe `=` ?
-
-- Une génération de fonction
-* Une instanciation de classe
-- Un appel de fonction
-- Une concaténation de nombres
+- 0 fois
+- 1 fois
+* 3 fois
+- 4 fois

@@ -5,7 +5,7 @@
     window.location.href = window.location.href.replace('http:', 'https:');
   var app = document.querySelector('#app');
   app.config = {
-    "title": "JavaScript - Contrôle individuel 2",
+    "title": "JavaScript - Contrôle 1",
     "PUBLIC_TEST_MODE": false,
     "DISPLAY_SOLUTIONS_AFTER_SUBMIT": false,
     "redirectToHttps": true,
@@ -16,9 +16,9 @@
     "backend": {
       "type": "firebase",
       "FIREBASE_CONFIG": {
-        "apiKey": "AIzaSyAO3h2quk1PBdbLjnSIhhix7LUsHoKkNbE",
-        "databaseURL": "https://js-controle-2.firebaseio.com",
-        "messagingSenderId": "835236294998"
+        "apiKey": "AIzaSyCUIGKvdZ4EdFywDU4a90PupcpBEfvpNPc",
+        "databaseURL": "https://js-qcm-ft.firebaseio.com",
+        "messagingSenderId": "793078387774"
       }
     },
     "teacherEmail": "adrien.joly@eemi.com",
@@ -31,7 +31,7 @@
       "ptsNull": 0
     },
     "codeGrading": {
-      "ptsPerExercise": 3
+      "ptsPerExercise": 5
     }
   };
   app.exercises = [
@@ -39,121 +39,167 @@
       "_info": "generated from ex.01.quizz.template.md",
       "i": 1,
       "isQuizz": true,
-      "title": "QCM (1 point par bonne réponse)",
-      "maxScore": 5,
+      "title": "QCM",
+      "maxScore": 7,
       "questions": [
         {
           "i": 1,
           "id": "qcm1",
-          "md": "\n```js\nvar x = { nb: 1 };\n```\n\nDe quel type est la variable `x` ?\n\n\n",
+          "md": "Quelle instruction JavaScript a pour effet de créer une variable ?\n  \t\t  ",
           "choices": [
             {
               "name": 1,
-              "text": "Nombre"
+              "text": "maVariable;"
             },
             {
               "name": 2,
-              "text": "Entier"
+              "text": "maVariable = 1;"
             },
             {
               "name": 3,
-              "text": "Objet"
+              "text": "var x = 0;"
             },
             {
               "name": 4,
-              "text": "Tableau"
+              "text": "maVariable = 'bonjour';"
             }
           ]
         },
         {
           "i": 2,
           "id": "qcm2",
-          "md": "```html\n<div id=\"monDiv\" class=\"hidden\">contenu</div>\n```\n\nQuelle serait le type de la valeur retournée par `document.getElementsByClassName('hidden')` ?\n",
+          "md": "Quel est le type de cette variable:\n\n```\nvar maVariable = '6.66';\n```\n",
           "choices": [
             {
               "name": 1,
-              "text": "Un tableau d'objet(s)"
+              "text": "number"
             },
             {
               "name": 2,
-              "text": "Un objet représentant l'élément"
+              "text": "decimal"
             },
             {
               "name": 3,
-              "text": "Une classe"
+              "text": "boolean"
             },
             {
               "name": 4,
-              "text": "Une chaîne de caractères"
+              "text": "string"
             }
           ]
         },
         {
           "i": 3,
           "id": "qcm3",
-          "md": "```html\n<div id=\"monDiv\" class=\"hidden\">contenu</div>\n```\n\nQuelle instruction faut-il exécuter pour retirer la classe `hidden` de cet élément ?\n",
+          "md": "Quel est le type de cette variable:\n\n```\nvar maVariable = 6.66;\n```\n",
           "choices": [
             {
               "name": 1,
-              "text": "element.class = '';"
+              "text": "number"
             },
             {
               "name": 2,
-              "text": "element.classList = '';"
+              "text": "decimal"
             },
             {
               "name": 3,
-              "text": "element.classList.remove('hidden');"
+              "text": "boolean"
             },
             {
               "name": 4,
-              "text": "element.style.display = 'block';"
+              "text": "string"
             }
           ]
         },
         {
           "i": 4,
           "id": "qcm4",
-          "md": "Supposons que `elements` soit un tableau d'éléments HTML.\n\n```js\nfor(var i = 0; i < elements.length; i++) {\n  elements[i].onclick = function() {\n    console.log(i);\n  }\n}\n```\n\nComment pourrait-on s'assurer que la valeur de `i` correspondante à chaque élément soit bien affichée dans la console quand l'utilisateur cliquera dessus ?\n",
+          "md": "Que vaut cette expression de comparaison de valeur ?\n\n```\n6.66 == '6.66'\n```\n",
           "choices": [
             {
               "name": 1,
-              "text": "Il n'y a rien à changer"
+              "text": "c'est une affectation"
             },
             {
               "name": 2,
-              "text": "Il faut créer une deuxième boucle"
+              "text": "true"
             },
             {
               "name": 3,
-              "text": "Il faut utiliser \"this\""
+              "text": "false"
             },
             {
               "name": 4,
-              "text": "Il faut passer i en paramètre d'une fonction génératrice"
+              "text": "undefined"
             }
           ]
         },
         {
           "i": 5,
           "id": "qcm5",
-          "md": "```js\nvar point = new Point(4, 3);\n```\n\nComment appelle-t-on l'opération à droite du signe `=` ?\n",
+          "md": "En respectant les conventions indiquées en cours, quelle affectation faut-il exécuter pour que `J'aime le code !` s'affiche à l'écran ?\n\n```\nalert(message);\n```\n",
           "choices": [
             {
               "name": 1,
-              "text": "Une génération de fonction"
+              "text": "message = J\\'aime le code !"
             },
             {
               "name": 2,
-              "text": "Une instanciation de classe"
+              "text": "message = 'J\\'aime le code !';"
             },
             {
               "name": 3,
-              "text": "Un appel de fonction"
+              "text": "message = 'J\\\"aime le code !';"
             },
             {
               "name": 4,
-              "text": "Une concaténation de nombres"
+              "text": "message = \"J'aime le code !\";"
+            }
+          ]
+        },
+        {
+          "i": 6,
+          "id": "qcm6",
+          "md": "Quelles section(s) de code va/vont être exécutée(s) ?\n\n```\nvar nb = -1;\nif (nb === 2) {\n  // A\n} else if (nb <= -2) {\n  // B\n} else {\n  // C\n}\n```\n",
+          "choices": [
+            {
+              "name": 1,
+              "text": "seulement A"
+            },
+            {
+              "name": 2,
+              "text": "seulement B"
+            },
+            {
+              "name": 3,
+              "text": "seulement C"
+            },
+            {
+              "name": 4,
+              "text": "aucune des trois"
+            }
+          ]
+        },
+        {
+          "i": 7,
+          "id": "qcm7",
+          "md": "Combien de fois les instructions contenues dans la boucle seraient-elles exécutées ?\n\n```js\nfor ( var i = 1; i <= 3; i++ ) {\n  // instructions\n}\n```\n",
+          "choices": [
+            {
+              "name": 1,
+              "text": "0 fois"
+            },
+            {
+              "name": 2,
+              "text": "1 fois"
+            },
+            {
+              "name": 3,
+              "text": "3 fois"
+            },
+            {
+              "name": 4,
+              "text": "4 fois"
             }
           ]
         }
@@ -163,74 +209,35 @@
       "_info": "generated from ex.02.code.template.md",
       "i": 2,
       "isCode": true,
-      "title": "Exercices de codage (3 pts par question)",
-      "maxScore": 15,
+      "title": "Exercices de codage",
+      "maxScore": 10,
       "questions": [
-        {
-          "i": 6,
-          "id": "code6",
-          "variants": [
-            {
-              "varName": "obj",
-              "prop1Name": "nom",
-              "prop2Val": 46
-            },
-            {
-              "varName": "obj",
-              "prop1Name": "name",
-              "prop2Val": 46
-            },
-            {
-              "varName": "personne",
-              "prop1Name": "nom",
-              "prop2Val": 64
-            }
-          ],
-          "mdVariants": [
-            "\nCréez une variable `obj` et affectez-lui un objet contenant deux propriétés:\n\n - une propriété `nom` ayant `'sause'` comme valeur (type: chaîne de caractères),\n - et une propriété `age` ayant `46` comme valeur (type: nombre).\n\n<!-- variantes: -->\n\n\n",
-            "\nCréez une variable `obj` et affectez-lui un objet contenant deux propriétés:\n\n - une propriété `name` ayant `'sause'` comme valeur (type: chaîne de caractères),\n - et une propriété `age` ayant `46` comme valeur (type: nombre).\n\n<!-- variantes: -->\n\n\n",
-            "\nCréez une variable `personne` et affectez-lui un objet contenant deux propriétés:\n\n - une propriété `nom` ayant `'sause'` comme valeur (type: chaîne de caractères),\n - et une propriété `age` ayant `64` comme valeur (type: nombre).\n\n<!-- variantes: -->\n\n\n"
-          ]
-        },
-        {
-          "i": 7,
-          "id": "code7",
-          "variants": [
-            {
-              "index": 0,
-              "indexLabel": "première"
-            },
-            {
-              "index": 1,
-              "indexLabel": "deuxième"
-            }
-          ],
-          "mdVariants": [
-            "On fournit le code JavaScript suivant:\n\n```js\nvar profilInstagram = {\n  prenom: 'François',\n  photos: [\n    {\n      nom: 'mon chien est moi',\n      url: 'http://imgur.com/img/1',\n    },\n    {\n      nom: 'coucher de soleil => such wow!',\n      url: 'http://imgur.com/img/2',\n    },\n  ],\n};\nconsole.log(chemin);\n```\n\nTapez l'expression qu'il faudrait saisir à la place de `chemin`, afin d'afficher dans la console l'`url` de la première photo de François:\n\n(utilisez la notation pointée à partir de l'objet `profilInstagram`)\n\n<!-- variantes: -->\n\n\n",
-            "On fournit le code JavaScript suivant:\n\n```js\nvar profilInstagram = {\n  prenom: 'François',\n  photos: [\n    {\n      nom: 'mon chien est moi',\n      url: 'http://imgur.com/img/1',\n    },\n    {\n      nom: 'coucher de soleil => such wow!',\n      url: 'http://imgur.com/img/2',\n    },\n  ],\n};\nconsole.log(chemin);\n```\n\nTapez l'expression qu'il faudrait saisir à la place de `chemin`, afin d'afficher dans la console l'`url` de la deuxième photo de François:\n\n(utilisez la notation pointée à partir de l'objet `profilInstagram`)\n\n<!-- variantes: -->\n\n\n"
-          ]
-        },
         {
           "i": 8,
           "id": "code8",
           "variants": [
             {
-              "varName": "element",
-              "className": "highlight"
+              "n": 10,
+              "expected": "coucou"
             },
             {
-              "varName": "element",
-              "className": "surbrillance"
+              "n": 10,
+              "expected": "salut"
             },
             {
-              "varName": "monElement",
-              "className": "surbrillance"
+              "n": 20,
+              "expected": "coucou"
+            },
+            {
+              "n": 20,
+              "expected": "salut"
             }
           ],
           "mdVariants": [
-            "Supposons qu'une variable `element` a été initialisée de la manière suivante:\n\n```js\nvar element = document.getElementById('mon-element');\n```\n\nÉcrivez l'instruction JavaScript permettant d'ajouter la classe `highlight` à cet élément, en utilisant la variable `element` fournie.\n\n<!-- variantes: -->\n\n\n",
-            "Supposons qu'une variable `element` a été initialisée de la manière suivante:\n\n```js\nvar element = document.getElementById('mon-element');\n```\n\nÉcrivez l'instruction JavaScript permettant d'ajouter la classe `surbrillance` à cet élément, en utilisant la variable `element` fournie.\n\n<!-- variantes: -->\n\n\n",
-            "Supposons qu'une variable `monElement` a été initialisée de la manière suivante:\n\n```js\nvar monElement = document.getElementById('mon-element');\n```\n\nÉcrivez l'instruction JavaScript permettant d'ajouter la classe `surbrillance` à cet élément, en utilisant la variable `monElement` fournie.\n\n<!-- variantes: -->\n\n\n"
+            "Implémenter un programme JavaScript de 3 lignes maximum qui affiche 10 fois `'coucou'` dans la console. Respecter les conventions et règles d'indentation vues en cours.\n\n\n",
+            "Implémenter un programme JavaScript de 3 lignes maximum qui affiche 10 fois `'salut'` dans la console. Respecter les conventions et règles d'indentation vues en cours.\n\n\n",
+            "Implémenter un programme JavaScript de 3 lignes maximum qui affiche 20 fois `'coucou'` dans la console. Respecter les conventions et règles d'indentation vues en cours.\n\n\n",
+            "Implémenter un programme JavaScript de 3 lignes maximum qui affiche 20 fois `'salut'` dans la console. Respecter les conventions et règles d'indentation vues en cours.\n\n\n"
           ]
         },
         {
@@ -238,40 +245,37 @@
           "id": "code9",
           "variants": [
             {
-              "outputLabel": "un alert",
-              "outputFct": "alert"
+              "n": 1,
+              "prompts": "mal,non",
+              "expected": "tant pis.",
+              "q2": "veux-tu une aspirine ?",
+              "alt1": "oui",
+              "alt2": "non",
+              "other": "voici !"
             },
             {
-              "outputLabel": "la console",
-              "outputFct": "console.log"
+              "n": 2,
+              "prompts": "mal,non",
+              "expected": "ouf !",
+              "q2": "c'est contagieux ?",
+              "alt1": "oui",
+              "alt2": "non",
+              "other": "oh non !"
+            },
+            {
+              "n": 3,
+              "prompts": "mal,oui",
+              "expected": "voici !",
+              "q2": "veux-tu une aspirine ?",
+              "alt1": "non",
+              "alt2": "oui",
+              "other": "ok"
             }
           ],
           "mdVariants": [
-            "```html\n<li>1er produit</li>\n<li>2ème produit</li>\n<li>3ème produit</li>\n```\n\nÉcrivez le code JavaScript permettant d'afficher \"`ok`\" (sans les guillemets) dans un alert à chaque fois que l'utilisateur cliquera sur n'importe lequel de ces trois éléments.\n\nPour définir le comportement au clic, utiliser la propriété `onclick`.\n\n<!-- variantes: -->\n\n\n",
-            "```html\n<li>1er produit</li>\n<li>2ème produit</li>\n<li>3ème produit</li>\n```\n\nÉcrivez le code JavaScript permettant d'afficher \"`ok`\" (sans les guillemets) dans la console à chaque fois que l'utilisateur cliquera sur n'importe lequel de ces trois éléments.\n\nPour définir le comportement au clic, utiliser la propriété `onclick`.\n\n<!-- variantes: -->\n\n\n"
-          ]
-        },
-        {
-          "i": 10,
-          "id": "code10",
-          "variants": [
-            {
-              "fctName": "initGallery",
-              "url2": "https://i.imgur.com/emRrCLd.jpg"
-            },
-            {
-              "fctName": "embedGallery",
-              "url2": "https://i.imgur.com/emRrCLd.jpg"
-            },
-            {
-              "fctName": "initGallery",
-              "url2": "http://i.imgur.com/bdh4Qpn.jpg"
-            }
-          ],
-          "mdVariants": [
-            "Je souhaite intégrer une galerie d'images sur mon site, en utilisant un composant déjà existant.\n\nVoici un extrait de la documentation du composant:\n\n> Pour instancier une galerie sur votre page, appelez la fonction `initGallery(element, images)`, avec en paramètres:\n> \n> - `element`(*type: objet*): élément du DOM dans lequel intégrer la galerie,\n> - `images`(*type: tableau de chaînes de caractères*): URLs des images à intégrer dans la galerie.\n\nMon fichier HTML contient ces éléments:\n\n```html\n<script src=\"https://controle.js/gallery.js\"></script>\n<div id=\"my-gallery\"></div>\n```\n\nJe souhaite intégrer la galerie dans le `<div>`, avec les images suivantes:\n\n - `https://i.imgur.com/ydi5jMh.jpg`\n - `https://i.imgur.com/emRrCLd.jpg`\n - `https://i.imgur.com/HdsQ3fe.jpg`\n\nQuel code JavaScript dois-je exécuter pour intégrer la galerie dans ma page ?\n\n<!-- variantes: -->\n\n\n",
-            "Je souhaite intégrer une galerie d'images sur mon site, en utilisant un composant déjà existant.\n\nVoici un extrait de la documentation du composant:\n\n> Pour instancier une galerie sur votre page, appelez la fonction `embedGallery(element, images)`, avec en paramètres:\n> \n> - `element`(*type: objet*): élément du DOM dans lequel intégrer la galerie,\n> - `images`(*type: tableau de chaînes de caractères*): URLs des images à intégrer dans la galerie.\n\nMon fichier HTML contient ces éléments:\n\n```html\n<script src=\"https://controle.js/gallery.js\"></script>\n<div id=\"my-gallery\"></div>\n```\n\nJe souhaite intégrer la galerie dans le `<div>`, avec les images suivantes:\n\n - `https://i.imgur.com/ydi5jMh.jpg`\n - `https://i.imgur.com/emRrCLd.jpg`\n - `https://i.imgur.com/HdsQ3fe.jpg`\n\nQuel code JavaScript dois-je exécuter pour intégrer la galerie dans ma page ?\n\n<!-- variantes: -->\n\n\n",
-            "Je souhaite intégrer une galerie d'images sur mon site, en utilisant un composant déjà existant.\n\nVoici un extrait de la documentation du composant:\n\n> Pour instancier une galerie sur votre page, appelez la fonction `initGallery(element, images)`, avec en paramètres:\n> \n> - `element`(*type: objet*): élément du DOM dans lequel intégrer la galerie,\n> - `images`(*type: tableau de chaînes de caractères*): URLs des images à intégrer dans la galerie.\n\nMon fichier HTML contient ces éléments:\n\n```html\n<script src=\"https://controle.js/gallery.js\"></script>\n<div id=\"my-gallery\"></div>\n```\n\nJe souhaite intégrer la galerie dans le `<div>`, avec les images suivantes:\n\n - `https://i.imgur.com/ydi5jMh.jpg`\n - `http://i.imgur.com/bdh4Qpn.jpg`\n - `https://i.imgur.com/HdsQ3fe.jpg`\n\nQuel code JavaScript dois-je exécuter pour intégrer la galerie dans ma page ?\n\n<!-- variantes: -->\n\n\n"
+            "Implémenter un chat-bot à partir de l'arbre de décision suivant:\n\n![arbre de décision](data/arbre1.jpg)\n\nComme vu et pratiqué en cours:\n - Les questions posées par l'ordinateur sont représentées par des rectangles, et sont à implémenter à l'aide de la fonction `prompt()`.\n - Les réponses comprises par l'ordinateur sont écrites à côté de chaque branche, et sont à implémenter à l'aide de conditions.\n - Les messages à afficher par l'ordinateur sont représentés par des cercles, et sont à implémenter à l'aide de la fonction `alert()`.\n\nVous serez noté(e) sur:\n - le respect **à la lettre** du texte des questions et des réponses (espaces, accents, ponctuation, et majuscules/minuscules compris).\n - le bon fonctionnement de votre code, sans erreurs, pour chacun des cas illustrés dans l'arbre de décision. (à tester dans la console)\n - le respect des règles d'indentation et autres conventions vues en cours. (ex: 2 espaces par niveau d'indentation)\n \n\n",
+            "Implémenter un chat-bot à partir de l'arbre de décision suivant:\n\n![arbre de décision](data/arbre2.jpg)\n\nComme vu et pratiqué en cours:\n - Les questions posées par l'ordinateur sont représentées par des rectangles, et sont à implémenter à l'aide de la fonction `prompt()`.\n - Les réponses comprises par l'ordinateur sont écrites à côté de chaque branche, et sont à implémenter à l'aide de conditions.\n - Les messages à afficher par l'ordinateur sont représentés par des cercles, et sont à implémenter à l'aide de la fonction `alert()`.\n\nVous serez noté(e) sur:\n - le respect **à la lettre** du texte des questions et des réponses (espaces, accents, ponctuation, et majuscules/minuscules compris).\n - le bon fonctionnement de votre code, sans erreurs, pour chacun des cas illustrés dans l'arbre de décision. (à tester dans la console)\n - le respect des règles d'indentation et autres conventions vues en cours. (ex: 2 espaces par niveau d'indentation)\n \n\n",
+            "Implémenter un chat-bot à partir de l'arbre de décision suivant:\n\n![arbre de décision](data/arbre3.jpg)\n\nComme vu et pratiqué en cours:\n - Les questions posées par l'ordinateur sont représentées par des rectangles, et sont à implémenter à l'aide de la fonction `prompt()`.\n - Les réponses comprises par l'ordinateur sont écrites à côté de chaque branche, et sont à implémenter à l'aide de conditions.\n - Les messages à afficher par l'ordinateur sont représentés par des cercles, et sont à implémenter à l'aide de la fonction `alert()`.\n\nVous serez noté(e) sur:\n - le respect **à la lettre** du texte des questions et des réponses (espaces, accents, ponctuation, et majuscules/minuscules compris).\n - le bon fonctionnement de votre code, sans erreurs, pour chacun des cas illustrés dans l'arbre de décision. (à tester dans la console)\n - le respect des règles d'indentation et autres conventions vues en cours. (ex: 2 espaces par niveau d'indentation)\n \n\n"
           ]
         }
       ]

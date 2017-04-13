@@ -1,0 +1,699 @@
+Parsing ex.01.quizz.template.md ...
+Parsing ex.02.code.template.md ...
+Reading and evaluating answers from: ../exam-data/js-qcm-ft-export-fast-track.json ...
+
+
+================================
+
+STUDENT: charlotte_vigneux
+
+  -  quizz answers:
+  | qcm1 : 3 (solution: 3) => 1 pts
+  | qcm2 : 4 (solution: 4) => 1 pts
+  | qcm3 : 1 (solution: 1) => 1 pts
+  | qcm4 : 2 (solution: 2) => 1 pts
+  | qcm5 : 2 (solution: 2) => 1 pts
+  | qcm6 : 3 (solution: 3) => 1 pts
+  | qcm7 : 4 (solution: 3) => 0 pts
+
+  => quizz score: 6 / 7 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code8 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | for ( var message = 'coucou' ; message <= 20 ; message++ ) {
+  |   consol.log( message );
+  | }
+  | [+] le programme fonctionne sans erreur
+  | [-] il fallait afficher 20 lignes dans la console
+  | [-] il fallait afficher 'coucou', et non 'undefined'
+  | [+] une boucle for a bien été utilisée
+  | [-] indentation: il fallait précéder console.log de 2 espaces, sur sa propre ligne
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 0, 0, 1, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 2 / 5
+  | 
+  | ------------- EXERCISE: code9 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var reponse = prompt('Comment vas tu ?');
+  | if (reponse ==='bien') {
+  |   alert('super !');
+  | } else if (reponse ==='mal') {
+  |   var aspirine = prompt('veux-tu une aspirine ?');
+  | if (aspirine ==='non') {
+  |   alert('ok');
+  | } else if (aspirine==='oui') {
+  |   alert('voici !');
+  | }
+  | } else { 
+  |   alert('j'attendais bien ou mal');
+  | }
+  | [-] erreur de syntaxe: missing ) after argument list (il fallait un antislash devant l'apostrophe => pense à tester ton code)
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0 ]
+  | 
+  | // -> EXERCISE POINTS: 0 / 5
+
+  => code score: 2 / 10 pts
+
+  je t'ajoute:
+  + 2 points à l'exercice code9 car tu as bien compris la logique des conditions.
+  + 2 points d'indentation sur 3. il te reste à comprendre l'indentation dans les conditions imbriquées.
+
+=> TOTAL STUDENT SCORE: 12 / 20
+
+
+================================
+
+STUDENT: clement_zerbi
+
+  -  quizz answers:
+  | qcm1 : 1 (solution: 3) => 0 pts
+  | qcm2 : 4 (solution: 4) => 1 pts
+  | qcm3 : 1 (solution: 1) => 1 pts
+  | qcm4 : 2 (solution: 2) => 1 pts
+  | qcm5 : 2 (solution: 2) => 1 pts
+  | qcm6 : 2 (solution: 3) => 0 pts
+  | qcm7 : 3 (solution: 3) => 1 pts
+
+  => quizz score: 5 / 7 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code8 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | for (i = 1; i<=10; i++) {
+  | console.log('salut');
+  | }
+  | [-] erreur: i is not defined (tu as oublié de mettre var)
+  | [-] il fallait afficher 10 lignes dans la console
+  | [-] il fallait afficher 'salut', et non 'undefined'
+  | [+] une boucle for a bien été utilisée
+  | [-] indentation: il fallait précéder console.log de 2 espaces, sur sa propre ligne
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 1, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 1 / 5
+  | 
+  | ------------- EXERCISE: code9 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var reponse = prompt('Comment vas tu ?');
+  | if (reponse === 'bien') {
+  | alert('super !');
+  | } else if (reponse === 'mal') {
+  | var reponse2 = prompt('veux-tu une aspirine ?');
+  |   if (reponse2 === 'non') {
+  |   alert('ok');
+  |   } else if (reponse2 === 'oui') {
+  |   alert('voici !');
+  |   }
+  | } else {
+  | alert('j\'attendais bien ou mal');
+  | }
+  | [+] le programme s'est exécuté sans erreur.
+  | [+] si l'utilisateur tape mal puis oui, on obtient bien la réponse "voici !".
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1 ]
+  | 
+  | // -> EXERCISE POINTS: 5 / 5
+
+  => code score: 6 / 10 pts
+
+  je te donne 1 point sur 3 d'indentation car tu as respecté les deux espaces et le placement des accolades.
+  par contre, il va falloir que tu revoies tes règles d'indentation.
+
+=> TOTAL STUDENT SCORE: 12 / 20
+
+
+================================
+
+STUDENT: gauthier_ailloud
+
+  -  quizz answers:
+  | qcm1 : 3 (solution: 3) => 1 pts
+  | qcm2 : 4 (solution: 4) => 1 pts
+  | qcm3 : 1 (solution: 1) => 1 pts
+  | qcm4 : 2 (solution: 2) => 1 pts
+  | qcm5 : 2 (solution: 2) => 1 pts
+  | qcm6 : 3 (solution: 3) => 1 pts
+  | qcm7 : 3 (solution: 3) => 1 pts
+
+  => quizz score: 7 / 7 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code8 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var monMessage= 'coucou';
+  | for (var i= 1;  i<= 10; i++) {
+  |   console.log(monMessage);
+  | }
+  | 
+  | [+] le programme fonctionne sans erreur
+  | [+] 10 lignes ont bien été affichées dans la console
+  | [+] la chaine de caractères 'coucou' a bien été respectée à la lettre
+  | [+] une boucle for a bien été utilisée
+  | [+] indentation: console.log a bien été précédé de 2 espaces
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 5 / 5
+  | 
+  | ------------- EXERCISE: code9 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var reponse = prompt('comment vas-tu?');
+  | 
+  | if (reponse === 'bien') {
+  |  alert('super!');
+  |  
+  |   if (reponse === 'mal') {
+  | var reponse2 = prompt('c'est contagieux?');
+  |      if (reponse2 === '
+  |   
+  |     
+  |    
+  | [-] erreur de syntaxe: missing ) after argument list (programme incomplet)
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0 ]
+  | 
+  | // -> EXERCISE POINTS: 0 / 5
+
+  => code score: 5 / 10 pts
+
+  je t'ajoute 1 point sur 3 pour la bonne indentation dans l'exercice code 8. tu peux faire mieux!
+
+=> TOTAL STUDENT SCORE: 13 / 20
+
+
+================================
+
+STUDENT: imane_behiri
+
+  -  quizz answers:
+  | qcm1 : 4 (solution: 3) => 0 pts
+  | qcm2 : 1 (solution: 4) => 0 pts
+  | qcm3 : 1 (solution: 1) => 1 pts
+  | qcm4 : 2 (solution: 2) => 1 pts
+  | qcm5 : 1 (solution: 2) => 0 pts
+  | qcm6 : 4 (solution: 3) => 0 pts
+  | qcm7 : 3 (solution: 3) => 1 pts
+
+  => quizz score: 3 / 7 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code8 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var reponse = prompt (20)
+  | if (reponse ='coucou') {
+  | 	alert ('coucou');
+  | } 
+  | [-] erreur: prompt is not defined (il fallait utiliser une boucle, pas prompt)
+  | [-] il fallait afficher 20 lignes dans la console
+  | [-] il fallait afficher 'coucou', et non 'undefined'
+  | [-] il fallait utiliser une boucle for
+  | [-] indentation: il fallait précéder console.log de 2 espaces, sur sa propre ligne
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 0 / 5
+  | 
+  | ------------- EXERCISE: code9 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | // -> EXERCISE POINTS: 0 / 5
+
+  => code score: 0 / 10 pts
+
+  je te donne 1 point sur 3 pour l'indentation car tu as bien décalé alert à l'intérieur des accolades du if.
+  par contre, il faut utiliser 2 espaces par indentation, et non une tabulation.
+
+=> TOTAL STUDENT SCORE: 4 / 20
+
+
+================================
+
+STUDENT: mathias_lachot
+
+  -  quizz answers:
+  | qcm1 : 4 (solution: 3) => 0 pts
+  | qcm2 : 4 (solution: 4) => 1 pts
+  | qcm3 : 1 (solution: 1) => 1 pts
+  | qcm4 : 3 (solution: 2) => 0 pts
+  | qcm5 : 2 (solution: 2) => 1 pts
+  | qcm6 : 3 (solution: 3) => 1 pts
+  | qcm7 : 4 (solution: 3) => 0 pts
+
+  => quizz score: 4 / 7 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code8 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | for var 
+  | [-] erreur: Unexpected token var
+  | [-] il fallait afficher 10 lignes dans la console
+  | [-] il fallait afficher 'coucou', et non 'undefined'
+  | [+] une boucle for a bien été utilisée
+  | [-] indentation: il fallait précéder console.log de 2 espaces, sur sa propre ligne
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 1, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 1 / 5
+  | 
+  | ------------- EXERCISE: code9 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var reponse = prompt('Comment vas tu ?');
+  | if (reponse === 'bien') {
+  |   alert('super');
+  | } else if (reponse === 'mal') {
+  |   var reponse2 = prompt('c\'est contagieux ?');
+  |   if (reponse2 === 'oui') {
+  |   alert('oh non');
+  |   } else if (reponse2 === 'non') {
+  |   alert('ouf');
+  |   }
+  | } else {
+  |  alert('j\'attendais bien ou mal');
+  | 
+  | }
+  | [+] le programme s'est exécuté sans erreur.
+  | [-] si l'utilisateur tape mal puis non, alert devrait afficher "ouf !" au lieu de "ouf"
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0.5 ]
+  | 
+  | // -> EXERCISE POINTS: 2.5 / 5
+
+  => code score: 3.5 / 10 pts
+
+  je te donne 1.5 points sur 3 pour l'indentation.
+  il te reste à comprendre comment indenter dans des accolades imbriquées.
+
+=> TOTAL STUDENT SCORE: 9 / 20
+
+
+================================
+
+STUDENT: maxime_bonnet
+
+  -  quizz answers:
+  | qcm1 : 3 (solution: 3) => 1 pts
+  | qcm2 : 4 (solution: 4) => 1 pts
+  | qcm3 : 1 (solution: 1) => 1 pts
+  | qcm4 : 2 (solution: 2) => 1 pts
+  | qcm5 : 2 (solution: 2) => 1 pts
+  | qcm6 : 1 (solution: 3) => 0 pts
+  | qcm7 : 3 (solution: 3) => 1 pts
+
+  => quizz score: 6 / 7 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code8 (variant: 3) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | // -> EXERCISE POINTS: 0 / 5
+  | 
+  | ------------- EXERCISE: code9 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var reponse = prompt('comment vas tu?');
+  | if (reponse === 'bien') {
+  |  alert('super');
+  | } else if (reponse === 'mal') {
+  |  var reponse2 = prompt('veux-tu une aspirine ?');
+  |  if (reponse2 === 'oui') {
+  |  alert('voici!');
+  |  } else if (reponse2 === 'non') {
+  |  alert('ok');
+  |  }
+  | } else {
+  |  alert('j'attendais bien ou mal);
+  | }
+  | [-] erreur de syntaxe: missing ) after argument list (du à l'oubli d'antislash devant l'apostrophe...)
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0 ]
+  | 
+  | // -> EXERCISE POINTS: 0 / 5
+
+  => code score: 0 / 10 pts
+
+  je t'ajoute:
+  + 2 points à l'exercice code9 car tu as bien compris la logique des conditions.
+  + 1 point d'indentation sur 3 car tu as bien placé les accolades. par contre, ton indentation est à travailler.
+
+=> TOTAL STUDENT SCORE: 9 / 20
+
+
+================================
+
+STUDENT: mike_meimoun
+
+  -  quizz answers:
+  | qcm1 : 3 (solution: 3) => 1 pts
+  | qcm2 : 4 (solution: 4) => 1 pts
+  | qcm3 : 1 (solution: 1) => 1 pts
+  | qcm4 : 2 (solution: 2) => 1 pts
+  | qcm5 : 3 (solution: 2) => 0 pts
+  | qcm6 : 3 (solution: 3) => 1 pts
+  | qcm7 : 3 (solution: 3) => 1 pts
+
+  => quizz score: 6 / 7 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code8 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | for ( var monNombre = 1 ; monNombre <= 20 ; monNombre++ ) {
+  |   console.log( 'coucou' );
+  | }
+  | [+] le programme fonctionne sans erreur
+  | [+] 20 lignes ont bien été affichées dans la console
+  | [+] la chaine de caractères 'coucou' a bien été respectée à la lettre
+  | [+] une boucle for a bien été utilisée
+  | [+] indentation: console.log a bien été précédé de 2 espaces
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 5 / 5
+  | 
+  | ------------- EXERCISE: code9 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var reponse = prompt('Comment vas-tu?');
+  | if (reponse === 'bien') {
+  |   var reponse2 = alert('super !'); 
+  | } else if (reponse === 'mal') {
+  |   var reponse3 = prompt('veux-tu un aspirine ?');
+  | if (reponse3 === 'oui') {
+  |   alert('voici !');
+  | } else if (reponse3 === 'non') {
+  |   alert('tant pis.')
+  | } else {
+  |   alert('j\attendais bien ou mal');
+  | }
+  | }
+  | [+] le programme s'est exécuté sans erreur.
+  | [+] si l'utilisateur tape mal puis non, on obtient bien la réponse "tant pis.".
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1 ]
+  | 
+  | // -> EXERCISE POINTS: 5 / 5
+
+  => code score: 10 / 10 pts
+
+  + 2 points sur 3 pour l'indentation. il te reste à comprendre l'indentation dans les accolades imbriquées.
+  je compte sur toi pour aider tes camarades à progresser !
+
+=> TOTAL STUDENT SCORE: 18 / 20
+
+
+================================
+
+STUDENT: nicolas_perrousset
+
+  -  quizz answers:
+  | qcm1 : 3 (solution: 3) => 1 pts
+  | qcm2 : 4 (solution: 4) => 1 pts
+  | qcm3 : 1 (solution: 1) => 1 pts
+  | qcm4 : 2 (solution: 2) => 1 pts
+  | qcm5 : 2 (solution: 2) => 1 pts
+  | qcm6 : 3 (solution: 3) => 1 pts
+  | qcm7 : 3 (solution: 3) => 1 pts
+
+  => quizz score: 7 / 7 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code8 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | console.log('coucou')
+  | for (var i = 'coucou'; i <=20;i++ ) {
+  | 	console.log('coucou')
+  | }
+  | [+] le programme fonctionne sans erreur
+  | [-] il fallait afficher 20 lignes dans la console
+  | [+] la chaine de caractères 'coucou' a bien été respectée à la lettre
+  | [+] une boucle for a bien été utilisée
+  | [-] indentation: il fallait précéder console.log de 2 espaces, sur sa propre ligne
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 0, 1, 1, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 3 / 5
+  | 
+  | ------------- EXERCISE: code9 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var reponse = prompt('comment va tu?');
+  | 
+  | if(reponse === 'bien'){
+  | 	alert('bien');
+  | }
+  | }else if(reponse === 'mal') {
+  | 	alert('veux-tu une aspirine');
+  | }
+  | else(reponse === 'sinon'){
+  | 	alert('jattendais bien ou mal');
+  | }
+  | [-] erreur de syntaxe: Unexpected token } (pense à compter tes accolades par paires, et tester ton code dans la console)
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0 ]
+  | 
+  | // -> EXERCISE POINTS: 0 / 5
+
+  => code score: 3 / 10 pts
+
+  + 1 point sur 3 d'indentation car tu as compris le principe. par contre il faut utiliser 2 espaces, et non TAB.
+
+=> TOTAL STUDENT SCORE: 11 / 20
+
+
+================================
+
+STUDENT: simon_mimoun
+
+  -  quizz answers:
+  | qcm1 : 2 (solution: 3) => 0 pts
+  | qcm2 : 4 (solution: 4) => 1 pts
+  | qcm3 : 1 (solution: 1) => 1 pts
+  | qcm4 : 2 (solution: 2) => 1 pts
+  | qcm5 : 2 (solution: 2) => 1 pts
+  | qcm6 : 3 (solution: 3) => 1 pts
+  | qcm7 : 3 (solution: 3) => 1 pts
+
+  => quizz score: 6 / 7 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code8 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var message = 'coucou';
+  | for (var coucou = 1; coucou < 11; coucou);
+  | console.log( message );
+  | => test runner err: TIMEOUT: infinite loop?
+  | 
+  | // -> EXERCISE POINTS: 0 / 5
+  | 
+  | ------------- EXERCISE: code9 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var reponse = prompt('Comment vas-tu ?');
+  | if (reponse === 'bien') {
+  | alert('super!');
+  | }
+  | else if(reponse2 === 'mal') {
+  |   var reponse2 = prompt('Veux-tu une aspirine ?');
+  |   if (reponse2 === 'non') {
+  |   alert('ok');
+  |   } else if(reponse2 === 'oui') {
+  |   alert('Voici !');
+  |   }
+  | }
+  | else {
+  | alert('J\'attendais bien ou mal');
+  | }
+  | [+] le programme s'est exécuté sans erreur.
+  | [-] si l'utilisateur tape mal puis oui, alert devrait afficher "voici !" au lieu de "J'attendais bien ou mal"
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0.5 ]
+  | 
+  | // -> EXERCISE POINTS: 2.5 / 5
+
+  => code score: 2.5 / 10 pts
+
+  + 1 point sur 3 d'indentation, car tu as compris le principe. maintenant regarde comment on indente dans les accolades imbriquées.
+
+=> TOTAL STUDENT SCORE: 9.5 / 20
+
+
+================================
+
+STUDENT: sonia_beregreg
+
+  -  quizz answers:
+  | qcm1 : 3 (solution: 3) => 1 pts
+  | qcm2 : 4 (solution: 4) => 1 pts
+  | qcm3 : 1 (solution: 1) => 1 pts
+  | qcm4 : 2 (solution: 2) => 1 pts
+  | qcm5 : 2 (solution: 2) => 1 pts
+  | qcm6 : 4 (solution: 3) => 0 pts
+  | qcm7 : 3 (solution: 3) => 1 pts
+
+  => quizz score: 6 / 7 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code8 (variant: 2) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | // -> EXERCISE POINTS: 0 / 5
+  | 
+  | ------------- EXERCISE: code9 (variant: 1) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | // -> EXERCISE POINTS: 0 / 5
+
+  => code score: 0 / 10 pts
+
+  aucun code => aucun points d'indentation
+
+=> TOTAL STUDENT SCORE: 6 / 20
+
+
+================================
+
+STUDENT: thomas_kossowski
+
+  -  quizz answers:
+  | qcm1 : 3 (solution: 3) => 1 pts
+  | qcm2 : 4 (solution: 4) => 1 pts
+  | qcm3 : 1 (solution: 1) => 1 pts
+  | qcm4 : 2 (solution: 2) => 1 pts
+  | qcm5 : 2 (solution: 2) => 1 pts
+  | qcm6 : 3 (solution: 3) => 1 pts
+  | qcm7 : 3 (solution: 3) => 1 pts
+
+  => quizz score: 7 / 7 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code8 (variant: 2) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | // -> EXERCISE POINTS: 0 / 5
+  | 
+  | ------------- EXERCISE: code9 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var reponse = prompt('Comment vas tu?');
+  | if (reponse === 'bien') { 
+  |     alert('super !')  
+  | } else if var reponse2 === ('mal') { prompt('c\'est contagieux ?')
+  | } if (reponse2 === 'oui') { alert ('oh non ! ')
+  | } else if (reponse ==='non') {alert ('ouf')
+  | } else { alert ('j\'attendais bien ou mal')
+  | [-] erreur de syntaxe: Unexpected token var
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0 ]
+  | 
+  | // -> EXERCISE POINTS: 0 / 5
+
+  => code score: 0 / 10 pts
+
+  il y a de l'idée en termes de logique, par contre tu ne respecte pas les conventions d'indentation et de placement du code entre accolades.
+
+=> TOTAL STUDENT SCORE: 7 / 20
+
+
+================================
+
+STUDENT: yassine_baba_slimane
+
+  -  quizz answers:
+  | qcm1 : 3 (solution: 3) => 1 pts
+  | qcm2 : 4 (solution: 4) => 1 pts
+  | qcm3 : 1 (solution: 1) => 1 pts
+  | qcm4 : 2 (solution: 2) => 1 pts
+  | qcm5 : 2 (solution: 2) => 1 pts
+  | qcm6 : 4 (solution: 3) => 0 pts
+  | qcm7 : 3 (solution: 3) => 1 pts
+
+  => quizz score: 6 / 7 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code8 (variant: 3) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var i = 'salut';
+  | for ( var i = 1 ; i<= 20 ; i++ ) {
+  |   console.log( 'salut' );
+  | }
+  | [+] le programme fonctionne sans erreur
+  | [+] 20 lignes ont bien été affichées dans la console
+  | [+] la chaine de caractères 'salut' a bien été respectée à la lettre
+  | [+] une boucle for a bien été utilisée
+  | [+] indentation: console.log a bien été précédé de 2 espaces
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 5 / 5
+  | 
+  | ------------- EXERCISE: code9 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var reponse = prompt('comment vas tu ?');
+  | if (reponse === 'bien') {
+  |   alert('super');
+  | }else if (reponse === 'mal') {
+  | [-] erreur de syntaxe: Unexpected end of input
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0 ]
+  | 
+  | // -> EXERCISE POINTS: 0 / 5
+
+  => code score: 5 / 10 pts
+
+  c'était un bon début, pourquoi n'as tu pas fini l'exercice 9 ?!
+
+  + 1.5 points sur 3 d'indentation.
+
+=> TOTAL STUDENT SCORE: 12.5 / 20
