@@ -3,6 +3,14 @@
     "rules": "database.rules.json"
   },
   "hosting": {
-    "public": "public"
+    "public": "public",
+    "headers": [ 
+      {
+        "source" : "**/*.js,**/data/*.*",
+        "headers" : [
+          { "key" : "Cache-Control", "value" : "no-cache, must-revalidate" }
+        ]
+      }
+    ]
   }
 }
