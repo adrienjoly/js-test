@@ -24,17 +24,6 @@ STUDENT: aubin_keravel
   | 
   | var obj = (nom, age)
   | /!\ Execution error: nom is not defined
-Mon, 20 Mar 2017 10:40:03 GMT jailed:sandbox TypeError: Cannot read property 'name' of undefined
-    at evaluateStudentCode (DYNAMIC PLUGIN:13:8)
-    at DYNAMIC PLUGIN:18:3
-    at ContextifyScript.Script.runInContext (vm.js:35:29)
-    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
-    at Object.exports.runInNewContext (vm.js:72:17)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:151:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:165:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:53:7)
-    at emitTwo (events.js:106:13)
-    at process.emit (events.js:191:7)
   | => test runner err: TypeError: Cannot read property 'name' of undefined at evaluateStudentCode (DYNAMIC PLUGIN:13:8)
   | 
   | ------------- EXERCISE: code7 (variant: 1) -------------
@@ -42,18 +31,7 @@ Mon, 20 Mar 2017 10:40:03 GMT jailed:sandbox TypeError: Cannot read property 'na
   | // STUDENT CODE:
   | 
   | profilInstagram.photos.url[0].value
-Mon, 20 Mar 2017 10:40:03 GMT jailed:sandbox TypeError: Cannot read property '0' of undefined
-    at eval (eval at evaluateStudentCode (DYNAMIC PLUGIN:20:21), <anonymous>:1:27)
-    at evaluateStudentCode (DYNAMIC PLUGIN:20:16)
-    at DYNAMIC PLUGIN:27:3
-    at ContextifyScript.Script.runInContext (vm.js:35:29)
-    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
-    at Object.exports.runInNewContext (vm.js:72:17)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:151:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:165:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:53:7)
-    at emitTwo (events.js:106:13)
-  | => test runner err: TypeError: Cannot read property '0' of undefined at eval (eval at evaluateStudentCode (DYNAMIC PLUGIN:20:21), <anonymous>:1:27)
+  | => test runner err: TypeError: Cannot read property '0' of undefined at eval (eval at evaluateStudentCode (DYNAMIC PLUGIN:21:17), <anonymous>:1:27)
   | 
   | ------------- EXERCISE: code8 (variant: 1) -------------
   | 
@@ -87,19 +65,6 @@ Mon, 20 Mar 2017 10:40:03 GMT jailed:sandbox TypeError: Cannot read property '0'
   | var images = div.getElementById('my-galerie');
   | var imageVisible = 0;
   | function
-Mon, 20 Mar 2017 10:40:03 GMT jailed:sandbox DYNAMIC PLUGIN:43
-}
-^
-SyntaxError: Unexpected token }
-    at Object.exports.runInNewContext (vm.js:71:16)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:151:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:165:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:53:7)
-    at emitTwo (events.js:106:13)
-    at process.emit (events.js:191:7)
-    at process.nextTick (internal/child_process.js:744:12)
-    at _combinedTickCallback (internal/process/next_tick.js:67:7)
-    at process._tickCallback (internal/process/next_tick.js:98:9)
   | => test runner err: SyntaxError: Unexpected token }
 
   => code score: 0.5 / 15 pts
@@ -204,7 +169,7 @@ STUDENT: benjamin_kissous
   | 
   | console.log(profilInstagram.photos[0].url);
   | 
-  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0 ]
+  | // -> STUDENT SCORE ARRAY: [ 1, 0, 0 ]
   | 
   | ------------- EXERCISE: code8 (variant: 1) -------------
   | 
@@ -237,24 +202,11 @@ STUDENT: benjamin_kissous
   |   element: ,
   |   images:[https://i.imgur.com/ydi5jMh.jpg, https://i.imgur.com/emRrCLd.jpg, https://i.imgur.com/HdsQ3fe.jpg];
   | };
-Mon, 20 Mar 2017 10:40:04 GMT jailed:sandbox DYNAMIC PLUGIN:41
-  element: ,
-           ^
-SyntaxError: Unexpected token ,
-    at Object.exports.runInNewContext (vm.js:71:16)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:151:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:165:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:53:7)
-    at emitTwo (events.js:106:13)
-    at process.emit (events.js:191:7)
-    at process.nextTick (internal/child_process.js:744:12)
-    at _combinedTickCallback (internal/process/next_tick.js:67:7)
-    at process._tickCallback (internal/process/next_tick.js:98:9)
   | => test runner err: SyntaxError: Unexpected token ,
 
-  => code score: 5 / 15 pts
+  => code score: 6 / 15 pts
 
-=> TOTAL STUDENT SCORE: 10 / 20
+=> TOTAL STUDENT SCORE: 11 / 20
 
 
 ================================
@@ -375,19 +327,6 @@ STUDENT: edouard_duchesnedelamotte
   | https://i.imgur.com/emRrCLd.jpg,
   | https://i.imgur.com/HdsQ3fe.jpg;
   | element:div;
-Mon, 20 Mar 2017 10:40:05 GMT jailed:sandbox DYNAMIC PLUGIN:39
-embedGallery(element, images):
-                             ^
-SyntaxError: Unexpected token :
-    at Object.exports.runInNewContext (vm.js:71:16)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:151:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:165:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:53:7)
-    at emitTwo (events.js:106:13)
-    at process.emit (events.js:191:7)
-    at process.nextTick (internal/child_process.js:744:12)
-    at _combinedTickCallback (internal/process/next_tick.js:67:7)
-    at process._tickCallback (internal/process/next_tick.js:98:9)
   | => test runner err: SyntaxError: Unexpected token :
 
   => code score: 3 / 15 pts
@@ -425,7 +364,7 @@ STUDENT: florian_compiegne
   | 
   | console.log(profilInstagram.photos[1].url);
   | 
-  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0 ]
+  | // -> STUDENT SCORE ARRAY: [ 1, 0, 0 ]
   | 
   | ------------- EXERCISE: code8 (variant: 1) -------------
   | 
@@ -477,9 +416,9 @@ STUDENT: florian_compiegne
   | 
   | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 0 ]
 
-  => code score: 9 / 15 pts
+  => code score: 10 / 15 pts
 
-=> TOTAL STUDENT SCORE: 14 / 20
+=> TOTAL STUDENT SCORE: 15 / 20
 
 
 ================================
@@ -502,19 +441,6 @@ STUDENT: guillaume_martin
   | // STUDENT CODE:
   | 
   | var obj = {name='sause', age=46};
-Mon, 20 Mar 2017 10:40:06 GMT jailed:sandbox DYNAMIC PLUGIN:7
-var obj = {name='sause', age=46};
-           ^^^^^^^^^^^^
-SyntaxError: Invalid shorthand property initializer
-    at Object.exports.runInNewContext (vm.js:71:16)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:151:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:165:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:53:7)
-    at emitTwo (events.js:106:13)
-    at process.emit (events.js:191:7)
-    at process.nextTick (internal/child_process.js:744:12)
-    at _combinedTickCallback (internal/process/next_tick.js:67:7)
-    at process._tickCallback (internal/process/next_tick.js:98:9)
   | => test runner err: SyntaxError: Invalid shorthand property initializer
   | 
   | ------------- EXERCISE: code7 (variant: 0) -------------
@@ -530,19 +456,6 @@ SyntaxError: Invalid shorthand property initializer
   | // STUDENT CODE:
   | 
   | var.className+= " surbrillance";
-Mon, 20 Mar 2017 10:40:06 GMT jailed:sandbox DYNAMIC PLUGIN:26
-var.className+= " surbrillance";
-   ^
-SyntaxError: Unexpected token .
-    at Object.exports.runInNewContext (vm.js:71:16)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:151:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:165:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:53:7)
-    at emitTwo (events.js:106:13)
-    at process.emit (events.js:191:7)
-    at process.nextTick (internal/child_process.js:744:12)
-    at _combinedTickCallback (internal/process/next_tick.js:67:7)
-    at process._tickCallback (internal/process/next_tick.js:98:9)
   | => test runner err: SyntaxError: Unexpected token .
   | 
   | ------------- EXERCISE: code9 (variant: 0) -------------
@@ -705,19 +618,6 @@ STUDENT: jeanne_vinay
   | 
   | embedGallery(document.getElementById('carousel-img'), [https://i.imgur.com/ydi5jMh.jpg, https://i.imgur.com/emRrCLd.jpg, https://i.imgur.com/HdsQ3fe.jpg]); 
   | 
-Mon, 20 Mar 2017 10:40:07 GMT jailed:sandbox DYNAMIC PLUGIN:39
-embedGallery(document.getElementById('carousel-img'), [https://i.imgur.com/ydi5jMh.jpg, https://i.imgur.com/emRrCLd.jpg, https://i.imgur.com/HdsQ3fe.jpg]); 
-                                                            ^
-SyntaxError: Unexpected token :
-    at Object.exports.runInNewContext (vm.js:71:16)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:151:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:165:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:53:7)
-    at emitTwo (events.js:106:13)
-    at process.emit (events.js:191:7)
-    at process.nextTick (internal/child_process.js:744:12)
-    at _combinedTickCallback (internal/process/next_tick.js:67:7)
-    at process._tickCallback (internal/process/next_tick.js:98:9)
   | => test runner err: SyntaxError: Unexpected token :
 
   => code score: 8 / 15 pts
@@ -785,19 +685,6 @@ STUDENT: jessy_hachet
   | // STUDENT CODE:
   | 
   | var mygallery = initGallery(<div>, ['https://i.imgur.com/ydi5jMh.jpg', 'https://i.imgur.com/emRrCLd.jpg', 'https://i.imgur.com/HdsQ3fe.jpg']);
-Mon, 20 Mar 2017 10:40:08 GMT jailed:sandbox DYNAMIC PLUGIN:39
-var mygallery = initGallery(<div>, ['https://i.imgur.com/ydi5jMh.jpg', 'https://i.imgur.com/emRrCLd.jpg', 'https://i.imgur.com/HdsQ3fe.jpg']);
-                            ^
-SyntaxError: Unexpected token <
-    at Object.exports.runInNewContext (vm.js:71:16)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:151:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:165:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:53:7)
-    at emitTwo (events.js:106:13)
-    at process.emit (events.js:191:7)
-    at process.nextTick (internal/child_process.js:744:12)
-    at _combinedTickCallback (internal/process/next_tick.js:67:7)
-    at process._tickCallback (internal/process/next_tick.js:98:9)
   | => test runner err: SyntaxError: Unexpected token <
 
   => code score: 8.5 / 15 pts
@@ -862,19 +749,6 @@ STUDENT: kamil_izaret
   | // STUDENT CODE:
   | 
   | initGallery(document.getElementById('my-gallery'),[https://i.imgur.com/ydi5jMh.jpg, http://i.imgur.com/bdh4Qpn.jpg, https://i.imgur.com/HdsQ3fe.jpg]);
-Mon, 20 Mar 2017 10:40:08 GMT jailed:sandbox DYNAMIC PLUGIN:39
-initGallery(document.getElementById('my-gallery'),[https://i.imgur.com/ydi5jMh.jpg, http://i.imgur.com/bdh4Qpn.jpg, https://i.imgur.com/HdsQ3fe.jpg]);
-                                                        ^
-SyntaxError: Unexpected token :
-    at Object.exports.runInNewContext (vm.js:71:16)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:151:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:165:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:53:7)
-    at emitTwo (events.js:106:13)
-    at process.emit (events.js:191:7)
-    at process.nextTick (internal/child_process.js:744:12)
-    at _combinedTickCallback (internal/process/next_tick.js:67:7)
-    at process._tickCallback (internal/process/next_tick.js:98:9)
   | => test runner err: SyntaxError: Unexpected token :
 
   => code score: 8.5 / 15 pts
@@ -904,19 +778,6 @@ STUDENT: lara_kounowski
   | var obj = new Object();
   | obj.nom = 'sause';
   | obj.age = ;
-Mon, 20 Mar 2017 10:40:08 GMT jailed:sandbox DYNAMIC PLUGIN:9
-obj.age = ;
-          ^
-SyntaxError: Unexpected token ;
-    at Object.exports.runInNewContext (vm.js:71:16)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:151:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:165:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:53:7)
-    at emitTwo (events.js:106:13)
-    at process.emit (events.js:191:7)
-    at process.nextTick (internal/child_process.js:744:12)
-    at _combinedTickCallback (internal/process/next_tick.js:67:7)
-    at process._tickCallback (internal/process/next_tick.js:98:9)
   | => test runner err: SyntaxError: Unexpected token ;
   | 
   | ------------- EXERCISE: code7 (variant: 0) -------------
@@ -1001,18 +862,7 @@ STUDENT: louis_gosse
   | // STUDENT CODE:
   | 
   | profilInstagram.photos.url[1]
-Mon, 20 Mar 2017 10:40:09 GMT jailed:sandbox TypeError: Cannot read property '1' of undefined
-    at eval (eval at evaluateStudentCode (DYNAMIC PLUGIN:20:21), <anonymous>:1:27)
-    at evaluateStudentCode (DYNAMIC PLUGIN:20:16)
-    at DYNAMIC PLUGIN:27:3
-    at ContextifyScript.Script.runInContext (vm.js:35:29)
-    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
-    at Object.exports.runInNewContext (vm.js:72:17)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:151:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:165:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:53:7)
-    at emitTwo (events.js:106:13)
-  | => test runner err: TypeError: Cannot read property '1' of undefined at eval (eval at evaluateStudentCode (DYNAMIC PLUGIN:20:21), <anonymous>:1:27)
+  | => test runner err: TypeError: Cannot read property '1' of undefined at eval (eval at evaluateStudentCode (DYNAMIC PLUGIN:21:17), <anonymous>:1:27)
   | 
   | ------------- EXERCISE: code8 (variant: 2) -------------
   | 
@@ -1039,19 +889,6 @@ Mon, 20 Mar 2017 10:40:09 GMT jailed:sandbox TypeError: Cannot read property '1'
   |  for (var i = 0; i < galerie.lenght; i++) {
   | var image
   | 
-Mon, 20 Mar 2017 10:40:09 GMT jailed:sandbox DYNAMIC PLUGIN:45
-catch(e) { application.remote._log("/!\\ Execution error:", e.message); };; // should call initGallery() once
-^^^^^
-SyntaxError: Unexpected token catch
-    at Object.exports.runInNewContext (vm.js:71:16)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:151:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:165:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:53:7)
-    at emitTwo (events.js:106:13)
-    at process.emit (events.js:191:7)
-    at process.nextTick (internal/child_process.js:744:12)
-    at _combinedTickCallback (internal/process/next_tick.js:67:7)
-    at process._tickCallback (internal/process/next_tick.js:98:9)
   | => test runner err: SyntaxError: Unexpected token catch
 
   => code score: 2.75 / 15 pts
@@ -1082,19 +919,6 @@ STUDENT: madison_hayat
   | nom = 'sause';
   | age = 46;
   | }
-Mon, 20 Mar 2017 10:40:09 GMT jailed:sandbox DYNAMIC PLUGIN:8
-nom = 'sause';
-             ^
-SyntaxError: Unexpected token ;
-    at Object.exports.runInNewContext (vm.js:71:16)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:151:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:165:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:53:7)
-    at emitTwo (events.js:106:13)
-    at process.emit (events.js:191:7)
-    at process.nextTick (internal/child_process.js:744:12)
-    at _combinedTickCallback (internal/process/next_tick.js:67:7)
-    at process._tickCallback (internal/process/next_tick.js:98:9)
   | => test runner err: SyntaxError: Unexpected token ;
   | 
   | ------------- EXERCISE: code7 (variant: 0) -------------
@@ -1102,18 +926,7 @@ SyntaxError: Unexpected token ;
   | // STUDENT CODE:
   | 
   | document.getElementById('http://imgur.com/img/1');
-Mon, 20 Mar 2017 10:40:09 GMT jailed:sandbox ReferenceError: document is not defined
-    at eval (eval at evaluateStudentCode (DYNAMIC PLUGIN:20:21), <anonymous>:1:1)
-    at evaluateStudentCode (DYNAMIC PLUGIN:20:16)
-    at DYNAMIC PLUGIN:27:3
-    at ContextifyScript.Script.runInContext (vm.js:35:29)
-    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
-    at Object.exports.runInNewContext (vm.js:72:17)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:151:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:165:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:53:7)
-    at emitTwo (events.js:106:13)
-  | => test runner err: ReferenceError: document is not defined at eval (eval at evaluateStudentCode (DYNAMIC PLUGIN:20:21), <anonymous>:1:1)
+  | => test runner err: ReferenceError: document is not defined at eval (eval at evaluateStudentCode (DYNAMIC PLUGIN:21:17), <anonymous>:1:1)
   | 
   | ------------- EXERCISE: code8 (variant: 0) -------------
   | 
@@ -1133,19 +946,6 @@ Mon, 20 Mar 2017 10:40:09 GMT jailed:sandbox ReferenceError: document is not def
   |     alert('ok');
   |   }
   | }
-Mon, 20 Mar 2017 10:40:10 GMT jailed:sandbox DYNAMIC PLUGIN:27
-  elements[i].onclick = function afficher('li') {
-                                          ^^^^
-SyntaxError: Unexpected string
-    at Object.exports.runInNewContext (vm.js:71:16)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:151:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:165:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:53:7)
-    at emitTwo (events.js:106:13)
-    at process.emit (events.js:191:7)
-    at process.nextTick (internal/child_process.js:744:12)
-    at _combinedTickCallback (internal/process/next_tick.js:67:7)
-    at process._tickCallback (internal/process/next_tick.js:98:9)
   | => test runner err: SyntaxError: Unexpected string
   | 
   | ------------- EXERCISE: code10 (variant: 0) -------------
@@ -1164,19 +964,6 @@ SyntaxError: Unexpected string
   |     this.urlImages.push(https://i.imgur.com/HdsQ3fe.jpg);
   |   }
   | }
-Mon, 20 Mar 2017 10:40:10 GMT jailed:sandbox DYNAMIC PLUGIN:40
- addImage(https://i.imgur.com/ydi5jMh.jpg) {
-               ^
-SyntaxError: Unexpected token :
-    at Object.exports.runInNewContext (vm.js:71:16)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:151:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:165:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:53:7)
-    at emitTwo (events.js:106:13)
-    at process.emit (events.js:191:7)
-    at process.nextTick (internal/child_process.js:744:12)
-    at _combinedTickCallback (internal/process/next_tick.js:67:7)
-    at process._tickCallback (internal/process/next_tick.js:98:9)
   | => test runner err: SyntaxError: Unexpected token :
 
   => code score: 1.5 / 15 pts
@@ -1207,19 +994,6 @@ STUDENT: mickael_chekroun
   |   nom: 'sauce',
   |   age : 46,
   | }
-Mon, 20 Mar 2017 10:40:10 GMT jailed:sandbox DYNAMIC PLUGIN:7
-var obj {
-        ^
-SyntaxError: Unexpected token {
-    at Object.exports.runInNewContext (vm.js:71:16)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:151:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:165:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:53:7)
-    at emitTwo (events.js:106:13)
-    at process.emit (events.js:191:7)
-    at process.nextTick (internal/child_process.js:744:12)
-    at _combinedTickCallback (internal/process/next_tick.js:67:7)
-    at process._tickCallback (internal/process/next_tick.js:98:9)
   | => test runner err: SyntaxError: Unexpected token {
   | 
   | ------------- EXERCISE: code7 (variant: 1) -------------
@@ -1227,18 +1001,7 @@ SyntaxError: Unexpected token {
   | // STUDENT CODE:
   | 
   | profilInstagram.photos.url[1]
-Mon, 20 Mar 2017 10:40:10 GMT jailed:sandbox TypeError: Cannot read property '1' of undefined
-    at eval (eval at evaluateStudentCode (DYNAMIC PLUGIN:20:21), <anonymous>:1:27)
-    at evaluateStudentCode (DYNAMIC PLUGIN:20:16)
-    at DYNAMIC PLUGIN:27:3
-    at ContextifyScript.Script.runInContext (vm.js:35:29)
-    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
-    at Object.exports.runInNewContext (vm.js:72:17)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:151:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:165:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:53:7)
-    at emitTwo (events.js:106:13)
-  | => test runner err: TypeError: Cannot read property '1' of undefined at eval (eval at evaluateStudentCode (DYNAMIC PLUGIN:20:21), <anonymous>:1:27)
+  | => test runner err: TypeError: Cannot read property '1' of undefined at eval (eval at evaluateStudentCode (DYNAMIC PLUGIN:21:17), <anonymous>:1:27)
   | 
   | ------------- EXERCISE: code8 (variant: 0) -------------
   | 
@@ -1316,19 +1079,6 @@ STUDENT: pierre_salesse
   | // STUDENT CODE:
   | 
   | var obj = {name : 'sauce,' age : 46};
-Mon, 20 Mar 2017 10:40:10 GMT jailed:sandbox DYNAMIC PLUGIN:7
-var obj = {name : 'sauce,' age : 46};
-                           ^^^
-SyntaxError: Unexpected identifier
-    at Object.exports.runInNewContext (vm.js:71:16)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:151:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:165:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:53:7)
-    at emitTwo (events.js:106:13)
-    at process.emit (events.js:191:7)
-    at process.nextTick (internal/child_process.js:744:12)
-    at _combinedTickCallback (internal/process/next_tick.js:67:7)
-    at process._tickCallback (internal/process/next_tick.js:98:9)
   | => test runner err: SyntaxError: Unexpected identifier
   | 
   | ------------- EXERCISE: code7 (variant: 1) -------------
@@ -1336,18 +1086,7 @@ SyntaxError: Unexpected identifier
   | // STUDENT CODE:
   | 
   | console.log(profilInstagram.photos.url[1]);
-Mon, 20 Mar 2017 10:40:10 GMT jailed:sandbox TypeError: Cannot read property '1' of undefined
-    at eval (eval at evaluateStudentCode (DYNAMIC PLUGIN:20:21), <anonymous>:1:39)
-    at evaluateStudentCode (DYNAMIC PLUGIN:20:16)
-    at DYNAMIC PLUGIN:27:3
-    at ContextifyScript.Script.runInContext (vm.js:35:29)
-    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
-    at Object.exports.runInNewContext (vm.js:72:17)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:151:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:165:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:53:7)
-    at emitTwo (events.js:106:13)
-  | => test runner err: TypeError: Cannot read property '1' of undefined at eval (eval at evaluateStudentCode (DYNAMIC PLUGIN:20:21), <anonymous>:1:39)
+  | => test runner err: TypeError: Cannot read property '1' of undefined at eval (eval at evaluateStudentCode (DYNAMIC PLUGIN:21:17), <anonymous>:1:39)
   | 
   | ------------- EXERCISE: code8 (variant: 1) -------------
   | 
@@ -1408,7 +1147,7 @@ STUDENT: quentin_champenois
   | 
   | console.log(profilInstagram.photos[1].url);
   | 
-  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0 ]
+  | // -> STUDENT SCORE ARRAY: [ 1, 0, 0 ]
   | 
   | ------------- EXERCISE: code8 (variant: 2) -------------
   | 
@@ -1439,9 +1178,9 @@ STUDENT: quentin_champenois
   | 
   | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 0 ]
 
-  => code score: 9 / 15 pts
+  => code score: 10 / 15 pts
 
-=> TOTAL STUDENT SCORE: 14 / 20
+=> TOTAL STUDENT SCORE: 15 / 20
 
 
 ================================
@@ -1577,19 +1316,6 @@ STUDENT: theo_geay
   | var galerie = document.getElementByID('my-gallery');
   | var images = (https://i.imgur.com/ydi5jMh.jpg, https://i.imgur.com/emRrCLd.jpg, https://i.imgur.com/HdsQ3fe.jpg);
   | embedGallery(galerie, images);
-Mon, 20 Mar 2017 10:40:12 GMT jailed:sandbox DYNAMIC PLUGIN:40
-var images = (https://i.imgur.com/ydi5jMh.jpg, https://i.imgur.com/emRrCLd.jpg, https://i.imgur.com/HdsQ3fe.jpg);
-                   ^
-SyntaxError: Unexpected token :
-    at Object.exports.runInNewContext (vm.js:71:16)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:151:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:165:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:53:7)
-    at emitTwo (events.js:106:13)
-    at process.emit (events.js:191:7)
-    at process.nextTick (internal/child_process.js:744:12)
-    at _combinedTickCallback (internal/process/next_tick.js:67:7)
-    at process._tickCallback (internal/process/next_tick.js:98:9)
   | => test runner err: SyntaxError: Unexpected token :
 
   => code score: 12 / 15 pts
@@ -1625,18 +1351,7 @@ STUDENT: thibault_chambrillon
   | // STUDENT CODE:
   | 
   | profilInstagram.photos.url[0]
-Mon, 20 Mar 2017 10:40:12 GMT jailed:sandbox TypeError: Cannot read property '0' of undefined
-    at eval (eval at evaluateStudentCode (DYNAMIC PLUGIN:20:21), <anonymous>:1:27)
-    at evaluateStudentCode (DYNAMIC PLUGIN:20:16)
-    at DYNAMIC PLUGIN:27:3
-    at ContextifyScript.Script.runInContext (vm.js:35:29)
-    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
-    at Object.exports.runInNewContext (vm.js:72:17)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:151:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:165:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:53:7)
-    at emitTwo (events.js:106:13)
-  | => test runner err: TypeError: Cannot read property '0' of undefined at eval (eval at evaluateStudentCode (DYNAMIC PLUGIN:20:21), <anonymous>:1:27)
+  | => test runner err: TypeError: Cannot read property '0' of undefined at eval (eval at evaluateStudentCode (DYNAMIC PLUGIN:21:17), <anonymous>:1:27)
   | 
   | ------------- EXERCISE: code8 (variant: 1) -------------
   | 
@@ -1720,19 +1435,6 @@ STUDENT: timothee_ong
   | // STUDENT CODE:
   | 
   | element..classList.add('surbrillance');
-Mon, 20 Mar 2017 10:40:13 GMT jailed:sandbox DYNAMIC PLUGIN:26
-element..classList.add('surbrillance');
-        ^
-SyntaxError: Unexpected token .
-    at Object.exports.runInNewContext (vm.js:71:16)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:151:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:165:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:53:7)
-    at emitTwo (events.js:106:13)
-    at process.emit (events.js:191:7)
-    at process.nextTick (internal/child_process.js:744:12)
-    at _combinedTickCallback (internal/process/next_tick.js:67:7)
-    at process._tickCallback (internal/process/next_tick.js:98:9)
   | => test runner err: SyntaxError: Unexpected token .
   | 
   | ------------- EXERCISE: code9 (variant: 0) -------------
@@ -1831,19 +1533,6 @@ STUDENT: victor_legac
   |   url: https://i.imgur.com/HdsQ3fe.jpg,
   | };
   | 
-Mon, 20 Mar 2017 10:40:14 GMT jailed:sandbox DYNAMIC PLUGIN:39
-<div id="my-gallery"></div>
-^
-SyntaxError: Unexpected token <
-    at Object.exports.runInNewContext (vm.js:71:16)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:151:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:165:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:53:7)
-    at emitTwo (events.js:106:13)
-    at process.emit (events.js:191:7)
-    at process.nextTick (internal/child_process.js:744:12)
-    at _combinedTickCallback (internal/process/next_tick.js:67:7)
-    at process._tickCallback (internal/process/next_tick.js:98:9)
   | => test runner err: SyntaxError: Unexpected token <
 
   => code score: 5.25 / 15 pts
@@ -1881,18 +1570,7 @@ STUDENT: victoria_antalis
   | // STUDENT CODE:
   | 
   | console.log(profilInstagram.prenom.photos.url);
-Mon, 20 Mar 2017 10:40:14 GMT jailed:sandbox TypeError: Cannot read property 'url' of undefined
-    at eval (eval at evaluateStudentCode (DYNAMIC PLUGIN:20:21), <anonymous>:1:42)
-    at evaluateStudentCode (DYNAMIC PLUGIN:20:16)
-    at DYNAMIC PLUGIN:27:3
-    at ContextifyScript.Script.runInContext (vm.js:35:29)
-    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
-    at Object.exports.runInNewContext (vm.js:72:17)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:151:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:165:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test/node_modules/jailed-node/sandbox/sandbox.js:53:7)
-    at emitTwo (events.js:106:13)
-  | => test runner err: TypeError: Cannot read property 'url' of undefined at eval (eval at evaluateStudentCode (DYNAMIC PLUGIN:20:21), <anonymous>:1:42)
+  | => test runner err: TypeError: Cannot read property 'url' of undefined at eval (eval at evaluateStudentCode (DYNAMIC PLUGIN:21:17), <anonymous>:1:42)
   | 
   | ------------- EXERCISE: code8 (variant: 0) -------------
   | 
