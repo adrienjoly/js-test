@@ -1,94 +1,74 @@
-Pour effectuer une requête AJAX GET, et afficher la réponse du serveur dans un `alert()`, il faut instancier la classe `XMLHttpRequest` puis...
-
-* ... appeler 2 méthodes, et définir 1 fonction
-- ... appeler 1 méthode, et définir 2 fonctions
-- ... appeler 3 méthodes
-- ... définir 3 fonctions
-
-???
+# QCM (1 point par bonne réponse)
 
 ```js
-var xhr = new XMLHttpRequest(); 
-xhr.open('GET', 'https://jsonplaceholder.typicode.com/users/1');
-xhr.onreadystatechange = function() {
-  if (xhr.readyState === 4) {
-    alert(xhr.responseText);
-  }
-};
-xhr.send();
+var x = { nb: 1 };
 ```
 
-Dans le code de cette requête, on:
+De quel type est la variable `x` ?
 
- - instancie la classe `XMLHttpRequest` dans la variable `xhr`,
- - **définit 1 fonction** qu'on affecte à la propriété `onreadystatechange` de `xhr`,
- - et on **appelle 2 méthodes** de `xhr`: `open()` et `send()`.
-
-À noter que `alert()` est un appel de fonction, et non un appel de méthode, car cette fonction n'est pas rattachée à une instance de classe.
-
----
-
-J'ai écrit le code permettant d'envoyer une requête HTTP GET, mais rien ne se passe, et rien n'apparait dans la console.
-
-Cela pourrait être dû à:
-
-- une erreur de syntaxe
-- une URL erronée
-* l'oubli de l'appel à `send()`
-- l'oubli de l'usage de `JSON.parse()`
+- Nombre
+- Entier
+* Objet
+- Tableau
 
 ???
 
-Dans ces trois cas, on aurait obtenu une erreur dans la console:
-
- - *une erreur de syntaxe*
- - *une URL erronée*
- - *l'oubli de l'usage de `JSON.parse()`*
-
-La bonne réponse est donc: *l'oubli de l'appel à `send()`*.
-
-En effet, c'est cette méthode qui permet l'envoi de la requête. Sans cela, notre code n'aura eu aucun effet, sauf l'initialisation de la requête dans l'instance `xhr`.
+C'est un objet. On le reconnait aux accolades et à la présence d'une propriété dont la clé et la valeur sont séparés par deux points.
 
 ---
 
-Quel est le format le plus couramment utilisé de nos jours pour échanger des informations en AJAX avec une API ?
+```html
+<div id="monDiv" class="hidden">contenu</div>
+```
 
-- HTML
-- XML
-* JSON
-- texte brut
+Quelle serait le type de la valeur retournée par `document.getElementsByClassName('hidden')` ?
 
-???
+* Un tableau d'objet(s)
+- Un objet représentant l'élément
+- Une classe
+- Une chaîne de caractères
 
-AJAX (*Asynchronous Javascript And XML*) a été initialement conçu pour échanger des informations au format XML, très en vogue dans les années 90, mais il permet d'utiliser n'importe quel format sérialisable sous forme d'une chaine de caractères.
+---
 
-Aujourd'hui, on utilise majoritairement le format *JSON* dans les requêtes AJAX, car il a l'avantage d'être concis (et peu consommateur de bande passante), facilement lisible à l'oeil nu, et directement manipulable en JavaScript.
+```html
+<div id="monDiv" class="hidden">contenu</div>
+```
+
+Quelle instruction faut-il exécuter pour retirer la classe `hidden` de cet élément ?
+
+- element.class = '';
+- element.classList = '';
+* element.classList.remove('hidden');
+- element.style.display = 'block';
+
+---
+
+Supposons que `elements` soit un tableau d'éléments HTML.
+
+```js
+for(var i = 0; i < elements.length; i++) {
+  elements[i].onclick = function() {
+    console.log(i);
+  }
+}
+```
+
+Comment pourrait-on s'assurer que la valeur de `i` correspondante à chaque élément soit bien affichée dans la console quand l'utilisateur cliquera dessus ?
+
+- Il n'y a rien à changer
+- Il faut créer une deuxième boucle
+- Il faut utiliser "this"
+* Il faut passer i en paramètre d'une fonction génératrice
 
 ---
 
 ```js
-var xhr = new XMLHttpRequest(); 
-xhr.open('GET', 'https://jsonplaceholder.typicode.com/users/1');
-xhr.onreadystatechange = function() {
-  if (xhr.readyState === 4) {
-    var reponse = JSON.parse(xhr.responseText);
-    alert(/* A SAISIR */);
-  }
-};
-xhr.send();
+var point = new Point(4, 3);
 ```
 
-Si on veut afficher la propriété `email` de l'objet contenu dans la réponse à notre requête, par quoi faut-il replacer `/* A SAISIR */` ?
+Comment appelle-t-on l'opération à droite du signe `=` ?
 
-- JSON.parse(xhr.responseText.email)
-- xhr.responseText.email
-* reponse.email
-- responseText['email']
-
-???
-
- - la propriété `xhr.responseText` est de type `string` (c'est la forme *sérialisée* de l'objet contenu dans la réponse à la requête), donc on ne peut pas utiliser directement la notation pointée pour accéder à la propriété `email` demandée.
- - `JSON.parse()` a été appelé sur `xhr.responseText`, et l'objet résultant est stocké dans la variable `reponse`. Il n'est donc pas nécéssaire d'appeler `JSON.parse()` à nouveau.
- - `responseText['email']` causerait une erreur car `responseText` est une propriété de l'objet `xhr`, et non une variable existante.
-
-Il va donc falloir extraire la propriété `email` de l'objet contenu dans la variable `reponse` (qui a été désérialisé par `JSON.parse()`), en utilisant la notation pointée: `reponse.email`.
+- Une génération de fonction
+* Une instanciation de classe
+- Un appel de fonction
+- Une concaténation de nombres

@@ -5,20 +5,20 @@
     window.location.href = window.location.href.replace('http:', 'https:');
   var app = document.querySelector('#app');
   app.config = {
-    "title": "JavaScript - QCM 10 (AJAX GET)",
+    "title": "JavaScript - Contrôle individuel 2",
     "PUBLIC_TEST_MODE": false,
-    "DISPLAY_SOLUTIONS_AFTER_SUBMIT": true,
+    "DISPLAY_SOLUTIONS_AFTER_SUBMIT": false,
     "redirectToHttps": true,
     "examPack": {
-      "publishSolutions": true,
+      "publishSolutions": false,
       "publishEvalTests": false
     },
     "backend": {
       "type": "firebase",
       "FIREBASE_CONFIG": {
-        "apiKey": "AIzaSyBWrb4UMjyrSyzp_kqauvFGLi3QaWvDPus",
-        "databaseURL": "https://js-qcm.firebaseio.com",
-        "messagingSenderId": "988306760740"
+        "apiKey": "AIzaSyAO3h2quk1PBdbLjnSIhhix7LUsHoKkNbE",
+        "databaseURL": "https://js-controle-2.firebaseio.com",
+        "messagingSenderId": "835236294998"
       }
     },
     "teacherEmail": "adrien.joly@eemi.com",
@@ -39,112 +39,242 @@
       "_info": "generated from ex.01.quizz.template.md",
       "i": 1,
       "isQuizz": true,
-      "title": "QCM",
-      "maxScore": 4,
+      "title": "QCM (1 point par bonne réponse)",
+      "maxScore": 5,
       "questions": [
         {
           "i": 1,
           "id": "qcm1",
-          "md": "Pour effectuer une requête AJAX GET, et afficher la réponse du serveur dans un `alert()`, il faut instancier la classe `XMLHttpRequest` puis...\n\n\n",
-          "mdSolution": "\n\n```js\nvar xhr = new XMLHttpRequest(); \nxhr.open('GET', 'https://jsonplaceholder.typicode.com/users/1');\nxhr.onreadystatechange = function() {\n  if (xhr.readyState === 4) {\n    alert(xhr.responseText);\n  }\n};\nxhr.send();\n```\n\nDans le code de cette requête, on:\n\n - instancie la classe `XMLHttpRequest` dans la variable `xhr`,\n - **définit 1 fonction** qu'on affecte à la propriété `onreadystatechange` de `xhr`,\n - et on **appelle 2 méthodes** de `xhr`: `open()` et `send()`.\n\nÀ noter que `alert()` est un appel de fonction, et non un appel de méthode, car cette fonction n'est pas rattachée à une instance de classe.",
+          "md": "\n```js\nvar x = { nb: 1 };\n```\n\nDe quel type est la variable `x` ?\n\n\n",
           "choices": [
             {
               "name": 1,
-              "text": "... appeler 2 méthodes, et définir 1 fonction"
+              "text": "Nombre"
             },
             {
               "name": 2,
-              "text": "... appeler 1 méthode, et définir 2 fonctions"
+              "text": "Entier"
             },
             {
               "name": 3,
-              "text": "... appeler 3 méthodes"
+              "text": "Objet"
             },
             {
               "name": 4,
-              "text": "... définir 3 fonctions"
+              "text": "Tableau"
             }
           ]
         },
         {
           "i": 2,
           "id": "qcm2",
-          "md": "J'ai écrit le code permettant d'envoyer une requête HTTP GET, mais rien ne se passe, et rien n'apparait dans la console.\n\nCela pourrait être dû à:\n\n\n",
-          "mdSolution": "\n\nDans ces trois cas, on aurait obtenu une erreur dans la console:\n\n - *une erreur de syntaxe*\n - *une URL erronée*\n - *l'oubli de l'usage de `JSON.parse()`*\n\nLa bonne réponse est donc: *l'oubli de l'appel à `send()`*.\n\nEn effet, c'est cette méthode qui permet l'envoi de la requête. Sans cela, notre code n'aura eu aucun effet, sauf l'initialisation de la requête dans l'instance `xhr`.",
+          "md": "```html\n<div id=\"monDiv\" class=\"hidden\">contenu</div>\n```\n\nQuelle serait le type de la valeur retournée par `document.getElementsByClassName('hidden')` ?\n",
           "choices": [
             {
               "name": 1,
-              "text": "une erreur de syntaxe"
+              "text": "Un tableau d'objet(s)"
             },
             {
               "name": 2,
-              "text": "une URL erronée"
+              "text": "Un objet représentant l'élément"
             },
             {
               "name": 3,
-              "text": "l'oubli de l'appel à send()"
+              "text": "Une classe"
             },
             {
               "name": 4,
-              "text": "l'oubli de l'usage de JSON.parse()"
+              "text": "Une chaîne de caractères"
             }
           ]
         },
         {
           "i": 3,
           "id": "qcm3",
-          "md": "Quel est le format le plus couramment utilisé de nos jours pour échanger des informations en AJAX avec une API ?\n\n\n",
-          "mdSolution": "\n\nAJAX (*Asynchronous Javascript And XML*) a été initialement conçu pour échanger des informations au format XML, très en vogue dans les années 90, mais il permet d'utiliser n'importe quel format sérialisable sous forme d'une chaine de caractères.\n\nAujourd'hui, on utilise majoritairement le format *JSON* dans les requêtes AJAX, car il a l'avantage d'être concis (et peu consommateur de bande passante), facilement lisible à l'oeil nu, et directement manipulable en JavaScript.",
+          "md": "```html\n<div id=\"monDiv\" class=\"hidden\">contenu</div>\n```\n\nQuelle instruction faut-il exécuter pour retirer la classe `hidden` de cet élément ?\n",
           "choices": [
             {
               "name": 1,
-              "text": "HTML"
+              "text": "element.class = '';"
             },
             {
               "name": 2,
-              "text": "XML"
+              "text": "element.classList = '';"
             },
             {
               "name": 3,
-              "text": "JSON"
+              "text": "element.classList.remove('hidden');"
             },
             {
               "name": 4,
-              "text": "texte brut"
+              "text": "element.style.display = 'block';"
             }
           ]
         },
         {
           "i": 4,
           "id": "qcm4",
-          "md": "```js\nvar xhr = new XMLHttpRequest(); \nxhr.open('GET', 'https://jsonplaceholder.typicode.com/users/1');\nxhr.onreadystatechange = function() {\n  if (xhr.readyState === 4) {\n    var reponse = JSON.parse(xhr.responseText);\n    alert(/* A SAISIR */);\n  }\n};\nxhr.send();\n```\n\nSi on veut afficher la propriété `email` de l'objet contenu dans la réponse à notre requête, par quoi faut-il replacer `/* A SAISIR */` ?\n\n\n",
-          "mdSolution": "\n\n - la propriété `xhr.responseText` est de type `string` (c'est la forme *sérialisée* de l'objet contenu dans la réponse à la requête), donc on ne peut pas utiliser directement la notation pointée pour accéder à la propriété `email` demandée.\n - `JSON.parse()` a été appelé sur `xhr.responseText`, et l'objet résultant est stocké dans la variable `reponse`. Il n'est donc pas nécéssaire d'appeler `JSON.parse()` à nouveau.\n - `responseText['email']` causerait une erreur car `responseText` est une propriété de l'objet `xhr`, et non une variable existante.\n\nIl va donc falloir extraire la propriété `email` de l'objet contenu dans la variable `reponse` (qui a été désérialisé par `JSON.parse()`), en utilisant la notation pointée: `reponse.email`.",
+          "md": "Supposons que `elements` soit un tableau d'éléments HTML.\n\n```js\nfor(var i = 0; i < elements.length; i++) {\n  elements[i].onclick = function() {\n    console.log(i);\n  }\n}\n```\n\nComment pourrait-on s'assurer que la valeur de `i` correspondante à chaque élément soit bien affichée dans la console quand l'utilisateur cliquera dessus ?\n",
           "choices": [
             {
               "name": 1,
-              "text": "JSON.parse(xhr.responseText.email)"
+              "text": "Il n'y a rien à changer"
             },
             {
               "name": 2,
-              "text": "xhr.responseText.email"
+              "text": "Il faut créer une deuxième boucle"
             },
             {
               "name": 3,
-              "text": "reponse.email"
+              "text": "Il faut utiliser \"this\""
             },
             {
               "name": 4,
-              "text": "responseText['email']"
+              "text": "Il faut passer i en paramètre d'une fonction génératrice"
+            }
+          ]
+        },
+        {
+          "i": 5,
+          "id": "qcm5",
+          "md": "```js\nvar point = new Point(4, 3);\n```\n\nComment appelle-t-on l'opération à droite du signe `=` ?\n",
+          "choices": [
+            {
+              "name": 1,
+              "text": "Une génération de fonction"
+            },
+            {
+              "name": 2,
+              "text": "Une instanciation de classe"
+            },
+            {
+              "name": 3,
+              "text": "Un appel de fonction"
+            },
+            {
+              "name": 4,
+              "text": "Une concaténation de nombres"
             }
           ]
         }
-      ],
-      "solutions": {
-        "qcm1": 1,
-        "qcm2": 3,
-        "qcm3": 3,
-        "qcm4": 3
-      }
+      ]
+    },
+    {
+      "_info": "generated from ex.02.code.template.md",
+      "i": 2,
+      "isCode": true,
+      "title": "Exercices de codage (3 pts par question)",
+      "maxScore": 15,
+      "questions": [
+        {
+          "i": 6,
+          "id": "code6",
+          "variants": [
+            {
+              "varName": "obj",
+              "prop1Name": "nom",
+              "prop2Val": 46
+            },
+            {
+              "varName": "obj",
+              "prop1Name": "name",
+              "prop2Val": 46
+            },
+            {
+              "varName": "personne",
+              "prop1Name": "nom",
+              "prop2Val": 64
+            }
+          ],
+          "mdVariants": [
+            "\nCréez une variable `obj` et affectez-lui un objet contenant deux propriétés:\n\n - une propriété `nom` ayant `'sause'` comme valeur (type: chaîne de caractères),\n - et une propriété `age` ayant `46` comme valeur (type: nombre).\n\n<!-- variantes: -->\n\n\n",
+            "\nCréez une variable `obj` et affectez-lui un objet contenant deux propriétés:\n\n - une propriété `name` ayant `'sause'` comme valeur (type: chaîne de caractères),\n - et une propriété `age` ayant `46` comme valeur (type: nombre).\n\n<!-- variantes: -->\n\n\n",
+            "\nCréez une variable `personne` et affectez-lui un objet contenant deux propriétés:\n\n - une propriété `nom` ayant `'sause'` comme valeur (type: chaîne de caractères),\n - et une propriété `age` ayant `64` comme valeur (type: nombre).\n\n<!-- variantes: -->\n\n\n"
+          ]
+        },
+        {
+          "i": 7,
+          "id": "code7",
+          "variants": [
+            {
+              "index": 0,
+              "indexLabel": "première"
+            },
+            {
+              "index": 1,
+              "indexLabel": "deuxième"
+            }
+          ],
+          "mdVariants": [
+            "On fournit le code JavaScript suivant:\n\n```js\nvar profilInstagram = {\n  prenom: 'François',\n  photos: [\n    {\n      nom: 'mon chien est moi',\n      url: 'http://imgur.com/img/1',\n    },\n    {\n      nom: 'coucher de soleil => such wow!',\n      url: 'http://imgur.com/img/2',\n    },\n  ],\n};\nconsole.log(chemin);\n```\n\nTapez l'expression qu'il faudrait saisir à la place de `chemin`, afin d'afficher dans la console l'`url` de la première photo de François:\n\n(utilisez la notation pointée à partir de l'objet `profilInstagram`)\n\n<!-- variantes: -->\n\n\n",
+            "On fournit le code JavaScript suivant:\n\n```js\nvar profilInstagram = {\n  prenom: 'François',\n  photos: [\n    {\n      nom: 'mon chien est moi',\n      url: 'http://imgur.com/img/1',\n    },\n    {\n      nom: 'coucher de soleil => such wow!',\n      url: 'http://imgur.com/img/2',\n    },\n  ],\n};\nconsole.log(chemin);\n```\n\nTapez l'expression qu'il faudrait saisir à la place de `chemin`, afin d'afficher dans la console l'`url` de la deuxième photo de François:\n\n(utilisez la notation pointée à partir de l'objet `profilInstagram`)\n\n<!-- variantes: -->\n\n\n"
+          ]
+        },
+        {
+          "i": 8,
+          "id": "code8",
+          "variants": [
+            {
+              "varName": "element",
+              "className": "highlight"
+            },
+            {
+              "varName": "element",
+              "className": "surbrillance"
+            },
+            {
+              "varName": "monElement",
+              "className": "surbrillance"
+            }
+          ],
+          "mdVariants": [
+            "Supposons qu'une variable `element` a été initialisée de la manière suivante:\n\n```js\nvar element = document.getElementById('mon-element');\n```\n\nÉcrivez l'instruction JavaScript permettant d'ajouter la classe `highlight` à cet élément, en utilisant la variable `element` fournie.\n\n<!-- variantes: -->\n\n\n",
+            "Supposons qu'une variable `element` a été initialisée de la manière suivante:\n\n```js\nvar element = document.getElementById('mon-element');\n```\n\nÉcrivez l'instruction JavaScript permettant d'ajouter la classe `surbrillance` à cet élément, en utilisant la variable `element` fournie.\n\n<!-- variantes: -->\n\n\n",
+            "Supposons qu'une variable `monElement` a été initialisée de la manière suivante:\n\n```js\nvar monElement = document.getElementById('mon-element');\n```\n\nÉcrivez l'instruction JavaScript permettant d'ajouter la classe `surbrillance` à cet élément, en utilisant la variable `monElement` fournie.\n\n<!-- variantes: -->\n\n\n"
+          ]
+        },
+        {
+          "i": 9,
+          "id": "code9",
+          "variants": [
+            {
+              "outputLabel": "un alert",
+              "outputFct": "alert"
+            },
+            {
+              "outputLabel": "la console",
+              "outputFct": "console.log"
+            }
+          ],
+          "mdVariants": [
+            "```html\n<li>1er produit</li>\n<li>2ème produit</li>\n<li>3ème produit</li>\n```\n\nÉcrivez le code JavaScript permettant d'afficher \"`ok`\" (sans les guillemets) dans un alert à chaque fois que l'utilisateur cliquera sur n'importe lequel de ces trois éléments.\n\nPour définir le comportement au clic, utiliser la propriété `onclick`.\n\n<!-- variantes: -->\n\n\n",
+            "```html\n<li>1er produit</li>\n<li>2ème produit</li>\n<li>3ème produit</li>\n```\n\nÉcrivez le code JavaScript permettant d'afficher \"`ok`\" (sans les guillemets) dans la console à chaque fois que l'utilisateur cliquera sur n'importe lequel de ces trois éléments.\n\nPour définir le comportement au clic, utiliser la propriété `onclick`.\n\n<!-- variantes: -->\n\n\n"
+          ]
+        },
+        {
+          "i": 10,
+          "id": "code10",
+          "variants": [
+            {
+              "fctName": "initGallery",
+              "url2": "https://i.imgur.com/emRrCLd.jpg"
+            },
+            {
+              "fctName": "embedGallery",
+              "url2": "https://i.imgur.com/emRrCLd.jpg"
+            },
+            {
+              "fctName": "initGallery",
+              "url2": "http://i.imgur.com/bdh4Qpn.jpg"
+            }
+          ],
+          "mdVariants": [
+            "Je souhaite intégrer une galerie d'images sur mon site, en utilisant un composant déjà existant.\n\nVoici un extrait de la documentation du composant:\n\n> Pour instancier une galerie sur votre page, appelez la fonction `initGallery(element, images)`, avec en paramètres:\n> \n> - `element`(*type: objet*): élément du DOM dans lequel intégrer la galerie,\n> - `images`(*type: tableau de chaînes de caractères*): URLs des images à intégrer dans la galerie.\n\nMon fichier HTML contient ces éléments:\n\n```html\n<script src=\"https://controle.js/gallery.js\"></script>\n<div id=\"my-gallery\"></div>\n```\n\nJe souhaite intégrer la galerie dans le `<div>`, avec les images suivantes:\n\n - `https://i.imgur.com/ydi5jMh.jpg`\n - `https://i.imgur.com/emRrCLd.jpg`\n - `https://i.imgur.com/HdsQ3fe.jpg`\n\nQuel code JavaScript dois-je exécuter pour intégrer la galerie dans ma page ?\n\n<!-- variantes: -->\n\n\n",
+            "Je souhaite intégrer une galerie d'images sur mon site, en utilisant un composant déjà existant.\n\nVoici un extrait de la documentation du composant:\n\n> Pour instancier une galerie sur votre page, appelez la fonction `embedGallery(element, images)`, avec en paramètres:\n> \n> - `element`(*type: objet*): élément du DOM dans lequel intégrer la galerie,\n> - `images`(*type: tableau de chaînes de caractères*): URLs des images à intégrer dans la galerie.\n\nMon fichier HTML contient ces éléments:\n\n```html\n<script src=\"https://controle.js/gallery.js\"></script>\n<div id=\"my-gallery\"></div>\n```\n\nJe souhaite intégrer la galerie dans le `<div>`, avec les images suivantes:\n\n - `https://i.imgur.com/ydi5jMh.jpg`\n - `https://i.imgur.com/emRrCLd.jpg`\n - `https://i.imgur.com/HdsQ3fe.jpg`\n\nQuel code JavaScript dois-je exécuter pour intégrer la galerie dans ma page ?\n\n<!-- variantes: -->\n\n\n",
+            "Je souhaite intégrer une galerie d'images sur mon site, en utilisant un composant déjà existant.\n\nVoici un extrait de la documentation du composant:\n\n> Pour instancier une galerie sur votre page, appelez la fonction `initGallery(element, images)`, avec en paramètres:\n> \n> - `element`(*type: objet*): élément du DOM dans lequel intégrer la galerie,\n> - `images`(*type: tableau de chaînes de caractères*): URLs des images à intégrer dans la galerie.\n\nMon fichier HTML contient ces éléments:\n\n```html\n<script src=\"https://controle.js/gallery.js\"></script>\n<div id=\"my-gallery\"></div>\n```\n\nJe souhaite intégrer la galerie dans le `<div>`, avec les images suivantes:\n\n - `https://i.imgur.com/ydi5jMh.jpg`\n - `http://i.imgur.com/bdh4Qpn.jpg`\n - `https://i.imgur.com/HdsQ3fe.jpg`\n\nQuel code JavaScript dois-je exécuter pour intégrer la galerie dans ma page ?\n\n<!-- variantes: -->\n\n\n"
+          ]
+        }
+      ]
     }
   ];
 })(document);
