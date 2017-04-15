@@ -45,7 +45,7 @@
         {
           "i": 1,
           "id": "qcm1",
-          "md": "```js\nfunction bonjour() {\n  return 'bonjour !';\n}\nvar resultat = bonjour();\n```\n\nQu'est-ce que ce code ne contient PAS:\n",
+          "md": "```js\nfunction bonjour(prenom) {\n  var resultat = 'bonjour, ' + prenom;\n  return resultat;\n}\n```\n\nQu'est-ce que ce code ne contient PAS:\n",
           "choices": [
             {
               "name": 1,
@@ -68,30 +68,30 @@
         {
           "i": 2,
           "id": "qcm2",
-          "md": "```js\nfor (var i = -1; i < 1; i++) {\n  bonjour();\n}\n```\n\nCombien de fois la fonction `'bonjour'` va-t-elle être appelée ?\n",
+          "md": "```js\nfor (var i = -1; i <= 1; i++) {\n  // code sans importance\n}\n```\n\nCombien de fois le code à l'intérieur des accolades va-t-il être exécuté ?\n",
           "choices": [
             {
               "name": 1,
-              "text": "0 fois"
-            },
-            {
-              "name": 2,
               "text": "1 fois"
             },
             {
-              "name": 3,
+              "name": 2,
               "text": "2 fois"
             },
             {
-              "name": 4,
+              "name": 3,
               "text": "3 fois"
+            },
+            {
+              "name": 4,
+              "text": "à l'infini"
             }
           ]
         },
         {
           "i": 3,
           "id": "qcm3",
-          "md": "```js\nif (a === 1) {\n  if (b === 1) {\n    // code sans importance\n  } else {\n    // code sans importance\n  }\n} else {\n  // code sans importance\n}\n```\n\nSi on voulait représenter ces conditions sous forme d'un arbre de décision, combien contiendrait-il de niveaux ?\n",
+          "md": "```js\nif (a === 1) {\n  // code sans importance\n} else if (b === 1) {\n  // code sans importance\n} else {\n  // code sans importance\n}\n```\n\nSi on voulait représenter ces conditions sous forme d'un arbre de décision, combien contiendrait-il de niveaux ?\n",
           "choices": [
             {
               "name": 1,
@@ -114,19 +114,19 @@
         {
           "i": 4,
           "id": "qcm4",
-          "md": "Supposons que nous ayons un tableau `fruits` ayant la valeur suivante:\n\n```js\n[ 'kiwi', 'prune', 'abricot', 'fraise' ]\n```\n\nQue se passe-t-il si on exécute l'instruction suivante:\n\n```js\nfruits[3] = 'litchi';\n```\n",
+          "md": "Supposons que nous ayons un tableau `fruits` ayant la valeur suivante:\n\n```js\n[ 'kiwi', 'prune', 'abricot', 'fraise' ]\n```\n\nQue se passe-t-il si on exécute l'instruction suivante:\n\n```js\nfruits[1] = 'litchi';\n```\n",
           "choices": [
             {
               "name": 1,
-              "text": "\"litchi\" va être ajouté à la fin du tableau"
+              "text": "la valeur \"litchi\" va être ajoutée au début du tableau"
             },
             {
               "name": 2,
-              "text": "\"litchi\" va remplacer l'abricot"
+              "text": "la valeur \"litchi\" va remplacer \"prune\""
             },
             {
               "name": 3,
-              "text": "\"litchi\" va remplacer la fraise"
+              "text": "la valeur \"litchi\" va remplacer \"kiwi\""
             },
             {
               "name": 4,
@@ -137,23 +137,23 @@
         {
           "i": 5,
           "id": "qcm5",
-          "md": "Supposons que nous ayons un tableau `fruits` ayant la valeur suivante:\n\n```js\n[ 'kiwi', 'prune', 'abricot', 'fraise' ]\n```\n\nQue se passe-t-il si on exécute l'instruction suivante:\n\n```js\nfruits.splice(1, 0, 'mûre');\n```\n",
+          "md": "Supposons que nous ayons un tableau `fruits` ayant la valeur suivante:\n\n```js\n[ 'kiwi', 'prune', 'abricot', 'fraise' ]\n```\n\nQue se passe-t-il si on exécute l'instruction suivante:\n\n```js\nfruits.splice(1, 2);\n```\n",
           "choices": [
             {
               "name": 1,
-              "text": "un élément \"mûre\" sera inséré entre kiwi et prune"
+              "text": "le nombre 2 sera inséré juste après \"kiwi\""
             },
             {
               "name": 2,
-              "text": "un élément \"mûre\" sera inséré juste avant kiwi"
+              "text": "la valeur \"prune\" va être retirée du tableau"
             },
             {
               "name": 3,
-              "text": "le deuxième élément (prune) va être remplacé par \"mûre\""
+              "text": "les valeurs \"prune\" et \"abricot\" vont être retirées du tableau"
             },
             {
               "name": 4,
-              "text": "le tableau restera inchangé"
+              "text": "les valeurs \"prune\", \"abricot\" et \"fraise\" vont être retirées du tableau"
             }
           ]
         }
@@ -171,22 +171,22 @@
           "id": "code6",
           "variants": [
             {
-              "varName": "monNombre",
-              "threshold": 4
+              "varName": "prenom",
+              "value": "patrice"
             },
             {
-              "varName": "monNumero",
-              "threshold": 4
+              "varName": "prenom",
+              "value": "michel"
             },
             {
-              "varName": "monNumero",
-              "threshold": 6
+              "varName": "nom",
+              "value": "durand"
             }
           ],
           "mdVariants": [
-            "<!-- Condition simple -->\n\nSupposons qu'une variable `monNombre` ait été créée et contienne un nombre.\n\nImplémenter une condition qui affiche `'plus grand que 4'` dans la console, si `monNombre` est strictement supérieur à `4`.\n\n\n",
-            "<!-- Condition simple -->\n\nSupposons qu'une variable `monNumero` ait été créée et contienne un nombre.\n\nImplémenter une condition qui affiche `'plus grand que 4'` dans la console, si `monNumero` est strictement supérieur à `4`.\n\n\n",
-            "<!-- Condition simple -->\n\nSupposons qu'une variable `monNumero` ait été créée et contienne un nombre.\n\nImplémenter une condition qui affiche `'plus grand que 6'` dans la console, si `monNumero` est strictement supérieur à `6`.\n\n\n"
+            "<!-- Condition simple -->\n\nSupposons qu'une variable `prenom` ait été créée et contienne une chaine de caractères.\n\nImplémenter une condition qui affiche `'prenom vaut patrice'` à l'aide de `alert()`, si (et seulement si) `prenom` est strictement égal à `patrice`.\n\n\n",
+            "<!-- Condition simple -->\n\nSupposons qu'une variable `prenom` ait été créée et contienne une chaine de caractères.\n\nImplémenter une condition qui affiche `'prenom vaut michel'` à l'aide de `alert()`, si (et seulement si) `prenom` est strictement égal à `michel`.\n\n\n",
+            "<!-- Condition simple -->\n\nSupposons qu'une variable `nom` ait été créée et contienne une chaine de caractères.\n\nImplémenter une condition qui affiche `'nom vaut durand'` à l'aide de `alert()`, si (et seulement si) `nom` est strictement égal à `durand`.\n\n\n"
           ]
         },
         {
@@ -194,39 +194,35 @@
           "id": "code7",
           "variants": [
             {
-              "city1": "paris",
-              "weather1": "nuageux",
+              "city1": "agen",
+              "dist1": "590km",
               "city2": "marseille",
-              "weather2": "soleil",
-              "else": "mauvaise saisie"
+              "dist2": "750km"
             },
             {
-              "city1": "paris",
-              "weather1": "pluvieux",
-              "city2": "roubaix",
-              "weather2": "nuageux",
-              "else": "paris ou roubaix ?"
+              "city1": "le mans",
+              "dist1": "200km",
+              "city2": "angers",
+              "dist2": "300km"
             },
             {
-              "city1": "paris",
-              "weather1": "soleil",
-              "city2": "marseille",
-              "weather2": "nuageux",
-              "else": "paris ou marseille ?"
+              "city1": "marseille",
+              "dist1": "750km",
+              "city2": "bordeaux",
+              "dist2": "550km"
             },
             {
               "city1": "roubaix",
-              "weather1": "nuageux",
-              "city2": "marseille",
-              "weather2": "soleil",
-              "else": "mauvaise saisie"
+              "dist1": "230km",
+              "city2": "lyon",
+              "dist2": "450km"
             }
           ],
           "mdVariants": [
-            "<!-- Condition avancée -->\n\nNous allons écrire un programme qui donne la météo à l'utilisateur, pour la ville de son choix.\n\nCe programme devra:\n\n - Inviter l'utilisateur à saisir le nom d'une ville;\n - Dans le cas où l'utilisateur a saisi `paris`, répondre `nuageux`;\n - Dans le cas où l'utilisateur a saisi `marseille`, répondre `soleil`;\n - Sinon, répondre `mauvaise saisie`.\n\nLes réponses sont à afficher à l'aide de la fonction `alert()`. Respecter les textes fournis à la lettre. (y compris la casse, espaces et ponctuation)\n\n\n",
-            "<!-- Condition avancée -->\n\nNous allons écrire un programme qui donne la météo à l'utilisateur, pour la ville de son choix.\n\nCe programme devra:\n\n - Inviter l'utilisateur à saisir le nom d'une ville;\n - Dans le cas où l'utilisateur a saisi `paris`, répondre `pluvieux`;\n - Dans le cas où l'utilisateur a saisi `roubaix`, répondre `nuageux`;\n - Sinon, répondre `paris ou roubaix ?`.\n\nLes réponses sont à afficher à l'aide de la fonction `alert()`. Respecter les textes fournis à la lettre. (y compris la casse, espaces et ponctuation)\n\n\n",
-            "<!-- Condition avancée -->\n\nNous allons écrire un programme qui donne la météo à l'utilisateur, pour la ville de son choix.\n\nCe programme devra:\n\n - Inviter l'utilisateur à saisir le nom d'une ville;\n - Dans le cas où l'utilisateur a saisi `paris`, répondre `soleil`;\n - Dans le cas où l'utilisateur a saisi `marseille`, répondre `nuageux`;\n - Sinon, répondre `paris ou marseille ?`.\n\nLes réponses sont à afficher à l'aide de la fonction `alert()`. Respecter les textes fournis à la lettre. (y compris la casse, espaces et ponctuation)\n\n\n",
-            "<!-- Condition avancée -->\n\nNous allons écrire un programme qui donne la météo à l'utilisateur, pour la ville de son choix.\n\nCe programme devra:\n\n - Inviter l'utilisateur à saisir le nom d'une ville;\n - Dans le cas où l'utilisateur a saisi `roubaix`, répondre `nuageux`;\n - Dans le cas où l'utilisateur a saisi `marseille`, répondre `soleil`;\n - Sinon, répondre `mauvaise saisie`.\n\nLes réponses sont à afficher à l'aide de la fonction `alert()`. Respecter les textes fournis à la lettre. (y compris la casse, espaces et ponctuation)\n\n\n"
+            "<!-- Condition avancée -->\n\nNous allons écrire un programme qui donne la distance de certaines villes, au départ de Paris.\n\nCe programme devra:\n\n - Inviter l'utilisateur à saisir le nom d'une ville;\n - Dans le cas où l'utilisateur a saisi `agen`, répondre `590km`;\n - Dans le cas où l'utilisateur a saisi `marseille`, répondre `750km`;\n - Sinon, répondre `mauvaise saisie`.\n\nLes réponses sont à afficher à l'aide de la fonction `alert()`. Respecter les textes fournis à la lettre. (y compris la casse, espaces et ponctuation)\n\n\n",
+            "<!-- Condition avancée -->\n\nNous allons écrire un programme qui donne la distance de certaines villes, au départ de Paris.\n\nCe programme devra:\n\n - Inviter l'utilisateur à saisir le nom d'une ville;\n - Dans le cas où l'utilisateur a saisi `le mans`, répondre `200km`;\n - Dans le cas où l'utilisateur a saisi `angers`, répondre `300km`;\n - Sinon, répondre `mauvaise saisie`.\n\nLes réponses sont à afficher à l'aide de la fonction `alert()`. Respecter les textes fournis à la lettre. (y compris la casse, espaces et ponctuation)\n\n\n",
+            "<!-- Condition avancée -->\n\nNous allons écrire un programme qui donne la distance de certaines villes, au départ de Paris.\n\nCe programme devra:\n\n - Inviter l'utilisateur à saisir le nom d'une ville;\n - Dans le cas où l'utilisateur a saisi `marseille`, répondre `750km`;\n - Dans le cas où l'utilisateur a saisi `bordeaux`, répondre `550km`;\n - Sinon, répondre `mauvaise saisie`.\n\nLes réponses sont à afficher à l'aide de la fonction `alert()`. Respecter les textes fournis à la lettre. (y compris la casse, espaces et ponctuation)\n\n\n",
+            "<!-- Condition avancée -->\n\nNous allons écrire un programme qui donne la distance de certaines villes, au départ de Paris.\n\nCe programme devra:\n\n - Inviter l'utilisateur à saisir le nom d'une ville;\n - Dans le cas où l'utilisateur a saisi `roubaix`, répondre `230km`;\n - Dans le cas où l'utilisateur a saisi `lyon`, répondre `450km`;\n - Sinon, répondre `mauvaise saisie`.\n\nLes réponses sont à afficher à l'aide de la fonction `alert()`. Respecter les textes fournis à la lettre. (y compris la casse, espaces et ponctuation)\n\n\n"
           ]
         },
         {
@@ -234,15 +230,15 @@
           "id": "code8",
           "variants": [
             {
-              "fctName": "produit"
+              "fctName": "division"
             },
             {
-              "fctName": "multiplier"
+              "fctName": "diviser"
             }
           ],
           "mdVariants": [
-            "<!-- Fonctions -->\n\nDéfinir une fonction `produit` qui retourne le résultat de la multiplication des trois nombres passés en paramètres.\n\nExemple d'appel: `produit(1, 3, -2);` doit retourner `-6` (`1 * 3 * -2`).\n\n\n",
-            "<!-- Fonctions -->\n\nDéfinir une fonction `multiplier` qui retourne le résultat de la multiplication des trois nombres passés en paramètres.\n\nExemple d'appel: `multiplier(1, 3, -2);` doit retourner `-6` (`1 * 3 * -2`).\n\n\n"
+            "<!-- Fonctions -->\n\nDéfinir une fonction `division` qui retourne le résultat de la division des deux nombres passés en paramètres.\n\nExemple d'appel: `division(6, -2);` doit retourner `-3` (résultat de `6 / -2`).\n\n\n",
+            "<!-- Fonctions -->\n\nDéfinir une fonction `diviser` qui retourne le résultat de la division des deux nombres passés en paramètres.\n\nExemple d'appel: `diviser(6, -2);` doit retourner `-3` (résultat de `6 / -2`).\n\n\n"
           ]
         },
         {
@@ -250,19 +246,22 @@
           "id": "code9",
           "variants": [
             {
-              "fctName": "repeterChaine"
+              "n1": 10,
+              "n2": 20
             },
             {
-              "fctName": "nFois"
+              "n1": 50,
+              "n2": 60
             },
             {
-              "fctName": "repeter"
+              "n1": -5,
+              "n2": 5
             }
           ],
           "mdVariants": [
-            "<!-- Boucles -->\n\nDéfinir une fonction `repeterChaine` qui prend comme paramètres un nombre `n` et une chaîne de caractères `message`, et retourne une chaîne de caractères contenant `n` fois `message`, en utilisant la concaténation.\n\nExemple d'appel: `repeterChaine(3, 'bonjour!');` doit retourner `'bonjour!bonjour!bonjour!'`.\n\n\n",
-            "<!-- Boucles -->\n\nDéfinir une fonction `nFois` qui prend comme paramètres un nombre `n` et une chaîne de caractères `message`, et retourne une chaîne de caractères contenant `n` fois `message`, en utilisant la concaténation.\n\nExemple d'appel: `nFois(3, 'bonjour!');` doit retourner `'bonjour!bonjour!bonjour!'`.\n\n\n",
-            "<!-- Boucles -->\n\nDéfinir une fonction `repeter` qui prend comme paramètres un nombre `n` et une chaîne de caractères `message`, et retourne une chaîne de caractères contenant `n` fois `message`, en utilisant la concaténation.\n\nExemple d'appel: `repeter(3, 'bonjour!');` doit retourner `'bonjour!bonjour!bonjour!'`.\n\n\n"
+            "<!-- Boucles -->\n\nImplémenter une boucle `for()` qui écrit les nombres de `10` à `20` (compris) dans la console, à raison d'une ligne par nombre. Utiliser `console.log()`.\n\n\n",
+            "<!-- Boucles -->\n\nImplémenter une boucle `for()` qui écrit les nombres de `50` à `60` (compris) dans la console, à raison d'une ligne par nombre. Utiliser `console.log()`.\n\n\n",
+            "<!-- Boucles -->\n\nImplémenter une boucle `for()` qui écrit les nombres de `-5` à `5` (compris) dans la console, à raison d'une ligne par nombre. Utiliser `console.log()`.\n\n\n"
           ]
         },
         {
@@ -270,15 +269,15 @@
           "id": "code10",
           "variants": [
             {
-              "paramName": "nombre"
+              "val": 1
             },
             {
-              "paramName": "val"
+              "val": 3
             }
           ],
           "mdVariants": [
-            "<!-- Tableaux -->\n\nDéfinir une fonction `tableauContient` qui prend deux paramètres:\n - `tableau`: un tableau de nombres\n - `nombre`: un nombre\n\n...et retourne:\n - `true` s'il existe au moins un élément ayant la valeur `nombre` dans le tableau `tableau`,\n - ou `false` sinon.\n \nExemples d'appels:\n - `tableauContient([1, 2, 3], 2);` doit retourner `true`.\n - `tableauContient([1, 2, 3], 4);` doit retourner `false`.\n\n\n",
-            "<!-- Tableaux -->\n\nDéfinir une fonction `tableauContient` qui prend deux paramètres:\n - `tableau`: un tableau de nombres\n - `val`: un nombre\n\n...et retourne:\n - `true` s'il existe au moins un élément ayant la valeur `val` dans le tableau `tableau`,\n - ou `false` sinon.\n \nExemples d'appels:\n - `tableauContient([1, 2, 3], 2);` doit retourner `true`.\n - `tableauContient([1, 2, 3], 4);` doit retourner `false`.\n\n\n"
+            "<!-- Tableaux -->\n\nDéfinir une fonction `contient1` qui prend en paramètre un tableau de nombres, et retourne:\n - `true` si la valeur `1` est contenue au moins une fois dans le tableau passé en paramètre,\n - ou `false` sinon.\n \nExemples d'appels:\n - `contient1([1, 2, 3]);` doit retourner `true`.\n - `contient1([4, 5, 6]);` doit retourner `false`.\n\n\n",
+            "<!-- Tableaux -->\n\nDéfinir une fonction `contient3` qui prend en paramètre un tableau de nombres, et retourne:\n - `true` si la valeur `3` est contenue au moins une fois dans le tableau passé en paramètre,\n - ou `false` sinon.\n \nExemples d'appels:\n - `contient3([1, 2, 3]);` doit retourner `true`.\n - `contient3([4, 5, 6]);` doit retourner `false`.\n\n\n"
           ]
         }
       ]

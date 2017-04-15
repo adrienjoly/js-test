@@ -1,20 +1,20 @@
 <!-- Condition simple -->
 
-Supposons qu'une variable `{{varName}}` ait été créée et contienne un nombre.
+Supposons qu'une variable `{{varName}}` ait été créée et contienne une chaine de caractères.
 
-Implémenter une condition qui affiche `'plus grand que {{threshold}}'` dans la console, si `{{varName}}` est strictement supérieur à `{{threshold}}`.
+Implémenter une condition qui affiche `'{{varName}} vaut {{value}}'` à l'aide de `alert()`, si (et seulement si) `{{varName}}` est strictement égal à `{{value}}`.
 
-- { "varName": "monNombre", "threshold": 4 }
-- { "varName": "monNumero", "threshold": 4 }
-- { "varName": "monNumero", "threshold": 6 }
+- { "varName": "prenom", "value": "patrice" }
+- { "varName": "prenom", "value": "michel" }
+- { "varName": "nom", "value": "durand" }
 
 ???
 
 Solution:
 
 ```js
-if ({{varName}} > {{threshold}}) {
-  console.log('plus grand que {{threshold}}');
+if ({{varName}} === '{{value}}') {
+  alert('{{varName}} vaut {{value}}');
 }
 ```
 
@@ -24,20 +24,21 @@ if ({{varName}} > {{threshold}}) {
 // automatic student evaluation code
 (function evaluateStudentCode(){
   var res = [];
-  var console = { log: function(p){
+  var console = { log: function(){} }; // tolerate console.log() calls
+  function alert(p) {
     res.push(p);
-  } };
+  }
+  var {{varName}};
   var tests = [];
-  var {{varName}} = {{threshold}};
   _runStudentCode();
   tests = tests.concat([
     res.length === 0,
   ]);
-  {{varName}} = 7.5;
+  {{varName}} = '{{value}}';
   _runStudentCode();
   tests = tests.concat([
     res.length === 1, 
-    res[0] === 'plus grand que {{threshold}}',
+    res[0] === '{{varName}} vaut {{value}}',
   ]);
   application.remote._send(null, tests); // 1 point per passing test => 3 pts per exercise
 })();
@@ -47,21 +48,21 @@ if ({{varName}} > {{threshold}}) {
 
 <!-- Condition avancée -->
 
-Nous allons écrire un programme qui donne la météo à l'utilisateur, pour la ville de son choix.
+Nous allons écrire un programme qui donne la distance de certaines villes, au départ de Paris.
 
 Ce programme devra:
 
  - Inviter l'utilisateur à saisir le nom d'une ville;
- - Dans le cas où l'utilisateur a saisi `{{city1}}`, répondre `{{weather1}}`;
- - Dans le cas où l'utilisateur a saisi `{{city2}}`, répondre `{{weather2}}`;
- - Sinon, répondre `{{else}}`.
+ - Dans le cas où l'utilisateur a saisi `{{city1}}`, répondre `{{dist1}}`;
+ - Dans le cas où l'utilisateur a saisi `{{city2}}`, répondre `{{dist2}}`;
+ - Sinon, répondre `mauvaise saisie`.
 
 Les réponses sont à afficher à l'aide de la fonction `alert()`. Respecter les textes fournis à la lettre. (y compris la casse, espaces et ponctuation)
 
-- { "city1": "paris", "weather1": "nuageux", "city2": "marseille", "weather2": "soleil", "else": "mauvaise saisie" }
-- { "city1": "paris", "weather1": "pluvieux", "city2": "roubaix", "weather2": "nuageux", "else": "paris ou roubaix ?" }
-- { "city1": "paris", "weather1": "soleil", "city2": "marseille", "weather2": "nuageux", "else": "paris ou marseille ?" }
-- { "city1": "roubaix", "weather1": "nuageux", "city2": "marseille", "weather2": "soleil", "else": "mauvaise saisie" }
+- { "city1": "agen",      "dist1": "590km", "city2": "marseille", "dist2": "750km" }
+- { "city1": "le mans",   "dist1": "200km", "city2": "angers",    "dist2": "300km" }
+- { "city1": "marseille", "dist1": "750km", "city2": "bordeaux",  "dist2": "550km" }
+- { "city1": "roubaix",   "dist1": "230km", "city2": "lyon",      "dist2": "450km" }
 
 ???
 
@@ -70,11 +71,11 @@ Solution:
 ```js
 var reponse = prompt('saisissez le nom d\'une ville svp');
 if (reponse === '{{city1}}') {
-  alert('{{weather1}}');
+  alert('{{dist1}}');
 } else if (reponse === '{{city2}}') {
-  alert('{{weather2}}');
+  alert('{{dist2}}');
 } else {
-  alert("{{else}}");
+  alert('mauvaise saisie');
 }
 ```
 
@@ -91,17 +92,17 @@ if (reponse === '{{city1}}') {
   res = [];
   prompt = () => '{{city1}}';
   _runStudentCode();
-  tests.push(res.length === 1 && res[0] === '{{weather1}}');
+  tests.push(res.length === 1 && res[0] === '{{dist1}}');
   // test 2
   res = [];
   prompt = () => '{{city2}}';
   _runStudentCode();
-  tests.push(res.length === 1 && res[0] === '{{weather2}}');
+  tests.push(res.length === 1 && res[0] === '{{dist2}}');
   // test 3
   res = [];
   prompt = () => 'brest';
   _runStudentCode();
-  tests.push(res.length === 1 && res[0] === "{{else}}");
+  tests.push(res.length === 1 && res[0] === "mauvaise saisie");
   application.remote._send(null, tests); // 1 point per passing test => 3 pts per exercise
 })();
 ```
@@ -110,20 +111,20 @@ if (reponse === '{{city1}}') {
 
 <!-- Fonctions -->
 
-Définir une fonction `{{fctName}}` qui retourne le résultat de la multiplication des trois nombres passés en paramètres.
+Définir une fonction `{{fctName}}` qui retourne le résultat de la division des deux nombres passés en paramètres.
 
-Exemple d'appel: `{{fctName}}(1, 3, -2);` doit retourner `-6` (`1 * 3 * -2`).
+Exemple d'appel: `{{fctName}}(6, -2);` doit retourner `-3` (résultat de `6 / -2`).
 
-- { "fctName": "produit" }
-- { "fctName": "multiplier" }
+- { "fctName": "division" }
+- { "fctName": "diviser" }
 
 ???
 
 Solution:
 
 ```js
-function {{fctName}}(a, b, c) {
-  return a * b * c;
+function {{fctName}}(a, b) {
+  return a / b;
 }
 ```
 
@@ -136,8 +137,8 @@ function {{fctName}}(a, b, c) {
   _runStudentCode();
   var tests = [
     typeof {{fctName}} === 'function', 
-    {{fctName}}(1, 3, -2) === -6,
-    {{fctName}}(4, 100, 0.5) === 200,
+    {{fctName}}(6, -2) === -3,
+    {{fctName}}(2, 0.5) === 4,
   ];
   application.remote._send(null, tests); // 1 point per passing test => 3 pts per exercise
 })();
@@ -147,25 +148,19 @@ function {{fctName}}(a, b, c) {
 
 <!-- Boucles -->
 
-Définir une fonction `{{fctName}}` qui prend comme paramètres un nombre `n` et une chaîne de caractères `message`, et retourne une chaîne de caractères contenant `n` fois `message`, en utilisant la concaténation.
+Implémenter une boucle `for()` qui écrit les nombres de `{{n1}}` à `{{n2}}` (compris) dans la console, à raison d'une ligne par nombre. Utiliser `console.log()`.
 
-Exemple d'appel: `{{fctName}}(3, 'bonjour!');` doit retourner `'bonjour!bonjour!bonjour!'`.
-
-- { "fctName": "repeterChaine" }
-- { "fctName": "nFois" }
-- { "fctName": "repeter" }
+- { "n1": 10, "n2": 20 }
+- { "n1": 50, "n2": 60 }
+- { "n1": -5, "n2":  5 }
 
 ???
 
 Solution:
 
 ```js
-function {{fctName}}(n, message) {
-  var resultat = '';
-  for (var i = 0; i < n; i++) {
-    resultat = resultat + message;
-  }
-  return resultat;
+for (var i = {{n1}}; i <= {{n2}}; i++) {
+  console.log(i);
 }
 ```
 
@@ -174,14 +169,20 @@ function {{fctName}}(n, message) {
 ```js
 // automatic student evaluation code
 (function evaluateStudentCode(){
-  var console = { log: function(){} }; // tolerate console.log() calls
+  var _logged = [];
+  var _expected = [];
+  for (var i = {{n1}}; i <= {{n2}}; i++) { _expected.push(i) }
+  var console = { log: function(i){ _logged.push(i); } }; // tolerate console.log() calls
   _runStudentCode();
   var tests = [
-    {{fctName}}(3, 'bonjour!') === 'bonjour!bonjour!bonjour!',
-    {{fctName}}(0, 'bonjour!') === '',
-    {{fctName}}(12, 'a') === 'aaaaaaaaaaaa',
+    `_studentCode`.split('for').length === 2, // just 1 for-loop
+    `_studentCode`.split('console.log').length === 2, // just 1 console.log call
+    _logged.length,
+    _logged[0] === _expected[0],
+    _logged[4] === _expected[4],
+    _logged[9] === _expected[9],
   ];
-  application.remote._send(null, tests); // 1 point per passing test => 3 pts per exercise
+  application.remote._send(null, tests);
 })();
 ```
 
@@ -189,28 +190,24 @@ function {{fctName}}(n, message) {
 
 <!-- Tableaux -->
 
-Définir une fonction `tableauContient` qui prend deux paramètres:
- - `tableau`: un tableau de nombres
- - `{{paramName}}`: un nombre
-
-...et retourne:
- - `true` s'il existe au moins un élément ayant la valeur `{{paramName}}` dans le tableau `tableau`,
+Définir une fonction `contient{{val}}` qui prend en paramètre un tableau de nombres, et retourne:
+ - `true` si la valeur `{{val}}` est contenue au moins une fois dans le tableau passé en paramètre,
  - ou `false` sinon.
  
 Exemples d'appels:
- - `tableauContient([1, 2, 3], 2);` doit retourner `true`.
- - `tableauContient([1, 2, 3], 4);` doit retourner `false`.
+ - `contient{{val}}([1, 2, 3]);` doit retourner `true`.
+ - `contient{{val}}([4, 5, 6]);` doit retourner `false`.
 
-- { "paramName": "nombre" }
-- { "paramName": "val" }
+- { "val": 1 }
+- { "val": 3 }
 
 ???
 
 Solution:
 
 ```js
-function tableauContient(tableau, {{paramName}}) {
-  var indice = tableau.indexOf({{paramName}});
+function contient{{val}}(tableau) {
+  var indice = tableau.indexOf({{val}});
   if (indice === -1) {
     return false;
   } else {
@@ -222,8 +219,8 @@ function tableauContient(tableau, {{paramName}}) {
 ...ou:
 
 ```js
-function tableauContient(tableau, {{paramName}}) {
-  return tableau.indexOf({{paramName}}) !== -1;
+function contient{{val}}(tableau) {
+  return tableau.indexOf({{val}}) !== -1;
 }
 ```
 
@@ -235,9 +232,9 @@ function tableauContient(tableau, {{paramName}}) {
   var console = { log: function(){} }; // tolerate console.log() calls
   _runStudentCode();
   var tests = [
-    tableauContient.toString().replace(/[ \t]/g, '').indexOf('functiontableauContient(tableau,{{paramName}}') !== -1,
-    tableauContient([3, 4, 5, 4], 4) === true,
-    tableauContient([3, 4, 5, 4], 2) === false,
+    contient{{val}}.toString().replace(/[ \t]/g, '').indexOf('functioncontient{{val}}(') !== -1,
+    contient{{val}}([40, {{val}}, 5, {{val}}]) === true,
+    contient{{val}}([40, 4, 5, 4]) === false,
   ];
   application.remote._send(null, tests); // 1 point per passing test => 3 pts per exercise
 })();
