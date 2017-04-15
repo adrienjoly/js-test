@@ -5,20 +5,20 @@
     window.location.href = window.location.href.replace('http:', 'https:');
   var app = document.querySelector('#app');
   app.config = {
-    "title": "JavaScript - QCM 10 (AJAX GET)",
+    "title": "JavaScript Partiel 1 - Classe 4",
     "PUBLIC_TEST_MODE": false,
-    "DISPLAY_SOLUTIONS_AFTER_SUBMIT": true,
+    "DISPLAY_SOLUTIONS_AFTER_SUBMIT": false,
     "redirectToHttps": true,
     "examPack": {
-      "publishSolutions": true,
+      "publishSolutions": false,
       "publishEvalTests": false
     },
     "backend": {
       "type": "firebase",
       "FIREBASE_CONFIG": {
-        "apiKey": "AIzaSyBWrb4UMjyrSyzp_kqauvFGLi3QaWvDPus",
-        "databaseURL": "https://js-qcm.firebaseio.com",
-        "messagingSenderId": "988306760740"
+        "apiKey": "AIzaSyCCVnADtKjLmzivOw4fTLDUkCz90xkj4ws",
+        "databaseURL": "https://js-test-ft-partiel.firebaseio.com",
+        "messagingSenderId": "699482710183"
       }
     },
     "teacherEmail": "adrien.joly@eemi.com",
@@ -40,111 +40,248 @@
       "i": 1,
       "isQuizz": true,
       "title": "QCM",
-      "maxScore": 4,
+      "maxScore": 5,
       "questions": [
         {
           "i": 1,
           "id": "qcm1",
-          "md": "Pour effectuer une requête AJAX GET, et afficher la réponse du serveur dans un `alert()`, il faut instancier la classe `XMLHttpRequest` puis...\n\n\n",
-          "mdSolution": "\n\n```js\nvar xhr = new XMLHttpRequest(); \nxhr.open('GET', 'https://jsonplaceholder.typicode.com/users/1');\nxhr.onreadystatechange = function() {\n  if (xhr.readyState === 4) {\n    alert(xhr.responseText);\n  }\n};\nxhr.send();\n```\n\nDans le code de cette requête, on:\n\n - instancie la classe `XMLHttpRequest` dans la variable `xhr`,\n - **définit 1 fonction** qu'on affecte à la propriété `onreadystatechange` de `xhr`,\n - et on **appelle 2 méthodes** de `xhr`: `open()` et `send()`.\n\nÀ noter que `alert()` est un appel de fonction, et non un appel de méthode, car cette fonction n'est pas rattachée à une instance de classe.",
+          "md": "```js\nfunction bonjour() {\n  return 'bonjour !';\n}\nvar resultat = bonjour();\n```\n\nQu'est-ce que ce code ne contient PAS:\n",
           "choices": [
             {
               "name": 1,
-              "text": "... appeler 2 méthodes, et définir 1 fonction"
+              "text": "Affectation"
             },
             {
               "name": 2,
-              "text": "... appeler 1 méthode, et définir 2 fonctions"
+              "text": "Définition de fonction"
             },
             {
               "name": 3,
-              "text": "... appeler 3 méthodes"
+              "text": "Appel de fonction"
             },
             {
               "name": 4,
-              "text": "... définir 3 fonctions"
+              "text": "Concaténation"
             }
           ]
         },
         {
           "i": 2,
           "id": "qcm2",
-          "md": "J'ai écrit le code permettant d'envoyer une requête HTTP GET, mais rien ne se passe, et rien n'apparait dans la console.\n\nCela pourrait être dû à:\n\n\n",
-          "mdSolution": "\n\nDans ces trois cas, on aurait obtenu une erreur dans la console:\n\n - *une erreur de syntaxe*\n - *une URL erronée*\n - *l'oubli de l'usage de `JSON.parse()`*\n\nLa bonne réponse est donc: *l'oubli de l'appel à `send()`*.\n\nEn effet, c'est cette méthode qui permet l'envoi de la requête. Sans cela, notre code n'aura eu aucun effet, sauf l'initialisation de la requête dans l'instance `xhr`.",
+          "md": "```js\nfor (var i = -1; i < 1; i++) {\n  bonjour();\n}\n```\n\nCombien de fois la fonction `'bonjour'` va-t-elle être appelée ?\n",
           "choices": [
             {
               "name": 1,
-              "text": "une erreur de syntaxe"
+              "text": "0 fois"
             },
             {
               "name": 2,
-              "text": "une URL erronée"
+              "text": "1 fois"
             },
             {
               "name": 3,
-              "text": "l'oubli de l'appel à send()"
+              "text": "2 fois"
             },
             {
               "name": 4,
-              "text": "l'oubli de l'usage de JSON.parse()"
+              "text": "3 fois"
             }
           ]
         },
         {
           "i": 3,
           "id": "qcm3",
-          "md": "Quel est le format le plus couramment utilisé de nos jours pour échanger des informations en AJAX avec une API ?\n\n\n",
-          "mdSolution": "\n\nAJAX (*Asynchronous Javascript And XML*) a été initialement conçu pour échanger des informations au format XML, très en vogue dans les années 90, mais il permet d'utiliser n'importe quel format sérialisable sous forme d'une chaine de caractères.\n\nAujourd'hui, on utilise majoritairement le format *JSON* dans les requêtes AJAX, car il a l'avantage d'être concis (et peu consommateur de bande passante), facilement lisible à l'oeil nu, et directement manipulable en JavaScript.",
+          "md": "```js\nif (a === 1) {\n  if (b === 1) {\n    // code sans importance\n  } else {\n    // code sans importance\n  }\n} else {\n  // code sans importance\n}\n```\n\nSi on voulait représenter ces conditions sous forme d'un arbre de décision, combien contiendrait-il de niveaux ?\n",
           "choices": [
             {
               "name": 1,
-              "text": "HTML"
+              "text": "1"
             },
             {
               "name": 2,
-              "text": "XML"
+              "text": "2"
             },
             {
               "name": 3,
-              "text": "JSON"
+              "text": "3"
             },
             {
               "name": 4,
-              "text": "texte brut"
+              "text": "4"
             }
           ]
         },
         {
           "i": 4,
           "id": "qcm4",
-          "md": "```js\nvar xhr = new XMLHttpRequest(); \nxhr.open('GET', 'https://jsonplaceholder.typicode.com/users/1');\nxhr.onreadystatechange = function() {\n  if (xhr.readyState === 4) {\n    var reponse = JSON.parse(xhr.responseText);\n    alert(/* A SAISIR */);\n  }\n};\nxhr.send();\n```\n\nSi on veut afficher la propriété `email` de l'objet contenu dans la réponse à notre requête, par quoi faut-il replacer `/* A SAISIR */` ?\n\n\n",
-          "mdSolution": "\n\n - la propriété `xhr.responseText` est de type `string` (c'est la forme *sérialisée* de l'objet contenu dans la réponse à la requête), donc on ne peut pas utiliser directement la notation pointée pour accéder à la propriété `email` demandée.\n - `JSON.parse()` a été appelé sur `xhr.responseText`, et l'objet résultant est stocké dans la variable `reponse`. Il n'est donc pas nécéssaire d'appeler `JSON.parse()` à nouveau.\n - `responseText['email']` causerait une erreur car `responseText` est une propriété de l'objet `xhr`, et non une variable existante.\n\nIl va donc falloir extraire la propriété `email` de l'objet contenu dans la variable `reponse` (qui a été désérialisé par `JSON.parse()`), en utilisant la notation pointée: `reponse.email`.",
+          "md": "Supposons que nous ayons un tableau `fruits` ayant la valeur suivante:\n\n```js\n[ 'kiwi', 'prune', 'abricot', 'fraise' ]\n```\n\nQue se passe-t-il si on exécute l'instruction suivante:\n\n```js\nfruits[3] = 'litchi';\n```\n",
           "choices": [
             {
               "name": 1,
-              "text": "JSON.parse(xhr.responseText.email)"
+              "text": "\"litchi\" va être ajouté à la fin du tableau"
             },
             {
               "name": 2,
-              "text": "xhr.responseText.email"
+              "text": "\"litchi\" va remplacer l'abricot"
             },
             {
               "name": 3,
-              "text": "reponse.email"
+              "text": "\"litchi\" va remplacer la fraise"
             },
             {
               "name": 4,
-              "text": "responseText['email']"
+              "text": "cette expression vaut false"
+            }
+          ]
+        },
+        {
+          "i": 5,
+          "id": "qcm5",
+          "md": "Supposons que nous ayons un tableau `fruits` ayant la valeur suivante:\n\n```js\n[ 'kiwi', 'prune', 'abricot', 'fraise' ]\n```\n\nQue se passe-t-il si on exécute l'instruction suivante:\n\n```js\nfruits.splice(1, 0, 'mûre');\n```\n",
+          "choices": [
+            {
+              "name": 1,
+              "text": "un élément \"mûre\" sera inséré entre kiwi et prune"
+            },
+            {
+              "name": 2,
+              "text": "un élément \"mûre\" sera inséré juste avant kiwi"
+            },
+            {
+              "name": 3,
+              "text": "le deuxième élément (prune) va être remplacé par \"mûre\""
+            },
+            {
+              "name": 4,
+              "text": "le tableau restera inchangé"
             }
           ]
         }
-      ],
-      "solutions": {
-        "qcm1": 1,
-        "qcm2": 3,
-        "qcm3": 3,
-        "qcm4": 3
-      }
+      ]
+    },
+    {
+      "_info": "generated from ex.02.code.template.md",
+      "i": 2,
+      "isCode": true,
+      "title": "Exercices de codage",
+      "maxScore": 15,
+      "questions": [
+        {
+          "i": 6,
+          "id": "code6",
+          "variants": [
+            {
+              "varName": "monNombre",
+              "threshold": 4
+            },
+            {
+              "varName": "monNumero",
+              "threshold": 4
+            },
+            {
+              "varName": "monNumero",
+              "threshold": 6
+            }
+          ],
+          "mdVariants": [
+            "<!-- Condition simple -->\n\nSupposons qu'une variable `monNombre` ait été créée et contienne un nombre.\n\nImplémenter une condition qui affiche `'plus grand que 4'` dans la console, si `monNombre` est strictement supérieur à `4`.\n\n\n",
+            "<!-- Condition simple -->\n\nSupposons qu'une variable `monNumero` ait été créée et contienne un nombre.\n\nImplémenter une condition qui affiche `'plus grand que 4'` dans la console, si `monNumero` est strictement supérieur à `4`.\n\n\n",
+            "<!-- Condition simple -->\n\nSupposons qu'une variable `monNumero` ait été créée et contienne un nombre.\n\nImplémenter une condition qui affiche `'plus grand que 6'` dans la console, si `monNumero` est strictement supérieur à `6`.\n\n\n"
+          ]
+        },
+        {
+          "i": 7,
+          "id": "code7",
+          "variants": [
+            {
+              "city1": "paris",
+              "weather1": "nuageux",
+              "city2": "marseille",
+              "weather2": "soleil",
+              "else": "mauvaise saisie"
+            },
+            {
+              "city1": "paris",
+              "weather1": "pluvieux",
+              "city2": "roubaix",
+              "weather2": "nuageux",
+              "else": "paris ou roubaix ?"
+            },
+            {
+              "city1": "paris",
+              "weather1": "soleil",
+              "city2": "marseille",
+              "weather2": "nuageux",
+              "else": "paris ou marseille ?"
+            },
+            {
+              "city1": "roubaix",
+              "weather1": "nuageux",
+              "city2": "marseille",
+              "weather2": "soleil",
+              "else": "mauvaise saisie"
+            }
+          ],
+          "mdVariants": [
+            "<!-- Condition avancée -->\n\nNous allons écrire un programme qui donne la météo à l'utilisateur, pour la ville de son choix.\n\nCe programme devra:\n\n - Inviter l'utilisateur à saisir le nom d'une ville;\n - Dans le cas où l'utilisateur a saisi `paris`, répondre `nuageux`;\n - Dans le cas où l'utilisateur a saisi `marseille`, répondre `soleil`;\n - Sinon, répondre `mauvaise saisie`.\n\nLes réponses sont à afficher à l'aide de la fonction `alert()`. Respecter les textes fournis à la lettre. (y compris la casse, espaces et ponctuation)\n\n\n",
+            "<!-- Condition avancée -->\n\nNous allons écrire un programme qui donne la météo à l'utilisateur, pour la ville de son choix.\n\nCe programme devra:\n\n - Inviter l'utilisateur à saisir le nom d'une ville;\n - Dans le cas où l'utilisateur a saisi `paris`, répondre `pluvieux`;\n - Dans le cas où l'utilisateur a saisi `roubaix`, répondre `nuageux`;\n - Sinon, répondre `paris ou roubaix ?`.\n\nLes réponses sont à afficher à l'aide de la fonction `alert()`. Respecter les textes fournis à la lettre. (y compris la casse, espaces et ponctuation)\n\n\n",
+            "<!-- Condition avancée -->\n\nNous allons écrire un programme qui donne la météo à l'utilisateur, pour la ville de son choix.\n\nCe programme devra:\n\n - Inviter l'utilisateur à saisir le nom d'une ville;\n - Dans le cas où l'utilisateur a saisi `paris`, répondre `soleil`;\n - Dans le cas où l'utilisateur a saisi `marseille`, répondre `nuageux`;\n - Sinon, répondre `paris ou marseille ?`.\n\nLes réponses sont à afficher à l'aide de la fonction `alert()`. Respecter les textes fournis à la lettre. (y compris la casse, espaces et ponctuation)\n\n\n",
+            "<!-- Condition avancée -->\n\nNous allons écrire un programme qui donne la météo à l'utilisateur, pour la ville de son choix.\n\nCe programme devra:\n\n - Inviter l'utilisateur à saisir le nom d'une ville;\n - Dans le cas où l'utilisateur a saisi `roubaix`, répondre `nuageux`;\n - Dans le cas où l'utilisateur a saisi `marseille`, répondre `soleil`;\n - Sinon, répondre `mauvaise saisie`.\n\nLes réponses sont à afficher à l'aide de la fonction `alert()`. Respecter les textes fournis à la lettre. (y compris la casse, espaces et ponctuation)\n\n\n"
+          ]
+        },
+        {
+          "i": 8,
+          "id": "code8",
+          "variants": [
+            {
+              "fctName": "produit"
+            },
+            {
+              "fctName": "multiplier"
+            }
+          ],
+          "mdVariants": [
+            "<!-- Fonctions -->\n\nDéfinir une fonction `produit` qui retourne le résultat de la multiplication des trois nombres passés en paramètres.\n\nExemple d'appel: `produit(1, 3, -2);` doit retourner `-6` (`1 * 3 * -2`).\n\n\n",
+            "<!-- Fonctions -->\n\nDéfinir une fonction `multiplier` qui retourne le résultat de la multiplication des trois nombres passés en paramètres.\n\nExemple d'appel: `multiplier(1, 3, -2);` doit retourner `-6` (`1 * 3 * -2`).\n\n\n"
+          ]
+        },
+        {
+          "i": 9,
+          "id": "code9",
+          "variants": [
+            {
+              "fctName": "repeterChaine"
+            },
+            {
+              "fctName": "nFois"
+            },
+            {
+              "fctName": "repeter"
+            }
+          ],
+          "mdVariants": [
+            "<!-- Boucles -->\n\nDéfinir une fonction `repeterChaine` qui prend comme paramètres un nombre `n` et une chaîne de caractères `message`, et retourne une chaîne de caractères contenant `n` fois `message`, en utilisant la concaténation.\n\nExemple d'appel: `repeterChaine(3, 'bonjour!');` doit retourner `'bonjour!bonjour!bonjour!'`.\n\n\n",
+            "<!-- Boucles -->\n\nDéfinir une fonction `nFois` qui prend comme paramètres un nombre `n` et une chaîne de caractères `message`, et retourne une chaîne de caractères contenant `n` fois `message`, en utilisant la concaténation.\n\nExemple d'appel: `nFois(3, 'bonjour!');` doit retourner `'bonjour!bonjour!bonjour!'`.\n\n\n",
+            "<!-- Boucles -->\n\nDéfinir une fonction `repeter` qui prend comme paramètres un nombre `n` et une chaîne de caractères `message`, et retourne une chaîne de caractères contenant `n` fois `message`, en utilisant la concaténation.\n\nExemple d'appel: `repeter(3, 'bonjour!');` doit retourner `'bonjour!bonjour!bonjour!'`.\n\n\n"
+          ]
+        },
+        {
+          "i": 10,
+          "id": "code10",
+          "variants": [
+            {
+              "paramName": "nombre"
+            },
+            {
+              "paramName": "val"
+            }
+          ],
+          "mdVariants": [
+            "<!-- Tableaux -->\n\nDéfinir une fonction `tableauContient` qui prend deux paramètres:\n - `tableau`: un tableau de nombres\n - `nombre`: un nombre\n\n...et retourne:\n - `true` s'il existe au moins un élément ayant la valeur `nombre` dans le tableau `tableau`,\n - ou `false` sinon.\n \nExemples d'appels:\n - `tableauContient([1, 2, 3], 2);` doit retourner `true`.\n - `tableauContient([1, 2, 3], 4);` doit retourner `false`.\n\n\n",
+            "<!-- Tableaux -->\n\nDéfinir une fonction `tableauContient` qui prend deux paramètres:\n - `tableau`: un tableau de nombres\n - `val`: un nombre\n\n...et retourne:\n - `true` s'il existe au moins un élément ayant la valeur `val` dans le tableau `tableau`,\n - ou `false` sinon.\n \nExemples d'appels:\n - `tableauContient([1, 2, 3], 2);` doit retourner `true`.\n - `tableauContient([1, 2, 3], 4);` doit retourner `false`.\n\n\n"
+          ]
+        }
+      ]
     }
   ];
 })(document);
