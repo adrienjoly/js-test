@@ -7,7 +7,7 @@ function readfile(filePath) {
 module.exports = {
 
   // Front-end config
-  title: 'JavaScript Partiel 1 - Classe __INSTANCE__NUMBER__',
+  title: 'JavaScript Partiel 1 - Classe 4',
 
   // General settings
   PUBLIC_TEST_MODE: false, // set to false to restrict acccess and identify students using Google Login
@@ -30,10 +30,10 @@ module.exports = {
     },
     */
     FIREBASE_CONFIG: {
-      apiKey: "AIzaSyBWrb4UMjyrSyzp_kqauvFGLi3QaWvDPus",
-      databaseURL: "https://js-qcm.firebaseio.com",
-      messagingSenderId: "988306760740"
-      // admin/dashboard: https://console.firebase.google.com/project/js-qcm/database/data
+      apiKey: "AIzaSyCCVnADtKjLmzivOw4fTLDUkCz90xkj4ws",
+      databaseURL: "https://js-test-ft-partiel.firebaseio.com",
+      messagingSenderId: "699482710183"
+      // admin/dashboard: https://console.firebase.google.com/project/js-test-ft-partiel/database/data
     },
   },
 
