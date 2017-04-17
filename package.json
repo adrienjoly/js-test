@@ -28,7 +28,7 @@
     "eval-student-groups": "src/score-student-groups.sh ./student-groups/*.json",
     "eval-groups-from-firebase": "src/score-groups.sh",
     "deploy-firebase": "firebase use default && firebase deploy; # alternative to heroku, but did not scale over 20 simultaneous connections",
-    "deploy-heroku": "echo \"don't forget to commit first!\" && heroku git:remote -a js-cont-3 && git push heroku master",
+    "deploy-heroku": "echo \"don't forget to commit first!\" && heroku git:remote -a js-cont-3 && git push heroku `git rev-parse --abbrev-ref HEAD`:master",
     "deploy-instances": "./src/multi-instance-deploy.sh",
     "eval-instances": "./src/multi-instance-eval.sh"
   },
