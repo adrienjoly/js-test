@@ -78,10 +78,10 @@ xhr.send();
         ? res(0, 'il fallait appeler la méthode open() de l\'instance de `XMLHttpRequest`')
         : res(1, 'la méthode open() de l\'instance de `XMLHttpRequest` a bien été appelée'),
       (_methods[0] || '').toLowerCase() !== 'get'
-        ? res(0, 'il passer `GET` comme 1er paramètre de la méthode open()')
+        ? res(0, 'il fallait passer `GET` comme 1er paramètre de la méthode open()')
         : res(1, '`GET` a bien été passé en paramètre de la méthode open()'),
       (_urls[0] || '') !== 'https://js-jsonplaceholder.herokuapp.com/posts/4'
-        ? res(0, 'il passer l\'url comme 2ème paramètre de la méthode open()')
+        ? res(0, 'il fallait passer l\'url comme 2ème paramètre de la méthode open()')
         : res(1, 'l\'url a bien été passée en paramètre de la méthode open()'),
       typeof _instances[0].onreadystatechange !== 'function'
         ? res(0, 'il fallait affecter une fonction à la propriété `onreadystatechange` de l\'instance')
