@@ -2,16 +2,21 @@
 
 Écrire un programme JavaScript permettant:
 
- - d'envoyer une requête HTTP GET à l'URL `https://js-jsonplaceholder.herokuapp.com/posts/4`,
+ - d'envoyer une requête HTTP GET à l'URL `https://js-jsonplaceholder.herokuapp.com/posts/{{number}}`,
  - puis d'afficher avec `alert()` la réponse finale du serveur à cette requête.
 
 Utiliser la classe `XMLHttpRequest()` pour effectuer cette requête.
+
+- { "number": 4 }
+- { "number": 6 }
+- { "number": 8 }
+- { "number": 14 }
 
 ???
 
 ```js
 var xhr = new XMLHttpRequest(); 
-xhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/posts/4');
+xhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/posts/{{number}}');
 xhr.onreadystatechange = function() {
   if (xhr.readyState === 4) {
     alert(xhr.responseText);
@@ -26,7 +31,7 @@ xhr.send();
 // automatic student evaluation code
 (function evaluateStudentCode(){
   var _instances = [], _alerts = [], _methods = [], _urls = [], _sends = [];
-  var _expectedResponse = `{"userId": 1,"id": 4}`;
+  var _expectedResponse = `{"id": {{number}}}`;
   function XMLHttpRequest(){
     _instances.push(this);
   }
@@ -80,7 +85,7 @@ xhr.send();
       (_methods[0] || '').toLowerCase() !== 'get'
         ? res(0, 'il fallait passer `GET` comme 1er paramètre de la méthode open()')
         : res(1, '`GET` a bien été passé en paramètre de la méthode open()'),
-      (_urls[0] || '') !== 'https://js-jsonplaceholder.herokuapp.com/posts/4'
+      (_urls[0] || '') !== 'https://js-jsonplaceholder.herokuapp.com/posts/{{number}}'
         ? res(0, 'il fallait passer l\'url comme 2ème paramètre de la méthode open()')
         : res(1, 'l\'url a bien été passée en paramètre de la méthode open()'),
       typeof _instances[0].onreadystatechange !== 'function'
@@ -102,22 +107,22 @@ xhr.send();
 
 # Annuaire interactif
 
-Un client souhaite un moyen d'accéder rapidement à l'adresse email d'un adhérent, à partir de son numéro d'adhérent.
+Un client souhaite un moyen d'accéder rapidement au {{fr}} d'un adhérent, à partir de son numéro d'adhérent.
 
-Il met à disposition une API permettant d'accéder aux données de chaque adhérent. Il suffit d'effectuer une requête HTTP GET à l'URL `https://js-jsonplaceholder.herokuapp.com/users/<numero>`, où `<numero>` est à remplacer par le numéro d'adhérent dont on souhaite récupérer les données. L'API retourne alors une réponse au format JSON, contenant une propriété `email`.
+Il met à disposition une API permettant d'accéder aux données de chaque adhérent. Il suffit d'effectuer une requête HTTP GET à l'URL `https://js-jsonplaceholder.herokuapp.com/users/<numero>`, où `<numero>` est à remplacer par le numéro d'adhérent dont on souhaite récupérer les données. L'API retourne alors une réponse au format JSON, contenant une propriété `{{prop}}`.
 
 Nous allons développer une solution simple consistant en:
- - une page HTML contenant un champ permettant de saisir le numéro d'adhérent, un bouton pour en obtenir l'adresse email, et un deuxième champ qui contiendra l'adresse email de l'adhérent,
- - et un programme JavaScript permettant d'effectuer les requêtes AJAX correspondantes vers leur API, et d'afficher l'adresse email de l'adhérent spécifié à chaque fois que l'utilisateur cliquera sur le bouton.
+ - une page HTML contenant un champ permettant de saisir le numéro d'adhérent, un bouton pour effectuer la requête, et un deuxième champ qui contiendra le {{fr}} de l'adhérent,
+ - et un programme JavaScript permettant d'effectuer les requêtes AJAX correspondantes vers leur API, et d'afficher le {{fr}} de l'adhérent spécifié à chaque fois que l'utilisateur cliquera sur le bouton.
 
 La page HTML de cette solution est fournie. Voici le code source de son `<body>`:
 
 ```html
 <label for="numero">Numéro d'adhérent:</label>
 <input id="numero" type="text">
-<input id="bouton" type="button" value="Obtenir email">
-<p>Adresse email trouvée:</p>
-<input id="email" type="text" readonly>
+<input id="bouton" type="button" value="Chercher">
+<p>Résultat:</p>
+<input id="{{prop}}" type="text" readonly>
 ```
 
 L'utilisateur doit pouvoir effectuer plusieurs recherches d'affilée, en tapant un autre numéro d'adhérent puis cliquant à nouveau sur le bouton.
@@ -126,19 +131,23 @@ L'utilisateur doit pouvoir effectuer plusieurs recherches d'affilée, en tapant 
 
 Note: Vous devrez utiliser la classe `XMLHttpRequest()` pour effectuer les requêtes.
 
+- { "fr": "nom", "prop": "name" }
+- { "fr": "numéro de téléphone", "prop": "phone" }
+- { "fr": "site web", "prop": "website" }
+
 ???
 
 ```js
 var numero = document.getElementById('numero');
 var bouton = document.getElementById('bouton');
-var email = document.getElementById('email');
+var {{prop}} = document.getElementById('{{prop}}');
 bouton.onclick = function() {
   var xhr = new XMLHttpRequest(); 
   xhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/users/' + numero.value);
   xhr.onreadystatechange = function() {
     if (xhr.readyState === 4) {
       var adherent = JSON.parse(xhr.responseText);
-      email.value = adherent.email;
+      {{prop}}.value = adherent.{{prop}};
     }
   };
   xhr.send();
@@ -155,8 +164,8 @@ Solution complète: [jsfiddle](https://jsfiddle.net/hsg50xk5/)
   // __ FAKE WEB BROWSER ___
   var _fakeDom = {
     numero: { id: 'numero', value: '', },
-    bouton: { id: 'bouton', value: 'Obtenir email', },
-    email: { id: 'email', value: '', },
+    bouton: { id: 'bouton', value: 'Chercher', },
+    {{prop}}: { id: '{{prop}}', value: '', },
   };
   var document = {
     getElementById: function(id) {
@@ -280,15 +289,12 @@ Solution complète: [jsfiddle](https://jsfiddle.net/hsg50xk5/)
       : res(1, 'la méthode send() n\'est pas appelée tant que l\'utilisateur n\'a plas cliqué sur le bouton'),
   ];
 
-  /* simulate requests: */ [
-    { numero: '4', expectedResponse: 'Julianne.OConner@kory.org' },
-    { numero: '6', expectedResponse: 'Karley_Dach@jasper.info' },
-  ].forEach((request) => {
-    application.remote._log(`\-\-\- Simulation de requête pour adhérent numéro ${request.numero} ...`);
-    var expectedUrl = 'https://js-jsonplaceholder.herokuapp.com/users/' + request.numero;
-    var expectedResponse = request.expectedResponse;
+  /* simulate requests: */ [ '4', '6' ].forEach((numero) => {
+    application.remote._log(`\-\-\- Simulation de requête pour adhérent numéro ${numero} ...`);
+    var expectedUrl = 'https://js-jsonplaceholder.herokuapp.com/users/' + numero;
+    var expectedValue = JSON.parse(_expectedResponses[expectedUrl]).{{prop}};
     // run student's onclick handler
-    _fakeDom.numero.value = request.numero;
+    _fakeDom.numero.value = numero;
     try { _fakeDom.bouton.onclick({}) } catch (e) { error = e }
     var providedUrl = _urls.shift();
     // run tests
@@ -302,9 +308,9 @@ Solution complète: [jsfiddle](https://jsfiddle.net/hsg50xk5/)
       --_sends.length !== 0
         ? res(0, 'au clic, il fallait appeler la méthode send() une fois pour envoyer la requête')
         : res(1, 'au clic, la méthode send() a bien été appelée une fois'),
-      _fakeDom.email.value !== expectedResponse
-        ? res(0, `la valeur ${expectedResponse} aurait du apparaitre dans le champ email`)
-        : res(1, `la valeur ${expectedResponse} a bien été affichée dans le champ email`),
+      _fakeDom.{{prop}}.value !== expectedValue
+        ? res(0, `la valeur ${expectedValue} aurait du apparaitre dans le champ {{prop}}`)
+        : res(1, `la valeur ${expectedValue} a bien été affichée dans le champ {{prop}}`),
     ]);
   });
 
