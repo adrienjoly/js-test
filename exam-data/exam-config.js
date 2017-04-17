@@ -7,17 +7,17 @@ function readfile(filePath) {
 module.exports = {
 
   // Front-end config
-  title: 'JavaScript - QCM 10 (AJAX GET)',
+  title: 'JavaScript - Contrôle 2',
 
   // General settings
   PUBLIC_TEST_MODE: false, // set to false to restrict acccess and identify students using Google Login
-  DISPLAY_SOLUTIONS_AFTER_SUBMIT: true, // set to false, for real exams
+  DISPLAY_SOLUTIONS_AFTER_SUBMIT: false, // set to false, for real exams
 
   redirectToHttps: true,
 
   // Settings for conversion and publication of exercise templates
   examPack: {
-    publishSolutions: true, // `true` required for realtime-eval/auto-eval back-ends, DISPLAY_SOLUTIONS_AFTER_SUBMIT and/or dashboard
+    publishSolutions: false, // `true` required for realtime-eval/auto-eval back-ends, DISPLAY_SOLUTIONS_AFTER_SUBMIT and/or dashboard
     publishEvalTests: false, // `true` required for realtime-eval/auto-eval back-ends, DISPLAY_SOLUTIONS_AFTER_SUBMIT and/or dashboard
   },
 
@@ -51,7 +51,7 @@ module.exports = {
     ptsNull: 0,
   },
   codeGrading: {
-    ptsPerExercise: 3,
+    ptsPerExercise: 10,
   }
 
 };
