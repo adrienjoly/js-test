@@ -16,9 +16,9 @@
     "backend": {
       "type": "firebase",
       "FIREBASE_CONFIG": {
-        "apiKey": "AIzaSyBWrb4UMjyrSyzp_kqauvFGLi3QaWvDPus",
-        "databaseURL": "https://js-qcm.firebaseio.com",
-        "messagingSenderId": "988306760740"
+        "apiKey": "AIzaSyCEfwp0moUfvU3jNcmivKM83_lBIuaYwbc",
+        "databaseURL": "https://controle3-790ad.firebaseio.com",
+        "messagingSenderId": "838870643150"
       }
     },
     "teacherEmail": "adrien.joly@eemi.com",
