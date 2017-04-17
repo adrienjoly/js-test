@@ -22,13 +22,81 @@ xhr.send();
 
 --
 
-TODO: Evaluation du code
- - pas d'erreur de syntaxe
- - instanciation XMLHttpRequest
- - appel à open GET avec bonne URL
- - affectation à onreadystatechange
- - appel à send()
- - valeur affichée dans alert()
+```js
+// automatic student evaluation code
+(function evaluateStudentCode(){
+  var _instances = [], _alerts = [], _methods = [], _urls = [], _sends = [];
+  var _expectedResponse = `{"userId": 1,"id": 4}`;
+  function XMLHttpRequest(){
+    _instances.push(this);
+  }
+  XMLHttpRequest.prototype.open = function(method, url) {
+    _methods.push(method);
+    _urls.push(url);
+  };
+  XMLHttpRequest.prototype.send = function(data) {
+    _sends.push(data);
+    setTimeout(() => {
+      this.readyState = 2;
+      try { this.onreadystatechange(); } catch (e) {}
+    }, 50);
+    setTimeout(() => {
+      this.readyState = 3;
+      try { this.onreadystatechange(); } catch (e) {}
+    }, 100);
+    setTimeout(() => {
+      this.readyState = 4;
+      this.responseText = _expectedResponse;
+      try { this.onreadystatechange(); } catch (e) {}
+    }, 150);
+  };
+  function alert(msg) {
+    _alerts.push(msg);
+  }
+  var console = { log: function(t){} }; // tolerate console.log calls
+  var error = null;
+  try {
+    eval(`_studentCode`); // catch syntax errors, if any
+  } catch(e) {
+    error = e;
+  }
+  function res(pts, msg) {
+    application.remote._log((pts ? '[+] ' : '[-] ') + msg);
+    return pts;
+  }
+  var studentCode = `_studentCode`.trim();
+  //var canonicCode = studentCode.replace(/[ ;\r\n\t]/g, '');
+  setTimeout(() => {
+    var tests = [
+      error
+        ? res(0, 'erreur: ' + error.message)
+        : res(1, 'le programme fonctionne sans erreur'),
+      studentCode.indexOf('new XMLHttpRequest') === -1
+        ? res(0, 'il fallait instancier `XMLHttpRequest` avec le mot-clé `new`')
+        : res(1, 'la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`'),
+      _methods.length === 0 || _urls.length === 0
+        ? res(0, 'il fallait appeler la méthode open() de l\'instance de `XMLHttpRequest`')
+        : res(1, 'la méthode open() de l\'instance de `XMLHttpRequest` a bien été appelée'),
+      (_methods[0] || '').toLowerCase() !== 'get'
+        ? res(0, 'il passer `GET` comme 1er paramètre de la méthode open()')
+        : res(1, '`GET` a bien été passé en paramètre de la méthode open()'),
+      (_urls[0] || '') !== 'https://js-jsonplaceholder.herokuapp.com/posts/4'
+        ? res(0, 'il passer l\'url comme 2ème paramètre de la méthode open()')
+        : res(1, 'l\'url a bien été passée en paramètre de la méthode open()'),
+      typeof _instances[0].onreadystatechange !== 'function'
+        ? res(0, 'il fallait affecter une fonction à la propriété `onreadystatechange` de l\'instance')
+        : res(1, 'une fonction a bien été affectée à la propriété `onreadystatechange` de l\'instance'),
+      _sends.length === 0
+        ? res(0, 'il fallait appeler la méthode send() pour envoyer la requête')
+        : res(1, 'la méthode send() a bien été appelée'),
+      _alerts[0] !== _expectedResponse
+        ? res(0, 'le contenu de la propriété `responseText` devait être affiché dans un alert()')
+        : res(1, 'le contenu de la propriété `responseText` a bien été affiché dans un alert()'),
+    ];
+    application.remote._send(null, tests);
+  }, 200)
+})();
+```
 
 ---
 
