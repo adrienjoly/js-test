@@ -80,6 +80,7 @@ function evaluateStudent(student, next) {
   console.log('STUDENT:', student.key/*, '(' + student._uid + ')', '...'*/);
 
   function whenDone() {
+    totalScore = Math.floor(totalScore * 100) / 100;
     console.log();
     console.log('=> TOTAL STUDENT SCORE:', totalScore, '/', totalPoints);
     var csv = [ student.key, totalScore ];
