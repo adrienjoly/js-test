@@ -20,6 +20,9 @@ STUDENT: alexandre_louf
   |   }
   | };
   | xhr.send();
+  | 
+  | // CODE EVALUATION:
+  | 
   | [+] le programme fonctionne sans erreur
   | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
   | [+] la méthode open() de l'instance de `XMLHttpRequest` a bien été appelée
@@ -52,6 +55,9 @@ STUDENT: alexandre_louf
   |   }
   |   xhr.send();
   | }
+  | 
+  | // CODE EVALUATION:
+  | 
   | [+] le programme fonctionne sans erreur
   | [+] une fonction a bien été affectée à la propriété `onclick` du bouton
   | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
@@ -95,6 +101,9 @@ STUDENT: benoit_boureau
   |   }
   | };
   | xhr.send();
+  | 
+  | // CODE EVALUATION:
+  | 
   | [+] le programme fonctionne sans erreur
   | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
   | [+] la méthode open() de l'instance de `XMLHttpRequest` a bien été appelée
@@ -123,6 +132,9 @@ STUDENT: benoit_boureau
   |   };
   | xhr.send();
   | }
+  | 
+  | // CODE EVALUATION:
+  | 
   | [-] erreur: missing ) after argument list
   | [-] il fallait affecter une fonction à la propriété `onclick` du bouton
   | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
@@ -168,6 +180,9 @@ STUDENT: charles_rodriguez
   | };
   | xhr.send();
   | 
+  | 
+  | // CODE EVALUATION:
+  | 
   | [+] le programme fonctionne sans erreur
   | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
   | [+] la méthode open() de l'instance de `XMLHttpRequest` a bien été appelée
@@ -188,6 +203,9 @@ STUDENT: charles_rodriguez
   | document.getElementsById('bouton') onclick = function(){
   | 	var numero = document.getElementsById (
   | }
+  | 
+  | // CODE EVALUATION:
+  | 
   | [-] erreur: Unexpected identifier
   | [-] il fallait affecter une fonction à la propriété `onclick` du bouton
   | [-] il fallait instancier `XMLHttpRequest` avec le mot-clé `new`
@@ -231,6 +249,9 @@ STUDENT: fares_kessi
   |   }
   | };
   | xhr.send();
+  | 
+  | // CODE EVALUATION:
+  | 
   | [+] le programme fonctionne sans erreur
   | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
   | [+] la méthode open() de l'instance de `XMLHttpRequest` a bien été appelée
@@ -282,6 +303,9 @@ STUDENT: garance_fabre
   | 
   | }
   | };
+  | 
+  | // CODE EVALUATION:
+  | 
   | [-] erreur: document is not defined
   | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
   | [-] il fallait appeler la méthode open() de l'instance de `XMLHttpRequest`
@@ -317,6 +341,9 @@ STUDENT: garance_fabre
   | 
   | }
   | };
+  | 
+  | // CODE EVALUATION:
+  | 
   | [+] le programme fonctionne sans erreur
   | [+] une fonction a bien été affectée à la propriété `onclick` du bouton
   | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
@@ -360,6 +387,9 @@ STUDENT: gaspard_legrain
   |   }
   | };
   | xhr.send();
+  | 
+  | // CODE EVALUATION:
+  | 
   | [+] le programme fonctionne sans erreur
   | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
   | [+] la méthode open() de l'instance de `XMLHttpRequest` a bien été appelée
@@ -402,6 +432,9 @@ STUDENT: jacques_hovine
   |   }
   | };
   | xhr.send();
+  | 
+  | // CODE EVALUATION:
+  | 
   | [+] le programme fonctionne sans erreur
   | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
   | [+] la méthode open() de l'instance de `XMLHttpRequest` a bien été appelée
@@ -437,6 +470,9 @@ STUDENT: jacques_hovine
   |   };
   |   xhr.send();
   | }
+  | 
+  | // CODE EVALUATION:
+  | 
   | [+] le programme fonctionne sans erreur
   | [+] une fonction a bien été affectée à la propriété `onclick` du bouton
   | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
@@ -487,6 +523,9 @@ STUDENT: johanne_bordeaux
   | 	xhr.send();;
   | }
   | };
+  | 
+  | // CODE EVALUATION:
+  | 
   | [-] erreur: document is not defined
   | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
   | [-] il fallait appeler la méthode open() de l'instance de `XMLHttpRequest`
@@ -523,6 +562,9 @@ STUDENT: johanne_bordeaux
   |   xhr.send();;
   | }
   | };
+  | 
+  | // CODE EVALUATION:
+  | 
   | [-] erreur: document.getElementsByTagName is not a function
   | [-] il fallait affecter une fonction à la propriété `onclick` du bouton
   | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
@@ -589,6 +631,9 @@ STUDENT: leo_martin
   |   }
   | };
   | xhr.send();
+  | 
+  | // CODE EVALUATION:
+  | 
   | [+] le programme fonctionne sans erreur
   | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
   | [+] la méthode open() de l'instance de `XMLHttpRequest` a bien été appelée
@@ -620,6 +665,9 @@ STUDENT: leo_martin
   |   };
   | xhr.send();
   | }
+  | 
+  | // CODE EVALUATION:
+  | 
   | [+] le programme fonctionne sans erreur
   | [+] une fonction a bien été affectée à la propriété `onclick` du bouton
   | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
@@ -663,6 +711,9 @@ STUDENT: loa_diaz
   | 	}
   | };
   | xhr.send();
+  | 
+  | // CODE EVALUATION:
+  | 
   | [+] le programme fonctionne sans erreur
   | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
   | [+] la méthode open() de l'instance de `XMLHttpRequest` a bien été appelée
@@ -699,6 +750,9 @@ STUDENT: loa_diaz
   | 	};
   | 	xhr.send();
   | }
+  | 
+  | // CODE EVALUATION:
+  | 
   | [+] le programme fonctionne sans erreur
   | [+] une fonction a bien été affectée à la propriété `onclick` du bouton
   | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
@@ -739,6 +793,9 @@ STUDENT: loic_parisse
   |   "title": "voluptatem eligendi optio",
   |   "body": "fuga et accusamus dolorum perferendis illo voluptas\nnon doloremque neque facere\nad qui dolorum molestiae beatae\nsed aut voluptas totam sit illum"
   | }
+  | 
+  | // CODE EVALUATION:
+  | 
   | [-] erreur: Unexpected token :
   | [-] il fallait instancier `XMLHttpRequest` avec le mot-clé `new`
   | [-] il fallait appeler la méthode open() de l'instance de `XMLHttpRequest`
@@ -782,6 +839,9 @@ STUDENT: lucille_vanlaer
   |   }  
   | }
   | xhr.send();
+  | 
+  | // CODE EVALUATION:
+  | 
   | [+] le programme fonctionne sans erreur
   | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
   | [+] la méthode open() de l'instance de `XMLHttpRequest` a bien été appelée
@@ -814,6 +874,9 @@ STUDENT: lucille_vanlaer
   |     }  
   |   xhr.send();
   | };
+  | 
+  | // CODE EVALUATION:
+  | 
   | [-] erreur: Unexpected end of input
   | [-] il fallait affecter une fonction à la propriété `onclick` du bouton
   | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
@@ -858,6 +921,9 @@ STUDENT: maelle_bellazar
   | };
   | xhr.send();
   | };
+  | 
+  | // CODE EVALUATION:
+  | 
   | [-] erreur: Unexpected token }
   | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
   | [-] il fallait appeler la méthode open() de l'instance de `XMLHttpRequest`
@@ -893,6 +959,9 @@ STUDENT: maelle_bellazar
   | xhr.send();
   | }
   | }
+  | 
+  | // CODE EVALUATION:
+  | 
   | [-] erreur: Unexpected token }
   | [-] il fallait affecter une fonction à la propriété `onclick` du bouton
   | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
@@ -936,6 +1005,9 @@ STUDENT: noelie_roux
   |   }
   | };
   | xhr.send();
+  | 
+  | // CODE EVALUATION:
+  | 
   | [+] le programme fonctionne sans erreur
   | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
   | [+] la méthode open() de l'instance de `XMLHttpRequest` a bien été appelée
@@ -962,6 +1034,9 @@ STUDENT: noelie_roux
   |   }
   | };
   | xhr.send();
+  | 
+  | // CODE EVALUATION:
+  | 
   | [+] le programme fonctionne sans erreur
   | [-] il fallait affecter une fonction à la propriété `onclick` du bouton
   | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
@@ -1004,6 +1079,9 @@ STUDENT: pauline_feraut
   |   }
   | };
   | xhr.send();
+  | 
+  | // CODE EVALUATION:
+  | 
   | [+] le programme fonctionne sans erreur
   | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
   | [+] la méthode open() de l'instance de `XMLHttpRequest` a bien été appelée
@@ -1035,6 +1113,9 @@ STUDENT: pauline_feraut
   |     };
   |     xhr.send(); //Envoyer la requête
   |  }
+  | 
+  | // CODE EVALUATION:
+  | 
   | [+] le programme fonctionne sans erreur
   | [+] une fonction a bien été affectée à la propriété `onclick` du bouton
   | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
@@ -1077,6 +1158,9 @@ STUDENT: pierry_lim
   |   }
   | };
   | xhr.send();
+  | 
+  | // CODE EVALUATION:
+  | 
   | [+] le programme fonctionne sans erreur
   | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
   | [+] la méthode open() de l'instance de `XMLHttpRequest` a bien été appelée
@@ -1106,6 +1190,9 @@ STUDENT: pierry_lim
   |   };
   |   xhr.send();
   | };
+  | 
+  | // CODE EVALUATION:
+  | 
   | [+] le programme fonctionne sans erreur
   | [+] une fonction a bien été affectée à la propriété `onclick` du bouton
   | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
@@ -1148,6 +1235,9 @@ STUDENT: tristan_machin
   |   }
   | };
   | xhr.send();
+  | 
+  | // CODE EVALUATION:
+  | 
   | [+] le programme fonctionne sans erreur
   | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
   | [+] la méthode open() de l'instance de `XMLHttpRequest` a bien été appelée
@@ -1177,6 +1267,9 @@ STUDENT: tristan_machin
   |   };
   |   xhr.send();
   | }
+  | 
+  | // CODE EVALUATION:
+  | 
   | [+] le programme fonctionne sans erreur
   | [+] une fonction a bien été affectée à la propriété `onclick` du bouton
   | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
@@ -1221,6 +1314,9 @@ STUDENT: valentin_guilbaud
   |   }
   | }
   | xhr.send();
+  | 
+  | // CODE EVALUATION:
+  | 
   | [+] le programme fonctionne sans erreur
   | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
   | [+] la méthode open() de l'instance de `XMLHttpRequest` a bien été appelée
@@ -1253,6 +1349,9 @@ STUDENT: valentin_guilbaud
   |   }
   |   xhr.send();
   | }
+  | 
+  | // CODE EVALUATION:
+  | 
   | [+] le programme fonctionne sans erreur
   | [+] une fonction a bien été affectée à la propriété `onclick` du bouton
   | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
