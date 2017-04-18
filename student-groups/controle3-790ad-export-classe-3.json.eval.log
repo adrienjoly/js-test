@@ -1,0 +1,1703 @@
+Parsing ex.01.code.template.md ...
+Reading and evaluating answers from: ../student-groups/controle3-790ad-export-classe-3.json ...
+
+
+================================
+
+STUDENT: aubin_keravel
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code1 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var xhr = new XMLHttpRequest();
+  | xhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/posts/6');
+  | xhr.onreadystatechange = function () {
+  |   if (xhr.readyState === 4) {
+  |     alert (xhr.responseText);
+  |     }
+  |   };
+  | xhr.send();
+  | [+] le programme fonctionne sans erreur
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [+] la méthode open() de l'instance de `XMLHttpRequest` a bien été appelée
+  | [+] `GET` a bien été passé en paramètre de la méthode open()
+  | [+] l'url a bien été passée en paramètre de la méthode open()
+  | [+] une fonction a bien été affectée à la propriété `onreadystatechange` de l'instance
+  | [+] la méthode send() a bien été appelée
+  | [+] le contenu de la propriété `responseText` a bien été affiché dans un alert()
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 10 / 10
+  | 
+  | ------------- EXERCISE: code2 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | <!DOCTYPE html>
+  | <html>
+  | <head>
+  |   <meta charset="utf-8">
+  |   <meta name="viewport" content="width=device-width">
+  |   <title>JS Bin</title>
+  | </head>
+  | <body>
+  |   <label for="numero">Numéro d'adhérent:</label>
+  |   <input id="numero" type="text">
+  |   <input id="bouton" type="button" value="Chercher">
+  |   <p>Résultat:</p>
+  |   <input id="phone" type="text" readonly>
+  | 
+  |   <script>
+  |     var xhr = new XMLHttpRequest();
+  |     xhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/users/<numero>');
+  |     xhr.onreadystatechange = function () {
+  |         if (xhr.readyState === 4) {
+  |           alert (xhr.responseText);
+  |     }
+  |   };
+  | xhr.send();
+  |     
+  |  
+  |   </script>  
+  |   
+  |   </body>
+  | </html>
+  | [-] erreur: Unexpected token <
+  | [-] il fallait affecter une fonction à la propriété `onclick` du bouton
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [+] la méthode send() n'est pas appelée tant que l'utilisateur n'a plas cliqué sur le bouton
+  | --- Simulation de requête pour adhérent numéro 4 ...
+  | [-] erreur après clic sur le bouton: _fakeDom.bouton.onclick is not a function
+  | [-] au clic, il fallait passer l'url https://js-jsonplaceholder.herokuapp.com/users/4 à la méthode open(), et non undefined
+Tue, 18 Apr 2017 10:11:03 GMT jailed:sandbox RangeError: Invalid array length
+    at e.forEach.e (DYNAMIC PLUGIN:205:16)
+    at Array.forEach (native)
+    at evaluateStudentCode (DYNAMIC PLUGIN:189:41)
+    at DYNAMIC PLUGIN:215:3
+    at ContextifyScript.Script.runInContext (vm.js:35:29)
+    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
+    at Object.exports.runInNewContext (vm.js:72:17)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13-controle/node_modules/jailed-node/sandbox/sandbox.js:151:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13-controle/node_modules/jailed-node/sandbox/sandbox.js:165:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13-controle/node_modules/jailed-node/sandbox/sandbox.js:53:7)
+  | => test runner err: RangeError: Invalid array length at e.forEach.e (DYNAMIC PLUGIN:205:16)
+  | 
+  | // -> EXERCISE POINTS: 0 / 10
+
+  => code score: 10 / 20 pts
+
+=> TOTAL STUDENT SCORE: 10 / 20
+
+
+================================
+
+STUDENT: bastien_bigot
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code1 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var xhr = new XMLHttpRequest(); 
+  | xhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/posts/4');
+  | xhr.onreadystatechange = function() {
+  |   if (xhr.readyState === 4) {
+  |     alert(xhr.responseText);
+  |   }
+  | };
+  | xhr.send();
+  | [+] le programme fonctionne sans erreur
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [+] la méthode open() de l'instance de `XMLHttpRequest` a bien été appelée
+  | [+] `GET` a bien été passé en paramètre de la méthode open()
+  | [+] l'url a bien été passée en paramètre de la méthode open()
+  | [+] une fonction a bien été affectée à la propriété `onreadystatechange` de l'instance
+  | [+] la méthode send() a bien été appelée
+  | [+] le contenu de la propriété `responseText` a bien été affiché dans un alert()
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 10 / 10
+  | 
+  | ------------- EXERCISE: code2 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var xhr = new XMLHttpRequest(); 
+  | xhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/users/<3>');
+  | xhr.onreadystatechange = function() {
+  |   if (xhr.readyState === 4) {
+  |   var objet = eval('(' + textejson + ')');
+  |   console.log(objet);;
+  |   }
+  | };
+  | xhr.send();
+  | [+] le programme fonctionne sans erreur
+  | [-] il fallait affecter une fonction à la propriété `onclick` du bouton
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [-] il ne fallait pas appeler la méthode send() avant que l'utilisateur clique sur le bouton
+  | --- Simulation de requête pour adhérent numéro 4 ...
+  | [-] erreur après clic sur le bouton: _fakeDom.bouton.onclick is not a function
+  | [-] au clic, il fallait passer l'url https://js-jsonplaceholder.herokuapp.com/users/4 à la méthode open(), et non https://js-jsonplaceholder.herokuapp.com/users/<3>
+  | [+] au clic, la méthode send() a bien été appelée une fois
+  | [-] la valeur Patricia Lebsack aurait du apparaitre dans le champ name
+  | --- Simulation de requête pour adhérent numéro 6 ...
+  | [-] erreur après clic sur le bouton: _fakeDom.bouton.onclick is not a function
+  | [-] au clic, il fallait passer l'url https://js-jsonplaceholder.herokuapp.com/users/6 à la méthode open(), et non undefined
+Tue, 18 Apr 2017 10:11:04 GMT jailed:sandbox RangeError: Invalid array length
+    at e.forEach.e (DYNAMIC PLUGIN:165:16)
+    at Array.forEach (native)
+    at evaluateStudentCode (DYNAMIC PLUGIN:149:41)
+    at DYNAMIC PLUGIN:175:3
+    at ContextifyScript.Script.runInContext (vm.js:35:29)
+    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
+    at Object.exports.runInNewContext (vm.js:72:17)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13-controle/node_modules/jailed-node/sandbox/sandbox.js:151:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13-controle/node_modules/jailed-node/sandbox/sandbox.js:165:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13-controle/node_modules/jailed-node/sandbox/sandbox.js:53:7)
+  | => test runner err: RangeError: Invalid array length at e.forEach.e (DYNAMIC PLUGIN:165:16)
+  | 
+  | // -> EXERCISE POINTS: 0 / 10
+
+  => code score: 10 / 20 pts
+
+=> TOTAL STUDENT SCORE: 10 / 20
+
+
+================================
+
+STUDENT: benjamin_kissous
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code1 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var xhr = new XMLHttpRequest(); 
+  | xhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/posts/8');
+  | xhr.onreadystatechange = function() {
+  |   if (xhr.readyState === 4) {
+  |     alert(xhr.responseText);
+  |   }
+  | };
+  | xhr.send();
+  | 
+  | [+] le programme fonctionne sans erreur
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [+] la méthode open() de l'instance de `XMLHttpRequest` a bien été appelée
+  | [+] `GET` a bien été passé en paramètre de la méthode open()
+  | [+] l'url a bien été passée en paramètre de la méthode open()
+  | [+] une fonction a bien été affectée à la propriété `onreadystatechange` de l'instance
+  | [+] la méthode send() a bien été appelée
+  | [+] le contenu de la propriété `responseText` a bien été affiché dans un alert()
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 10 / 10
+  | 
+  | ------------- EXERCISE: code2 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var xhr = new XMLHttpRequest(); 
+  | xhr.open('GET', 'jsonplaceholder.herokuapp.com/users/');
+  | xhr.onreadystatechange = function() {
+  |   if (xhr.readyState === 4) {
+  |     var reponse = JSON.parse(xhr.responseText);
+  |     var affichage = document.getElementById('phone');
+  |       
+  |     for (var i = 0; i < reponse.length ; i++) {  
+  |         console.log(reponse);
+  |         var id= reponse.id;
+  |         var phone = reponse.phone;
+  |         console.log(id);
+  |         console.log(phone);
+  |         affichage.innerHTML += '<input id="phone" type="text" readonly>' + id +'_' + phone + '_';
+  |     };
+  |   }
+  | };
+  | xhr.send();
+  |         } numero.value = '';
+  |     } 
+  | };
+  | 
+  | var bouton = document.getElementById('bouton');
+  | 
+  | bouton.onclick = function (){
+  |     
+  | }
+  | [-] erreur: Unexpected token }
+  | [-] il fallait affecter une fonction à la propriété `onclick` du bouton
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [+] la méthode send() n'est pas appelée tant que l'utilisateur n'a plas cliqué sur le bouton
+  | --- Simulation de requête pour adhérent numéro 4 ...
+  | [-] erreur après clic sur le bouton: _fakeDom.bouton.onclick is not a function
+  | [-] au clic, il fallait passer l'url https://js-jsonplaceholder.herokuapp.com/users/4 à la méthode open(), et non undefined
+Tue, 18 Apr 2017 10:11:04 GMT jailed:sandbox RangeError: Invalid array length
+    at e.forEach.e (DYNAMIC PLUGIN:201:16)
+    at Array.forEach (native)
+    at evaluateStudentCode (DYNAMIC PLUGIN:185:41)
+    at DYNAMIC PLUGIN:211:3
+    at ContextifyScript.Script.runInContext (vm.js:35:29)
+    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
+    at Object.exports.runInNewContext (vm.js:72:17)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13-controle/node_modules/jailed-node/sandbox/sandbox.js:151:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13-controle/node_modules/jailed-node/sandbox/sandbox.js:165:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13-controle/node_modules/jailed-node/sandbox/sandbox.js:53:7)
+  | => test runner err: RangeError: Invalid array length at e.forEach.e (DYNAMIC PLUGIN:201:16)
+  | 
+  | // -> EXERCISE POINTS: 0 / 10
+
+  => code score: 10 / 20 pts
+
+=> TOTAL STUDENT SCORE: 10 / 20
+
+
+================================
+
+STUDENT: charles_kiefer
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code1 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var xhr = new XMLHttpRequest(); 
+  | xhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/posts/6');
+  | xhr.onreadystatechange = function() {
+  |   if (xhr.readyState === 4) {
+  |     var reponse = JSON.parse(xhr.responseText);
+  |     alert(reponse.name);
+  |   }
+  | };
+  | xhr.send();
+  | [+] le programme fonctionne sans erreur
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [+] la méthode open() de l'instance de `XMLHttpRequest` a bien été appelée
+  | [+] `GET` a bien été passé en paramètre de la méthode open()
+  | [+] l'url a bien été passée en paramètre de la méthode open()
+  | [+] une fonction a bien été affectée à la propriété `onreadystatechange` de l'instance
+  | [+] la méthode send() a bien été appelée
+  | [-] le contenu de la propriété `responseText` devait être affiché dans un alert()
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1, 1, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 8.75 / 10
+  | 
+  | ------------- EXERCISE: code2 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | document.getElementById("bouton").addEventListener('click', function () {
+  | 
+  |   numero = document.getElementById("numero").value;
+  |   
+  | var xhr = new XMLHttpRequest(); 
+  | xhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/users/'+numero, true);
+  | xhr.onreadystatechange = function() {
+  |   if (xhr.readyState === 4) {
+  |     var reponse = JSON.parse(xhr.responseText);
+  |     alert(reponse.name);
+  |   }
+  | };
+  | xhr.send();
+  | });
+  | [-] erreur: document.getElementById(...).addEventListener is not a function
+  | [-] il fallait affecter une fonction à la propriété `onclick` du bouton
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [+] la méthode send() n'est pas appelée tant que l'utilisateur n'a plas cliqué sur le bouton
+Tue, 18 Apr 2017 10:11:05 GMT jailed:sandbox RangeError: Invalid array length
+    at e.forEach.e (DYNAMIC PLUGIN:175:16)
+    at Array.forEach (native)
+    at evaluateStudentCode (DYNAMIC PLUGIN:159:41)
+    at DYNAMIC PLUGIN:185:3
+    at ContextifyScript.Script.runInContext (vm.js:35:29)
+    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
+    at Object.exports.runInNewContext (vm.js:72:17)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13-controle/node_modules/jailed-node/sandbox/sandbox.js:151:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13-controle/node_modules/jailed-node/sandbox/sandbox.js:165:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13-controle/node_modules/jailed-node/sandbox/sandbox.js:53:7)
+  | --- Simulation de requête pour adhérent numéro 4 ...
+  | [-] erreur après clic sur le bouton: _fakeDom.bouton.onclick is not a function
+  | [-] au clic, il fallait passer l'url https://js-jsonplaceholder.herokuapp.com/users/4 à la méthode open(), et non undefined
+  | => test runner err: RangeError: Invalid array length at e.forEach.e (DYNAMIC PLUGIN:175:16)
+  | 
+  | // -> EXERCISE POINTS: 0 / 10
+
+  => code score: 8.75 / 20 pts
+
+=> TOTAL STUDENT SCORE: 8.75 / 20
+
+
+================================
+
+STUDENT: edouard_duchesnedelamotte
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code1 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var xhr = new XMLHttpRequest(); 
+  | xhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/posts/8');
+  | xhr.onreadystatechange = function() {
+  |   if (xhr.readyState === 4) {
+  |     var reponse = (xhr.responseText);
+  |     alert(reponse);
+  |   }
+  | };
+  | xhr.send();
+  | [+] le programme fonctionne sans erreur
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [+] la méthode open() de l'instance de `XMLHttpRequest` a bien été appelée
+  | [+] `GET` a bien été passé en paramètre de la méthode open()
+  | [+] l'url a bien été passée en paramètre de la méthode open()
+  | [+] une fonction a bien été affectée à la propriété `onreadystatechange` de l'instance
+  | [+] la méthode send() a bien été appelée
+  | [+] le contenu de la propriété `responseText` a bien été affiché dans un alert()
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 10 / 10
+  | 
+  | ------------- EXERCISE: code2 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var xhr = new XMLHttpRequest(); 
+  | xhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/users/1');
+  | xhr.onreadystatechange = function() {
+  |   if (xhr.readyState === 4) {
+  |     var reponse = JSON.parse(xhr.responseText);
+  |     alert(reponse.phone);
+  |   }
+  | };
+  | 
+  | xhr.send();
+  | [+] le programme fonctionne sans erreur
+  | [-] il fallait affecter une fonction à la propriété `onclick` du bouton
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [-] il ne fallait pas appeler la méthode send() avant que l'utilisateur clique sur le bouton
+  | --- Simulation de requête pour adhérent numéro 4 ...
+  | [-] erreur après clic sur le bouton: _fakeDom.bouton.onclick is not a function
+  | [-] au clic, il fallait passer l'url https://js-jsonplaceholder.herokuapp.com/users/4 à la méthode open(), et non https://js-jsonplaceholder.herokuapp.com/users/1
+  | [+] au clic, la méthode send() a bien été appelée une fois
+  | [-] la valeur 493-170-9623 x156 aurait du apparaitre dans le champ phone
+  | --- Simulation de requête pour adhérent numéro 6 ...
+  | [-] erreur après clic sur le bouton: _fakeDom.bouton.onclick is not a function
+  | [-] au clic, il fallait passer l'url https://js-jsonplaceholder.herokuapp.com/users/6 à la méthode open(), et non undefined
+Tue, 18 Apr 2017 10:11:05 GMT jailed:sandbox RangeError: Invalid array length
+    at e.forEach.e (DYNAMIC PLUGIN:167:16)
+    at Array.forEach (native)
+    at evaluateStudentCode (DYNAMIC PLUGIN:151:41)
+    at DYNAMIC PLUGIN:177:3
+    at ContextifyScript.Script.runInContext (vm.js:35:29)
+    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
+    at Object.exports.runInNewContext (vm.js:72:17)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13-controle/node_modules/jailed-node/sandbox/sandbox.js:151:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13-controle/node_modules/jailed-node/sandbox/sandbox.js:165:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13-controle/node_modules/jailed-node/sandbox/sandbox.js:53:7)
+  | => test runner err: RangeError: Invalid array length at e.forEach.e (DYNAMIC PLUGIN:167:16)
+  | 
+  | // -> EXERCISE POINTS: 0 / 10
+
+  => code score: 10 / 20 pts
+
+=> TOTAL STUDENT SCORE: 10 / 20
+
+
+================================
+
+STUDENT: florian_compiegne
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code1 (variant: 3) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var xhr = new XMLHttpRequest();
+  | xhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/posts/14');
+  | xhr.onreadystatechange = function() {
+  |   if (xhr.readyState === 4) {
+  |     alert(xhr.responseText);
+  |   }
+  | };
+  | xhr.send();
+  | [+] le programme fonctionne sans erreur
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [+] la méthode open() de l'instance de `XMLHttpRequest` a bien été appelée
+  | [+] `GET` a bien été passé en paramètre de la méthode open()
+  | [+] l'url a bien été passée en paramètre de la méthode open()
+  | [+] une fonction a bien été affectée à la propriété `onreadystatechange` de l'instance
+  | [+] la méthode send() a bien été appelée
+  | [+] le contenu de la propriété `responseText` a bien été affiché dans un alert()
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 10 / 10
+  | 
+  | ------------- EXERCISE: code2 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var bouton = document.getElementById('bouton');
+  | 
+  | bouton.onclick = function () {
+  |     var tags = document.getElementById('numero').value;
+  |         var xhr = new XMLHttpRequest();
+  |         xhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/users/'+tags+');
+  |         xhr.onreadystatechange = function () {
+  |             if (xhr.readyState === 4) {
+  |                 var reponse = JSON.parse(xhr.responseText);
+  |                 console.log(reponse.id)
+  |                 };
+  |                 console.log(reponse.phone)
+  |             }
+  |         };
+  |         xhr.send();
+  |     }
+  | };
+  | [-] erreur: Invalid or unexpected token
+  | [-] il fallait affecter une fonction à la propriété `onclick` du bouton
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [+] la méthode send() n'est pas appelée tant que l'utilisateur n'a plas cliqué sur le bouton
+  | --- Simulation de requête pour adhérent numéro 4 ...
+  | [-] erreur après clic sur le bouton: _fakeDom.bouton.onclick is not a function
+  | [-] au clic, il fallait passer l'url https://js-jsonplaceholder.herokuapp.com/users/4 à la méthode open(), et non undefined
+Tue, 18 Apr 2017 10:11:06 GMT jailed:sandbox RangeError: Invalid array length
+    at e.forEach.e (DYNAMIC PLUGIN:181:16)
+    at Array.forEach (native)
+    at evaluateStudentCode (DYNAMIC PLUGIN:165:41)
+    at DYNAMIC PLUGIN:191:3
+    at ContextifyScript.Script.runInContext (vm.js:35:29)
+    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
+    at Object.exports.runInNewContext (vm.js:72:17)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13-controle/node_modules/jailed-node/sandbox/sandbox.js:151:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13-controle/node_modules/jailed-node/sandbox/sandbox.js:165:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13-controle/node_modules/jailed-node/sandbox/sandbox.js:53:7)
+  | => test runner err: RangeError: Invalid array length at e.forEach.e (DYNAMIC PLUGIN:181:16)
+  | 
+  | // -> EXERCISE POINTS: 0 / 10
+
+  => code score: 10 / 20 pts
+
+=> TOTAL STUDENT SCORE: 10 / 20
+
+
+================================
+
+STUDENT: guillaume_martin
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code1 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var xhr = new XMLHttpRequest(); 
+  | xhr.open('GET' 'https://js-jsonplaceholder.herokuapp.com/posts/4');
+  | xhr.onreadystatechange = function() {
+  |   if (xhr.readyState === 4) {
+  |     var reponse = JSON.parse(xhr.responseText);
+  |     alert(reponse.responseText);
+  |   }
+  | };
+  | xhr.send();
+  | [-] erreur: missing ) after argument list
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [-] il fallait appeler la méthode open() de l'instance de `XMLHttpRequest`
+  | [-] il fallait passer `GET` comme 1er paramètre de la méthode open()
+  | [-] il fallait passer l'url comme 2ème paramètre de la méthode open()
+Tue, 18 Apr 2017 10:11:06 GMT jailed:sandbox Uncaught Exception: TypeError: Cannot read property 'onreadystatechange' of undefined
+    at Timeout.setTimeout (DYNAMIC PLUGIN:79:27)
+    at tryOnTimeout (timers.js:232:11)
+    at Timer.listOnTimeout (timers.js:202:5)
+  | => test runner err: TypeError: Cannot read property 'onreadystatechange' of undefined at Timeout.setTimeout (DYNAMIC PLUGIN:79:27)
+  | 
+  | // -> EXERCISE POINTS: 0 / 10
+  | 
+  | ------------- EXERCISE: code2 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var num = document.getElementById('numero');
+  | tag.onkeydown = function(event) {
+  |         if (event.keyCode === 10) {
+  |             var num = document.getElementById('numero').value;
+  |             if (num === '') {
+  |                 alert('Taper le numéro de téléphone');
+  |             } else {
+  |                 var xhr = new XMLHttpRequest();
+  |                 xhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/users/' + encodeURIComponent(numero) + '&format=json&nojsoncallback=1');
+  |                 xhr.onreadystatechange = function() {
+  |                     if (xhr.readyState === 4) {
+  |                         var reponse = JSON.parse(xhr.responseText);
+  |                         var affichage = document.getElementById('phone');
+  | 
+  |                         for (var i = 0; i < reponse.numero.length; i++) {
+  |                             console.log(reponse.numero[i]);
+  |                             var numero = reponse.numero[i].id;
+  |                             affichage.innerHTML += '<input id="phone" type="text" readonly>' + numero;
+  |                         };
+  |                     }
+  |                 };
+  |                 xhr.send();
+  |             }
+  |                     } tag.value = '';
+  |     } 
+  | };
+  | 
+  | var bouton = document.getElementById('bouton');
+  | 
+  | bouton.onclick = function (){
+  |     
+  | }
+  | [-] erreur: Unexpected token }
+  | [-] il fallait affecter une fonction à la propriété `onclick` du bouton
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [+] la méthode send() n'est pas appelée tant que l'utilisateur n'a plas cliqué sur le bouton
+  | --- Simulation de requête pour adhérent numéro 4 ...
+  | [-] erreur après clic sur le bouton: _fakeDom.bouton.onclick is not a function
+  | [-] au clic, il fallait passer l'url https://js-jsonplaceholder.herokuapp.com/users/4 à la méthode open(), et non undefined
+Tue, 18 Apr 2017 10:11:06 GMT jailed:sandbox RangeError: Invalid array length
+    at e.forEach.e (DYNAMIC PLUGIN:211:16)
+    at Array.forEach (native)
+    at evaluateStudentCode (DYNAMIC PLUGIN:195:41)
+    at DYNAMIC PLUGIN:221:3
+    at ContextifyScript.Script.runInContext (vm.js:35:29)
+    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
+    at Object.exports.runInNewContext (vm.js:72:17)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13-controle/node_modules/jailed-node/sandbox/sandbox.js:151:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13-controle/node_modules/jailed-node/sandbox/sandbox.js:165:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13-controle/node_modules/jailed-node/sandbox/sandbox.js:53:7)
+  | => test runner err: RangeError: Invalid array length at e.forEach.e (DYNAMIC PLUGIN:211:16)
+  | 
+  | // -> EXERCISE POINTS: 0 / 10
+
+  => code score: 0 / 20 pts
+
+=> TOTAL STUDENT SCORE: 0 / 20
+
+
+================================
+
+STUDENT: ilana_bloch
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code1 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var xhr = new XMLHttpRequest(); 
+  | xhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/posts/4');
+  | xhr.onreadystatechange = function afficher() {
+  |   if (xhr.readyState === 4) {
+  |     var reponse = JSON.stringify(xhr.responseText);
+  |     alert(reponse);
+  |   }
+  | };
+  | xhr.send();
+  | [+] le programme fonctionne sans erreur
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [+] la méthode open() de l'instance de `XMLHttpRequest` a bien été appelée
+  | [+] `GET` a bien été passé en paramètre de la méthode open()
+  | [+] l'url a bien été passée en paramètre de la méthode open()
+  | [+] une fonction a bien été affectée à la propriété `onreadystatechange` de l'instance
+  | [+] la méthode send() a bien été appelée
+  | [-] le contenu de la propriété `responseText` devait être affiché dans un alert()
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1, 1, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 8.75 / 10
+  | 
+  | ------------- EXERCISE: code2 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var bouton = document.getElementById('bouton');
+  | 
+  | bouton.onclick = function () {
+  |   var xhr = new XMLHttpRequest(); 
+  |   xhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/users/'+ document.getElementById('numero').value);
+  |   xhr.onreadystatechange = function afficherWeb() {
+  |     if (xhr.readyState === 4) {
+  |       var reponse = JSON.parse(xhr.responseText);
+  |       console.log(reponse.website);
+  |       document.getElementById('website').innerHTML = "rep";
+  |     }
+  |   };
+  |   xhr.send();
+  | }
+  | [+] le programme fonctionne sans erreur
+  | [+] une fonction a bien été affectée à la propriété `onclick` du bouton
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [+] la méthode send() n'est pas appelée tant que l'utilisateur n'a plas cliqué sur le bouton
+  | --- Simulation de requête pour adhérent numéro 4 ...
+  | [+] le programme fonctionne sans erreur quand on clique sur le bouton
+  | [+] au clic, l'url passée en paramètre de la méthode open() est correcte
+  | [+] au clic, la méthode send() a bien été appelée une fois
+  | [-] la valeur kale.biz aurait du apparaitre dans le champ website
+  | --- Simulation de requête pour adhérent numéro 6 ...
+  | [+] le programme fonctionne sans erreur quand on clique sur le bouton
+  | [+] au clic, l'url passée en paramètre de la méthode open() est correcte
+  | [+] au clic, la méthode send() a bien été appelée une fois
+  | [-] la valeur ola.org aurait du apparaitre dans le champ website
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 8.333333333333334 / 10
+
+  => code score: 17.083333333333336 / 20 pts
+
+=> TOTAL STUDENT SCORE: 17.083333333333336 / 20
+
+
+================================
+
+STUDENT: jeanne_vinay
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code1 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var xhr = new XMLHttpRequest(); 
+  | xhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/posts/4');
+  | xhr.onreadystatechange = function() {
+  |   if (xhr.readyState === 4) {
+  |     alert(xhr.responseText);
+  |   }
+  | };
+  | xhr.send();
+  | [+] le programme fonctionne sans erreur
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [+] la méthode open() de l'instance de `XMLHttpRequest` a bien été appelée
+  | [+] `GET` a bien été passé en paramètre de la méthode open()
+  | [+] l'url a bien été passée en paramètre de la méthode open()
+  | [+] une fonction a bien été affectée à la propriété `onreadystatechange` de l'instance
+  | [+] la méthode send() a bien été appelée
+  | [+] le contenu de la propriété `responseText` a bien été affiché dans un alert()
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 10 / 10
+  | 
+  | ------------- EXERCISE: code2 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var bouton = document.getElementById('button')[0];
+  | 
+  | bouton.onclick = function () {
+  |   var xhr = new XMLHttpRequest(); 
+  |   xhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/users/' + 'id');
+  |   xhr.onreadystatechange = function afficherNum() {
+  |     if (xhr.readyState === 4) {
+  |       var reponse = JSON.parse(xhr.responseText);
+  |       var num = document.GetElementById('phone');
+  |       num.innerHTML = num.innerHTML(reponse.phone);
+  |     }
+  |   };
+  |   xhr.send();
+  | }
+  | [-] erreur: Cannot read property '0' of undefined
+  | [-] il fallait affecter une fonction à la propriété `onclick` du bouton
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [+] la méthode send() n'est pas appelée tant que l'utilisateur n'a plas cliqué sur le bouton
+  | --- Simulation de requête pour adhérent numéro 4 ...
+  | [-] erreur après clic sur le bouton: _fakeDom.bouton.onclick is not a function
+  | [-] au clic, il fallait passer l'url https://js-jsonplaceholder.herokuapp.com/users/4 à la méthode open(), et non undefined
+Tue, 18 Apr 2017 10:11:07 GMT jailed:sandbox RangeError: Invalid array length
+    at e.forEach.e (DYNAMIC PLUGIN:175:16)
+    at Array.forEach (native)
+    at evaluateStudentCode (DYNAMIC PLUGIN:159:41)
+    at DYNAMIC PLUGIN:185:3
+    at ContextifyScript.Script.runInContext (vm.js:35:29)
+    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
+    at Object.exports.runInNewContext (vm.js:72:17)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13-controle/node_modules/jailed-node/sandbox/sandbox.js:151:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13-controle/node_modules/jailed-node/sandbox/sandbox.js:165:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13-controle/node_modules/jailed-node/sandbox/sandbox.js:53:7)
+  | => test runner err: RangeError: Invalid array length at e.forEach.e (DYNAMIC PLUGIN:175:16)
+  | 
+  | // -> EXERCISE POINTS: 0 / 10
+
+  => code score: 10 / 20 pts
+
+=> TOTAL STUDENT SCORE: 10 / 20
+
+
+================================
+
+STUDENT: jessy_hachet
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code1 (variant: 3) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var xhr = new XMLHttpRequest();
+  | xhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/posts/14');
+  | xhr.onreadystatechange = function() {
+  |   if (xhr.readyState === 4) {
+  |     alert(xhr.responseText);
+  |   }
+  | };
+  | xhr.send();
+  | [+] le programme fonctionne sans erreur
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [+] la méthode open() de l'instance de `XMLHttpRequest` a bien été appelée
+  | [+] `GET` a bien été passé en paramètre de la méthode open()
+  | [+] l'url a bien été passée en paramètre de la méthode open()
+  | [+] une fonction a bien été affectée à la propriété `onreadystatechange` de l'instance
+  | [+] la méthode send() a bien été appelée
+  | [+] le contenu de la propriété `responseText` a bien été affiché dans un alert()
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 10 / 10
+  | 
+  | ------------- EXERCISE: code2 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | document.getElementById('numero').onclick = function() {
+  | 
+  |   var xhr = new XMLHttpRequest(); 
+  |   xhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/users/'+ numero, true);
+  |   xhr.onreadystatechange = function() {
+  |     if (xhr.readyState === 4) {
+  |         
+  |       console.log(xhr.responseText);
+  |         name.innetHTML;
+  |     }
+  |   };
+  |     
+  |   xhr.send();
+  | };
+  | [+] le programme fonctionne sans erreur
+  | [-] il fallait affecter une fonction à la propriété `onclick` du bouton
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [+] la méthode send() n'est pas appelée tant que l'utilisateur n'a plas cliqué sur le bouton
+  | --- Simulation de requête pour adhérent numéro 4 ...
+  | [-] erreur après clic sur le bouton: _fakeDom.bouton.onclick is not a function
+  | [-] au clic, il fallait passer l'url https://js-jsonplaceholder.herokuapp.com/users/4 à la méthode open(), et non undefined
+Tue, 18 Apr 2017 10:11:07 GMT jailed:sandbox RangeError: Invalid array length
+    at e.forEach.e (DYNAMIC PLUGIN:175:16)
+    at Array.forEach (native)
+    at evaluateStudentCode (DYNAMIC PLUGIN:159:41)
+    at DYNAMIC PLUGIN:185:3
+    at ContextifyScript.Script.runInContext (vm.js:35:29)
+    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
+    at Object.exports.runInNewContext (vm.js:72:17)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13-controle/node_modules/jailed-node/sandbox/sandbox.js:151:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13-controle/node_modules/jailed-node/sandbox/sandbox.js:165:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13-controle/node_modules/jailed-node/sandbox/sandbox.js:53:7)
+  | => test runner err: RangeError: Invalid array length at e.forEach.e (DYNAMIC PLUGIN:175:16)
+  | 
+  | // -> EXERCISE POINTS: 0 / 10
+
+  => code score: 10 / 20 pts
+
+=> TOTAL STUDENT SCORE: 10 / 20
+
+
+================================
+
+STUDENT: kamil_izaret
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code1 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var xhr = new XMLHttpRequest(); 
+  | xhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/posts/8');
+  | xhr.onreadystatechange = function() {
+  |   if (xhr.readyState === 4) {
+  |     alert(xhr);
+  |   }
+  | };
+  | xhr.send();
+  | [+] le programme fonctionne sans erreur
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [+] la méthode open() de l'instance de `XMLHttpRequest` a bien été appelée
+  | [+] `GET` a bien été passé en paramètre de la méthode open()
+  | [+] l'url a bien été passée en paramètre de la méthode open()
+  | [+] une fonction a bien été affectée à la propriété `onreadystatechange` de l'instance
+  | [+] la méthode send() a bien été appelée
+  | [-] le contenu de la propriété `responseText` devait être affiché dans un alert()
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1, 1, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 8.75 / 10
+  | 
+  | ------------- EXERCISE: code2 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | document.getElementById("bouton").addEventListener('click', function () {
+  | 
+  |   q = document.getElementById("numero").value;
+  |   
+  |   request = new XMLHttpRequest;
+  |   request.open('GET', 'https://js-jsonplaceholder.herokuapp.com/users'+q, true);
+  |   
+  |   request.onload = function() {
+  |     if (request.readyState === 4) 
+  |       var reponse = JSON.parse(request.responseText);
+  |       document.getElementById("website").innerHTML = request.website;
+  |   };
+  | 
+  |   request.onerror = function() {
+  |     console.log('connection error');
+  |   };
+  | 
+  |   request.send();
+  | });
+  | [-] erreur: document.getElementById(...).addEventListener is not a function
+  | [-] il fallait affecter une fonction à la propriété `onclick` du bouton
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [+] la méthode send() n'est pas appelée tant que l'utilisateur n'a plas cliqué sur le bouton
+  | --- Simulation de requête pour adhérent numéro 4 ...
+  | [-] erreur après clic sur le bouton: _fakeDom.bouton.onclick is not a function
+  | [-] au clic, il fallait passer l'url https://js-jsonplaceholder.herokuapp.com/users/4 à la méthode open(), et non undefined
+Tue, 18 Apr 2017 10:11:08 GMT jailed:sandbox RangeError: Invalid array length
+    at e.forEach.e (DYNAMIC PLUGIN:185:16)
+    at Array.forEach (native)
+    at evaluateStudentCode (DYNAMIC PLUGIN:169:41)
+    at DYNAMIC PLUGIN:195:3
+    at ContextifyScript.Script.runInContext (vm.js:35:29)
+    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
+    at Object.exports.runInNewContext (vm.js:72:17)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13-controle/node_modules/jailed-node/sandbox/sandbox.js:151:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13-controle/node_modules/jailed-node/sandbox/sandbox.js:165:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13-controle/node_modules/jailed-node/sandbox/sandbox.js:53:7)
+  | => test runner err: RangeError: Invalid array length at e.forEach.e (DYNAMIC PLUGIN:185:16)
+  | 
+  | // -> EXERCISE POINTS: 0 / 10
+
+  => code score: 8.75 / 20 pts
+
+=> TOTAL STUDENT SCORE: 8.75 / 20
+
+
+================================
+
+STUDENT: lara_kounowski
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code1 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var xhr = new XMLHttpRequest(); 
+  | xhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/posts/4');
+  | xhr.onreadystatechange = function() {
+  |   if (xhr.readyState === 4) {
+  |     alert(xhr.responseText);
+  |   }
+  | };
+  | xhr.send();
+  | [+] le programme fonctionne sans erreur
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [+] la méthode open() de l'instance de `XMLHttpRequest` a bien été appelée
+  | [+] `GET` a bien été passé en paramètre de la méthode open()
+  | [+] l'url a bien été passée en paramètre de la méthode open()
+  | [+] une fonction a bien été affectée à la propriété `onreadystatechange` de l'instance
+  | [+] la méthode send() a bien été appelée
+  | [+] le contenu de la propriété `responseText` a bien été affiché dans un alert()
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 10 / 10
+  | 
+  | ------------- EXERCISE: code2 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var xhr = new XMLHttpRequest(); 
+  | xhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/users/');
+  | xhr.onreadystatechange = function() {
+  |   if (xhr.readyState === 4) {
+  |     var reponse = JSON.parse(xhr.responseText);
+  |        var affichage = document.getElementById('name');
+  | 
+  |    			for (var i = 0; i < reponse.id.username.length ; i++) {
+  |                 console.log(reponse.id.username[i]);
+  |                 var id= reponse.id.unsername[i].id;  
+  |                 var name = reponse.id.username[i].name;              
+  |                 var username = reponse.id.username[i].username;
+  |                 console.log(id);
+  |                 console.log(name);
+  |                 console.log(username);
+  |                 affichage.innerHTML += 'https://js-jsonplaceholder.herokuapp.com/users/'+ id +'/'+ name +'_'+ username +'_m.jpg/">'; 
+  |                 }; 
+  |                 alert('Ouvrez votre console avec ctrl + maj + j pour accéder aux informations de la personne demandée');
+  |   }
+  | };
+  | xhr.send();
+  | [+] le programme fonctionne sans erreur
+  | [-] il fallait affecter une fonction à la propriété `onclick` du bouton
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [-] il ne fallait pas appeler la méthode send() avant que l'utilisateur clique sur le bouton
+  | --- Simulation de requête pour adhérent numéro 4 ...
+  | [-] erreur après clic sur le bouton: _fakeDom.bouton.onclick is not a function
+  | [-] au clic, il fallait passer l'url https://js-jsonplaceholder.herokuapp.com/users/4 à la méthode open(), et non https://js-jsonplaceholder.herokuapp.com/users/
+  | [+] au clic, la méthode send() a bien été appelée une fois
+  | [-] la valeur Patricia Lebsack aurait du apparaitre dans le champ name
+  | --- Simulation de requête pour adhérent numéro 6 ...
+  | [-] erreur après clic sur le bouton: _fakeDom.bouton.onclick is not a function
+  | [-] au clic, il fallait passer l'url https://js-jsonplaceholder.herokuapp.com/users/6 à la méthode open(), et non undefined
+Tue, 18 Apr 2017 10:11:08 GMT jailed:sandbox RangeError: Invalid array length
+    at e.forEach.e (DYNAMIC PLUGIN:189:16)
+    at Array.forEach (native)
+    at evaluateStudentCode (DYNAMIC PLUGIN:173:41)
+    at DYNAMIC PLUGIN:199:3
+    at ContextifyScript.Script.runInContext (vm.js:35:29)
+    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
+    at Object.exports.runInNewContext (vm.js:72:17)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13-controle/node_modules/jailed-node/sandbox/sandbox.js:151:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13-controle/node_modules/jailed-node/sandbox/sandbox.js:165:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13-controle/node_modules/jailed-node/sandbox/sandbox.js:53:7)
+  | => test runner err: RangeError: Invalid array length at e.forEach.e (DYNAMIC PLUGIN:189:16)
+  | 
+  | // -> EXERCISE POINTS: 0 / 10
+
+  => code score: 10 / 20 pts
+
+=> TOTAL STUDENT SCORE: 10 / 20
+
+
+================================
+
+STUDENT: louis_gosse
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code1 (variant: 3) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var xhr = new XMLHttpRequest(); 
+  | xhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/posts/14');
+  | xhr.onreadystatechange = function() {
+  |   if (xhr.readyState === 4) {
+  |     console.log('response' , xhr.responseText);
+  |     var reponse = JSON.parse(xhr.responseText);
+  |     alert(reponse.name);
+  |   }
+  | };
+  | xhr.send();
+  | [+] le programme fonctionne sans erreur
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [+] la méthode open() de l'instance de `XMLHttpRequest` a bien été appelée
+  | [+] `GET` a bien été passé en paramètre de la méthode open()
+  | [+] l'url a bien été passée en paramètre de la méthode open()
+  | [+] une fonction a bien été affectée à la propriété `onreadystatechange` de l'instance
+  | [+] la méthode send() a bien été appelée
+  | [-] le contenu de la propriété `responseText` devait être affiché dans un alert()
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1, 1, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 8.75 / 10
+  | 
+  | ------------- EXERCISE: code2 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var reponse = document.getElementById('numero')
+  | 
+  | var xhr = new XMLHttpRequest();
+  |   xhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/users/<numero>');
+  |  xhr.onreadystatechange = function() {
+  |     if (xhr.readyState === 4) {
+  |       console.log('', xhr.responseText);
+  |       var responseObject = JSON.parse(xhr.responseText);
+  | 
+  |        }
+  |     }
+  |   };
+  | 
+  | xhr.send(JSON.stringify({
+  | numero: numero.value,
+  |     token: window.token,}));
+  | }
+  | [-] erreur: Unexpected token }
+  | [-] il fallait affecter une fonction à la propriété `onclick` du bouton
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [+] la méthode send() n'est pas appelée tant que l'utilisateur n'a plas cliqué sur le bouton
+  | --- Simulation de requête pour adhérent numéro 4 ...
+  | [-] erreur après clic sur le bouton: _fakeDom.bouton.onclick is not a function
+  | [-] au clic, il fallait passer l'url https://js-jsonplaceholder.herokuapp.com/users/4 à la méthode open(), et non undefined
+Tue, 18 Apr 2017 10:11:08 GMT jailed:sandbox RangeError: Invalid array length
+    at e.forEach.e (DYNAMIC PLUGIN:181:16)
+    at Array.forEach (native)
+    at evaluateStudentCode (DYNAMIC PLUGIN:165:41)
+    at DYNAMIC PLUGIN:191:3
+    at ContextifyScript.Script.runInContext (vm.js:35:29)
+    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
+    at Object.exports.runInNewContext (vm.js:72:17)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13-controle/node_modules/jailed-node/sandbox/sandbox.js:151:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13-controle/node_modules/jailed-node/sandbox/sandbox.js:165:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13-controle/node_modules/jailed-node/sandbox/sandbox.js:53:7)
+  | => test runner err: RangeError: Invalid array length at e.forEach.e (DYNAMIC PLUGIN:181:16)
+  | 
+  | // -> EXERCISE POINTS: 0 / 10
+
+  => code score: 8.75 / 20 pts
+
+=> TOTAL STUDENT SCORE: 8.75 / 20
+
+
+================================
+
+STUDENT: pierre_salesse
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code1 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var xhr = new XMLHttpRequest(); 
+  | xhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/posts/6');
+  | xhr.onreadystatechange = function() {
+  |   if (xhr.readyState === 4) {
+  |     alert(xhr.responseText);
+  |   }
+  | };
+  | xhr.send();
+  | [+] le programme fonctionne sans erreur
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [+] la méthode open() de l'instance de `XMLHttpRequest` a bien été appelée
+  | [+] `GET` a bien été passé en paramètre de la méthode open()
+  | [+] l'url a bien été passée en paramètre de la méthode open()
+  | [+] une fonction a bien été affectée à la propriété `onreadystatechange` de l'instance
+  | [+] la méthode send() a bien été appelée
+  | [+] le contenu de la propriété `responseText` a bien été affiché dans un alert()
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 10 / 10
+  | 
+  | ------------- EXERCISE: code2 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var bouton = document.getElementById('submit');
+  | 
+  | bouton.onclick = function () {
+  |   var num = document.getElementById('numero').value;
+  |     if (tags === '') {
+  |       alert('Veuillez écrire un numéro de téléphone');
+  |     }
+  |     else {
+  |       var xhr = new XMLHttpRequest();
+  |       xhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/users/' + encodeURIComponent(num) + '&format=json&nojsoncallback=1');
+  |       xhr.onreadystatechange = function () {
+  |         if (xhr.readyState === 4) {
+  |           var reponse = JSON.parse(xhr.responseText);
+  |             for (var i = 0; i < num.length ; i++) {
+  |               document.getElementById('phone').innerHTML += '<p>' + reponse.num[i] + '</p>' ;
+  | 
+  |                 };
+  |   
+  |             }
+  |         };
+  |         xhr.send();
+  |     }
+  | };
+  | 
+  | [-] erreur: Cannot set property 'onclick' of undefined
+  | [-] il fallait affecter une fonction à la propriété `onclick` du bouton
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [+] la méthode send() n'est pas appelée tant que l'utilisateur n'a plas cliqué sur le bouton
+  | --- Simulation de requête pour adhérent numéro 4 ...
+  | [-] erreur après clic sur le bouton: _fakeDom.bouton.onclick is not a function
+  | [-] au clic, il fallait passer l'url https://js-jsonplaceholder.herokuapp.com/users/4 à la méthode open(), et non undefined
+Tue, 18 Apr 2017 10:11:09 GMT jailed:sandbox RangeError: Invalid array length
+    at e.forEach.e (DYNAMIC PLUGIN:195:16)
+    at Array.forEach (native)
+    at evaluateStudentCode (DYNAMIC PLUGIN:179:41)
+    at DYNAMIC PLUGIN:205:3
+    at ContextifyScript.Script.runInContext (vm.js:35:29)
+    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
+    at Object.exports.runInNewContext (vm.js:72:17)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13-controle/node_modules/jailed-node/sandbox/sandbox.js:151:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13-controle/node_modules/jailed-node/sandbox/sandbox.js:165:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13-controle/node_modules/jailed-node/sandbox/sandbox.js:53:7)
+  | => test runner err: RangeError: Invalid array length at e.forEach.e (DYNAMIC PLUGIN:195:16)
+  | 
+  | // -> EXERCISE POINTS: 0 / 10
+
+  => code score: 10 / 20 pts
+
+=> TOTAL STUDENT SCORE: 10 / 20
+
+
+================================
+
+STUDENT: quentin_champenois
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code1 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var xhr = new XMLHttpRequest(); 
+  | xhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/posts/6');
+  | xhr.onreadystatechange = function() {
+  |   if (xhr.readyState === 4) {
+  |     var reponse = xhr.responseText;
+  |     alert(reponse);
+  |   }
+  | };
+  | xhr.send();
+  | 
+  | [+] le programme fonctionne sans erreur
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [+] la méthode open() de l'instance de `XMLHttpRequest` a bien été appelée
+  | [+] `GET` a bien été passé en paramètre de la méthode open()
+  | [+] l'url a bien été passée en paramètre de la méthode open()
+  | [+] une fonction a bien été affectée à la propriété `onreadystatechange` de l'instance
+  | [+] la méthode send() a bien été appelée
+  | [+] le contenu de la propriété `responseText` a bien été affiché dans un alert()
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 10 / 10
+  | 
+  | ------------- EXERCISE: code2 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var bouton = document.getElementById('bouton');
+  | bouton.onclick = function() {
+  |   var numero = document.getElementById('numero').value;
+  |   var xhr = new XMLHttpRequest(); 
+  |   xhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/users/'+ numero 
+  |   +'');
+  |   xhr.onreadystatechange = function() {
+  |     if (xhr.readyState === 4) {
+  |       var reponse = JSON.parse(xhr.responseText);
+  |       var website = document.getElementById('website');
+  |       website.value = reponse.website;
+  |     }
+  |   };
+  |   xhr.send();
+  | }
+  | [+] le programme fonctionne sans erreur
+  | [+] une fonction a bien été affectée à la propriété `onclick` du bouton
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [+] la méthode send() n'est pas appelée tant que l'utilisateur n'a plas cliqué sur le bouton
+  | --- Simulation de requête pour adhérent numéro 4 ...
+  | [+] le programme fonctionne sans erreur quand on clique sur le bouton
+  | [+] au clic, l'url passée en paramètre de la méthode open() est correcte
+  | [+] au clic, la méthode send() a bien été appelée une fois
+  | [+] la valeur kale.biz a bien été affichée dans le champ website
+  | --- Simulation de requête pour adhérent numéro 6 ...
+  | [+] le programme fonctionne sans erreur quand on clique sur le bouton
+  | [+] au clic, l'url passée en paramètre de la méthode open() est correcte
+  | [+] au clic, la méthode send() a bien été appelée une fois
+  | [+] la valeur ola.org a bien été affichée dans le champ website
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 10 / 10
+
+  => code score: 20 / 20 pts
+
+=> TOTAL STUDENT SCORE: 20 / 20
+
+
+================================
+
+STUDENT: raphael_parets
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code1 (variant: 3) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  |   var query = new XMLHttpRequest(); 
+  |   query.open('GET', 'https://js-jsonplaceholder.herokuapp.com/posts/14');
+  |   query.onreadystatechange = function() {
+  |     if (query.readyState === 4) {
+  |       var reponse = JSON.parse(query.responseText);
+  |       alert(reponse);
+  |     }
+  |   };
+  | query.send();
+  | [+] le programme fonctionne sans erreur
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [+] la méthode open() de l'instance de `XMLHttpRequest` a bien été appelée
+  | [+] `GET` a bien été passé en paramètre de la méthode open()
+  | [+] l'url a bien été passée en paramètre de la méthode open()
+  | [+] une fonction a bien été affectée à la propriété `onreadystatechange` de l'instance
+  | [+] la méthode send() a bien été appelée
+  | [-] le contenu de la propriété `responseText` devait être affiché dans un alert()
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1, 1, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 8.75 / 10
+  | 
+  | ------------- EXERCISE: code2 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var n = document.getElementById('numero').innerHTML;
+  | var p = document.getElementById('phone').innerHTML;
+  | 
+  | document.getElementById('bouton').onclick = function requete(){
+  |   var query = new XMLHttpRequest(); 
+  |   query.open('GET', 'https://js-jsonplaceholder.herokuapp.com/users/' + n);
+  |   query.onreadystatechange = function() {
+  |     if (query.readyState === 4) {
+  |       var reponse = JSON.parse(query.responseText);
+  |       p = reponse.phone;
+  |     }
+  |   };
+  | query.send();
+  | }
+  | [+] le programme fonctionne sans erreur
+  | [+] une fonction a bien été affectée à la propriété `onclick` du bouton
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [+] la méthode send() n'est pas appelée tant que l'utilisateur n'a plas cliqué sur le bouton
+  | --- Simulation de requête pour adhérent numéro 4 ...
+  | [+] le programme fonctionne sans erreur quand on clique sur le bouton
+  | [-] au clic, il fallait passer l'url https://js-jsonplaceholder.herokuapp.com/users/4 à la méthode open(), et non https://js-jsonplaceholder.herokuapp.com/users/undefined
+  | [+] au clic, la méthode send() a bien été appelée une fois
+  | [-] la valeur 493-170-9623 x156 aurait du apparaitre dans le champ phone
+  | --- Simulation de requête pour adhérent numéro 6 ...
+  | [+] le programme fonctionne sans erreur quand on clique sur le bouton
+  | [-] au clic, il fallait passer l'url https://js-jsonplaceholder.herokuapp.com/users/6 à la méthode open(), et non https://js-jsonplaceholder.herokuapp.com/users/undefined
+  | [+] au clic, la méthode send() a bien été appelée une fois
+  | [-] la valeur 1-477-935-8478 x6430 aurait du apparaitre dans le champ phone
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 6.666666666666666 / 10
+
+  => code score: 15.416666666666668 / 20 pts
+
+=> TOTAL STUDENT SCORE: 15.416666666666668 / 20
+
+
+================================
+
+STUDENT: theo_geay
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code1 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var xhr = new XMLHttpRequest();
+  | xhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/posts/6');
+  | xhr.onreadystatechange = function() {
+  |   if (xhr.readyState === 4) {
+  |     alert(xhr.responseText);
+  |   }
+  | };
+  | xhr.send();
+  | [+] le programme fonctionne sans erreur
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [+] la méthode open() de l'instance de `XMLHttpRequest` a bien été appelée
+  | [+] `GET` a bien été passé en paramètre de la méthode open()
+  | [+] l'url a bien été passée en paramètre de la méthode open()
+  | [+] une fonction a bien été affectée à la propriété `onreadystatechange` de l'instance
+  | [+] la méthode send() a bien été appelée
+  | [+] le contenu de la propriété `responseText` a bien été affiché dans un alert()
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 10 / 10
+  | 
+  | ------------- EXERCISE: code2 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  |             var numero = document.getElementById("numero");
+  |             var phone = document.getElementById("phone");
+  | 
+  |             var xhr = new XMLHttpRequest();
+  |             xhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/users/10';
+  |             xhr.onreadystatechange = function() {
+  |                 if (xhr.readyState === 4) {
+  |                     var tel = reponse.phone;
+  |                     phone.innerHTML = tel;
+  |                 }
+  |             };
+  |             xhr.send();
+  | [-] erreur: missing ) after argument list
+  | [-] il fallait affecter une fonction à la propriété `onclick` du bouton
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [+] la méthode send() n'est pas appelée tant que l'utilisateur n'a plas cliqué sur le bouton
+  | --- Simulation de requête pour adhérent numéro 4 ...
+  | [-] erreur après clic sur le bouton: _fakeDom.bouton.onclick is not a function
+  | [-] au clic, il fallait passer l'url https://js-jsonplaceholder.herokuapp.com/users/4 à la méthode open(), et non undefined
+Tue, 18 Apr 2017 10:11:10 GMT jailed:sandbox RangeError: Invalid array length
+    at e.forEach.e (DYNAMIC PLUGIN:171:16)
+    at Array.forEach (native)
+    at evaluateStudentCode (DYNAMIC PLUGIN:155:41)
+    at DYNAMIC PLUGIN:181:3
+    at ContextifyScript.Script.runInContext (vm.js:35:29)
+    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
+    at Object.exports.runInNewContext (vm.js:72:17)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13-controle/node_modules/jailed-node/sandbox/sandbox.js:151:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13-controle/node_modules/jailed-node/sandbox/sandbox.js:165:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13-controle/node_modules/jailed-node/sandbox/sandbox.js:53:7)
+  | => test runner err: RangeError: Invalid array length at e.forEach.e (DYNAMIC PLUGIN:171:16)
+  | 
+  | // -> EXERCISE POINTS: 0 / 10
+
+  => code score: 10 / 20 pts
+
+=> TOTAL STUDENT SCORE: 10 / 20
+
+
+================================
+
+STUDENT: thibault_chambrillon
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code1 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var xhr = new XMLHttpRequest(); 
+  | xhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/posts/8');
+  | xhr.onreadystatechange = function() {
+  |   if (xhr.readyState === 4) {
+  |     alert(xhr.responseText);
+  |   }
+  | };
+  | xhr.send();
+  | [+] le programme fonctionne sans erreur
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [+] la méthode open() de l'instance de `XMLHttpRequest` a bien été appelée
+  | [+] `GET` a bien été passé en paramètre de la méthode open()
+  | [+] l'url a bien été passée en paramètre de la méthode open()
+  | [+] une fonction a bien été affectée à la propriété `onreadystatechange` de l'instance
+  | [+] la méthode send() a bien été appelée
+  | [+] le contenu de la propriété `responseText` a bien été affiché dans un alert()
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 10 / 10
+  | 
+  | ------------- EXERCISE: code2 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | document.getElementById("bouton").addEventListener('click', function () {
+  | 
+  |   q = document.getElementById("numero").value;
+  |   
+  |   request = new XMLHttpRequest;
+  |   request.open('GET', 'https://js-jsonplaceholder.herokuapp.com/users/<numero>'+q, true);
+  |   
+  |   request.onload = function() {
+  |     if (request.status >= 200 && request.status < 400){
+  |       data = JSON.parse(request.responseText).numero;
+  |       console.log(numero);
+  |       document.getElementById("phone").innerHTML = '';
+  |     } else {
+  |       console.log('API returned an error');
+  |      }
+  |   };
+  | 
+  |   request.onerror = function() {
+  |     console.log('connection error');
+  |   };
+  | 
+  |   request.send();
+  | });
+  |   request.send();
+  | });
+  | [-] erreur: Unexpected token }
+  | [-] il fallait affecter une fonction à la propriété `onclick` du bouton
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [+] la méthode send() n'est pas appelée tant que l'utilisateur n'a plas cliqué sur le bouton
+  | --- Simulation de requête pour adhérent numéro 4 ...
+  | [-] erreur après clic sur le bouton: _fakeDom.bouton.onclick is not a function
+  | [-] au clic, il fallait passer l'url https://js-jsonplaceholder.herokuapp.com/users/4 à la méthode open(), et non undefined
+Tue, 18 Apr 2017 10:11:10 GMT jailed:sandbox RangeError: Invalid array length
+    at e.forEach.e (DYNAMIC PLUGIN:197:16)
+    at Array.forEach (native)
+    at evaluateStudentCode (DYNAMIC PLUGIN:181:41)
+    at DYNAMIC PLUGIN:207:3
+    at ContextifyScript.Script.runInContext (vm.js:35:29)
+    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
+    at Object.exports.runInNewContext (vm.js:72:17)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13-controle/node_modules/jailed-node/sandbox/sandbox.js:151:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13-controle/node_modules/jailed-node/sandbox/sandbox.js:165:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13-controle/node_modules/jailed-node/sandbox/sandbox.js:53:7)
+  | => test runner err: RangeError: Invalid array length at e.forEach.e (DYNAMIC PLUGIN:197:16)
+  | 
+  | // -> EXERCISE POINTS: 0 / 10
+
+  => code score: 10 / 20 pts
+
+=> TOTAL STUDENT SCORE: 10 / 20
+
+
+================================
+
+STUDENT: timothee_ong
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code1 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var xhr = new XMLHttpRequest(); 
+  | xhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/posts/4');
+  | xhr.onreadystatechange = function() {
+  |   if (xhr.readyState === 4) {
+  |     alert(xhr.responseText);
+  |   }
+  | };
+  | xhr.send();
+  | [+] le programme fonctionne sans erreur
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [+] la méthode open() de l'instance de `XMLHttpRequest` a bien été appelée
+  | [+] `GET` a bien été passé en paramètre de la méthode open()
+  | [+] l'url a bien été passée en paramètre de la méthode open()
+  | [+] une fonction a bien été affectée à la propriété `onreadystatechange` de l'instance
+  | [+] la méthode send() a bien été appelée
+  | [+] le contenu de la propriété `responseText` a bien été affiché dans un alert()
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 10 / 10
+  | 
+  | ------------- EXERCISE: code2 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | document.getElementById("button").addEventListener('click', function () {
+  | 	q = document.getElementById('numero').value;
+  | 	
+  | 	request = new XMLHttpRequest;
+  | 	request.open('GET', 'https://js-jsonplaceholder.herokuapp.com/users/'+q, true);
+  | 	
+  | 	request.onload = function() {
+  | 		if (request.status >= 200 && request.status < 400){
+  | 			data = JSON.parse(request.responseText).data.image_url;
+  | 			console.log(data);
+  | 			document.getElementById("phone").innerHTML = '<center><a href="'+data+'" target="_blank"><img width="500px" src = "'+data+'"  title="GIF via Giphy" id="gif"></a></center>';;
+  | 		} else {
+  | 			console.log('reached giphy, but API returned an error');
+  | 		 }
+  | 	};
+  | 
+  | 	request.onerror = function() {
+  | 		console.log('connection error');
+  | 	};
+  | 
+  | 	request.send();
+  | });
+  | [-] erreur: Cannot read property 'addEventListener' of undefined
+  | [-] il fallait affecter une fonction à la propriété `onclick` du bouton
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [+] la méthode send() n'est pas appelée tant que l'utilisateur n'a plas cliqué sur le bouton
+  | --- Simulation de requête pour adhérent numéro 4 ...
+  | [-] erreur après clic sur le bouton: _fakeDom.bouton.onclick is not a function
+  | [-] au clic, il fallait passer l'url https://js-jsonplaceholder.herokuapp.com/users/4 à la méthode open(), et non undefined
+Tue, 18 Apr 2017 10:11:11 GMT jailed:sandbox RangeError: Invalid array length
+    at e.forEach.e (DYNAMIC PLUGIN:191:16)
+    at Array.forEach (native)
+    at evaluateStudentCode (DYNAMIC PLUGIN:175:41)
+    at DYNAMIC PLUGIN:201:3
+    at ContextifyScript.Script.runInContext (vm.js:35:29)
+    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
+    at Object.exports.runInNewContext (vm.js:72:17)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13-controle/node_modules/jailed-node/sandbox/sandbox.js:151:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13-controle/node_modules/jailed-node/sandbox/sandbox.js:165:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13-controle/node_modules/jailed-node/sandbox/sandbox.js:53:7)
+  | => test runner err: RangeError: Invalid array length at e.forEach.e (DYNAMIC PLUGIN:191:16)
+  | 
+  | // -> EXERCISE POINTS: 0 / 10
+
+  => code score: 10 / 20 pts
+
+=> TOTAL STUDENT SCORE: 10 / 20
+
+
+================================
+
+STUDENT: victor_legac
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code1 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var xhr = new XMLHttpRequest(); 
+  | xhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/posts/8');
+  | xhr.onreadystatechange = function() {
+  |   if (xhr.readyState === 8) {
+  |     var reponse = JSON.parse(xhr.body);
+  |     alert(reponse);
+  |   }
+  | };
+  | xhr.send();
+  | [+] le programme fonctionne sans erreur
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [+] la méthode open() de l'instance de `XMLHttpRequest` a bien été appelée
+  | [+] `GET` a bien été passé en paramètre de la méthode open()
+  | [+] l'url a bien été passée en paramètre de la méthode open()
+  | [+] une fonction a bien été affectée à la propriété `onreadystatechange` de l'instance
+  | [+] la méthode send() a bien été appelée
+  | [-] le contenu de la propriété `responseText` devait être affiché dans un alert()
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1, 1, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 8.75 / 10
+  | 
+  | ------------- EXERCISE: code2 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | document.addEventListener('DOMContentLoaded', function () {
+  |   q = document.getElementById('numero').value; // search query
+  |   request = new XMLHttpRequest;
+  |   request.open('GET', 'https://js-jsonplaceholder.herokuapp.com/users/'+q), 
+  |   request.onload = function() {
+  |     if (request.status >= 200 && request.status < 400){
+  |       data = JSON.parse(request.username);
+  |       console.log(data.request);
+  |       document.getElementById("website").innerHTML = data;
+  |     } else { 
+  |         console.log('API returned an error');
+  |     }
+  |  };
+  | 
+  |   request.onerror = function() {
+  |   console.log('connection error');
+  |   };
+  | 
+  |   request.send();
+  | });
+  | [-] erreur: document.addEventListener is not a function
+  | [-] il fallait affecter une fonction à la propriété `onclick` du bouton
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [+] la méthode send() n'est pas appelée tant que l'utilisateur n'a plas cliqué sur le bouton
+  | --- Simulation de requête pour adhérent numéro 4 ...
+  | [-] erreur après clic sur le bouton: _fakeDom.bouton.onclick is not a function
+  | [-] au clic, il fallait passer l'url https://js-jsonplaceholder.herokuapp.com/users/4 à la méthode open(), et non undefined
+Tue, 18 Apr 2017 10:11:11 GMT jailed:sandbox RangeError: Invalid array length
+    at e.forEach.e (DYNAMIC PLUGIN:187:16)
+    at Array.forEach (native)
+    at evaluateStudentCode (DYNAMIC PLUGIN:171:41)
+    at DYNAMIC PLUGIN:197:3
+    at ContextifyScript.Script.runInContext (vm.js:35:29)
+    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
+    at Object.exports.runInNewContext (vm.js:72:17)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13-controle/node_modules/jailed-node/sandbox/sandbox.js:151:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13-controle/node_modules/jailed-node/sandbox/sandbox.js:165:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13-controle/node_modules/jailed-node/sandbox/sandbox.js:53:7)
+  | => test runner err: RangeError: Invalid array length at e.forEach.e (DYNAMIC PLUGIN:187:16)
+  | 
+  | // -> EXERCISE POINTS: 0 / 10
+
+  => code score: 8.75 / 20 pts
+
+=> TOTAL STUDENT SCORE: 8.75 / 20
+
+
+================================
+
+STUDENT: victoria_antalis
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code1 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var xhr = new XMLHttpRequest();
+  | xhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/posts/4');
+  | xhr.onreadystatechange = function() {
+  |   if (xhr.readyState === 4) {
+  |     alert('xhr.responseText');
+  |   }
+  | };
+  | xhr.send();
+  | [+] le programme fonctionne sans erreur
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [+] la méthode open() de l'instance de `XMLHttpRequest` a bien été appelée
+  | [+] `GET` a bien été passé en paramètre de la méthode open()
+  | [+] l'url a bien été passée en paramètre de la méthode open()
+  | [+] une fonction a bien été affectée à la propriété `onreadystatechange` de l'instance
+  | [+] la méthode send() a bien été appelée
+  | [-] le contenu de la propriété `responseText` devait être affiché dans un alert()
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1, 1, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 8.75 / 10
+  | 
+  | ------------- EXERCISE: code2 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var bouton = document.getElementById('bouton');
+  | bouton.onlick = function (){
+  |   var question = document.getElementById('numero').value;
+  |   var xhr = new XMLHttpRequest();
+  |     xhr.open('GET', ' https://js-jsonplaceholder.herokuapp.com/users/1');
+  |     xhr.onreadystatechange = function(){
+  |       if (xhr.readyState === 1){
+  |         var reponse = document.getElementById('name').value;
+  |       }
+  |     }
+  |   };
+  |   xhr.send();
+  | 
+  | [-] erreur: xhr is not defined
+  | [-] il fallait affecter une fonction à la propriété `onclick` du bouton
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [+] la méthode send() n'est pas appelée tant que l'utilisateur n'a plas cliqué sur le bouton
+  | --- Simulation de requête pour adhérent numéro 4 ...
+  | [-] erreur après clic sur le bouton: _fakeDom.bouton.onclick is not a function
+  | [-] au clic, il fallait passer l'url https://js-jsonplaceholder.herokuapp.com/users/4 à la méthode open(), et non undefined
+Tue, 18 Apr 2017 10:11:12 GMT jailed:sandbox RangeError: Invalid array length
+    at e.forEach.e (DYNAMIC PLUGIN:173:16)
+    at Array.forEach (native)
+    at evaluateStudentCode (DYNAMIC PLUGIN:157:41)
+    at DYNAMIC PLUGIN:183:3
+    at ContextifyScript.Script.runInContext (vm.js:35:29)
+    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
+    at Object.exports.runInNewContext (vm.js:72:17)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13-controle/node_modules/jailed-node/sandbox/sandbox.js:151:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13-controle/node_modules/jailed-node/sandbox/sandbox.js:165:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13-controle/node_modules/jailed-node/sandbox/sandbox.js:53:7)
+  | => test runner err: RangeError: Invalid array length at e.forEach.e (DYNAMIC PLUGIN:173:16)
+  | 
+  | // -> EXERCISE POINTS: 0 / 10
+
+  => code score: 8.75 / 20 pts
+
+=> TOTAL STUDENT SCORE: 8.75 / 20
