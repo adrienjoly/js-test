@@ -295,6 +295,7 @@ Solution complète: [jsfiddle](https://jsfiddle.net/hsg50xk5/)
     var expectedValue = JSON.parse(_expectedResponses[expectedUrl]).{{prop}};
     // run student's onclick handler
     _fakeDom.numero.value = numero;
+    _sends = [];
     try { _fakeDom.bouton.onclick({}) } catch (e) { error = e }
     var providedUrl = _urls.shift();
     // run tests
@@ -305,7 +306,7 @@ Solution complète: [jsfiddle](https://jsfiddle.net/hsg50xk5/)
       providedUrl !== expectedUrl
         ? res(0, `au clic, il fallait passer l\'url ${expectedUrl} à la méthode open(), et non ${providedUrl}`)
         : res(1, `au clic, l\'url passée en paramètre de la méthode open() est correcte`),
-      --_sends.length !== 0
+      _sends.length !== 1
         ? res(0, 'au clic, il fallait appeler la méthode send() une fois pour envoyer la requête')
         : res(1, 'au clic, la méthode send() a bien été appelée une fois'),
       _fakeDom.{{prop}}.value !== expectedValue
