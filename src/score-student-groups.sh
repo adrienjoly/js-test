@@ -2,7 +2,7 @@
 
 # syntax: ./score-student-groups.sh ./student-groups/*.json
 
-rm ./exam-data/scores.csv
+rm ./exam-data/scores.csv &>/dev/null
 
 for f in $*;
 do
