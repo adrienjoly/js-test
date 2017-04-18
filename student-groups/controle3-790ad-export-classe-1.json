@@ -1,0 +1,191 @@
+{
+  "active" : 0,
+  "submissions" : {
+    "alexandre_louf" : {
+      "_d" : "Tue Apr 18 2017 12:50:21 GMT+0200 (Paris, Madrid (heure d’été))",
+      "_f" : "Tue Apr 18 2017 12:27:16 GMT+0200 (Paris, Madrid (heure d’été))",
+      "_ft" : 1492511236452,
+      "_submitted" : true,
+      "_t" : 1492512621376,
+      "_uid" : "108721198866205828934",
+      "code1" : "var xhr = new XMLHttpRequest(); \nxhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/posts/8');\nxhr.onreadystatechange = function() {\n  if (xhr.readyState === 4) {\n  alert(xhr.responseText);\n  }\n};\nxhr.send();",
+      "code2" : "var bouton = document.getElementById('bouton');\nvar resultat = document.getElementById('website');\n\nbouton.onclick = function (){\n  var input = document.getElementById('numero').value;\n  var xhr = new XMLHttpRequest(); \n  xhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/users/' + input);\n  xhr.onreadystatechange = function() {\n    if (xhr.readyState === 4) {\n      var reponse = JSON.parse(xhr.responseText);\n      resultat.value = reponse.website;\n    }\n  }\n  xhr.send();\n}"
+    },
+    "benoit_boureau" : {
+      "_d" : "Tue Apr 18 2017 12:59:12 GMT+0200 (Paris, Madrid (heure d’été))",
+      "_f" : "Tue Apr 18 2017 12:27:48 GMT+0200 (Paris, Madrid (heure d’été))",
+      "_ft" : 1492511269270,
+      "_submitted" : true,
+      "_t" : 1492513152016,
+      "_uid" : "112650082341843561427",
+      "code1" : "var xhr = new XMLHttpRequest(); \nxhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/posts/14');\nxhr.onreadystatechange = function() {\nif (xhr.readyState === 4) {\n  var reponse = JSON.parse(xhr.responseText);\n  alert(reponse.body);\n  }\n};\nxhr.send();",
+      "code2" : "function annuaire(){\n  var xhr = new XMLHttpRequest(); \n  xhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/users/' + document.getElementById(chercher););\n  xhr.onreadystatechange = function() {\n    if (xhr.readyState === 4) {\n      var objet = JSON.parse(xhr.responseText);\n        alert(reponse.phone);\n    }\n  };\nxhr.send();\n}"
+    },
+    "charles_rodriguez" : {
+      "_d" : "Tue Apr 18 2017 12:59:07 GMT+0200 (CEST)",
+      "_f" : "Tue Apr 18 2017 12:29:57 GMT+0200 (CEST)",
+      "_ft" : 1492511392141,
+      "_submitted" : true,
+      "_t" : 1492513147670,
+      "_uid" : "113169719364480526397",
+      "code1" : "var xhr = new XMLHttpRequest(); \nxhr.open('GET','https://js-jsonplaceholder.herokuapp.com/posts/6)');\nxhr.onreadystatechange = function() {\n\tif (xhr.readyState === 4) {\n\t\tconsole.log(xhr.reponseText);\n\t\tvar reponse = JSON.parse(xhr.reponseText);\n\t\talert(reponse.Text[4])\n\t}\n};\nxhr.send();\n",
+      "code2" : "document.getElementsById('bouton') onclick = function(){\n\tvar numero = document.getElementsById (\n}"
+    },
+    "fares_kessi" : {
+      "_d" : "Tue Apr 18 2017 12:56:58 GMT+0200 (CEST)",
+      "_f" : "Tue Apr 18 2017 12:29:18 GMT+0200 (CEST)",
+      "_ft" : 1492511358563,
+      "_submitted" : true,
+      "_t" : 1492513018205,
+      "_uid" : "116055107986692203753",
+      "code1" : "var xhr = new XMLHttpRequest(); \nxhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/posts/6');\nxhr.onreadystatechange = function() {\n  if (xhr.readyState === 4) {\n    var reponse = JSON.parse(xhr.responseText);\n    console.log(reponse);\n  }\n};\nxhr.send();"
+    },
+    "garance_fabre" : {
+      "_d" : "Tue Apr 18 2017 12:59:57 GMT+0200 (Paris, Madrid (heure d’été))",
+      "_f" : "Tue Apr 18 2017 12:28:48 GMT+0200 (Paris, Madrid (heure d’été))",
+      "_ft" : 1492511334552,
+      "_submitted" : true,
+      "_t" : 1492513203239,
+      "_uid" : "101664821977450786720",
+      "code1" : "var controle = document.getElementById('mon-bouton');\n\ndocument.getElementById('mon-bouton').onclick = function() {\n\t;{\n   var xhr = new XMLHttpRequest(); \n\txhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/posts/4');\n\txhr.onreadystatechange = function() {\n\t  if (xhr.readyState === 4) {\n\t  \tconsole.log(xhr.reponseText);\n\t  \tvar reponse = JSON.parse(xhr.responseText);\n\t    alert(reponse.posts);\n\t  }\n\t};\n\txhr.send();;\n\n}\n};",
+      "code2" : "var numero = document.getElementById('numero');\n\ndocument.getElementById('bouton').onclick = function() {\n\t;{\n   var xhr = new XMLHttpRequest(); \n\txhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/users/<numero>');\n\txhr.onreadystatechange = function() {\n\t  if (xhr.readyState === 4) {\n\t  \tconsole.log(xhr.responseText);\n\t  \tvar reponse = JSON.parse(xhr.responseText);\n\t    phine.innerHTML = objet.phone;\n\t    //alert(array[1].object[0]);\n\t  }\n\t};\n\txhr.send();\n\n}\n};"
+    },
+    "gaspard_legrain" : {
+      "_d" : "Tue Apr 18 2017 12:59:49 GMT+0200 (CEST)",
+      "_f" : "Tue Apr 18 2017 12:27:11 GMT+0200 (CEST)",
+      "_ft" : 1492511231360,
+      "_submitted" : true,
+      "_t" : 1492513189270,
+      "_uid" : "113360458714289851157",
+      "code1" : "var xhr = new XMLHttpRequest(); \nxhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/posts/6');\nxhr.onreadystatechange = function() {\n  if (xhr.readyState === 4) {\n    var reponse = JSON.parse(xhr.responseText);\n    alert(reponse.id);\n  }\n};\nxhr.send();"
+    },
+    "jacques_hovine" : {
+      "_d" : "Tue Apr 18 2017 12:55:36 GMT+0200 (Paris, Madrid (heure d’été))",
+      "_f" : "Tue Apr 18 2017 12:28:16 GMT+0200 (Paris, Madrid (heure d’été))",
+      "_ft" : 1492511309670,
+      "_submitted" : true,
+      "_t" : 1492512949463,
+      "_uid" : "117481420651899349023",
+      "code1" : "var xhr = new XMLHttpRequest(); \nxhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/posts/14');\nxhr.onreadystatechange = function() {\n  if (xhr.readyState === 4) {\n    alert(xhr.responseText);\n  }\n};\nxhr.send();",
+      "code2" : "var bouton = document.getElementById('bouton');\nvar nom = document.getElementById('name');\nvar numero = document.getElementById('numero');\n\nbouton.onclick = function(){\n  var xhr = new XMLHttpRequest(); \n  xhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/users/' + numero.value);\n  xhr.onreadystatechange = function() {\n    if (xhr.readyState === 4) {\n      //console.log(numero.value);\n      var objet = JSON.parse(xhr.responseText);\n      //console.log(objet);\n      //console.log(objet.name);\n      nom.setAttribute(\"value\", objet.name); \n     }\n  };\n  xhr.send();\n}"
+    },
+    "johanne_bordeaux" : {
+      "_d" : "Tue Apr 18 2017 12:59:00 GMT+0200 (CEST)",
+      "_f" : "Tue Apr 18 2017 12:28:34 GMT+0200 (CEST)",
+      "_ft" : 1492511314103,
+      "_submitted" : true,
+      "_t" : 1492513140957,
+      "_uid" : "110373469661840604809",
+      "code1" : "var post = document.getElementById('mon-bouton');\n\ndocument.getElementById('mon-bouton').onclick = function() {\n  ;{\n   var xhr = new XMLHttpRequest(); \n\txhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/posts/6');\n\txhr.onreadystatechange = function() {\n\t  if (xhr.readyState === 4) {\n\t  \tconsole.log(xhr.reponseText);\n\t  \tvar reponse = JSON.parse(xhr.responseText);\n\t    alert(reponse.userId + reponse.id + reponse.title + reponse.body);\n\t  }\n\t};\n\txhr.send();;\n}\n};",
+      "code2" : "var bouton = document.getElementsByTagName('button');\nvar champ = document.getElementById('champ');\nvar resultat = document.getElementById('resultats');\nvar id = [];\n\ndocument.getElementById('mon-bouton').onclick = function() {\n  ;{\n   var xhr = new XMLHttpRequest(); \n  xhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/users/');\n  xhr.onreadystatechange = function() {\n    if (xhr.readyState === 4) {\n      console.log(xhr.reponseText);\n      var reponse = JSON.parse(xhr.responseText);\n      alert(reponse.website);\n    }\n  };\n  xhr.send();;\n}\n};"
+    },
+    "kim_nora" : {
+      "_d" : "Tue Apr 18 2017 12:59:11 GMT+0200 (CEST)",
+      "_f" : "Tue Apr 18 2017 12:27:23 GMT+0200 (CEST)",
+      "_ft" : 1492511237931,
+      "_submitted" : true,
+      "_t" : 1492513146163,
+      "_uid" : "104560689392005739677",
+      "code1" : ""
+    },
+    "leo_martin" : {
+      "_d" : "Tue Apr 18 2017 12:58:49 GMT+0200 (Paris, Madrid (heure d’été))",
+      "_f" : "Tue Apr 18 2017 12:27:18 GMT+0200 (Paris, Madrid (heure d’été))",
+      "_ft" : 1492511239351,
+      "_submitted" : true,
+      "_t" : 1492513129907,
+      "_uid" : "107488109732824862301",
+      "code1" : "var xhr = new XMLHttpRequest(); \nxhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/posts/6');\nxhr.onreadystatechange = function() {\n  if (xhr.readyState === 4) {\n    var reponse = JSON.parse(xhr.responseText);\n    alert(xhr.responseText);\n  }\n};\nxhr.send();",
+      "code2" : "document.getElementById('bouton').onclick = function() {\n    var numero = document.getElementById('numero').value;\n    var xhr = new XMLHttpRequest();\n    var api = 'https://js-jsonplaceholder.herokuapp.com/users';\n    xhr.open('GET', api);\n    xhr.onreadystatechange = function() {\n      if (xhr.readyState === 4) {\n        var reponse = JSON.parse(xhr.responseText);\n        console.log(reponse);\n        document.getElementById('name').innerHTML = reponse.phone;\n      };\n  };\nxhr.send();\n}"
+    },
+    "loa_diaz" : {
+      "_d" : "Tue Apr 18 2017 12:59:02 GMT+0200 (CEST)",
+      "_f" : "Tue Apr 18 2017 12:28:14 GMT+0200 (CEST)",
+      "_ft" : 1492511294299,
+      "_submitted" : true,
+      "_t" : 1492513142968,
+      "_uid" : "109138767835241261213",
+      "code1" : "var xhr = new XMLHttpRequest();\nxhr.open('GET','https://js-jsonplaceholder.herokuapp.com/posts/6');\nxhr.onreadystatechange = function() {\n\tif (xhr.readyState === 4) {\n\t\talert(xhr.reponseText);\n\n\t}\n};\nxhr.send();",
+      "code2" : "var numero = document.getElementById ('numero');\n\nvar bouton = document.getElementById ('bouton').onclick = function(){\n\tvar xhr = new XMLHttpRequest();\n\txhr.open('GET','https://js-jsonplaceholder.herokuapp.com/users/<numero>');\n\txhr.onreadystatechange = function() {\n\t\tif (xhr.readyState === 4) {\n\t\t\tconsole.log(xhr.reponseText);\n\t\t\tvar objet = JSON.parse(xhr.reponseText);\n\t\t\tconsole.log(objet);\n\t\t\tif (numero.lenght !== 0) {\n\t\t\t\tfor(var i=0; i<numero.lenght; i++) {\n\t\t\t\t\tnumero[i].website;\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t};\n\txhr.send();\n}"
+    },
+    "loic_parisse" : {
+      "_d" : "Tue Apr 18 2017 12:59:11 GMT+0200 (Paris, Madrid (heure d’été))",
+      "_f" : "Tue Apr 18 2017 12:29:29 GMT+0200 (Paris, Madrid (heure d’été))",
+      "_ft" : 1492511345017,
+      "_submitted" : true,
+      "_t" : 1492513126684,
+      "_uid" : "112679580951201670007",
+      "code1" : "{\n  \"userId\": 2,\n  \"id\": 14,\n  \"title\": \"voluptatem eligendi optio\",\n  \"body\": \"fuga et accusamus dolorum perferendis illo voluptas\\nnon doloremque neque facere\\nad qui dolorum molestiae beatae\\nsed aut voluptas totam sit illum\"\n}"
+    },
+    "lucille_vanlaer" : {
+      "_d" : "Tue Apr 18 2017 12:56:57 GMT+0200 (CEST)",
+      "_f" : "Tue Apr 18 2017 12:29:06 GMT+0200 (CEST)",
+      "_ft" : 1492511347261,
+      "_submitted" : true,
+      "_t" : 1492513017492,
+      "_uid" : "113002706771975144991",
+      "code1" : "var xhr = new XMLHttpRequest(); \nxhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/posts/14' );\nxhr.onreadystatechange = function() {\n  if (xhr.readyState === 4) { \n    var rep = xhr.responseText; \n    alert(rep);\n  }  \n}\nxhr.send();",
+      "code2" : "var numero =  document.getElementById('numero').value;\nvar bouton = document.getElementById('bouton');\nvar affichage = document.getElementById('name').value;\n\nbouton.onclick= function () {\n  var xhr = new XMLHttpRequest(); \n  xhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/users/' + numero );\n  xhr.onreadystatechange = function() {\n    if (xhr.readyState === 4) { \n      var rep = JSON.parse(xhr.responseText); \n      console.log(rep);\n       affichage.innerHTML = rep.name;\n    }  \n  xhr.send();\n};"
+    },
+    "maelle_bellazar" : {
+      "_d" : "Tue Apr 18 2017 12:59:02 GMT+0200 (CEST)",
+      "_f" : "Tue Apr 18 2017 12:28:24 GMT+0200 (CEST)",
+      "_ft" : 1492511304649,
+      "_submitted" : true,
+      "_t" : 1492513142806,
+      "_uid" : "102659365253444301419",
+      "code1" : "\nvar xhr = new XMLHttpRequest(); \n    xhr.open('GET', 'https://jsjsonplaceholder.herokuapp.com/posts/14');\n    xhr.onreadystatechange = function() {\n      if (xhr.readyState === 4) {\n    alert(xhr.responseText);\n  }\n};\nxhr.send();\n};",
+      "code2" : "var numero = document.getElementsByTagName('numero');\nvar bouton = document.getElementById('bouton');\nvar resultat = document.getElementById('resultats');\nvar website = [];\n\nbouton[0].onclick = function(){\n  var xhr = new XMLHttpRequest(); \n  xhr.open('GET', 'https://jsjsonplaceholder.herokuapp.com/users/<numero>');\n  xhr.onreadystatechange = function() {\n    if (xhr.readyState === 26) {\n      console.log(xhr.responseText);\n      var objet = JSON.parse(xhr.responseText);\n      console.log(objet.rechercher);\n        }\n      }; \nxhr.send();\n}\n}"
+    },
+    "noelie_roux" : {
+      "_d" : "Tue Apr 18 2017 13:00:05 GMT+0200 (Paris, Madrid (heure d’été))",
+      "_f" : "Tue Apr 18 2017 12:27:14 GMT+0200 (Paris, Madrid (heure d’été))",
+      "_ft" : 1492511235571,
+      "_submitted" : true,
+      "_t" : 1492513206419,
+      "_uid" : "101358311974203602161",
+      "code1" : "var xhr = new XMLHttpRequest(); \nxhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/posts/6');\nxhr.onreadystatechange = function() {\n  if (xhr.readyState === 4) {\n    var reponse = JSON.parse(xhr.responseText);\n    alert(xhr.responseText);\n  }\n};\nxhr.send();",
+      "code2" : "var xhr = new XMLHttpRequest(); \nxhr.open('GET', 'https://jsonplaceholder.typicode.com/users/&tag');\nxhr.onreadystatechange = function() {\n  if (xhr.readyState === 4) {\n    var reponse = JSON.parse(xhr.responseText);\n    document.getElementById('phone').value = result;\n  }\n};\nxhr.send();"
+    },
+    "pauline_feraut" : {
+      "_d" : "Tue Apr 18 2017 12:58:44 GMT+0200 (Paris, Madrid (heure d’été))",
+      "_f" : "Tue Apr 18 2017 12:29:11 GMT+0200 (Paris, Madrid (heure d’été))",
+      "_ft" : 1492511352018,
+      "_submitted" : true,
+      "_t" : 1492513125189,
+      "_uid" : "114301043616862498688",
+      "code1" : "var xhr = new XMLHttpRequest(); \nxhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/posts/4');\nxhr.onreadystatechange = function() {\n  if (xhr.readyState === 4) {\n    alert(xhr.responseText);\n  }\n};\nxhr.send();",
+      "code2" : "var bouton = document.getElementById('bouton');\nvar website = document.getElementById('website');\nbouton.onclick= function () {\n    var numero = document.getElementById('numero').value; \n    var xhr = new XMLHttpRequest();  //Instaurer une classe  \n    xhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/users/' + numero );\n    xhr.onreadystatechange = function() {\n      if (xhr.readyState === 4) { // Etat à la fin de la requête\n        var rep = JSON.parse(xhr.responseText); //Devenir un objet\n        console.log(rep);         \n      }\n    };\n    xhr.send(); //Envoyer la requête\n }"
+    },
+    "pierry_lim" : {
+      "_d" : "Tue Apr 18 2017 12:48:41 GMT+0200 (Paris, Madrid (heure d’été))",
+      "_f" : "Tue Apr 18 2017 12:29:09 GMT+0200 (Paris, Madrid (heure d’été))",
+      "_ft" : 1492511351064,
+      "_submitted" : true,
+      "_t" : 1492512522565,
+      "_uid" : "116921323770734561563",
+      "code1" : "var xhr = new XMLHttpRequest(); \nxhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/posts/14');\nxhr.onreadystatechange = function() {\n  if (xhr.readyState === 4) {\n    alert(xhr.responseText);\n  }\n};\nxhr.send();",
+      "code2" : "document.getElementById('bouton').onclick = function(){\n  var numero = document.getElementById('numero').value;\n  var xhr = new XMLHttpRequest(); \n  xhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/users/' + numero);\n  xhr.onreadystatechange = function() {\n    if (xhr.readyState === 4) {\n      var reponse = JSON.parse(xhr.responseText);\n      document.getElementById('phone').value = reponse.phone;\n    };\n  };\n  xhr.send();\n};"
+    },
+    "tristan_machin" : {
+      "_d" : "Tue Apr 18 2017 12:59:44 GMT+0200 (Paris, Madrid (heure d’été))",
+      "_f" : "Tue Apr 18 2017 12:27:27 GMT+0200 (Paris, Madrid (heure d’été))",
+      "_ft" : 1492511249389,
+      "_submitted" : true,
+      "_t" : 1492513186659,
+      "_uid" : "115955988175068143418",
+      "code1" : "var xhr = new XMLHttpRequest(); \nxhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/posts/8');\nxhr.onreadystatechange = function() {\n  if (xhr.readyState === 4) {\n    alert(xhr.responseText);\n  }\n};\nxhr.send();",
+      "code2" : "document.getElementById('bouton').onclick = function() {\n  var number = document.getElementById('numero').value;\n  var xhr = new XMLHttpRequest();\n  xhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/users/' + number);\n  xhr.onreadystatechange = function() {\n    if (xhr.readyState === 4) {\n      var reponse = JSON.parse(xhr.responseText);\n      document.getElementById('name').innerHTML = reponse.name;\n    };\n  };\n  xhr.send();\n}"
+    },
+    "valentin_guilbaud" : {
+      "_d" : "Tue Apr 18 2017 12:57:04 GMT+0100 (Paris, Madrid)",
+      "_f" : "Tue Apr 18 2017 12:28:02 GMT+0100 (Paris, Madrid)",
+      "_ft" : 1492511376325,
+      "_submitted" : true,
+      "_t" : 1492513118919,
+      "_uid" : "106909003268071855794",
+      "code1" : "var xhr = new XMLHttpRequest();\nvar api = 'https://js-jsonplaceholder.herokuapp.com/posts/8';\nxhr.open('GET', api);\nxhr.onreadystatechange = function() {\n  if (xhr.readyState === 4) {\n    var reponse = xhr.responseText;\n    alert(reponse);\n  }\n}\nxhr.send();",
+      "code2" : "document.getElementById('bouton').onclick = function() {\n\n  var numero = document.getElementById('numero').value;\n  var xhr = new XMLHttpRequest();\n  var api = 'https://js-jsonplaceholder.herokuapp.com/users/' + numero;\n  xhr.open('GET', api);\n  xhr.onreadystatechange = function() {\n    if (xhr.readyState === 4) {\n      var reponse = JSON.parse(xhr.responseText);\n      console.log(reponse);\n      document.getElementById('name').value = reponse.name;\n    }\n  }\n  xhr.send();\n}"
+    }
+  }
+}

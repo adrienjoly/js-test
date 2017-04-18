@@ -1,0 +1,1277 @@
+Parsing ex.01.code.template.md ...
+Reading and evaluating answers from: ../student-groups/controle3-790ad-export-classe-1.json ...
+
+
+================================
+
+STUDENT: alexandre_louf
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code1 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var xhr = new XMLHttpRequest(); 
+  | xhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/posts/8');
+  | xhr.onreadystatechange = function() {
+  |   if (xhr.readyState === 4) {
+  |   alert(xhr.responseText);
+  |   }
+  | };
+  | xhr.send();
+  | [+] le programme fonctionne sans erreur
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [+] la méthode open() de l'instance de `XMLHttpRequest` a bien été appelée
+  | [+] `GET` a bien été passé en paramètre de la méthode open()
+  | [+] l'url a bien été passée en paramètre de la méthode open()
+  | [+] une fonction a bien été affectée à la propriété `onreadystatechange` de l'instance
+  | [+] la méthode send() a bien été appelée
+  | [+] le contenu de la propriété `responseText` a bien été affiché dans un alert()
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 10 / 10
+  | 
+  | ------------- EXERCISE: code2 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var bouton = document.getElementById('bouton');
+  | var resultat = document.getElementById('website');
+  | 
+  | bouton.onclick = function (){
+  |   var input = document.getElementById('numero').value;
+  |   var xhr = new XMLHttpRequest(); 
+  |   xhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/users/' + input);
+  |   xhr.onreadystatechange = function() {
+  |     if (xhr.readyState === 4) {
+  |       var reponse = JSON.parse(xhr.responseText);
+  |       resultat.value = reponse.website;
+  |     }
+  |   }
+  |   xhr.send();
+  | }
+  | [+] le programme fonctionne sans erreur
+  | [+] une fonction a bien été affectée à la propriété `onclick` du bouton
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [+] la méthode send() n'est pas appelée tant que l'utilisateur n'a plas cliqué sur le bouton
+  | --- Simulation de requête pour adhérent numéro 4 ...
+  | [+] le programme fonctionne sans erreur quand on clique sur le bouton
+  | [+] au clic, l'url passée en paramètre de la méthode open() est correcte
+  | [+] au clic, la méthode send() a bien été appelée une fois
+  | [+] la valeur kale.biz a bien été affichée dans le champ website
+  | --- Simulation de requête pour adhérent numéro 6 ...
+  | [+] le programme fonctionne sans erreur quand on clique sur le bouton
+  | [+] au clic, l'url passée en paramètre de la méthode open() est correcte
+  | [+] au clic, la méthode send() a bien été appelée une fois
+  | [+] la valeur ola.org a bien été affichée dans le champ website
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 10 / 10
+
+  => code score: 20 / 20 pts
+
+=> TOTAL STUDENT SCORE: 20 / 20
+
+
+================================
+
+STUDENT: benoit_boureau
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code1 (variant: 3) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var xhr = new XMLHttpRequest(); 
+  | xhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/posts/14');
+  | xhr.onreadystatechange = function() {
+  | if (xhr.readyState === 4) {
+  |   var reponse = JSON.parse(xhr.responseText);
+  |   alert(reponse.body);
+  |   }
+  | };
+  | xhr.send();
+  | [+] le programme fonctionne sans erreur
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [+] la méthode open() de l'instance de `XMLHttpRequest` a bien été appelée
+  | [+] `GET` a bien été passé en paramètre de la méthode open()
+  | [+] l'url a bien été passée en paramètre de la méthode open()
+  | [+] une fonction a bien été affectée à la propriété `onreadystatechange` de l'instance
+  | [+] la méthode send() a bien été appelée
+  | [-] le contenu de la propriété `responseText` devait être affiché dans un alert()
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1, 1, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 8.75 / 10
+  | 
+  | ------------- EXERCISE: code2 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function annuaire(){
+  |   var xhr = new XMLHttpRequest(); 
+  |   xhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/users/' + document.getElementById(chercher););
+  |   xhr.onreadystatechange = function() {
+  |     if (xhr.readyState === 4) {
+  |       var objet = JSON.parse(xhr.responseText);
+  |         alert(reponse.phone);
+  |     }
+  |   };
+  | xhr.send();
+  | }
+  | [-] erreur: missing ) after argument list
+  | [-] il fallait affecter une fonction à la propriété `onclick` du bouton
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [+] la méthode send() n'est pas appelée tant que l'utilisateur n'a plas cliqué sur le bouton
+  | --- Simulation de requête pour adhérent numéro 4 ...
+  | [-] erreur après clic sur le bouton: _fakeDom.bouton.onclick is not a function
+  | [-] au clic, il fallait passer l'url https://js-jsonplaceholder.herokuapp.com/users/4 à la méthode open(), et non undefined
+  | [-] au clic, il fallait appeler la méthode send() une fois pour envoyer la requête
+  | [-] la valeur 493-170-9623 x156 aurait du apparaitre dans le champ phone
+  | --- Simulation de requête pour adhérent numéro 6 ...
+  | [-] erreur après clic sur le bouton: _fakeDom.bouton.onclick is not a function
+  | [-] au clic, il fallait passer l'url https://js-jsonplaceholder.herokuapp.com/users/6 à la méthode open(), et non undefined
+  | [-] au clic, il fallait appeler la méthode send() une fois pour envoyer la requête
+  | [-] la valeur 1-477-935-8478 x6430 aurait du apparaitre dans le champ phone
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 1.6666666666666665 / 10
+
+  => code score: 10.416666666666666 / 20 pts
+
+=> TOTAL STUDENT SCORE: 10.41 / 20
+
+
+================================
+
+STUDENT: charles_rodriguez
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code1 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var xhr = new XMLHttpRequest(); 
+  | xhr.open('GET','https://js-jsonplaceholder.herokuapp.com/posts/6)');
+  | xhr.onreadystatechange = function() {
+  | 	if (xhr.readyState === 4) {
+  | 		console.log(xhr.reponseText);
+  | 		var reponse = JSON.parse(xhr.reponseText);
+  | 		alert(reponse.Text[4])
+  | 	}
+  | };
+  | xhr.send();
+  | 
+  | [+] le programme fonctionne sans erreur
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [+] la méthode open() de l'instance de `XMLHttpRequest` a bien été appelée
+  | [+] `GET` a bien été passé en paramètre de la méthode open()
+  | [-] il fallait passer l'url comme 2ème paramètre de la méthode open()
+  | [+] une fonction a bien été affectée à la propriété `onreadystatechange` de l'instance
+  | [+] la méthode send() a bien été appelée
+  | [-] le contenu de la propriété `responseText` devait être affiché dans un alert()
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 0, 1, 1, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 7.5 / 10
+  | 
+  | ------------- EXERCISE: code2 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | document.getElementsById('bouton') onclick = function(){
+  | 	var numero = document.getElementsById (
+  | }
+  | [-] erreur: Unexpected identifier
+  | [-] il fallait affecter une fonction à la propriété `onclick` du bouton
+  | [-] il fallait instancier `XMLHttpRequest` avec le mot-clé `new`
+  | [+] la méthode send() n'est pas appelée tant que l'utilisateur n'a plas cliqué sur le bouton
+  | --- Simulation de requête pour adhérent numéro 4 ...
+  | [-] erreur après clic sur le bouton: _fakeDom.bouton.onclick is not a function
+  | [-] au clic, il fallait passer l'url https://js-jsonplaceholder.herokuapp.com/users/4 à la méthode open(), et non undefined
+  | [-] au clic, il fallait appeler la méthode send() une fois pour envoyer la requête
+  | [-] la valeur kale.biz aurait du apparaitre dans le champ website
+  | --- Simulation de requête pour adhérent numéro 6 ...
+  | [-] erreur après clic sur le bouton: _fakeDom.bouton.onclick is not a function
+  | [-] au clic, il fallait passer l'url https://js-jsonplaceholder.herokuapp.com/users/6 à la méthode open(), et non undefined
+  | [-] au clic, il fallait appeler la méthode send() une fois pour envoyer la requête
+  | [-] la valeur ola.org aurait du apparaitre dans le champ website
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 0.8333333333333333 / 10
+
+  => code score: 8.333333333333334 / 20 pts
+
+=> TOTAL STUDENT SCORE: 8.33 / 20
+
+
+================================
+
+STUDENT: fares_kessi
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code1 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var xhr = new XMLHttpRequest(); 
+  | xhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/posts/6');
+  | xhr.onreadystatechange = function() {
+  |   if (xhr.readyState === 4) {
+  |     var reponse = JSON.parse(xhr.responseText);
+  |     console.log(reponse);
+  |   }
+  | };
+  | xhr.send();
+  | [+] le programme fonctionne sans erreur
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [+] la méthode open() de l'instance de `XMLHttpRequest` a bien été appelée
+  | [+] `GET` a bien été passé en paramètre de la méthode open()
+  | [+] l'url a bien été passée en paramètre de la méthode open()
+  | [+] une fonction a bien été affectée à la propriété `onreadystatechange` de l'instance
+  | [+] la méthode send() a bien été appelée
+  | [-] le contenu de la propriété `responseText` devait être affiché dans un alert()
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1, 1, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 8.75 / 10
+  | 
+  | ------------- EXERCISE: code2 (variant: 2) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | // -> EXERCISE POINTS: 0 / 10
+
+  => code score: 8.75 / 20 pts
+
+=> TOTAL STUDENT SCORE: 8.75 / 20
+
+
+================================
+
+STUDENT: garance_fabre
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code1 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var controle = document.getElementById('mon-bouton');
+  | 
+  | document.getElementById('mon-bouton').onclick = function() {
+  | 	;{
+  |    var xhr = new XMLHttpRequest(); 
+  | 	xhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/posts/4');
+  | 	xhr.onreadystatechange = function() {
+  | 	  if (xhr.readyState === 4) {
+  | 	  	console.log(xhr.reponseText);
+  | 	  	var reponse = JSON.parse(xhr.responseText);
+  | 	    alert(reponse.posts);
+  | 	  }
+  | 	};
+  | 	xhr.send();;
+  | 
+  | }
+  | };
+  | [-] erreur: document is not defined
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [-] il fallait appeler la méthode open() de l'instance de `XMLHttpRequest`
+  | [-] il fallait passer `GET` comme 1er paramètre de la méthode open()
+  | [-] il fallait passer l'url comme 2ème paramètre de la méthode open()
+  | [-] il fallait affecter une fonction à la propriété `onreadystatechange` de l'instance
+  | [-] il fallait appeler la méthode send() pour envoyer la requête
+  | [-] le contenu de la propriété `responseText` devait être affiché dans un alert()
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 1, 0, 0, 0, 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 1.25 / 10
+  | 
+  | ------------- EXERCISE: code2 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var numero = document.getElementById('numero');
+  | 
+  | document.getElementById('bouton').onclick = function() {
+  | 	;{
+  |    var xhr = new XMLHttpRequest(); 
+  | 	xhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/users/<numero>');
+  | 	xhr.onreadystatechange = function() {
+  | 	  if (xhr.readyState === 4) {
+  | 	  	console.log(xhr.responseText);
+  | 	  	var reponse = JSON.parse(xhr.responseText);
+  | 	    phine.innerHTML = objet.phone;
+  | 	    //alert(array[1].object[0]);
+  | 	  }
+  | 	};
+  | 	xhr.send();
+  | 
+  | }
+  | };
+  | [+] le programme fonctionne sans erreur
+  | [+] une fonction a bien été affectée à la propriété `onclick` du bouton
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [+] la méthode send() n'est pas appelée tant que l'utilisateur n'a plas cliqué sur le bouton
+  | --- Simulation de requête pour adhérent numéro 4 ...
+  | [+] le programme fonctionne sans erreur quand on clique sur le bouton
+  | [-] au clic, il fallait passer l'url https://js-jsonplaceholder.herokuapp.com/users/4 à la méthode open(), et non https://js-jsonplaceholder.herokuapp.com/users/<numero>
+  | [+] au clic, la méthode send() a bien été appelée une fois
+  | [-] la valeur 493-170-9623 x156 aurait du apparaitre dans le champ phone
+  | --- Simulation de requête pour adhérent numéro 6 ...
+  | [+] le programme fonctionne sans erreur quand on clique sur le bouton
+  | [-] au clic, il fallait passer l'url https://js-jsonplaceholder.herokuapp.com/users/6 à la méthode open(), et non https://js-jsonplaceholder.herokuapp.com/users/<numero>
+  | [+] au clic, la méthode send() a bien été appelée une fois
+  | [-] la valeur 1-477-935-8478 x6430 aurait du apparaitre dans le champ phone
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 6.666666666666666 / 10
+
+  => code score: 7.916666666666667 / 20 pts
+
+=> TOTAL STUDENT SCORE: 7.91 / 20
+
+
+================================
+
+STUDENT: gaspard_legrain
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code1 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var xhr = new XMLHttpRequest(); 
+  | xhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/posts/6');
+  | xhr.onreadystatechange = function() {
+  |   if (xhr.readyState === 4) {
+  |     var reponse = JSON.parse(xhr.responseText);
+  |     alert(reponse.id);
+  |   }
+  | };
+  | xhr.send();
+  | [+] le programme fonctionne sans erreur
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [+] la méthode open() de l'instance de `XMLHttpRequest` a bien été appelée
+  | [+] `GET` a bien été passé en paramètre de la méthode open()
+  | [+] l'url a bien été passée en paramètre de la méthode open()
+  | [+] une fonction a bien été affectée à la propriété `onreadystatechange` de l'instance
+  | [+] la méthode send() a bien été appelée
+  | [-] le contenu de la propriété `responseText` devait être affiché dans un alert()
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1, 1, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 8.75 / 10
+  | 
+  | ------------- EXERCISE: code2 (variant: 2) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | // -> EXERCISE POINTS: 0 / 10
+
+  => code score: 8.75 / 20 pts
+
+=> TOTAL STUDENT SCORE: 8.75 / 20
+
+
+================================
+
+STUDENT: jacques_hovine
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code1 (variant: 3) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var xhr = new XMLHttpRequest(); 
+  | xhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/posts/14');
+  | xhr.onreadystatechange = function() {
+  |   if (xhr.readyState === 4) {
+  |     alert(xhr.responseText);
+  |   }
+  | };
+  | xhr.send();
+  | [+] le programme fonctionne sans erreur
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [+] la méthode open() de l'instance de `XMLHttpRequest` a bien été appelée
+  | [+] `GET` a bien été passé en paramètre de la méthode open()
+  | [+] l'url a bien été passée en paramètre de la méthode open()
+  | [+] une fonction a bien été affectée à la propriété `onreadystatechange` de l'instance
+  | [+] la méthode send() a bien été appelée
+  | [+] le contenu de la propriété `responseText` a bien été affiché dans un alert()
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 10 / 10
+  | 
+  | ------------- EXERCISE: code2 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var bouton = document.getElementById('bouton');
+  | var nom = document.getElementById('name');
+  | var numero = document.getElementById('numero');
+  | 
+  | bouton.onclick = function(){
+  |   var xhr = new XMLHttpRequest(); 
+  |   xhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/users/' + numero.value);
+  |   xhr.onreadystatechange = function() {
+  |     if (xhr.readyState === 4) {
+  |       //console.log(numero.value);
+  |       var objet = JSON.parse(xhr.responseText);
+  |       //console.log(objet);
+  |       //console.log(objet.name);
+  |       nom.setAttribute("value", objet.name); 
+  |      }
+  |   };
+  |   xhr.send();
+  | }
+  | [+] le programme fonctionne sans erreur
+  | [+] une fonction a bien été affectée à la propriété `onclick` du bouton
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [+] la méthode send() n'est pas appelée tant que l'utilisateur n'a plas cliqué sur le bouton
+  | --- Simulation de requête pour adhérent numéro 4 ...
+  | [+] le programme fonctionne sans erreur quand on clique sur le bouton
+  | [+] au clic, l'url passée en paramètre de la méthode open() est correcte
+  | [+] au clic, la méthode send() a bien été appelée une fois
+  | [-] la valeur Patricia Lebsack aurait du apparaitre dans le champ name
+  | --- Simulation de requête pour adhérent numéro 6 ...
+  | [+] le programme fonctionne sans erreur quand on clique sur le bouton
+  | [+] au clic, l'url passée en paramètre de la méthode open() est correcte
+  | [+] au clic, la méthode send() a bien été appelée une fois
+  | [-] la valeur Mrs. Dennis Schulist aurait du apparaitre dans le champ name
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 8.333333333333334 / 10
+
+  => code score: 18.333333333333336 / 20 pts
+
+=> TOTAL STUDENT SCORE: 18.33 / 20
+
+
+================================
+
+STUDENT: johanne_bordeaux
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code1 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var post = document.getElementById('mon-bouton');
+  | 
+  | document.getElementById('mon-bouton').onclick = function() {
+  |   ;{
+  |    var xhr = new XMLHttpRequest(); 
+  | 	xhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/posts/6');
+  | 	xhr.onreadystatechange = function() {
+  | 	  if (xhr.readyState === 4) {
+  | 	  	console.log(xhr.reponseText);
+  | 	  	var reponse = JSON.parse(xhr.responseText);
+  | 	    alert(reponse.userId + reponse.id + reponse.title + reponse.body);
+  | 	  }
+  | 	};
+  | 	xhr.send();;
+  | }
+  | };
+  | [-] erreur: document is not defined
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [-] il fallait appeler la méthode open() de l'instance de `XMLHttpRequest`
+  | [-] il fallait passer `GET` comme 1er paramètre de la méthode open()
+  | [-] il fallait passer l'url comme 2ème paramètre de la méthode open()
+  | [-] il fallait affecter une fonction à la propriété `onreadystatechange` de l'instance
+  | [-] il fallait appeler la méthode send() pour envoyer la requête
+  | [-] le contenu de la propriété `responseText` devait être affiché dans un alert()
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 1, 0, 0, 0, 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 1.25 / 10
+  | 
+  | ------------- EXERCISE: code2 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var bouton = document.getElementsByTagName('button');
+  | var champ = document.getElementById('champ');
+  | var resultat = document.getElementById('resultats');
+  | var id = [];
+  | 
+  | document.getElementById('mon-bouton').onclick = function() {
+  |   ;{
+  |    var xhr = new XMLHttpRequest(); 
+  |   xhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/users/');
+  |   xhr.onreadystatechange = function() {
+  |     if (xhr.readyState === 4) {
+  |       console.log(xhr.reponseText);
+  |       var reponse = JSON.parse(xhr.responseText);
+  |       alert(reponse.website);
+  |     }
+  |   };
+  |   xhr.send();;
+  | }
+  | };
+  | [-] erreur: document.getElementsByTagName is not a function
+  | [-] il fallait affecter une fonction à la propriété `onclick` du bouton
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [+] la méthode send() n'est pas appelée tant que l'utilisateur n'a plas cliqué sur le bouton
+  | --- Simulation de requête pour adhérent numéro 4 ...
+  | [-] erreur après clic sur le bouton: _fakeDom.bouton.onclick is not a function
+  | [-] au clic, il fallait passer l'url https://js-jsonplaceholder.herokuapp.com/users/4 à la méthode open(), et non undefined
+  | [-] au clic, il fallait appeler la méthode send() une fois pour envoyer la requête
+  | [-] la valeur kale.biz aurait du apparaitre dans le champ website
+  | --- Simulation de requête pour adhérent numéro 6 ...
+  | [-] erreur après clic sur le bouton: _fakeDom.bouton.onclick is not a function
+  | [-] au clic, il fallait passer l'url https://js-jsonplaceholder.herokuapp.com/users/6 à la méthode open(), et non undefined
+  | [-] au clic, il fallait appeler la méthode send() une fois pour envoyer la requête
+  | [-] la valeur ola.org aurait du apparaitre dans le champ website
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 1.6666666666666665 / 10
+
+  => code score: 2.916666666666667 / 20 pts
+
+=> TOTAL STUDENT SCORE: 2.91 / 20
+
+
+================================
+
+STUDENT: kim_nora
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code1 (variant: 1) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | // -> EXERCISE POINTS: 0 / 10
+  | 
+  | ------------- EXERCISE: code2 (variant: 1) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | // -> EXERCISE POINTS: 0 / 10
+
+  => code score: 0 / 20 pts
+
+=> TOTAL STUDENT SCORE: 0 / 20
+
+
+================================
+
+STUDENT: leo_martin
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code1 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var xhr = new XMLHttpRequest(); 
+  | xhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/posts/6');
+  | xhr.onreadystatechange = function() {
+  |   if (xhr.readyState === 4) {
+  |     var reponse = JSON.parse(xhr.responseText);
+  |     alert(xhr.responseText);
+  |   }
+  | };
+  | xhr.send();
+  | [+] le programme fonctionne sans erreur
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [+] la méthode open() de l'instance de `XMLHttpRequest` a bien été appelée
+  | [+] `GET` a bien été passé en paramètre de la méthode open()
+  | [+] l'url a bien été passée en paramètre de la méthode open()
+  | [+] une fonction a bien été affectée à la propriété `onreadystatechange` de l'instance
+  | [+] la méthode send() a bien été appelée
+  | [+] le contenu de la propriété `responseText` a bien été affiché dans un alert()
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 10 / 10
+  | 
+  | ------------- EXERCISE: code2 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | document.getElementById('bouton').onclick = function() {
+  |     var numero = document.getElementById('numero').value;
+  |     var xhr = new XMLHttpRequest();
+  |     var api = 'https://js-jsonplaceholder.herokuapp.com/users';
+  |     xhr.open('GET', api);
+  |     xhr.onreadystatechange = function() {
+  |       if (xhr.readyState === 4) {
+  |         var reponse = JSON.parse(xhr.responseText);
+  |         console.log(reponse);
+  |         document.getElementById('name').innerHTML = reponse.phone;
+  |       };
+  |   };
+  | xhr.send();
+  | }
+  | [+] le programme fonctionne sans erreur
+  | [+] une fonction a bien été affectée à la propriété `onclick` du bouton
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [+] la méthode send() n'est pas appelée tant que l'utilisateur n'a plas cliqué sur le bouton
+  | --- Simulation de requête pour adhérent numéro 4 ...
+  | [+] le programme fonctionne sans erreur quand on clique sur le bouton
+  | [-] au clic, il fallait passer l'url https://js-jsonplaceholder.herokuapp.com/users/4 à la méthode open(), et non https://js-jsonplaceholder.herokuapp.com/users
+  | [+] au clic, la méthode send() a bien été appelée une fois
+  | [-] la valeur Patricia Lebsack aurait du apparaitre dans le champ name
+  | --- Simulation de requête pour adhérent numéro 6 ...
+  | [+] le programme fonctionne sans erreur quand on clique sur le bouton
+  | [-] au clic, il fallait passer l'url https://js-jsonplaceholder.herokuapp.com/users/6 à la méthode open(), et non https://js-jsonplaceholder.herokuapp.com/users
+  | [+] au clic, la méthode send() a bien été appelée une fois
+  | [-] la valeur Mrs. Dennis Schulist aurait du apparaitre dans le champ name
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 6.666666666666666 / 10
+
+  => code score: 16.666666666666668 / 20 pts
+
+=> TOTAL STUDENT SCORE: 16.66 / 20
+
+
+================================
+
+STUDENT: loa_diaz
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code1 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var xhr = new XMLHttpRequest();
+  | xhr.open('GET','https://js-jsonplaceholder.herokuapp.com/posts/6');
+  | xhr.onreadystatechange = function() {
+  | 	if (xhr.readyState === 4) {
+  | 		alert(xhr.reponseText);
+  | 
+  | 	}
+  | };
+  | xhr.send();
+  | [+] le programme fonctionne sans erreur
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [+] la méthode open() de l'instance de `XMLHttpRequest` a bien été appelée
+  | [+] `GET` a bien été passé en paramètre de la méthode open()
+  | [+] l'url a bien été passée en paramètre de la méthode open()
+  | [+] une fonction a bien été affectée à la propriété `onreadystatechange` de l'instance
+  | [+] la méthode send() a bien été appelée
+  | [-] le contenu de la propriété `responseText` devait être affiché dans un alert()
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1, 1, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 8.75 / 10
+  | 
+  | ------------- EXERCISE: code2 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var numero = document.getElementById ('numero');
+  | 
+  | var bouton = document.getElementById ('bouton').onclick = function(){
+  | 	var xhr = new XMLHttpRequest();
+  | 	xhr.open('GET','https://js-jsonplaceholder.herokuapp.com/users/<numero>');
+  | 	xhr.onreadystatechange = function() {
+  | 		if (xhr.readyState === 4) {
+  | 			console.log(xhr.reponseText);
+  | 			var objet = JSON.parse(xhr.reponseText);
+  | 			console.log(objet);
+  | 			if (numero.lenght !== 0) {
+  | 				for(var i=0; i<numero.lenght; i++) {
+  | 					numero[i].website;
+  | 				}
+  | 			}
+  | 		}
+  | 	};
+  | 	xhr.send();
+  | }
+  | [+] le programme fonctionne sans erreur
+  | [+] une fonction a bien été affectée à la propriété `onclick` du bouton
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [+] la méthode send() n'est pas appelée tant que l'utilisateur n'a plas cliqué sur le bouton
+  | --- Simulation de requête pour adhérent numéro 4 ...
+  | [+] le programme fonctionne sans erreur quand on clique sur le bouton
+  | [-] au clic, il fallait passer l'url https://js-jsonplaceholder.herokuapp.com/users/4 à la méthode open(), et non https://js-jsonplaceholder.herokuapp.com/users/<numero>
+  | [+] au clic, la méthode send() a bien été appelée une fois
+  | [-] la valeur kale.biz aurait du apparaitre dans le champ website
+  | --- Simulation de requête pour adhérent numéro 6 ...
+  | [+] le programme fonctionne sans erreur quand on clique sur le bouton
+  | [-] au clic, il fallait passer l'url https://js-jsonplaceholder.herokuapp.com/users/6 à la méthode open(), et non https://js-jsonplaceholder.herokuapp.com/users/<numero>
+  | [+] au clic, la méthode send() a bien été appelée une fois
+  | [-] la valeur ola.org aurait du apparaitre dans le champ website
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 6.666666666666666 / 10
+
+  => code score: 15.416666666666668 / 20 pts
+
+=> TOTAL STUDENT SCORE: 15.41 / 20
+
+
+================================
+
+STUDENT: loic_parisse
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code1 (variant: 3) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | {
+  |   "userId": 2,
+  |   "id": 14,
+  |   "title": "voluptatem eligendi optio",
+  |   "body": "fuga et accusamus dolorum perferendis illo voluptas\nnon doloremque neque facere\nad qui dolorum molestiae beatae\nsed aut voluptas totam sit illum"
+  | }
+  | [-] erreur: Unexpected token :
+  | [-] il fallait instancier `XMLHttpRequest` avec le mot-clé `new`
+  | [-] il fallait appeler la méthode open() de l'instance de `XMLHttpRequest`
+  | [-] il fallait passer `GET` comme 1er paramètre de la méthode open()
+  | [-] il fallait passer l'url comme 2ème paramètre de la méthode open()
+  | [-] il fallait affecter une fonction à la propriété `onreadystatechange` de l'instance
+  | [-] il fallait appeler la méthode send() pour envoyer la requête
+  | [-] le contenu de la propriété `responseText` devait être affiché dans un alert()
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 0, 0, 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 0 / 10
+  | 
+  | ------------- EXERCISE: code2 (variant: 2) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | // -> EXERCISE POINTS: 0 / 10
+
+  => code score: 0 / 20 pts
+
+=> TOTAL STUDENT SCORE: 0 / 20
+
+
+================================
+
+STUDENT: lucille_vanlaer
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code1 (variant: 3) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var xhr = new XMLHttpRequest(); 
+  | xhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/posts/14' );
+  | xhr.onreadystatechange = function() {
+  |   if (xhr.readyState === 4) { 
+  |     var rep = xhr.responseText; 
+  |     alert(rep);
+  |   }  
+  | }
+  | xhr.send();
+  | [+] le programme fonctionne sans erreur
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [+] la méthode open() de l'instance de `XMLHttpRequest` a bien été appelée
+  | [+] `GET` a bien été passé en paramètre de la méthode open()
+  | [+] l'url a bien été passée en paramètre de la méthode open()
+  | [+] une fonction a bien été affectée à la propriété `onreadystatechange` de l'instance
+  | [+] la méthode send() a bien été appelée
+  | [+] le contenu de la propriété `responseText` a bien été affiché dans un alert()
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 10 / 10
+  | 
+  | ------------- EXERCISE: code2 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var numero =  document.getElementById('numero').value;
+  | var bouton = document.getElementById('bouton');
+  | var affichage = document.getElementById('name').value;
+  | 
+  | bouton.onclick= function () {
+  |   var xhr = new XMLHttpRequest(); 
+  |   xhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/users/' + numero );
+  |   xhr.onreadystatechange = function() {
+  |     if (xhr.readyState === 4) { 
+  |       var rep = JSON.parse(xhr.responseText); 
+  |       console.log(rep);
+  |        affichage.innerHTML = rep.name;
+  |     }  
+  |   xhr.send();
+  | };
+  | [-] erreur: Unexpected end of input
+  | [-] il fallait affecter une fonction à la propriété `onclick` du bouton
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [+] la méthode send() n'est pas appelée tant que l'utilisateur n'a plas cliqué sur le bouton
+  | --- Simulation de requête pour adhérent numéro 4 ...
+  | [-] erreur après clic sur le bouton: _fakeDom.bouton.onclick is not a function
+  | [-] au clic, il fallait passer l'url https://js-jsonplaceholder.herokuapp.com/users/4 à la méthode open(), et non undefined
+  | [-] au clic, il fallait appeler la méthode send() une fois pour envoyer la requête
+  | [-] la valeur Patricia Lebsack aurait du apparaitre dans le champ name
+  | --- Simulation de requête pour adhérent numéro 6 ...
+  | [-] erreur après clic sur le bouton: _fakeDom.bouton.onclick is not a function
+  | [-] au clic, il fallait passer l'url https://js-jsonplaceholder.herokuapp.com/users/6 à la méthode open(), et non undefined
+  | [-] au clic, il fallait appeler la méthode send() une fois pour envoyer la requête
+  | [-] la valeur Mrs. Dennis Schulist aurait du apparaitre dans le champ name
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 1.6666666666666665 / 10
+
+  => code score: 11.666666666666666 / 20 pts
+
+=> TOTAL STUDENT SCORE: 11.66 / 20
+
+
+================================
+
+STUDENT: maelle_bellazar
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code1 (variant: 3) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | 
+  | var xhr = new XMLHttpRequest(); 
+  |     xhr.open('GET', 'https://jsjsonplaceholder.herokuapp.com/posts/14');
+  |     xhr.onreadystatechange = function() {
+  |       if (xhr.readyState === 4) {
+  |     alert(xhr.responseText);
+  |   }
+  | };
+  | xhr.send();
+  | };
+  | [-] erreur: Unexpected token }
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [-] il fallait appeler la méthode open() de l'instance de `XMLHttpRequest`
+  | [-] il fallait passer `GET` comme 1er paramètre de la méthode open()
+  | [-] il fallait passer l'url comme 2ème paramètre de la méthode open()
+  | [-] il fallait affecter une fonction à la propriété `onreadystatechange` de l'instance
+  | [-] il fallait appeler la méthode send() pour envoyer la requête
+  | [-] le contenu de la propriété `responseText` devait être affiché dans un alert()
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 1, 0, 0, 0, 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 1.25 / 10
+  | 
+  | ------------- EXERCISE: code2 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var numero = document.getElementsByTagName('numero');
+  | var bouton = document.getElementById('bouton');
+  | var resultat = document.getElementById('resultats');
+  | var website = [];
+  | 
+  | bouton[0].onclick = function(){
+  |   var xhr = new XMLHttpRequest(); 
+  |   xhr.open('GET', 'https://jsjsonplaceholder.herokuapp.com/users/<numero>');
+  |   xhr.onreadystatechange = function() {
+  |     if (xhr.readyState === 26) {
+  |       console.log(xhr.responseText);
+  |       var objet = JSON.parse(xhr.responseText);
+  |       console.log(objet.rechercher);
+  |         }
+  |       }; 
+  | xhr.send();
+  | }
+  | }
+  | [-] erreur: Unexpected token }
+  | [-] il fallait affecter une fonction à la propriété `onclick` du bouton
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [+] la méthode send() n'est pas appelée tant que l'utilisateur n'a plas cliqué sur le bouton
+  | --- Simulation de requête pour adhérent numéro 4 ...
+  | [-] erreur après clic sur le bouton: _fakeDom.bouton.onclick is not a function
+  | [-] au clic, il fallait passer l'url https://js-jsonplaceholder.herokuapp.com/users/4 à la méthode open(), et non undefined
+  | [-] au clic, il fallait appeler la méthode send() une fois pour envoyer la requête
+  | [-] la valeur kale.biz aurait du apparaitre dans le champ website
+  | --- Simulation de requête pour adhérent numéro 6 ...
+  | [-] erreur après clic sur le bouton: _fakeDom.bouton.onclick is not a function
+  | [-] au clic, il fallait passer l'url https://js-jsonplaceholder.herokuapp.com/users/6 à la méthode open(), et non undefined
+  | [-] au clic, il fallait appeler la méthode send() une fois pour envoyer la requête
+  | [-] la valeur ola.org aurait du apparaitre dans le champ website
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 1.6666666666666665 / 10
+
+  => code score: 2.916666666666667 / 20 pts
+
+=> TOTAL STUDENT SCORE: 2.91 / 20
+
+
+================================
+
+STUDENT: noelie_roux
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code1 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var xhr = new XMLHttpRequest(); 
+  | xhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/posts/6');
+  | xhr.onreadystatechange = function() {
+  |   if (xhr.readyState === 4) {
+  |     var reponse = JSON.parse(xhr.responseText);
+  |     alert(xhr.responseText);
+  |   }
+  | };
+  | xhr.send();
+  | [+] le programme fonctionne sans erreur
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [+] la méthode open() de l'instance de `XMLHttpRequest` a bien été appelée
+  | [+] `GET` a bien été passé en paramètre de la méthode open()
+  | [+] l'url a bien été passée en paramètre de la méthode open()
+  | [+] une fonction a bien été affectée à la propriété `onreadystatechange` de l'instance
+  | [+] la méthode send() a bien été appelée
+  | [+] le contenu de la propriété `responseText` a bien été affiché dans un alert()
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 10 / 10
+  | 
+  | ------------- EXERCISE: code2 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var xhr = new XMLHttpRequest(); 
+  | xhr.open('GET', 'https://jsonplaceholder.typicode.com/users/&tag');
+  | xhr.onreadystatechange = function() {
+  |   if (xhr.readyState === 4) {
+  |     var reponse = JSON.parse(xhr.responseText);
+  |     document.getElementById('phone').value = result;
+  |   }
+  | };
+  | xhr.send();
+  | [+] le programme fonctionne sans erreur
+  | [-] il fallait affecter une fonction à la propriété `onclick` du bouton
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [-] il ne fallait pas appeler la méthode send() avant que l'utilisateur clique sur le bouton
+  | --- Simulation de requête pour adhérent numéro 4 ...
+  | [-] erreur après clic sur le bouton: _fakeDom.bouton.onclick is not a function
+  | [-] au clic, il fallait passer l'url https://js-jsonplaceholder.herokuapp.com/users/4 à la méthode open(), et non https://jsonplaceholder.typicode.com/users/&tag
+  | [-] au clic, il fallait appeler la méthode send() une fois pour envoyer la requête
+  | [-] la valeur 493-170-9623 x156 aurait du apparaitre dans le champ phone
+  | --- Simulation de requête pour adhérent numéro 6 ...
+  | [-] erreur après clic sur le bouton: _fakeDom.bouton.onclick is not a function
+  | [-] au clic, il fallait passer l'url https://js-jsonplaceholder.herokuapp.com/users/6 à la méthode open(), et non undefined
+  | [-] au clic, il fallait appeler la méthode send() une fois pour envoyer la requête
+  | [-] la valeur 1-477-935-8478 x6430 aurait du apparaitre dans le champ phone
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 1.6666666666666665 / 10
+
+  => code score: 11.666666666666666 / 20 pts
+
+=> TOTAL STUDENT SCORE: 11.66 / 20
+
+
+================================
+
+STUDENT: pauline_feraut
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code1 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var xhr = new XMLHttpRequest(); 
+  | xhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/posts/4');
+  | xhr.onreadystatechange = function() {
+  |   if (xhr.readyState === 4) {
+  |     alert(xhr.responseText);
+  |   }
+  | };
+  | xhr.send();
+  | [+] le programme fonctionne sans erreur
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [+] la méthode open() de l'instance de `XMLHttpRequest` a bien été appelée
+  | [+] `GET` a bien été passé en paramètre de la méthode open()
+  | [+] l'url a bien été passée en paramètre de la méthode open()
+  | [+] une fonction a bien été affectée à la propriété `onreadystatechange` de l'instance
+  | [+] la méthode send() a bien été appelée
+  | [+] le contenu de la propriété `responseText` a bien été affiché dans un alert()
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 10 / 10
+  | 
+  | ------------- EXERCISE: code2 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var bouton = document.getElementById('bouton');
+  | var website = document.getElementById('website');
+  | bouton.onclick= function () {
+  |     var numero = document.getElementById('numero').value; 
+  |     var xhr = new XMLHttpRequest();  //Instaurer une classe  
+  |     xhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/users/' + numero );
+  |     xhr.onreadystatechange = function() {
+  |       if (xhr.readyState === 4) { // Etat à la fin de la requête
+  |         var rep = JSON.parse(xhr.responseText); //Devenir un objet
+  |         console.log(rep);         
+  |       }
+  |     };
+  |     xhr.send(); //Envoyer la requête
+  |  }
+  | [+] le programme fonctionne sans erreur
+  | [+] une fonction a bien été affectée à la propriété `onclick` du bouton
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [+] la méthode send() n'est pas appelée tant que l'utilisateur n'a plas cliqué sur le bouton
+  | --- Simulation de requête pour adhérent numéro 4 ...
+  | [+] le programme fonctionne sans erreur quand on clique sur le bouton
+  | [+] au clic, l'url passée en paramètre de la méthode open() est correcte
+  | [+] au clic, la méthode send() a bien été appelée une fois
+  | [-] la valeur kale.biz aurait du apparaitre dans le champ website
+  | --- Simulation de requête pour adhérent numéro 6 ...
+  | [+] le programme fonctionne sans erreur quand on clique sur le bouton
+  | [+] au clic, l'url passée en paramètre de la méthode open() est correcte
+  | [+] au clic, la méthode send() a bien été appelée une fois
+  | [-] la valeur ola.org aurait du apparaitre dans le champ website
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 8.333333333333334 / 10
+
+  => code score: 18.333333333333336 / 20 pts
+
+=> TOTAL STUDENT SCORE: 18.33 / 20
+
+
+================================
+
+STUDENT: pierry_lim
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code1 (variant: 3) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var xhr = new XMLHttpRequest(); 
+  | xhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/posts/14');
+  | xhr.onreadystatechange = function() {
+  |   if (xhr.readyState === 4) {
+  |     alert(xhr.responseText);
+  |   }
+  | };
+  | xhr.send();
+  | [+] le programme fonctionne sans erreur
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [+] la méthode open() de l'instance de `XMLHttpRequest` a bien été appelée
+  | [+] `GET` a bien été passé en paramètre de la méthode open()
+  | [+] l'url a bien été passée en paramètre de la méthode open()
+  | [+] une fonction a bien été affectée à la propriété `onreadystatechange` de l'instance
+  | [+] la méthode send() a bien été appelée
+  | [+] le contenu de la propriété `responseText` a bien été affiché dans un alert()
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 10 / 10
+  | 
+  | ------------- EXERCISE: code2 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | document.getElementById('bouton').onclick = function(){
+  |   var numero = document.getElementById('numero').value;
+  |   var xhr = new XMLHttpRequest(); 
+  |   xhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/users/' + numero);
+  |   xhr.onreadystatechange = function() {
+  |     if (xhr.readyState === 4) {
+  |       var reponse = JSON.parse(xhr.responseText);
+  |       document.getElementById('phone').value = reponse.phone;
+  |     };
+  |   };
+  |   xhr.send();
+  | };
+  | [+] le programme fonctionne sans erreur
+  | [+] une fonction a bien été affectée à la propriété `onclick` du bouton
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [+] la méthode send() n'est pas appelée tant que l'utilisateur n'a plas cliqué sur le bouton
+  | --- Simulation de requête pour adhérent numéro 4 ...
+  | [+] le programme fonctionne sans erreur quand on clique sur le bouton
+  | [+] au clic, l'url passée en paramètre de la méthode open() est correcte
+  | [+] au clic, la méthode send() a bien été appelée une fois
+  | [+] la valeur 493-170-9623 x156 a bien été affichée dans le champ phone
+  | --- Simulation de requête pour adhérent numéro 6 ...
+  | [+] le programme fonctionne sans erreur quand on clique sur le bouton
+  | [+] au clic, l'url passée en paramètre de la méthode open() est correcte
+  | [+] au clic, la méthode send() a bien été appelée une fois
+  | [+] la valeur 1-477-935-8478 x6430 a bien été affichée dans le champ phone
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 10 / 10
+
+  => code score: 20 / 20 pts
+
+=> TOTAL STUDENT SCORE: 20 / 20
+
+
+================================
+
+STUDENT: tristan_machin
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code1 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var xhr = new XMLHttpRequest(); 
+  | xhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/posts/8');
+  | xhr.onreadystatechange = function() {
+  |   if (xhr.readyState === 4) {
+  |     alert(xhr.responseText);
+  |   }
+  | };
+  | xhr.send();
+  | [+] le programme fonctionne sans erreur
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [+] la méthode open() de l'instance de `XMLHttpRequest` a bien été appelée
+  | [+] `GET` a bien été passé en paramètre de la méthode open()
+  | [+] l'url a bien été passée en paramètre de la méthode open()
+  | [+] une fonction a bien été affectée à la propriété `onreadystatechange` de l'instance
+  | [+] la méthode send() a bien été appelée
+  | [+] le contenu de la propriété `responseText` a bien été affiché dans un alert()
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 10 / 10
+  | 
+  | ------------- EXERCISE: code2 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | document.getElementById('bouton').onclick = function() {
+  |   var number = document.getElementById('numero').value;
+  |   var xhr = new XMLHttpRequest();
+  |   xhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/users/' + number);
+  |   xhr.onreadystatechange = function() {
+  |     if (xhr.readyState === 4) {
+  |       var reponse = JSON.parse(xhr.responseText);
+  |       document.getElementById('name').innerHTML = reponse.name;
+  |     };
+  |   };
+  |   xhr.send();
+  | }
+  | [+] le programme fonctionne sans erreur
+  | [+] une fonction a bien été affectée à la propriété `onclick` du bouton
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [+] la méthode send() n'est pas appelée tant que l'utilisateur n'a plas cliqué sur le bouton
+  | --- Simulation de requête pour adhérent numéro 4 ...
+  | [+] le programme fonctionne sans erreur quand on clique sur le bouton
+  | [+] au clic, l'url passée en paramètre de la méthode open() est correcte
+  | [+] au clic, la méthode send() a bien été appelée une fois
+  | [-] la valeur Patricia Lebsack aurait du apparaitre dans le champ name
+  | --- Simulation de requête pour adhérent numéro 6 ...
+  | [+] le programme fonctionne sans erreur quand on clique sur le bouton
+  | [+] au clic, l'url passée en paramètre de la méthode open() est correcte
+  | [+] au clic, la méthode send() a bien été appelée une fois
+  | [-] la valeur Mrs. Dennis Schulist aurait du apparaitre dans le champ name
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 8.333333333333334 / 10
+
+  => code score: 18.333333333333336 / 20 pts
+
+=> TOTAL STUDENT SCORE: 18.33 / 20
+
+
+================================
+
+STUDENT: valentin_guilbaud
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code1 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var xhr = new XMLHttpRequest();
+  | var api = 'https://js-jsonplaceholder.herokuapp.com/posts/8';
+  | xhr.open('GET', api);
+  | xhr.onreadystatechange = function() {
+  |   if (xhr.readyState === 4) {
+  |     var reponse = xhr.responseText;
+  |     alert(reponse);
+  |   }
+  | }
+  | xhr.send();
+  | [+] le programme fonctionne sans erreur
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [+] la méthode open() de l'instance de `XMLHttpRequest` a bien été appelée
+  | [+] `GET` a bien été passé en paramètre de la méthode open()
+  | [+] l'url a bien été passée en paramètre de la méthode open()
+  | [+] une fonction a bien été affectée à la propriété `onreadystatechange` de l'instance
+  | [+] la méthode send() a bien été appelée
+  | [+] le contenu de la propriété `responseText` a bien été affiché dans un alert()
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 10 / 10
+  | 
+  | ------------- EXERCISE: code2 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | document.getElementById('bouton').onclick = function() {
+  | 
+  |   var numero = document.getElementById('numero').value;
+  |   var xhr = new XMLHttpRequest();
+  |   var api = 'https://js-jsonplaceholder.herokuapp.com/users/' + numero;
+  |   xhr.open('GET', api);
+  |   xhr.onreadystatechange = function() {
+  |     if (xhr.readyState === 4) {
+  |       var reponse = JSON.parse(xhr.responseText);
+  |       console.log(reponse);
+  |       document.getElementById('name').value = reponse.name;
+  |     }
+  |   }
+  |   xhr.send();
+  | }
+  | [+] le programme fonctionne sans erreur
+  | [+] une fonction a bien été affectée à la propriété `onclick` du bouton
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [+] la méthode send() n'est pas appelée tant que l'utilisateur n'a plas cliqué sur le bouton
+  | --- Simulation de requête pour adhérent numéro 4 ...
+  | [+] le programme fonctionne sans erreur quand on clique sur le bouton
+  | [+] au clic, l'url passée en paramètre de la méthode open() est correcte
+  | [+] au clic, la méthode send() a bien été appelée une fois
+  | [+] la valeur Patricia Lebsack a bien été affichée dans le champ name
+  | --- Simulation de requête pour adhérent numéro 6 ...
+  | [+] le programme fonctionne sans erreur quand on clique sur le bouton
+  | [+] au clic, l'url passée en paramètre de la méthode open() est correcte
+  | [+] au clic, la méthode send() a bien été appelée une fois
+  | [+] la valeur Mrs. Dennis Schulist a bien été affichée dans le champ name
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 10 / 10
+
+  => code score: 20 / 20 pts
+
+=> TOTAL STUDENT SCORE: 20 / 20
