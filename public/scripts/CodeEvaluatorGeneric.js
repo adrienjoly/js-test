@@ -96,7 +96,11 @@ function makeCodeEvaluator(jailed, async, codeGradingOptions) {
           wrapStudentCode(studentCode).replace(/function ([^ \(]+)/g, '$1 = function')
         );
       //console.log(code);
-      console.log([ '// STUDENT CODE:', studentCode ].join('\n\n'));
+      console.log([
+        '// STUDENT CODE:',
+        studentCode,
+        '// CODE EVALUATION:',
+      ].join('\n\n') + '\n');
       runCodeInWrappedSandbox(code, function(err, res) {
         if (err) console.log('=> test runner err:', err);
         // TODO: find a way to display the position of the error in the student's code
