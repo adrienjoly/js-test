@@ -88,7 +88,7 @@ xhr.send();
       (_urls[0] || '') !== 'https://js-jsonplaceholder.herokuapp.com/posts/{{number}}'
         ? res(0, 'il fallait passer l\'url comme 2ème paramètre de la méthode open()')
         : res(1, 'l\'url a bien été passée en paramètre de la méthode open()'),
-      typeof _instances[0].onreadystatechange !== 'function'
+      typeof (_instances[0] || {}).onreadystatechange !== 'function'
         ? res(0, 'il fallait affecter une fonction à la propriété `onreadystatechange` de l\'instance')
         : res(1, 'une fonction a bien été affectée à la propriété `onreadystatechange` de l\'instance'),
       _sends.length === 0

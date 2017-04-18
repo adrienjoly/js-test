@@ -489,13 +489,13 @@ STUDENT: guillaume_martin
   | [-] il fallait appeler la méthode open() de l'instance de `XMLHttpRequest`
   | [-] il fallait passer `GET` comme 1er paramètre de la méthode open()
   | [-] il fallait passer l'url comme 2ème paramètre de la méthode open()
-Tue, 18 Apr 2017 10:57:03 GMT jailed:sandbox Uncaught Exception: TypeError: Cannot read property 'onreadystatechange' of undefined
-    at Timeout.setTimeout (DYNAMIC PLUGIN:79:27)
-    at tryOnTimeout (timers.js:232:11)
-    at Timer.listOnTimeout (timers.js:202:5)
-  | => test runner err: TypeError: Cannot read property 'onreadystatechange' of undefined at Timeout.setTimeout (DYNAMIC PLUGIN:79:27)
+  | [-] il fallait affecter une fonction à la propriété `onreadystatechange` de l'instance
+  | [-] il fallait appeler la méthode send() pour envoyer la requête
+  | [-] le contenu de la propriété `responseText` devait être affiché dans un alert()
   | 
-  | // -> EXERCISE POINTS: 0 / 10
+  | // -> STUDENT SCORE ARRAY: [ 0, 1, 0, 0, 0, 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 1.25 / 10
   | 
   | ------------- EXERCISE: code2 (variant: 1) -------------
   | 
@@ -552,9 +552,9 @@ Tue, 18 Apr 2017 10:57:03 GMT jailed:sandbox Uncaught Exception: TypeError: Cann
   | 
   | // -> EXERCISE POINTS: 1.6666666666666665 / 10
 
-  => code score: 1.6666666666666667 / 20 pts
+  => code score: 2.916666666666667 / 20 pts
 
-=> TOTAL STUDENT SCORE: 1.66 / 20
+=> TOTAL STUDENT SCORE: 2.91 / 20
 
 
 ================================
