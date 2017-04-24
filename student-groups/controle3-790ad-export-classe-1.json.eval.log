@@ -33,8 +33,11 @@ STUDENT: alexandre_louf
   | [+] le contenu de la propriété `responseText` a bien été affiché dans un alert()
   | 
   | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1, 1, 1 ]
+
+-1 point pour identation manquante à l'intérieur du if.
+
   | 
-  | // -> EXERCISE POINTS: 10 / 10
+  | // -> EXERCISE POINTS: 9 / 10
   | 
   | ------------- EXERCISE: code2 (variant: 2) -------------
   | 
@@ -77,9 +80,9 @@ STUDENT: alexandre_louf
   | 
   | // -> EXERCISE POINTS: 10 / 10
 
-  => code score: 20 / 20 pts
+  => code score: 19 / 20 pts
 
-=> TOTAL STUDENT SCORE: 20 / 20
+=> TOTAL STUDENT SCORE: 19 / 20
 
 
 ================================
@@ -114,8 +117,11 @@ STUDENT: benoit_boureau
   | [-] le contenu de la propriété `responseText` devait être affiché dans un alert()
   | 
   | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1, 1, 0 ]
+
+  -2 points pour défauts d'indentation
+
   | 
-  | // -> EXERCISE POINTS: 8.75 / 10
+  | // -> EXERCISE POINTS: 6.75 / 10
   | 
   | ------------- EXERCISE: code2 (variant: 1) -------------
   | 
@@ -154,9 +160,9 @@ STUDENT: benoit_boureau
   | 
   | // -> EXERCISE POINTS: 1.6666666666666665 / 10
 
-  => code score: 10.416666666666666 / 20 pts
+  => code score: 8.416666666666666 / 20 pts
 
-=> TOTAL STUDENT SCORE: 10.41 / 20
+=> TOTAL STUDENT SCORE: 8.41 / 20
 
 
 ================================
@@ -363,9 +369,11 @@ STUDENT: garance_fabre
   | 
   | // -> EXERCISE POINTS: 6.666666666666666 / 10
 
-  => code score: 7.916666666666667 / 20 pts
+  -1 point pour défauts d'indentation (dont usage de tabulations)
 
-=> TOTAL STUDENT SCORE: 7.91 / 20
+  => code score: 6.916666666666667 / 20 pts
+
+=> TOTAL STUDENT SCORE: 6.91 / 20
 
 
 ================================
@@ -687,9 +695,11 @@ STUDENT: leo_martin
   | 
   | // -> EXERCISE POINTS: 6.666666666666666 / 10
 
-  => code score: 16.666666666666668 / 20 pts
+  -2 points pour défauts d'indentation
 
-=> TOTAL STUDENT SCORE: 16.66 / 20
+  => code score: 14.666666666666668 / 20 pts
+
+=> TOTAL STUDENT SCORE: 14.66 / 20
 
 
 ================================
@@ -726,6 +736,9 @@ STUDENT: loa_diaz
   | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1, 1, 0 ]
   | 
   | // -> EXERCISE POINTS: 8.75 / 10
+
+    -1 point pour usage de tabulations
+
   | 
   | ------------- EXERCISE: code2 (variant: 2) -------------
   | 
@@ -772,9 +785,11 @@ STUDENT: loa_diaz
   | 
   | // -> EXERCISE POINTS: 6.666666666666666 / 10
 
-  => code score: 15.416666666666668 / 20 pts
+  -1 point pour usage de tabulations
 
-=> TOTAL STUDENT SCORE: 15.41 / 20
+  => code score: 13.416666666666668 / 20 pts
+
+=> TOTAL STUDENT SCORE: 13.41 / 20
 
 
 ================================
@@ -1135,9 +1150,11 @@ STUDENT: pauline_feraut
   | 
   | // -> EXERCISE POINTS: 8.333333333333334 / 10
 
-  => code score: 18.333333333333336 / 20 pts
+  -2 points pour mauvaise indentation
 
-=> TOTAL STUDENT SCORE: 18.33 / 20
+  => code score: 16.333333333333336 / 20 pts
+
+=> TOTAL STUDENT SCORE: 16.33 / 20
 
 
 ================================

@@ -119,7 +119,9 @@ STUDENT: elsa_haddad
 
   => code score: 11.666666666666666 / 20 pts
 
-=> TOTAL STUDENT SCORE: 11.66 / 20
+  -1 pour mauvaise indentation
+
+=> TOTAL STUDENT SCORE: 10.66 / 20
 
 
 ================================
@@ -205,7 +207,9 @@ STUDENT: guillaume_ceyssac
 
   => code score: 13.333333333333334 / 20 pts
 
-=> TOTAL STUDENT SCORE: 13.33 / 20
+  -1 pour mauvaise indentation
+
+=> TOTAL STUDENT SCORE: 12.33 / 20
 
 
 ================================
@@ -456,7 +460,9 @@ STUDENT: ines_pouamon
 
   => code score: 15 / 20 pts
 
-=> TOTAL STUDENT SCORE: 15 / 20
+  -1 pour mauvaise indentation
+
+=> TOTAL STUDENT SCORE: 14 / 20
 
 
 ================================
@@ -534,7 +540,9 @@ STUDENT: lucas_lacheny
 
   => code score: 13.333333333333334 / 20 pts
 
-=> TOTAL STUDENT SCORE: 13.33 / 20
+  -2 points pour non respect de l'indentation et du placement des accolades
+
+=> TOTAL STUDENT SCORE: 11.33 / 20
 
 
 ================================
@@ -616,7 +624,9 @@ STUDENT: marc_antoine_poisier
 
   => code score: 11.666666666666666 / 20 pts
 
-=> TOTAL STUDENT SCORE: 11.66 / 20
+  -1 pour mauvaise indentation
+
+=> TOTAL STUDENT SCORE: 10.66 / 20
 
 
 ================================
@@ -1075,7 +1085,9 @@ STUDENT: thomas_bonnet
 
   => code score: 11.666666666666666 / 20 pts
 
-=> TOTAL STUDENT SCORE: 11.66 / 20
+  -1 pour indentation inégale
+
+=> TOTAL STUDENT SCORE: 10.66 / 20
 
 
 ================================

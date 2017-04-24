@@ -33,8 +33,11 @@ STUDENT: aubin_keravel
   | [+] le contenu de la propriété `responseText` a bien été affiché dans un alert()
   | 
   | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1, 1, 1 ]
+
+  -1 pour problème d'indentation
+
   | 
-  | // -> EXERCISE POINTS: 10 / 10
+  | // -> EXERCISE POINTS: 9 / 10
   | 
   | ------------- EXERCISE: code2 (variant: 1) -------------
   | 
@@ -91,9 +94,9 @@ STUDENT: aubin_keravel
   | 
   | // -> EXERCISE POINTS: 1.6666666666666665 / 10
 
-  => code score: 11.666666666666666 / 20 pts
+  => code score: 10.666666666666666 / 20 pts
 
-=> TOTAL STUDENT SCORE: 11.66 / 20
+=> TOTAL STUDENT SCORE: 10.66 / 20
 
 
 ================================
@@ -1294,8 +1297,11 @@ STUDENT: raphael_parets
   | [-] le contenu de la propriété `responseText` devait être affiché dans un alert()
   | 
   | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1, 1, 0 ]
+
+  -1 pour anomalie d'indentation
+
   | 
-  | // -> EXERCISE POINTS: 8.75 / 10
+  | // -> EXERCISE POINTS: 7.75 / 10
   | 
   | ------------- EXERCISE: code2 (variant: 1) -------------
   | 
@@ -1335,11 +1341,14 @@ STUDENT: raphael_parets
   | 
   | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0 ]
   | 
-  | // -> EXERCISE POINTS: 6.666666666666666 / 10
 
-  => code score: 15.416666666666668 / 20 pts
+  -1 pour anomalie d'indentation
 
-=> TOTAL STUDENT SCORE: 15.41 / 20
+  | // -> EXERCISE POINTS: 5.666666666666666 / 10
+
+  => code score: 13.416666666666668 / 20 pts
+
+=> TOTAL STUDENT SCORE: 13.41 / 20
 
 
 ================================
