@@ -160,14 +160,15 @@ function {{fctName}}(a, b) {
   var console = { log: function(){} }; // tolerate console.log() calls
   var {{fctName}}; // store the function name in the global scope 
   try {
-    eval(`{{fctName}} = ` + `_studentCode`); /* will associate the student's function to the global var above */
+    eval(`_studentCode`.replace(/function ([^ \(]+)/g, '$1 = function'));
+    /* will associate the student's function to the global var above */
   } catch (e) {
     application.remote._log('/!\\ erreur: ' + e.message);
   }
   var tests = [
     typeof {{fctName}} === 'function', 
-    {{fctName}}(6, -2) === -3,
-    {{fctName}}(2, 0.5) === 4,
+    typeof {{fctName}} === 'function' && {{fctName}}(6, -2) === -3,
+    typeof {{fctName}} === 'function' && {{fctName}}(2, 0.5) === 4,
   ];
   application.remote._send(null, tests); // 1 point per passing test => 3 pts per exercise
 })();
@@ -265,14 +266,15 @@ function contient{{val}}(tableau) {
   var console = { log: function(){} }; // tolerate console.log() calls
   var contient{{val}}; // store the function name in the global scope 
   try {
-    eval(`contient{{val}} = ` + `_studentCode`); /* will associate the student's function to the global var above */
+    eval(`_studentCode`.replace(/function ([^ \(]+)/g, '$1 = function'));
+    /* will associate the student's function to the global var above */
   } catch (e) {
     application.remote._log('/!\\ erreur: ' + e.message);
   }
   var tests = [
     `_studentCode`.replace(/[ \t]/g, '').indexOf('functioncontient{{val}}(') !== -1,
-    contient{{val}}([40, {{val}}, 5, {{val}}]) === true,
-    contient{{val}}([40, 4, 5, 4]) === false,
+    typeof contient{{val}} === 'function' && contient{{val}}([40, {{val}}, 5, {{val}}]) === true,
+    typeof contient{{val}} === 'function' && contient{{val}}([40, 4, 5, 4]) === false,
   ];
   application.remote._send(null, tests); // 1 point per passing test => 3 pts per exercise
 })();

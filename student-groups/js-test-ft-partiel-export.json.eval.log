@@ -25,20 +25,10 @@ STUDENT: charlotte_vigneux
   | if (var nom === 'durand') {
   |   alert ('nom vaut durand');
   | }
-Mon, 01 May 2017 09:03:32 GMT jailed:sandbox DYNAMIC PLUGIN:13
-if (var nom === 'durand') {
-    ^^^
-SyntaxError: Unexpected token var
-    at Object.exports.runInNewContext (vm.js:71:16)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-ft-partiel/node_modules/jailed-node/sandbox/sandbox.js:151:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-ft-partiel/node_modules/jailed-node/sandbox/sandbox.js:165:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-ft-partiel/node_modules/jailed-node/sandbox/sandbox.js:53:7)
-    at emitTwo (events.js:106:13)
-    at process.emit (events.js:191:7)
-    at process.nextTick (internal/child_process.js:744:12)
-    at _combinedTickCallback (internal/process/next_tick.js:67:7)
-    at process._tickCallback (internal/process/next_tick.js:98:9)
-  | => test runner err: SyntaxError: Unexpected token var
+  | /!\ erreur: Unexpected token var
+  | /!\ erreur: Unexpected token var
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0 ]
   | 
   | // -> EXERCISE POINTS: 0 / 3
   | 
@@ -93,26 +83,15 @@ SyntaxError: Unexpected token var
   |   } else {
   |     return false;
   |   }
-Mon, 01 May 2017 09:03:32 GMT jailed:sandbox DYNAMIC PLUGIN:20
-})();
- ^
-SyntaxError: Unexpected token )
-    at Object.exports.runInNewContext (vm.js:71:16)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-ft-partiel/node_modules/jailed-node/sandbox/sandbox.js:151:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-ft-partiel/node_modules/jailed-node/sandbox/sandbox.js:165:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-ft-partiel/node_modules/jailed-node/sandbox/sandbox.js:53:7)
-    at emitTwo (events.js:106:13)
-    at process.emit (events.js:191:7)
-    at process.nextTick (internal/child_process.js:744:12)
-    at _combinedTickCallback (internal/process/next_tick.js:67:7)
-    at process._tickCallback (internal/process/next_tick.js:98:9)
-  | => test runner err: SyntaxError: Unexpected token )
+  | /!\ erreur: Unexpected end of input
   | 
-  | // -> EXERCISE POINTS: 0 / 3
+  | // -> STUDENT SCORE ARRAY: [ 1, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 1 / 3
 
-  => code score: 9 / 15 pts
+  => code score: 10 / 15 pts
 
-=> TOTAL STUDENT SCORE: 14 / 20
+=> TOTAL STUDENT SCORE: 15 / 20
 
 
 ================================
@@ -315,18 +294,10 @@ STUDENT: gauthier_ailloud
   | if (prenom==michel){
   |  alert('prenom vaut michel');
   | }
-Mon, 01 May 2017 09:03:33 GMT jailed:sandbox ReferenceError: michel is not defined
-    at evaluateStudentCode (DYNAMIC PLUGIN:14:13)
-    at DYNAMIC PLUGIN:33:3
-    at ContextifyScript.Script.runInContext (vm.js:35:29)
-    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
-    at Object.exports.runInNewContext (vm.js:72:17)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-ft-partiel/node_modules/jailed-node/sandbox/sandbox.js:151:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-ft-partiel/node_modules/jailed-node/sandbox/sandbox.js:165:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-ft-partiel/node_modules/jailed-node/sandbox/sandbox.js:53:7)
-    at emitTwo (events.js:106:13)
-    at process.emit (events.js:191:7)
-  | => test runner err: ReferenceError: michel is not defined at evaluateStudentCode (DYNAMIC PLUGIN:14:13)
+  | /!\ erreur: michel is not defined
+  | /!\ erreur: michel is not defined
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0 ]
   | 
   | // -> EXERCISE POINTS: 0 / 3
   | 
@@ -411,18 +382,10 @@ STUDENT: imane_behiri
   | if (prenom === patrice) {
   |   alert('prenom vaut patrice');
   |   }
-Mon, 01 May 2017 09:03:34 GMT jailed:sandbox ReferenceError: patrice is not defined
-    at evaluateStudentCode (DYNAMIC PLUGIN:13:16)
-    at DYNAMIC PLUGIN:31:3
-    at ContextifyScript.Script.runInContext (vm.js:35:29)
-    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
-    at Object.exports.runInNewContext (vm.js:72:17)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-ft-partiel/node_modules/jailed-node/sandbox/sandbox.js:151:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-ft-partiel/node_modules/jailed-node/sandbox/sandbox.js:165:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-ft-partiel/node_modules/jailed-node/sandbox/sandbox.js:53:7)
-    at emitTwo (events.js:106:13)
-    at process.emit (events.js:191:7)
-  | => test runner err: ReferenceError: patrice is not defined at evaluateStudentCode (DYNAMIC PLUGIN:13:16)
+  | /!\ erreur: patrice is not defined
+  | /!\ erreur: patrice is not defined
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0 ]
   | 
   | // -> EXERCISE POINTS: 0 / 3
   | 
@@ -446,20 +409,9 @@ Mon, 01 May 2017 09:03:34 GMT jailed:sandbox ReferenceError: patrice is not defi
   | // STUDENT CODE:
   | 
   | function division(5, 10);
-Mon, 01 May 2017 09:03:34 GMT jailed:sandbox DYNAMIC PLUGIN:7
-function division(5, 10);
-                  ^
-SyntaxError: Unexpected number
-    at Object.exports.runInNewContext (vm.js:71:16)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-ft-partiel/node_modules/jailed-node/sandbox/sandbox.js:151:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-ft-partiel/node_modules/jailed-node/sandbox/sandbox.js:165:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-ft-partiel/node_modules/jailed-node/sandbox/sandbox.js:53:7)
-    at emitTwo (events.js:106:13)
-    at process.emit (events.js:191:7)
-    at process.nextTick (internal/child_process.js:744:12)
-    at _combinedTickCallback (internal/process/next_tick.js:67:7)
-    at process._tickCallback (internal/process/next_tick.js:98:9)
-  | => test runner err: SyntaxError: Unexpected number
+  | /!\ erreur: Unexpected number
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0 ]
   | 
   | // -> EXERCISE POINTS: 0 / 3
   | 
@@ -512,18 +464,10 @@ STUDENT: mathias_lachot
   | }
   | 
   | 
-Mon, 01 May 2017 09:03:34 GMT jailed:sandbox ReferenceError: michel is not defined
-    at evaluateStudentCode (DYNAMIC PLUGIN:13:16)
-    at DYNAMIC PLUGIN:39:3
-    at ContextifyScript.Script.runInContext (vm.js:35:29)
-    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
-    at Object.exports.runInNewContext (vm.js:72:17)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-ft-partiel/node_modules/jailed-node/sandbox/sandbox.js:151:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-ft-partiel/node_modules/jailed-node/sandbox/sandbox.js:165:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-ft-partiel/node_modules/jailed-node/sandbox/sandbox.js:53:7)
-    at emitTwo (events.js:106:13)
-    at process.emit (events.js:191:7)
-  | => test runner err: ReferenceError: michel is not defined at evaluateStudentCode (DYNAMIC PLUGIN:13:16)
+  | /!\ erreur: michel is not defined
+  | /!\ erreur: michel is not defined
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0 ]
   | 
   | // -> EXERCISE POINTS: 0 / 3
   | 
@@ -618,18 +562,10 @@ STUDENT: maxime_bonnet
   | if (nom <= durand) {
   |   alert('nom vaut durand');
   | }
-Mon, 01 May 2017 09:03:35 GMT jailed:sandbox ReferenceError: durand is not defined
-    at evaluateStudentCode (DYNAMIC PLUGIN:13:12)
-    at DYNAMIC PLUGIN:31:3
-    at ContextifyScript.Script.runInContext (vm.js:35:29)
-    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
-    at Object.exports.runInNewContext (vm.js:72:17)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-ft-partiel/node_modules/jailed-node/sandbox/sandbox.js:151:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-ft-partiel/node_modules/jailed-node/sandbox/sandbox.js:165:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-ft-partiel/node_modules/jailed-node/sandbox/sandbox.js:53:7)
-    at emitTwo (events.js:106:13)
-    at process.emit (events.js:191:7)
-  | => test runner err: ReferenceError: durand is not defined at evaluateStudentCode (DYNAMIC PLUGIN:13:12)
+  | /!\ erreur: durand is not defined
+  | /!\ erreur: durand is not defined
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0 ]
   | 
   | // -> EXERCISE POINTS: 0 / 3
   | 
@@ -743,18 +679,9 @@ STUDENT: mike_meimoun
   |   return a / b;
   | } 
   | 
-Mon, 01 May 2017 09:03:36 GMT jailed:sandbox ReferenceError: division is not defined
-    at evaluateStudentCode (DYNAMIC PLUGIN:14:5)
-    at DYNAMIC PLUGIN:18:3
-    at ContextifyScript.Script.runInContext (vm.js:35:29)
-    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
-    at Object.exports.runInNewContext (vm.js:72:17)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-ft-partiel/node_modules/jailed-node/sandbox/sandbox.js:151:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-ft-partiel/node_modules/jailed-node/sandbox/sandbox.js:165:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-ft-partiel/node_modules/jailed-node/sandbox/sandbox.js:53:7)
-    at emitTwo (events.js:106:13)
-    at process.emit (events.js:191:7)
-  | => test runner err: ReferenceError: division is not defined at evaluateStudentCode (DYNAMIC PLUGIN:14:5)
+  | /!\ erreur: diviser is not defined
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0 ]
   | 
   | // -> EXERCISE POINTS: 0 / 3
   | 
@@ -888,26 +815,15 @@ STUDENT: nicolas_perrousset
   | }
   | 
   | 
-Mon, 01 May 2017 09:03:37 GMT jailed:sandbox DYNAMIC PLUGIN:20
-return console.log(return)
-                   ^^^^^^
-SyntaxError: Unexpected token return
-    at Object.exports.runInNewContext (vm.js:71:16)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-ft-partiel/node_modules/jailed-node/sandbox/sandbox.js:151:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-ft-partiel/node_modules/jailed-node/sandbox/sandbox.js:165:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-ft-partiel/node_modules/jailed-node/sandbox/sandbox.js:53:7)
-    at emitTwo (events.js:106:13)
-    at process.emit (events.js:191:7)
-    at process.nextTick (internal/child_process.js:744:12)
-    at _combinedTickCallback (internal/process/next_tick.js:67:7)
-    at process._tickCallback (internal/process/next_tick.js:98:9)
-  | => test runner err: SyntaxError: Unexpected token return
+  | /!\ erreur: Unexpected token return
   | 
-  | // -> EXERCISE POINTS: 0 / 3
+  | // -> STUDENT SCORE ARRAY: [ 1, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 1 / 3
 
-  => code score: 12 / 15 pts
+  => code score: 13 / 15 pts
 
-=> TOTAL STUDENT SCORE: 14 / 20
+=> TOTAL STUDENT SCORE: 15 / 20
 
 
 ================================
@@ -933,18 +849,10 @@ STUDENT: sonia_beregreg
   |   if ( prenom === michel) {
   |   alert('prenom vaut michel');
   | }
-Mon, 01 May 2017 09:03:37 GMT jailed:sandbox ReferenceError: michel is not defined
-    at evaluateStudentCode (DYNAMIC PLUGIN:14:19)
-    at DYNAMIC PLUGIN:33:3
-    at ContextifyScript.Script.runInContext (vm.js:35:29)
-    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
-    at Object.exports.runInNewContext (vm.js:72:17)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-ft-partiel/node_modules/jailed-node/sandbox/sandbox.js:151:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-ft-partiel/node_modules/jailed-node/sandbox/sandbox.js:165:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-ft-partiel/node_modules/jailed-node/sandbox/sandbox.js:53:7)
-    at emitTwo (events.js:106:13)
-    at process.emit (events.js:191:7)
-  | => test runner err: ReferenceError: michel is not defined at evaluateStudentCode (DYNAMIC PLUGIN:14:19)
+  | /!\ erreur: michel is not defined
+  | /!\ erreur: michel is not defined
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0 ]
   | 
   | // -> EXERCISE POINTS: 0 / 3
   | 
@@ -976,18 +884,8 @@ Mon, 01 May 2017 09:03:37 GMT jailed:sandbox ReferenceError: michel is not defin
   | 
   | 
   | 
-Mon, 01 May 2017 09:03:37 GMT jailed:sandbox ReferenceError: division is not defined
-    at evaluateStudentCode (DYNAMIC PLUGIN:15:5)
-    at DYNAMIC PLUGIN:19:3
-    at ContextifyScript.Script.runInContext (vm.js:35:29)
-    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
-    at Object.exports.runInNewContext (vm.js:72:17)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-ft-partiel/node_modules/jailed-node/sandbox/sandbox.js:151:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-ft-partiel/node_modules/jailed-node/sandbox/sandbox.js:165:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-ft-partiel/node_modules/jailed-node/sandbox/sandbox.js:53:7)
-    at emitTwo (events.js:106:13)
-    at process.emit (events.js:191:7)
-  | => test runner err: ReferenceError: division is not defined at evaluateStudentCode (DYNAMIC PLUGIN:15:5)
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0 ]
   | 
   | // -> EXERCISE POINTS: 0 / 3
   | 
@@ -1048,20 +946,9 @@ STUDENT: thomas_kossowski
   | // STUDENT CODE:
   | 
   | var resultat = division(8);	function division (8, 2) { return resultat }	
-Mon, 01 May 2017 09:03:37 GMT jailed:sandbox DYNAMIC PLUGIN:7
-var resultat = division(8);	function division (8, 2) { return resultat }	
-                           	                   ^
-SyntaxError: Unexpected number
-    at Object.exports.runInNewContext (vm.js:71:16)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-ft-partiel/node_modules/jailed-node/sandbox/sandbox.js:151:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-ft-partiel/node_modules/jailed-node/sandbox/sandbox.js:165:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-ft-partiel/node_modules/jailed-node/sandbox/sandbox.js:53:7)
-    at emitTwo (events.js:106:13)
-    at process.emit (events.js:191:7)
-    at process.nextTick (internal/child_process.js:744:12)
-    at _combinedTickCallback (internal/process/next_tick.js:67:7)
-    at process._tickCallback (internal/process/next_tick.js:98:9)
-  | => test runner err: SyntaxError: Unexpected number
+  | /!\ erreur: Unexpected number
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0 ]
   | 
   | // -> EXERCISE POINTS: 0 / 3
   | 
@@ -1082,26 +969,15 @@ SyntaxError: Unexpected number
   | // STUDENT CODE:
   | 
   | var chiffres = [ 1, 2, 3 ];	function contient1 (chiffres); 	if (contient1 === [1, 2, 3 ] { return true } 
-Mon, 01 May 2017 09:03:37 GMT jailed:sandbox DYNAMIC PLUGIN:7
-var chiffres = [ 1, 2, 3 ];	function contient1 (chiffres); 	if (contient1 === [1, 2, 3 ] { return true } 
-                           	                             ^
-SyntaxError: Unexpected token ;
-    at Object.exports.runInNewContext (vm.js:71:16)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-ft-partiel/node_modules/jailed-node/sandbox/sandbox.js:151:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-ft-partiel/node_modules/jailed-node/sandbox/sandbox.js:165:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-ft-partiel/node_modules/jailed-node/sandbox/sandbox.js:53:7)
-    at emitTwo (events.js:106:13)
-    at process.emit (events.js:191:7)
-    at process.nextTick (internal/child_process.js:744:12)
-    at _combinedTickCallback (internal/process/next_tick.js:67:7)
-    at process._tickCallback (internal/process/next_tick.js:98:9)
-  | => test runner err: SyntaxError: Unexpected token ;
+  | /!\ erreur: Unexpected token ;
   | 
-  | // -> EXERCISE POINTS: 0 / 3
+  | // -> STUDENT SCORE ARRAY: [ 1, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 1 / 3
 
-  => code score: 9 / 15 pts
+  => code score: 10 / 15 pts
 
-=> TOTAL STUDENT SCORE: 13 / 20
+=> TOTAL STUDENT SCORE: 14 / 20
 
 
 ================================
