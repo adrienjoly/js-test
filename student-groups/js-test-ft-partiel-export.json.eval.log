@@ -1,0 +1,1282 @@
+Parsing ex.01.quizz.template.md ...
+Parsing ex.02.code.template.md ...
+Reading and evaluating answers from: ../student-groups/js-test-ft-partiel-export.json ...
+
+
+================================
+
+STUDENT: charlotte_vigneux
+
+  -  quizz answers:
+  | qcm1 : 3 (solution: 3) => 1 pts
+  | qcm2 : 3 (solution: 3) => 1 pts
+  | qcm3 : 1 (solution: 1) => 1 pts
+  | qcm4 : 2 (solution: 2) => 1 pts
+  | qcm5 : 3 (solution: 3) => 1 pts
+
+  => quizz score: 5 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code6 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | if (var nom === 'durand') {
+  |   alert ('nom vaut durand');
+  | }
+  | /!\ erreur: Unexpected token var
+  | [-] une erreur ou un alert() inattendu est survenu
+  | /!\ erreur: Unexpected token var
+  | [-] quand nom vaut durand, un alert devrait être affiché
+  | [-] l'alert ne contient pas le message demandé
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 0 / 3
+  | 
+  | ------------- EXERCISE: code7 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var utilisateur = prompt ('veuillez saisir un nom de ville');
+  | if (utilisateur === 'marseille') {
+  |   alert('750km');
+  | } else if (utilisateur ==='bordeaux') {
+  |   alert('550km');
+  | } else {
+  |   alert('mauvaise saisie');
+  | }
+  | [+] quand on tape marseille, la réponse est bien 750km
+  | [+] quand on tape bordeaux, la réponse est bien 550km
+  | [+] quand on tape brest, la réponse est bien "mauvaise saisie"
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 3 / 3
+  | 
+  | ------------- EXERCISE: code8 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function division(nombre1, nombre2) {
+  |   return nombre1/nombre2;
+  | }
+  | [+] function division a bien été trouvé dans le code
+  | [+] l'appel division(6, -2) retourne bien -3
+  | [+] l'appel division(2, 0.5) retourne bien 4
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 3 / 3
+  | 
+  | ------------- EXERCISE: code9 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | for ( var monNombre = -5; monNombre <= 5; monNombre++ ) {
+  |   console.log(monNombre);
+  | }
+  | [+] il y a bien une boucle for dans le code
+  | [+] il y a bien un console.log for dans le code
+  | [+] console.log a bien été appelé
+  | [+] le 1er console.log affiche bien -5
+  | [+] le 5ème console.log affiche bien -1
+  | [+] le 10ème console.log affiche bien 4
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 3 / 3
+  | 
+  | ------------- EXERCISE: code10 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function contient1(unTableau) {
+  |   if (unTableau.indexOf(1) !== -1) {
+  |     return true;
+  |   } else {
+  |     return false;
+  |   }
+  | /!\ erreur: Unexpected end of input
+  | [+] function contient1 a bien été trouvé dans le code
+  | [-] l'appel contient1([40, 1, 5, 1]) devrait retourner true
+  | [-] l'appel contient1([40, 4, 5, 4]) devrait retourner false
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 1 / 3
+
+  => code score: 10 / 15 pts
+
+=> TOTAL STUDENT SCORE: 15 / 20
+
+
+================================
+
+STUDENT: clement_zerbi
+
+  -  quizz answers:
+  | qcm1 : 3 (solution: 3) => 1 pts
+  | qcm2 : 3 (solution: 3) => 1 pts
+  | qcm3 : 2 (solution: 1) => 0 pts
+  | qcm4 : 2 (solution: 2) => 1 pts
+  | qcm5 : 3 (solution: 3) => 1 pts
+
+  => quizz score: 4 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code6 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | if (nom === 'durand') {
+  | 	alert('nom vaut durand');
+  | }
+  | [+] le code fonctionne sans erreur
+  | [+] quand nom vaut durand, l'alert est bien affiché
+  | [+] l'alert contient le message demandé
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 3 / 3
+  | 
+  | ------------- EXERCISE: code7 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var ville = prompt('saisir une ville');
+  | if (ville === 'le mans') {
+  |   alert('200km');
+  | } else if (ville === 'angers') {
+  |   alert('300km');
+  | } else {
+  |   alert('mauvaise saisie');
+  | }
+  | [+] quand on tape le mans, la réponse est bien 200km
+  | [+] quand on tape angers, la réponse est bien 300km
+  | [+] quand on tape brest, la réponse est bien "mauvaise saisie"
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 3 / 3
+  | 
+  | ------------- EXERCISE: code8 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function diviser(a,b) {
+  |   return a / b;
+  | }
+  | [+] function diviser a bien été trouvé dans le code
+  | [+] l'appel diviser(6, -2) retourne bien -3
+  | [+] l'appel diviser(2, 0.5) retourne bien 4
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 3 / 3
+  | 
+  | ------------- EXERCISE: code9 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | for (var i = -5; i <= 5; i++) {
+  |   console.log(i);
+  | }
+  | [+] il y a bien une boucle for dans le code
+  | [+] il y a bien un console.log for dans le code
+  | [+] console.log a bien été appelé
+  | [+] le 1er console.log affiche bien -5
+  | [+] le 5ème console.log affiche bien -1
+  | [+] le 10ème console.log affiche bien 4
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 3 / 3
+  | 
+  | ------------- EXERCISE: code10 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | 
+  | function contient3(tableau) {
+  |   var trois = 3;
+  |   var indice = tableau.indexOf(trois);
+  |   if (indice !== -1) {
+  |     return true;
+  |   } else {
+  |     return false;
+  |   }
+  | }
+  | [+] function contient3 a bien été trouvé dans le code
+  | [+] l'appel contient3([40, 3, 5, 3]) retourne bien true
+  | [+] l'appel contient3([40, 4, 5, 4]) retourne bien false
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 3 / 3
+
+  => code score: 15 / 15 pts
+
+=> TOTAL STUDENT SCORE: 19 / 20
+
+
+================================
+
+STUDENT: esteban_ferre
+
+  -  quizz answers:
+  | qcm1 : 3 (solution: 3) => 1 pts
+  | qcm2 : 3 (solution: 3) => 1 pts
+  | qcm3 : 3 (solution: 1) => 0 pts
+  | qcm4 : 2 (solution: 2) => 1 pts
+  | qcm5 : 3 (solution: 3) => 1 pts
+
+  => quizz score: 4 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code6 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | if (prenom === 'patrice') { 
+  | alert ('prenom vaut patrice');
+  | }
+  | [+] le code fonctionne sans erreur
+  | [+] quand prenom vaut patrice, l'alert est bien affiché
+  | [+] l'alert contient le message demandé
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 3 / 3
+  | 
+  | ------------- EXERCISE: code7 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var ville = prompt();
+  | if (ville === 'le mans') {
+  | alert('200km');
+  | } else if (ville === 'angers') {
+  | alert('300km');
+  | } else {
+  | alert('mauvaise saisie');
+  | } 
+  | [+] quand on tape le mans, la réponse est bien 200km
+  | [+] quand on tape angers, la réponse est bien 300km
+  | [+] quand on tape brest, la réponse est bien "mauvaise saisie"
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 3 / 3
+  | 
+  | ------------- EXERCISE: code8 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function diviser (a, b) {
+  | return a / b;
+  | }
+  | [+] function diviser a bien été trouvé dans le code
+  | [+] l'appel diviser(6, -2) retourne bien -3
+  | [+] l'appel diviser(2, 0.5) retourne bien 4
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 3 / 3
+  | 
+  | ------------- EXERCISE: code9 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | for ( var nombre = 10; nombre <= 20; nombre++ ) {
+  | console.log( nombre );
+  | }
+  | [+] il y a bien une boucle for dans le code
+  | [+] il y a bien un console.log for dans le code
+  | [+] console.log a bien été appelé
+  | [+] le 1er console.log affiche bien 10
+  | [+] le 5ème console.log affiche bien 14
+  | [+] le 10ème console.log affiche bien 19
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 3 / 3
+  | 
+  | ------------- EXERCISE: code10 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function contient3(tableau, nombre) {
+  | return tableau.indexOf(3)  !== -1;
+  | }
+  | [+] function contient3 a bien été trouvé dans le code
+  | [+] l'appel contient3([40, 3, 5, 3]) retourne bien true
+  | [+] l'appel contient3([40, 4, 5, 4]) retourne bien false
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 3 / 3
+
+  => code score: 15 / 15 pts
+
+-5 pts pour indentation inexistante dans les exercices de code
+
+=> TOTAL STUDENT SCORE: 14 / 20
+
+
+================================
+
+STUDENT: gauthier_ailloud
+
+  -  quizz answers:
+  | qcm1 : 3 (solution: 3) => 1 pts
+  | qcm2 : 3 (solution: 3) => 1 pts
+  | qcm3 : 2 (solution: 1) => 0 pts
+  | qcm4 : 2 (solution: 2) => 1 pts
+  | qcm5 : 3 (solution: 3) => 1 pts
+
+  => quizz score: 4 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code6 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | /*Il faudrait déclarer les variables prenom et michel pour que le code fonctionne*/
+  | if (prenom==michel){
+  |  alert('prenom vaut michel');
+  | }
+  | /!\ erreur: michel is not defined
+  | [-] une erreur ou un alert() inattendu est survenu
+  | /!\ erreur: michel is not defined
+  | [-] quand prenom vaut michel, un alert devrait être affiché
+  | [-] l'alert ne contient pas le message demandé
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 0 / 3
+  | 
+  | ------------- EXERCISE: code7 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var ville = prompt();
+  | if (ville === 'agen') {
+  |  alert('590km');
+  | } else if (ville === 'marseille') {
+  |  alert('750km');
+  | } else {
+  |  alert('mauvaise saisie');
+  | }
+  | 
+  | [+] quand on tape agen, la réponse est bien 590km
+  | [+] quand on tape marseille, la réponse est bien 750km
+  | [+] quand on tape brest, la réponse est bien "mauvaise saisie"
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 3 / 3
+  | 
+  | ------------- EXERCISE: code8 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function division(x,y) {
+  |  return x/y;
+  | }
+  | [+] function division a bien été trouvé dans le code
+  | [+] l'appel division(6, -2) retourne bien -3
+  | [+] l'appel division(2, 0.5) retourne bien 4
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 3 / 3
+  | 
+  | ------------- EXERCISE: code9 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | for(var i=50; i<61; i++){
+  |  console.log(i);
+  | }
+  | [+] il y a bien une boucle for dans le code
+  | [+] il y a bien un console.log for dans le code
+  | [+] console.log a bien été appelé
+  | [+] le 1er console.log affiche bien 50
+  | [+] le 5ème console.log affiche bien 54
+  | [+] le 10ème console.log affiche bien 59
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 3 / 3
+  | 
+  | ------------- EXERCISE: code10 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function contient1([x,y,z]) {
+  |  return [x,y,z].indexOf(1) !== -1;
+  | }
+  | [+] function contient1 a bien été trouvé dans le code
+  | [+] l'appel contient1([40, 1, 5, 1]) retourne bien true
+  | [+] l'appel contient1([40, 4, 5, 4]) retourne bien false
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 3 / 3
+
+  => code score: 12 / 15 pts
+
+-2.5 pts pour indentation d'1 espace au lieu de 2
+
+=> TOTAL STUDENT SCORE: 13.5 / 20
+
+
+================================
+
+STUDENT: imane_behiri
+
+  -  quizz answers:
+  | qcm1 : 1 (solution: 3) => 0 pts
+  | qcm2 : 2 (solution: 3) => 0 pts
+  | qcm3 : 3 (solution: 1) => 0 pts
+  | qcm4 : 2 (solution: 2) => 1 pts
+  | qcm5 : 3 (solution: 3) => 1 pts
+
+  => quizz score: 2 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code6 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | if (prenom === patrice) {
+  |   alert('prenom vaut patrice');
+  |   }
+  | /!\ erreur: patrice is not defined
+  | [-] une erreur ou un alert() inattendu est survenu
+  | /!\ erreur: patrice is not defined
+  | [-] quand prenom vaut patrice, un alert devrait être affiché
+  | [-] l'alert ne contient pas le message demandé
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 0 / 3
+  | 
+  | ------------- EXERCISE: code7 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var ville = prompt ('Sairir le nom d\'une ville');
+  | if (ville ==='marseille'){
+  | 	alert('750km');
+  | } else if (ville === 'bordeaux') {
+  | 	alert('550km');
+  | }
+  | [+] quand on tape marseille, la réponse est bien 750km
+  | [+] quand on tape bordeaux, la réponse est bien 550km
+  | [-] quand on tape brest, la réponse devrait être "mauvaise saisie"
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 2 / 3
+  | 
+  | ------------- EXERCISE: code8 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function division(5, 10);
+  | /!\ erreur: Unexpected number
+  | [+] function division a bien été trouvé dans le code
+  | [-] l'appel division(6, -2) devrait retourner -3
+  | [-] l'appel division(2, 0.5) devrait retourner 4
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 1 / 3
+  | 
+  | ------------- EXERCISE: code9 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | for ( var monNombre = 10 ; monNombre <= 20 ; monNombre++ ) {
+  |   console.log( monNombre );
+  | }
+  | [+] il y a bien une boucle for dans le code
+  | [+] il y a bien un console.log for dans le code
+  | [+] console.log a bien été appelé
+  | [+] le 1er console.log affiche bien 10
+  | [+] le 5ème console.log affiche bien 14
+  | [+] le 10ème console.log affiche bien 19
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 3 / 3
+  | 
+  | ------------- EXERCISE: code10 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | // -> EXERCISE POINTS: 0 / 3
+
+  => code score: 6 / 15 pts
+
+=> TOTAL STUDENT SCORE: 8 / 20
+
+
+================================
+
+STUDENT: mathias_lachot
+
+  -  quizz answers:
+  | qcm1 : 3 (solution: 3) => 1 pts
+  | qcm2 : 2 (solution: 3) => 0 pts
+  | qcm3 : 2 (solution: 1) => 0 pts
+  | qcm4 : 2 (solution: 2) => 1 pts
+  | qcm5 : 3 (solution: 3) => 1 pts
+
+  => quizz score: 3 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code6 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | if (prenom === michel) {
+  | 
+  |   alert('prenom vaut michel');
+  | 
+  | }
+  | 
+  | 
+  | /!\ erreur: michel is not defined
+  | [-] une erreur ou un alert() inattendu est survenu
+  | /!\ erreur: michel is not defined
+  | [-] quand prenom vaut michel, un alert devrait être affiché
+  | [-] l'alert ne contient pas le message demandé
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 0 / 3
+  | 
+  | ------------- EXERCISE: code7 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var ville = prompt();
+  | 
+  | if (ville === 'agen') {
+  | 
+  |   alert('590km');
+  | 
+  | } else if (ville === 'marseille') {
+  | 
+  |   alert('750km');
+  | 
+  | } else {
+  | 
+  |   alert('mauvaise saisie');
+  | 
+  | }
+  | [+] quand on tape agen, la réponse est bien 590km
+  | [+] quand on tape marseille, la réponse est bien 750km
+  | [+] quand on tape brest, la réponse est bien "mauvaise saisie"
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 3 / 3
+  | 
+  | ------------- EXERCISE: code8 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function division(a, b) {
+  | 
+  |   return  a/b;
+  | 
+  | }
+  | 
+  | 
+  | [+] function division a bien été trouvé dans le code
+  | [+] l'appel division(6, -2) retourne bien -3
+  | [+] l'appel division(2, 0.5) retourne bien 4
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 3 / 3
+  | 
+  | ------------- EXERCISE: code9 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | for ( var i=50; i<61; i++ ) {
+  |   console.log (i);
+  | }
+  | [+] il y a bien une boucle for dans le code
+  | [+] il y a bien un console.log for dans le code
+  | [+] console.log a bien été appelé
+  | [+] le 1er console.log affiche bien 50
+  | [+] le 5ème console.log affiche bien 54
+  | [+] le 10ème console.log affiche bien 59
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 3 / 3
+  | 
+  | ------------- EXERCISE: code10 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function contient1 ([a,b,c]) {
+  |   return [a,b,c].indexOf(1) !== -1;
+  | }
+  | [+] function contient1 a bien été trouvé dans le code
+  | [+] l'appel contient1([40, 1, 5, 1]) retourne bien true
+  | [+] l'appel contient1([40, 4, 5, 4]) retourne bien false
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 3 / 3
+
+  => code score: 12 / 15 pts
+
+=> TOTAL STUDENT SCORE: 15 / 20
+
+
+================================
+
+STUDENT: maxime_bonnet
+
+  -  quizz answers:
+  | qcm1 : 4 (solution: 3) => 0 pts
+  | qcm2 : 2 (solution: 3) => 0 pts
+  | qcm3 : 2 (solution: 1) => 0 pts
+  | qcm4 : 2 (solution: 2) => 1 pts
+  | qcm5 : 3 (solution: 3) => 1 pts
+
+  => quizz score: 2 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code6 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | if (nom <= durand) {
+  |   alert('nom vaut durand');
+  | }
+  | /!\ erreur: durand is not defined
+  | [-] une erreur ou un alert() inattendu est survenu
+  | /!\ erreur: durand is not defined
+  | [-] quand nom vaut durand, un alert devrait être affiché
+  | [-] l'alert ne contient pas le message demandé
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 0 / 3
+  | 
+  | ------------- EXERCISE: code7 (variant: 3) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var reponse = prompt('Saisir le nom d\'une ville');
+  | if (reponse === 'roubaix') {
+  |   alert('230km');
+  | } else if (reponse === 'lyon') {
+  |     alert('450km');
+  |   } else {
+  |     alert('mauvaise saisie');
+  |   }
+  | [+] quand on tape roubaix, la réponse est bien 230km
+  | [+] quand on tape lyon, la réponse est bien 450km
+  | [+] quand on tape brest, la réponse est bien "mauvaise saisie"
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 3 / 3
+  | 
+  | ------------- EXERCISE: code8 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function diviser(a, b) {
+  |   return a / b;
+  | }
+  | [+] function diviser a bien été trouvé dans le code
+  | [+] l'appel diviser(6, -2) retourne bien -3
+  | [+] l'appel diviser(2, 0.5) retourne bien 4
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 3 / 3
+  | 
+  | ------------- EXERCISE: code9 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | for (var i = -5; i < 6; i++){
+  |   console.log(i);
+  | }
+  | [+] il y a bien une boucle for dans le code
+  | [+] il y a bien un console.log for dans le code
+  | [+] console.log a bien été appelé
+  | [+] le 1er console.log affiche bien -5
+  | [+] le 5ème console.log affiche bien -1
+  | [+] le 10ème console.log affiche bien 4
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 3 / 3
+  | 
+  | ------------- EXERCISE: code10 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function contient3(tableau) {
+  |   return tableau.indexOf(3) !== -1;
+  | }
+  | [+] function contient3 a bien été trouvé dans le code
+  | [+] l'appel contient3([40, 3, 5, 3]) retourne bien true
+  | [+] l'appel contient3([40, 4, 5, 4]) retourne bien false
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 3 / 3
+
+  => code score: 12 / 15 pts
+
+-1 pour anomalie d'indentation dans les conditions de l'exercice sur les villes
+
+=> TOTAL STUDENT SCORE: 13 / 20
+
+
+================================
+
+STUDENT: mike_meimoun
+
+  -  quizz answers:
+  | qcm1 : 4 (solution: 3) => 0 pts
+  | qcm2 : 3 (solution: 3) => 1 pts
+  | qcm3 : 2 (solution: 1) => 0 pts
+  | qcm4 : 2 (solution: 2) => 1 pts
+  | qcm5 : 3 (solution: 3) => 1 pts
+
+  => quizz score: 3 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code6 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | if (prenom === 'patrice') {
+  |  alert('prenom vaut patrice');
+  | }
+  | [+] le code fonctionne sans erreur
+  | [+] quand prenom vaut patrice, l'alert est bien affiché
+  | [+] l'alert contient le message demandé
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 3 / 3
+  | 
+  | ------------- EXERCISE: code7 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var ville = prompt();
+  | if (ville === 'marseille') {
+  |  alert('750km');
+  | } else if (ville === 'bordeaux') {
+  |  alert('550km');
+  | } else {
+  |  alert('mauvaise saisie');
+  | }
+  | [+] quand on tape marseille, la réponse est bien 750km
+  | [+] quand on tape bordeaux, la réponse est bien 550km
+  | [+] quand on tape brest, la réponse est bien "mauvaise saisie"
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 3 / 3
+  | 
+  | ------------- EXERCISE: code8 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function diviser(a, b) {
+  |   return a / b;
+  | } 
+  | 
+  | [-] la fonction division() n'est pas définie correctement
+  | [-] l'appel division(6, -2) devrait retourner -3
+  | [-] l'appel division(2, 0.5) devrait retourner 4
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 0 / 3
+  | 
+  | ------------- EXERCISE: code9 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  |  for ( var i = 10; i <=20 ; i++ ) {
+  |  console.log(i);
+  | }
+  | [+] il y a bien une boucle for dans le code
+  | [+] il y a bien un console.log for dans le code
+  | [+] console.log a bien été appelé
+  | [+] le 1er console.log affiche bien 10
+  | [+] le 5ème console.log affiche bien 14
+  | [+] le 10ème console.log affiche bien 19
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 3 / 3
+  | 
+  | ------------- EXERCISE: code10 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function contient1(tableau) {
+  | var indice = tableau.indexOf(1);
+  | if (indice === -1) {
+  | return false;
+  | } else {
+  | return true;
+  | }
+  | }
+  | [+] function contient1 a bien été trouvé dans le code
+  | [+] l'appel contient1([40, 1, 5, 1]) retourne bien true
+  | [+] l'appel contient1([40, 4, 5, 4]) retourne bien false
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 3 / 3
+
+  => code score: 12 / 15 pts
+
+-3.5 pts pour défauts d'indentation
+
+=> TOTAL STUDENT SCORE: 11.5 / 20
+
+
+================================
+
+STUDENT: nicolas_perrousset
+
+  -  quizz answers:
+  | qcm1 : 4 (solution: 3) => 0 pts
+  | qcm2 : 1 (solution: 3) => 0 pts
+  | qcm3 : 2 (solution: 1) => 0 pts
+  | qcm4 : 2 (solution: 2) => 1 pts
+  | qcm5 : 3 (solution: 3) => 1 pts
+
+  => quizz score: 2 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code6 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | if (nom == 'durand' ) { 
+  | alert('nom vaut durand')
+  | }
+  | else {
+  | 
+  | }
+  | 
+  | [+] le code fonctionne sans erreur
+  | [+] quand nom vaut durand, l'alert est bien affiché
+  | [+] l'alert contient le message demandé
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 3 / 3
+  | 
+  | ------------- EXERCISE: code7 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var ville = prompt('Quel ville ?');
+  | if ( ville == 'marseille') {
+  | alert('750km')
+  | }
+  | else if (ville == 'bordeaux') {
+  | alert('550km')
+  | }
+  | else {
+  | alert('mauvaise saisie')
+  | }
+  | [+] quand on tape marseille, la réponse est bien 750km
+  | [+] quand on tape bordeaux, la réponse est bien 550km
+  | [+] quand on tape brest, la réponse est bien "mauvaise saisie"
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 3 / 3
+  | 
+  | ------------- EXERCISE: code8 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function division (a, b) {
+  |     return  a / b;
+  | }
+  | [+] function division a bien été trouvé dans le code
+  | [+] l'appel division(6, -2) retourne bien -3
+  | [+] l'appel division(2, 0.5) retourne bien 4
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 3 / 3
+  | 
+  | ------------- EXERCISE: code9 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | for( var i = -5 ; i <= 5 ; i++ ){
+  | console.log(i);
+  | }
+  | 
+  | [+] il y a bien une boucle for dans le code
+  | [+] il y a bien un console.log for dans le code
+  | [+] console.log a bien été appelé
+  | [+] le 1er console.log affiche bien -5
+  | [+] le 5ème console.log affiche bien -1
+  | [+] le 10ème console.log affiche bien 4
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 3 / 3
+  | 
+  | ------------- EXERCISE: code10 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function contient1 (Array) {
+  | if ( Array[0] = 1 ) {
+  | return 'true';
+  | }
+  | else if ( Array[1] = 1) {
+  | return 'true';
+  | }
+  | else if ( Array[2] = 1) {
+  |  return 'true';
+  | }
+  | else {
+  | return 'false';
+  | }
+  | return console.log(return)
+  | }
+  | 
+  | 
+  | /!\ erreur: Unexpected token return
+  | [+] function contient1 a bien été trouvé dans le code
+  | [-] l'appel contient1([40, 1, 5, 1]) devrait retourner true
+  | [-] l'appel contient1([40, 4, 5, 4]) devrait retourner false
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 1 / 3
+
+  => code score: 13 / 15 pts
+
+-5 pts pour indentation inexistante dans le code, et mauvais placement des accolades dans les conditions
+
+=> TOTAL STUDENT SCORE: 10 / 20
+
+
+================================
+
+STUDENT: sonia_beregreg
+
+  -  quizz answers:
+  | qcm1 : 4 (solution: 3) => 0 pts
+  | qcm2 : 1 (solution: 3) => 0 pts
+  | qcm3 : 2 (solution: 1) => 0 pts
+  | qcm4 : 2 (solution: 2) => 1 pts
+  | qcm5 : 3 (solution: 3) => 1 pts
+
+  => quizz score: 2 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code6 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | 
+  |   if ( prenom === michel) {
+  |   alert('prenom vaut michel');
+  | }
+  | /!\ erreur: michel is not defined
+  | [-] une erreur ou un alert() inattendu est survenu
+  | /!\ erreur: michel is not defined
+  | [-] quand prenom vaut michel, un alert devrait être affiché
+  | [-] l'alert ne contient pas le message demandé
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 0 / 3
+  | 
+  | ------------- EXERCISE: code7 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | 
+  | 
+  | var ville = prompt('Saisissez le nom de la ville');
+  | var distance = {
+  |   'marseille' : '750km',
+  |   'bordeaux' : '550km',
+  | } 
+  | alert('La distance a partir de Paris est de' + distance[ville]) 
+  |   
+  | 
+  | [-] quand on tape marseille, la réponse devrait être 750km
+  | [-] quand on tape bordeaux, la réponse devrait être 550km
+  | [-] quand on tape brest, la réponse devrait être "mauvaise saisie"
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 0 / 3
+  | 
+  | ------------- EXERCISE: code8 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | 
+  |   
+  | 
+  | 
+  | 
+  | [-] la fonction division() n'est pas définie correctement
+  | [-] l'appel division(6, -2) devrait retourner -3
+  | [-] l'appel division(2, 0.5) devrait retourner 4
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 0 / 3
+  | 
+  | ------------- EXERCISE: code9 (variant: 1) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | // -> EXERCISE POINTS: 0 / 3
+  | 
+  | ------------- EXERCISE: code10 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | // -> EXERCISE POINTS: 0 / 3
+
+  => code score: 0 / 15 pts
+
+=> TOTAL STUDENT SCORE: 2 / 20
+
+
+================================
+
+STUDENT: thomas_kossowski
+
+  -  quizz answers:
+  | qcm1 : 3 (solution: 3) => 1 pts
+  | qcm2 : 3 (solution: 3) => 1 pts
+  | qcm3 : 2 (solution: 1) => 0 pts
+  | qcm4 : 2 (solution: 2) => 1 pts
+  | qcm5 : 3 (solution: 3) => 1 pts
+
+  => quizz score: 4 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code6 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | if (prenom==='michel') { alert ('prenom vaut michel' ) }
+  | [+] le code fonctionne sans erreur
+  | [+] quand prenom vaut michel, l'alert est bien affiché
+  | [+] l'alert contient le message demandé
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 3 / 3
+  | 
+  | ------------- EXERCISE: code7 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var utilisateur = prompt ('Saisir le nom d une ville'); 				if (utilisateur === 'marseille') { alert ('750km'); }  			else if (utilisateur === 'bordeaux') { alert ('550km'); } else { alert ('mauvaise saisie') }
+  | [+] quand on tape marseille, la réponse est bien 750km
+  | [+] quand on tape bordeaux, la réponse est bien 550km
+  | [+] quand on tape brest, la réponse est bien "mauvaise saisie"
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 3 / 3
+  | 
+  | ------------- EXERCISE: code8 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var resultat = division(8);	function division (8, 2) { return resultat }	
+  | /!\ erreur: Unexpected number
+  | [+] function division a bien été trouvé dans le code
+  | [-] l'appel division(6, -2) devrait retourner -3
+  | [-] l'appel division(2, 0.5) devrait retourner 4
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 1 / 3
+  | 
+  | ------------- EXERCISE: code9 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | for ( var monNombre = 50; monNombre <= 60; monNombre++ ) {
+  |   console.log( monNombre );
+  | }
+  | [+] il y a bien une boucle for dans le code
+  | [+] il y a bien un console.log for dans le code
+  | [+] console.log a bien été appelé
+  | [+] le 1er console.log affiche bien 50
+  | [+] le 5ème console.log affiche bien 54
+  | [+] le 10ème console.log affiche bien 59
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 3 / 3
+  | 
+  | ------------- EXERCISE: code10 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var chiffres = [ 1, 2, 3 ];	function contient1 (chiffres); 	if (contient1 === [1, 2, 3 ] { return true } 
+  | /!\ erreur: Unexpected token ;
+  | [+] function contient1 a bien été trouvé dans le code
+  | [-] l'appel contient1([40, 1, 5, 1]) devrait retourner true
+  | [-] l'appel contient1([40, 4, 5, 4]) devrait retourner false
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 1 / 3
+
+  => code score: 11 / 15 pts
+
+-5 pts pour absence de sauts de lignes dans tous les exercices de code
+
+=> TOTAL STUDENT SCORE: 10 / 20
+
+
+================================
+
+STUDENT: yassine_baba_slimane
+
+  -  quizz answers:
+  | qcm1 : 2 (solution: 3) => 0 pts
+  | qcm2 : 3 (solution: 3) => 1 pts
+  | qcm3 : 1 (solution: 1) => 1 pts
+  | qcm4 : 2 (solution: 2) => 1 pts
+  | qcm5 : 3 (solution: 3) => 1 pts
+
+  => quizz score: 4 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code6 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | if (nom === 'durand'){
+  |   alert ('nom vaut durand');
+  | }
+  | [+] le code fonctionne sans erreur
+  | [+] quand nom vaut durand, l'alert est bien affiché
+  | [+] l'alert contient le message demandé
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 3 / 3
+  | 
+  | ------------- EXERCISE: code7 (variant: 3) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var ville = prompt();
+  | if (ville === 'roubaix') {
+  |  alert('230km');
+  | } else if (ville === 'lyon') {
+  |  alert('450km');
+  | } else {
+  |  alert('mauvaise saisie');
+  | }
+  | [+] quand on tape roubaix, la réponse est bien 230km
+  | [+] quand on tape lyon, la réponse est bien 450km
+  | [+] quand on tape brest, la réponse est bien "mauvaise saisie"
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 3 / 3
+  | 
+  | ------------- EXERCISE: code8 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function diviser (a ,b) {
+  |   return a / b;
+  | }
+  | [+] function diviser a bien été trouvé dans le code
+  | [+] l'appel diviser(6, -2) retourne bien -3
+  | [+] l'appel diviser(2, 0.5) retourne bien 4
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 3 / 3
+  | 
+  | ------------- EXERCISE: code9 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | for (var i = -5 ; i <= 5 ; i++ ){
+  |   console.log(i);
+  | }
+  | [+] il y a bien une boucle for dans le code
+  | [+] il y a bien un console.log for dans le code
+  | [+] console.log a bien été appelé
+  | [+] le 1er console.log affiche bien -5
+  | [+] le 5ème console.log affiche bien -1
+  | [+] le 10ème console.log affiche bien 4
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 3 / 3
+  | 
+  | ------------- EXERCISE: code10 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function contient3 (tableau){
+  |   return tableau.indexOf(3) !==-1;
+  | }  
+  | [+] function contient3 a bien été trouvé dans le code
+  | [+] l'appel contient3([40, 3, 5, 3]) retourne bien true
+  | [+] l'appel contient3([40, 4, 5, 4]) retourne bien false
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 3 / 3
+
+  => code score: 15 / 15 pts
+
+-1 pt pour indentation d'1 espace au lieu de 2 dans le 2eme exercice de code
+
+=> TOTAL STUDENT SCORE: 18 / 20

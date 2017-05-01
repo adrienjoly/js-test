@@ -5,7 +5,7 @@
     window.location.href = window.location.href.replace('http:', 'https:');
   var app = document.querySelector('#app');
   app.config = {
-    "title": "JavaScript - Contrôle 3 (AJAX)",
+    "title": "JavaScript Partiel 1 - Classe 4",
     "PUBLIC_TEST_MODE": false,
     "DISPLAY_SOLUTIONS_AFTER_SUBMIT": false,
     "redirectToHttps": true,
@@ -16,9 +16,9 @@
     "backend": {
       "type": "firebase",
       "FIREBASE_CONFIG": {
-        "apiKey": "AIzaSyCEfwp0moUfvU3jNcmivKM83_lBIuaYwbc",
-        "databaseURL": "https://controle3-790ad.firebaseio.com",
-        "messagingSenderId": "838870643150"
+        "apiKey": "AIzaSyCCVnADtKjLmzivOw4fTLDUkCz90xkj4ws",
+        "databaseURL": "https://js-test-ft-partiel.firebaseio.com",
+        "messagingSenderId": "699482710183"
       }
     },
     "teacherEmail": "adrien.joly@eemi.com",
@@ -31,62 +31,253 @@
       "ptsNull": 0
     },
     "codeGrading": {
-      "ptsPerExercise": 10
+      "ptsPerExercise": 3
     }
   };
   app.exercises = [
     {
-      "_info": "generated from ex.01.code.template.md",
+      "_info": "generated from ex.01.quizz.template.md",
       "i": 1,
-      "isCode": true,
-      "title": "Requête AJAX simple",
-      "maxScore": 20,
+      "isQuizz": true,
+      "title": "QCM",
+      "maxScore": 5,
       "questions": [
         {
           "i": 1,
-          "id": "code1",
-          "variants": [
+          "id": "qcm1",
+          "md": "```js\nfunction bonjour(prenom) {\n  var resultat = 'bonjour, ' + prenom;\n  return resultat;\n}\n```\n\nQu'est-ce que ce code ne contient PAS:\n",
+          "choices": [
             {
-              "number": 4
+              "name": 1,
+              "text": "Affectation"
             },
             {
-              "number": 6
+              "name": 2,
+              "text": "Définition de fonction"
             },
             {
-              "number": 8
+              "name": 3,
+              "text": "Appel de fonction"
             },
             {
-              "number": 14
+              "name": 4,
+              "text": "Concaténation"
             }
-          ],
-          "mdVariants": [
-            "\nÉcrire un programme JavaScript permettant:\n\n - d'envoyer une requête HTTP GET à l'URL `https://js-jsonplaceholder.herokuapp.com/posts/4`,\n - puis d'afficher avec `alert()` la réponse finale du serveur à cette requête.\n\nUtiliser la classe `XMLHttpRequest()` pour effectuer cette requête.\n\n\n",
-            "\nÉcrire un programme JavaScript permettant:\n\n - d'envoyer une requête HTTP GET à l'URL `https://js-jsonplaceholder.herokuapp.com/posts/6`,\n - puis d'afficher avec `alert()` la réponse finale du serveur à cette requête.\n\nUtiliser la classe `XMLHttpRequest()` pour effectuer cette requête.\n\n\n",
-            "\nÉcrire un programme JavaScript permettant:\n\n - d'envoyer une requête HTTP GET à l'URL `https://js-jsonplaceholder.herokuapp.com/posts/8`,\n - puis d'afficher avec `alert()` la réponse finale du serveur à cette requête.\n\nUtiliser la classe `XMLHttpRequest()` pour effectuer cette requête.\n\n\n",
-            "\nÉcrire un programme JavaScript permettant:\n\n - d'envoyer une requête HTTP GET à l'URL `https://js-jsonplaceholder.herokuapp.com/posts/14`,\n - puis d'afficher avec `alert()` la réponse finale du serveur à cette requête.\n\nUtiliser la classe `XMLHttpRequest()` pour effectuer cette requête.\n\n\n"
           ]
         },
         {
           "i": 2,
-          "id": "code2",
+          "id": "qcm2",
+          "md": "```js\nfor (var i = -1; i <= 1; i++) {\n  // code sans importance\n}\n```\n\nCombien de fois le code à l'intérieur des accolades va-t-il être exécuté ?\n",
+          "choices": [
+            {
+              "name": 1,
+              "text": "1 fois"
+            },
+            {
+              "name": 2,
+              "text": "2 fois"
+            },
+            {
+              "name": 3,
+              "text": "3 fois"
+            },
+            {
+              "name": 4,
+              "text": "à l'infini"
+            }
+          ]
+        },
+        {
+          "i": 3,
+          "id": "qcm3",
+          "md": "```js\nif (a === 1) {\n  // code sans importance\n} else if (b === 1) {\n  // code sans importance\n} else {\n  // code sans importance\n}\n```\n\nSi on voulait représenter ces conditions sous forme d'un arbre de décision, combien contiendrait-il de niveaux ?\n",
+          "choices": [
+            {
+              "name": 1,
+              "text": "1"
+            },
+            {
+              "name": 2,
+              "text": "2"
+            },
+            {
+              "name": 3,
+              "text": "3"
+            },
+            {
+              "name": 4,
+              "text": "4"
+            }
+          ]
+        },
+        {
+          "i": 4,
+          "id": "qcm4",
+          "md": "Supposons que nous ayons un tableau `fruits` ayant la valeur suivante:\n\n```js\n[ 'kiwi', 'prune', 'abricot', 'fraise' ]\n```\n\nQue se passe-t-il si on exécute l'instruction suivante:\n\n```js\nfruits[1] = 'litchi';\n```\n",
+          "choices": [
+            {
+              "name": 1,
+              "text": "la valeur \"litchi\" va être ajoutée au début du tableau"
+            },
+            {
+              "name": 2,
+              "text": "la valeur \"litchi\" va remplacer \"prune\""
+            },
+            {
+              "name": 3,
+              "text": "la valeur \"litchi\" va remplacer \"kiwi\""
+            },
+            {
+              "name": 4,
+              "text": "cette expression vaut false"
+            }
+          ]
+        },
+        {
+          "i": 5,
+          "id": "qcm5",
+          "md": "Supposons que nous ayons un tableau `fruits` ayant la valeur suivante:\n\n```js\n[ 'kiwi', 'prune', 'abricot', 'fraise' ]\n```\n\nQue se passe-t-il si on exécute l'instruction suivante:\n\n```js\nfruits.splice(1, 2);\n```\n",
+          "choices": [
+            {
+              "name": 1,
+              "text": "le nombre 2 sera inséré juste après \"kiwi\""
+            },
+            {
+              "name": 2,
+              "text": "la valeur \"prune\" va être retirée du tableau"
+            },
+            {
+              "name": 3,
+              "text": "les valeurs \"prune\" et \"abricot\" vont être retirées du tableau"
+            },
+            {
+              "name": 4,
+              "text": "les valeurs \"prune\", \"abricot\" et \"fraise\" vont être retirées du tableau"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_info": "generated from ex.02.code.template.md",
+      "i": 2,
+      "isCode": true,
+      "title": "Exercices de codage",
+      "maxScore": 15,
+      "questions": [
+        {
+          "i": 6,
+          "id": "code6",
           "variants": [
             {
-              "fr": "nom",
-              "prop": "name"
+              "varName": "prenom",
+              "value": "patrice"
             },
             {
-              "fr": "numéro de téléphone",
-              "prop": "phone"
+              "varName": "prenom",
+              "value": "michel"
             },
             {
-              "fr": "site web",
-              "prop": "website"
+              "varName": "nom",
+              "value": "durand"
             }
           ],
           "mdVariants": [
-            "# Annuaire interactif\n\nUn client souhaite un moyen d'accéder rapidement au nom d'un adhérent, à partir de son numéro d'adhérent.\n\nIl met à disposition une API permettant d'accéder aux données de chaque adhérent. Il suffit d'effectuer une requête HTTP GET à l'URL `https://js-jsonplaceholder.herokuapp.com/users/<numero>`, où `<numero>` est à remplacer par le numéro d'adhérent dont on souhaite récupérer les données. L'API retourne alors une réponse au format JSON, contenant une propriété `name`.\n\nNous allons développer une solution simple consistant en:\n - une page HTML contenant un champ permettant de saisir le numéro d'adhérent, un bouton pour effectuer la requête, et un deuxième champ qui contiendra le nom de l'adhérent,\n - et un programme JavaScript permettant d'effectuer les requêtes AJAX correspondantes vers leur API, et d'afficher le nom de l'adhérent spécifié à chaque fois que l'utilisateur cliquera sur le bouton.\n\nLa page HTML de cette solution est fournie. Voici le code source de son `<body>`:\n\n```html\n<label for=\"numero\">Numéro d'adhérent:</label>\n<input id=\"numero\" type=\"text\">\n<input id=\"bouton\" type=\"button\" value=\"Chercher\">\n<p>Résultat:</p>\n<input id=\"name\" type=\"text\" readonly>\n```\n\nL'utilisateur doit pouvoir effectuer plusieurs recherches d'affilée, en tapant un autre numéro d'adhérent puis cliquant à nouveau sur le bouton.\n\nÉcrire le programme JavaScript à associer à cette page.\n\nNote: Vous devrez utiliser la classe `XMLHttpRequest()` pour effectuer les requêtes.\n\n\n",
-            "# Annuaire interactif\n\nUn client souhaite un moyen d'accéder rapidement au numéro de téléphone d'un adhérent, à partir de son numéro d'adhérent.\n\nIl met à disposition une API permettant d'accéder aux données de chaque adhérent. Il suffit d'effectuer une requête HTTP GET à l'URL `https://js-jsonplaceholder.herokuapp.com/users/<numero>`, où `<numero>` est à remplacer par le numéro d'adhérent dont on souhaite récupérer les données. L'API retourne alors une réponse au format JSON, contenant une propriété `phone`.\n\nNous allons développer une solution simple consistant en:\n - une page HTML contenant un champ permettant de saisir le numéro d'adhérent, un bouton pour effectuer la requête, et un deuxième champ qui contiendra le numéro de téléphone de l'adhérent,\n - et un programme JavaScript permettant d'effectuer les requêtes AJAX correspondantes vers leur API, et d'afficher le numéro de téléphone de l'adhérent spécifié à chaque fois que l'utilisateur cliquera sur le bouton.\n\nLa page HTML de cette solution est fournie. Voici le code source de son `<body>`:\n\n```html\n<label for=\"numero\">Numéro d'adhérent:</label>\n<input id=\"numero\" type=\"text\">\n<input id=\"bouton\" type=\"button\" value=\"Chercher\">\n<p>Résultat:</p>\n<input id=\"phone\" type=\"text\" readonly>\n```\n\nL'utilisateur doit pouvoir effectuer plusieurs recherches d'affilée, en tapant un autre numéro d'adhérent puis cliquant à nouveau sur le bouton.\n\nÉcrire le programme JavaScript à associer à cette page.\n\nNote: Vous devrez utiliser la classe `XMLHttpRequest()` pour effectuer les requêtes.\n\n\n",
-            "# Annuaire interactif\n\nUn client souhaite un moyen d'accéder rapidement au site web d'un adhérent, à partir de son numéro d'adhérent.\n\nIl met à disposition une API permettant d'accéder aux données de chaque adhérent. Il suffit d'effectuer une requête HTTP GET à l'URL `https://js-jsonplaceholder.herokuapp.com/users/<numero>`, où `<numero>` est à remplacer par le numéro d'adhérent dont on souhaite récupérer les données. L'API retourne alors une réponse au format JSON, contenant une propriété `website`.\n\nNous allons développer une solution simple consistant en:\n - une page HTML contenant un champ permettant de saisir le numéro d'adhérent, un bouton pour effectuer la requête, et un deuxième champ qui contiendra le site web de l'adhérent,\n - et un programme JavaScript permettant d'effectuer les requêtes AJAX correspondantes vers leur API, et d'afficher le site web de l'adhérent spécifié à chaque fois que l'utilisateur cliquera sur le bouton.\n\nLa page HTML de cette solution est fournie. Voici le code source de son `<body>`:\n\n```html\n<label for=\"numero\">Numéro d'adhérent:</label>\n<input id=\"numero\" type=\"text\">\n<input id=\"bouton\" type=\"button\" value=\"Chercher\">\n<p>Résultat:</p>\n<input id=\"website\" type=\"text\" readonly>\n```\n\nL'utilisateur doit pouvoir effectuer plusieurs recherches d'affilée, en tapant un autre numéro d'adhérent puis cliquant à nouveau sur le bouton.\n\nÉcrire le programme JavaScript à associer à cette page.\n\nNote: Vous devrez utiliser la classe `XMLHttpRequest()` pour effectuer les requêtes.\n\n\n"
+            "<!-- Condition simple -->\n\nSupposons qu'une variable `prenom` ait été créée et contienne une chaine de caractères.\n\nImplémenter une condition qui affiche `'prenom vaut patrice'` à l'aide de `alert()`, si (et seulement si) `prenom` est strictement égal à `patrice`.\n\n\n",
+            "<!-- Condition simple -->\n\nSupposons qu'une variable `prenom` ait été créée et contienne une chaine de caractères.\n\nImplémenter une condition qui affiche `'prenom vaut michel'` à l'aide de `alert()`, si (et seulement si) `prenom` est strictement égal à `michel`.\n\n\n",
+            "<!-- Condition simple -->\n\nSupposons qu'une variable `nom` ait été créée et contienne une chaine de caractères.\n\nImplémenter une condition qui affiche `'nom vaut durand'` à l'aide de `alert()`, si (et seulement si) `nom` est strictement égal à `durand`.\n\n\n"
+          ]
+        },
+        {
+          "i": 7,
+          "id": "code7",
+          "variants": [
+            {
+              "city1": "agen",
+              "dist1": "590km",
+              "city2": "marseille",
+              "dist2": "750km"
+            },
+            {
+              "city1": "le mans",
+              "dist1": "200km",
+              "city2": "angers",
+              "dist2": "300km"
+            },
+            {
+              "city1": "marseille",
+              "dist1": "750km",
+              "city2": "bordeaux",
+              "dist2": "550km"
+            },
+            {
+              "city1": "roubaix",
+              "dist1": "230km",
+              "city2": "lyon",
+              "dist2": "450km"
+            }
+          ],
+          "mdVariants": [
+            "<!-- Condition avancée -->\n\nNous allons écrire un programme qui donne la distance de certaines villes, au départ de Paris.\n\nCe programme devra:\n\n - Inviter l'utilisateur à saisir le nom d'une ville;\n - Dans le cas où l'utilisateur a saisi `agen`, répondre `590km`;\n - Dans le cas où l'utilisateur a saisi `marseille`, répondre `750km`;\n - Sinon, répondre `mauvaise saisie`.\n\nLes réponses sont à afficher à l'aide de la fonction `alert()`. Respecter les textes fournis à la lettre. (y compris la casse, espaces et ponctuation)\n\n\n",
+            "<!-- Condition avancée -->\n\nNous allons écrire un programme qui donne la distance de certaines villes, au départ de Paris.\n\nCe programme devra:\n\n - Inviter l'utilisateur à saisir le nom d'une ville;\n - Dans le cas où l'utilisateur a saisi `le mans`, répondre `200km`;\n - Dans le cas où l'utilisateur a saisi `angers`, répondre `300km`;\n - Sinon, répondre `mauvaise saisie`.\n\nLes réponses sont à afficher à l'aide de la fonction `alert()`. Respecter les textes fournis à la lettre. (y compris la casse, espaces et ponctuation)\n\n\n",
+            "<!-- Condition avancée -->\n\nNous allons écrire un programme qui donne la distance de certaines villes, au départ de Paris.\n\nCe programme devra:\n\n - Inviter l'utilisateur à saisir le nom d'une ville;\n - Dans le cas où l'utilisateur a saisi `marseille`, répondre `750km`;\n - Dans le cas où l'utilisateur a saisi `bordeaux`, répondre `550km`;\n - Sinon, répondre `mauvaise saisie`.\n\nLes réponses sont à afficher à l'aide de la fonction `alert()`. Respecter les textes fournis à la lettre. (y compris la casse, espaces et ponctuation)\n\n\n",
+            "<!-- Condition avancée -->\n\nNous allons écrire un programme qui donne la distance de certaines villes, au départ de Paris.\n\nCe programme devra:\n\n - Inviter l'utilisateur à saisir le nom d'une ville;\n - Dans le cas où l'utilisateur a saisi `roubaix`, répondre `230km`;\n - Dans le cas où l'utilisateur a saisi `lyon`, répondre `450km`;\n - Sinon, répondre `mauvaise saisie`.\n\nLes réponses sont à afficher à l'aide de la fonction `alert()`. Respecter les textes fournis à la lettre. (y compris la casse, espaces et ponctuation)\n\n\n"
+          ]
+        },
+        {
+          "i": 8,
+          "id": "code8",
+          "variants": [
+            {
+              "fctName": "division"
+            },
+            {
+              "fctName": "diviser"
+            }
+          ],
+          "mdVariants": [
+            "<!-- Fonctions -->\n\nDéfinir une fonction `division` qui retourne le résultat de la division des deux nombres passés en paramètres.\n\nExemple d'appel: `division(6, -2);` doit retourner `-3` (résultat de `6 / -2`).\n\n\n",
+            "<!-- Fonctions -->\n\nDéfinir une fonction `diviser` qui retourne le résultat de la division des deux nombres passés en paramètres.\n\nExemple d'appel: `diviser(6, -2);` doit retourner `-3` (résultat de `6 / -2`).\n\n\n"
+          ]
+        },
+        {
+          "i": 9,
+          "id": "code9",
+          "variants": [
+            {
+              "n1": 10,
+              "n2": 20
+            },
+            {
+              "n1": 50,
+              "n2": 60
+            },
+            {
+              "n1": -5,
+              "n2": 5
+            }
+          ],
+          "mdVariants": [
+            "<!-- Boucles -->\n\nImplémenter une boucle `for()` qui écrit les nombres de `10` à `20` (compris) dans la console, à raison d'une ligne par nombre. Utiliser `console.log()`.\n\n\n",
+            "<!-- Boucles -->\n\nImplémenter une boucle `for()` qui écrit les nombres de `50` à `60` (compris) dans la console, à raison d'une ligne par nombre. Utiliser `console.log()`.\n\n\n",
+            "<!-- Boucles -->\n\nImplémenter une boucle `for()` qui écrit les nombres de `-5` à `5` (compris) dans la console, à raison d'une ligne par nombre. Utiliser `console.log()`.\n\n\n"
+          ]
+        },
+        {
+          "i": 10,
+          "id": "code10",
+          "variants": [
+            {
+              "val": 1
+            },
+            {
+              "val": 3
+            }
+          ],
+          "mdVariants": [
+            "<!-- Tableaux -->\n\nDéfinir une fonction `contient1` qui prend en paramètre un tableau de nombres, et retourne:\n - `true` si la valeur `1` est contenue au moins une fois dans le tableau passé en paramètre,\n - ou `false` sinon.\n \nExemples d'appels:\n - `contient1([1, 2, 3]);` doit retourner `true`.\n - `contient1([4, 5, 6]);` doit retourner `false`.\n\n\n",
+            "<!-- Tableaux -->\n\nDéfinir une fonction `contient3` qui prend en paramètre un tableau de nombres, et retourne:\n - `true` si la valeur `3` est contenue au moins une fois dans le tableau passé en paramètre,\n - ou `false` sinon.\n \nExemples d'appels:\n - `contient3([1, 2, 3]);` doit retourner `true`.\n - `contient3([4, 5, 6]);` doit retourner `false`.\n\n\n"
           ]
         }
       ]

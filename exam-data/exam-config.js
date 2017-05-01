@@ -7,7 +7,7 @@ function readfile(filePath) {
 module.exports = {
 
   // Front-end config
-  title: 'JavaScript - Contrôle 3 (AJAX)',
+  title: 'JavaScript Partiel 1 - Classe 4',
 
   // General settings
   PUBLIC_TEST_MODE: false, // set to false to restrict acccess and identify students using Google Login
@@ -30,10 +30,10 @@ module.exports = {
     },
     */
     FIREBASE_CONFIG: {
-      apiKey: "AIzaSyCEfwp0moUfvU3jNcmivKM83_lBIuaYwbc",
-      databaseURL: "https://controle3-790ad.firebaseio.com",
-      messagingSenderId: "838870643150"
-      // admin/dashboard: https://console.firebase.google.com/project/controle3-790ad/database/data
+      apiKey: "AIzaSyCCVnADtKjLmzivOw4fTLDUkCz90xkj4ws",
+      databaseURL: "https://js-test-ft-partiel.firebaseio.com",
+      messagingSenderId: "699482710183"
+      // admin/dashboard: https://console.firebase.google.com/project/js-test-ft-partiel/database/data
     },
   },
 
@@ -51,7 +51,7 @@ module.exports = {
     ptsNull: 0,
   },
   codeGrading: {
-    ptsPerExercise: 10,
+    ptsPerExercise: 3, // applies to scores of code exercises
   }
 
 };
