@@ -26,7 +26,10 @@ STUDENT: charlotte_vigneux
   |   alert ('nom vaut durand');
   | }
   | /!\ erreur: Unexpected token var
+  | [-] une erreur ou un alert() inattendu est survenu
   | /!\ erreur: Unexpected token var
+  | [-] quand nom vaut durand, un alert devrait être affiché
+  | [-] l'alert ne contient pas le message demandé
   | 
   | // -> STUDENT SCORE ARRAY: [ 0, 0, 0 ]
   | 
@@ -44,6 +47,9 @@ STUDENT: charlotte_vigneux
   | } else {
   |   alert('mauvaise saisie');
   | }
+  | [+] quand on tape marseille, la réponse est bien 750km
+  | [+] quand on tape bordeaux, la réponse est bien 550km
+  | [+] quand on tape brest, la réponse est bien "mauvaise saisie"
   | 
   | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
   | 
@@ -56,6 +62,9 @@ STUDENT: charlotte_vigneux
   | function division(nombre1, nombre2) {
   |   return nombre1/nombre2;
   | }
+  | [+] la fonction division() est bien définie
+  | [+] l'appel division(6, -2) retourne bien -3
+  | [+] l'appel division(2, 0.5) retourne bien 4
   | 
   | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
   | 
@@ -68,6 +77,12 @@ STUDENT: charlotte_vigneux
   | for ( var monNombre = -5; monNombre <= 5; monNombre++ ) {
   |   console.log(monNombre);
   | }
+  | [+] il y a bien une boucle for dans le code
+  | [+] il y a bien un console.log for dans le code
+  | [+] console.log a bien été appelé
+  | [+] le 1er console.log affiche bien -5
+  | [+] le 5ème console.log affiche bien -1
+  | [+] le 10ème console.log affiche bien 4
   | 
   | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1 ]
   | 
@@ -84,6 +99,9 @@ STUDENT: charlotte_vigneux
   |     return false;
   |   }
   | /!\ erreur: Unexpected end of input
+  | [+] la fonction contient1() est bien définie
+  | [-] l'appel contient1([40, 1, 5, 1]) devrait retourner true
+  | [-] l'appel contient1([40, 4, 5, 4]) devrait retourner false
   | 
   | // -> STUDENT SCORE ARRAY: [ 1, 0, 0 ]
   | 
@@ -116,6 +134,9 @@ STUDENT: clement_zerbi
   | if (nom === 'durand') {
   | 	alert('nom vaut durand');
   | }
+  | [+] le code fonctionne sans erreur
+  | [+] quand nom vaut durand, l'alert est bien affiché
+  | [+] l'alert contient le message demandé
   | 
   | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
   | 
@@ -133,6 +154,9 @@ STUDENT: clement_zerbi
   | } else {
   |   alert('mauvaise saisie');
   | }
+  | [+] quand on tape le mans, la réponse est bien 200km
+  | [+] quand on tape angers, la réponse est bien 300km
+  | [+] quand on tape brest, la réponse est bien "mauvaise saisie"
   | 
   | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
   | 
@@ -145,6 +169,9 @@ STUDENT: clement_zerbi
   | function diviser(a,b) {
   |   return a / b;
   | }
+  | [+] la fonction diviser() est bien définie
+  | [+] l'appel diviser(6, -2) retourne bien -3
+  | [+] l'appel diviser(2, 0.5) retourne bien 4
   | 
   | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
   | 
@@ -157,6 +184,12 @@ STUDENT: clement_zerbi
   | for (var i = -5; i <= 5; i++) {
   |   console.log(i);
   | }
+  | [+] il y a bien une boucle for dans le code
+  | [+] il y a bien un console.log for dans le code
+  | [+] console.log a bien été appelé
+  | [+] le 1er console.log affiche bien -5
+  | [+] le 5ème console.log affiche bien -1
+  | [+] le 10ème console.log affiche bien 4
   | 
   | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1 ]
   | 
@@ -176,6 +209,9 @@ STUDENT: clement_zerbi
   |     return false;
   |   }
   | }
+  | [+] la fonction contient3() est bien définie
+  | [+] l'appel contient3([40, 3, 5, 3]) retourne bien true
+  | [+] l'appel contient3([40, 4, 5, 4]) retourne bien false
   | 
   | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
   | 
@@ -208,6 +244,9 @@ STUDENT: esteban_ferre
   | if (prenom === 'patrice') { 
   | alert ('prenom vaut patrice');
   | }
+  | [+] le code fonctionne sans erreur
+  | [+] quand prenom vaut patrice, l'alert est bien affiché
+  | [+] l'alert contient le message demandé
   | 
   | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
   | 
@@ -225,6 +264,9 @@ STUDENT: esteban_ferre
   | } else {
   | alert('mauvaise saisie');
   | } 
+  | [+] quand on tape le mans, la réponse est bien 200km
+  | [+] quand on tape angers, la réponse est bien 300km
+  | [+] quand on tape brest, la réponse est bien "mauvaise saisie"
   | 
   | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
   | 
@@ -237,6 +279,9 @@ STUDENT: esteban_ferre
   | function diviser (a, b) {
   | return a / b;
   | }
+  | [+] la fonction diviser() est bien définie
+  | [+] l'appel diviser(6, -2) retourne bien -3
+  | [+] l'appel diviser(2, 0.5) retourne bien 4
   | 
   | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
   | 
@@ -249,6 +294,12 @@ STUDENT: esteban_ferre
   | for ( var nombre = 10; nombre <= 20; nombre++ ) {
   | console.log( nombre );
   | }
+  | [+] il y a bien une boucle for dans le code
+  | [+] il y a bien un console.log for dans le code
+  | [+] console.log a bien été appelé
+  | [+] le 1er console.log affiche bien 10
+  | [+] le 5ème console.log affiche bien 14
+  | [+] le 10ème console.log affiche bien 19
   | 
   | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1 ]
   | 
@@ -261,6 +312,9 @@ STUDENT: esteban_ferre
   | function contient3(tableau, nombre) {
   | return tableau.indexOf(3)  !== -1;
   | }
+  | [+] la fonction contient3() est bien définie
+  | [+] l'appel contient3([40, 3, 5, 3]) retourne bien true
+  | [+] l'appel contient3([40, 4, 5, 4]) retourne bien false
   | 
   | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
   | 
@@ -295,7 +349,10 @@ STUDENT: gauthier_ailloud
   |  alert('prenom vaut michel');
   | }
   | /!\ erreur: michel is not defined
+  | [-] une erreur ou un alert() inattendu est survenu
   | /!\ erreur: michel is not defined
+  | [-] quand prenom vaut michel, un alert devrait être affiché
+  | [-] l'alert ne contient pas le message demandé
   | 
   | // -> STUDENT SCORE ARRAY: [ 0, 0, 0 ]
   | 
@@ -314,6 +371,9 @@ STUDENT: gauthier_ailloud
   |  alert('mauvaise saisie');
   | }
   | 
+  | [+] quand on tape agen, la réponse est bien 590km
+  | [+] quand on tape marseille, la réponse est bien 750km
+  | [+] quand on tape brest, la réponse est bien "mauvaise saisie"
   | 
   | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
   | 
@@ -326,6 +386,9 @@ STUDENT: gauthier_ailloud
   | function division(x,y) {
   |  return x/y;
   | }
+  | [+] la fonction division() est bien définie
+  | [+] l'appel division(6, -2) retourne bien -3
+  | [+] l'appel division(2, 0.5) retourne bien 4
   | 
   | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
   | 
@@ -338,6 +401,12 @@ STUDENT: gauthier_ailloud
   | for(var i=50; i<61; i++){
   |  console.log(i);
   | }
+  | [+] il y a bien une boucle for dans le code
+  | [+] il y a bien un console.log for dans le code
+  | [+] console.log a bien été appelé
+  | [+] le 1er console.log affiche bien 50
+  | [+] le 5ème console.log affiche bien 54
+  | [+] le 10ème console.log affiche bien 59
   | 
   | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1 ]
   | 
@@ -350,6 +419,9 @@ STUDENT: gauthier_ailloud
   | function contient1([x,y,z]) {
   |  return [x,y,z].indexOf(1) !== -1;
   | }
+  | [+] la fonction contient1() est bien définie
+  | [+] l'appel contient1([40, 1, 5, 1]) retourne bien true
+  | [+] l'appel contient1([40, 4, 5, 4]) retourne bien false
   | 
   | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
   | 
@@ -383,7 +455,10 @@ STUDENT: imane_behiri
   |   alert('prenom vaut patrice');
   |   }
   | /!\ erreur: patrice is not defined
+  | [-] une erreur ou un alert() inattendu est survenu
   | /!\ erreur: patrice is not defined
+  | [-] quand prenom vaut patrice, un alert devrait être affiché
+  | [-] l'alert ne contient pas le message demandé
   | 
   | // -> STUDENT SCORE ARRAY: [ 0, 0, 0 ]
   | 
@@ -399,6 +474,9 @@ STUDENT: imane_behiri
   | } else if (ville === 'bordeaux') {
   | 	alert('550km');
   | }
+  | [+] quand on tape marseille, la réponse est bien 750km
+  | [+] quand on tape bordeaux, la réponse est bien 550km
+  | [-] quand on tape brest, la réponse devrait être "mauvaise saisie"
   | 
   | // -> STUDENT SCORE ARRAY: [ 1, 1, 0 ]
   | 
@@ -410,6 +488,9 @@ STUDENT: imane_behiri
   | 
   | function division(5, 10);
   | /!\ erreur: Unexpected number
+  | [-] la fonction division() n'est pas définie correctement
+  | [-] l'appel division(6, -2) devrait retourner -3
+  | [-] l'appel division(2, 0.5) devrait retourner 4
   | 
   | // -> STUDENT SCORE ARRAY: [ 0, 0, 0 ]
   | 
@@ -422,6 +503,12 @@ STUDENT: imane_behiri
   | for ( var monNombre = 10 ; monNombre <= 20 ; monNombre++ ) {
   |   console.log( monNombre );
   | }
+  | [+] il y a bien une boucle for dans le code
+  | [+] il y a bien un console.log for dans le code
+  | [+] console.log a bien été appelé
+  | [+] le 1er console.log affiche bien 10
+  | [+] le 5ème console.log affiche bien 14
+  | [+] le 10ème console.log affiche bien 19
   | 
   | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1 ]
   | 
@@ -465,7 +552,10 @@ STUDENT: mathias_lachot
   | 
   | 
   | /!\ erreur: michel is not defined
+  | [-] une erreur ou un alert() inattendu est survenu
   | /!\ erreur: michel is not defined
+  | [-] quand prenom vaut michel, un alert devrait être affiché
+  | [-] l'alert ne contient pas le message demandé
   | 
   | // -> STUDENT SCORE ARRAY: [ 0, 0, 0 ]
   | 
@@ -490,6 +580,9 @@ STUDENT: mathias_lachot
   |   alert('mauvaise saisie');
   | 
   | }
+  | [+] quand on tape agen, la réponse est bien 590km
+  | [+] quand on tape marseille, la réponse est bien 750km
+  | [+] quand on tape brest, la réponse est bien "mauvaise saisie"
   | 
   | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
   | 
@@ -506,6 +599,9 @@ STUDENT: mathias_lachot
   | }
   | 
   | 
+  | [+] la fonction division() est bien définie
+  | [+] l'appel division(6, -2) retourne bien -3
+  | [+] l'appel division(2, 0.5) retourne bien 4
   | 
   | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
   | 
@@ -518,6 +614,12 @@ STUDENT: mathias_lachot
   | for ( var i=50; i<61; i++ ) {
   |   console.log (i);
   | }
+  | [+] il y a bien une boucle for dans le code
+  | [+] il y a bien un console.log for dans le code
+  | [+] console.log a bien été appelé
+  | [+] le 1er console.log affiche bien 50
+  | [+] le 5ème console.log affiche bien 54
+  | [+] le 10ème console.log affiche bien 59
   | 
   | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1 ]
   | 
@@ -530,6 +632,9 @@ STUDENT: mathias_lachot
   | function contient1 ([a,b,c]) {
   |   return [a,b,c].indexOf(1) !== -1;
   | }
+  | [+] la fonction contient1() est bien définie
+  | [+] l'appel contient1([40, 1, 5, 1]) retourne bien true
+  | [+] l'appel contient1([40, 4, 5, 4]) retourne bien false
   | 
   | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
   | 
@@ -563,7 +668,10 @@ STUDENT: maxime_bonnet
   |   alert('nom vaut durand');
   | }
   | /!\ erreur: durand is not defined
+  | [-] une erreur ou un alert() inattendu est survenu
   | /!\ erreur: durand is not defined
+  | [-] quand nom vaut durand, un alert devrait être affiché
+  | [-] l'alert ne contient pas le message demandé
   | 
   | // -> STUDENT SCORE ARRAY: [ 0, 0, 0 ]
   | 
@@ -581,6 +689,9 @@ STUDENT: maxime_bonnet
   |   } else {
   |     alert('mauvaise saisie');
   |   }
+  | [+] quand on tape roubaix, la réponse est bien 230km
+  | [+] quand on tape lyon, la réponse est bien 450km
+  | [+] quand on tape brest, la réponse est bien "mauvaise saisie"
   | 
   | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
   | 
@@ -593,6 +704,9 @@ STUDENT: maxime_bonnet
   | function diviser(a, b) {
   |   return a / b;
   | }
+  | [+] la fonction diviser() est bien définie
+  | [+] l'appel diviser(6, -2) retourne bien -3
+  | [+] l'appel diviser(2, 0.5) retourne bien 4
   | 
   | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
   | 
@@ -605,6 +719,12 @@ STUDENT: maxime_bonnet
   | for (var i = -5; i < 6; i++){
   |   console.log(i);
   | }
+  | [+] il y a bien une boucle for dans le code
+  | [+] il y a bien un console.log for dans le code
+  | [+] console.log a bien été appelé
+  | [+] le 1er console.log affiche bien -5
+  | [+] le 5ème console.log affiche bien -1
+  | [+] le 10ème console.log affiche bien 4
   | 
   | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1 ]
   | 
@@ -617,6 +737,9 @@ STUDENT: maxime_bonnet
   | function contient3(tableau) {
   |   return tableau.indexOf(3) !== -1;
   | }
+  | [+] la fonction contient3() est bien définie
+  | [+] l'appel contient3([40, 3, 5, 3]) retourne bien true
+  | [+] l'appel contient3([40, 4, 5, 4]) retourne bien false
   | 
   | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
   | 
@@ -649,6 +772,9 @@ STUDENT: mike_meimoun
   | if (prenom === 'patrice') {
   |  alert('prenom vaut patrice');
   | }
+  | [+] le code fonctionne sans erreur
+  | [+] quand prenom vaut patrice, l'alert est bien affiché
+  | [+] l'alert contient le message demandé
   | 
   | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
   | 
@@ -666,6 +792,9 @@ STUDENT: mike_meimoun
   | } else {
   |  alert('mauvaise saisie');
   | }
+  | [+] quand on tape marseille, la réponse est bien 750km
+  | [+] quand on tape bordeaux, la réponse est bien 550km
+  | [+] quand on tape brest, la réponse est bien "mauvaise saisie"
   | 
   | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
   | 
@@ -679,6 +808,9 @@ STUDENT: mike_meimoun
   |   return a / b;
   | } 
   | 
+  | [-] la fonction division() n'est pas définie correctement
+  | [-] l'appel division(6, -2) devrait retourner -3
+  | [-] l'appel division(2, 0.5) devrait retourner 4
   | 
   | // -> STUDENT SCORE ARRAY: [ 0, 0, 0 ]
   | 
@@ -691,6 +823,12 @@ STUDENT: mike_meimoun
   |  for ( var i = 10; i <=20 ; i++ ) {
   |  console.log(i);
   | }
+  | [+] il y a bien une boucle for dans le code
+  | [+] il y a bien un console.log for dans le code
+  | [+] console.log a bien été appelé
+  | [+] le 1er console.log affiche bien 10
+  | [+] le 5ème console.log affiche bien 14
+  | [+] le 10ème console.log affiche bien 19
   | 
   | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1 ]
   | 
@@ -708,6 +846,9 @@ STUDENT: mike_meimoun
   | return true;
   | }
   | }
+  | [+] la fonction contient1() est bien définie
+  | [+] l'appel contient1([40, 1, 5, 1]) retourne bien true
+  | [+] l'appel contient1([40, 4, 5, 4]) retourne bien false
   | 
   | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
   | 
@@ -744,6 +885,9 @@ STUDENT: nicolas_perrousset
   | 
   | }
   | 
+  | [+] le code fonctionne sans erreur
+  | [+] quand nom vaut durand, l'alert est bien affiché
+  | [+] l'alert contient le message demandé
   | 
   | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
   | 
@@ -763,6 +907,9 @@ STUDENT: nicolas_perrousset
   | else {
   | alert('mauvaise saisie')
   | }
+  | [+] quand on tape marseille, la réponse est bien 750km
+  | [+] quand on tape bordeaux, la réponse est bien 550km
+  | [+] quand on tape brest, la réponse est bien "mauvaise saisie"
   | 
   | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
   | 
@@ -775,6 +922,9 @@ STUDENT: nicolas_perrousset
   | function division (a, b) {
   |     return  a / b;
   | }
+  | [+] la fonction division() est bien définie
+  | [+] l'appel division(6, -2) retourne bien -3
+  | [+] l'appel division(2, 0.5) retourne bien 4
   | 
   | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
   | 
@@ -788,6 +938,12 @@ STUDENT: nicolas_perrousset
   | console.log(i);
   | }
   | 
+  | [+] il y a bien une boucle for dans le code
+  | [+] il y a bien un console.log for dans le code
+  | [+] console.log a bien été appelé
+  | [+] le 1er console.log affiche bien -5
+  | [+] le 5ème console.log affiche bien -1
+  | [+] le 10ème console.log affiche bien 4
   | 
   | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1 ]
   | 
@@ -815,6 +971,9 @@ STUDENT: nicolas_perrousset
   | 
   | 
   | /!\ erreur: Unexpected token return
+  | [+] la fonction contient1() est bien définie
+  | [-] l'appel contient1([40, 1, 5, 1]) devrait retourner true
+  | [-] l'appel contient1([40, 4, 5, 4]) devrait retourner false
   | 
   | // -> STUDENT SCORE ARRAY: [ 1, 0, 0 ]
   | 
@@ -849,7 +1008,10 @@ STUDENT: sonia_beregreg
   |   alert('prenom vaut michel');
   | }
   | /!\ erreur: michel is not defined
+  | [-] une erreur ou un alert() inattendu est survenu
   | /!\ erreur: michel is not defined
+  | [-] quand prenom vaut michel, un alert devrait être affiché
+  | [-] l'alert ne contient pas le message demandé
   | 
   | // -> STUDENT SCORE ARRAY: [ 0, 0, 0 ]
   | 
@@ -869,6 +1031,9 @@ STUDENT: sonia_beregreg
   | alert('La distance a partir de Paris est de' + distance[ville]) 
   |   
   | 
+  | [-] quand on tape marseille, la réponse devrait être 750km
+  | [-] quand on tape bordeaux, la réponse devrait être 550km
+  | [-] quand on tape brest, la réponse devrait être "mauvaise saisie"
   | 
   | // -> STUDENT SCORE ARRAY: [ 0, 0, 0 ]
   | 
@@ -883,6 +1048,9 @@ STUDENT: sonia_beregreg
   | 
   | 
   | 
+  | [-] la fonction division() n'est pas définie correctement
+  | [-] l'appel division(6, -2) devrait retourner -3
+  | [-] l'appel division(2, 0.5) devrait retourner 4
   | 
   | // -> STUDENT SCORE ARRAY: [ 0, 0, 0 ]
   | 
@@ -925,6 +1093,9 @@ STUDENT: thomas_kossowski
   | // STUDENT CODE:
   | 
   | if (prenom==='michel') { alert ('prenom vaut michel' ) }
+  | [+] le code fonctionne sans erreur
+  | [+] quand prenom vaut michel, l'alert est bien affiché
+  | [+] l'alert contient le message demandé
   | 
   | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
   | 
@@ -935,6 +1106,9 @@ STUDENT: thomas_kossowski
   | // STUDENT CODE:
   | 
   | var utilisateur = prompt ('Saisir le nom d une ville'); 				if (utilisateur === 'marseille') { alert ('750km'); }  			else if (utilisateur === 'bordeaux') { alert ('550km'); } else { alert ('mauvaise saisie') }
+  | [+] quand on tape marseille, la réponse est bien 750km
+  | [+] quand on tape bordeaux, la réponse est bien 550km
+  | [+] quand on tape brest, la réponse est bien "mauvaise saisie"
   | 
   | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
   | 
@@ -946,6 +1120,9 @@ STUDENT: thomas_kossowski
   | 
   | var resultat = division(8);	function division (8, 2) { return resultat }	
   | /!\ erreur: Unexpected number
+  | [-] la fonction division() n'est pas définie correctement
+  | [-] l'appel division(6, -2) devrait retourner -3
+  | [-] l'appel division(2, 0.5) devrait retourner 4
   | 
   | // -> STUDENT SCORE ARRAY: [ 0, 0, 0 ]
   | 
@@ -958,6 +1135,12 @@ STUDENT: thomas_kossowski
   | for ( var monNombre = 50; monNombre <= 60; monNombre++ ) {
   |   console.log( monNombre );
   | }
+  | [+] il y a bien une boucle for dans le code
+  | [+] il y a bien un console.log for dans le code
+  | [+] console.log a bien été appelé
+  | [+] le 1er console.log affiche bien 50
+  | [+] le 5ème console.log affiche bien 54
+  | [+] le 10ème console.log affiche bien 59
   | 
   | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1 ]
   | 
@@ -969,6 +1152,9 @@ STUDENT: thomas_kossowski
   | 
   | var chiffres = [ 1, 2, 3 ];	function contient1 (chiffres); 	if (contient1 === [1, 2, 3 ] { return true } 
   | /!\ erreur: Unexpected token ;
+  | [+] la fonction contient1() est bien définie
+  | [-] l'appel contient1([40, 1, 5, 1]) devrait retourner true
+  | [-] l'appel contient1([40, 4, 5, 4]) devrait retourner false
   | 
   | // -> STUDENT SCORE ARRAY: [ 1, 0, 0 ]
   | 
@@ -1001,6 +1187,9 @@ STUDENT: yassine_baba_slimane
   | if (nom === 'durand'){
   |   alert ('nom vaut durand');
   | }
+  | [+] le code fonctionne sans erreur
+  | [+] quand nom vaut durand, l'alert est bien affiché
+  | [+] l'alert contient le message demandé
   | 
   | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
   | 
@@ -1018,6 +1207,9 @@ STUDENT: yassine_baba_slimane
   | } else {
   |  alert('mauvaise saisie');
   | }
+  | [+] quand on tape roubaix, la réponse est bien 230km
+  | [+] quand on tape lyon, la réponse est bien 450km
+  | [+] quand on tape brest, la réponse est bien "mauvaise saisie"
   | 
   | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
   | 
@@ -1030,6 +1222,9 @@ STUDENT: yassine_baba_slimane
   | function diviser (a ,b) {
   |   return a / b;
   | }
+  | [+] la fonction diviser() est bien définie
+  | [+] l'appel diviser(6, -2) retourne bien -3
+  | [+] l'appel diviser(2, 0.5) retourne bien 4
   | 
   | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
   | 
@@ -1042,6 +1237,12 @@ STUDENT: yassine_baba_slimane
   | for (var i = -5 ; i <= 5 ; i++ ){
   |   console.log(i);
   | }
+  | [+] il y a bien une boucle for dans le code
+  | [+] il y a bien un console.log for dans le code
+  | [+] console.log a bien été appelé
+  | [+] le 1er console.log affiche bien -5
+  | [+] le 5ème console.log affiche bien -1
+  | [+] le 10ème console.log affiche bien 4
   | 
   | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1 ]
   | 
@@ -1054,6 +1255,9 @@ STUDENT: yassine_baba_slimane
   | function contient3 (tableau){
   |   return tableau.indexOf(3) !==-1;
   | }  
+  | [+] la fonction contient3() est bien définie
+  | [+] l'appel contient3([40, 3, 5, 3]) retourne bien true
+  | [+] l'appel contient3([40, 4, 5, 4]) retourne bien false
   | 
   | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
   | 
