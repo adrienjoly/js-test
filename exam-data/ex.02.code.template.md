@@ -30,12 +30,24 @@ if ({{varName}} === '{{value}}') {
   }
   var {{varName}};
   var tests = [];
-  _runStudentCode();
+  var error = null;
+  try {
+    eval(`_studentCode`); // catch syntax errors, if any
+  } catch (e) {
+    application.remote._log('/!\\ erreur: ' + e.message);
+    error = e;
+  }
   tests = tests.concat([
-    res.length === 0,
+    !error && res.length === 0,
   ]);
+  error = null;
   {{varName}} = '{{value}}';
-  _runStudentCode();
+  try {
+    eval(`_studentCode`); // catch syntax errors, if any
+  } catch (e) {
+    application.remote._log('/!\\ erreur: ' + e.message);
+    error = e;
+  }
   tests = tests.concat([
     res.length === 1, 
     res[0] === '{{varName}} vaut {{value}}',
@@ -91,17 +103,29 @@ if (reponse === '{{city1}}') {
   // test 1
   res = [];
   prompt = () => '{{city1}}';
-  _runStudentCode();
+  try {
+    eval(`_studentCode`); // catch syntax errors, if any
+  } catch (e) {
+    application.remote._log('/!\\ erreur: ' + e.message);
+  }
   tests.push(res.length === 1 && res[0] === '{{dist1}}');
   // test 2
   res = [];
   prompt = () => '{{city2}}';
-  _runStudentCode();
+  try {
+    eval(`_studentCode`); // catch syntax errors, if any
+  } catch (e) {
+    application.remote._log('/!\\ erreur: ' + e.message);
+  }
   tests.push(res.length === 1 && res[0] === '{{dist2}}');
   // test 3
   res = [];
   prompt = () => 'brest';
-  _runStudentCode();
+  try {
+    eval(`_studentCode`); // catch syntax errors, if any
+  } catch (e) {
+    application.remote._log('/!\\ erreur: ' + e.message);
+  }
   tests.push(res.length === 1 && res[0] === "mauvaise saisie");
   application.remote._send(null, tests); // 1 point per passing test => 3 pts per exercise
 })();
@@ -134,7 +158,13 @@ function {{fctName}}(a, b) {
 // automatic student evaluation code
 (function evaluateStudentCode(){
   var console = { log: function(){} }; // tolerate console.log() calls
-  _runStudentCode();
+  var {{fctName}}; // store the function name in the global scope 
+  try {
+    /* eval(`_studentCode`) forgets student's function... */
+    _runStudentCodeAgain(); // this will associate the student's function to the global var above
+  } catch (e) {
+    application.remote._log('/!\\ erreur: ' + e.message);
+  }
   var tests = [
     typeof {{fctName}} === 'function', 
     {{fctName}}(6, -2) === -3,
@@ -173,7 +203,11 @@ for (var i = {{n1}}; i <= {{n2}}; i++) {
   var _expected = [];
   for (var i = {{n1}}; i <= {{n2}}; i++) { _expected.push(i) }
   var console = { log: function(i){ _logged.push(i); } }; // tolerate console.log() calls
-  _runStudentCode();
+  try {
+    eval(`_studentCode`); // catch syntax errors, if any
+  } catch (e) {
+    application.remote._log('/!\\ erreur: ' + e.message);
+  }
   var tests = [
     `_studentCode`.split('for').length === 2, // just 1 for-loop
     `_studentCode`.split('console.log').length === 2, // just 1 console.log call
@@ -230,9 +264,15 @@ function contient{{val}}(tableau) {
 // automatic student evaluation code
 (function evaluateStudentCode(){
   var console = { log: function(){} }; // tolerate console.log() calls
-  _runStudentCode();
+  var contient{{val}}; // store the function name in the global scope 
+  try {
+    /* eval(`_studentCode`) forgets student's function... */
+    _runStudentCodeAgain(); // this will associate the student's function to the global var above
+  } catch (e) {
+    application.remote._log('/!\\ erreur: ' + e.message);
+  }
   var tests = [
-    contient{{val}}.toString().replace(/[ \t]/g, '').indexOf('functioncontient{{val}}(') !== -1,
+    `_studentCode`.replace(/[ \t]/g, '').indexOf('functioncontient{{val}}(') !== -1,
     contient{{val}}([40, {{val}}, 5, {{val}}]) === true,
     contient{{val}}([40, 4, 5, 4]) === false,
   ];
