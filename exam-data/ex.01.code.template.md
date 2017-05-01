@@ -162,10 +162,16 @@ Solution complète: [jsfiddle](https://jsfiddle.net/hsg50xk5/)
 // automatic student evaluation code
 (function evaluateStudentCode(){
   // __ FAKE WEB BROWSER ___
+  function _Node(attrs) {
+    Object.assign(this, attrs);
+  }
+  _Node.prototype.setAttribute = function(key, value) {
+    this[key] = value;
+  };
   var _fakeDom = {
-    numero: { id: 'numero', value: '', },
-    bouton: { id: 'bouton', value: 'Chercher', },
-    {{prop}}: { id: '{{prop}}', value: '', },
+    numero: new _Node({ id: 'numero', value: '', }),
+    bouton: new _Node({ id: 'bouton', value: 'Chercher', }),
+    {{prop}}: new _Node({ id: '{{prop}}', value: '', }),
   };
   var document = {
     getElementById: function(id) {

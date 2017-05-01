@@ -489,20 +489,20 @@ STUDENT: jacques_hovine
   | [+] le programme fonctionne sans erreur quand on clique sur le bouton
   | [+] au clic, l'url passée en paramètre de la méthode open() est correcte
   | [+] au clic, la méthode send() a bien été appelée une fois
-  | [-] la valeur Patricia Lebsack aurait du apparaitre dans le champ name
+  | [+] la valeur Patricia Lebsack a bien été affichée dans le champ name
   | --- Simulation de requête pour adhérent numéro 6 ...
   | [+] le programme fonctionne sans erreur quand on clique sur le bouton
   | [+] au clic, l'url passée en paramètre de la méthode open() est correcte
   | [+] au clic, la méthode send() a bien été appelée une fois
-  | [-] la valeur Mrs. Dennis Schulist aurait du apparaitre dans le champ name
+  | [+] la valeur Mrs. Dennis Schulist a bien été affichée dans le champ name
   | 
-  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0 ]
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ]
   | 
-  | // -> EXERCISE POINTS: 8.333333333333334 / 10
+  | // -> EXERCISE POINTS: 10 / 10
 
-  => code score: 18.333333333333336 / 20 pts
+  => code score: 20 / 20 pts
 
-=> TOTAL STUDENT SCORE: 18.33 / 20
+=> TOTAL STUDENT SCORE: 20 / 20
 
 
 ================================
