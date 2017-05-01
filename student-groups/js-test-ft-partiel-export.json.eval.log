@@ -322,7 +322,9 @@ STUDENT: esteban_ferre
 
   => code score: 15 / 15 pts
 
-=> TOTAL STUDENT SCORE: 19 / 20
+-5 pts pour indentation inexistante dans les exercices de code
+
+=> TOTAL STUDENT SCORE: 14 / 20
 
 
 ================================
@@ -429,7 +431,9 @@ STUDENT: gauthier_ailloud
 
   => code score: 12 / 15 pts
 
-=> TOTAL STUDENT SCORE: 16 / 20
+-2.5 pts pour indentation d'1 espace au lieu de 2
+
+=> TOTAL STUDENT SCORE: 13.5 / 20
 
 
 ================================
@@ -747,7 +751,9 @@ STUDENT: maxime_bonnet
 
   => code score: 12 / 15 pts
 
-=> TOTAL STUDENT SCORE: 14 / 20
+-1 pour anomalie d'indentation dans les conditions de l'exercice sur les villes
+
+=> TOTAL STUDENT SCORE: 13 / 20
 
 
 ================================
@@ -856,7 +862,9 @@ STUDENT: mike_meimoun
 
   => code score: 12 / 15 pts
 
-=> TOTAL STUDENT SCORE: 15 / 20
+-3.5 pts pour défauts d'indentation
+
+=> TOTAL STUDENT SCORE: 11.5 / 20
 
 
 ================================
@@ -981,7 +989,9 @@ STUDENT: nicolas_perrousset
 
   => code score: 13 / 15 pts
 
-=> TOTAL STUDENT SCORE: 15 / 20
+-5 pts pour indentation inexistante dans le code, et mauvais placement des accolades dans les conditions
+
+=> TOTAL STUDENT SCORE: 10 / 20
 
 
 ================================
@@ -1162,7 +1172,9 @@ STUDENT: thomas_kossowski
 
   => code score: 11 / 15 pts
 
-=> TOTAL STUDENT SCORE: 15 / 20
+-5 pts pour absence de sauts de lignes dans tous les exercices de code
+
+=> TOTAL STUDENT SCORE: 10 / 20
 
 
 ================================
@@ -1265,4 +1277,6 @@ STUDENT: yassine_baba_slimane
 
   => code score: 15 / 15 pts
 
-=> TOTAL STUDENT SCORE: 19 / 20
+-1 pt pour indentation d'1 espace au lieu de 2 dans le 2eme exercice de code
+
+=> TOTAL STUDENT SCORE: 18 / 20
