@@ -679,7 +679,6 @@ STUDENT: mike_meimoun
   |   return a / b;
   | } 
   | 
-  | /!\ erreur: diviser is not defined
   | 
   | // -> STUDENT SCORE ARRAY: [ 0, 0, 0 ]
   | 
