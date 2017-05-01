@@ -1,3 +1,7 @@
+== v2.7 Robust exam process
+ * Feature: /rendus.html (for teacher use) displays which students have submitted their answers
+ * [FR] Consignes de surveillance (procédure et conseils pour surveillants tiers)
+
 == v2.6 Experience fixes
  * Reporting: display maximum number of points of each exercise
  * Reporting: Separate student code and evaluation parts from eval report + added more space
