@@ -160,8 +160,7 @@ function {{fctName}}(a, b) {
   var console = { log: function(){} }; // tolerate console.log() calls
   var {{fctName}}; // store the function name in the global scope 
   try {
-    /* eval(`_studentCode`) forgets student's function... */
-    _runStudentCodeAgain(); // this will associate the student's function to the global var above
+    eval(`{{fctName}} = ` + `_studentCode`); /* will associate the student's function to the global var above */
   } catch (e) {
     application.remote._log('/!\\ erreur: ' + e.message);
   }
@@ -266,8 +265,7 @@ function contient{{val}}(tableau) {
   var console = { log: function(){} }; // tolerate console.log() calls
   var contient{{val}}; // store the function name in the global scope 
   try {
-    /* eval(`_studentCode`) forgets student's function... */
-    _runStudentCodeAgain(); // this will associate the student's function to the global var above
+    eval(`contient{{val}} = ` + `_studentCode`); /* will associate the student's function to the global var above */
   } catch (e) {
     application.remote._log('/!\\ erreur: ' + e.message);
   }
