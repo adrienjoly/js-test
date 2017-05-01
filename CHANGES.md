@@ -1,3 +1,14 @@
+== v2.6 Experience fixes
+ * Reporting: display maximum number of points of each exercise
+ * Reporting: Separate student code and evaluation parts from eval report + added more space
+ * Reporting: 2-digit decimal grading
+ * Client: prevent Firebase hosting from caching the files
+ * Client: don't redirect to HTTPS when running from a ngrok URL
+ * Client performance: load Firebase dependency locally
+ * Prop: just two deployment scripts: deploy-firebase and deploy-heroku (from any branch)
+ * Prep: start server only if build is successful
+ * Dependencies: upgraded jailed-node to v1.4.1
+
 == v2.5.1 Fixes
  * Feature: added `eval-firebase-export` npm script
  * Feature: display max score per question on "suivi" dashboard
