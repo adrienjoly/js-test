@@ -192,8 +192,8 @@ function {{fctName}}(a, b) {
   }
   var studentFct = _scope[`{{fctName}}`];
   var tests = [
-    typeof studentFct === 'function'
-      ? res(1, 'la fonction {{fctName}}() est bien définie')
+    `_studentCode`.replace(/[ \t]/g, '').indexOf('function{{fctName}}(') !== -1
+      ? res(1, 'function {{fctName}} a bien été trouvé dans le code')
       : res(0, 'la fonction {{fctName}}() n\'est pas définie correctement'),
     typeof studentFct === 'function' && studentFct(6, -2) === -3
       ? res(1, 'l\'appel {{fctName}}(6, -2) retourne bien -3')
@@ -326,7 +326,7 @@ function contient{{val}}(tableau) {
   var studentFct = _scope[`contient{{val}}`];
   var tests = [
     `_studentCode`.replace(/[ \t]/g, '').indexOf('functioncontient{{val}}(') !== -1
-      ? res(1, 'la fonction contient{{val}}() est bien définie')
+      ? res(1, 'function contient{{val}} a bien été trouvé dans le code')
       : res(0, 'la fonction contient{{val}}() n\'est pas définie correctement'),
     typeof studentFct === 'function' && studentFct([40, {{val}}, 5, {{val}}]) === true
       ? res(1, 'l\'appel contient{{val}}([40, {{val}}, 5, {{val}}]) retourne bien true')

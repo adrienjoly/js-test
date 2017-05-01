@@ -62,7 +62,7 @@ STUDENT: charlotte_vigneux
   | function division(nombre1, nombre2) {
   |   return nombre1/nombre2;
   | }
-  | [+] la fonction division() est bien définie
+  | [+] function division a bien été trouvé dans le code
   | [+] l'appel division(6, -2) retourne bien -3
   | [+] l'appel division(2, 0.5) retourne bien 4
   | 
@@ -99,7 +99,7 @@ STUDENT: charlotte_vigneux
   |     return false;
   |   }
   | /!\ erreur: Unexpected end of input
-  | [+] la fonction contient1() est bien définie
+  | [+] function contient1 a bien été trouvé dans le code
   | [-] l'appel contient1([40, 1, 5, 1]) devrait retourner true
   | [-] l'appel contient1([40, 4, 5, 4]) devrait retourner false
   | 
@@ -169,7 +169,7 @@ STUDENT: clement_zerbi
   | function diviser(a,b) {
   |   return a / b;
   | }
-  | [+] la fonction diviser() est bien définie
+  | [+] function diviser a bien été trouvé dans le code
   | [+] l'appel diviser(6, -2) retourne bien -3
   | [+] l'appel diviser(2, 0.5) retourne bien 4
   | 
@@ -209,7 +209,7 @@ STUDENT: clement_zerbi
   |     return false;
   |   }
   | }
-  | [+] la fonction contient3() est bien définie
+  | [+] function contient3 a bien été trouvé dans le code
   | [+] l'appel contient3([40, 3, 5, 3]) retourne bien true
   | [+] l'appel contient3([40, 4, 5, 4]) retourne bien false
   | 
@@ -279,7 +279,7 @@ STUDENT: esteban_ferre
   | function diviser (a, b) {
   | return a / b;
   | }
-  | [+] la fonction diviser() est bien définie
+  | [+] function diviser a bien été trouvé dans le code
   | [+] l'appel diviser(6, -2) retourne bien -3
   | [+] l'appel diviser(2, 0.5) retourne bien 4
   | 
@@ -312,7 +312,7 @@ STUDENT: esteban_ferre
   | function contient3(tableau, nombre) {
   | return tableau.indexOf(3)  !== -1;
   | }
-  | [+] la fonction contient3() est bien définie
+  | [+] function contient3 a bien été trouvé dans le code
   | [+] l'appel contient3([40, 3, 5, 3]) retourne bien true
   | [+] l'appel contient3([40, 4, 5, 4]) retourne bien false
   | 
@@ -386,7 +386,7 @@ STUDENT: gauthier_ailloud
   | function division(x,y) {
   |  return x/y;
   | }
-  | [+] la fonction division() est bien définie
+  | [+] function division a bien été trouvé dans le code
   | [+] l'appel division(6, -2) retourne bien -3
   | [+] l'appel division(2, 0.5) retourne bien 4
   | 
@@ -419,7 +419,7 @@ STUDENT: gauthier_ailloud
   | function contient1([x,y,z]) {
   |  return [x,y,z].indexOf(1) !== -1;
   | }
-  | [+] la fonction contient1() est bien définie
+  | [+] function contient1 a bien été trouvé dans le code
   | [+] l'appel contient1([40, 1, 5, 1]) retourne bien true
   | [+] l'appel contient1([40, 4, 5, 4]) retourne bien false
   | 
@@ -488,13 +488,13 @@ STUDENT: imane_behiri
   | 
   | function division(5, 10);
   | /!\ erreur: Unexpected number
-  | [-] la fonction division() n'est pas définie correctement
+  | [+] function division a bien été trouvé dans le code
   | [-] l'appel division(6, -2) devrait retourner -3
   | [-] l'appel division(2, 0.5) devrait retourner 4
   | 
-  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0 ]
+  | // -> STUDENT SCORE ARRAY: [ 1, 0, 0 ]
   | 
-  | // -> EXERCISE POINTS: 0 / 3
+  | // -> EXERCISE POINTS: 1 / 3
   | 
   | ------------- EXERCISE: code9 (variant: 0) -------------
   | 
@@ -520,9 +520,9 @@ STUDENT: imane_behiri
   | 
   | // -> EXERCISE POINTS: 0 / 3
 
-  => code score: 5 / 15 pts
+  => code score: 6 / 15 pts
 
-=> TOTAL STUDENT SCORE: 7 / 20
+=> TOTAL STUDENT SCORE: 8 / 20
 
 
 ================================
@@ -599,7 +599,7 @@ STUDENT: mathias_lachot
   | }
   | 
   | 
-  | [+] la fonction division() est bien définie
+  | [+] function division a bien été trouvé dans le code
   | [+] l'appel division(6, -2) retourne bien -3
   | [+] l'appel division(2, 0.5) retourne bien 4
   | 
@@ -632,7 +632,7 @@ STUDENT: mathias_lachot
   | function contient1 ([a,b,c]) {
   |   return [a,b,c].indexOf(1) !== -1;
   | }
-  | [+] la fonction contient1() est bien définie
+  | [+] function contient1 a bien été trouvé dans le code
   | [+] l'appel contient1([40, 1, 5, 1]) retourne bien true
   | [+] l'appel contient1([40, 4, 5, 4]) retourne bien false
   | 
@@ -704,7 +704,7 @@ STUDENT: maxime_bonnet
   | function diviser(a, b) {
   |   return a / b;
   | }
-  | [+] la fonction diviser() est bien définie
+  | [+] function diviser a bien été trouvé dans le code
   | [+] l'appel diviser(6, -2) retourne bien -3
   | [+] l'appel diviser(2, 0.5) retourne bien 4
   | 
@@ -737,7 +737,7 @@ STUDENT: maxime_bonnet
   | function contient3(tableau) {
   |   return tableau.indexOf(3) !== -1;
   | }
-  | [+] la fonction contient3() est bien définie
+  | [+] function contient3 a bien été trouvé dans le code
   | [+] l'appel contient3([40, 3, 5, 3]) retourne bien true
   | [+] l'appel contient3([40, 4, 5, 4]) retourne bien false
   | 
@@ -846,7 +846,7 @@ STUDENT: mike_meimoun
   | return true;
   | }
   | }
-  | [+] la fonction contient1() est bien définie
+  | [+] function contient1 a bien été trouvé dans le code
   | [+] l'appel contient1([40, 1, 5, 1]) retourne bien true
   | [+] l'appel contient1([40, 4, 5, 4]) retourne bien false
   | 
@@ -922,7 +922,7 @@ STUDENT: nicolas_perrousset
   | function division (a, b) {
   |     return  a / b;
   | }
-  | [+] la fonction division() est bien définie
+  | [+] function division a bien été trouvé dans le code
   | [+] l'appel division(6, -2) retourne bien -3
   | [+] l'appel division(2, 0.5) retourne bien 4
   | 
@@ -971,7 +971,7 @@ STUDENT: nicolas_perrousset
   | 
   | 
   | /!\ erreur: Unexpected token return
-  | [+] la fonction contient1() est bien définie
+  | [+] function contient1 a bien été trouvé dans le code
   | [-] l'appel contient1([40, 1, 5, 1]) devrait retourner true
   | [-] l'appel contient1([40, 4, 5, 4]) devrait retourner false
   | 
@@ -1120,13 +1120,13 @@ STUDENT: thomas_kossowski
   | 
   | var resultat = division(8);	function division (8, 2) { return resultat }	
   | /!\ erreur: Unexpected number
-  | [-] la fonction division() n'est pas définie correctement
+  | [+] function division a bien été trouvé dans le code
   | [-] l'appel division(6, -2) devrait retourner -3
   | [-] l'appel division(2, 0.5) devrait retourner 4
   | 
-  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0 ]
+  | // -> STUDENT SCORE ARRAY: [ 1, 0, 0 ]
   | 
-  | // -> EXERCISE POINTS: 0 / 3
+  | // -> EXERCISE POINTS: 1 / 3
   | 
   | ------------- EXERCISE: code9 (variant: 1) -------------
   | 
@@ -1152,7 +1152,7 @@ STUDENT: thomas_kossowski
   | 
   | var chiffres = [ 1, 2, 3 ];	function contient1 (chiffres); 	if (contient1 === [1, 2, 3 ] { return true } 
   | /!\ erreur: Unexpected token ;
-  | [+] la fonction contient1() est bien définie
+  | [+] function contient1 a bien été trouvé dans le code
   | [-] l'appel contient1([40, 1, 5, 1]) devrait retourner true
   | [-] l'appel contient1([40, 4, 5, 4]) devrait retourner false
   | 
@@ -1160,9 +1160,9 @@ STUDENT: thomas_kossowski
   | 
   | // -> EXERCISE POINTS: 1 / 3
 
-  => code score: 10 / 15 pts
+  => code score: 11 / 15 pts
 
-=> TOTAL STUDENT SCORE: 14 / 20
+=> TOTAL STUDENT SCORE: 15 / 20
 
 
 ================================
@@ -1222,7 +1222,7 @@ STUDENT: yassine_baba_slimane
   | function diviser (a ,b) {
   |   return a / b;
   | }
-  | [+] la fonction diviser() est bien définie
+  | [+] function diviser a bien été trouvé dans le code
   | [+] l'appel diviser(6, -2) retourne bien -3
   | [+] l'appel diviser(2, 0.5) retourne bien 4
   | 
@@ -1255,7 +1255,7 @@ STUDENT: yassine_baba_slimane
   | function contient3 (tableau){
   |   return tableau.indexOf(3) !==-1;
   | }  
-  | [+] la fonction contient3() est bien définie
+  | [+] function contient3 a bien été trouvé dans le code
   | [+] l'appel contient3([40, 3, 5, 3]) retourne bien true
   | [+] l'appel contient3([40, 4, 5, 4]) retourne bien false
   | 
