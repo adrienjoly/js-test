@@ -1,6 +1,6 @@
 {
   "projects": {
-    "staging": "js-qcm-ft",
-    "default": "js-qcm-ft"
+    "staging": "js-test-ft-partiel",
+    "default": "js-test-ft-partiel"
   }
 }
