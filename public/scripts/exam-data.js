@@ -36,57 +36,74 @@
   };
   app.exercises = [
     {
-      "_info": "generated from ex.01.code.template.md",
+      "_info": "generated from ex.01.quizz.template.md",
       "i": 1,
-      "isCode": true,
-      "title": "Requête AJAX simple",
-      "maxScore": 20,
+      "isQuizz": true,
+      "title": "QCM",
+      "maxScore": 1,
       "questions": [
         {
           "i": 1,
-          "id": "code1",
-          "variants": [
+          "id": "qcm1",
+          "md": "kjelf\n",
+          "choices": [
             {
-              "number": 4
+              "name": 1,
+              "text": "1"
             },
             {
-              "number": 6
+              "name": 2,
+              "text": "2 "
             },
             {
-              "number": 8
+              "name": 3,
+              "text": "3"
             },
             {
-              "number": 14
+              "name": 4,
+              "text": "4"
             }
-          ],
-          "mdVariants": [
-            "\nÉcrire un programme JavaScript permettant:\n\n - d'envoyer une requête HTTP GET à l'URL `https://js-jsonplaceholder.herokuapp.com/posts/4`,\n - puis d'afficher avec `alert()` la réponse finale du serveur à cette requête.\n\nUtiliser la classe `XMLHttpRequest()` pour effectuer cette requête.\n\n\n",
-            "\nÉcrire un programme JavaScript permettant:\n\n - d'envoyer une requête HTTP GET à l'URL `https://js-jsonplaceholder.herokuapp.com/posts/6`,\n - puis d'afficher avec `alert()` la réponse finale du serveur à cette requête.\n\nUtiliser la classe `XMLHttpRequest()` pour effectuer cette requête.\n\n\n",
-            "\nÉcrire un programme JavaScript permettant:\n\n - d'envoyer une requête HTTP GET à l'URL `https://js-jsonplaceholder.herokuapp.com/posts/8`,\n - puis d'afficher avec `alert()` la réponse finale du serveur à cette requête.\n\nUtiliser la classe `XMLHttpRequest()` pour effectuer cette requête.\n\n\n",
-            "\nÉcrire un programme JavaScript permettant:\n\n - d'envoyer une requête HTTP GET à l'URL `https://js-jsonplaceholder.herokuapp.com/posts/14`,\n - puis d'afficher avec `alert()` la réponse finale du serveur à cette requête.\n\nUtiliser la classe `XMLHttpRequest()` pour effectuer cette requête.\n\n\n"
           ]
-        },
+        }
+      ]
+    },
+    {
+      "_info": "generated from ex.02.code.template.md",
+      "i": 2,
+      "isCode": true,
+      "title": "Requête AJAX POST",
+      "maxScore": 10,
+      "questions": [
         {
           "i": 2,
           "id": "code2",
           "variants": [
             {
-              "fr": "nom",
-              "prop": "name"
+              "prop": "title",
+              "val": "Heroku",
+              "output": "alert"
             },
             {
-              "fr": "numéro de téléphone",
-              "prop": "phone"
+              "prop": "body",
+              "val": "Firebase",
+              "output": "alert"
             },
             {
-              "fr": "site web",
-              "prop": "website"
+              "prop": "title",
+              "val": "Firebase",
+              "output": "console.log"
+            },
+            {
+              "prop": "body",
+              "val": "Heroku",
+              "output": "console.log"
             }
           ],
           "mdVariants": [
-            "# Annuaire interactif\n\nUn client souhaite un moyen d'accéder rapidement au nom d'un adhérent, à partir de son numéro d'adhérent.\n\nIl met à disposition une API permettant d'accéder aux données de chaque adhérent. Il suffit d'effectuer une requête HTTP GET à l'URL `https://js-jsonplaceholder.herokuapp.com/users/<numero>`, où `<numero>` est à remplacer par le numéro d'adhérent dont on souhaite récupérer les données. L'API retourne alors une réponse au format JSON, contenant une propriété `name`.\n\nNous allons développer une solution simple consistant en:\n - une page HTML contenant un champ permettant de saisir le numéro d'adhérent, un bouton pour effectuer la requête, et un deuxième champ qui contiendra le nom de l'adhérent,\n - et un programme JavaScript permettant d'effectuer les requêtes AJAX correspondantes vers leur API, et d'afficher le nom de l'adhérent spécifié à chaque fois que l'utilisateur cliquera sur le bouton.\n\nLa page HTML de cette solution est fournie. Voici le code source de son `<body>`:\n\n```html\n<label for=\"numero\">Numéro d'adhérent:</label>\n<input id=\"numero\" type=\"text\">\n<input id=\"bouton\" type=\"button\" value=\"Chercher\">\n<p>Résultat:</p>\n<input id=\"name\" type=\"text\" readonly>\n```\n\nL'utilisateur doit pouvoir effectuer plusieurs recherches d'affilée, en tapant un autre numéro d'adhérent puis cliquant à nouveau sur le bouton.\n\nÉcrire le programme JavaScript à associer à cette page.\n\nNote: Vous devrez utiliser la classe `XMLHttpRequest()` pour effectuer les requêtes.\n\n\n",
-            "# Annuaire interactif\n\nUn client souhaite un moyen d'accéder rapidement au numéro de téléphone d'un adhérent, à partir de son numéro d'adhérent.\n\nIl met à disposition une API permettant d'accéder aux données de chaque adhérent. Il suffit d'effectuer une requête HTTP GET à l'URL `https://js-jsonplaceholder.herokuapp.com/users/<numero>`, où `<numero>` est à remplacer par le numéro d'adhérent dont on souhaite récupérer les données. L'API retourne alors une réponse au format JSON, contenant une propriété `phone`.\n\nNous allons développer une solution simple consistant en:\n - une page HTML contenant un champ permettant de saisir le numéro d'adhérent, un bouton pour effectuer la requête, et un deuxième champ qui contiendra le numéro de téléphone de l'adhérent,\n - et un programme JavaScript permettant d'effectuer les requêtes AJAX correspondantes vers leur API, et d'afficher le numéro de téléphone de l'adhérent spécifié à chaque fois que l'utilisateur cliquera sur le bouton.\n\nLa page HTML de cette solution est fournie. Voici le code source de son `<body>`:\n\n```html\n<label for=\"numero\">Numéro d'adhérent:</label>\n<input id=\"numero\" type=\"text\">\n<input id=\"bouton\" type=\"button\" value=\"Chercher\">\n<p>Résultat:</p>\n<input id=\"phone\" type=\"text\" readonly>\n```\n\nL'utilisateur doit pouvoir effectuer plusieurs recherches d'affilée, en tapant un autre numéro d'adhérent puis cliquant à nouveau sur le bouton.\n\nÉcrire le programme JavaScript à associer à cette page.\n\nNote: Vous devrez utiliser la classe `XMLHttpRequest()` pour effectuer les requêtes.\n\n\n",
-            "# Annuaire interactif\n\nUn client souhaite un moyen d'accéder rapidement au site web d'un adhérent, à partir de son numéro d'adhérent.\n\nIl met à disposition une API permettant d'accéder aux données de chaque adhérent. Il suffit d'effectuer une requête HTTP GET à l'URL `https://js-jsonplaceholder.herokuapp.com/users/<numero>`, où `<numero>` est à remplacer par le numéro d'adhérent dont on souhaite récupérer les données. L'API retourne alors une réponse au format JSON, contenant une propriété `website`.\n\nNous allons développer une solution simple consistant en:\n - une page HTML contenant un champ permettant de saisir le numéro d'adhérent, un bouton pour effectuer la requête, et un deuxième champ qui contiendra le site web de l'adhérent,\n - et un programme JavaScript permettant d'effectuer les requêtes AJAX correspondantes vers leur API, et d'afficher le site web de l'adhérent spécifié à chaque fois que l'utilisateur cliquera sur le bouton.\n\nLa page HTML de cette solution est fournie. Voici le code source de son `<body>`:\n\n```html\n<label for=\"numero\">Numéro d'adhérent:</label>\n<input id=\"numero\" type=\"text\">\n<input id=\"bouton\" type=\"button\" value=\"Chercher\">\n<p>Résultat:</p>\n<input id=\"website\" type=\"text\" readonly>\n```\n\nL'utilisateur doit pouvoir effectuer plusieurs recherches d'affilée, en tapant un autre numéro d'adhérent puis cliquant à nouveau sur le bouton.\n\nÉcrire le programme JavaScript à associer à cette page.\n\nNote: Vous devrez utiliser la classe `XMLHttpRequest()` pour effectuer les requêtes.\n\n\n"
+            "\nÉcrire un programme JavaScript permettant:\n - d'ajouter une \"ressource\" sur le serveur `https://js-jsonplaceholder.herokuapp.com` en envoyant une requête AJAX (utilisant `XMLHttpRequest`) sur l'API HTTP POST disponible à l'adresse `/posts`;\n - cette ressource est un objet JSON dont la propriété `title` doit avoir pour valeur la chaine de caractères `Heroku`; (vous pouvez donner la valeur de votre choix aux autres propriétés)\n - puis afficher dans un `alert()` la valeur de la propriété `id` contenue dans la réponse à cette requête. (et seulement cette valeur)\n\nPour vous aider à définir votre requête, consulter la documentation du serveur, située sur la page web `https://github.com/typicode/jsonplaceholder`.\n\nNe pas utiliser jQuery.\n\n\n",
+            "\nÉcrire un programme JavaScript permettant:\n - d'ajouter une \"ressource\" sur le serveur `https://js-jsonplaceholder.herokuapp.com` en envoyant une requête AJAX (utilisant `XMLHttpRequest`) sur l'API HTTP POST disponible à l'adresse `/posts`;\n - cette ressource est un objet JSON dont la propriété `body` doit avoir pour valeur la chaine de caractères `Firebase`; (vous pouvez donner la valeur de votre choix aux autres propriétés)\n - puis afficher dans un `alert()` la valeur de la propriété `id` contenue dans la réponse à cette requête. (et seulement cette valeur)\n\nPour vous aider à définir votre requête, consulter la documentation du serveur, située sur la page web `https://github.com/typicode/jsonplaceholder`.\n\nNe pas utiliser jQuery.\n\n\n",
+            "\nÉcrire un programme JavaScript permettant:\n - d'ajouter une \"ressource\" sur le serveur `https://js-jsonplaceholder.herokuapp.com` en envoyant une requête AJAX (utilisant `XMLHttpRequest`) sur l'API HTTP POST disponible à l'adresse `/posts`;\n - cette ressource est un objet JSON dont la propriété `title` doit avoir pour valeur la chaine de caractères `Firebase`; (vous pouvez donner la valeur de votre choix aux autres propriétés)\n - puis afficher dans un `console.log()` la valeur de la propriété `id` contenue dans la réponse à cette requête. (et seulement cette valeur)\n\nPour vous aider à définir votre requête, consulter la documentation du serveur, située sur la page web `https://github.com/typicode/jsonplaceholder`.\n\nNe pas utiliser jQuery.\n\n\n",
+            "\nÉcrire un programme JavaScript permettant:\n - d'ajouter une \"ressource\" sur le serveur `https://js-jsonplaceholder.herokuapp.com` en envoyant une requête AJAX (utilisant `XMLHttpRequest`) sur l'API HTTP POST disponible à l'adresse `/posts`;\n - cette ressource est un objet JSON dont la propriété `body` doit avoir pour valeur la chaine de caractères `Heroku`; (vous pouvez donner la valeur de votre choix aux autres propriétés)\n - puis afficher dans un `console.log()` la valeur de la propriété `id` contenue dans la réponse à cette requête. (et seulement cette valeur)\n\nPour vous aider à définir votre requête, consulter la documentation du serveur, située sur la page web `https://github.com/typicode/jsonplaceholder`.\n\nNe pas utiliser jQuery.\n\n\n"
           ]
         }
       ]
