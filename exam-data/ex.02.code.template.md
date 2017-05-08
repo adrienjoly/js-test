@@ -7,8 +7,6 @@
 
 Pour vous aider à définir votre requête, consulter la documentation du serveur, située sur la page web `https://github.com/typicode/jsonplaceholder`.
 
-Ne pas utiliser jQuery.
-
 - { "prop": "title", "val": "Heroku", "output": "alert" }
 - { "prop": "body", "val": "Firebase", "output": "alert" }
 - { "prop": "title", "val": "Firebase", "output": "console.log" }
@@ -109,3 +107,128 @@ xhr.send({
   }, 50);
 })();
 ```
+
+---
+
+# Jeu des 7 différences
+
+Un client souhaite permettre aux utilisateurs de son site de comparer facilement deux images, en passant de l'une à l'autre autant de fois qu'il le souhaite.
+
+Le code HTML de la page est fourni:
+
+```html
+<button id="bouton1">image 1</button>
+<button id="bouton2">image 2</button>
+<img id="image" src="https://i.imgur.com/X3iY0e3.jpg">
+```
+
+Écrire le code JavaScript permettant:
+ - d'afficher l'image `https://i.imgur.com/X3iY0e3.jpg` dans la balise `<img>` quand l'utilisateur clique sur le `bouton1`;
+ - d'afficher l'image `https://i.imgur.com/MrsKxdZ.jpg` dans la balise `<img>` quand l'utilisateur clique sur le `bouton2`.
+
+Le code que vous écrirez ci-dessous sera stocké dans un fichier `.js` puis intégré à la page du client via une balise `<script>`.
+
+???
+
+Solution:
+
+```js
+var image = document.getElementById('image');
+document.getElementById('bouton1').onclick = function() {
+  image.src = 'https://i.imgur.com/X3iY0e3.jpg';
+};
+document.getElementById('bouton2').onclick = function() {
+  image.src = 'https://i.imgur.com/MrsKxdZ.jpg';
+};
+```
+
+--
+
+```js
+// automatic student evaluation code
+(function evaluateStudentCode(){
+  var _urls = [
+    'https://i.imgur.com/X3iY0e3.jpg',
+    'https://i.imgur.com/MrsKxdZ.jpg',
+  ];
+  // __ FAKE WEB BROWSER ___
+  function _Node(attrs) {
+    Object.assign(this, attrs);
+  }
+  _Node.prototype.setAttribute = function(key, value) {
+    this[key] = value;
+  };
+  var _fakeDom = {
+    bouton1: new _Node({ tagName: 'button', id: 'bouton1', }),
+    bouton2: new _Node({ tagName: 'button', id: 'bouton2', }),
+    image: new _Node({ tagName: 'img', id: 'image', src: _urls[0], }),
+  };
+  var document = {
+    getElementById: (id) => _fakeDom[id],
+    getElementsByTagName: (tagName) => _fakeDom.filter((node) => node.tagName === tagName),
+    getElementsByClassName: (className) => _fakeDom.filter((node) => node.className === className),
+    querySelectorAll: function(selector) {
+      selector = '' + selector
+      switch (selector[0]) {
+        case '#': return [ this.getElementById(selector.substr(1)) ];
+        case '.': return this.getElementsByClassName(selector.substr(1));
+      }
+      return this.getElementsByTagName(selector);
+    },
+    querySelector: function(selector) {
+      return this.querySelectorAll(selector)[0];
+    },
+  };
+  function alert(msg) {} // tolerate console.log calls
+  var console = { log: function(t){} }; // tolerate console.log calls
+  var window = {
+    document: document,
+    alert: alert,
+    console: console,
+  };
+  // TODO: after successfull grading => add this fakedom code to /docs
+  function res(pts, msg) {
+    application.remote._log((pts ? '[+] ' : '[-] ') + msg);
+    return pts;
+  }
+  // fonctions de test
+  function clicSur(id, imgUrl) {
+    var error = null;
+    try {
+      _fakeDom[id].onclick({});
+    } catch(e) {
+      error = e;
+    }
+    return [
+      error
+        ? res(0, `clic sur ${id} à causé une erreur: ` + error.message)
+        : res(1, `clic sur ${id} ne cause aucune erreur`),
+      _fakeDom.image.src === imgUrl
+        ? res(1, `clic sur ${id} => image ${imgUrl} est bien affichée`)
+        : res(0, `clic sur ${id} => image ${imgUrl} devrait être affichée`)
+    ];
+  }
+  // état initial
+  var error = null;
+  try {
+    eval(`_studentCode`); // catch syntax errors, if any
+  } catch(e) {
+    error = e;
+  }
+  var tests = [
+    error
+      ? res(0, 'erreur: ' + error.message)
+      : res(1, 'le programme fonctionne sans erreur'),
+    _fakeDom.image.src === _urls[0]
+      ? res(1, 'l\'image initiale n\'est pas modifiée tant que l\'utilisateur ne clique pas')
+      : res(0, 'l\'image initiale ne devrait pas être modifiée tant que l\'utilisateur ne clique pas')
+  ];
+  // clics successifs sur les boutons
+  tests = tests.concat(clicSur('bouton1', _urls[0]));
+  tests = tests.concat(clicSur('bouton2', _urls[1]));
+  tests = tests.concat(clicSur('bouton1', _urls[0]));
+  application.remote._send(null, tests);
+})();
+```
+
+// TODO: ajouter VARIANTES
