@@ -17,24 +17,24 @@ module.exports = {
 
   // Settings for conversion and publication of exercise templates
   examPack: {
-    publishSolutions: false, // `true` required for realtime-eval/auto-eval back-ends, DISPLAY_SOLUTIONS_AFTER_SUBMIT and/or dashboard
-    publishEvalTests: false, // `true` required for realtime-eval/auto-eval back-ends, DISPLAY_SOLUTIONS_AFTER_SUBMIT and/or dashboard
+    publishSolutions: true, // `true` required for realtime-eval/auto-eval back-ends, DISPLAY_SOLUTIONS_AFTER_SUBMIT and/or dashboard
+    publishEvalTests: true, // `true` required for realtime-eval/auto-eval back-ends, DISPLAY_SOLUTIONS_AFTER_SUBMIT and/or dashboard
   },
 
   // Back-end config
   backend: {
-    type: 'firebase', // 'realtime-eval', 'auto-eval', or 'firebase' (with FIREBASE_CONFIG)
+    type: 'realtime-eval', // 'realtime-eval', 'auto-eval', or 'firebase' (with FIREBASE_CONFIG)
     /*
     EMAIL_SUBMIT_CONFIG: {
       mdTemplate: readfile('public/data/submitted.md'),
     },
-    */
     FIREBASE_CONFIG: {
       apiKey: "AIzaSyCCVnADtKjLmzivOw4fTLDUkCz90xkj4ws",
       databaseURL: "https://js-test-ft-partiel.firebaseio.com",
       messagingSenderId: "699482710183"
       // admin/dashboard: https://console.firebase.google.com/project/js-test-ft-partiel/database/data
     },
+    */
   },
 
   teacherEmail: 'adrien.joly@eemi.com', // required for dashboard auth
