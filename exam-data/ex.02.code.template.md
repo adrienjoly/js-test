@@ -2,25 +2,27 @@
 
 Un acronyme consiste en la concaténation des trois premières lettres de chaque prénom et nom d'une personne.
 
-Voici quelques tests unitaires pour illustrer l'usage et les retours attendus d'une fonction `acronyme()`:
+Voici quelques tests unitaires pour illustrer l'usage et les retours attendus d'une fonction `{{fctName}}()`:
 
 ```js
-acronyme(['adrien', 'joly']) === 'adrjol';
-acronyme(['paul', 'edouard', 'vaillant']) === 'pauedovai';
+{{fctName}}(['adrien', 'joly']) === 'adrjol';
+{{fctName}}(['paul', 'edouard', 'vaillant']) === 'pauedovai';
 ```
 
-Définir la fonction `acronyme` retournant l'acronyme d'une personne, à partir d'un tableau de prénom(s) et nom(s) passé en paramètre, tel que montré en exemple dans les tests unitaires ci-dessus.
+Définir la fonction `{{fctName}}` retournant l'acronyme d'une personne, à partir d'un tableau de prénom(s) et nom(s) passé en paramètre, tel que montré en exemple dans les tests unitaires ci-dessus.
 
 Note: Vous pouvez utiliser les méthodes `substr()` ou `substring()` pour extraire les premières lettres d'une chaine de caractères.
 
 - { "fctName": "acronyme" }
+- { "fctName": "genererAcronyme" }
+- { "fctName": "acro" }
 
 ???
 
 Solution:
 
 ```js
-function acronyme(noms) {
+function {{fctName}}(noms) {
   var acr = '';
   for (var i = 0; i < noms.length; i++) {
     acr = acr + noms[i].substr(0, 3);

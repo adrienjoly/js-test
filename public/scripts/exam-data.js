@@ -149,10 +149,18 @@
           "variants": [
             {
               "fctName": "acronyme"
+            },
+            {
+              "fctName": "genererAcronyme"
+            },
+            {
+              "fctName": "acro"
             }
           ],
           "mdVariants": [
-            "## Acronyme\n\nUn acronyme consiste en la concaténation des trois premières lettres de chaque prénom et nom d'une personne.\n\nVoici quelques tests unitaires pour illustrer l'usage et les retours attendus d'une fonction `acronyme()`:\n\n```js\nacronyme(['adrien', 'joly']) === 'adrjol';\nacronyme(['paul', 'edouard', 'vaillant']) === 'pauedovai';\n```\n\nDéfinir la fonction `acronyme` retournant l'acronyme d'une personne, à partir d'un tableau de prénom(s) et nom(s) passé en paramètre, tel que montré en exemple dans les tests unitaires ci-dessus.\n\nNote: Vous pouvez utiliser les méthodes `substr()` ou `substring()` pour extraire les premières lettres d'une chaine de caractères.\n\n\n"
+            "## Acronyme\n\nUn acronyme consiste en la concaténation des trois premières lettres de chaque prénom et nom d'une personne.\n\nVoici quelques tests unitaires pour illustrer l'usage et les retours attendus d'une fonction `acronyme()`:\n\n```js\nacronyme(['adrien', 'joly']) === 'adrjol';\nacronyme(['paul', 'edouard', 'vaillant']) === 'pauedovai';\n```\n\nDéfinir la fonction `acronyme` retournant l'acronyme d'une personne, à partir d'un tableau de prénom(s) et nom(s) passé en paramètre, tel que montré en exemple dans les tests unitaires ci-dessus.\n\nNote: Vous pouvez utiliser les méthodes `substr()` ou `substring()` pour extraire les premières lettres d'une chaine de caractères.\n\n\n",
+            "## Acronyme\n\nUn acronyme consiste en la concaténation des trois premières lettres de chaque prénom et nom d'une personne.\n\nVoici quelques tests unitaires pour illustrer l'usage et les retours attendus d'une fonction `genererAcronyme()`:\n\n```js\ngenererAcronyme(['adrien', 'joly']) === 'adrjol';\ngenererAcronyme(['paul', 'edouard', 'vaillant']) === 'pauedovai';\n```\n\nDéfinir la fonction `genererAcronyme` retournant l'acronyme d'une personne, à partir d'un tableau de prénom(s) et nom(s) passé en paramètre, tel que montré en exemple dans les tests unitaires ci-dessus.\n\nNote: Vous pouvez utiliser les méthodes `substr()` ou `substring()` pour extraire les premières lettres d'une chaine de caractères.\n\n\n",
+            "## Acronyme\n\nUn acronyme consiste en la concaténation des trois premières lettres de chaque prénom et nom d'une personne.\n\nVoici quelques tests unitaires pour illustrer l'usage et les retours attendus d'une fonction `acro()`:\n\n```js\nacro(['adrien', 'joly']) === 'adrjol';\nacro(['paul', 'edouard', 'vaillant']) === 'pauedovai';\n```\n\nDéfinir la fonction `acro` retournant l'acronyme d'une personne, à partir d'un tableau de prénom(s) et nom(s) passé en paramètre, tel que montré en exemple dans les tests unitaires ci-dessus.\n\nNote: Vous pouvez utiliser les méthodes `substr()` ou `substring()` pour extraire les premières lettres d'une chaine de caractères.\n\n\n"
           ]
         },
         {
