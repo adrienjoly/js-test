@@ -70,12 +70,12 @@ function {{fctName}}(noms) {
 
 ## Programmation Orientée Objet
 
-Vous souhaitez intégrer deux compteurs sur votre page Web. Chaque compteur doit être initialisé à zéro, puis, quand l'utilisateur cliquera sur un bouton, leur valeur devra augmenter automatiquement, jusqu'à atteindre leur valeur cible au bout d'une seconde. La valeur cible du premier compteur est `100`, celle du deuxième compteur est `45`.
+Vous souhaitez intégrer deux compteurs sur votre page Web. Chaque compteur doit être initialisé à zéro, puis, quand l'utilisateur cliquera sur un bouton, leur valeur devra augmenter automatiquement, jusqu'à atteindre leur valeur cible au bout d'une seconde. La valeur cible du premier compteur est `{{target}}`, celle du deuxième compteur est `45`.
 
 Vous avez trouvé sur Internet un composant "compteur animé" fournissant la documentation suivante:
 
 > Pour intégrer un compteur sur votre page:
-> - instanciez la classe `AnimCounter`, en passant en paramètre du constructeur le noeud HTML dans lequel intégrer le compteur. (ex: un `<div>`, tel que retourné par `document.getElementById()`)
+> - instanciez la classe `{{class}}`, en passant en paramètre du constructeur le noeud HTML dans lequel intégrer le compteur. (ex: un `<div>`, tel que retourné par `document.getElementById()`)
 > - puis appelez la méthode `countTo()` de cette instance, en passant la valeur cible en paramètre. Le compteur se mettra alors à compter automatiquement de la valeur `0` à la valeur cible passée en paramètre, en une seconde.
 >
 > Vous pouvez intégrer plusieurs compteurs sur une même page. Il suffit de créer une instance par compteur, et de les intégrer chacun dans un noeud HTML différent.
@@ -92,15 +92,20 @@ Voici le code HTML de votre page web:
  - intégrer les deux compteurs à l'aide du composant décrit plus haut, dans les `<div>` fournis;
  - démarrer les deux compteurs quand l'utilisateur clique sur le bouton.
 
-Note: Supposez que le composant `AnimCounter` a déjà été chargé dans la page. La classe est prête à être instanciée dans votre code. (Ne pas fournir la définition de ce composant.)
+Note: Supposez que le composant `{{class}}` a déjà été chargé dans la page. La classe est prête à être instanciée dans votre code. (Ne pas fournir la définition de ce composant.)
+
+- { "target": "100", "class": "AnimCounter" }
+- { "target": "100", "class": "Counter" }
+- { "target": "10", "class": "AnimCounter" }
+- { "target": "10", "class": "Counter" }
 
 ???
 
 ```js
-var compteur1 = new AnimCounter(document.getElementById('compteur1'));
-var compteur2 = new AnimCounter(document.getElementById('compteur2'));
+var compteur1 = new {{class}}(document.getElementById('compteur1'));
+var compteur2 = new {{class}}(document.getElementById('compteur2'));
 document.getElementById('bouton').onclick = function() {
-  compteur1.countTo(100);
+  compteur1.countTo({{target}});
   compteur2.countTo(45);
 };
 ```
@@ -111,7 +116,7 @@ document.getElementById('bouton').onclick = function() {
 // automatic student evaluation code
 (function evaluateStudentCode(){
   // __ PROVIDED CLASS __
-  class AnimCounter {
+  class {{class}} {
     constructor(el) {
       this.el = el;
       this.el.innerHTML = 0;
@@ -191,7 +196,7 @@ document.getElementById('bouton').onclick = function() {
     error
       ? res(0, `clic sur bouton à causé une erreur: ` + error.message)
       : res(1, `clic sur bouton ne cause aucune erreur`),
-    test(`1 seconde après clic`, `compteur1`, 100),
+    test(`1 seconde après clic`, `compteur1`, {{target}}),
     test(`1 seconde après clic`, `compteur2`, 45),
   ]));
 })();
@@ -324,14 +329,17 @@ Le code HTML de la page est fourni:
 ```html
 <button id="bouton1">image 1</button>
 <button id="bouton2">image 2</button>
-<img id="image" src="https://i.imgur.com/X3iY0e3.jpg">
+<img id="image" src="{{img1}}">
 ```
 
 Écrire le code JavaScript permettant:
- - d'afficher l'image `https://i.imgur.com/X3iY0e3.jpg` dans la balise `<img>` quand l'utilisateur clique sur le `bouton1`;
- - d'afficher l'image `https://i.imgur.com/MrsKxdZ.jpg` dans la balise `<img>` quand l'utilisateur clique sur le `bouton2`.
+ - d'afficher l'image `{{img1}}` dans la balise `<img>` quand l'utilisateur clique sur le `bouton1`;
+ - d'afficher l'image `{{img1}}` dans la balise `<img>` quand l'utilisateur clique sur le `bouton2`.
 
 Le code que vous écrirez ci-dessous sera stocké dans un fichier `.js` puis intégré à la page du client via une balise `<script>`.
+
+- { "img1": "https://i.imgur.com/X3iY0e3.jpg", "img2": "https://i.imgur.com/MrsKxdZ.jpg" }
+- { "img1": "https://i.imgur.com/MrsKxdZ.jpg", "img2": "https://i.imgur.com/X3iY0e3.jpg" }
 
 ???
 
@@ -340,10 +348,10 @@ Solution:
 ```js
 var image = document.getElementById('image');
 document.getElementById('bouton1').onclick = function() {
-  image.src = 'https://i.imgur.com/X3iY0e3.jpg';
+  image.src = '{{img1}}';
 };
 document.getElementById('bouton2').onclick = function() {
-  image.src = 'https://i.imgur.com/MrsKxdZ.jpg';
+  image.src = '{{img1}}';
 };
 ```
 
@@ -353,8 +361,8 @@ document.getElementById('bouton2').onclick = function() {
 // automatic student evaluation code
 (function evaluateStudentCode(){
   var _urls = [
-    'https://i.imgur.com/X3iY0e3.jpg',
-    'https://i.imgur.com/MrsKxdZ.jpg',
+    '{{img1}}',
+    '{{img1}}',
   ];
   // __ FAKE WEB BROWSER ___
   function _Node(attrs) {
@@ -435,5 +443,3 @@ document.getElementById('bouton2').onclick = function() {
   application.remote._send(null, tests);
 })();
 ```
-
-// TODO: ajouter VARIANTES
