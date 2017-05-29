@@ -6,7 +6,7 @@
 instances=( jsparta jspartb jspartc )
 
 # ...by temporarily altering the corresponding mentions to js-exam in the following files:
-files=( ./exam-data/exam-config.js )
+files=( ../exam-data/exam-config.js )
 
 # initial mentions to be replaced:
 initial="__INSTANCE__"
