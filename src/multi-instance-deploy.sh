@@ -30,7 +30,7 @@ do
   #git add .
   git commit -am 'Temporary Heroku-only deployment commit'
   heroku git:remote -a $instance
-  git push heroku master --force
+  git push heroku `git rev-parse --abbrev-ref HEAD`:master --force
   git reset --soft HEAD~1
 
   for f in "${files[@]}"
@@ -41,3 +41,5 @@ do
   done
 
 done
+
+npm run build
