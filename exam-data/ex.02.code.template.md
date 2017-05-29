@@ -223,9 +223,9 @@ xhr.onreadystatechange = function() {
     {{output}}(reponse.id);
   }
 };
-xhr.send({
+xhr.send(JSON.stringify({
   {{prop}}: '{{val}}',
-});
+}));
 ```
 
 --
@@ -274,6 +274,10 @@ xhr.send({
   }
   setTimeout(() => {
     //application.remote._log(_opens);
+    var content;
+    try {
+      content = JSON.parse(_sends[0]);
+    } catch (e) {}
     application.remote._send(null, [
       error
         ? res(0, 'erreur: ' + error.message)
@@ -296,7 +300,7 @@ xhr.send({
       _sends.length !== 1
         ? res(0, 'il fallait appeler la méthode send() une fois pour envoyer la requête')
         : res(1, 'la méthode send() a bien été appelée une fois'),
-      (_sends[0] || {}).{{prop}} !== '{{val}}'
+      (content || {}).{{prop}} !== '{{val}}'
         ? res(0, 'il fallait passer à send() un objet ayant une propriété {{prop}}: {{val}}')
         : res(1, 'un objet ayant une propriété {{prop}}: {{val}} a bien été passé à send()'),
       !_results.length || _results[_results.length - 1] != _expectedId
