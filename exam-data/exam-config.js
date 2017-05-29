@@ -30,10 +30,10 @@ module.exports = {
     },
     */
     FIREBASE_CONFIG: {
-      apiKey: "AIzaSyCEfwp0moUfvU3jNcmivKM83_lBIuaYwbc",
-      databaseURL: "https://controle3-790ad.firebaseio.com",
-      messagingSenderId: "838870643150"
-      // admin/dashboard: https://console.firebase.google.com/project/controle3-790ad/database/data
+      apiKey: "AIzaSyDvyDGBIXfhto7CQ7fflkY213e-mr3iMTo",
+      databaseURL: "https://js-part-2.firebaseio.com",
+      messagingSenderId: "83750922078"
+      // admin/dashboard: https://console.firebase.google.com/project/js-part-2/database/data
     },
   },
 

@@ -5,8 +5,8 @@
     window.location.href = window.location.href.replace('http:', 'https:');
   var app = document.querySelector('#app');
   app.config = {
-    "PUBLIC_TEST_MODE": false,
     "title": "JavaScript - Partiel 2",
+    "PUBLIC_TEST_MODE": false,
     "DISPLAY_SOLUTIONS_AFTER_SUBMIT": false,
     "redirectToHttps": true,
     "examPack": {
@@ -16,9 +16,9 @@
     "backend": {
       "type": "firebase",
       "FIREBASE_CONFIG": {
-        "apiKey": "AIzaSyCEfwp0moUfvU3jNcmivKM83_lBIuaYwbc",
-        "databaseURL": "https://controle3-790ad.firebaseio.com",
-        "messagingSenderId": "838870643150"
+        "apiKey": "AIzaSyDvyDGBIXfhto7CQ7fflkY213e-mr3iMTo",
+        "databaseURL": "https://js-part-2.firebaseio.com",
+        "messagingSenderId": "83750922078"
       }
     },
     "teacherEmail": "adrien.joly@eemi.com",
@@ -162,7 +162,7 @@
             {}
           ],
           "mdVariants": [
-            "## Programmation Orientée Objet\n\nVous souhaitez intégrer deux compteurs sur votre page Web. Chaque compteur doit être initialisé à zéro, puis, quand l'utilisateur cliquera sur un bouton, leur valeur devra augmenter automatiquement, jusqu'à atteindre leur valeur cible au bout d'une seconde. La valeur cible du premier compteur est `100`, celle du deuxième compteur est `45`.\n\nVous avez trouvé sur Internet un composant \"compteur animé\" fournissant la documentation suivante:\n\n> Pour intégrer un compteur sur votre page:\n> - instanciez la classe `AnimCounter`, en passant en paramètre du constructeur le noeud HTML dans lequel intégrer le compteur. (ex: un `<div>`, tel que retourné par `document.getElementById()`)\n> - puis appelez la méthode `countTo()` de cette instance, en passant la valeur cible en paramètre. Le compteur se mettra alors à compter automatiquement de la valeur `0` à la valeur cible passée en paramètre, en une seconde.\n> Vous pouvez intégrer plusieurs compteurs sur une même page. Il suffit de créer une instance par compteur, et de les intégrer chacun dans un noeud HTML différent.\n\nVoici le code HTML de votre page web:\n\n```html\n<div id=\"compteur1\"></div>\n<div id=\"compteur2\"></div>\n<button id=\"bouton\">Démarrer compteurs<button>\n```\n\nÉcrire le code d'un fichier JavaScript qui devra être intégré dans votre page pour:\n - intégrer les deux compteurs à l'aide du composant décrit plus haut, dans les `<div>` fournis;\n - démarrer les deux compteurs quand l'utilisateur clique sur le bouton.\n\nNote: Supposez que le composant `AnimCounter` a déjà été chargé dans la page. La classe est prête à être instanciée dans votre code.\n\n"
+            "## Programmation Orientée Objet\n\nVous souhaitez intégrer deux compteurs sur votre page Web. Chaque compteur doit être initialisé à zéro, puis, quand l'utilisateur cliquera sur un bouton, leur valeur devra augmenter automatiquement, jusqu'à atteindre leur valeur cible au bout d'une seconde. La valeur cible du premier compteur est `100`, celle du deuxième compteur est `45`.\n\nVous avez trouvé sur Internet un composant \"compteur animé\" fournissant la documentation suivante:\n\n> Pour intégrer un compteur sur votre page:\n> - instanciez la classe `AnimCounter`, en passant en paramètre du constructeur le noeud HTML dans lequel intégrer le compteur. (ex: un `<div>`, tel que retourné par `document.getElementById()`)\n> - puis appelez la méthode `countTo()` de cette instance, en passant la valeur cible en paramètre. Le compteur se mettra alors à compter automatiquement de la valeur `0` à la valeur cible passée en paramètre, en une seconde.\n>\n> Vous pouvez intégrer plusieurs compteurs sur une même page. Il suffit de créer une instance par compteur, et de les intégrer chacun dans un noeud HTML différent.\n\nVoici le code HTML de votre page web:\n\n```html\n<div id=\"compteur1\"></div>\n<div id=\"compteur2\"></div>\n<button id=\"bouton\">Démarrer compteurs<button>\n```\n\nÉcrire le code du fichier JavaScript qui sera intégré à votre page pour:\n - intégrer les deux compteurs à l'aide du composant décrit plus haut, dans les `<div>` fournis;\n - démarrer les deux compteurs quand l'utilisateur clique sur le bouton.\n\nNote: Supposez que le composant `AnimCounter` a déjà été chargé dans la page. La classe est prête à être instanciée dans votre code. (Ne pas fournir la définition de ce composant.)\n\n"
           ]
         },
         {

@@ -75,6 +75,7 @@ Vous avez trouvé sur Internet un composant "compteur animé" fournissant la doc
 > Pour intégrer un compteur sur votre page:
 > - instanciez la classe `AnimCounter`, en passant en paramètre du constructeur le noeud HTML dans lequel intégrer le compteur. (ex: un `<div>`, tel que retourné par `document.getElementById()`)
 > - puis appelez la méthode `countTo()` de cette instance, en passant la valeur cible en paramètre. Le compteur se mettra alors à compter automatiquement de la valeur `0` à la valeur cible passée en paramètre, en une seconde.
+>
 > Vous pouvez intégrer plusieurs compteurs sur une même page. Il suffit de créer une instance par compteur, et de les intégrer chacun dans un noeud HTML différent.
 
 Voici le code HTML de votre page web:
@@ -85,11 +86,11 @@ Voici le code HTML de votre page web:
 <button id="bouton">Démarrer compteurs<button>
 ```
 
-Écrire le code d'un fichier JavaScript qui devra être intégré dans votre page pour:
+Écrire le code du fichier JavaScript qui sera intégré à votre page pour:
  - intégrer les deux compteurs à l'aide du composant décrit plus haut, dans les `<div>` fournis;
  - démarrer les deux compteurs quand l'utilisateur clique sur le bouton.
 
-Note: Supposez que le composant `AnimCounter` a déjà été chargé dans la page. La classe est prête à être instanciée dans votre code.
+Note: Supposez que le composant `AnimCounter` a déjà été chargé dans la page. La classe est prête à être instanciée dans votre code. (Ne pas fournir la définition de ce composant.)
 
 ???
 
