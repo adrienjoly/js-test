@@ -11,7 +11,7 @@ files=( ../exam-data/exam-config.js )
 # initial mentions to be replaced:
 initial="__INSTANCE__"
 
-for i in "${instances[@]}"
+for instance in "${instances[@]}"
 do
   echo "Deploying to instance: $instance .herokuapp.com ..."
 
