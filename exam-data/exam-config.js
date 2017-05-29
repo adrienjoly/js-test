@@ -30,11 +30,29 @@ module.exports = {
     },
     */
     FIREBASE_CONFIG: {
-      apiKey: "AIzaSyDvyDGBIXfhto7CQ7fflkY213e-mr3iMTo",
-      databaseURL: "https://js-part-2.firebaseio.com",
-      messagingSenderId: "83750922078"
-      // admin/dashboard: https://console.firebase.google.com/project/js-part-2/database/data
-    },
+      'jsparta': {
+        apiKey: "AIzaSyAry2VPlxIdHkfAUvtXGjeYWEqbXlG0mtM",
+        databaseURL: "https://jspa-79caf.firebaseio.com",
+        messagingSenderId: "1046784867897"
+        // admin/dashboard: https://console.firebase.google.com/project/jspa-79caf/database/data
+      },
+      'jspartb': {
+        apiKey: "AIzaSyAZrJhZzWl-ncg8JvfRpCM7GAnHrIF7L_M",
+        databaseURL: "https://jspb-fd563.firebaseio.com",
+        messagingSenderId: "253586129661"
+        // admin/dashboard: https://console.firebase.google.com/project/jspb-fd563/database/data
+      },
+      'jspartc': {
+        apiKey: "AIzaSyA8CYvNgJOjOT7Fb5XResPor0UgvSnpRhg",
+        databaseURL: "https://jspc-19feb.firebaseio.com",
+        messagingSenderId: "527718816676"
+        // admin/dashboard: https://console.firebase.google.com/project/jspc-19feb/database/data
+      },
+    }['__INSTANCE__']
+    
+    
+    
+    ,
   },
 
   teacherEmail: 'adrien.joly@eemi.com', // required for dashboard auth
