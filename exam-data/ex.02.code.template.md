@@ -329,12 +329,12 @@ Le code HTML de la page est fourni:
 ```html
 <button id="bouton1">image 1</button>
 <button id="bouton2">image 2</button>
-<img id="image" src="{{img1}}">
+<img id="image" src="{{{img1}}}">
 ```
 
 Écrire le code JavaScript permettant:
- - d'afficher l'image `{{img1}}` dans la balise `<img>` quand l'utilisateur clique sur le `bouton1`;
- - d'afficher l'image `{{img1}}` dans la balise `<img>` quand l'utilisateur clique sur le `bouton2`.
+ - d'afficher l'image `{{{img1}}}` dans la balise `<img>` quand l'utilisateur clique sur le `bouton1`;
+ - d'afficher l'image `{{{img1}}}` dans la balise `<img>` quand l'utilisateur clique sur le `bouton2`.
 
 Le code que vous écrirez ci-dessous sera stocké dans un fichier `.js` puis intégré à la page du client via une balise `<script>`.
 
@@ -348,10 +348,10 @@ Solution:
 ```js
 var image = document.getElementById('image');
 document.getElementById('bouton1').onclick = function() {
-  image.src = '{{img1}}';
+  image.src = '{{{img1}}}';
 };
 document.getElementById('bouton2').onclick = function() {
-  image.src = '{{img1}}';
+  image.src = '{{{img1}}}';
 };
 ```
 
@@ -361,8 +361,8 @@ document.getElementById('bouton2').onclick = function() {
 // automatic student evaluation code
 (function evaluateStudentCode(){
   var _urls = [
-    '{{img1}}',
-    '{{img1}}',
+    '{{{img1}}}',
+    '{{{img1}}}',
   ];
   // __ FAKE WEB BROWSER ___
   function _Node(attrs) {
