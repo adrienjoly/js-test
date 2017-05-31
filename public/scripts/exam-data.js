@@ -14,12 +14,7 @@
       "publishEvalTests": false
     },
     "backend": {
-      "type": "firebase",
-      "FIREBASE_CONFIG": {
-        "apiKey": "AIzaSyDvyDGBIXfhto7CQ7fflkY213e-mr3iMTo",
-        "databaseURL": "https://js-part-2.firebaseio.com",
-        "messagingSenderId": "83750922078"
-      }
+      "type": "firebase"
     },
     "teacherEmail": "adrien.joly@eemi.com",
     "GOOGLE_CLIENT_ID": "247219641427-ifeq88p7rgor9al5ksduds7ug0ba7djr.apps.googleusercontent.com",
@@ -237,8 +232,8 @@
             }
           ],
           "mdVariants": [
-            "## Jeu des 7 différences\n\nUn client souhaite permettre aux utilisateurs de son site de comparer facilement deux images, en passant de l'une à l'autre autant de fois qu'il le souhaite.\n\nLe code HTML de la page est fourni:\n\n```html\n<button id=\"bouton1\">image 1</button>\n<button id=\"bouton2\">image 2</button>\n<img id=\"image\" src=\"https:&#x2F;&#x2F;i.imgur.com&#x2F;X3iY0e3.jpg\">\n```\n\nÉcrire le code JavaScript permettant:\n - d'afficher l'image `https:&#x2F;&#x2F;i.imgur.com&#x2F;X3iY0e3.jpg` dans la balise `<img>` quand l'utilisateur clique sur le `bouton1`;\n - d'afficher l'image `https:&#x2F;&#x2F;i.imgur.com&#x2F;X3iY0e3.jpg` dans la balise `<img>` quand l'utilisateur clique sur le `bouton2`.\n\nLe code que vous écrirez ci-dessous sera stocké dans un fichier `.js` puis intégré à la page du client via une balise `<script>`.\n\n\n",
-            "## Jeu des 7 différences\n\nUn client souhaite permettre aux utilisateurs de son site de comparer facilement deux images, en passant de l'une à l'autre autant de fois qu'il le souhaite.\n\nLe code HTML de la page est fourni:\n\n```html\n<button id=\"bouton1\">image 1</button>\n<button id=\"bouton2\">image 2</button>\n<img id=\"image\" src=\"https:&#x2F;&#x2F;i.imgur.com&#x2F;MrsKxdZ.jpg\">\n```\n\nÉcrire le code JavaScript permettant:\n - d'afficher l'image `https:&#x2F;&#x2F;i.imgur.com&#x2F;MrsKxdZ.jpg` dans la balise `<img>` quand l'utilisateur clique sur le `bouton1`;\n - d'afficher l'image `https:&#x2F;&#x2F;i.imgur.com&#x2F;MrsKxdZ.jpg` dans la balise `<img>` quand l'utilisateur clique sur le `bouton2`.\n\nLe code que vous écrirez ci-dessous sera stocké dans un fichier `.js` puis intégré à la page du client via une balise `<script>`.\n\n\n"
+            "## Jeu des 7 différences\n\nUn client souhaite permettre aux utilisateurs de son site de comparer facilement deux images, en passant de l'une à l'autre autant de fois qu'il le souhaite.\n\nLe code HTML de la page est fourni:\n\n```html\n<button id=\"bouton1\">image 1</button>\n<button id=\"bouton2\">image 2</button>\n<img id=\"image\" src=\"https://i.imgur.com/X3iY0e3.jpg\">\n```\n\nÉcrire le code JavaScript permettant:\n - d'afficher l'image `https://i.imgur.com/X3iY0e3.jpg` dans la balise `<img>` quand l'utilisateur clique sur le `bouton1`;\n - d'afficher l'image `https://i.imgur.com/X3iY0e3.jpg` dans la balise `<img>` quand l'utilisateur clique sur le `bouton2`.\n\nLe code que vous écrirez ci-dessous sera stocké dans un fichier `.js` puis intégré à la page du client via une balise `<script>`.\n\n\n",
+            "## Jeu des 7 différences\n\nUn client souhaite permettre aux utilisateurs de son site de comparer facilement deux images, en passant de l'une à l'autre autant de fois qu'il le souhaite.\n\nLe code HTML de la page est fourni:\n\n```html\n<button id=\"bouton1\">image 1</button>\n<button id=\"bouton2\">image 2</button>\n<img id=\"image\" src=\"https://i.imgur.com/MrsKxdZ.jpg\">\n```\n\nÉcrire le code JavaScript permettant:\n - d'afficher l'image `https://i.imgur.com/MrsKxdZ.jpg` dans la balise `<img>` quand l'utilisateur clique sur le `bouton1`;\n - d'afficher l'image `https://i.imgur.com/MrsKxdZ.jpg` dans la balise `<img>` quand l'utilisateur clique sur le `bouton2`.\n\nLe code que vous écrirez ci-dessous sera stocké dans un fichier `.js` puis intégré à la page du client via une balise `<script>`.\n\n\n"
           ]
         }
       ]
