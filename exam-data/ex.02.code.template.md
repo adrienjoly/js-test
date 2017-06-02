@@ -51,7 +51,13 @@ function {{fctName}}(noms) {
   }
   var studentFct = _scope[`{{fctName}}`];
   function unit(p, ret) {
-    return typeof studentFct === 'function' && studentFct(p) === ret
+    var result;
+    try {
+      result = studentFct(p);
+    } catch(e) {
+      return res(0, `l'appel {{fctName}}(${JSON.stringify(p)}) cause l'erreur: ${e.message}`);
+    }
+    return result === ret
       ? res(1, `l'appel {{fctName}}(${JSON.stringify(p)}) retourne bien ${ret}`)
       : res(0, `l'appel {{fctName}}(${JSON.stringify(p)}) devrait retourner ${ret}`)
   }

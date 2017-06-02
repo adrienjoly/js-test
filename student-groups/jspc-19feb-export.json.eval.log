@@ -31,20 +31,13 @@ STUDENT: aubin_keravel
   | // CODE EVALUATION:
   | 
   | [+] function genererAcronyme a bien été trouvé dans le code
-Fri, 02 Jun 2017 10:11:56 GMT jailed:sandbox TypeError: name.substr is not a function
-    at _scope.genererAcronyme (eval at evaluateStudentCode (DYNAMIC PLUGIN:13:4), <anonymous>:4:16)
-    at unit (DYNAMIC PLUGIN:24:48)
-    at evaluateStudentCode (DYNAMIC PLUGIN:37:5)
-    at DYNAMIC PLUGIN:41:3
-    at ContextifyScript.Script.runInContext (vm.js:35:29)
-    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
-    at Object.exports.runInNewContext (vm.js:72:17)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13/node_modules/jailed-node/sandbox/sandbox.js:151:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13/node_modules/jailed-node/sandbox/sandbox.js:165:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13/node_modules/jailed-node/sandbox/sandbox.js:53:7)
-  | => test runner err: TypeError: name.substr is not a function at _scope.genererAcronyme (eval at evaluateStudentCode (DYNAMIC PLUGIN:13:4), <anonymous>:4:16)
+  | [-] l'appel genererAcronyme(["adrien","joly"]) cause l'erreur: name.substr is not a function
+  | [-] l'appel genererAcronyme(["paul","edouard","vaillant"]) cause l'erreur: name.substr is not a function
+  | [-] l'appel genererAcronyme(["eric","maubert"]) cause l'erreur: name.substr is not a function
   | 
-  | // -> EXERCISE POINTS: 0 / 4
+  | // -> STUDENT SCORE ARRAY: [ 1, 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 1 / 4
   | 
   | ------------- EXERCISE: code6 (variant: 1) -------------
   | 
@@ -114,9 +107,9 @@ Fri, 02 Jun 2017 10:11:56 GMT jailed:sandbox TypeError: name.substr is not a fun
   | 
   | // -> EXERCISE POINTS: 0 / 4
 
-  => code score: 1.3333333333333333 / 16 pts
+  => code score: 2.333333333333333 / 16 pts
 
-=> TOTAL STUDENT SCORE: 3.33 / 20
+=> TOTAL STUDENT SCORE: 4.33 / 20
 
 
 ================================
@@ -155,9 +148,9 @@ STUDENT: bastien_bigot
   | 
   | /!\ erreur: Unexpected end of input
   | [-] la fonction acronyme() n'est pas définie correctement
-  | [-] l'appel acronyme(["adrien","joly"]) devrait retourner adrjol
-  | [-] l'appel acronyme(["paul","edouard","vaillant"]) devrait retourner pauedovai
-  | [-] l'appel acronyme(["eric","maubert"]) devrait retourner erimau
+  | [-] l'appel acronyme(["adrien","joly"]) cause l'erreur: studentFct is not a function
+  | [-] l'appel acronyme(["paul","edouard","vaillant"]) cause l'erreur: studentFct is not a function
+  | [-] l'appel acronyme(["eric","maubert"]) cause l'erreur: studentFct is not a function
   | 
   | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 0 ]
   | 
@@ -289,9 +282,9 @@ STUDENT: benjamin_kissous
   | // CODE EVALUATION:
   | 
   | [-] la fonction genererAcronyme() n'est pas définie correctement
-  | [-] l'appel genererAcronyme(["adrien","joly"]) devrait retourner adrjol
-  | [-] l'appel genererAcronyme(["paul","edouard","vaillant"]) devrait retourner pauedovai
-  | [-] l'appel genererAcronyme(["eric","maubert"]) devrait retourner erimau
+  | [-] l'appel genererAcronyme(["adrien","joly"]) cause l'erreur: studentFct is not a function
+  | [-] l'appel genererAcronyme(["paul","edouard","vaillant"]) cause l'erreur: studentFct is not a function
+  | [-] l'appel genererAcronyme(["eric","maubert"]) cause l'erreur: studentFct is not a function
   | 
   | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 0 ]
   | 
@@ -518,20 +511,13 @@ STUDENT: edouard_duchesnedelamotte
   | // CODE EVALUATION:
   | 
   | [+] function genererAcronyme a bien été trouvé dans le code
-Fri, 02 Jun 2017 10:11:57 GMT jailed:sandbox ReferenceError: substring is not defined
-    at _scope.genererAcronyme (eval at evaluateStudentCode (DYNAMIC PLUGIN:10:4), <anonymous>:2:22)
-    at unit (DYNAMIC PLUGIN:21:48)
-    at evaluateStudentCode (DYNAMIC PLUGIN:31:5)
-    at DYNAMIC PLUGIN:35:3
-    at ContextifyScript.Script.runInContext (vm.js:35:29)
-    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
-    at Object.exports.runInNewContext (vm.js:72:17)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13/node_modules/jailed-node/sandbox/sandbox.js:151:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13/node_modules/jailed-node/sandbox/sandbox.js:165:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13/node_modules/jailed-node/sandbox/sandbox.js:53:7)
-  | => test runner err: ReferenceError: substring is not defined at _scope.genererAcronyme (eval at evaluateStudentCode (DYNAMIC PLUGIN:10:4), <anonymous>:2:22)
+  | [-] l'appel genererAcronyme(["adrien","joly"]) cause l'erreur: substring is not defined
+  | [-] l'appel genererAcronyme(["paul","edouard","vaillant"]) cause l'erreur: substring is not defined
+  | [-] l'appel genererAcronyme(["eric","maubert"]) cause l'erreur: substring is not defined
   | 
-  | // -> EXERCISE POINTS: 0 / 4
+  | // -> STUDENT SCORE ARRAY: [ 1, 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 1 / 4
   | 
   | ------------- EXERCISE: code6 (variant: 2) -------------
   | 
@@ -599,9 +585,9 @@ Fri, 02 Jun 2017 10:11:57 GMT jailed:sandbox ReferenceError: substring is not de
   | 
   | // -> EXERCISE POINTS: 2 / 4
 
-  => code score: 5.111111111111111 / 16 pts
+  => code score: 6.111111111111111 / 16 pts
 
-=> TOTAL STUDENT SCORE: 9.11 / 20
+=> TOTAL STUDENT SCORE: 10.11 / 20
 
 
 ================================
@@ -631,20 +617,13 @@ STUDENT: florian_compiegne
   | // CODE EVALUATION:
   | 
   | [+] function genererAcronyme a bien été trouvé dans le code
-Fri, 02 Jun 2017 10:11:58 GMT jailed:sandbox TypeError: a.substr is not a function
-    at _scope.genererAcronyme (eval at evaluateStudentCode (DYNAMIC PLUGIN:12:4), <anonymous>:4:18)
-    at unit (DYNAMIC PLUGIN:23:48)
-    at evaluateStudentCode (DYNAMIC PLUGIN:35:5)
-    at DYNAMIC PLUGIN:39:3
-    at ContextifyScript.Script.runInContext (vm.js:35:29)
-    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
-    at Object.exports.runInNewContext (vm.js:72:17)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13/node_modules/jailed-node/sandbox/sandbox.js:151:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13/node_modules/jailed-node/sandbox/sandbox.js:165:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13/node_modules/jailed-node/sandbox/sandbox.js:53:7)
-  | => test runner err: TypeError: a.substr is not a function at _scope.genererAcronyme (eval at evaluateStudentCode (DYNAMIC PLUGIN:12:4), <anonymous>:4:18)
+  | [-] l'appel genererAcronyme(["adrien","joly"]) cause l'erreur: a.substr is not a function
+  | [-] l'appel genererAcronyme(["paul","edouard","vaillant"]) cause l'erreur: a.substr is not a function
+  | [-] l'appel genererAcronyme(["eric","maubert"]) cause l'erreur: a.substr is not a function
   | 
-  | // -> EXERCISE POINTS: 0 / 4
+  | // -> STUDENT SCORE ARRAY: [ 1, 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 1 / 4
   | 
   | ------------- EXERCISE: code6 (variant: 3) -------------
   | 
@@ -707,9 +686,9 @@ Fri, 02 Jun 2017 10:11:58 GMT jailed:sandbox TypeError: a.substr is not a functi
   | 
   | // -> EXERCISE POINTS: 0 / 4
 
-  => code score: 4.444444444444445 / 16 pts
+  => code score: 5.444444444444445 / 16 pts
 
-=> TOTAL STUDENT SCORE: 8.44 / 20
+=> TOTAL STUDENT SCORE: 9.44 / 20
 
 
 ================================
@@ -738,20 +717,13 @@ STUDENT: guillaume_martin
   | // CODE EVALUATION:
   | 
   | [+] function genererAcronyme a bien été trouvé dans le code
-Fri, 02 Jun 2017 10:11:58 GMT jailed:sandbox TypeError: Cannot read property 'substring' of undefined
-    at _scope.genererAcronyme (eval at evaluateStudentCode (DYNAMIC PLUGIN:11:4), <anonymous>:2:17)
-    at unit (DYNAMIC PLUGIN:22:48)
-    at evaluateStudentCode (DYNAMIC PLUGIN:33:5)
-    at DYNAMIC PLUGIN:37:3
-    at ContextifyScript.Script.runInContext (vm.js:35:29)
-    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
-    at Object.exports.runInNewContext (vm.js:72:17)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13/node_modules/jailed-node/sandbox/sandbox.js:151:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13/node_modules/jailed-node/sandbox/sandbox.js:165:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13/node_modules/jailed-node/sandbox/sandbox.js:53:7)
-  | => test runner err: TypeError: Cannot read property 'substring' of undefined at _scope.genererAcronyme (eval at evaluateStudentCode (DYNAMIC PLUGIN:11:4), <anonymous>:2:17)
+  | [-] l'appel genererAcronyme(["adrien","joly"]) cause l'erreur: Cannot read property 'substring' of undefined
+  | [-] l'appel genererAcronyme(["paul","edouard","vaillant"]) cause l'erreur: Cannot read property 'substring' of undefined
+  | [-] l'appel genererAcronyme(["eric","maubert"]) cause l'erreur: Cannot read property 'substring' of undefined
   | 
-  | // -> EXERCISE POINTS: 0 / 4
+  | // -> STUDENT SCORE ARRAY: [ 1, 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 1 / 4
   | 
   | ------------- EXERCISE: code6 (variant: 0) -------------
   | 
@@ -822,9 +794,9 @@ Fri, 02 Jun 2017 10:11:58 GMT jailed:sandbox TypeError: Cannot read property 'su
   | 
   | // -> EXERCISE POINTS: 2 / 4
 
-  => code score: 5.111111111111111 / 16 pts
+  => code score: 6.111111111111111 / 16 pts
 
-=> TOTAL STUDENT SCORE: 7.11 / 20
+=> TOTAL STUDENT SCORE: 8.11 / 20
 
 
 ================================
@@ -857,9 +829,9 @@ STUDENT: ilana_bloch
   | // CODE EVALUATION:
   | 
   | [-] la fonction acro() n'est pas définie correctement
-  | [-] l'appel acro(["adrien","joly"]) devrait retourner adrjol
-  | [-] l'appel acro(["paul","edouard","vaillant"]) devrait retourner pauedovai
-  | [-] l'appel acro(["eric","maubert"]) devrait retourner erimau
+  | [-] l'appel acro(["adrien","joly"]) cause l'erreur: studentFct is not a function
+  | [-] l'appel acro(["paul","edouard","vaillant"]) cause l'erreur: studentFct is not a function
+  | [-] l'appel acro(["eric","maubert"]) cause l'erreur: studentFct is not a function
   | 
   | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 0 ]
   | 
@@ -1128,9 +1100,9 @@ STUDENT: jessy_hachet
   | // CODE EVALUATION:
   | 
   | [-] la fonction acronyme() n'est pas définie correctement
-  | [-] l'appel acronyme(["adrien","joly"]) devrait retourner adrjol
-  | [-] l'appel acronyme(["paul","edouard","vaillant"]) devrait retourner pauedovai
-  | [-] l'appel acronyme(["eric","maubert"]) devrait retourner erimau
+  | [-] l'appel acronyme(["adrien","joly"]) cause l'erreur: studentFct is not a function
+  | [-] l'appel acronyme(["paul","edouard","vaillant"]) cause l'erreur: studentFct is not a function
+  | [-] l'appel acronyme(["eric","maubert"]) cause l'erreur: studentFct is not a function
   | 
   | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 0 ]
   | 
@@ -1380,9 +1352,9 @@ STUDENT: lara_kounowski
   | 
   | /!\ erreur: document is not defined
   | [-] la fonction acronyme() n'est pas définie correctement
-  | [-] l'appel acronyme(["adrien","joly"]) devrait retourner adrjol
-  | [-] l'appel acronyme(["paul","edouard","vaillant"]) devrait retourner pauedovai
-  | [-] l'appel acronyme(["eric","maubert"]) devrait retourner erimau
+  | [-] l'appel acronyme(["adrien","joly"]) cause l'erreur: studentFct is not a function
+  | [-] l'appel acronyme(["paul","edouard","vaillant"]) cause l'erreur: studentFct is not a function
+  | [-] l'appel acronyme(["eric","maubert"]) cause l'erreur: studentFct is not a function
   | 
   | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 0 ]
   | 
@@ -1500,9 +1472,9 @@ STUDENT: louis_gosse
   | 
   | /!\ erreur: Unexpected end of input
   | [+] function acro a bien été trouvé dans le code
-  | [-] l'appel acro(["adrien","joly"]) devrait retourner adrjol
-  | [-] l'appel acro(["paul","edouard","vaillant"]) devrait retourner pauedovai
-  | [-] l'appel acro(["eric","maubert"]) devrait retourner erimau
+  | [-] l'appel acro(["adrien","joly"]) cause l'erreur: studentFct is not a function
+  | [-] l'appel acro(["paul","edouard","vaillant"]) cause l'erreur: studentFct is not a function
+  | [-] l'appel acro(["eric","maubert"]) cause l'erreur: studentFct is not a function
   | 
   | // -> STUDENT SCORE ARRAY: [ 1, 0, 0, 0 ]
   | 
@@ -1645,9 +1617,9 @@ STUDENT: madison_hayat
   | 
   | /!\ erreur: Unexpected token {
   | [-] la fonction acronyme() n'est pas définie correctement
-  | [-] l'appel acronyme(["adrien","joly"]) devrait retourner adrjol
-  | [-] l'appel acronyme(["paul","edouard","vaillant"]) devrait retourner pauedovai
-  | [-] l'appel acronyme(["eric","maubert"]) devrait retourner erimau
+  | [-] l'appel acronyme(["adrien","joly"]) cause l'erreur: studentFct is not a function
+  | [-] l'appel acronyme(["paul","edouard","vaillant"]) cause l'erreur: studentFct is not a function
+  | [-] l'appel acronyme(["eric","maubert"]) cause l'erreur: studentFct is not a function
   | 
   | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 0 ]
   | 
@@ -2248,9 +2220,9 @@ STUDENT: theo_geay
   | // CODE EVALUATION:
   | 
   | [-] la fonction genererAcronyme() n'est pas définie correctement
-  | [-] l'appel genererAcronyme(["adrien","joly"]) devrait retourner adrjol
-  | [-] l'appel genererAcronyme(["paul","edouard","vaillant"]) devrait retourner pauedovai
-  | [-] l'appel genererAcronyme(["eric","maubert"]) devrait retourner erimau
+  | [-] l'appel genererAcronyme(["adrien","joly"]) cause l'erreur: studentFct is not a function
+  | [-] l'appel genererAcronyme(["paul","edouard","vaillant"]) cause l'erreur: studentFct is not a function
+  | [-] l'appel genererAcronyme(["eric","maubert"]) cause l'erreur: studentFct is not a function
   | 
   | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 0 ]
   | 
@@ -2392,9 +2364,9 @@ STUDENT: thibault_chambrillon
   | 
   | /!\ erreur: Unexpected token <
   | [+] function genererAcronyme a bien été trouvé dans le code
-  | [-] l'appel genererAcronyme(["adrien","joly"]) devrait retourner adrjol
-  | [-] l'appel genererAcronyme(["paul","edouard","vaillant"]) devrait retourner pauedovai
-  | [-] l'appel genererAcronyme(["eric","maubert"]) devrait retourner erimau
+  | [-] l'appel genererAcronyme(["adrien","joly"]) cause l'erreur: studentFct is not a function
+  | [-] l'appel genererAcronyme(["paul","edouard","vaillant"]) cause l'erreur: studentFct is not a function
+  | [-] l'appel genererAcronyme(["eric","maubert"]) cause l'erreur: studentFct is not a function
   | 
   | // -> STUDENT SCORE ARRAY: [ 1, 0, 0, 0 ]
   | 
@@ -2536,9 +2508,9 @@ STUDENT: timothee_ong
   | 
   | /!\ erreur: Illegal return statement
   | [+] function genererAcronyme a bien été trouvé dans le code
-  | [-] l'appel genererAcronyme(["adrien","joly"]) devrait retourner adrjol
-  | [-] l'appel genererAcronyme(["paul","edouard","vaillant"]) devrait retourner pauedovai
-  | [-] l'appel genererAcronyme(["eric","maubert"]) devrait retourner erimau
+  | [-] l'appel genererAcronyme(["adrien","joly"]) cause l'erreur: studentFct is not a function
+  | [-] l'appel genererAcronyme(["paul","edouard","vaillant"]) cause l'erreur: studentFct is not a function
+  | [-] l'appel genererAcronyme(["eric","maubert"]) cause l'erreur: studentFct is not a function
   | 
   | // -> STUDENT SCORE ARRAY: [ 1, 0, 0, 0 ]
   | 
@@ -2678,20 +2650,13 @@ STUDENT: victor_legac
   | // CODE EVALUATION:
   | 
   | [+] function acro a bien été trouvé dans le code
-Fri, 02 Jun 2017 10:12:05 GMT jailed:sandbox ReferenceError: nom is not defined
-    at _scope.acro (eval at evaluateStudentCode (DYNAMIC PLUGIN:12:4), <anonymous>:2:14)
-    at unit (DYNAMIC PLUGIN:23:48)
-    at evaluateStudentCode (DYNAMIC PLUGIN:35:5)
-    at DYNAMIC PLUGIN:39:3
-    at ContextifyScript.Script.runInContext (vm.js:35:29)
-    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
-    at Object.exports.runInNewContext (vm.js:72:17)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13/node_modules/jailed-node/sandbox/sandbox.js:151:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13/node_modules/jailed-node/sandbox/sandbox.js:165:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13/node_modules/jailed-node/sandbox/sandbox.js:53:7)
-  | => test runner err: ReferenceError: nom is not defined at _scope.acro (eval at evaluateStudentCode (DYNAMIC PLUGIN:12:4), <anonymous>:2:14)
+  | [-] l'appel acro(["adrien","joly"]) cause l'erreur: nom is not defined
+  | [-] l'appel acro(["paul","edouard","vaillant"]) cause l'erreur: nom is not defined
+  | [-] l'appel acro(["eric","maubert"]) cause l'erreur: nom is not defined
   | 
-  | // -> EXERCISE POINTS: 0 / 4
+  | // -> STUDENT SCORE ARRAY: [ 1, 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 1 / 4
   | 
   | ------------- EXERCISE: code6 (variant: 2) -------------
   | 
@@ -2798,9 +2763,9 @@ Fri, 02 Jun 2017 10:12:05 GMT jailed:sandbox ReferenceError: nom is not defined
   | 
   | // -> EXERCISE POINTS: 2 / 4
 
-  => code score: 4.666666666666666 / 16 pts
+  => code score: 5.666666666666666 / 16 pts
 
-=> TOTAL STUDENT SCORE: 7.66 / 20
+=> TOTAL STUDENT SCORE: 8.66 / 20
 
 
 ================================
@@ -2830,20 +2795,13 @@ STUDENT: victoria_antalis
   | // CODE EVALUATION:
   | 
   | [+] function acronyme a bien été trouvé dans le code
-Fri, 02 Jun 2017 10:12:05 GMT jailed:sandbox ReferenceError: acronyme is not defined
-    at _scope.acronyme (eval at evaluateStudentCode (DYNAMIC PLUGIN:12:3), <anonymous>:2:2)
-    at unit (DYNAMIC PLUGIN:23:48)
-    at evaluateStudentCode (DYNAMIC PLUGIN:35:5)
-    at DYNAMIC PLUGIN:39:3
-    at ContextifyScript.Script.runInContext (vm.js:35:29)
-    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
-    at Object.exports.runInNewContext (vm.js:72:17)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13/node_modules/jailed-node/sandbox/sandbox.js:151:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13/node_modules/jailed-node/sandbox/sandbox.js:165:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13/node_modules/jailed-node/sandbox/sandbox.js:53:7)
-  | => test runner err: ReferenceError: acronyme is not defined at _scope.acronyme (eval at evaluateStudentCode (DYNAMIC PLUGIN:12:3), <anonymous>:2:2)
+  | [-] l'appel acronyme(["adrien","joly"]) cause l'erreur: acronyme is not defined
+  | [-] l'appel acronyme(["paul","edouard","vaillant"]) cause l'erreur: acronyme is not defined
+  | [-] l'appel acronyme(["eric","maubert"]) cause l'erreur: acronyme is not defined
   | 
-  | // -> EXERCISE POINTS: 0 / 4
+  | // -> STUDENT SCORE ARRAY: [ 1, 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 1 / 4
   | 
   | ------------- EXERCISE: code6 (variant: 0) -------------
   | 
@@ -2929,6 +2887,6 @@ Fri, 02 Jun 2017 10:12:05 GMT jailed:sandbox ReferenceError: acronyme is not def
   | 
   | // -> EXERCISE POINTS: 2 / 4
 
-  => code score: 4.222222222222222 / 16 pts
+  => code score: 5.222222222222222 / 16 pts
 
-=> TOTAL STUDENT SCORE: 6.22 / 20
+=> TOTAL STUDENT SCORE: 7.22 / 20

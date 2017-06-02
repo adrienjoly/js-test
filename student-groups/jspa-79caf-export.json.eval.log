@@ -165,20 +165,13 @@ STUDENT: benoit_boureau
   | // CODE EVALUATION:
   | 
   | [+] function genererAcronyme a bien été trouvé dans le code
-Fri, 02 Jun 2017 10:11:41 GMT jailed:sandbox TypeError: nom.substr is not a function
-    at _scope.genererAcronyme (eval at evaluateStudentCode (DYNAMIC PLUGIN:13:4), <anonymous>:5:19)
-    at unit (DYNAMIC PLUGIN:24:48)
-    at evaluateStudentCode (DYNAMIC PLUGIN:37:5)
-    at DYNAMIC PLUGIN:41:3
-    at ContextifyScript.Script.runInContext (vm.js:35:29)
-    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
-    at Object.exports.runInNewContext (vm.js:72:17)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13/node_modules/jailed-node/sandbox/sandbox.js:151:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13/node_modules/jailed-node/sandbox/sandbox.js:165:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13/node_modules/jailed-node/sandbox/sandbox.js:53:7)
-  | => test runner err: TypeError: nom.substr is not a function at _scope.genererAcronyme (eval at evaluateStudentCode (DYNAMIC PLUGIN:13:4), <anonymous>:5:19)
+  | [-] l'appel genererAcronyme(["adrien","joly"]) cause l'erreur: nom.substr is not a function
+  | [-] l'appel genererAcronyme(["paul","edouard","vaillant"]) cause l'erreur: nom.substr is not a function
+  | [-] l'appel genererAcronyme(["eric","maubert"]) cause l'erreur: nom.substr is not a function
   | 
-  | // -> EXERCISE POINTS: 0 / 4
+  | // -> STUDENT SCORE ARRAY: [ 1, 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 1 / 4
   | 
   | ------------- EXERCISE: code6 (variant: 3) -------------
   | 
@@ -244,9 +237,9 @@ Fri, 02 Jun 2017 10:11:41 GMT jailed:sandbox TypeError: nom.substr is not a func
   | 
   | // -> EXERCISE POINTS: 2 / 4
 
-  => code score: 2 / 16 pts
+  => code score: 3 / 16 pts
 
-=> TOTAL STUDENT SCORE: 4 / 20
+=> TOTAL STUDENT SCORE: 5 / 20
 
 
 ================================
@@ -280,9 +273,9 @@ STUDENT: charles_rodriguez
   | 
   | /!\ erreur: acro is not defined
   | [+] function acro a bien été trouvé dans le code
-  | [-] l'appel acro(["adrien","joly"]) devrait retourner adrjol
-  | [-] l'appel acro(["paul","edouard","vaillant"]) devrait retourner pauedovai
-  | [-] l'appel acro(["eric","maubert"]) devrait retourner erimau
+  | [-] l'appel acro(["adrien","joly"]) cause l'erreur: studentFct is not a function
+  | [-] l'appel acro(["paul","edouard","vaillant"]) cause l'erreur: studentFct is not a function
+  | [-] l'appel acro(["eric","maubert"]) cause l'erreur: studentFct is not a function
   | 
   | // -> STUDENT SCORE ARRAY: [ 1, 0, 0, 0 ]
   | 
@@ -342,9 +335,9 @@ STUDENT: erwan_allain
   | 
   | /!\ erreur: Unexpected token (
   | [-] la fonction acro() n'est pas définie correctement
-  | [-] l'appel acro(["adrien","joly"]) devrait retourner adrjol
-  | [-] l'appel acro(["paul","edouard","vaillant"]) devrait retourner pauedovai
-  | [-] l'appel acro(["eric","maubert"]) devrait retourner erimau
+  | [-] l'appel acro(["adrien","joly"]) cause l'erreur: studentFct is not a function
+  | [-] l'appel acro(["paul","edouard","vaillant"]) cause l'erreur: studentFct is not a function
+  | [-] l'appel acro(["eric","maubert"]) cause l'erreur: studentFct is not a function
   | 
   | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 0 ]
   | 
@@ -443,9 +436,9 @@ STUDENT: fares_kessi
   | 
   | /!\ erreur: Unexpected token ===
   | [-] la fonction acro() n'est pas définie correctement
-  | [-] l'appel acro(["adrien","joly"]) devrait retourner adrjol
-  | [-] l'appel acro(["paul","edouard","vaillant"]) devrait retourner pauedovai
-  | [-] l'appel acro(["eric","maubert"]) devrait retourner erimau
+  | [-] l'appel acro(["adrien","joly"]) cause l'erreur: studentFct is not a function
+  | [-] l'appel acro(["paul","edouard","vaillant"]) cause l'erreur: studentFct is not a function
+  | [-] l'appel acro(["eric","maubert"]) cause l'erreur: studentFct is not a function
   | 
   | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 0 ]
   | 
@@ -688,20 +681,13 @@ STUDENT: gaspard_legrain
   | // CODE EVALUATION:
   | 
   | [+] function acro a bien été trouvé dans le code
-Fri, 02 Jun 2017 10:11:42 GMT jailed:sandbox ReferenceError: i is not defined
-    at _scope.acro (eval at evaluateStudentCode (DYNAMIC PLUGIN:14:4), <anonymous>:3:8)
-    at unit (DYNAMIC PLUGIN:25:48)
-    at evaluateStudentCode (DYNAMIC PLUGIN:39:5)
-    at DYNAMIC PLUGIN:43:3
-    at ContextifyScript.Script.runInContext (vm.js:35:29)
-    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
-    at Object.exports.runInNewContext (vm.js:72:17)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13/node_modules/jailed-node/sandbox/sandbox.js:151:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13/node_modules/jailed-node/sandbox/sandbox.js:165:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13/node_modules/jailed-node/sandbox/sandbox.js:53:7)
-  | => test runner err: ReferenceError: i is not defined at _scope.acro (eval at evaluateStudentCode (DYNAMIC PLUGIN:14:4), <anonymous>:3:8)
+  | [-] l'appel acro(["adrien","joly"]) cause l'erreur: i is not defined
+  | [-] l'appel acro(["paul","edouard","vaillant"]) cause l'erreur: i is not defined
+  | [-] l'appel acro(["eric","maubert"]) cause l'erreur: i is not defined
   | 
-  | // -> EXERCISE POINTS: 0 / 4
+  | // -> STUDENT SCORE ARRAY: [ 1, 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 1 / 4
   | 
   | ------------- EXERCISE: code6 (variant: 1) -------------
   | 
@@ -777,9 +763,9 @@ Fri, 02 Jun 2017 10:11:42 GMT jailed:sandbox ReferenceError: i is not defined
   | 
   | // -> EXERCISE POINTS: 2 / 4
 
-  => code score: 5.555555555555555 / 16 pts
+  => code score: 6.555555555555555 / 16 pts
 
-=> TOTAL STUDENT SCORE: 9.55 / 20
+=> TOTAL STUDENT SCORE: 10.55 / 20
 
 
 ================================
@@ -811,20 +797,13 @@ STUDENT: jacques_hovine
   | // CODE EVALUATION:
   | 
   | [+] function acronyme a bien été trouvé dans le code
-Fri, 02 Jun 2017 10:11:43 GMT jailed:sandbox ReferenceError: i is not defined
-    at _scope.acronyme (eval at evaluateStudentCode (DYNAMIC PLUGIN:14:4), <anonymous>:3:8)
-    at unit (DYNAMIC PLUGIN:25:48)
-    at evaluateStudentCode (DYNAMIC PLUGIN:39:5)
-    at DYNAMIC PLUGIN:43:3
-    at ContextifyScript.Script.runInContext (vm.js:35:29)
-    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
-    at Object.exports.runInNewContext (vm.js:72:17)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13/node_modules/jailed-node/sandbox/sandbox.js:151:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13/node_modules/jailed-node/sandbox/sandbox.js:165:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13/node_modules/jailed-node/sandbox/sandbox.js:53:7)
-  | => test runner err: ReferenceError: i is not defined at _scope.acronyme (eval at evaluateStudentCode (DYNAMIC PLUGIN:14:4), <anonymous>:3:8)
+  | [-] l'appel acronyme(["adrien","joly"]) cause l'erreur: i is not defined
+  | [-] l'appel acronyme(["paul","edouard","vaillant"]) cause l'erreur: i is not defined
+  | [-] l'appel acronyme(["eric","maubert"]) cause l'erreur: i is not defined
   | 
-  | // -> EXERCISE POINTS: 0 / 4
+  | // -> STUDENT SCORE ARRAY: [ 1, 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 1 / 4
   | 
   | ------------- EXERCISE: code6 (variant: 3) -------------
   | 
@@ -924,9 +903,9 @@ Fri, 02 Jun 2017 10:11:43 GMT jailed:sandbox ReferenceError: i is not defined
   | 
   | // -> EXERCISE POINTS: 4 / 4
 
-  => code score: 12 / 16 pts
+  => code score: 13 / 16 pts
 
-=> TOTAL STUDENT SCORE: 16 / 20
+=> TOTAL STUDENT SCORE: 17 / 20
 
 
 ================================
@@ -956,9 +935,9 @@ STUDENT: johanne_bordeaux
   | // CODE EVALUATION:
   | 
   | [-] la fonction acro() n'est pas définie correctement
-  | [-] l'appel acro(["adrien","joly"]) devrait retourner adrjol
-  | [-] l'appel acro(["paul","edouard","vaillant"]) devrait retourner pauedovai
-  | [-] l'appel acro(["eric","maubert"]) devrait retourner erimau
+  | [-] l'appel acro(["adrien","joly"]) cause l'erreur: studentFct is not a function
+  | [-] l'appel acro(["paul","edouard","vaillant"]) cause l'erreur: studentFct is not a function
+  | [-] l'appel acro(["eric","maubert"]) cause l'erreur: studentFct is not a function
   | 
   | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 0 ]
   | 
@@ -1062,9 +1041,9 @@ STUDENT: jonathan_leder
   | 
   | /!\ erreur: Unexpected token {
   | [-] la fonction acro() n'est pas définie correctement
-  | [-] l'appel acro(["adrien","joly"]) devrait retourner adrjol
-  | [-] l'appel acro(["paul","edouard","vaillant"]) devrait retourner pauedovai
-  | [-] l'appel acro(["eric","maubert"]) devrait retourner erimau
+  | [-] l'appel acro(["adrien","joly"]) cause l'erreur: studentFct is not a function
+  | [-] l'appel acro(["paul","edouard","vaillant"]) cause l'erreur: studentFct is not a function
+  | [-] l'appel acro(["eric","maubert"]) cause l'erreur: studentFct is not a function
   | 
   | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 0 ]
   | 
@@ -1223,9 +1202,9 @@ STUDENT: leo_martin
   | 
   | /!\ erreur: Unexpected string
   | [+] function acronyme a bien été trouvé dans le code
-  | [-] l'appel acronyme(["adrien","joly"]) devrait retourner adrjol
-  | [-] l'appel acronyme(["paul","edouard","vaillant"]) devrait retourner pauedovai
-  | [-] l'appel acronyme(["eric","maubert"]) devrait retourner erimau
+  | [-] l'appel acronyme(["adrien","joly"]) cause l'erreur: studentFct is not a function
+  | [-] l'appel acronyme(["paul","edouard","vaillant"]) cause l'erreur: studentFct is not a function
+  | [-] l'appel acronyme(["eric","maubert"]) cause l'erreur: studentFct is not a function
   | 
   | // -> STUDENT SCORE ARRAY: [ 1, 0, 0, 0 ]
   | 
@@ -1680,9 +1659,9 @@ STUDENT: maelle_bellazar
   | 
   | /!\ erreur: Unexpected token ===
   | [-] la fonction acro() n'est pas définie correctement
-  | [-] l'appel acro(["adrien","joly"]) devrait retourner adrjol
-  | [-] l'appel acro(["paul","edouard","vaillant"]) devrait retourner pauedovai
-  | [-] l'appel acro(["eric","maubert"]) devrait retourner erimau
+  | [-] l'appel acro(["adrien","joly"]) cause l'erreur: studentFct is not a function
+  | [-] l'appel acro(["paul","edouard","vaillant"]) cause l'erreur: studentFct is not a function
+  | [-] l'appel acro(["eric","maubert"]) cause l'erreur: studentFct is not a function
   | 
   | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 0 ]
   | 
@@ -1809,9 +1788,9 @@ STUDENT: noelie_roux
   | 
   | /!\ erreur: Unexpected token {
   | [-] la fonction genererAcronyme() n'est pas définie correctement
-  | [-] l'appel genererAcronyme(["adrien","joly"]) devrait retourner adrjol
-  | [-] l'appel genererAcronyme(["paul","edouard","vaillant"]) devrait retourner pauedovai
-  | [-] l'appel genererAcronyme(["eric","maubert"]) devrait retourner erimau
+  | [-] l'appel genererAcronyme(["adrien","joly"]) cause l'erreur: studentFct is not a function
+  | [-] l'appel genererAcronyme(["paul","edouard","vaillant"]) cause l'erreur: studentFct is not a function
+  | [-] l'appel genererAcronyme(["eric","maubert"]) cause l'erreur: studentFct is not a function
   | 
   | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 0 ]
   | 
@@ -1968,9 +1947,9 @@ STUDENT: pauline_feraut
   | 
   | /!\ erreur: Unexpected string
   | [+] function acro a bien été trouvé dans le code
-  | [-] l'appel acro(["adrien","joly"]) devrait retourner adrjol
-  | [-] l'appel acro(["paul","edouard","vaillant"]) devrait retourner pauedovai
-  | [-] l'appel acro(["eric","maubert"]) devrait retourner erimau
+  | [-] l'appel acro(["adrien","joly"]) cause l'erreur: studentFct is not a function
+  | [-] l'appel acro(["paul","edouard","vaillant"]) cause l'erreur: studentFct is not a function
+  | [-] l'appel acro(["eric","maubert"]) cause l'erreur: studentFct is not a function
   | 
   | // -> STUDENT SCORE ARRAY: [ 1, 0, 0, 0 ]
   | 
@@ -2220,20 +2199,13 @@ STUDENT: tristan_machin
   | // CODE EVALUATION:
   | 
   | [+] function acronyme a bien été trouvé dans le code
-Fri, 02 Jun 2017 10:11:47 GMT jailed:sandbox ReferenceError: str is not defined
-    at _scope.acronyme (eval at evaluateStudentCode (DYNAMIC PLUGIN:10:4), <anonymous>:2:3)
-    at unit (DYNAMIC PLUGIN:21:48)
-    at evaluateStudentCode (DYNAMIC PLUGIN:31:5)
-    at DYNAMIC PLUGIN:35:3
-    at ContextifyScript.Script.runInContext (vm.js:35:29)
-    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
-    at Object.exports.runInNewContext (vm.js:72:17)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13/node_modules/jailed-node/sandbox/sandbox.js:151:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13/node_modules/jailed-node/sandbox/sandbox.js:165:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13/node_modules/jailed-node/sandbox/sandbox.js:53:7)
-  | => test runner err: ReferenceError: str is not defined at _scope.acronyme (eval at evaluateStudentCode (DYNAMIC PLUGIN:10:4), <anonymous>:2:3)
+  | [-] l'appel acronyme(["adrien","joly"]) cause l'erreur: str is not defined
+  | [-] l'appel acronyme(["paul","edouard","vaillant"]) cause l'erreur: str is not defined
+  | [-] l'appel acronyme(["eric","maubert"]) cause l'erreur: str is not defined
   | 
-  | // -> EXERCISE POINTS: 0 / 4
+  | // -> STUDENT SCORE ARRAY: [ 1, 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 1 / 4
   | 
   | ------------- EXERCISE: code6 (variant: 2) -------------
   | 
@@ -2341,9 +2313,9 @@ Fri, 02 Jun 2017 10:11:47 GMT jailed:sandbox ReferenceError: str is not defined
   | 
   | // -> EXERCISE POINTS: 2 / 4
 
-  => code score: 2.4444444444444446 / 16 pts
+  => code score: 3.4444444444444446 / 16 pts
 
-=> TOTAL STUDENT SCORE: 6.44 / 20
+=> TOTAL STUDENT SCORE: 7.44 / 20
 
 
 ================================

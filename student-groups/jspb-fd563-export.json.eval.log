@@ -38,20 +38,13 @@ STUDENT: alexandre_blanc
   | // CODE EVALUATION:
   | 
   | [+] function acro a bien été trouvé dans le code
-Fri, 02 Jun 2017 10:11:49 GMT jailed:sandbox ReferenceError: alert is not defined
-    at _scope.acro (eval at evaluateStudentCode (DYNAMIC PLUGIN:20:4), <anonymous>:12:3)
-    at unit (DYNAMIC PLUGIN:31:48)
-    at evaluateStudentCode (DYNAMIC PLUGIN:51:5)
-    at DYNAMIC PLUGIN:55:3
-    at ContextifyScript.Script.runInContext (vm.js:35:29)
-    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
-    at Object.exports.runInNewContext (vm.js:72:17)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13/node_modules/jailed-node/sandbox/sandbox.js:151:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13/node_modules/jailed-node/sandbox/sandbox.js:165:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13/node_modules/jailed-node/sandbox/sandbox.js:53:7)
-  | => test runner err: ReferenceError: alert is not defined at _scope.acro (eval at evaluateStudentCode (DYNAMIC PLUGIN:20:4), <anonymous>:12:3)
+  | [-] l'appel acro(["adr","jol"]) cause l'erreur: alert is not defined
+  | [-] l'appel acro(["pau","edo","vai"]) cause l'erreur: alert is not defined
+  | [-] l'appel acro(["eri","mau"]) cause l'erreur: alert is not defined
   | 
-  | // -> EXERCISE POINTS: 0 / 4
+  | // -> STUDENT SCORE ARRAY: [ 1, 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 1 / 4
   | 
   | ------------- EXERCISE: code6 (variant: 3) -------------
   | 
@@ -123,9 +116,9 @@ Fri, 02 Jun 2017 10:11:49 GMT jailed:sandbox ReferenceError: alert is not define
   | 
   | // -> EXERCISE POINTS: 2 / 4
 
-  => code score: 5.555555555555555 / 16 pts
+  => code score: 6.555555555555555 / 16 pts
 
-=> TOTAL STUDENT SCORE: 8.55 / 20
+=> TOTAL STUDENT SCORE: 9.55 / 20
 
 
 ================================
@@ -153,9 +146,9 @@ STUDENT: david_regnault
   | // CODE EVALUATION:
   | 
   | [-] la fonction genererAcronyme() n'est pas définie correctement
-  | [-] l'appel genererAcronyme(["adrien","joly"]) devrait retourner adrjol
-  | [-] l'appel genererAcronyme(["paul","edouard","vaillant"]) devrait retourner pauedovai
-  | [-] l'appel genererAcronyme(["eric","maubert"]) devrait retourner erimau
+  | [-] l'appel genererAcronyme(["adrien","joly"]) cause l'erreur: studentFct is not a function
+  | [-] l'appel genererAcronyme(["paul","edouard","vaillant"]) cause l'erreur: studentFct is not a function
+  | [-] l'appel genererAcronyme(["eric","maubert"]) cause l'erreur: studentFct is not a function
   | 
   | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 0 ]
   | 
@@ -235,20 +228,13 @@ STUDENT: elsa_haddad
   | // CODE EVALUATION:
   | 
   | [+] function acronyme a bien été trouvé dans le code
-Fri, 02 Jun 2017 10:11:49 GMT jailed:sandbox TypeError: Cannot read property 'indexOf' of undefined
-    at _scope.acronyme (eval at evaluateStudentCode (DYNAMIC PLUGIN:12:4), <anonymous>:2:26)
-    at unit (DYNAMIC PLUGIN:23:48)
-    at evaluateStudentCode (DYNAMIC PLUGIN:35:5)
-    at DYNAMIC PLUGIN:39:3
-    at ContextifyScript.Script.runInContext (vm.js:35:29)
-    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
-    at Object.exports.runInNewContext (vm.js:72:17)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13/node_modules/jailed-node/sandbox/sandbox.js:151:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13/node_modules/jailed-node/sandbox/sandbox.js:165:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13/node_modules/jailed-node/sandbox/sandbox.js:53:7)
-  | => test runner err: TypeError: Cannot read property 'indexOf' of undefined at _scope.acronyme (eval at evaluateStudentCode (DYNAMIC PLUGIN:12:4), <anonymous>:2:26)
+  | [-] l'appel acronyme(["adrien","joly"]) cause l'erreur: Cannot read property 'indexOf' of undefined
+  | [-] l'appel acronyme(["paul","edouard","vaillant"]) cause l'erreur: Cannot read property 'indexOf' of undefined
+  | [-] l'appel acronyme(["eric","maubert"]) cause l'erreur: Cannot read property 'indexOf' of undefined
   | 
-  | // -> EXERCISE POINTS: 0 / 4
+  | // -> STUDENT SCORE ARRAY: [ 1, 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 1 / 4
   | 
   | ------------- EXERCISE: code6 (variant: 3) -------------
   | 
@@ -338,9 +324,9 @@ Fri, 02 Jun 2017 10:11:49 GMT jailed:sandbox TypeError: Cannot read property 'in
   | 
   | // -> EXERCISE POINTS: 2 / 4
 
-  => code score: 5.777777777777778 / 16 pts
+  => code score: 6.777777777777778 / 16 pts
 
-=> TOTAL STUDENT SCORE: 8.77 / 20
+=> TOTAL STUDENT SCORE: 9.77 / 20
 
 
 ================================
@@ -367,9 +353,9 @@ STUDENT: guillaume_ceyssac
   | // CODE EVALUATION:
   | 
   | [-] la fonction acro() n'est pas définie correctement
-  | [-] l'appel acro(["adrien","joly"]) devrait retourner adrjol
-  | [-] l'appel acro(["paul","edouard","vaillant"]) devrait retourner pauedovai
-  | [-] l'appel acro(["eric","maubert"]) devrait retourner erimau
+  | [-] l'appel acro(["adrien","joly"]) cause l'erreur: studentFct is not a function
+  | [-] l'appel acro(["paul","edouard","vaillant"]) cause l'erreur: studentFct is not a function
+  | [-] l'appel acro(["eric","maubert"]) cause l'erreur: studentFct is not a function
   | 
   | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 0 ]
   | 
@@ -511,9 +497,9 @@ STUDENT: guillaume_desaintsernin
   | 
   | /!\ erreur: Unexpected string
   | [+] function acronyme a bien été trouvé dans le code
-  | [-] l'appel acronyme(["adrien","joly"]) devrait retourner adrjol
-  | [-] l'appel acronyme(["paul","edouard","vaillant"]) devrait retourner pauedovai
-  | [-] l'appel acronyme(["eric","maubert"]) devrait retourner erimau
+  | [-] l'appel acronyme(["adrien","joly"]) cause l'erreur: studentFct is not a function
+  | [-] l'appel acronyme(["paul","edouard","vaillant"]) cause l'erreur: studentFct is not a function
+  | [-] l'appel acronyme(["eric","maubert"]) cause l'erreur: studentFct is not a function
   | 
   | // -> STUDENT SCORE ARRAY: [ 1, 0, 0, 0 ]
   | 
@@ -889,7 +875,7 @@ STUDENT: lucas_lacheny
   | 
   | // CODE EVALUATION:
   | 
-Fri, 02 Jun 2017 10:11:51 GMT jailed:sandbox DYNAMIC PLUGIN:64
+Fri, 02 Jun 2017 10:19:55 GMT jailed:sandbox DYNAMIC PLUGIN:64
     eval(`var secs = 100;
          ^^^^^^^^^^^^^^^^
 SyntaxError: missing ) after argument list
@@ -992,20 +978,13 @@ STUDENT: marc_antoine_poisier
   | // CODE EVALUATION:
   | 
   | [+] function acronyme a bien été trouvé dans le code
-Fri, 02 Jun 2017 10:11:52 GMT jailed:sandbox ReferenceError: substr is not defined
-    at _scope.acronyme (eval at evaluateStudentCode (DYNAMIC PLUGIN:10:4), <anonymous>:2:13)
-    at unit (DYNAMIC PLUGIN:21:48)
-    at evaluateStudentCode (DYNAMIC PLUGIN:31:5)
-    at DYNAMIC PLUGIN:35:3
-    at ContextifyScript.Script.runInContext (vm.js:35:29)
-    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
-    at Object.exports.runInNewContext (vm.js:72:17)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13/node_modules/jailed-node/sandbox/sandbox.js:151:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13/node_modules/jailed-node/sandbox/sandbox.js:165:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13/node_modules/jailed-node/sandbox/sandbox.js:53:7)
-  | => test runner err: ReferenceError: substr is not defined at _scope.acronyme (eval at evaluateStudentCode (DYNAMIC PLUGIN:10:4), <anonymous>:2:13)
+  | [-] l'appel acronyme(["adrien","joly"]) cause l'erreur: substr is not defined
+  | [-] l'appel acronyme(["paul","edouard","vaillant"]) cause l'erreur: substr is not defined
+  | [-] l'appel acronyme(["eric","maubert"]) cause l'erreur: substr is not defined
   | 
-  | // -> EXERCISE POINTS: 0 / 4
+  | // -> STUDENT SCORE ARRAY: [ 1, 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 1 / 4
   | 
   | ------------- EXERCISE: code6 (variant: 2) -------------
   | 
@@ -1089,9 +1068,9 @@ Fri, 02 Jun 2017 10:11:52 GMT jailed:sandbox ReferenceError: substr is not defin
   | 
   | // -> EXERCISE POINTS: 2.5 / 4
 
-  => code score: 5.166666666666666 / 16 pts
+  => code score: 6.166666666666666 / 16 pts
 
-=> TOTAL STUDENT SCORE: 9.16 / 20
+=> TOTAL STUDENT SCORE: 10.16 / 20
 
 
 ================================
@@ -1419,20 +1398,13 @@ STUDENT: paul_esmenard
   | 
   | /!\ erreur: genererAcronyme is not defined
   | [+] function genererAcronyme a bien été trouvé dans le code
-Fri, 02 Jun 2017 10:11:53 GMT jailed:sandbox ReferenceError: str is not defined
-    at _scope.genererAcronyme (eval at evaluateStudentCode (DYNAMIC PLUGIN:12:21), <anonymous>:3:3)
-    at unit (DYNAMIC PLUGIN:23:48)
-    at evaluateStudentCode (DYNAMIC PLUGIN:35:5)
-    at DYNAMIC PLUGIN:39:3
-    at ContextifyScript.Script.runInContext (vm.js:35:29)
-    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
-    at Object.exports.runInNewContext (vm.js:72:17)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13/node_modules/jailed-node/sandbox/sandbox.js:151:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13/node_modules/jailed-node/sandbox/sandbox.js:165:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13/node_modules/jailed-node/sandbox/sandbox.js:53:7)
-  | => test runner err: ReferenceError: str is not defined at _scope.genererAcronyme (eval at evaluateStudentCode (DYNAMIC PLUGIN:12:21), <anonymous>:3:3)
+  | [-] l'appel genererAcronyme(["adrien","joly"]) cause l'erreur: str is not defined
+  | [-] l'appel genererAcronyme(["paul","edouard","vaillant"]) cause l'erreur: str is not defined
+  | [-] l'appel genererAcronyme(["eric","maubert"]) cause l'erreur: str is not defined
   | 
-  | // -> EXERCISE POINTS: 0 / 4
+  | // -> STUDENT SCORE ARRAY: [ 1, 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 1 / 4
   | 
   | ------------- EXERCISE: code6 (variant: 3) -------------
   | 
@@ -1520,9 +1492,9 @@ Fri, 02 Jun 2017 10:11:53 GMT jailed:sandbox ReferenceError: str is not defined
   | 
   | // -> EXERCISE POINTS: 2 / 4
 
-  => code score: 4.222222222222222 / 16 pts
+  => code score: 5.222222222222222 / 16 pts
 
-=> TOTAL STUDENT SCORE: 8.22 / 20
+=> TOTAL STUDENT SCORE: 9.22 / 20
 
 
 ================================
@@ -1833,9 +1805,9 @@ STUDENT: thomas_bonnet
   | 
   | /!\ erreur: Unexpected token =
   | [-] la fonction acro() n'est pas définie correctement
-  | [-] l'appel acro(["adrien","joly"]) devrait retourner adrjol
-  | [-] l'appel acro(["paul","edouard","vaillant"]) devrait retourner pauedovai
-  | [-] l'appel acro(["eric","maubert"]) devrait retourner erimau
+  | [-] l'appel acro(["adrien","joly"]) cause l'erreur: studentFct is not a function
+  | [-] l'appel acro(["paul","edouard","vaillant"]) cause l'erreur: studentFct is not a function
+  | [-] l'appel acro(["eric","maubert"]) cause l'erreur: studentFct is not a function
   | 
   | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 0 ]
   | 
