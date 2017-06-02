@@ -273,9 +273,9 @@ STUDENT: charles_rodriguez
   | 
   | /!\ erreur: acro is not defined
   | [+] function acro a bien été trouvé dans le code
-  | [-] l'appel acro(["adrien","joly"]) cause l'erreur: studentFct is not a function
-  | [-] l'appel acro(["paul","edouard","vaillant"]) cause l'erreur: studentFct is not a function
-  | [-] l'appel acro(["eric","maubert"]) cause l'erreur: studentFct is not a function
+  | [-] acro n'est pas une fonction valide
+  | [-] acro n'est pas une fonction valide
+  | [-] acro n'est pas une fonction valide
   | 
   | // -> STUDENT SCORE ARRAY: [ 1, 0, 0, 0 ]
   | 
@@ -335,9 +335,9 @@ STUDENT: erwan_allain
   | 
   | /!\ erreur: Unexpected token (
   | [-] la fonction acro() n'est pas définie correctement
-  | [-] l'appel acro(["adrien","joly"]) cause l'erreur: studentFct is not a function
-  | [-] l'appel acro(["paul","edouard","vaillant"]) cause l'erreur: studentFct is not a function
-  | [-] l'appel acro(["eric","maubert"]) cause l'erreur: studentFct is not a function
+  | [-] acro n'est pas une fonction valide
+  | [-] acro n'est pas une fonction valide
+  | [-] acro n'est pas une fonction valide
   | 
   | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 0 ]
   | 
@@ -436,9 +436,9 @@ STUDENT: fares_kessi
   | 
   | /!\ erreur: Unexpected token ===
   | [-] la fonction acro() n'est pas définie correctement
-  | [-] l'appel acro(["adrien","joly"]) cause l'erreur: studentFct is not a function
-  | [-] l'appel acro(["paul","edouard","vaillant"]) cause l'erreur: studentFct is not a function
-  | [-] l'appel acro(["eric","maubert"]) cause l'erreur: studentFct is not a function
+  | [-] acro n'est pas une fonction valide
+  | [-] acro n'est pas une fonction valide
+  | [-] acro n'est pas une fonction valide
   | 
   | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 0 ]
   | 
@@ -935,9 +935,9 @@ STUDENT: johanne_bordeaux
   | // CODE EVALUATION:
   | 
   | [-] la fonction acro() n'est pas définie correctement
-  | [-] l'appel acro(["adrien","joly"]) cause l'erreur: studentFct is not a function
-  | [-] l'appel acro(["paul","edouard","vaillant"]) cause l'erreur: studentFct is not a function
-  | [-] l'appel acro(["eric","maubert"]) cause l'erreur: studentFct is not a function
+  | [-] acro n'est pas une fonction valide
+  | [-] acro n'est pas une fonction valide
+  | [-] acro n'est pas une fonction valide
   | 
   | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 0 ]
   | 
@@ -1041,9 +1041,9 @@ STUDENT: jonathan_leder
   | 
   | /!\ erreur: Unexpected token {
   | [-] la fonction acro() n'est pas définie correctement
-  | [-] l'appel acro(["adrien","joly"]) cause l'erreur: studentFct is not a function
-  | [-] l'appel acro(["paul","edouard","vaillant"]) cause l'erreur: studentFct is not a function
-  | [-] l'appel acro(["eric","maubert"]) cause l'erreur: studentFct is not a function
+  | [-] acro n'est pas une fonction valide
+  | [-] acro n'est pas une fonction valide
+  | [-] acro n'est pas une fonction valide
   | 
   | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 0 ]
   | 
@@ -1202,9 +1202,9 @@ STUDENT: leo_martin
   | 
   | /!\ erreur: Unexpected string
   | [+] function acronyme a bien été trouvé dans le code
-  | [-] l'appel acronyme(["adrien","joly"]) cause l'erreur: studentFct is not a function
-  | [-] l'appel acronyme(["paul","edouard","vaillant"]) cause l'erreur: studentFct is not a function
-  | [-] l'appel acronyme(["eric","maubert"]) cause l'erreur: studentFct is not a function
+  | [-] acronyme n'est pas une fonction valide
+  | [-] acronyme n'est pas une fonction valide
+  | [-] acronyme n'est pas une fonction valide
   | 
   | // -> STUDENT SCORE ARRAY: [ 1, 0, 0, 0 ]
   | 
@@ -1659,9 +1659,9 @@ STUDENT: maelle_bellazar
   | 
   | /!\ erreur: Unexpected token ===
   | [-] la fonction acro() n'est pas définie correctement
-  | [-] l'appel acro(["adrien","joly"]) cause l'erreur: studentFct is not a function
-  | [-] l'appel acro(["paul","edouard","vaillant"]) cause l'erreur: studentFct is not a function
-  | [-] l'appel acro(["eric","maubert"]) cause l'erreur: studentFct is not a function
+  | [-] acro n'est pas une fonction valide
+  | [-] acro n'est pas une fonction valide
+  | [-] acro n'est pas une fonction valide
   | 
   | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 0 ]
   | 
@@ -1788,9 +1788,9 @@ STUDENT: noelie_roux
   | 
   | /!\ erreur: Unexpected token {
   | [-] la fonction genererAcronyme() n'est pas définie correctement
-  | [-] l'appel genererAcronyme(["adrien","joly"]) cause l'erreur: studentFct is not a function
-  | [-] l'appel genererAcronyme(["paul","edouard","vaillant"]) cause l'erreur: studentFct is not a function
-  | [-] l'appel genererAcronyme(["eric","maubert"]) cause l'erreur: studentFct is not a function
+  | [-] genererAcronyme n'est pas une fonction valide
+  | [-] genererAcronyme n'est pas une fonction valide
+  | [-] genererAcronyme n'est pas une fonction valide
   | 
   | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 0 ]
   | 
@@ -1947,9 +1947,9 @@ STUDENT: pauline_feraut
   | 
   | /!\ erreur: Unexpected string
   | [+] function acro a bien été trouvé dans le code
-  | [-] l'appel acro(["adrien","joly"]) cause l'erreur: studentFct is not a function
-  | [-] l'appel acro(["paul","edouard","vaillant"]) cause l'erreur: studentFct is not a function
-  | [-] l'appel acro(["eric","maubert"]) cause l'erreur: studentFct is not a function
+  | [-] acro n'est pas une fonction valide
+  | [-] acro n'est pas une fonction valide
+  | [-] acro n'est pas une fonction valide
   | 
   | // -> STUDENT SCORE ARRAY: [ 1, 0, 0, 0 ]
   | 

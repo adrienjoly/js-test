@@ -146,9 +146,9 @@ STUDENT: david_regnault
   | // CODE EVALUATION:
   | 
   | [-] la fonction genererAcronyme() n'est pas définie correctement
-  | [-] l'appel genererAcronyme(["adrien","joly"]) cause l'erreur: studentFct is not a function
-  | [-] l'appel genererAcronyme(["paul","edouard","vaillant"]) cause l'erreur: studentFct is not a function
-  | [-] l'appel genererAcronyme(["eric","maubert"]) cause l'erreur: studentFct is not a function
+  | [-] genererAcronyme n'est pas une fonction valide
+  | [-] genererAcronyme n'est pas une fonction valide
+  | [-] genererAcronyme n'est pas une fonction valide
   | 
   | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 0 ]
   | 
@@ -353,9 +353,9 @@ STUDENT: guillaume_ceyssac
   | // CODE EVALUATION:
   | 
   | [-] la fonction acro() n'est pas définie correctement
-  | [-] l'appel acro(["adrien","joly"]) cause l'erreur: studentFct is not a function
-  | [-] l'appel acro(["paul","edouard","vaillant"]) cause l'erreur: studentFct is not a function
-  | [-] l'appel acro(["eric","maubert"]) cause l'erreur: studentFct is not a function
+  | [-] acro n'est pas une fonction valide
+  | [-] acro n'est pas une fonction valide
+  | [-] acro n'est pas une fonction valide
   | 
   | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 0 ]
   | 
@@ -497,9 +497,9 @@ STUDENT: guillaume_desaintsernin
   | 
   | /!\ erreur: Unexpected string
   | [+] function acronyme a bien été trouvé dans le code
-  | [-] l'appel acronyme(["adrien","joly"]) cause l'erreur: studentFct is not a function
-  | [-] l'appel acronyme(["paul","edouard","vaillant"]) cause l'erreur: studentFct is not a function
-  | [-] l'appel acronyme(["eric","maubert"]) cause l'erreur: studentFct is not a function
+  | [-] acronyme n'est pas une fonction valide
+  | [-] acronyme n'est pas une fonction valide
+  | [-] acronyme n'est pas une fonction valide
   | 
   | // -> STUDENT SCORE ARRAY: [ 1, 0, 0, 0 ]
   | 
@@ -875,7 +875,7 @@ STUDENT: lucas_lacheny
   | 
   | // CODE EVALUATION:
   | 
-Fri, 02 Jun 2017 10:19:55 GMT jailed:sandbox DYNAMIC PLUGIN:64
+Fri, 02 Jun 2017 10:27:38 GMT jailed:sandbox DYNAMIC PLUGIN:64
     eval(`var secs = 100;
          ^^^^^^^^^^^^^^^^
 SyntaxError: missing ) after argument list
@@ -1805,9 +1805,9 @@ STUDENT: thomas_bonnet
   | 
   | /!\ erreur: Unexpected token =
   | [-] la fonction acro() n'est pas définie correctement
-  | [-] l'appel acro(["adrien","joly"]) cause l'erreur: studentFct is not a function
-  | [-] l'appel acro(["paul","edouard","vaillant"]) cause l'erreur: studentFct is not a function
-  | [-] l'appel acro(["eric","maubert"]) cause l'erreur: studentFct is not a function
+  | [-] acro n'est pas une fonction valide
+  | [-] acro n'est pas une fonction valide
+  | [-] acro n'est pas une fonction valide
   | 
   | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 0 ]
   | 

@@ -148,9 +148,9 @@ STUDENT: bastien_bigot
   | 
   | /!\ erreur: Unexpected end of input
   | [-] la fonction acronyme() n'est pas définie correctement
-  | [-] l'appel acronyme(["adrien","joly"]) cause l'erreur: studentFct is not a function
-  | [-] l'appel acronyme(["paul","edouard","vaillant"]) cause l'erreur: studentFct is not a function
-  | [-] l'appel acronyme(["eric","maubert"]) cause l'erreur: studentFct is not a function
+  | [-] acronyme n'est pas une fonction valide
+  | [-] acronyme n'est pas une fonction valide
+  | [-] acronyme n'est pas une fonction valide
   | 
   | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 0 ]
   | 
@@ -282,9 +282,9 @@ STUDENT: benjamin_kissous
   | // CODE EVALUATION:
   | 
   | [-] la fonction genererAcronyme() n'est pas définie correctement
-  | [-] l'appel genererAcronyme(["adrien","joly"]) cause l'erreur: studentFct is not a function
-  | [-] l'appel genererAcronyme(["paul","edouard","vaillant"]) cause l'erreur: studentFct is not a function
-  | [-] l'appel genererAcronyme(["eric","maubert"]) cause l'erreur: studentFct is not a function
+  | [-] genererAcronyme n'est pas une fonction valide
+  | [-] genererAcronyme n'est pas une fonction valide
+  | [-] genererAcronyme n'est pas une fonction valide
   | 
   | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 0 ]
   | 
@@ -829,9 +829,9 @@ STUDENT: ilana_bloch
   | // CODE EVALUATION:
   | 
   | [-] la fonction acro() n'est pas définie correctement
-  | [-] l'appel acro(["adrien","joly"]) cause l'erreur: studentFct is not a function
-  | [-] l'appel acro(["paul","edouard","vaillant"]) cause l'erreur: studentFct is not a function
-  | [-] l'appel acro(["eric","maubert"]) cause l'erreur: studentFct is not a function
+  | [-] acro n'est pas une fonction valide
+  | [-] acro n'est pas une fonction valide
+  | [-] acro n'est pas une fonction valide
   | 
   | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 0 ]
   | 
@@ -1100,9 +1100,9 @@ STUDENT: jessy_hachet
   | // CODE EVALUATION:
   | 
   | [-] la fonction acronyme() n'est pas définie correctement
-  | [-] l'appel acronyme(["adrien","joly"]) cause l'erreur: studentFct is not a function
-  | [-] l'appel acronyme(["paul","edouard","vaillant"]) cause l'erreur: studentFct is not a function
-  | [-] l'appel acronyme(["eric","maubert"]) cause l'erreur: studentFct is not a function
+  | [-] acronyme n'est pas une fonction valide
+  | [-] acronyme n'est pas une fonction valide
+  | [-] acronyme n'est pas une fonction valide
   | 
   | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 0 ]
   | 
@@ -1352,9 +1352,9 @@ STUDENT: lara_kounowski
   | 
   | /!\ erreur: document is not defined
   | [-] la fonction acronyme() n'est pas définie correctement
-  | [-] l'appel acronyme(["adrien","joly"]) cause l'erreur: studentFct is not a function
-  | [-] l'appel acronyme(["paul","edouard","vaillant"]) cause l'erreur: studentFct is not a function
-  | [-] l'appel acronyme(["eric","maubert"]) cause l'erreur: studentFct is not a function
+  | [-] acronyme n'est pas une fonction valide
+  | [-] acronyme n'est pas une fonction valide
+  | [-] acronyme n'est pas une fonction valide
   | 
   | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 0 ]
   | 
@@ -1472,9 +1472,9 @@ STUDENT: louis_gosse
   | 
   | /!\ erreur: Unexpected end of input
   | [+] function acro a bien été trouvé dans le code
-  | [-] l'appel acro(["adrien","joly"]) cause l'erreur: studentFct is not a function
-  | [-] l'appel acro(["paul","edouard","vaillant"]) cause l'erreur: studentFct is not a function
-  | [-] l'appel acro(["eric","maubert"]) cause l'erreur: studentFct is not a function
+  | [-] acro n'est pas une fonction valide
+  | [-] acro n'est pas une fonction valide
+  | [-] acro n'est pas une fonction valide
   | 
   | // -> STUDENT SCORE ARRAY: [ 1, 0, 0, 0 ]
   | 
@@ -1617,9 +1617,9 @@ STUDENT: madison_hayat
   | 
   | /!\ erreur: Unexpected token {
   | [-] la fonction acronyme() n'est pas définie correctement
-  | [-] l'appel acronyme(["adrien","joly"]) cause l'erreur: studentFct is not a function
-  | [-] l'appel acronyme(["paul","edouard","vaillant"]) cause l'erreur: studentFct is not a function
-  | [-] l'appel acronyme(["eric","maubert"]) cause l'erreur: studentFct is not a function
+  | [-] acronyme n'est pas une fonction valide
+  | [-] acronyme n'est pas une fonction valide
+  | [-] acronyme n'est pas une fonction valide
   | 
   | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 0 ]
   | 
@@ -2220,9 +2220,9 @@ STUDENT: theo_geay
   | // CODE EVALUATION:
   | 
   | [-] la fonction genererAcronyme() n'est pas définie correctement
-  | [-] l'appel genererAcronyme(["adrien","joly"]) cause l'erreur: studentFct is not a function
-  | [-] l'appel genererAcronyme(["paul","edouard","vaillant"]) cause l'erreur: studentFct is not a function
-  | [-] l'appel genererAcronyme(["eric","maubert"]) cause l'erreur: studentFct is not a function
+  | [-] genererAcronyme n'est pas une fonction valide
+  | [-] genererAcronyme n'est pas une fonction valide
+  | [-] genererAcronyme n'est pas une fonction valide
   | 
   | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 0 ]
   | 
@@ -2364,9 +2364,9 @@ STUDENT: thibault_chambrillon
   | 
   | /!\ erreur: Unexpected token <
   | [+] function genererAcronyme a bien été trouvé dans le code
-  | [-] l'appel genererAcronyme(["adrien","joly"]) cause l'erreur: studentFct is not a function
-  | [-] l'appel genererAcronyme(["paul","edouard","vaillant"]) cause l'erreur: studentFct is not a function
-  | [-] l'appel genererAcronyme(["eric","maubert"]) cause l'erreur: studentFct is not a function
+  | [-] genererAcronyme n'est pas une fonction valide
+  | [-] genererAcronyme n'est pas une fonction valide
+  | [-] genererAcronyme n'est pas une fonction valide
   | 
   | // -> STUDENT SCORE ARRAY: [ 1, 0, 0, 0 ]
   | 
@@ -2508,9 +2508,9 @@ STUDENT: timothee_ong
   | 
   | /!\ erreur: Illegal return statement
   | [+] function genererAcronyme a bien été trouvé dans le code
-  | [-] l'appel genererAcronyme(["adrien","joly"]) cause l'erreur: studentFct is not a function
-  | [-] l'appel genererAcronyme(["paul","edouard","vaillant"]) cause l'erreur: studentFct is not a function
-  | [-] l'appel genererAcronyme(["eric","maubert"]) cause l'erreur: studentFct is not a function
+  | [-] genererAcronyme n'est pas une fonction valide
+  | [-] genererAcronyme n'est pas une fonction valide
+  | [-] genererAcronyme n'est pas une fonction valide
   | 
   | // -> STUDENT SCORE ARRAY: [ 1, 0, 0, 0 ]
   | 

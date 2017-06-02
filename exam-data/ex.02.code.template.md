@@ -52,6 +52,9 @@ function {{fctName}}(noms) {
   var studentFct = _scope[`{{fctName}}`];
   function unit(p, ret) {
     var result;
+    if (typeof studentFct !== 'function') {
+      return res(0, `{{fctName}} n'est pas une fonction valide`);
+    }
     try {
       result = studentFct(p);
     } catch(e) {
