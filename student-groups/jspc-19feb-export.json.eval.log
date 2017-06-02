@@ -5,49 +5,6 @@ Reading and evaluating answers from: ../student-groups/jspc-19feb-export.json ..
 
 ================================
 
-STUDENT: adrien_joly
-
-  -  quizz answers:
-  | qcm1 :  (solution: 3) => 0 pts
-  | qcm2 :  (solution: 1) => 0 pts
-  | qcm3 :  (solution: 2) => 0 pts
-  | qcm4 :  (solution: 4) => 0 pts
-
-  => quizz score: 0 / 4 pts
-
-  -  code evaluation:
-  | 
-  | ------------- EXERCISE: code5 (variant: 0) -------------
-  | 
-  | // WARNING: NO STUDENT CODE => skipping
-  | 
-  | // -> EXERCISE POINTS: 0 / 4
-  | 
-  | ------------- EXERCISE: code6 (variant: 2) -------------
-  | 
-  | // WARNING: NO STUDENT CODE => skipping
-  | 
-  | // -> EXERCISE POINTS: 0 / 4
-  | 
-  | ------------- EXERCISE: code7 (variant: 2) -------------
-  | 
-  | // WARNING: NO STUDENT CODE => skipping
-  | 
-  | // -> EXERCISE POINTS: 0 / 4
-  | 
-  | ------------- EXERCISE: code8 (variant: 0) -------------
-  | 
-  | // WARNING: NO STUDENT CODE => skipping
-  | 
-  | // -> EXERCISE POINTS: 0 / 4
-
-  => code score: 0 / 16 pts
-
-=> TOTAL STUDENT SCORE: 0 / 20
-
-
-================================
-
 STUDENT: aubin_keravel
 
   -  quizz answers:
@@ -74,7 +31,7 @@ STUDENT: aubin_keravel
   | // CODE EVALUATION:
   | 
   | [+] function genererAcronyme a bien été trouvé dans le code
-Fri, 02 Jun 2017 09:18:53 GMT jailed:sandbox TypeError: name.substr is not a function
+Fri, 02 Jun 2017 10:11:56 GMT jailed:sandbox TypeError: name.substr is not a function
     at _scope.genererAcronyme (eval at evaluateStudentCode (DYNAMIC PLUGIN:13:4), <anonymous>:4:16)
     at unit (DYNAMIC PLUGIN:24:48)
     at evaluateStudentCode (DYNAMIC PLUGIN:37:5)
@@ -561,7 +518,7 @@ STUDENT: edouard_duchesnedelamotte
   | // CODE EVALUATION:
   | 
   | [+] function genererAcronyme a bien été trouvé dans le code
-Fri, 02 Jun 2017 09:18:55 GMT jailed:sandbox ReferenceError: substring is not defined
+Fri, 02 Jun 2017 10:11:57 GMT jailed:sandbox ReferenceError: substring is not defined
     at _scope.genererAcronyme (eval at evaluateStudentCode (DYNAMIC PLUGIN:10:4), <anonymous>:2:22)
     at unit (DYNAMIC PLUGIN:21:48)
     at evaluateStudentCode (DYNAMIC PLUGIN:31:5)
@@ -674,7 +631,7 @@ STUDENT: florian_compiegne
   | // CODE EVALUATION:
   | 
   | [+] function genererAcronyme a bien été trouvé dans le code
-Fri, 02 Jun 2017 09:18:55 GMT jailed:sandbox TypeError: a.substr is not a function
+Fri, 02 Jun 2017 10:11:58 GMT jailed:sandbox TypeError: a.substr is not a function
     at _scope.genererAcronyme (eval at evaluateStudentCode (DYNAMIC PLUGIN:12:4), <anonymous>:4:18)
     at unit (DYNAMIC PLUGIN:23:48)
     at evaluateStudentCode (DYNAMIC PLUGIN:35:5)
@@ -781,7 +738,7 @@ STUDENT: guillaume_martin
   | // CODE EVALUATION:
   | 
   | [+] function genererAcronyme a bien été trouvé dans le code
-Fri, 02 Jun 2017 09:18:55 GMT jailed:sandbox TypeError: Cannot read property 'substring' of undefined
+Fri, 02 Jun 2017 10:11:58 GMT jailed:sandbox TypeError: Cannot read property 'substring' of undefined
     at _scope.genererAcronyme (eval at evaluateStudentCode (DYNAMIC PLUGIN:11:4), <anonymous>:2:17)
     at unit (DYNAMIC PLUGIN:22:48)
     at evaluateStudentCode (DYNAMIC PLUGIN:33:5)
@@ -2721,7 +2678,7 @@ STUDENT: victor_legac
   | // CODE EVALUATION:
   | 
   | [+] function acro a bien été trouvé dans le code
-Fri, 02 Jun 2017 09:19:02 GMT jailed:sandbox ReferenceError: nom is not defined
+Fri, 02 Jun 2017 10:12:05 GMT jailed:sandbox ReferenceError: nom is not defined
     at _scope.acro (eval at evaluateStudentCode (DYNAMIC PLUGIN:12:4), <anonymous>:2:14)
     at unit (DYNAMIC PLUGIN:23:48)
     at evaluateStudentCode (DYNAMIC PLUGIN:35:5)
@@ -2873,7 +2830,7 @@ STUDENT: victoria_antalis
   | // CODE EVALUATION:
   | 
   | [+] function acronyme a bien été trouvé dans le code
-Fri, 02 Jun 2017 09:19:02 GMT jailed:sandbox ReferenceError: acronyme is not defined
+Fri, 02 Jun 2017 10:12:05 GMT jailed:sandbox ReferenceError: acronyme is not defined
     at _scope.acronyme (eval at evaluateStudentCode (DYNAMIC PLUGIN:12:3), <anonymous>:2:2)
     at unit (DYNAMIC PLUGIN:23:48)
     at evaluateStudentCode (DYNAMIC PLUGIN:35:5)
