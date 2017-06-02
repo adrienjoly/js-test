@@ -3,6 +3,7 @@
 # syntax: ./score-student-groups.sh ./student-groups/*.json
 
 rm ./exam-data/scores.csv &>/dev/null
+rm ./exam-data/scores-detail.csv &>/dev/null
 
 for f in $*;
 do

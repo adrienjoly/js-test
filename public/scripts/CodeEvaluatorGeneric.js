@@ -152,6 +152,7 @@ function makeCodeEvaluator(jailed, async, codeGradingOptions) {
       callback(null, {
         score: ptsPerExercise.reduce(sum),
         length: _this.getMaxScore(),
+        scoreArray: ptsPerExercise,
       });
     });
   };
