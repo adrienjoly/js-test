@@ -7,7 +7,7 @@ function readfile(filePath) {
 module.exports = {
 
   // Front-end config
-  title: 'JavaScript Partiel 1 - Classe 4',
+  title: 'JavaScript Controle - Classe 4',
 
   // General settings
   PUBLIC_TEST_MODE: false, // set to false to restrict acccess and identify students using Google Login
@@ -23,24 +23,24 @@ module.exports = {
 
   // Back-end config
   backend: {
-    type: 'realtime-eval', // 'realtime-eval', 'auto-eval', or 'firebase' (with FIREBASE_CONFIG)
+    type: 'firebase', // 'realtime-eval', 'auto-eval', or 'firebase' (with FIREBASE_CONFIG)
     /*
     EMAIL_SUBMIT_CONFIG: {
       mdTemplate: readfile('public/data/submitted.md'),
     },
-    FIREBASE_CONFIG: {
-      apiKey: "AIzaSyCCVnADtKjLmzivOw4fTLDUkCz90xkj4ws",
-      databaseURL: "https://js-test-ft-partiel.firebaseio.com",
-      messagingSenderId: "699482710183"
-      // admin/dashboard: https://console.firebase.google.com/project/js-test-ft-partiel/database/data
-    },
     */
+    FIREBASE_CONFIG: {
+      apiKey: "AIzaSyCMqtRa383qaJ59U3RYbue325iExmESCBY",
+      databaseURL: "https://js-test-ft-41d32.firebaseio.com",
+      messagingSenderId: "859086271487"
+      // admin/dashboard: https://console.firebase.google.com/project/js-test-ft-41d32/database/data
+    },
   },
 
   teacherEmail: 'adrien.joly@eemi.com', // required for dashboard auth
   
   // Authentication
-  GOOGLE_CLIENT_ID: '247219641427-ifeq88p7rgor9al5ksduds7ug0ba7djr.apps.googleusercontent.com', // generated from https://console.developers.google.com/apis/credentials?project=eemi-own-exam&authuser=1
+  GOOGLE_CLIENT_ID: '247219641427-i9ojg53vefrp47dhveioe5v4v9namd5m.apps.googleusercontent.com', // generated from https://console.developers.google.com/apis/credentials?project=eemi-own-exam&authuser=1
   GOOGLE_CLIENT_DOMAIN: 'eemi.com', // to restrict access to users from a certain domain only
   LOGIN_INVITE: 'Se connecter à son compte EEMI:',
   

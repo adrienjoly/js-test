@@ -5,7 +5,7 @@
     window.location.href = window.location.href.replace('http:', 'https:');
   var app = document.querySelector('#app');
   app.config = {
-    "title": "JavaScript Partiel 1 - Classe 4",
+    "title": "JavaScript Controle - Classe 4",
     "PUBLIC_TEST_MODE": false,
     "DISPLAY_SOLUTIONS_AFTER_SUBMIT": false,
     "redirectToHttps": true,
@@ -14,10 +14,15 @@
       "publishEvalTests": true
     },
     "backend": {
-      "type": "realtime-eval"
+      "type": "firebase",
+      "FIREBASE_CONFIG": {
+        "apiKey": "AIzaSyCMqtRa383qaJ59U3RYbue325iExmESCBY",
+        "databaseURL": "https://js-test-ft-41d32.firebaseio.com",
+        "messagingSenderId": "859086271487"
+      }
     },
     "teacherEmail": "adrien.joly@eemi.com",
-    "GOOGLE_CLIENT_ID": "247219641427-ifeq88p7rgor9al5ksduds7ug0ba7djr.apps.googleusercontent.com",
+    "GOOGLE_CLIENT_ID": "247219641427-i9ojg53vefrp47dhveioe5v4v9namd5m.apps.googleusercontent.com",
     "GOOGLE_CLIENT_DOMAIN": "eemi.com",
     "LOGIN_INVITE": "Se connecter à son compte EEMI:",
     "quizzGrading": {
