@@ -1,0 +1,311 @@
+Parsing ex.01.quizz.template.md ...
+Parsing ex.02.code.template.md ...
+Reading and evaluating answers from: ../student-groups/js-test-ft-41d32-export.json ...
+
+
+================================
+
+STUDENT: adrien_joly
+
+  -  quizz answers:
+  | qcm1 : 3 (solution: 3) => 1 pts
+  | qcm2 : 3 (solution: 3) => 1 pts
+  | qcm3 : 1 (solution: 1) => 1 pts
+  | qcm4 : 3 (solution: 3) => 1 pts
+  | qcm5 : 4 (solution: 4) => 1 pts
+  | qcm6 : 4 (solution: 4) => 1 pts
+
+  => quizz score: 6 / 6 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code7 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var bouton = document.getElementById('bouton');
+  | bouton.onclick = function() {
+  |   bouton.classList.add('hidden');
+  | };
+  | 
+  | // CODE EVALUATION:
+  | 
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 10 / 10
+
+  => code score: 10 / 10 pts
+
+=> TOTAL STUDENT SCORE: 16 / 16
+
+
+================================
+
+STUDENT: clement_zerbi
+
+  -  quizz answers:
+  | qcm1 : 3 (solution: 3) => 1 pts
+  | qcm2 : 3 (solution: 3) => 1 pts
+  | qcm3 : 1 (solution: 1) => 1 pts
+  | qcm4 : 3 (solution: 3) => 1 pts
+  | qcm5 : 4 (solution: 4) => 1 pts
+  | qcm6 : 4 (solution: 4) => 1 pts
+
+  => quizz score: 6 / 6 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code7 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | document.getElementById('mon-bouton').onclick = function () {
+  |   document.getElementById('mon-bouton').classList.add('cache');
+  | }
+  | 
+  | // CODE EVALUATION:
+  | 
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 10 / 10
+
+  => code score: 10 / 10 pts
+
+=> TOTAL STUDENT SCORE: 16 / 16
+
+
+================================
+
+STUDENT: mathias_lachot
+
+  -  quizz answers:
+  | qcm1 : 3 (solution: 3) => 1 pts
+  | qcm2 : 3 (solution: 3) => 1 pts
+  | qcm3 : 1 (solution: 1) => 1 pts
+  | qcm4 : 3 (solution: 3) => 1 pts
+  | qcm5 : 4 (solution: 4) => 1 pts
+  | qcm6 : 3 (solution: 4) => 0 pts
+
+  => quizz score: 5 / 6 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code7 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var element = document.getElementById('bouton');
+  | document.getElementById('bouton').onclick = function() {
+  |   element.classList.add('cache');
+  | };
+  | 
+  | // CODE EVALUATION:
+  | 
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 10 / 10
+
+  => code score: 10 / 10 pts
+
+=> TOTAL STUDENT SCORE: 15 / 16
+
+
+================================
+
+STUDENT: maxime_bonnet
+
+  -  quizz answers:
+  | qcm1 : 3 (solution: 3) => 1 pts
+  | qcm2 : 3 (solution: 3) => 1 pts
+  | qcm3 : 1 (solution: 1) => 1 pts
+  | qcm4 : 3 (solution: 3) => 1 pts
+  | qcm5 : 4 (solution: 4) => 1 pts
+  | qcm6 : 3 (solution: 4) => 0 pts
+
+  => quizz score: 5 / 6 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code7 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | document.getElementById('mon-bouton').classList.remove('cache');
+  | 
+  | // CODE EVALUATION:
+  | 
+Tue, 06 Jun 2017 14:20:50 GMT jailed:sandbox TypeError: document.getElementById(...).classList.remove is not a function
+    at evaluateStudentCode (DYNAMIC PLUGIN:16:49)
+    at DYNAMIC PLUGIN:30:3
+    at ContextifyScript.Script.runInContext (vm.js:35:29)
+    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
+    at Object.exports.runInNewContext (vm.js:72:17)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-ft-controle/node_modules/jailed-node/sandbox/sandbox.js:151:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-ft-controle/node_modules/jailed-node/sandbox/sandbox.js:165:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-ft-controle/node_modules/jailed-node/sandbox/sandbox.js:53:7)
+    at emitTwo (events.js:106:13)
+    at process.emit (events.js:191:7)
+  | => test runner err: TypeError: document.getElementById(...).classList.remove is not a function at evaluateStudentCode (DYNAMIC PLUGIN:16:49)
+  | 
+  | // -> EXERCISE POINTS: 0 / 10
+
+  => code score: 0 / 10 pts
+
+=> TOTAL STUDENT SCORE: 5 / 16
+
+
+================================
+
+STUDENT: mike_meimoun
+
+  -  quizz answers:
+  | qcm1 : 3 (solution: 3) => 1 pts
+  | qcm2 : 3 (solution: 3) => 1 pts
+  | qcm3 : 1 (solution: 1) => 1 pts
+  | qcm4 : 3 (solution: 3) => 1 pts
+  | qcm5 : 4 (solution: 4) => 1 pts
+  | qcm6 : 4 (solution: 4) => 1 pts
+
+  => quizz score: 6 / 6 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code7 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var bouton = document.getElementById('bouton');
+  | bouton.onclick = function() {
+  |   bouton.classList.add('hidden');
+  | };
+  | 
+  | // CODE EVALUATION:
+  | 
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 10 / 10
+
+  => code score: 10 / 10 pts
+
+=> TOTAL STUDENT SCORE: 16 / 16
+
+
+================================
+
+STUDENT: nicolas_perrousset
+
+  -  quizz answers:
+  | qcm1 : 3 (solution: 3) => 1 pts
+  | qcm2 : 3 (solution: 3) => 1 pts
+  | qcm3 : 1 (solution: 1) => 1 pts
+  | qcm4 : 3 (solution: 3) => 1 pts
+  | qcm5 : 4 (solution: 4) => 1 pts
+  | qcm6 : 4 (solution: 4) => 1 pts
+
+  => quizz score: 6 / 6 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code7 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | document.getElementById('mon-bouton').onclick = function() {
+  |     document.getElementById('mon-bouton').classList.add('cache')
+  | }
+  | 
+  | // CODE EVALUATION:
+  | 
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 10 / 10
+
+  => code score: 10 / 10 pts
+
+=> TOTAL STUDENT SCORE: 16 / 16
+
+
+================================
+
+STUDENT: thomas_kossowski
+
+  -  quizz answers:
+  | qcm1 : 2 (solution: 3) => 0 pts
+  | qcm2 : 4 (solution: 3) => 0 pts
+  | qcm3 : 1 (solution: 1) => 1 pts
+  | qcm4 : 4 (solution: 3) => 0 pts
+  | qcm5 : 3 (solution: 4) => 0 pts
+  | qcm6 : 3 (solution: 4) => 0 pts
+
+  => quizz score: 1 / 6 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code7 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | document.getElementById('bouton').oneclick('cache')
+  | 
+  | // CODE EVALUATION:
+  | 
+Tue, 06 Jun 2017 14:20:50 GMT jailed:sandbox TypeError: document.getElementById(...).oneclick is not a function
+    at evaluateStudentCode (DYNAMIC PLUGIN:16:35)
+    at DYNAMIC PLUGIN:30:3
+    at ContextifyScript.Script.runInContext (vm.js:35:29)
+    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
+    at Object.exports.runInNewContext (vm.js:72:17)
+    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-ft-controle/node_modules/jailed-node/sandbox/sandbox.js:151:8)
+    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-ft-controle/node_modules/jailed-node/sandbox/sandbox.js:165:3)
+    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-ft-controle/node_modules/jailed-node/sandbox/sandbox.js:53:7)
+    at emitTwo (events.js:106:13)
+    at process.emit (events.js:191:7)
+  | => test runner err: TypeError: document.getElementById(...).oneclick is not a function at evaluateStudentCode (DYNAMIC PLUGIN:16:35)
+  | 
+  | // -> EXERCISE POINTS: 0 / 10
+
+  => code score: 0 / 10 pts
+
+=> TOTAL STUDENT SCORE: 1 / 16
+
+
+================================
+
+STUDENT: yassine_baba_slimane
+
+  -  quizz answers:
+  | qcm1 : 3 (solution: 3) => 1 pts
+  | qcm2 : 3 (solution: 3) => 1 pts
+  | qcm3 : 1 (solution: 1) => 1 pts
+  | qcm4 : 3 (solution: 3) => 1 pts
+  | qcm5 : 4 (solution: 4) => 1 pts
+  | qcm6 : 3 (solution: 4) => 0 pts
+
+  => quizz score: 5 / 6 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code7 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var element = document.getElementById('mon-bouton');
+  | element.onclick = function (){
+  |   element.classList.add('cache');
+  | }
+  | 
+  | // CODE EVALUATION:
+  | 
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 10 / 10
+
+  => code score: 10 / 10 pts
+
+=> TOTAL STUDENT SCORE: 15 / 16
