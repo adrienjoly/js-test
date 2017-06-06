@@ -17,8 +17,8 @@ module.exports = {
 
   // Settings for conversion and publication of exercise templates
   examPack: {
-    publishSolutions: true, // `true` required for realtime-eval/auto-eval back-ends, DISPLAY_SOLUTIONS_AFTER_SUBMIT and/or dashboard
-    publishEvalTests: true, // `true` required for realtime-eval/auto-eval back-ends, DISPLAY_SOLUTIONS_AFTER_SUBMIT and/or dashboard
+    publishSolutions: false, // `true` required for realtime-eval/auto-eval back-ends, DISPLAY_SOLUTIONS_AFTER_SUBMIT and/or dashboard
+    publishEvalTests: false, // `true` required for realtime-eval/auto-eval back-ends, DISPLAY_SOLUTIONS_AFTER_SUBMIT and/or dashboard
   },
 
   // Back-end config
@@ -40,7 +40,7 @@ module.exports = {
   teacherEmail: 'adrien.joly@eemi.com', // required for dashboard auth
   
   // Authentication
-  GOOGLE_CLIENT_ID: '247219641427-i9ojg53vefrp47dhveioe5v4v9namd5m.apps.googleusercontent.com', // generated from https://console.developers.google.com/apis/credentials?project=eemi-own-exam&authuser=1
+  GOOGLE_CLIENT_ID: '247219641427-ifeq88p7rgor9al5ksduds7ug0ba7djr.apps.googleusercontent.com', // generated from https://console.developers.google.com/apis/credentials?project=eemi-own-exam&authuser=1
   GOOGLE_CLIENT_DOMAIN: 'eemi.com', // to restrict access to users from a certain domain only
   LOGIN_INVITE: 'Se connecter à son compte EEMI:',
   
@@ -51,7 +51,7 @@ module.exports = {
     ptsNull: 0,
   },
   codeGrading: {
-    ptsPerExercise: 3, // applies to scores of code exercises
+    ptsPerExercise: 10, // applies to scores of code exercises
   }
 
 };

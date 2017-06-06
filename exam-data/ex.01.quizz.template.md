@@ -1,85 +1,101 @@
-```js
-function bonjour(prenom) {
-  var resultat = 'bonjour, ' + prenom;
-  return resultat;
-}
-```
+Qu'est-ce qu'un composant ?
 
-Qu'est-ce que ce code ne contient PAS:
+- c'est le nom qu'on donne à tout programme JavaScript
+- c'est le nom qu'on donne à tout div d'une page HTML
+* c'est un module qui a été conçu pour être intégré par d'autres développeurs
+- c'est une page web de documentation
 
-- Affectation
-- Définition de fonction
-* Appel de fonction
-- Concaténation
+???
 
----
+Un composant est un module qui a été conçu pour être intégré par d'autres développeurs.
 
-```js
-for (var i = -1; i <= 1; i++) {
-  // code sans importance
-}
-```
-
-Combien de fois le code à l'intérieur des accolades va-t-il être exécuté ?
-
-- 1 fois
-- 2 fois
-* 3 fois
-- à l'infini
+Sur le Web, un composant est généralement composé d'un script JavaScript, et éventuellement d'un fichier CSS en plus. Il est aussi accompagné d'une page qui explique aux développeurs comment intégrer ce composant sur leur page.
 
 ---
 
 ```js
-if (a === 1) {
-  // code sans importance
-} else if (b === 1) {
-  // code sans importance
-} else {
-  // code sans importance
-}
+var lien = document.getElementById('mon-hyperlien');
 ```
 
-Si on voulait représenter ces conditions sous forme d'un arbre de décision, combien contiendrait-il de niveaux ?
+Comment changer le texte du lien `<a>` (tel qu'il sera affiché à l'écran) référencé par la variable `lien` ?
 
-* 1
-- 2
-- 3
-- 4
+- lien.href = 'nouveau texte';
+- lien.title = 'nouveau texte';
+* lien.innerHTML = 'nouveau texte';
+- lien.setAttribute('title', 'nouveau texte');
+
+???
+
+ - en HTML, le titre visible d'un lien est défini par le contenu de l'élément (ce qu'il y a entre les balises `<a>` et `</a>`); il ne faut donc pas modifier un attribut de ce lien (ex: `title` et `href`) mais son contenu.
+ - pour modifier le contenu d'un élément, il faut utiliser la propriété `innerHTML`.
 
 ---
 
-Supposons que nous ayons un tableau `fruits` ayant la valeur suivante:
+Soit le fichier HTML suivant:
 
-```js
-[ 'kiwi', 'prune', 'abricot', 'fraise' ]
+```html
+<ul>
+  <li class="displayed first-item">premier</li>
+  <li class="hidden">deuxième</li>
+  <li class="hidden" id="last-item">troisième</li>
+</ul>
 ```
 
-Que se passe-t-il si on exécute l'instruction suivante:
+Quelle est la fonction du DOM la plus directe pour:
 
-```js
-fruits[1] = 'litchi';
-```
+1) accéder au dernier élément `<li>` depuis JavaScript ?
 
-- la valeur "litchi" va être ajoutée au début du tableau
-* la valeur "litchi" va remplacer "prune"
-- la valeur "litchi" va remplacer "kiwi"
-- cette expression vaut `false`
+* getElementById()
+- getElementByClassName()
+- getElementsByClassName()
+- getElementsByTagName()
+
+???
+
+ - le deuxième choix n'existe pas, car getElement**s**ByClassName() prend un **s**;
+ - le premier choix est plus direct, car le dernier élément `<li>` porte un attribut `id` (unique), et que `getElementById()` a l'avantage de le retourner directement, alors que les autres retournent un tableau d'éléments.
 
 ---
 
-Supposons que nous ayons un tableau `fruits` ayant la valeur suivante:
+2) accéder à tous les éléments `<li>` portant la classe `"hidden"` ?
 
-```js
-[ 'kiwi', 'prune', 'abricot', 'fraise' ]
-```
+- getElementById()
+- getElementByClassName()
+* getElementsByClassName()
+- getElementsByTagName()
 
-Que se passe-t-il si on exécute l'instruction suivante:
+???
 
-```js
-fruits.splice(1, 2);
-```
+ Pour référencer les éléments par classe, il faut utiliser `getElementsByClassName()`.
 
-- le nombre 2 sera inséré juste après "kiwi"
-- la valeur "prune" va être retirée du tableau
-* les valeurs "prune" et "abricot" vont être retirées du tableau
-- les valeurs "prune", "abricot" et "fraise" vont être retirées du tableau
+ Note: Cette fonction retourne un tableau d'éléments.
+
+---
+
+3) accéder à tous les éléments `<li>` ?
+
+- getElementById()
+- getElementByClassName()
+- getElementsByClassName()
+* getElementsByTagName()
+
+???
+
+Pour référencer les éléments par nom d'élément (appelé *tag name* en anglais), il faut utiliser `getElementsByTagName()`.
+
+ Note: Cette fonction retourne un tableau d'éléments.
+
+---
+
+Comment retirer la classe `"hidden"` des deux derniers éléments `<li>` ?
+
+- document.getElementsByClassName('hidden').className = '';
+- document.getElementsByClassName('hidden').setAttribute('class', '');
+- document.getElementsByClassName('hidden').classList.remove('hidden');
+* (il faut utiliser une boucle)
+
+???
+
+[`className`](https://developer.mozilla.org/fr/docs/Web/API/Element/className), [`setAttribute()`](https://developer.mozilla.org/fr/docs/Web/API/Element/setAttribute) et [`classList`](https://developer.mozilla.org/fr/docs/Web/API/Element/classList) ne sont applicables que sur un objet JavaScript représentant un élément HTML (ex: retourné par `getElementById()`), or `document.getElementsByClassName('hidden')` retourne un tableau d'éléments.
+
+Donc on ne peut pas utiliser ces propriétés/fonctions directement sur le tableau retourné par `document.getElementsByClassName('hidden')` => Il faut utiliser une boucle pour appeler `classList.remove('hidden')` sur chaque élément du tableau.
