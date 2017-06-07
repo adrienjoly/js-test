@@ -1,111 +1,167 @@
-# Browser mocking and error handling
+# Samples and patterns for student code evaluation tests
 
-In order to test browser-based code, DOM functions must be mocked.
-
-In order to avoid the evaluation code to crash and give zero points to the student, student code must be run using the following manner:
-
-```js
-try {
-  eval(`_studentCode`); // catch syntax errors, if any
-} catch(e) {
-  error = e;
-}
-```
-
-A `res()` function was created to provide feedback to students and count points. (for grading)
-
-## Mock alert(), and sequential tests
+## Basic code evaluation test
 
 ```js
 // automatic student evaluation code
 (function evaluateStudentCode(){
-  var _res = [];
-  var console = { log: function(){} }; // tolerate console.log() calls
-  function alert(p) {
-    _res.push(p);
+  application.remote._send(null, 1); // => give 1 point to the student
+})();
+```
+
+## Return a code evaluation array
+
+```js
+// automatic student evaluation code
+(function evaluateStudentCode(){
+  application.remote._send(null, [1, 1, 0]); // => give 2 points / 3 to the student
+})();
+```
+
+## Return a code evaluation array with feedback/notes
+
+A `res()` function was created to provide feedback to students and count points. (for grading)
+
+```js
+// automatic student evaluation code
+(function evaluateStudentCode(){
+  function res(pts, msg) {
+    application.remote._log((pts ? '[+] ' : '[-] ') + msg);
+    return pts; 
   }
-  var {{varName}};
-  var tests = [];
-  var error = null;
+  var tests = [
+    2 === 2
+      ? res(1, '2 equals 2, as expected 👍')
+      : res(0, '2 should equal 2 ... 😿'),
+  ];
+  application.remote._send(null, tests); // 1 passing test => 1 point
+})();
+```
+
+## Safe student code execution
+
+In order to avoid the evaluation code to crash and give zero points to the student, student code must be run using the following manner:
+
+```js
+// automatic student evaluation code
+(function evaluateStudentCode(){
+  var error;
   try {
     eval(`_studentCode`); // catch syntax errors, if any
+  } catch(e) {
+    error = e;
+  }
+  function res(pts, msg) {
+    application.remote._log((pts ? '[+] ' : '[-] ') + msg);
+    return pts; 
+  }
+  var tests = [
+    !error
+      ? res(1, 'no error occurred while running your code 👍')
+      : res(0, `an error occurred while running your code: ${error.message} 😿`),
+    2 === 2
+      ? res(1, '2 equals 2, as expected 👍')
+      : res(0, '2 should equal 2 ... 😿'),
+  ];
+  application.remote._send(null, tests); // 2 passing tests => 2 point
+})();
+```
+
+## Testing a function from student's code
+
+With variants:
+
+```js
+// automatic student evaluation code
+(function evaluateStudentCode(){
+  var _scope = {}; // store the function name in the global scope 
+  var error;
+  try {
+    eval(`_studentCode`.replace(/function ([^ \(]+)/g, '_scope.$1 = function'));
+    /* will associate the student's function to the global var above */
   } catch (e) {
-    application.remote._log('/!\\ erreur: ' + e.message);
     error = e;
   }
   function res(pts, msg) {
     application.remote._log((pts ? '[+] ' : '[-] ') + msg);
     return pts;
   }
-  tests = tests.concat([
-    !error && _res.length === 0
-      ? res(1, 'le code fonctionne sans erreur')
-      : res(0, 'une erreur ou un alert() inattendu est survenu'),
-  ]);
-  {{varName}} = '{{value}}';
-  try {
-    eval(`_studentCode`); // catch syntax errors, if any
-  } catch (e) {
-    application.remote._log('/!\\ erreur: ' + e.message);
-  }
-  tests = tests.concat([
-    _res.length === 1
-      ? res(1, 'quand {{varName}} vaut {{value}}, l\'alert est bien affiché')
-      : res(0, 'quand {{varName}} vaut {{value}}, un alert devrait être affiché'),
-    _res[0] === '{{varName}} vaut {{value}}'
-      ? res(1, 'l\'alert contient le message demandé')
-      : res(0, 'l\'alert ne contient pas le message demandé'),
-  ]);
-  application.remote._send(null, tests); // 1 point per passing test => 3 pts per exercise
+  var studentFct = _scope[`{{{fctName}}}`]; // value of fctName depends on the student's variant
+  var tests = [
+    `_studentCode`.replace(/[ \t]/g, '').indexOf('function{{fctName}}(') !== -1
+      ? res(1, 'function {{fctName}} was found in your code 👍')
+      : res(0, 'function {{fctName}}() was not defined as expected ... 😿'),
+    !error
+      ? res(1, 'no error occurred while running your code 👍')
+      : res(0, `an error occurred while running your code: ${error.message} 😿`),
+    typeof studentFct === 'function' && studentFct(`{{{input}}}`) === `{{{expected}}}`
+      ? res(1, `{{{fctName}}}('{{{input}}}') returns '{{{expected}}}', as expected 👍`)
+      : res(0, `{{{fctName}}}('{{{input}}}') should have returned '{{{expected}}}' 😿`),
+  ];
+  application.remote._send(null, tests); // 1 point per passing test
 })();
 ```
 
-## Testing a function from student's code
+## Mock/tolerate calls to `alert()` and `console.log()`
+
+In order to test browser-based code from students, the corresponding functions must be implemented.
 
 ```js
 // automatic student evaluation code
 (function evaluateStudentCode(){
-  var console = { log: function(){} }; // tolerate console.log() calls
-  var _scope = {}; // store the function name in the global scope 
+  var _alerts = [];
+  // calls to alert() will be logged to the _alerts array
+  function alert(p) {
+    _alerts.push(p);
+  }
+  // tolerate (but ignore) calls to console.log()
+  var console = {
+    log: function(){}
+  };
+  var error = null;
   try {
-    eval(`_studentCode`.replace(/function ([^ \(]+)/g, '_scope.$1 = function'));
-    /* will associate the student's function to the global var above */
+    eval(`_studentCode`); // catch syntax errors, if any
   } catch (e) {
-    application.remote._log('/!\\ erreur: ' + e.message);
+    error = e;
   }
   function res(pts, msg) {
     application.remote._log((pts ? '[+] ' : '[-] ') + msg);
     return pts;
   }
-  var studentFct = _scope[`{{fctName}}`];
   var tests = [
-    `_studentCode`.replace(/[ \t]/g, '').indexOf('function{{fctName}}(') !== -1
-      ? res(1, 'function {{fctName}} a bien été trouvé dans le code')
-      : res(0, 'la fonction {{fctName}}() n\'est pas définie correctement'),
-    typeof studentFct === 'function' && studentFct(6, -2) === -3
-      ? res(1, 'l\'appel {{fctName}}(6, -2) retourne bien -3')
-      : res(0, 'l\'appel {{fctName}}(6, -2) devrait retourner -3'),
-    typeof studentFct === 'function' && studentFct(2, 0.5) === 4
-      ? res(1, 'l\'appel {{fctName}}(2, 0.5) retourne bien 4')
-      : res(0, 'l\'appel {{fctName}}(2, 0.5) devrait retourner 4'),
+    !error
+      ? res(1, 'no error occurred while running your code 👍')
+      : res(0, `an error occurred while running your code: ${error.message} 😿`),
+    _alerts.length === 1 && _alerts[0] === '{{{expectedValue}}}'
+      ? res(1, `{{{expectedValue}}} was displayed in an alert(), as expected 👍`)
+      : res(0, `{{{expectedValue}}} should have been displayed in an alert() ... 😿`),
   ];
-  application.remote._send(null, tests); // 1 point per passing test => 3 pts per exercise
+  application.remote._send(null, tests); // 1 point per passing test
 })();
 ```
+## Example: testing the output of a student's loop
 
-## Testing the output of a student's loop
+Student is expected to make a `for` loop that displays numbers using `console.log()`:
 
 ```js
 // automatic student evaluation code
 (function evaluateStudentCode(){
   var _logged = [];
   var _expected = [];
-  for (var i = {{n1}}; i <= {{n2}}; i++) { _expected.push(i) }
-  var console = { log: function(i){ _logged.push(i); } }; // tolerate console.log() calls
+  // generate expected array, based on provided values {{n1}} and {{n2}}
+  for (var i = {{n1}}; i <= {{n2}}; i++) {
+    _expected.push(i)
+  }
+  // mock console.log()
+  var console = {
+    log: function(i){
+      _logged.push(i);
+    }
+  };
   try {
     eval(`_studentCode`); // catch syntax errors, if any
   } catch (e) {
-    application.remote._log('/!\\ erreur: ' + e.message);
+    error = e;
   }
   function res(pts, msg) {
     application.remote._log((pts ? '[+] ' : '[-] ') + msg);
@@ -118,6 +174,9 @@ A `res()` function was created to provide feedback to students and count points.
     `_studentCode`.split('console.log').length === 2 // just 1 console.log call
       ? res(1, 'il y a bien un console.log for dans le code')
       : res(0, 'il devrait y avoir un console.log for dans le code'),
+    !error
+      ? res(1, 'no error occurred while running your code 👍')
+      : res(0, `an error occurred while running your code: ${error.message} 😿`),
     _logged.length
       ? res(1, 'console.log a bien été appelé')
       : res(0, 'console.log aurait du être appelé'),
@@ -131,17 +190,22 @@ A `res()` function was created to provide feedback to students and count points.
       ? res(1, 'le 10ème console.log affiche bien ' + _expected[9])
       : res(0, 'le 10ème console.log devrait afficher ' + _expected[9]),
   ];
-  application.remote._send(null, tests);
+  application.remote._send(null, tests); // => 1 point per passing test
 })();
 ```
 
-## Testing code relying on XMLHttpRequest
+
+## Testing AJAX code relying on `XMLHttpRequest` (asynchronous)
 
 ```js
 // automatic student evaluation code
 (function evaluateStudentCode(){
-  var _instances = [], _alerts = [], _methods = [], _urls = [], _sends = [];
   var _expectedResponse = `{"id": {{number}}}`;
+  var _instances = [], _alerts = [], _methods = [], _urls = [], _sends = [];
+  function alert(msg) {
+    _alerts.push(msg);
+  }
+  // fake/mocked XMLHttpRequest class
   function XMLHttpRequest(){
     _instances.push(this);
   }
@@ -165,10 +229,7 @@ A `res()` function was created to provide feedback to students and count points.
       try { this.onreadystatechange(); } catch (e) {}
     }, 150);
   };
-  function alert(msg) {
-    _alerts.push(msg);
-  }
-  var console = { log: function(t){} }; // tolerate console.log calls
+  // run student's code
   var error = null;
   try {
     eval(`_studentCode`); // catch syntax errors, if any
@@ -180,7 +241,7 @@ A `res()` function was created to provide feedback to students and count points.
     return pts;
   }
   var studentCode = `_studentCode`.trim();
-  //var canonicCode = studentCode.replace(/[ ;\r\n\t]/g, '');
+  // ... or canonic version: studentCode.replace(/[ ;\r\n\t]/g, '')
   setTimeout(() => {
     var tests = [
       error
@@ -213,47 +274,48 @@ A `res()` function was created to provide feedback to students and count points.
 })();
 ```
 
-## Testing code relying on user clicks on DOM nodes + AJAX
+## Fake web browser: testing code relying on user clicks on DOM nodes + AJAX
 
 ```js
 // automatic student evaluation code
 (function evaluateStudentCode(){
-  // __ FAKE WEB BROWSER ___
+  // polyfill Object.values()
+  Object.prototype.values = Object.prototype.values || (obj => Object.keys(obj).map(key => obj[key]));
+  // __ FAKE WEB BROWSER / DOM API MOCK ___
   function _Node(attrs) {
     Object.assign(this, attrs);
   }
   _Node.prototype.setAttribute = function(key, value) {
     this[key] = value;
   };
+  // mock the DOM
   var _fakeDom = {
-    numero: new _Node({ id: 'numero', value: '', }),
-    bouton: new _Node({ id: 'bouton', value: 'Chercher', }),
-    {{prop}}: new _Node({ id: '{{prop}}', value: '', }),
+    numero: new _Node({ tagName: 'input', id: 'numero', value: '', }),
+    bouton: new _Node({ tagName: 'input', id: 'bouton', value: 'Chercher', }),
+    {{prop}}: new _Node({ tagName: 'input', id: '{{prop}}', value: '', }),
   };
+  // mock the document object
   var document = {
-    getElementById: function(id) {
-      return _fakeDom[id];
-    },
-    /*
-    getElementsByTagName: function(tagName) {
-      return (tagName || '').toLowerCase() === 'div' ? [ _div ] : [];
-    },
-    */
-    querySelector: function(selector) {
-      selector = '' + selector
-      return selector[0] === '#' ? _fakeDom[selector.substr(1)] : null;
-    },
+    getElementById: (id) => _fakeDom[id],
+    getElementsByTagName: (tagName) => Object.values(_fakeDom).filter((node) => node.tagName === tagName),
+    getElementsByClassName: (className) => Object.values(_fakeDom).filter((node) => node.className === className),
     querySelectorAll: function(selector) {
       selector = '' + selector
-      if (selector.toLowerCase() === 'input') {
-        return Object.values(_fakeDom);
-      } else {
-        return selector[0] === '#' ? [ _fakeDom[selector.substr(1)] ] : [];
+      switch (selector[0]) {
+        case '#': return [ this.getElementById(selector.substr(1)) ];
+        case '.': return this.getElementsByClassName(selector.substr(1));
       }
+      return this.getElementsByTagName(selector);
+    },
+    querySelector: function(selector) {
+      return this.querySelectorAll(selector)[0];
     },
   };
-  function alert(msg) {} // tolerate console.log calls
-  var console = { log: function(t){} }; // tolerate console.log calls
+  // tolerate (and ignore) calls to console.log & alert, then mock the window object
+  function alert(msg) {}
+  var console = {
+    log: function(t){}
+  };
   var window = {
     document: document,
     alert: alert,
@@ -297,8 +359,6 @@ A `res()` function was created to provide feedback to students and count points.
     return pts;
   }
   var studentCode = `_studentCode`.trim();
-  //var canonicCode = studentCode.replace(/[ ;\r\n\t]/g, '');
-
   var tests = [
     error
       ? res(0, 'erreur: ' + error.message)
