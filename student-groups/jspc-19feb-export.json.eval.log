@@ -346,7 +346,7 @@ STUDENT: benjamin_kissous
   | 
   | // CODE EVALUATION:
   | 
-  | [-] erreur: _fakeDom.filter is not a function
+  | [+] le programme fonctionne sans erreur
   | [+] l'image initiale n'est pas modifiée tant que l'utilisateur ne clique pas
   | [-] clic sur bouton1 à causé une erreur: _fakeDom[id].onclick is not a function
   | [+] clic sur bouton1 => image https://i.imgur.com/X3iY0e3.jpg est bien affichée
@@ -355,13 +355,13 @@ STUDENT: benjamin_kissous
   | [-] clic sur bouton1 à causé une erreur: _fakeDom[id].onclick is not a function
   | [+] clic sur bouton1 => image https://i.imgur.com/X3iY0e3.jpg est bien affichée
   | 
-  | // -> STUDENT SCORE ARRAY: [ 0, 1, 0, 1, 0, 0, 0, 1 ]
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 0, 1, 0, 0, 0, 1 ]
   | 
-  | // -> EXERCISE POINTS: 1.5 / 4
+  | // -> EXERCISE POINTS: 2 / 4
 
-  => code score: 1.9444444444444444 / 16 pts
+  => code score: 2.4444444444444446 / 16 pts
 
-=> TOTAL STUDENT SCORE: 4.94 / 20
+=> TOTAL STUDENT SCORE: 5.44 / 20
 
 
 ================================
@@ -2460,22 +2460,22 @@ STUDENT: thibault_chambrillon
   | 
   | // CODE EVALUATION:
   | 
-  | [-] erreur: _fakeDom.filter is not a function
+  | [+] le programme fonctionne sans erreur
   | [+] l'image initiale n'est pas modifiée tant que l'utilisateur ne clique pas
-  | [-] clic sur bouton1 à causé une erreur: _fakeDom[id].onclick is not a function
+  | [-] clic sur bouton1 à causé une erreur: Cannot read property 'classList' of undefined
   | [+] clic sur bouton1 => image https://i.imgur.com/X3iY0e3.jpg est bien affichée
-  | [-] clic sur bouton2 à causé une erreur: _fakeDom[id].onclick is not a function
+  | [-] clic sur bouton2 à causé une erreur: Cannot read property 'classList' of undefined
   | [-] clic sur bouton2 => image https://i.imgur.com/MrsKxdZ.jpg devrait être affichée
-  | [-] clic sur bouton1 à causé une erreur: _fakeDom[id].onclick is not a function
+  | [-] clic sur bouton1 à causé une erreur: Cannot read property 'classList' of undefined
   | [+] clic sur bouton1 => image https://i.imgur.com/X3iY0e3.jpg est bien affichée
   | 
-  | // -> STUDENT SCORE ARRAY: [ 0, 1, 0, 1, 0, 0, 0, 1 ]
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 0, 1, 0, 0, 0, 1 ]
   | 
-  | // -> EXERCISE POINTS: 1.5 / 4
+  | // -> EXERCISE POINTS: 2 / 4
 
-  => code score: 2.9444444444444446 / 16 pts
+  => code score: 3.4444444444444446 / 16 pts
 
-=> TOTAL STUDENT SCORE: 5.94 / 20
+=> TOTAL STUDENT SCORE: 6.44 / 20
 
 
 ================================
@@ -2605,7 +2605,7 @@ STUDENT: timothee_ong
   | 
   | // CODE EVALUATION:
   | 
-  | [-] erreur: _fakeDom.filter is not a function
+  | [-] erreur: document.getElementsById is not a function
   | [+] l'image initiale n'est pas modifiée tant que l'utilisateur ne clique pas
   | [-] clic sur bouton1 à causé une erreur: _fakeDom[id].onclick is not a function
   | [+] clic sur bouton1 => image https://i.imgur.com/X3iY0e3.jpg est bien affichée

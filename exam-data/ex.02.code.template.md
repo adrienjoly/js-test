@@ -124,6 +124,7 @@ document.getElementById('bouton').onclick = function() {
 ```js
 // automatic student evaluation code
 (function evaluateStudentCode(){
+  Object.prototype.values = Object.prototype.values || (obj => Object.keys(obj).map(key => obj[key]));
   // __ PROVIDED CLASS __
   class {{class}} {
     constructor(el) {
@@ -148,8 +149,8 @@ document.getElementById('bouton').onclick = function() {
   };
   var document = {
     getElementById: (id) => _fakeDom[id],
-    getElementsByTagName: (tagName) => _fakeDom.filter((node) => node.tagName === tagName),
-    getElementsByClassName: (className) => _fakeDom.filter((node) => node.className === className),
+    getElementsByTagName: (tagName) => Object.values(_fakeDom).filter((node) => node.tagName === tagName),
+    getElementsByClassName: (className) => Object.values(_fakeDom).filter((node) => node.className === className),
     querySelectorAll: function(selector) {
       selector = '' + selector
       switch (selector[0]) {
@@ -369,6 +370,7 @@ document.getElementById('bouton2').onclick = function() {
 ```js
 // automatic student evaluation code
 (function evaluateStudentCode(){
+  Object.prototype.values = Object.prototype.values || (obj => Object.keys(obj).map(key => obj[key]));
   var _urls = [
     '{{{img1}}}',
     '{{{img2}}}',
@@ -387,8 +389,8 @@ document.getElementById('bouton2').onclick = function() {
   };
   var document = {
     getElementById: (id) => _fakeDom[id],
-    getElementsByTagName: (tagName) => _fakeDom.filter((node) => node.tagName === tagName),
-    getElementsByClassName: (className) => _fakeDom.filter((node) => node.className === className),
+    getElementsByTagName: (tagName) => Object.values(_fakeDom).filter((node) => node.tagName === tagName),
+    getElementsByClassName: (className) => Object.values(_fakeDom).filter((node) => node.className === className),
     querySelectorAll: function(selector) {
       selector = '' + selector
       switch (selector[0]) {

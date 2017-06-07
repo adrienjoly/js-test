@@ -103,7 +103,7 @@ STUDENT: alexandre_blanc
   | 
   | // CODE EVALUATION:
   | 
-  | [-] erreur: _fakeDom.filter is not a function
+  | [-] erreur: Invalid left-hand side in assignment
   | [+] l'image initiale n'est pas modifiée tant que l'utilisateur ne clique pas
   | [-] clic sur bouton1 à causé une erreur: _fakeDom[id].onclick is not a function
   | [+] clic sur bouton1 => image https://i.imgur.com/MrsKxdZ.jpg est bien affichée
@@ -311,22 +311,22 @@ STUDENT: elsa_haddad
   | 
   | // CODE EVALUATION:
   | 
-  | [-] erreur: _fakeDom.filter is not a function
+  | [+] le programme fonctionne sans erreur
   | [+] l'image initiale n'est pas modifiée tant que l'utilisateur ne clique pas
-  | [-] clic sur bouton1 à causé une erreur: _fakeDom[id].onclick is not a function
+  | [+] clic sur bouton1 ne cause aucune erreur
   | [+] clic sur bouton1 => image https://i.imgur.com/MrsKxdZ.jpg est bien affichée
-  | [-] clic sur bouton2 à causé une erreur: _fakeDom[id].onclick is not a function
+  | [+] clic sur bouton2 ne cause aucune erreur
   | [-] clic sur bouton2 => image https://i.imgur.com/X3iY0e3.jpg devrait être affichée
-  | [-] clic sur bouton1 à causé une erreur: _fakeDom[id].onclick is not a function
+  | [+] clic sur bouton1 ne cause aucune erreur
   | [+] clic sur bouton1 => image https://i.imgur.com/MrsKxdZ.jpg est bien affichée
   | 
-  | // -> STUDENT SCORE ARRAY: [ 0, 1, 0, 1, 0, 0, 0, 1 ]
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 0, 1, 1 ]
   | 
-  | // -> EXERCISE POINTS: 1.5 / 4
+  | // -> EXERCISE POINTS: 3.5 / 4
 
-  => code score: 6.277777777777778 / 16 pts
+  => code score: 8.277777777777779 / 16 pts
 
-=> TOTAL STUDENT SCORE: 9.27 / 20
+=> TOTAL STUDENT SCORE: 11.27 / 20
 
 
 ================================
@@ -875,7 +875,7 @@ STUDENT: lucas_lacheny
   | 
   | // CODE EVALUATION:
   | 
-Wed, 07 Jun 2017 09:04:13 GMT jailed:sandbox DYNAMIC PLUGIN:64
+Wed, 07 Jun 2017 09:25:27 GMT jailed:sandbox DYNAMIC PLUGIN:65
     eval(`var secs = 100;
          ^^^^^^^^^^^^^^^^
 SyntaxError: missing ) after argument list
@@ -1162,7 +1162,7 @@ STUDENT: martin_callonnec
   | 
   | // CODE EVALUATION:
   | 
-  | [-] erreur: _fakeDom.filter is not a function
+  | [+] le programme fonctionne sans erreur
   | [+] l'image initiale n'est pas modifiée tant que l'utilisateur ne clique pas
   | [-] clic sur bouton1 à causé une erreur: _fakeDom[id].onclick is not a function
   | [+] clic sur bouton1 => image https://i.imgur.com/X3iY0e3.jpg est bien affichée
@@ -1171,13 +1171,13 @@ STUDENT: martin_callonnec
   | [-] clic sur bouton1 à causé une erreur: _fakeDom[id].onclick is not a function
   | [+] clic sur bouton1 => image https://i.imgur.com/X3iY0e3.jpg est bien affichée
   | 
-  | // -> STUDENT SCORE ARRAY: [ 0, 1, 0, 1, 0, 0, 0, 1 ]
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 0, 1, 0, 0, 0, 1 ]
   | 
-  | // -> EXERCISE POINTS: 1.5 / 4
+  | // -> EXERCISE POINTS: 2 / 4
 
-  => code score: 3.7222222222222223 / 16 pts
+  => code score: 4.222222222222222 / 16 pts
 
-=> TOTAL STUDENT SCORE: 4.72 / 20
+=> TOTAL STUDENT SCORE: 5.22 / 20
 
 
 ================================
@@ -1479,7 +1479,7 @@ STUDENT: paul_esmenard
   | 
   | // CODE EVALUATION:
   | 
-  | [-] erreur: _fakeDom.filter is not a function
+  | [-] erreur: afficher is not defined
   | [+] l'image initiale n'est pas modifiée tant que l'utilisateur ne clique pas
   | [-] clic sur bouton1 à causé une erreur: _fakeDom[id].onclick is not a function
   | [+] clic sur bouton1 => image https://i.imgur.com/MrsKxdZ.jpg est bien affichée
@@ -1600,22 +1600,22 @@ STUDENT: pauline_bittante
   | 
   | // CODE EVALUATION:
   | 
-  | [-] erreur: _fakeDom.filter is not a function
+  | [+] le programme fonctionne sans erreur
   | [+] l'image initiale n'est pas modifiée tant que l'utilisateur ne clique pas
-  | [-] clic sur bouton1 à causé une erreur: _fakeDom[id].onclick is not a function
+  | [+] clic sur bouton1 ne cause aucune erreur
   | [+] clic sur bouton1 => image https://i.imgur.com/X3iY0e3.jpg est bien affichée
-  | [-] clic sur bouton2 à causé une erreur: _fakeDom[id].onclick is not a function
+  | [+] clic sur bouton2 ne cause aucune erreur
   | [-] clic sur bouton2 => image https://i.imgur.com/MrsKxdZ.jpg devrait être affichée
-  | [-] clic sur bouton1 à causé une erreur: _fakeDom[id].onclick is not a function
+  | [+] clic sur bouton1 ne cause aucune erreur
   | [+] clic sur bouton1 => image https://i.imgur.com/X3iY0e3.jpg est bien affichée
   | 
-  | // -> STUDENT SCORE ARRAY: [ 0, 1, 0, 1, 0, 0, 0, 1 ]
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 0, 1, 1 ]
   | 
-  | // -> EXERCISE POINTS: 1.5 / 4
+  | // -> EXERCISE POINTS: 3.5 / 4
 
-  => code score: 2.611111111111111 / 16 pts
+  => code score: 4.611111111111111 / 16 pts
 
-=> TOTAL STUDENT SCORE: 6.61 / 20
+=> TOTAL STUDENT SCORE: 8.61 / 20
 
 
 ================================
