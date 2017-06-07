@@ -170,7 +170,6 @@ document.getElementById('bouton').onclick = function() {
     alert: alert,
     console: console,
   };
-  // TODO: after successfull grading => add this fakedom code to /docs
   function res(pts, msg) {
     application.remote._log((pts ? '[+] ' : '[-] ') + msg);
     return pts;
@@ -410,7 +409,6 @@ document.getElementById('bouton2').onclick = function() {
     alert: alert,
     console: console,
   };
-  // TODO: after successfull grading => add this fakedom code to /docs
   function res(pts, msg) {
     application.remote._log((pts ? '[+] ' : '[-] ') + msg);
     return pts;
