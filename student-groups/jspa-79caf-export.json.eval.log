@@ -124,17 +124,17 @@ STUDENT: alexandre_louf
   | [-] clic sur bouton1 à causé une erreur: _fakeDom[id].onclick is not a function
   | [+] clic sur bouton1 => image https://i.imgur.com/X3iY0e3.jpg est bien affichée
   | [-] clic sur bouton2 à causé une erreur: _fakeDom[id].onclick is not a function
-  | [+] clic sur bouton2 => image https://i.imgur.com/X3iY0e3.jpg est bien affichée
+  | [-] clic sur bouton2 => image https://i.imgur.com/MrsKxdZ.jpg devrait être affichée
   | [-] clic sur bouton1 à causé une erreur: _fakeDom[id].onclick is not a function
   | [+] clic sur bouton1 => image https://i.imgur.com/X3iY0e3.jpg est bien affichée
   | 
-  | // -> STUDENT SCORE ARRAY: [ 0, 1, 0, 1, 0, 1, 0, 1 ]
+  | // -> STUDENT SCORE ARRAY: [ 0, 1, 0, 1, 0, 0, 0, 1 ]
   | 
-  | // -> EXERCISE POINTS: 2 / 4
+  | // -> EXERCISE POINTS: 1.5 / 4
 
-  => code score: 8 / 16 pts
+  => code score: 7.5 / 16 pts
 
-=> TOTAL STUDENT SCORE: 12 / 20
+=> TOTAL STUDENT SCORE: 11.5 / 20
 
 
 ================================
@@ -229,17 +229,17 @@ STUDENT: benoit_boureau
   | [-] clic sur bouton1 à causé une erreur: _fakeDom[id].onclick is not a function
   | [+] clic sur bouton1 => image https://i.imgur.com/MrsKxdZ.jpg est bien affichée
   | [-] clic sur bouton2 à causé une erreur: _fakeDom[id].onclick is not a function
-  | [+] clic sur bouton2 => image https://i.imgur.com/MrsKxdZ.jpg est bien affichée
+  | [-] clic sur bouton2 => image https://i.imgur.com/X3iY0e3.jpg devrait être affichée
   | [-] clic sur bouton1 à causé une erreur: _fakeDom[id].onclick is not a function
   | [+] clic sur bouton1 => image https://i.imgur.com/MrsKxdZ.jpg est bien affichée
   | 
-  | // -> STUDENT SCORE ARRAY: [ 0, 1, 0, 1, 0, 1, 0, 1 ]
+  | // -> STUDENT SCORE ARRAY: [ 0, 1, 0, 1, 0, 0, 0, 1 ]
   | 
-  | // -> EXERCISE POINTS: 2 / 4
+  | // -> EXERCISE POINTS: 1.5 / 4
 
-  => code score: 3 / 16 pts
+  => code score: 2.5 / 16 pts
 
-=> TOTAL STUDENT SCORE: 5 / 20
+=> TOTAL STUDENT SCORE: 4.5 / 20
 
 
 ================================
@@ -545,17 +545,17 @@ STUDENT: fares_kessi
   | [-] clic sur bouton1 à causé une erreur: _fakeDom[id].onclick is not a function
   | [+] clic sur bouton1 => image https://i.imgur.com/MrsKxdZ.jpg est bien affichée
   | [-] clic sur bouton2 à causé une erreur: _fakeDom[id].onclick is not a function
-  | [+] clic sur bouton2 => image https://i.imgur.com/MrsKxdZ.jpg est bien affichée
+  | [-] clic sur bouton2 => image https://i.imgur.com/X3iY0e3.jpg devrait être affichée
   | [-] clic sur bouton1 à causé une erreur: _fakeDom[id].onclick is not a function
   | [+] clic sur bouton1 => image https://i.imgur.com/MrsKxdZ.jpg est bien affichée
   | 
-  | // -> STUDENT SCORE ARRAY: [ 0, 1, 0, 1, 0, 1, 0, 1 ]
+  | // -> STUDENT SCORE ARRAY: [ 0, 1, 0, 1, 0, 0, 0, 1 ]
   | 
-  | // -> EXERCISE POINTS: 2 / 4
+  | // -> EXERCISE POINTS: 1.5 / 4
 
-  => code score: 3.111111111111111 / 16 pts
+  => code score: 2.611111111111111 / 16 pts
 
-=> TOTAL STUDENT SCORE: 5.11 / 20
+=> TOTAL STUDENT SCORE: 4.61 / 20
 
 
 ================================
@@ -639,17 +639,17 @@ STUDENT: garance_fabre
   | [-] clic sur bouton1 à causé une erreur: _fakeDom[id].onclick is not a function
   | [+] clic sur bouton1 => image https://i.imgur.com/X3iY0e3.jpg est bien affichée
   | [-] clic sur bouton2 à causé une erreur: _fakeDom[id].onclick is not a function
-  | [+] clic sur bouton2 => image https://i.imgur.com/X3iY0e3.jpg est bien affichée
+  | [-] clic sur bouton2 => image https://i.imgur.com/MrsKxdZ.jpg devrait être affichée
   | [-] clic sur bouton1 à causé une erreur: _fakeDom[id].onclick is not a function
   | [+] clic sur bouton1 => image https://i.imgur.com/X3iY0e3.jpg est bien affichée
   | 
-  | // -> STUDENT SCORE ARRAY: [ 0, 1, 0, 1, 0, 1, 0, 1 ]
+  | // -> STUDENT SCORE ARRAY: [ 0, 1, 0, 1, 0, 0, 0, 1 ]
   | 
-  | // -> EXERCISE POINTS: 2 / 4
+  | // -> EXERCISE POINTS: 1.5 / 4
 
-  => code score: 2.4444444444444446 / 16 pts
+  => code score: 1.9444444444444444 / 16 pts
 
-=> TOTAL STUDENT SCORE: 5.44 / 20
+=> TOTAL STUDENT SCORE: 4.94 / 20
 
 
 ================================
@@ -755,17 +755,17 @@ STUDENT: gaspard_legrain
   | [-] clic sur bouton1 à causé une erreur: _fakeDom[id].onclick is not a function
   | [+] clic sur bouton1 => image https://i.imgur.com/MrsKxdZ.jpg est bien affichée
   | [-] clic sur bouton2 à causé une erreur: _fakeDom[id].onclick is not a function
-  | [+] clic sur bouton2 => image https://i.imgur.com/MrsKxdZ.jpg est bien affichée
+  | [-] clic sur bouton2 => image https://i.imgur.com/X3iY0e3.jpg devrait être affichée
   | [-] clic sur bouton1 à causé une erreur: _fakeDom[id].onclick is not a function
   | [+] clic sur bouton1 => image https://i.imgur.com/MrsKxdZ.jpg est bien affichée
   | 
-  | // -> STUDENT SCORE ARRAY: [ 0, 1, 0, 1, 0, 1, 0, 1 ]
+  | // -> STUDENT SCORE ARRAY: [ 0, 1, 0, 1, 0, 0, 0, 1 ]
   | 
-  | // -> EXERCISE POINTS: 2 / 4
+  | // -> EXERCISE POINTS: 1.5 / 4
 
-  => code score: 6.555555555555555 / 16 pts
+  => code score: 6.055555555555555 / 16 pts
 
-=> TOTAL STUDENT SCORE: 10.55 / 20
+=> TOTAL STUDENT SCORE: 10.05 / 20
 
 
 ================================
@@ -895,17 +895,17 @@ STUDENT: jacques_hovine
   | [+] clic sur bouton1 ne cause aucune erreur
   | [+] clic sur bouton1 => image https://i.imgur.com/MrsKxdZ.jpg est bien affichée
   | [+] clic sur bouton2 ne cause aucune erreur
-  | [+] clic sur bouton2 => image https://i.imgur.com/MrsKxdZ.jpg est bien affichée
+  | [-] clic sur bouton2 => image https://i.imgur.com/X3iY0e3.jpg devrait être affichée
   | [+] clic sur bouton1 ne cause aucune erreur
   | [+] clic sur bouton1 => image https://i.imgur.com/MrsKxdZ.jpg est bien affichée
   | 
-  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1, 1, 1 ]
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 0, 1, 1 ]
   | 
-  | // -> EXERCISE POINTS: 4 / 4
+  | // -> EXERCISE POINTS: 3.5 / 4
 
-  => code score: 13 / 16 pts
+  => code score: 12.5 / 16 pts
 
-=> TOTAL STUDENT SCORE: 17 / 20
+=> TOTAL STUDENT SCORE: 16.5 / 20
 
 
 ================================
@@ -1000,17 +1000,17 @@ STUDENT: johanne_bordeaux
   | [-] clic sur bouton1 à causé une erreur: _fakeDom[id].onclick is not a function
   | [+] clic sur bouton1 => image https://i.imgur.com/MrsKxdZ.jpg est bien affichée
   | [-] clic sur bouton2 à causé une erreur: _fakeDom[id].onclick is not a function
-  | [+] clic sur bouton2 => image https://i.imgur.com/MrsKxdZ.jpg est bien affichée
+  | [-] clic sur bouton2 => image https://i.imgur.com/X3iY0e3.jpg devrait être affichée
   | [-] clic sur bouton1 à causé une erreur: _fakeDom[id].onclick is not a function
   | [+] clic sur bouton1 => image https://i.imgur.com/MrsKxdZ.jpg est bien affichée
   | 
-  | // -> STUDENT SCORE ARRAY: [ 0, 1, 0, 1, 0, 1, 0, 1 ]
+  | // -> STUDENT SCORE ARRAY: [ 0, 1, 0, 1, 0, 0, 0, 1 ]
   | 
-  | // -> EXERCISE POINTS: 2 / 4
+  | // -> EXERCISE POINTS: 1.5 / 4
 
-  => code score: 5.111111111111111 / 16 pts
+  => code score: 4.611111111111111 / 16 pts
 
-=> TOTAL STUDENT SCORE: 8.11 / 20
+=> TOTAL STUDENT SCORE: 7.61 / 20
 
 
 ================================
@@ -1120,17 +1120,17 @@ STUDENT: jonathan_leder
   | [-] clic sur bouton1 à causé une erreur: _fakeDom[id].onclick is not a function
   | [+] clic sur bouton1 => image https://i.imgur.com/MrsKxdZ.jpg est bien affichée
   | [-] clic sur bouton2 à causé une erreur: _fakeDom[id].onclick is not a function
-  | [+] clic sur bouton2 => image https://i.imgur.com/MrsKxdZ.jpg est bien affichée
+  | [-] clic sur bouton2 => image https://i.imgur.com/X3iY0e3.jpg devrait être affichée
   | [-] clic sur bouton1 à causé une erreur: _fakeDom[id].onclick is not a function
   | [+] clic sur bouton1 => image https://i.imgur.com/MrsKxdZ.jpg est bien affichée
   | 
-  | // -> STUDENT SCORE ARRAY: [ 0, 1, 0, 1, 0, 1, 0, 1 ]
+  | // -> STUDENT SCORE ARRAY: [ 0, 1, 0, 1, 0, 0, 0, 1 ]
   | 
-  | // -> EXERCISE POINTS: 2 / 4
+  | // -> EXERCISE POINTS: 1.5 / 4
 
-  => code score: 2 / 16 pts
+  => code score: 1.5 / 16 pts
 
-=> TOTAL STUDENT SCORE: 5 / 20
+=> TOTAL STUDENT SCORE: 4.5 / 20
 
 
 ================================
@@ -1342,17 +1342,17 @@ STUDENT: loa_diaz
   | [-] clic sur bouton1 à causé une erreur: _fakeDom[id].onclick is not a function
   | [+] clic sur bouton1 => image https://i.imgur.com/MrsKxdZ.jpg est bien affichée
   | [-] clic sur bouton2 à causé une erreur: _fakeDom[id].onclick is not a function
-  | [+] clic sur bouton2 => image https://i.imgur.com/MrsKxdZ.jpg est bien affichée
+  | [-] clic sur bouton2 => image https://i.imgur.com/X3iY0e3.jpg devrait être affichée
   | [-] clic sur bouton1 à causé une erreur: _fakeDom[id].onclick is not a function
   | [+] clic sur bouton1 => image https://i.imgur.com/MrsKxdZ.jpg est bien affichée
   | 
-  | // -> STUDENT SCORE ARRAY: [ 0, 1, 0, 1, 0, 1, 0, 1 ]
+  | // -> STUDENT SCORE ARRAY: [ 0, 1, 0, 1, 0, 0, 0, 1 ]
   | 
-  | // -> EXERCISE POINTS: 2 / 4
+  | // -> EXERCISE POINTS: 1.5 / 4
 
-  => code score: 2 / 16 pts
+  => code score: 1.5 / 16 pts
 
-=> TOTAL STUDENT SCORE: 4 / 20
+=> TOTAL STUDENT SCORE: 3.5 / 20
 
 
 ================================
@@ -1461,17 +1461,17 @@ STUDENT: loic_parisse
   | [-] clic sur bouton1 à causé une erreur: _fakeDom[id].onclick is not a function
   | [+] clic sur bouton1 => image https://i.imgur.com/MrsKxdZ.jpg est bien affichée
   | [-] clic sur bouton2 à causé une erreur: _fakeDom[id].onclick is not a function
-  | [+] clic sur bouton2 => image https://i.imgur.com/MrsKxdZ.jpg est bien affichée
+  | [-] clic sur bouton2 => image https://i.imgur.com/X3iY0e3.jpg devrait être affichée
   | [-] clic sur bouton1 à causé une erreur: _fakeDom[id].onclick is not a function
   | [+] clic sur bouton1 => image https://i.imgur.com/MrsKxdZ.jpg est bien affichée
   | 
-  | // -> STUDENT SCORE ARRAY: [ 0, 1, 0, 1, 0, 1, 0, 1 ]
+  | // -> STUDENT SCORE ARRAY: [ 0, 1, 0, 1, 0, 0, 0, 1 ]
   | 
-  | // -> EXERCISE POINTS: 2 / 4
+  | // -> EXERCISE POINTS: 1.5 / 4
 
-  => code score: 5.555555555555555 / 16 pts
+  => code score: 5.055555555555555 / 16 pts
 
-=> TOTAL STUDENT SCORE: 9.55 / 20
+=> TOTAL STUDENT SCORE: 9.05 / 20
 
 
 ================================
@@ -1611,17 +1611,17 @@ STUDENT: lucille_vanlaer
   | [-] clic sur bouton1 à causé une erreur: _fakeDom[id].onclick is not a function
   | [+] clic sur bouton1 => image https://i.imgur.com/MrsKxdZ.jpg est bien affichée
   | [-] clic sur bouton2 à causé une erreur: _fakeDom[id].onclick is not a function
-  | [+] clic sur bouton2 => image https://i.imgur.com/MrsKxdZ.jpg est bien affichée
+  | [-] clic sur bouton2 => image https://i.imgur.com/X3iY0e3.jpg devrait être affichée
   | [-] clic sur bouton1 à causé une erreur: _fakeDom[id].onclick is not a function
   | [+] clic sur bouton1 => image https://i.imgur.com/MrsKxdZ.jpg est bien affichée
   | 
-  | // -> STUDENT SCORE ARRAY: [ 0, 1, 0, 1, 0, 1, 0, 1 ]
+  | // -> STUDENT SCORE ARRAY: [ 0, 1, 0, 1, 0, 0, 0, 1 ]
   | 
-  | // -> EXERCISE POINTS: 2 / 4
+  | // -> EXERCISE POINTS: 1.5 / 4
 
-  => code score: 6.555555555555555 / 16 pts
+  => code score: 6.055555555555555 / 16 pts
 
-=> TOTAL STUDENT SCORE: 10.55 / 20
+=> TOTAL STUDENT SCORE: 10.05 / 20
 
 
 ================================
@@ -1747,17 +1747,17 @@ STUDENT: maelle_bellazar
   | [-] clic sur bouton1 à causé une erreur: _fakeDom[id].onclick is not a function
   | [+] clic sur bouton1 => image https://i.imgur.com/MrsKxdZ.jpg est bien affichée
   | [-] clic sur bouton2 à causé une erreur: _fakeDom[id].onclick is not a function
-  | [+] clic sur bouton2 => image https://i.imgur.com/MrsKxdZ.jpg est bien affichée
+  | [-] clic sur bouton2 => image https://i.imgur.com/X3iY0e3.jpg devrait être affichée
   | [-] clic sur bouton1 à causé une erreur: _fakeDom[id].onclick is not a function
   | [+] clic sur bouton1 => image https://i.imgur.com/MrsKxdZ.jpg est bien affichée
   | 
-  | // -> STUDENT SCORE ARRAY: [ 0, 1, 0, 1, 0, 1, 0, 1 ]
+  | // -> STUDENT SCORE ARRAY: [ 0, 1, 0, 1, 0, 0, 0, 1 ]
   | 
-  | // -> EXERCISE POINTS: 2 / 4
+  | // -> EXERCISE POINTS: 1.5 / 4
 
-  => code score: 4.666666666666666 / 16 pts
+  => code score: 4.166666666666666 / 16 pts
 
-=> TOTAL STUDENT SCORE: 7.66 / 20
+=> TOTAL STUDENT SCORE: 7.16 / 20
 
 
 ================================
@@ -1905,17 +1905,17 @@ STUDENT: noelie_roux
   | [-] clic sur bouton1 à causé une erreur: _fakeDom[id].onclick is not a function
   | [+] clic sur bouton1 => image https://i.imgur.com/MrsKxdZ.jpg est bien affichée
   | [-] clic sur bouton2 à causé une erreur: _fakeDom[id].onclick is not a function
-  | [+] clic sur bouton2 => image https://i.imgur.com/MrsKxdZ.jpg est bien affichée
+  | [-] clic sur bouton2 => image https://i.imgur.com/X3iY0e3.jpg devrait être affichée
   | [-] clic sur bouton1 à causé une erreur: _fakeDom[id].onclick is not a function
   | [+] clic sur bouton1 => image https://i.imgur.com/MrsKxdZ.jpg est bien affichée
   | 
-  | // -> STUDENT SCORE ARRAY: [ 0, 1, 0, 1, 0, 1, 0, 1 ]
+  | // -> STUDENT SCORE ARRAY: [ 0, 1, 0, 1, 0, 0, 0, 1 ]
   | 
-  | // -> EXERCISE POINTS: 2 / 4
+  | // -> EXERCISE POINTS: 1.5 / 4
 
-  => code score: 6.444444444444445 / 16 pts
+  => code score: 5.944444444444445 / 16 pts
 
-=> TOTAL STUDENT SCORE: 10.44 / 20
+=> TOTAL STUDENT SCORE: 9.94 / 20
 
 
 ================================
@@ -2025,17 +2025,17 @@ STUDENT: pauline_feraut
   | [+] clic sur bouton1 ne cause aucune erreur
   | [+] clic sur bouton1 => image https://i.imgur.com/X3iY0e3.jpg est bien affichée
   | [+] clic sur bouton2 ne cause aucune erreur
-  | [+] clic sur bouton2 => image https://i.imgur.com/X3iY0e3.jpg est bien affichée
+  | [-] clic sur bouton2 => image https://i.imgur.com/MrsKxdZ.jpg devrait être affichée
   | [+] clic sur bouton1 ne cause aucune erreur
   | [+] clic sur bouton1 => image https://i.imgur.com/X3iY0e3.jpg est bien affichée
   | 
-  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1, 1, 1 ]
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 0, 1, 1 ]
   | 
-  | // -> EXERCISE POINTS: 4 / 4
+  | // -> EXERCISE POINTS: 3.5 / 4
 
-  => code score: 8.555555555555555 / 16 pts
+  => code score: 8.055555555555555 / 16 pts
 
-=> TOTAL STUDENT SCORE: 11.55 / 20
+=> TOTAL STUDENT SCORE: 11.05 / 20
 
 
 ================================
@@ -2161,17 +2161,17 @@ STUDENT: pierry_lim
   | [+] clic sur bouton1 ne cause aucune erreur
   | [+] clic sur bouton1 => image https://i.imgur.com/MrsKxdZ.jpg est bien affichée
   | [+] clic sur bouton2 ne cause aucune erreur
-  | [+] clic sur bouton2 => image https://i.imgur.com/MrsKxdZ.jpg est bien affichée
+  | [-] clic sur bouton2 => image https://i.imgur.com/X3iY0e3.jpg devrait être affichée
   | [+] clic sur bouton1 ne cause aucune erreur
   | [+] clic sur bouton1 => image https://i.imgur.com/MrsKxdZ.jpg est bien affichée
   | 
-  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1, 1, 1 ]
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 0, 1, 1 ]
   | 
-  | // -> EXERCISE POINTS: 4 / 4
+  | // -> EXERCISE POINTS: 3.5 / 4
 
-  => code score: 12.333333333333332 / 16 pts
+  => code score: 11.833333333333332 / 16 pts
 
-=> TOTAL STUDENT SCORE: 15.33 / 20
+=> TOTAL STUDENT SCORE: 14.83 / 20
 
 
 ================================
@@ -2305,17 +2305,17 @@ STUDENT: tristan_machin
   | [-] clic sur bouton1 à causé une erreur: _fakeDom[id].onclick is not a function
   | [+] clic sur bouton1 => image https://i.imgur.com/X3iY0e3.jpg est bien affichée
   | [-] clic sur bouton2 à causé une erreur: _fakeDom[id].onclick is not a function
-  | [+] clic sur bouton2 => image https://i.imgur.com/X3iY0e3.jpg est bien affichée
+  | [-] clic sur bouton2 => image https://i.imgur.com/MrsKxdZ.jpg devrait être affichée
   | [-] clic sur bouton1 à causé une erreur: _fakeDom[id].onclick is not a function
   | [+] clic sur bouton1 => image https://i.imgur.com/X3iY0e3.jpg est bien affichée
   | 
-  | // -> STUDENT SCORE ARRAY: [ 0, 1, 0, 1, 0, 1, 0, 1 ]
+  | // -> STUDENT SCORE ARRAY: [ 0, 1, 0, 1, 0, 0, 0, 1 ]
   | 
-  | // -> EXERCISE POINTS: 2 / 4
+  | // -> EXERCISE POINTS: 1.5 / 4
 
-  => code score: 3.4444444444444446 / 16 pts
+  => code score: 2.9444444444444446 / 16 pts
 
-=> TOTAL STUDENT SCORE: 7.44 / 20
+=> TOTAL STUDENT SCORE: 6.94 / 20
 
 
 ================================
@@ -2433,17 +2433,17 @@ STUDENT: valentin_guilbaud
   | [+] clic sur bouton1 ne cause aucune erreur
   | [+] clic sur bouton1 => image https://i.imgur.com/X3iY0e3.jpg est bien affichée
   | [+] clic sur bouton2 ne cause aucune erreur
-  | [+] clic sur bouton2 => image https://i.imgur.com/X3iY0e3.jpg est bien affichée
+  | [-] clic sur bouton2 => image https://i.imgur.com/MrsKxdZ.jpg devrait être affichée
   | [+] clic sur bouton1 ne cause aucune erreur
   | [+] clic sur bouton1 => image https://i.imgur.com/X3iY0e3.jpg est bien affichée
   | 
-  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1, 1, 1 ]
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 0, 1, 1 ]
   | 
-  | // -> EXERCISE POINTS: 4 / 4
+  | // -> EXERCISE POINTS: 3.5 / 4
 
-  => code score: 12.666666666666668 / 16 pts
+  => code score: 12.166666666666668 / 16 pts
 
-=> TOTAL STUDENT SCORE: 15.66 / 20
+=> TOTAL STUDENT SCORE: 15.16 / 20
 
 
 ================================

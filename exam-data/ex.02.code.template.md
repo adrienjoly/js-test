@@ -371,7 +371,7 @@ document.getElementById('bouton2').onclick = function() {
 (function evaluateStudentCode(){
   var _urls = [
     '{{{img1}}}',
-    '{{{img1}}}',
+    '{{{img2}}}',
   ];
   // __ FAKE WEB BROWSER ___
   function _Node(attrs) {
