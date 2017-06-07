@@ -875,19 +875,6 @@ STUDENT: lucas_lacheny
   | 
   | // CODE EVALUATION:
   | 
-Wed, 07 Jun 2017 09:25:27 GMT jailed:sandbox DYNAMIC PLUGIN:65
-    eval(`var secs = 100;
-         ^^^^^^^^^^^^^^^^
-SyntaxError: missing ) after argument list
-    at Object.exports.runInNewContext (vm.js:71:16)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13/node_modules/jailed-node/sandbox/sandbox.js:151:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13/node_modules/jailed-node/sandbox/sandbox.js:165:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-13/node_modules/jailed-node/sandbox/sandbox.js:53:7)
-    at emitTwo (events.js:106:13)
-    at process.emit (events.js:191:7)
-    at process.nextTick (internal/child_process.js:744:12)
-    at _combinedTickCallback (internal/process/next_tick.js:67:7)
-    at process._tickCallback (internal/process/next_tick.js:98:9)
   | => test runner err: SyntaxError: missing ) after argument list
   | 
   | // -> EXERCISE POINTS: 0 / 4
