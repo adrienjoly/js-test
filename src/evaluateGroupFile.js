@@ -10,10 +10,13 @@ var filePath = process.argv[2] || '../student-groups/js-controle-1-classe-1.json
 
 var PATH_SOURCE = './exam-data/';
 var SCORES_FILE = PATH_SOURCE + 'scores.csv';
+var SCORES_DETAIL_FILE = PATH_SOURCE + 'scores-detail.csv';
 
 console.log('Reading and evaluating answers from:', filePath, '...');
 
-fs.appendFileSync(SCORES_FILE, [ '\"GROUP FILE:\"', '\"' + filePath + '\"' ].toString() + '\n');
+var groupHeader = [ '\"GROUP FILE:\"', '\"' + filePath + '\"' ].toString() + '\n';
+fs.appendFileSync(SCORES_FILE, groupHeader);
+fs.appendFileSync(SCORES_DETAIL_FILE, groupHeader);
 
 var submissionSet = require(filePath).submissions; // this line allows to parse an entire firebase json export at once
 

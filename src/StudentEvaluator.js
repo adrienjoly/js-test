@@ -11,6 +11,7 @@ var PATH_SOURCE = './exam-data/';
 // outputs
 
 var SCORES_FILE = PATH_SOURCE + 'scores.csv';
+var SCORES_DETAIL_FILE = PATH_SOURCE + 'scores-detail.csv';
 
 // helpers
 
@@ -74,6 +75,7 @@ var evaluators = ExerciseEnumerator.parseAllFrom(PATH_SOURCE).map(function(exDat
 // evaluation logic
 
 function evaluateStudent(student, next) {
+  var scoreArray = [];
   var totalScore = 0;
   var totalPoints = 0;
   console.log('\n\n================================\n')
@@ -84,11 +86,13 @@ function evaluateStudent(student, next) {
     console.log();
     console.log('=> TOTAL STUDENT SCORE:', totalScore, '/', totalPoints);
     var csv = [ student.key, totalScore ];
-    fs.appendFile(SCORES_FILE, csv.toString() + '\n', next);
+    fs.appendFileSync(SCORES_FILE, csv.toString() + '\n');
+    fs.appendFile(SCORES_DETAIL_FILE, csv.concat(scoreArray).toString() + '\n', next);
   }
 
   function evaluateExercise(evaluator, callback) {
     evaluator(student, function(err, res){
+      scoreArray = scoreArray.concat(res.scoreArray);
       totalScore += res.score;
       totalPoints += res.length;
       callback(err, res);

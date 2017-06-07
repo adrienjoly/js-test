@@ -1,6 +1,6 @@
 {
   "projects": {
-    "staging": "js-test-ft-partiel",
-    "default": "js-test-ft-partiel"
+    "staging": "js-part-2",
+    "default": "js-part-2"
   }
 }
