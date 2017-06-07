@@ -373,7 +373,7 @@ document.getElementById('bouton2').onclick = function() {
   Object.prototype.values = Object.prototype.values || (obj => Object.keys(obj).map(key => obj[key]));
   var _urls = [
     '{{{img1}}}',
-    '{{{img2}}}',
+    '{{{img1}}}', // TODO: put img2 here instead. also fix in exercise content.
   ];
   // __ FAKE WEB BROWSER ___
   function _Node(attrs) {
