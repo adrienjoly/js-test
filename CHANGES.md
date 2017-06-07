@@ -1,3 +1,5 @@
+ * Feature: scores-detail.csv lists points for each exercise
+
 == v2.7 Robust exam process
  * Feature: /rendus.html (for teacher use) displays which students have submitted their answers
  * [FR] Consignes de surveillance (procédure et conseils pour surveillants tiers)

@@ -1,0 +1,20 @@
+{
+  "active" : 1,
+  "submissions" : {
+    "adrien_joly" : {
+      "_d" : "Mon May 29 2017 10:45:17 GMT+0200 (CEST)",
+      "_f" : "Mon May 29 2017 10:17:32 GMT+0200 (CEST)",
+      "_ft" : 1496045852792,
+      "_t" : 1496047516765,
+      "_uid" : "103769591752335079590",
+      "code5" : "function acronyme(tab) {\n  var result = '';\n  for (var i = 0; i < tab.length; i++) {\n    result = result + tab[i].substr(0, 3);\n  }\n  return result;\n}",
+      "code6" : "var comp1 = new AnimCounter(document.getElementById('compteur1'));\nvar comp2 = new AnimCounter(document.getElementById('compteur2'));\ndocument.getElementById('bouton').onclick = function() {\n  comp1.countTo(100);\n  comp2.countTo(45);\n};",
+      "code7" : "var xhr = new XMLHttpRequest();\nxhr.open('POST', 'https://js-jsonplaceholder.herokuapp.com/posts');\nxhr.onreadystatechange = function() {\n  if (xhr.readyState === 4) {\n    console.log(JSON.parse(xhr.responseText).id);\n  }\n};\nxhr.send(JSON.stringify({\n  title: 'Firebase'\n}));",
+      "code8" : "var img = document.getElementById('image');\ndocument.getElementById('bouton1').onclick = function() {\n  img.src = 'https://i.imgur.com/X3iY0e3.jpg';\n};\ndocument.getElementById('bouton2').onclick = function() {\n  img.src = 'https://i.imgur.com/MrsKxdZ.jpg';\n};",
+      "qcm1" : "3",
+      "qcm2" : "1",
+      "qcm3" : "2",
+      "qcm4" : "4"
+    }
+  }
+}

@@ -35,9 +35,11 @@ QuizzEvaluator.prototype.getMaxScore = function() {
 QuizzEvaluator.prototype.evaluateAnswers = function(answers) {
   var log = [];
   var score = 0;
+  var scoreArray = [];
   for (var id in this.solutions) {
     var points = this.scoreAnswer(answers[id], this.solutions[id]);
     score += points;
+    scoreArray.push(points);
     log.push({
       questionId: id,
       answer: answers[id],
@@ -48,7 +50,8 @@ QuizzEvaluator.prototype.evaluateAnswers = function(answers) {
   return {
     length: this.getMaxScore(),
     score: score,
-    log: log,    
+    log: log,
+    scoreArray: scoreArray,
   };
 };
 

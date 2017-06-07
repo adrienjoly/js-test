@@ -7,7 +7,7 @@ function readfile(filePath) {
 module.exports = {
 
   // Front-end config
-  title: 'JavaScript Partiel 1 - Classe 4',
+  title: 'JavaScript - Partiel 2',
 
   // General settings
   PUBLIC_TEST_MODE: false, // set to false to restrict acccess and identify students using Google Login
@@ -17,24 +17,42 @@ module.exports = {
 
   // Settings for conversion and publication of exercise templates
   examPack: {
-    publishSolutions: true, // `true` required for realtime-eval/auto-eval back-ends, DISPLAY_SOLUTIONS_AFTER_SUBMIT and/or dashboard
-    publishEvalTests: true, // `true` required for realtime-eval/auto-eval back-ends, DISPLAY_SOLUTIONS_AFTER_SUBMIT and/or dashboard
+    publishSolutions: false, // `true` required for realtime-eval/auto-eval back-ends, DISPLAY_SOLUTIONS_AFTER_SUBMIT and/or dashboard
+    publishEvalTests: false, // `true` required for realtime-eval/auto-eval back-ends, DISPLAY_SOLUTIONS_AFTER_SUBMIT and/or dashboard
   },
 
   // Back-end config
   backend: {
-    type: 'realtime-eval', // 'realtime-eval', 'auto-eval', or 'firebase' (with FIREBASE_CONFIG)
+    type: 'firebase', // 'realtime-eval', 'auto-eval', or 'firebase' (with FIREBASE_CONFIG)
     /*
     EMAIL_SUBMIT_CONFIG: {
       mdTemplate: readfile('public/data/submitted.md'),
     },
-    FIREBASE_CONFIG: {
-      apiKey: "AIzaSyCCVnADtKjLmzivOw4fTLDUkCz90xkj4ws",
-      databaseURL: "https://js-test-ft-partiel.firebaseio.com",
-      messagingSenderId: "699482710183"
-      // admin/dashboard: https://console.firebase.google.com/project/js-test-ft-partiel/database/data
-    },
     */
+    FIREBASE_CONFIG: {
+      'jsparta': {
+        apiKey: "AIzaSyAry2VPlxIdHkfAUvtXGjeYWEqbXlG0mtM",
+        databaseURL: "https://jspa-79caf.firebaseio.com",
+        messagingSenderId: "1046784867897"
+        // admin/dashboard: https://console.firebase.google.com/project/jspa-79caf/database/data
+      },
+      'jspartb': {
+        apiKey: "AIzaSyAZrJhZzWl-ncg8JvfRpCM7GAnHrIF7L_M",
+        databaseURL: "https://jspb-fd563.firebaseio.com",
+        messagingSenderId: "253586129661"
+        // admin/dashboard: https://console.firebase.google.com/project/jspb-fd563/database/data
+      },
+      'jspartc': {
+        apiKey: "AIzaSyA8CYvNgJOjOT7Fb5XResPor0UgvSnpRhg",
+        databaseURL: "https://jspc-19feb.firebaseio.com",
+        messagingSenderId: "527718816676"
+        // admin/dashboard: https://console.firebase.google.com/project/jspc-19feb/database/data
+      },
+    }['__INSTANCE__']
+    
+    
+    
+    ,
   },
 
   teacherEmail: 'adrien.joly@eemi.com', // required for dashboard auth
@@ -51,7 +69,7 @@ module.exports = {
     ptsNull: 0,
   },
   codeGrading: {
-    ptsPerExercise: 3, // applies to scores of code exercises
+    ptsPerExercise: 4,
   }
 
 };

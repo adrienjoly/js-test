@@ -1,176 +1,35 @@
-<!-- Condition simple -->
+## Acronyme
 
-Supposons qu'une variable `{{varName}}` ait été créée et contienne une chaine de caractères.
+Un acronyme consiste en la concaténation des trois premières lettres de chaque prénom et nom d'une personne.
 
-Implémenter une condition qui affiche `'{{varName}} vaut {{value}}'` à l'aide de `alert()`, si (et seulement si) `{{varName}}` est strictement égal à `{{value}}`.
+Voici quelques tests unitaires pour illustrer l'usage et les retours attendus d'une fonction `{{fctName}}()`:
 
-- { "varName": "prenom", "value": "patrice" }
-- { "varName": "prenom", "value": "michel" }
-- { "varName": "nom", "value": "durand" }
+```js
+{{fctName}}(['adrien', 'joly']) === 'adrjol';
+{{fctName}}(['paul', 'edouard', 'vaillant']) === 'pauedovai';
+```
+
+Définir la fonction `{{fctName}}` retournant l'acronyme d'une personne, à partir d'un tableau de prénom(s) et nom(s) passé en paramètre, tel que montré en exemple dans les tests unitaires ci-dessus.
+
+Note: Vous pouvez utiliser les méthodes `substr()` ou `substring()` pour extraire les premières lettres d'une chaine de caractères.
+
+- { "fctName": "acronyme" }
+- { "fctName": "genererAcronyme" }
+- { "fctName": "acro" }
 
 ???
 
 Solution:
 
 ```js
-if ({{varName}} === '{{value}}') {
-  alert('{{varName}} vaut {{value}}');
+function {{fctName}}(noms) {
+  var acr = '';
+  for (var i = 0; i < noms.length; i++) {
+    acr = acr + noms[i].substr(0, 3);
+  }
+  return acr;
 }
-```
-
---
-
-```js
-// automatic student evaluation code
-(function evaluateStudentCode(){
-  var _res = [];
-  var console = { log: function(){} }; // tolerate console.log() calls
-  function alert(p) {
-    _res.push(p);
-  }
-  var {{varName}};
-  var tests = [];
-  var error = null;
-  try {
-    eval(`_studentCode`); // catch syntax errors, if any
-  } catch (e) {
-    application.remote._log('/!\\ erreur: ' + e.message);
-    error = e;
-  }
-  function res(pts, msg) {
-    application.remote._log((pts ? '[+] ' : '[-] ') + msg);
-    return pts;
-  }
-  tests = tests.concat([
-    !error && _res.length === 0
-      ? res(1, 'le code fonctionne sans erreur')
-      : res(0, 'une erreur ou un alert() inattendu est survenu'),
-  ]);
-  {{varName}} = '{{value}}';
-  try {
-    eval(`_studentCode`); // catch syntax errors, if any
-  } catch (e) {
-    application.remote._log('/!\\ erreur: ' + e.message);
-  }
-  tests = tests.concat([
-    _res.length === 1
-      ? res(1, 'quand {{varName}} vaut {{value}}, l\'alert est bien affiché')
-      : res(0, 'quand {{varName}} vaut {{value}}, un alert devrait être affiché'),
-    _res[0] === '{{varName}} vaut {{value}}'
-      ? res(1, 'l\'alert contient le message demandé')
-      : res(0, 'l\'alert ne contient pas le message demandé'),
-  ]);
-  application.remote._send(null, tests); // 1 point per passing test => 3 pts per exercise
-})();
-```
-
----
-
-<!-- Condition avancée -->
-
-Nous allons écrire un programme qui donne la distance de certaines villes, au départ de Paris.
-
-Ce programme devra:
-
- - Inviter l'utilisateur à saisir le nom d'une ville;
- - Dans le cas où l'utilisateur a saisi `{{city1}}`, répondre `{{dist1}}`;
- - Dans le cas où l'utilisateur a saisi `{{city2}}`, répondre `{{dist2}}`;
- - Sinon, répondre `mauvaise saisie`.
-
-Les réponses sont à afficher à l'aide de la fonction `alert()`. Respecter les textes fournis à la lettre. (y compris la casse, espaces et ponctuation)
-
-- { "city1": "agen",      "dist1": "590km", "city2": "marseille", "dist2": "750km" }
-- { "city1": "le mans",   "dist1": "200km", "city2": "angers",    "dist2": "300km" }
-- { "city1": "marseille", "dist1": "750km", "city2": "bordeaux",  "dist2": "550km" }
-- { "city1": "roubaix",   "dist1": "230km", "city2": "lyon",      "dist2": "450km" }
-
-???
-
-Solution:
-
-```js
-var reponse = prompt('saisissez le nom d\'une ville svp');
-if (reponse === '{{city1}}') {
-  alert('{{dist1}}');
-} else if (reponse === '{{city2}}') {
-  alert('{{dist2}}');
-} else {
-  alert('mauvaise saisie');
-}
-```
-
---
-
-```js
-// automatic student evaluation code
-(function evaluateStudentCode(){
-  var _res;
-  var tests = [];
-  var console = { log: function(){} }; // tolerate console.log() calls
-  var prompt, alert = (p) => _res.push(p);
-  function res(pts, msg) {
-    application.remote._log((pts ? '[+] ' : '[-] ') + msg);
-    return pts;
-  }
-  // test 1
-  _res = [];
-  prompt = () => '{{city1}}';
-  try {
-    eval(`_studentCode`); // catch syntax errors, if any
-  } catch (e) {
-    application.remote._log('/!\\ erreur: ' + e.message);
-  }
-  tests.push(_res.length === 1 && _res[0] === '{{dist1}}'
-    ? res(1, 'quand on tape {{city1}}, la réponse est bien {{dist1}}')
-    : res(0, 'quand on tape {{city1}}, la réponse devrait être {{dist1}}')
-  );
-  // test 2
-  _res = [];
-  prompt = () => '{{city2}}';
-  try {
-    eval(`_studentCode`); // catch syntax errors, if any
-  } catch (e) {
-    application.remote._log('/!\\ erreur: ' + e.message);
-  }
-  tests.push(_res.length === 1 && _res[0] === '{{dist2}}'
-    ? res(1, 'quand on tape {{city2}}, la réponse est bien {{dist2}}')
-    : res(0, 'quand on tape {{city2}}, la réponse devrait être {{dist2}}')
-  );
-  // test 3
-  _res = [];
-  prompt = () => 'brest';
-  try {
-    eval(`_studentCode`); // catch syntax errors, if any
-  } catch (e) {
-    application.remote._log('/!\\ erreur: ' + e.message);
-  }
-  tests.push(_res.length === 1 && _res[0] === "mauvaise saisie"
-    ? res(1, 'quand on tape brest, la réponse est bien "mauvaise saisie"')
-    : res(0, 'quand on tape brest, la réponse devrait être "mauvaise saisie"')
-  );
-  application.remote._send(null, tests); // 1 point per passing test => 3 pts per exercise
-})();
-```
-
----
-
-<!-- Fonctions -->
-
-Définir une fonction `{{fctName}}` qui retourne le résultat de la division des deux nombres passés en paramètres.
-
-Exemple d'appel: `{{fctName}}(6, -2);` doit retourner `-3` (résultat de `6 / -2`).
-
-- { "fctName": "division" }
-- { "fctName": "diviser" }
-
-???
-
-Solution:
-
-```js
-function {{fctName}}(a, b) {
-  return a / b;
-}
+// remarque: il est aussi possible d'utiliser les méthodes map() et join() au lieu d'une boucle
 ```
 
 --
@@ -191,39 +50,73 @@ function {{fctName}}(a, b) {
     return pts;
   }
   var studentFct = _scope[`{{fctName}}`];
-  var tests = [
+  function unit(p, ret) {
+    var result;
+    if (typeof studentFct !== 'function') {
+      return res(0, `{{fctName}} n'est pas une fonction valide`);
+    }
+    try {
+      result = studentFct(p);
+    } catch(e) {
+      return res(0, `l'appel {{fctName}}(${JSON.stringify(p)}) cause l'erreur: ${e.message}`);
+    }
+    return result === ret
+      ? res(1, `l'appel {{fctName}}(${JSON.stringify(p)}) retourne bien ${ret}`)
+      : res(0, `l'appel {{fctName}}(${JSON.stringify(p)}) devrait retourner ${ret}`)
+  }
+  application.remote._send(null, [
     `_studentCode`.replace(/[ \t]/g, '').indexOf('function{{fctName}}(') !== -1
       ? res(1, 'function {{fctName}} a bien été trouvé dans le code')
       : res(0, 'la fonction {{fctName}}() n\'est pas définie correctement'),
-    typeof studentFct === 'function' && studentFct(6, -2) === -3
-      ? res(1, 'l\'appel {{fctName}}(6, -2) retourne bien -3')
-      : res(0, 'l\'appel {{fctName}}(6, -2) devrait retourner -3'),
-    typeof studentFct === 'function' && studentFct(2, 0.5) === 4
-      ? res(1, 'l\'appel {{fctName}}(2, 0.5) retourne bien 4')
-      : res(0, 'l\'appel {{fctName}}(2, 0.5) devrait retourner 4'),
-  ];
-  application.remote._send(null, tests); // 1 point per passing test => 3 pts per exercise
+    unit(['adrien', 'joly'], 'adrjol'),
+    unit(['paul', 'edouard', 'vaillant'], 'pauedovai'),
+    unit(['eric', 'maubert'], 'erimau'),
+  ]);
 })();
 ```
 
 ---
 
-<!-- Boucles -->
+## Programmation Orientée Objet
 
-Implémenter une boucle `for()` qui écrit les nombres de `{{n1}}` à `{{n2}}` (compris) dans la console, à raison d'une ligne par nombre. Utiliser `console.log()`.
+Vous souhaitez intégrer deux compteurs sur votre page Web. Chaque compteur doit être initialisé à zéro, puis, quand l'utilisateur cliquera sur un bouton, leur valeur devra augmenter automatiquement, jusqu'à atteindre leur valeur cible au bout d'une seconde. La valeur cible du premier compteur est `{{target}}`, celle du deuxième compteur est `45`.
 
-- { "n1": 10, "n2": 20 }
-- { "n1": 50, "n2": 60 }
-- { "n1": -5, "n2":  5 }
+Vous avez trouvé sur Internet un composant "compteur animé" fournissant la documentation suivante:
+
+> Pour intégrer un compteur sur votre page:
+> - instanciez la classe `{{class}}`, en passant en paramètre du constructeur le noeud HTML dans lequel intégrer le compteur. (ex: un `<div>`, tel que retourné par `document.getElementById()`)
+> - puis appelez la méthode `countTo()` de cette instance, en passant la valeur cible en paramètre. Le compteur se mettra alors à compter automatiquement de la valeur `0` à la valeur cible passée en paramètre, en une seconde.
+>
+> Vous pouvez intégrer plusieurs compteurs sur une même page. Il suffit de créer une instance par compteur, et de les intégrer chacun dans un noeud HTML différent.
+
+Voici le code HTML de votre page web:
+
+```html
+<div id="compteur1"></div>
+<div id="compteur2"></div>
+<button id="bouton">Démarrer compteurs<button>
+```
+
+Écrire le code du fichier JavaScript qui sera intégré à votre page pour:
+ - intégrer les deux compteurs à l'aide du composant décrit plus haut, dans les `<div>` fournis;
+ - démarrer les deux compteurs quand l'utilisateur clique sur le bouton.
+
+Note: Supposez que le composant `{{class}}` a déjà été chargé dans la page. La classe est prête à être instanciée dans votre code. (Ne pas fournir la définition de ce composant.)
+
+- { "target": "100", "class": "AnimCounter" }
+- { "target": "100", "class": "Counter" }
+- { "target": "10", "class": "AnimCounter" }
+- { "target": "10", "class": "Counter" }
 
 ???
 
-Solution:
-
 ```js
-for (var i = {{n1}}; i <= {{n2}}; i++) {
-  console.log(i);
-}
+var compteur1 = new {{class}}(document.getElementById('compteur1'));
+var compteur2 = new {{class}}(document.getElementById('compteur2'));
+document.getElementById('bouton').onclick = function() {
+  compteur1.countTo({{target}});
+  compteur2.countTo(45);
+};
 ```
 
 --
@@ -231,79 +124,124 @@ for (var i = {{n1}}; i <= {{n2}}; i++) {
 ```js
 // automatic student evaluation code
 (function evaluateStudentCode(){
-  var _logged = [];
-  var _expected = [];
-  for (var i = {{n1}}; i <= {{n2}}; i++) { _expected.push(i) }
-  var console = { log: function(i){ _logged.push(i); } }; // tolerate console.log() calls
+  Object.prototype.values = Object.prototype.values || (obj => Object.keys(obj).map(key => obj[key]));
+  // __ PROVIDED CLASS __
+  class {{class}} {
+    constructor(el) {
+      this.el = el;
+      this.el.innerHTML = 0;
+    }
+    countTo(target) {
+      this.el.innerHTML = target;
+    }
+  }
+  // __ FAKE WEB BROWSER ___
+  function _Node(attrs) {
+    Object.assign(this, attrs);
+  }
+  _Node.prototype.setAttribute = function(key, value) {
+    this[key] = value;
+  };
+  var _fakeDom = {
+    bouton: new _Node({ tagName: 'button', id: 'bouton', }),
+    compteur1: new _Node({ tagName: 'div', id: 'compteur1', }),
+    compteur2: new _Node({ tagName: 'div', id: 'compteur2', }),
+  };
+  var document = {
+    getElementById: (id) => _fakeDom[id],
+    getElementsByTagName: (tagName) => Object.values(_fakeDom).filter((node) => node.tagName === tagName),
+    getElementsByClassName: (className) => Object.values(_fakeDom).filter((node) => node.className === className),
+    querySelectorAll: function(selector) {
+      selector = '' + selector
+      switch (selector[0]) {
+        case '#': return [ this.getElementById(selector.substr(1)) ];
+        case '.': return this.getElementsByClassName(selector.substr(1));
+      }
+      return this.getElementsByTagName(selector);
+    },
+    querySelector: function(selector) {
+      return this.querySelectorAll(selector)[0];
+    },
+  };
+  function alert(msg) {} // tolerate console.log calls
+  var console = { log: function(t){} }; // tolerate console.log calls
+  var window = {
+    document: document,
+    alert: alert,
+    console: console,
+  };
+  function res(pts, msg) {
+    application.remote._log((pts ? '[+] ' : '[-] ') + msg);
+    return pts;
+  }
+  // fonctions de test
+  function test(prefix, id, val) {
+    return _fakeDom[id].innerHTML === val
+      ? res(1, `${prefix}, compteur1 affiche bien ${val}`)
+      : res(0, `${prefix}, compteur1 devrait afficher ${val}`)
+  }
+  // état initial
+  var error = null;
   try {
     eval(`_studentCode`); // catch syntax errors, if any
-  } catch (e) {
-    application.remote._log('/!\\ erreur: ' + e.message);
-  }
-  function res(pts, msg) {
-    application.remote._log((pts ? '[+] ' : '[-] ') + msg);
-    return pts;
+  } catch(e) {
+    error = e;
   }
   var tests = [
-    `_studentCode`.split('for').length === 2 // just 1 for-loop
-      ? res(1, 'il y a bien une boucle for dans le code')
-      : res(0, 'il devrait y avoir une boucle for dans le code'),
-    `_studentCode`.split('console.log').length === 2 // just 1 console.log call
-      ? res(1, 'il y a bien un console.log for dans le code')
-      : res(0, 'il devrait y avoir un console.log for dans le code'),
-    _logged.length
-      ? res(1, 'console.log a bien été appelé')
-      : res(0, 'console.log aurait du être appelé'),
-    _logged[0] === _expected[0]
-      ? res(1, 'le 1er console.log affiche bien ' + _expected[0])
-      : res(0, 'le 1er console.log devrait afficher ' + _expected[0]),
-    _logged[4] === _expected[4]
-      ? res(1, 'le 5ème console.log affiche bien ' + _expected[4])
-      : res(0, 'le 5ème console.log devrait afficher ' + _expected[4]),
-    _logged[9] === _expected[9]
-      ? res(1, 'le 10ème console.log affiche bien ' + _expected[9])
-      : res(0, 'le 10ème console.log devrait afficher ' + _expected[9]),
+    error
+      ? res(0, 'erreur: ' + error.message)
+      : res(1, 'le programme fonctionne sans erreur'),
+    test(`avant clic de l'utilisateur`, `compteur1`, 0),
+    test(`avant clic de l'utilisateur`, `compteur2`, 0),
   ];
-  application.remote._send(null, tests);
+  // clic
+  error = null;
+  try {
+    _fakeDom.bouton.onclick({});
+  } catch(e) {
+    error = e;
+  }
+  application.remote._send(null, tests.concat([
+    error
+      ? res(0, `clic sur bouton à causé une erreur: ` + error.message)
+      : res(1, `clic sur bouton ne cause aucune erreur`),
+    test(`1 seconde après clic`, `compteur1`, {{target}}),
+    test(`1 seconde après clic`, `compteur2`, 45),
+  ]));
 })();
 ```
 
 ---
 
-<!-- Tableaux -->
+## Requête AJAX
 
-Définir une fonction `contient{{val}}` qui prend en paramètre un tableau de nombres, et retourne:
- - `true` si la valeur `{{val}}` est contenue au moins une fois dans le tableau passé en paramètre,
- - ou `false` sinon.
- 
-Exemples d'appels:
- - `contient{{val}}([1, 2, 3]);` doit retourner `true`.
- - `contient{{val}}([4, 5, 6]);` doit retourner `false`.
+Écrire un programme JavaScript permettant:
+ - d'ajouter une "ressource" sur le serveur `https://js-jsonplaceholder.herokuapp.com` en envoyant une requête AJAX (utilisant `XMLHttpRequest`) sur l'API HTTP POST disponible à l'adresse `/posts`;
+ - cette ressource est un objet JSON dont la propriété `{{prop}}` doit avoir pour valeur la chaine de caractères `{{val}}`; (vous pouvez donner la valeur de votre choix aux autres propriétés)
+ - puis afficher dans un `{{output}}()` la valeur de la propriété `id` contenue dans la réponse à cette requête. (et seulement cette valeur)
 
-- { "val": 1 }
-- { "val": 3 }
+Pour vous aider à définir votre requête, consulter la documentation du serveur, située sur la page web `https://github.com/typicode/jsonplaceholder`.
+
+- { "prop": "title", "val": "Heroku", "output": "alert" }
+- { "prop": "body", "val": "Firebase", "output": "alert" }
+- { "prop": "title", "val": "Firebase", "output": "console.log" }
+- { "prop": "body", "val": "Heroku", "output": "console.log" }
 
 ???
 
-Solution:
-
 ```js
-function contient{{val}}(tableau) {
-  var indice = tableau.indexOf({{val}});
-  if (indice === -1) {
-    return false;
-  } else {
-    return true;
+var xhr = new XMLHttpRequest(); 
+xhr.open('POST', 'https://js-jsonplaceholder.herokuapp.com/posts');
+xhr.onreadystatechange = function() {
+  if (xhr.readyState === 4) {
+    //console.info('reponse reçue:', xhr.responseText);
+    var reponse = JSON.parse(xhr.responseText);
+    {{output}}(reponse.id);
   }
-}
-```
-
-...ou:
-
-```js
-function contient{{val}}(tableau) {
-  return tableau.indexOf({{val}}) !== -1;
-}
+};
+xhr.send(JSON.stringify({
+  {{prop}}: '{{val}}',
+}));
 ```
 
 --
@@ -311,30 +249,206 @@ function contient{{val}}(tableau) {
 ```js
 // automatic student evaluation code
 (function evaluateStudentCode(){
-  var console = { log: function(){} }; // tolerate console.log() calls
-  var _scope = {}; // store the function name in the global scope 
+  var _expectedId = 101;
+  var _alerts = [], _logs = [], _instances = [], _opens = [], _sends = [];
+  var _results = '{{output}}' === 'alert' ? _alerts : _logs;
+  var alert = _alerts.push.bind(_alerts);
+  var console = {
+    log: _logs.push.bind(_logs)
+  };
+  function XMLHttpRequest(){
+    _instances.push(this);
+  }
+  XMLHttpRequest.prototype.open = function(method, url) {
+    _opens.push(arguments);
+  }
+  XMLHttpRequest.prototype.send = function(data) {
+    _sends.push(data);
+    setTimeout(() => {
+      this.readyState = 3;
+      try { this.onreadystatechange(); } catch (e) {}
+    }, 10);
+    setTimeout(() => {
+      this.readyState = 4;
+      this.responseText = JSON.stringify(Object.assign(
+        {},
+        typeof data === 'object' ? data : {},
+        { id: _expectedId }
+      ));
+      try { this.onreadystatechange(); } catch (e) {}
+    }, 20);
+  };
+  var error = null;
   try {
-    eval(`_studentCode`.replace(/function ([^ \(]+)/g, '_scope.$1 = function'));
-    /* will associate the student's function to the global var above */
-  } catch (e) {
-    application.remote._log('/!\\ erreur: ' + e.message);
+    eval(`_studentCode`); // catch syntax errors, if any
+  } catch(e) {
+    error = e;
   }
   function res(pts, msg) {
     application.remote._log((pts ? '[+] ' : '[-] ') + msg);
     return pts;
   }
-  var studentFct = _scope[`contient{{val}}`];
-  var tests = [
-    `_studentCode`.replace(/[ \t]/g, '').indexOf('functioncontient{{val}}(') !== -1
-      ? res(1, 'function contient{{val}} a bien été trouvé dans le code')
-      : res(0, 'la fonction contient{{val}}() n\'est pas définie correctement'),
-    typeof studentFct === 'function' && studentFct([40, {{val}}, 5, {{val}}]) === true
-      ? res(1, 'l\'appel contient{{val}}([40, {{val}}, 5, {{val}}]) retourne bien true')
-      : res(0, 'l\'appel contient{{val}}([40, {{val}}, 5, {{val}}]) devrait retourner true'),
-    typeof studentFct === 'function' && studentFct([40, 4, 5, 4]) === false
-      ? res(1, 'l\'appel contient{{val}}([40, 4, 5, 4]) retourne bien false')
-      : res(0, 'l\'appel contient{{val}}([40, 4, 5, 4]) devrait retourner false'),
+  setTimeout(() => {
+    //application.remote._log(_opens);
+    var content;
+    try {
+      content = JSON.parse(_sends[0]);
+    } catch (e) {}
+    application.remote._send(null, [
+      error
+        ? res(0, 'erreur: ' + error.message)
+        : res(1, 'le programme fonctionne sans erreur'),
+      `_studentCode`.indexOf('new XMLHttpRequest') === -1
+        ? res(0, 'il fallait instancier `XMLHttpRequest` avec le mot-clé `new`')
+        : res(1, 'la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`'),
+      _opens.length !== 1
+        ? res(0, 'il fallait appeler la méthode open() de l\'instance de `XMLHttpRequest`')
+        : res(1, 'la méthode open() de l\'instance de `XMLHttpRequest` a bien été appelée'),
+      (_opens[0] || ['', ''])[0].toLowerCase() !== 'post'
+        ? res(0, 'il fallait passer `POST` comme 1er paramètre de la méthode open()')
+        : res(1, '`POST` a bien été passé en paramètre de la méthode open()'),
+      (_opens[0] || ['', ''])[1] !== 'https://js-jsonplaceholder.herokuapp.com/posts'
+        ? res(0, 'il fallait passer l\'url demandée comme 2ème paramètre de la méthode open()')
+        : res(1, 'l\'url demandée a bien été passée en paramètre de la méthode open()'),
+      typeof (_instances[0] || {}).onreadystatechange !== 'function'
+        ? res(0, 'il fallait affecter une fonction à la propriété `onreadystatechange` de l\'instance')
+        : res(1, 'une fonction a bien été affectée à la propriété `onreadystatechange` de l\'instance'),
+      _sends.length !== 1
+        ? res(0, 'il fallait appeler la méthode send() une fois pour envoyer la requête')
+        : res(1, 'la méthode send() a bien été appelée une fois'),
+      (content || {}).{{prop}} !== '{{val}}'
+        ? res(0, 'il fallait passer à send() un objet ayant une propriété {{prop}}: {{val}}')
+        : res(1, 'un objet ayant une propriété {{prop}}: {{val}} a bien été passé à send()'),
+      !_results.length || _results[_results.length - 1] != _expectedId
+        ? res(0, `la valeur d\'id ${_expectedId} aurait être affichée dans un {{output}}()`)
+        : res(1, `la valeur d\'id ${_expectedId} a bien été affichée dans un {{output}}()`),
+    ]);
+  }, 50);
+})();
+```
+
+---
+
+## Jeu des 7 différences
+
+Un client souhaite permettre aux utilisateurs de son site de comparer facilement deux images, en passant de l'une à l'autre autant de fois qu'il le souhaite.
+
+Le code HTML de la page est fourni:
+
+```html
+<button id="bouton1">image 1</button>
+<button id="bouton2">image 2</button>
+<img id="image" src="{{{img1}}}">
+```
+
+Écrire le code JavaScript permettant:
+ - d'afficher l'image `{{{img1}}}` dans la balise `<img>` quand l'utilisateur clique sur le `bouton1`;
+ - d'afficher l'image `{{{img1}}}` dans la balise `<img>` quand l'utilisateur clique sur le `bouton2`.
+
+Le code que vous écrirez ci-dessous sera stocké dans un fichier `.js` puis intégré à la page du client via une balise `<script>`.
+
+- { "img1": "https://i.imgur.com/X3iY0e3.jpg", "img2": "https://i.imgur.com/MrsKxdZ.jpg" }
+- { "img1": "https://i.imgur.com/MrsKxdZ.jpg", "img2": "https://i.imgur.com/X3iY0e3.jpg" }
+
+???
+
+Solution:
+
+```js
+var image = document.getElementById('image');
+document.getElementById('bouton1').onclick = function() {
+  image.src = '{{{img1}}}';
+};
+document.getElementById('bouton2').onclick = function() {
+  image.src = '{{{img1}}}';
+};
+```
+
+--
+
+```js
+// automatic student evaluation code
+(function evaluateStudentCode(){
+  Object.prototype.values = Object.prototype.values || (obj => Object.keys(obj).map(key => obj[key]));
+  var _urls = [
+    '{{{img1}}}',
+    '{{{img1}}}', // TODO: put img2 here instead. also fix in exercise content.
   ];
-  application.remote._send(null, tests); // 1 point per passing test => 3 pts per exercise
+  // __ FAKE WEB BROWSER ___
+  function _Node(attrs) {
+    Object.assign(this, attrs);
+  }
+  _Node.prototype.setAttribute = function(key, value) {
+    this[key] = value;
+  };
+  var _fakeDom = {
+    bouton1: new _Node({ tagName: 'button', id: 'bouton1', }),
+    bouton2: new _Node({ tagName: 'button', id: 'bouton2', }),
+    image: new _Node({ tagName: 'img', id: 'image', src: _urls[0], }),
+  };
+  var document = {
+    getElementById: (id) => _fakeDom[id],
+    getElementsByTagName: (tagName) => Object.values(_fakeDom).filter((node) => node.tagName === tagName),
+    getElementsByClassName: (className) => Object.values(_fakeDom).filter((node) => node.className === className),
+    querySelectorAll: function(selector) {
+      selector = '' + selector
+      switch (selector[0]) {
+        case '#': return [ this.getElementById(selector.substr(1)) ];
+        case '.': return this.getElementsByClassName(selector.substr(1));
+      }
+      return this.getElementsByTagName(selector);
+    },
+    querySelector: function(selector) {
+      return this.querySelectorAll(selector)[0];
+    },
+  };
+  function alert(msg) {} // tolerate console.log calls
+  var console = { log: function(t){} }; // tolerate console.log calls
+  var window = {
+    document: document,
+    alert: alert,
+    console: console,
+  };
+  function res(pts, msg) {
+    application.remote._log((pts ? '[+] ' : '[-] ') + msg);
+    return pts;
+  }
+  // fonctions de test
+  function clicSur(id, imgUrl) {
+    var error = null;
+    try {
+      _fakeDom[id].onclick({});
+    } catch(e) {
+      error = e;
+    }
+    return [
+      error
+        ? res(0, `clic sur ${id} à causé une erreur: ` + error.message)
+        : res(1, `clic sur ${id} ne cause aucune erreur`),
+      _fakeDom.image.src === imgUrl
+        ? res(1, `clic sur ${id} => image ${imgUrl} est bien affichée`)
+        : res(0, `clic sur ${id} => image ${imgUrl} devrait être affichée`)
+    ];
+  }
+  // état initial
+  var error = null;
+  try {
+    eval(`_studentCode`); // catch syntax errors, if any
+  } catch(e) {
+    error = e;
+  }
+  var tests = [
+    error
+      ? res(0, 'erreur: ' + error.message)
+      : res(1, 'le programme fonctionne sans erreur'),
+    _fakeDom.image.src === _urls[0]
+      ? res(1, 'l\'image initiale n\'est pas modifiée tant que l\'utilisateur ne clique pas')
+      : res(0, 'l\'image initiale ne devrait pas être modifiée tant que l\'utilisateur ne clique pas')
+  ];
+  // clics successifs sur les boutons
+  tests = tests.concat(clicSur('bouton1', _urls[0]));
+  tests = tests.concat(clicSur('bouton2', _urls[1]));
+  tests = tests.concat(clicSur('bouton1', _urls[0]));
+  application.remote._send(null, tests);
 })();
 ```

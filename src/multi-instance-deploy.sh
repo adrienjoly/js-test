@@ -3,42 +3,43 @@
 # (forked from https://github.com/adrienjoly/js-exam/blob/master/deploy.sh)
 
 # This script deploys this app to the following *.herokuapp.com subdomains:
-instances=( 1 2 3 )
-herokuprefix="js-partiel-"
+instances=( jsparta jspartb jspartc )
 
 # ...by temporarily altering the corresponding mentions to js-exam in the following files:
-files=( package.json ./exam-data/exam-config.js )
+files=( ./exam-data/exam-config.js )
 
 # initial mentions to be replaced:
-initial="__INSTANCE__NUMBER__"
+initial="__INSTANCE__"
 
-for i in "${instances[@]}"
+for instance in "${instances[@]}"
 do
-  echo "Deploying to instance: $herokuprefix $i .herokuapp.com ..."
+  echo "Deploying to instance: $instance .herokuapp.com ..."
 
   for f in "${files[@]}"
   do
     echo "- replacing mentions of $initial in file: $f"
     mv $f $f.bak
-    replacement="s/$initial/$i/g"
+    replacement="s/$initial/$instance/g"
     sed $replacement $f.bak > $f
   done
 
   npm run build
-  npm run init-heroku
   git status -s
   
   # Push them to Heroku instance, then repent of the commit (cf http://rhodesmill.org/brandon/2012/quietly-pushing-to-heroku/)
   #git add .
   git commit -am 'Temporary Heroku-only deployment commit'
-  git push heroku master --force
+  heroku git:remote -a $instance
+  git push heroku `git rev-parse --abbrev-ref HEAD`:master --force
   git reset --soft HEAD~1
 
   for f in "${files[@]}"
   do
-    echo "- restoring mentions to $i in file: $f"
+    echo "- restoring mentions to $instance in file: $f"
     rm $f
     mv $f.bak $f
   done
 
 done
+
+npm run build

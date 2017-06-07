@@ -1,0 +1,2892 @@
+Parsing ex.01.quizz.template.md ...
+Parsing ex.02.code.template.md ...
+Reading and evaluating answers from: ../student-groups/jspc-19feb-export.json ...
+
+
+================================
+
+STUDENT: aubin_keravel
+
+  -  quizz answers:
+  | qcm1 : 3 (solution: 3) => 1 pts
+  | qcm2 : 1 (solution: 1) => 1 pts
+  | qcm3 : 3 (solution: 2) => 0 pts
+  | qcm4 : 2 (solution: 4) => 0 pts
+
+  => quizz score: 2 / 4 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code5 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function genererAcronyme (surname, name) {
+  | var surname = ['jack'];
+  | var name = ['reaper'];
+  | var res = name.substr(0, 2) + surname.substr(3, 5);
+  | console.log(res);
+  | }
+  | 
+  | // CODE EVALUATION:
+  | 
+  | [+] function genererAcronyme a bien été trouvé dans le code
+  | [-] l'appel genererAcronyme(["adrien","joly"]) cause l'erreur: name.substr is not a function
+  | [-] l'appel genererAcronyme(["paul","edouard","vaillant"]) cause l'erreur: name.substr is not a function
+  | [-] l'appel genererAcronyme(["eric","maubert"]) cause l'erreur: name.substr is not a function
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 1 / 4
+  | 
+  | ------------- EXERCISE: code6 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var bouton = document.getElementById('bouton').onclick = function(start) {
+  | 
+  | var counter = 0;
+  | var intervalId = null;
+  | function action()
+  | {
+  |   clearInterval(intervalId);
+  |   document.getElementById("compteur1").innerHTML = "100";	
+  | }
+  | function countTo()
+  | {
+  |   document.getElementById("compteur1").innerHTML = counter + " millisecondes restantes";
+  |   counter++;
+  | }
+  | function start()
+  | {
+  |   intervalId = setInterval(countTo, 1000);
+  |   setTimeout(action, counter * 0);
+  | }
+  | 
+  | var counter = 0;
+  | var intervalId = null;
+  | function action()
+  | {
+  |   clearInterval(intervalId);
+  |   document.getElementById("compteur2").innerHTML = "100";	
+  | }
+  | function countTo()
+  | {
+  |   document.getElementById("compteur2").innerHTML = counter + " millisecondes restantes";
+  |   counter++;
+  | }
+  | function start()
+  | {
+  |   intervalId = setInterval(countTo, 450);
+  |   setTimeout(action, counter * 0);
+  | }
+  | }
+  | 
+  | // CODE EVALUATION:
+  | 
+  | [+] le programme fonctionne sans erreur
+  | [-] avant clic de l'utilisateur, compteur1 devrait afficher 0
+  | [-] avant clic de l'utilisateur, compteur1 devrait afficher 0
+  | [+] clic sur bouton ne cause aucune erreur
+  | [-] 1 seconde après clic, compteur1 devrait afficher 100
+  | [-] 1 seconde après clic, compteur1 devrait afficher 45
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 0, 0, 1, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 1.3333333333333333 / 4
+  | 
+  | ------------- EXERCISE: code7 (variant: 1) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | // -> EXERCISE POINTS: 0 / 4
+  | 
+  | ------------- EXERCISE: code8 (variant: 1) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | // -> EXERCISE POINTS: 0 / 4
+
+  => code score: 2.333333333333333 / 16 pts
+
+=> TOTAL STUDENT SCORE: 4.33 / 20
+
+
+================================
+
+STUDENT: bastien_bigot
+
+  -  quizz answers:
+  | qcm1 : 3 (solution: 3) => 1 pts
+  | qcm2 : 1 (solution: 1) => 1 pts
+  | qcm3 : 2 (solution: 2) => 1 pts
+  | qcm4 : 4 (solution: 4) => 1 pts
+
+  => quizz score: 4 / 4 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code5 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var tab=new Array;
+  |    tab[Nom]="Joly";
+  |    tab[Prénom]="Paul";
+  |    tab[Nom]="Flopi";
+  |    tab[Prénom]="Paul-Edouard";
+  |    tab[Nom]="Vaillant";
+  |    tab[Prénom]="Michel";
+  |    var longueur=tab.length;
+  | 
+  | function myFunction() {
+  |     var str = "adrien joly";
+  |     var res = str.substr(4);
+  |     document.getElementById(id).innerHTML = res;
+  | 
+  | // CODE EVALUATION:
+  | 
+  | /!\ erreur: Unexpected end of input
+  | [-] la fonction acronyme() n'est pas définie correctement
+  | [-] acronyme n'est pas une fonction valide
+  | [-] acronyme n'est pas une fonction valide
+  | [-] acronyme n'est pas une fonction valide
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 0 / 4
+  | 
+  | ------------- EXERCISE: code6 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | class AnimCounter
+  | 
+  | document.getElementById('compteur1')
+  | document.getElementById('compteur2')
+  | 
+  | CountTo.compteur1 = {
+  |   from: 0,               
+  |   to: 100,                 
+  |   speed: 60,  
+  | }         
+  | CountTo.compteur2 = {
+  |   from: 0,
+  |   to: 45,
+  |   speed: 60, 
+  | }
+  | 
+  | // CODE EVALUATION:
+  | 
+  | [-] erreur: Unexpected identifier
+  | [-] avant clic de l'utilisateur, compteur1 devrait afficher 0
+  | [-] avant clic de l'utilisateur, compteur1 devrait afficher 0
+  | [-] clic sur bouton à causé une erreur: _fakeDom.bouton.onclick is not a function
+  | [-] 1 seconde après clic, compteur1 devrait afficher 100
+  | [-] 1 seconde après clic, compteur1 devrait afficher 45
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 0 / 4
+  | 
+  | ------------- EXERCISE: code7 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var xhr = new XMLHttpRequest();
+  | xhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/posts/8');
+  | xhr.onreadystatechange = function() {
+  |   if (xhr.readyState === 4) {
+  |   alert(xhr.responseText);
+  |   }
+  | };
+  | xhr.send();
+  | 
+  | // CODE EVALUATION:
+  | 
+  | [+] le programme fonctionne sans erreur
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [+] la méthode open() de l'instance de `XMLHttpRequest` a bien été appelée
+  | [-] il fallait passer `POST` comme 1er paramètre de la méthode open()
+  | [-] il fallait passer l'url demandée comme 2ème paramètre de la méthode open()
+  | [+] une fonction a bien été affectée à la propriété `onreadystatechange` de l'instance
+  | [+] la méthode send() a bien été appelée une fois
+  | [-] il fallait passer à send() un objet ayant une propriété title: Heroku
+  | [-] la valeur d'id 101 aurait être affichée dans un alert()
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 0, 0, 1, 1, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 2.2222222222222223 / 4
+  | 
+  | ------------- EXERCISE: code8 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | 
+  | var afficher=false;              
+  | function viewImage(id) {
+  |   var contenuImage=!afficher ? "<img 
+  |   src='https://i.imgur.com/X3iY0e3.jpg'>" : ""; 
+  |   afficher=!afficher;
+  |   var contenuBouton=afficher ? "Cacher l'image" : "Afficher l'image" ; 
+  |   document.getElementById(id).innerHTML=contenuImage;             
+  |   document.getElementById("bouton1").innerHTML=contenuBouton;
+  | }
+  | 
+  | // CODE EVALUATION:
+  | 
+  | [-] erreur: Invalid or unexpected token
+  | [+] l'image initiale n'est pas modifiée tant que l'utilisateur ne clique pas
+  | [-] clic sur bouton1 à causé une erreur: _fakeDom[id].onclick is not a function
+  | [+] clic sur bouton1 => image https://i.imgur.com/X3iY0e3.jpg est bien affichée
+  | [-] clic sur bouton2 à causé une erreur: _fakeDom[id].onclick is not a function
+  | [+] clic sur bouton2 => image https://i.imgur.com/X3iY0e3.jpg est bien affichée
+  | [-] clic sur bouton1 à causé une erreur: _fakeDom[id].onclick is not a function
+  | [+] clic sur bouton1 => image https://i.imgur.com/X3iY0e3.jpg est bien affichée
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 1, 0, 1, 0, 1, 0, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 2 / 4
+
+  => code score: 4.222222222222222 / 16 pts
+
+=> TOTAL STUDENT SCORE: 8.22 / 20
+
+
+================================
+
+STUDENT: benjamin_kissous
+
+  -  quizz answers:
+  | qcm1 : 3 (solution: 3) => 1 pts
+  | qcm2 : 1 (solution: 1) => 1 pts
+  | qcm3 : 2 (solution: 2) => 1 pts
+  | qcm4 : 2 (solution: 4) => 0 pts
+
+  => quizz score: 3 / 4 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code5 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var tableau = ['Benjamin', 'Kissous'];
+  | var prenom = tableau[0];
+  | var nom = tableau[1];
+  | function genererAcronym () {
+  |   console.log(prenom.substring(0, 3));
+  |   console.log(nom.substring(0, 3));
+  | }
+  | 
+  | // CODE EVALUATION:
+  | 
+  | [-] la fonction genererAcronyme() n'est pas définie correctement
+  | [-] genererAcronyme n'est pas une fonction valide
+  | [-] genererAcronyme n'est pas une fonction valide
+  | [-] genererAcronyme n'est pas une fonction valide
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 0 / 4
+  | 
+  | ------------- EXERCISE: code6 (variant: 2) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | // -> EXERCISE POINTS: 0 / 4
+  | 
+  | ------------- EXERCISE: code7 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | 
+  | if (event.keyCode === 13) {
+  |   var xhr = new XMLHttpRequest();
+  |   xhr.open('POST', 'https://js-jsonplaceholder.herokuapp.com');
+  | 
+  |   xhr.send(JSON.stringify({ title: 'Firebase', id: id.value , body: body.value}));
+  | }
+  | console.log(document.getElementById().value);
+  | 
+  | // CODE EVALUATION:
+  | 
+  | [-] erreur: event is not defined
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [-] il fallait appeler la méthode open() de l'instance de `XMLHttpRequest`
+  | [-] il fallait passer `POST` comme 1er paramètre de la méthode open()
+  | [-] il fallait passer l'url demandée comme 2ème paramètre de la méthode open()
+  | [-] il fallait affecter une fonction à la propriété `onreadystatechange` de l'instance
+  | [-] il fallait appeler la méthode send() une fois pour envoyer la requête
+  | [-] il fallait passer à send() un objet ayant une propriété title: Firebase
+  | [-] la valeur d'id 101 aurait être affichée dans un console.log()
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 1, 0, 0, 0, 0, 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 0.4444444444444444 / 4
+  | 
+  | ------------- EXERCISE: code8 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var image = document.getElementById('image');
+  | var buttons = document.getElementsByTagName('button');
+  | var bouton1 = document.getElementById('bouton1');
+  | var bouton2 = document.getElementById('bouton2');
+  | 
+  | function pourAfficherImage(i) {
+  |   bouton1.onclick = image;
+  |   bouton2.onclick = image; 
+  | }
+  | 
+  | for (var i = 0; i < buttons.length; i++) {
+  |   buttons[i].onclick = pourAfficherImage(i);
+  | }
+  | pourAfficherImage();
+  | 
+  | // CODE EVALUATION:
+  | 
+  | [+] le programme fonctionne sans erreur
+  | [+] l'image initiale n'est pas modifiée tant que l'utilisateur ne clique pas
+  | [-] clic sur bouton1 à causé une erreur: _fakeDom[id].onclick is not a function
+  | [+] clic sur bouton1 => image https://i.imgur.com/X3iY0e3.jpg est bien affichée
+  | [-] clic sur bouton2 à causé une erreur: _fakeDom[id].onclick is not a function
+  | [+] clic sur bouton2 => image https://i.imgur.com/X3iY0e3.jpg est bien affichée
+  | [-] clic sur bouton1 à causé une erreur: _fakeDom[id].onclick is not a function
+  | [+] clic sur bouton1 => image https://i.imgur.com/X3iY0e3.jpg est bien affichée
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 0, 1, 0, 1, 0, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 2.5 / 4
+
+  => code score: 2.9444444444444446 / 16 pts
+
+=> TOTAL STUDENT SCORE: 5.94 / 20
+
+
+================================
+
+STUDENT: charles_kiefer
+
+  -  quizz answers:
+  | qcm1 : 3 (solution: 3) => 1 pts
+  | qcm2 : 1 (solution: 1) => 1 pts
+  | qcm3 : 3 (solution: 2) => 0 pts
+  | qcm4 : 2 (solution: 4) => 0 pts
+
+  => quizz score: 2 / 4 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code5 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function genererAcronyme([prenom, nom]) {
+  |   return prenom.substring(0, 3) + nom.substring(0, 3);
+  | }
+  | 
+  | // CODE EVALUATION:
+  | 
+  | [+] function genererAcronyme a bien été trouvé dans le code
+  | [+] l'appel genererAcronyme(["adrien","joly"]) retourne bien adrjol
+  | [-] l'appel genererAcronyme(["paul","edouard","vaillant"]) devrait retourner pauedovai
+  | [+] l'appel genererAcronyme(["eric","maubert"]) retourne bien erimau
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 0, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 3 / 4
+  | 
+  | ------------- EXERCISE: code6 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var button = document.getElementById('bouton');
+  | var compteur1 = document.getElementById('compteur1');
+  | var compteur2 = document.getElementById('compteur2');
+  | 
+  | button.onclick = function() {
+  |   compteur1.countTo(100);
+  |   compteur2.countTo(45);
+  | };
+  | 
+  | // CODE EVALUATION:
+  | 
+  | [+] le programme fonctionne sans erreur
+  | [-] avant clic de l'utilisateur, compteur1 devrait afficher 0
+  | [-] avant clic de l'utilisateur, compteur1 devrait afficher 0
+  | [-] clic sur bouton à causé une erreur: compteur1.countTo is not a function
+  | [-] 1 seconde après clic, compteur1 devrait afficher 100
+  | [-] 1 seconde après clic, compteur1 devrait afficher 45
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 0, 0, 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 0.6666666666666666 / 4
+  | 
+  | ------------- EXERCISE: code7 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var xhr = new XMLHttpRequest();
+  | xhr.open('POST', 'https://js-jsonplaceholder.herokuapp.com/posts);
+  | xhr.onreadystatechange = function() {
+  |   if (xhr.readyState === 4) {
+  |     alert(getElementById().value);
+  |   }
+  |  };
+  |  xhr.send();
+  | 
+  | // CODE EVALUATION:
+  | 
+  | [-] erreur: Invalid or unexpected token
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [-] il fallait appeler la méthode open() de l'instance de `XMLHttpRequest`
+  | [-] il fallait passer `POST` comme 1er paramètre de la méthode open()
+  | [-] il fallait passer l'url demandée comme 2ème paramètre de la méthode open()
+  | [-] il fallait affecter une fonction à la propriété `onreadystatechange` de l'instance
+  | [-] il fallait appeler la méthode send() une fois pour envoyer la requête
+  | [-] il fallait passer à send() un objet ayant une propriété body: Firebase
+  | [-] la valeur d'id 101 aurait être affichée dans un alert()
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 1, 0, 0, 0, 0, 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 0.4444444444444444 / 4
+  | 
+  | ------------- EXERCISE: code8 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | document.getElementById("image").style.visibility = "hidden";
+  | 
+  | document.getElementById("bouton1").onclick = function() {
+  |     document.getElementById("image").style.visibility = "visible";
+  | }
+  | 
+  | document.getElementById("bouton2").onclick = function() {
+  |     document.getElementById("image").style.visibility = "visible";
+  | }
+  | 
+  | // CODE EVALUATION:
+  | 
+  | [-] erreur: Cannot set property 'visibility' of undefined
+  | [+] l'image initiale n'est pas modifiée tant que l'utilisateur ne clique pas
+  | [-] clic sur bouton1 à causé une erreur: _fakeDom[id].onclick is not a function
+  | [+] clic sur bouton1 => image https://i.imgur.com/MrsKxdZ.jpg est bien affichée
+  | [-] clic sur bouton2 à causé une erreur: _fakeDom[id].onclick is not a function
+  | [+] clic sur bouton2 => image https://i.imgur.com/MrsKxdZ.jpg est bien affichée
+  | [-] clic sur bouton1 à causé une erreur: _fakeDom[id].onclick is not a function
+  | [+] clic sur bouton1 => image https://i.imgur.com/MrsKxdZ.jpg est bien affichée
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 1, 0, 1, 0, 1, 0, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 2 / 4
+
+  => code score: 6.111111111111111 / 16 pts
+
+=> TOTAL STUDENT SCORE: 8.11 / 20
+
+
+================================
+
+STUDENT: edouard_duchesnedelamotte
+
+  -  quizz answers:
+  | qcm1 : 3 (solution: 3) => 1 pts
+  | qcm2 : 1 (solution: 1) => 1 pts
+  | qcm3 : 2 (solution: 2) => 1 pts
+  | qcm4 : 4 (solution: 4) => 1 pts
+
+  => quizz score: 4 / 4 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code5 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function genererAcronyme() {
+  |   return console.log(substring(0,3));
+  | }
+  | 
+  | // CODE EVALUATION:
+  | 
+  | [+] function genererAcronyme a bien été trouvé dans le code
+  | [-] l'appel genererAcronyme(["adrien","joly"]) cause l'erreur: substring is not defined
+  | [-] l'appel genererAcronyme(["paul","edouard","vaillant"]) cause l'erreur: substring is not defined
+  | [-] l'appel genererAcronyme(["eric","maubert"]) cause l'erreur: substring is not defined
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 1 / 4
+  | 
+  | ------------- EXERCISE: code6 (variant: 2) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | // -> EXERCISE POINTS: 0 / 4
+  | 
+  | ------------- EXERCISE: code7 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var xhr = new XMLHttpRequest();
+  | xhr.open('POST', 'https://jsonplaceholder.typicode.com/posts');
+  | xhr.onreadystatechange = function() {
+  |   if (xhr.readyState === 4) {
+  |     console.log(xhr.responseText);
+  |   }
+  | };
+  | xhr.send(JSON.stringify({ title: 'Firebase' }));
+  | 
+  | // CODE EVALUATION:
+  | 
+  | [+] le programme fonctionne sans erreur
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [+] la méthode open() de l'instance de `XMLHttpRequest` a bien été appelée
+  | [+] `POST` a bien été passé en paramètre de la méthode open()
+  | [-] il fallait passer l'url demandée comme 2ème paramètre de la méthode open()
+  | [+] une fonction a bien été affectée à la propriété `onreadystatechange` de l'instance
+  | [+] la méthode send() a bien été appelée une fois
+  | [+] un objet ayant une propriété title: Firebase a bien été passé à send()
+  | [-] la valeur d'id 101 aurait être affichée dans un console.log()
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 0, 1, 1, 1, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 3.111111111111111 / 4
+  | 
+  | ------------- EXERCISE: code8 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | $(document).ready(function(){
+  |     $('#bouton1').click(function(){
+  |     $('#image').attr('src', 'https:&#x2F;&#x2F;i.imgur.com&#x2F;X3iY0e3.jpg');
+  |     });
+  | })
+  | 
+  | $(document).ready(function(){
+  |     $('#bouton2').click(function(){
+  |     $('#image').attr('src', 'https:&#x2F;&#x2F;i.imgur.com&#x2F;X3iY0e3.jpg');
+  |     });
+  | })
+  | 
+  | // CODE EVALUATION:
+  | 
+  | [-] erreur: $ is not defined
+  | [+] l'image initiale n'est pas modifiée tant que l'utilisateur ne clique pas
+  | [-] clic sur bouton1 à causé une erreur: _fakeDom[id].onclick is not a function
+  | [+] clic sur bouton1 => image https://i.imgur.com/X3iY0e3.jpg est bien affichée
+  | [-] clic sur bouton2 à causé une erreur: _fakeDom[id].onclick is not a function
+  | [+] clic sur bouton2 => image https://i.imgur.com/X3iY0e3.jpg est bien affichée
+  | [-] clic sur bouton1 à causé une erreur: _fakeDom[id].onclick is not a function
+  | [+] clic sur bouton1 => image https://i.imgur.com/X3iY0e3.jpg est bien affichée
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 1, 0, 1, 0, 1, 0, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 2 / 4
+
+  => code score: 6.111111111111111 / 16 pts
+
+=> TOTAL STUDENT SCORE: 10.11 / 20
+
+
+================================
+
+STUDENT: florian_compiegne
+
+  -  quizz answers:
+  | qcm1 : 3 (solution: 3) => 1 pts
+  | qcm2 : 1 (solution: 1) => 1 pts
+  | qcm3 : 2 (solution: 2) => 1 pts
+  | qcm4 : 4 (solution: 4) => 1 pts
+
+  => quizz score: 4 / 4 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code5 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function genererAcronyme (prenom,nom) { 
+  |   var a = prenom;
+  |   var b = nom;
+  |   console.log( a.substr(0, 2) + b.substr(0, 2)) ; 
+  | }
+  | 
+  | // CODE EVALUATION:
+  | 
+  | [+] function genererAcronyme a bien été trouvé dans le code
+  | [-] l'appel genererAcronyme(["adrien","joly"]) cause l'erreur: a.substr is not a function
+  | [-] l'appel genererAcronyme(["paul","edouard","vaillant"]) cause l'erreur: a.substr is not a function
+  | [-] l'appel genererAcronyme(["eric","maubert"]) cause l'erreur: a.substr is not a function
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 1 / 4
+  | 
+  | ------------- EXERCISE: code6 (variant: 3) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | document.getElementById('compteur1');
+  | document.getElementById('compteur2');
+  | document.getElementById("compteur1").className += "Counter";
+  | document.getElementById("compteur2").className += "Counter";
+  | document.getElementById('bouton').onclick = function demare() {
+  |     Counter;
+  | };
+  | 
+  | // CODE EVALUATION:
+  | 
+  | [+] le programme fonctionne sans erreur
+  | [-] avant clic de l'utilisateur, compteur1 devrait afficher 0
+  | [-] avant clic de l'utilisateur, compteur1 devrait afficher 0
+  | [+] clic sur bouton ne cause aucune erreur
+  | [-] 1 seconde après clic, compteur1 devrait afficher 10
+  | [-] 1 seconde après clic, compteur1 devrait afficher 45
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 0, 0, 1, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 1.3333333333333333 / 4
+  | 
+  | ------------- EXERCISE: code7 (variant: 3) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var xhr = new XMLHttpRequest();
+  | xhr.open('POST', 'https://js-jsonplaceholder.herokuapp.com/posts');
+  | xhr.onreadystatechange = function() {
+  |   if (xhr.readyState === 4) {
+  |     console.log(xhr.responseText);
+  |   }
+  | };
+  | // envoi d'une chaine de caractères:
+  | xhr.send(JSON.stringify({ message: 'bonjour!' }));
+  | 
+  | // CODE EVALUATION:
+  | 
+  | [+] le programme fonctionne sans erreur
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [+] la méthode open() de l'instance de `XMLHttpRequest` a bien été appelée
+  | [+] `POST` a bien été passé en paramètre de la méthode open()
+  | [+] l'url demandée a bien été passée en paramètre de la méthode open()
+  | [+] une fonction a bien été affectée à la propriété `onreadystatechange` de l'instance
+  | [+] la méthode send() a bien été appelée une fois
+  | [-] il fallait passer à send() un objet ayant une propriété body: Heroku
+  | [-] la valeur d'id 101 aurait être affichée dans un console.log()
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1, 1, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 3.111111111111111 / 4
+  | 
+  | ------------- EXERCISE: code8 (variant: 1) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | // -> EXERCISE POINTS: 0 / 4
+
+  => code score: 5.444444444444445 / 16 pts
+
+=> TOTAL STUDENT SCORE: 9.44 / 20
+
+
+================================
+
+STUDENT: guillaume_martin
+
+  -  quizz answers:
+  | qcm1 : 3 (solution: 3) => 1 pts
+  | qcm2 : 1 (solution: 1) => 1 pts
+  | qcm3 : 1 (solution: 2) => 0 pts
+  | qcm4 : 3 (solution: 4) => 0 pts
+
+  => quizz score: 2 / 4 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code5 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function genererAcronyme(a, b) {
+  |     return a.str.substring(0,3) + b.str.substring(0,3)
+  | 
+  | }
+  | 
+  | // CODE EVALUATION:
+  | 
+  | [+] function genererAcronyme a bien été trouvé dans le code
+  | [-] l'appel genererAcronyme(["adrien","joly"]) cause l'erreur: Cannot read property 'substring' of undefined
+  | [-] l'appel genererAcronyme(["paul","edouard","vaillant"]) cause l'erreur: Cannot read property 'substring' of undefined
+  | [-] l'appel genererAcronyme(["eric","maubert"]) cause l'erreur: Cannot read property 'substring' of undefined
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 1 / 4
+  | 
+  | ------------- EXERCISE: code6 (variant: 0) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | // -> EXERCISE POINTS: 0 / 4
+  | 
+  | ------------- EXERCISE: code7 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var xhr = new XMLHttpRequest();
+  | xhr.open('POST', 'https://js-jsonplaceholder.herokuapp.com/posts');
+  | xhr.onreadystatechange = function() {
+  |   if (xhr.readyState === 4) {
+  |     alert(xhr.responseText);
+  |   }
+  | };
+  | xhr.send('Heroku');
+  | 
+  | // CODE EVALUATION:
+  | 
+  | [+] le programme fonctionne sans erreur
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [+] la méthode open() de l'instance de `XMLHttpRequest` a bien été appelée
+  | [+] `POST` a bien été passé en paramètre de la méthode open()
+  | [+] l'url demandée a bien été passée en paramètre de la méthode open()
+  | [+] une fonction a bien été affectée à la propriété `onreadystatechange` de l'instance
+  | [+] la méthode send() a bien été appelée une fois
+  | [-] il fallait passer à send() un objet ayant une propriété title: Heroku
+  | [-] la valeur d'id 101 aurait être affichée dans un alert()
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1, 1, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 3.111111111111111 / 4
+  | 
+  | ------------- EXERCISE: code8 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var switchmage = document.getElementById('image');
+  | 
+  | var imageVisible = 0;
+  | 
+  | function changerImage() {
+  |   switchmage[imageVisible].classList.remove('visible');
+  |   imageVisible = (imageVisible + 1) % switchmage.length;
+  |   switchmage[imageVisible].classList.add('visible');
+  | }
+  | 
+  | document.getElementById('bouton1').onclick = changerImage;
+  | document.getElementById('bouton2').onclick = changerImage;
+  | 
+  | changerImage();
+  | 
+  | // CODE EVALUATION:
+  | 
+  | [-] erreur: Cannot read property 'classList' of undefined
+  | [+] l'image initiale n'est pas modifiée tant que l'utilisateur ne clique pas
+  | [-] clic sur bouton1 à causé une erreur: Cannot read property 'classList' of undefined
+  | [+] clic sur bouton1 => image https://i.imgur.com/X3iY0e3.jpg est bien affichée
+  | [-] clic sur bouton2 à causé une erreur: Cannot read property 'classList' of undefined
+  | [+] clic sur bouton2 => image https://i.imgur.com/X3iY0e3.jpg est bien affichée
+  | [-] clic sur bouton1 à causé une erreur: Cannot read property 'classList' of undefined
+  | [+] clic sur bouton1 => image https://i.imgur.com/X3iY0e3.jpg est bien affichée
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 1, 0, 1, 0, 1, 0, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 2 / 4
+
+  => code score: 6.111111111111111 / 16 pts
+
+=> TOTAL STUDENT SCORE: 8.11 / 20
+
+
+================================
+
+STUDENT: ilana_bloch
+
+  -  quizz answers:
+  | qcm1 : 3 (solution: 3) => 1 pts
+  | qcm2 : 1 (solution: 1) => 1 pts
+  | qcm3 : 2 (solution: 2) => 1 pts
+  | qcm4 : 2 (solution: 4) => 0 pts
+
+  => quizz score: 3 / 4 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code5 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var full = ['Ilana', 'Bloch'];
+  | 
+  | function accro () {
+  |   for(var i = 0; i <= full.length; i++) {
+  |     full[i].substr(0, 3);
+  |   };
+  |   return i;
+  | }
+  | 
+  | // CODE EVALUATION:
+  | 
+  | [-] la fonction acro() n'est pas définie correctement
+  | [-] acro n'est pas une fonction valide
+  | [-] acro n'est pas une fonction valide
+  | [-] acro n'est pas une fonction valide
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 0 / 4
+  | 
+  | ------------- EXERCISE: code6 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var bouton = document.getElementById('bouton');
+  | var compteur1 = document.getElementById('compteur1');
+  | var compteur2 = document.getElementById('compteur2');
+  | 
+  | AnimCounter {
+  |   bouton.onclick = function () {
+  |     compteur1.countTo(100);
+  |     compteur1.countTo(45);
+  |   };
+  | }
+  | 
+  | // CODE EVALUATION:
+  | 
+  | [-] erreur: Unexpected token {
+  | [-] avant clic de l'utilisateur, compteur1 devrait afficher 0
+  | [-] avant clic de l'utilisateur, compteur1 devrait afficher 0
+  | [-] clic sur bouton à causé une erreur: _fakeDom.bouton.onclick is not a function
+  | [-] 1 seconde après clic, compteur1 devrait afficher 100
+  | [-] 1 seconde après clic, compteur1 devrait afficher 45
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 0 / 4
+  | 
+  | ------------- EXERCISE: code7 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var xhr = new XMLHttpRequest(); 
+  | xhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/posts');
+  | xhr.onreadystatechange = function afficherTitre() {
+  |   if (xhr.readyState === 4) {
+  |     var reponse = JSON.parse(xhr.responseText);
+  |     alert(reponse.(title.value === Heroku).id);
+  |   }
+  | };
+  | xhr.send();
+  | 
+  | // CODE EVALUATION:
+  | 
+  | [-] erreur: Unexpected token (
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [-] il fallait appeler la méthode open() de l'instance de `XMLHttpRequest`
+  | [-] il fallait passer `POST` comme 1er paramètre de la méthode open()
+  | [-] il fallait passer l'url demandée comme 2ème paramètre de la méthode open()
+  | [-] il fallait affecter une fonction à la propriété `onreadystatechange` de l'instance
+  | [-] il fallait appeler la méthode send() une fois pour envoyer la requête
+  | [-] il fallait passer à send() un objet ayant une propriété title: Heroku
+  | [-] la valeur d'id 101 aurait être affichée dans un alert()
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 1, 0, 0, 0, 0, 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 0.4444444444444444 / 4
+  | 
+  | ------------- EXERCISE: code8 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var boutton = document.getElementsByTagName("button");
+  | boutton.onclick = function changeImage(element)
+  | {
+  |   var image = element.getElementById("image");
+  |   var soucre = image.getAttribute("src");
+  |   if(boutton.getAttribute("id") === "boutton1")
+  |     source = "https://i.imgur.com/X3iY0e3.jpg");
+  |   else if(boutton.getAttribute("id") === "boutton2")
+  |     source = "https://i.imgur.com/X3iY0e3.jpg");
+  |   image.setAttribute("src", source);	
+  | }
+  | 
+  | // CODE EVALUATION:
+  | 
+  | [-] erreur: Unexpected token )
+  | [+] l'image initiale n'est pas modifiée tant que l'utilisateur ne clique pas
+  | [-] clic sur bouton1 à causé une erreur: _fakeDom[id].onclick is not a function
+  | [+] clic sur bouton1 => image https://i.imgur.com/X3iY0e3.jpg est bien affichée
+  | [-] clic sur bouton2 à causé une erreur: _fakeDom[id].onclick is not a function
+  | [+] clic sur bouton2 => image https://i.imgur.com/X3iY0e3.jpg est bien affichée
+  | [-] clic sur bouton1 à causé une erreur: _fakeDom[id].onclick is not a function
+  | [+] clic sur bouton1 => image https://i.imgur.com/X3iY0e3.jpg est bien affichée
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 1, 0, 1, 0, 1, 0, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 2 / 4
+
+  => code score: 2.4444444444444446 / 16 pts
+
+=> TOTAL STUDENT SCORE: 5.44 / 20
+
+
+================================
+
+STUDENT: jeanne_vinay
+
+  -  quizz answers:
+  | qcm1 : 3 (solution: 3) => 1 pts
+  | qcm2 : 1 (solution: 1) => 1 pts
+  | qcm3 : 2 (solution: 2) => 1 pts
+  | qcm4 : 3 (solution: 4) => 0 pts
+
+  => quizz score: 3 / 4 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code5 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function genererAcronyme([nom, prenom]){
+  |   return (nom.substring(0,3))+(prenom.substring(0,3));
+  | } 
+  | 
+  | // CODE EVALUATION:
+  | 
+  | [+] function genererAcronyme a bien été trouvé dans le code
+  | [+] l'appel genererAcronyme(["adrien","joly"]) retourne bien adrjol
+  | [-] l'appel genererAcronyme(["paul","edouard","vaillant"]) devrait retourner pauedovai
+  | [+] l'appel genererAcronyme(["eric","maubert"]) retourne bien erimau
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 0, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 3 / 4
+  | 
+  | ------------- EXERCISE: code6 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var compteur1 = document.getElementById("compteur1");
+  | var compteur2 = document.getElementById("compteur2");
+  | var bouton = document.getElementById("bouton");
+  | bouton.onclick = function(){
+  |   compteur1.countTo(100);
+  |   compteur2.countTo(45);
+  | };
+  | 
+  | 
+  | // CODE EVALUATION:
+  | 
+  | [+] le programme fonctionne sans erreur
+  | [-] avant clic de l'utilisateur, compteur1 devrait afficher 0
+  | [-] avant clic de l'utilisateur, compteur1 devrait afficher 0
+  | [-] clic sur bouton à causé une erreur: compteur1.countTo is not a function
+  | [-] 1 seconde après clic, compteur1 devrait afficher 100
+  | [-] 1 seconde après clic, compteur1 devrait afficher 45
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 0, 0, 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 0.6666666666666666 / 4
+  | 
+  | ------------- EXERCISE: code7 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var userId= '101'; 
+  | var id= '101';
+  | var title= 'Heroku'; 
+  | var body= 'body';
+  | 
+  | function () {
+  |   var xhr = new XMLHttpRequest(); 
+  |   xhr.open('POST', 'https://js-jsonplaceholder.herokuapp.com/posts');
+  |   xhr.onreadystatechange = function ajouter(userId, id, title, body) {
+  |     if (xhr.readyState === 4) {
+  |       var reponse = JSON.parse(xhr.responseText);
+  |       alert(data.id);
+  |     }
+  |   };
+  |   xhr.send();
+  | }
+  | 
+  | 
+  | 
+  | // CODE EVALUATION:
+  | 
+  | [-] erreur: Unexpected token (
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [-] il fallait appeler la méthode open() de l'instance de `XMLHttpRequest`
+  | [-] il fallait passer `POST` comme 1er paramètre de la méthode open()
+  | [-] il fallait passer l'url demandée comme 2ème paramètre de la méthode open()
+  | [-] il fallait affecter une fonction à la propriété `onreadystatechange` de l'instance
+  | [-] il fallait appeler la méthode send() une fois pour envoyer la requête
+  | [-] il fallait passer à send() un objet ayant une propriété title: Heroku
+  | [-] la valeur d'id 101 aurait être affichée dans un alert()
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 1, 0, 0, 0, 0, 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 0.4444444444444444 / 4
+  | 
+  | ------------- EXERCISE: code8 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var bouton1 = document.getElementsById('bouton1'); 
+  | var bouton2= document.getElementsById('bouton2'); 
+  | var src= document.getElementById('image').src;
+  | 
+  | bouton1.onclick = function(){
+  |   src.innerHTML = 'https:&#x2F;&#x2F;i.imgur.com&#x2F;X3iY0e3.jpg';
+  | }
+  | bouton2.onclick = function(){
+  |   src.innerHTML = 'https:&#x2F;&#x2F;i.imgur.com&#x2F;X3iY0e3.jpg';
+  | }
+  | 
+  | // CODE EVALUATION:
+  | 
+  | [-] erreur: document.getElementsById is not a function
+  | [+] l'image initiale n'est pas modifiée tant que l'utilisateur ne clique pas
+  | [-] clic sur bouton1 à causé une erreur: _fakeDom[id].onclick is not a function
+  | [+] clic sur bouton1 => image https://i.imgur.com/X3iY0e3.jpg est bien affichée
+  | [-] clic sur bouton2 à causé une erreur: _fakeDom[id].onclick is not a function
+  | [+] clic sur bouton2 => image https://i.imgur.com/X3iY0e3.jpg est bien affichée
+  | [-] clic sur bouton1 à causé une erreur: _fakeDom[id].onclick is not a function
+  | [+] clic sur bouton1 => image https://i.imgur.com/X3iY0e3.jpg est bien affichée
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 1, 0, 1, 0, 1, 0, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 2 / 4
+
+  => code score: 6.111111111111111 / 16 pts
+
+=> TOTAL STUDENT SCORE: 9.11 / 20
+
+
+================================
+
+STUDENT: jessy_hachet
+
+  -  quizz answers:
+  | qcm1 : 1 (solution: 3) => 0 pts
+  | qcm2 : 1 (solution: 1) => 1 pts
+  | qcm3 : 2 (solution: 2) => 1 pts
+  | qcm4 : 4 (solution: 4) => 1 pts
+
+  => quizz score: 3 / 4 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code5 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var acronyme = ['adrien', 'joly'];
+  | var acro = ['paul', 'edouard', 'vaillant'];
+  | 
+  | var prenom = acronyme[0].substr(0, 3);
+  | var nom = acronyme[1].substr(0, 3);
+  | var monerp = acro[0].substr(0, 3);
+  | var monerpdeux = acro[1].substr(0, 3);
+  | var mon = acro[2].substr(0, 3);
+  | 
+  | var name = prenom + nom;
+  | var eman = monerp + monerpdeux + mon;
+  | 
+  | acronyme.push(name);
+  | acro.push(eman);
+  | 
+  | // CODE EVALUATION:
+  | 
+  | [-] la fonction acronyme() n'est pas définie correctement
+  | [-] acronyme n'est pas une fonction valide
+  | [-] acronyme n'est pas une fonction valide
+  | [-] acronyme n'est pas une fonction valide
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 0 / 4
+  | 
+  | ------------- EXERCISE: code6 (variant: 3) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  |   var max_number = 100000;
+  |   var padding_zeros = '';
+  |   for(var i = 0, l = max_number.toString().length; i < l; i++) {
+  |     padding_zeros += '0';
+  |   }
+  | 
+  |   var padded_now, numberStep = function(now, tween) {
+  |     var target = $(tween.elem),
+  |         rounded_now = Math.round(now);
+  | 
+  |     var rounded_now_string = rounded_now.toString()
+  |     padded_now = padding_zeros + rounded_now_string;
+  |     padded_now = padded_now.substring(rounded_now_string.length);
+  | 
+  |     target.prop('number', rounded_now).text(padded_now);
+  |   };
+  | 
+  |   var use_max_power = $('#checkbox');
+  |   $('#start-campaign').click(function(){
+  |     $('#signatures').animateNumber({
+  |       number: max_number,
+  |       numberStep: numberStep
+  |     }, 5000);
+  |   });
+  | 
+  | // CODE EVALUATION:
+  | 
+  | [-] erreur: $ is not defined
+  | [-] avant clic de l'utilisateur, compteur1 devrait afficher 0
+  | [-] avant clic de l'utilisateur, compteur1 devrait afficher 0
+  | [-] clic sur bouton à causé une erreur: _fakeDom.bouton.onclick is not a function
+  | [-] 1 seconde après clic, compteur1 devrait afficher 10
+  | [-] 1 seconde après clic, compteur1 devrait afficher 45
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 0 / 4
+  | 
+  | ------------- EXERCISE: code7 (variant: 3) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var xhr = new XMLHttpRequest();
+  | xhr.open('POST', 'https://js-jsonplaceholder.herokuapp.com/posts');
+  | xhr.onreadystatechange = function() {
+  |   if (xhr.readyState === 4) {
+  |     alert(xhr.responseText);
+  |   }
+  | };
+  | {
+  |   data: {
+  |     title: 'lovejs',
+  |     body: 'heroku',
+  |     userId: 1
+  |   }
+  | })
+  | 
+  | // CODE EVALUATION:
+  | 
+  | [-] erreur: Unexpected token :
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [-] il fallait appeler la méthode open() de l'instance de `XMLHttpRequest`
+  | [-] il fallait passer `POST` comme 1er paramètre de la méthode open()
+  | [-] il fallait passer l'url demandée comme 2ème paramètre de la méthode open()
+  | [-] il fallait affecter une fonction à la propriété `onreadystatechange` de l'instance
+  | [-] il fallait appeler la méthode send() une fois pour envoyer la requête
+  | [-] il fallait passer à send() un objet ayant une propriété body: Heroku
+  | [-] la valeur d'id 101 aurait être affichée dans un console.log()
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 1, 0, 0, 0, 0, 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 0.4444444444444444 / 4
+  | 
+  | ------------- EXERCISE: code8 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | document.getElementById("bouton1").onclick = function() {
+  |  document.getElementById("image").style.display="block";
+  |  return true;
+  | }
+  | document.getElementById("bouton2").onclick = function() {
+  |  document.getElementById("image").style.display="block";
+  |  return true;
+  | }
+  | 
+  | // CODE EVALUATION:
+  | 
+  | [+] le programme fonctionne sans erreur
+  | [+] l'image initiale n'est pas modifiée tant que l'utilisateur ne clique pas
+  | [-] clic sur bouton1 à causé une erreur: Cannot set property 'display' of undefined
+  | [+] clic sur bouton1 => image https://i.imgur.com/MrsKxdZ.jpg est bien affichée
+  | [-] clic sur bouton2 à causé une erreur: Cannot set property 'display' of undefined
+  | [+] clic sur bouton2 => image https://i.imgur.com/MrsKxdZ.jpg est bien affichée
+  | [-] clic sur bouton1 à causé une erreur: Cannot set property 'display' of undefined
+  | [+] clic sur bouton1 => image https://i.imgur.com/MrsKxdZ.jpg est bien affichée
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 0, 1, 0, 1, 0, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 2.5 / 4
+
+  => code score: 2.9444444444444446 / 16 pts
+
+=> TOTAL STUDENT SCORE: 5.94 / 20
+
+
+================================
+
+STUDENT: kamil_izaret
+
+  -  quizz answers:
+  | qcm1 : 3 (solution: 3) => 1 pts
+  | qcm2 : 1 (solution: 1) => 1 pts
+  | qcm3 : 2 (solution: 2) => 1 pts
+  | qcm4 : 4 (solution: 4) => 1 pts
+
+  => quizz score: 4 / 4 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code5 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function acro (name) {
+  |   return name[0].substr(0,3)+name[1].substr(0,3);
+  | }
+  | 
+  | // CODE EVALUATION:
+  | 
+  | [+] function acro a bien été trouvé dans le code
+  | [+] l'appel acro(["adrien","joly"]) retourne bien adrjol
+  | [-] l'appel acro(["paul","edouard","vaillant"]) devrait retourner pauedovai
+  | [+] l'appel acro(["eric","maubert"]) retourne bien erimau
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 0, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 3 / 4
+  | 
+  | ------------- EXERCISE: code6 (variant: 2) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | // -> EXERCISE POINTS: 0 / 4
+  | 
+  | ------------- EXERCISE: code7 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var post = {
+  |     "userId": 1,
+  |     "id": 1,
+  |     "title": "Firebase",
+  |     "body": "ah!"
+  |   }
+  | var xhr = new XMLHttpRequest(); 
+  | xhr.open('POST', 'https://js-jsonplaceholder.herokuapp.com/posts');
+  | xhr.onreadystatechange = function() {
+  |   if (xhr.readyState === 4) {
+  |     console.log(post.id);
+  |   }
+  | };
+  | xhr.send(post);
+  | 
+  | // CODE EVALUATION:
+  | 
+  | [+] le programme fonctionne sans erreur
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [+] la méthode open() de l'instance de `XMLHttpRequest` a bien été appelée
+  | [+] `POST` a bien été passé en paramètre de la méthode open()
+  | [+] l'url demandée a bien été passée en paramètre de la méthode open()
+  | [+] une fonction a bien été affectée à la propriété `onreadystatechange` de l'instance
+  | [+] la méthode send() a bien été appelée une fois
+  | [-] il fallait passer à send() un objet ayant une propriété title: Firebase
+  | [-] la valeur d'id 101 aurait être affichée dans un console.log()
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1, 1, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 3.111111111111111 / 4
+  | 
+  | ------------- EXERCISE: code8 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | document.getElementById('bouton1').onclick = function() {
+  |   var img1 = document.getElementById('image');
+  |   img1.src = 'https://i.imgur.com/X3iY0e3.jpg';
+  | }
+  | 
+  | document.getElementById('bouton2').onclick = function() {
+  |   var img2 = document.getElementById('image');
+  |   img2.src = 'https://i.imgur.com/X3iY0e3.jpg';
+  | }
+  | 
+  | // CODE EVALUATION:
+  | 
+  | [+] le programme fonctionne sans erreur
+  | [+] l'image initiale n'est pas modifiée tant que l'utilisateur ne clique pas
+  | [+] clic sur bouton1 ne cause aucune erreur
+  | [+] clic sur bouton1 => image https://i.imgur.com/X3iY0e3.jpg est bien affichée
+  | [+] clic sur bouton2 ne cause aucune erreur
+  | [+] clic sur bouton2 => image https://i.imgur.com/X3iY0e3.jpg est bien affichée
+  | [+] clic sur bouton1 ne cause aucune erreur
+  | [+] clic sur bouton1 => image https://i.imgur.com/X3iY0e3.jpg est bien affichée
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 4 / 4
+
+  => code score: 10.11111111111111 / 16 pts
+
+=> TOTAL STUDENT SCORE: 14.11 / 20
+
+
+================================
+
+STUDENT: lara_kounowski
+
+  -  quizz answers:
+  | qcm1 : 3 (solution: 3) => 1 pts
+  | qcm2 : 1 (solution: 1) => 1 pts
+  | qcm3 : 2 (solution: 2) => 1 pts
+  | qcm4 : 2 (solution: 4) => 0 pts
+
+  => quizz score: 3 / 4 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code5 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var acronyme = "lkounowsk";
+  | var acronyme = acronyme.substring('lkounowski');
+  | document.write(acronyme+"<BR>")
+  | 
+  | // CODE EVALUATION:
+  | 
+  | /!\ erreur: document is not defined
+  | [-] la fonction acronyme() n'est pas définie correctement
+  | [-] acronyme n'est pas une fonction valide
+  | [-] acronyme n'est pas une fonction valide
+  | [-] acronyme n'est pas une fonction valide
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 0 / 4
+  | 
+  | ------------- EXERCISE: code6 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var compteur1 document.getElementById('compteur1');
+  | var compteur2 document.getElementById('compteur2');
+  | compteur1.countTo.onclick(100);
+  | compteur2.countTo.onclick(45);
+  | 
+  | 
+  | // CODE EVALUATION:
+  | 
+  | [-] erreur: Unexpected identifier
+  | [-] avant clic de l'utilisateur, compteur1 devrait afficher 0
+  | [-] avant clic de l'utilisateur, compteur1 devrait afficher 0
+  | [-] clic sur bouton à causé une erreur: _fakeDom.bouton.onclick is not a function
+  | [-] 1 seconde après clic, compteur1 devrait afficher 100
+  | [-] 1 seconde après clic, compteur1 devrait afficher 45
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 0 / 4
+  | 
+  | ------------- EXERCISE: code7 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var xhr = new XMLHttpRequest();
+  | xhr.open('POST', 'https://js-jsonplaceholder.herokuapp.com/posts');
+  | xhr.onreadystatechange = function() {
+  |   if (xhr.readyState === 4) {
+  |     alert(xhr.responseText);
+  |   }
+  | };
+  | xhr.send();
+  | 
+  | // CODE EVALUATION:
+  | 
+  | [+] le programme fonctionne sans erreur
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [+] la méthode open() de l'instance de `XMLHttpRequest` a bien été appelée
+  | [+] `POST` a bien été passé en paramètre de la méthode open()
+  | [+] l'url demandée a bien été passée en paramètre de la méthode open()
+  | [+] une fonction a bien été affectée à la propriété `onreadystatechange` de l'instance
+  | [+] la méthode send() a bien été appelée une fois
+  | [-] il fallait passer à send() un objet ayant une propriété title: Heroku
+  | [-] la valeur d'id 101 aurait être affichée dans un alert()
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1, 1, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 3.111111111111111 / 4
+  | 
+  | ------------- EXERCISE: code8 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var bouton1 = document.getElementById('bouton1');
+  | var bouton2 = document.getElementById('bouton2');
+  | var image = document.getElementById('image');
+  | bouton.onclick = function() {
+  |  var xhr = new XMLHttpRequest();
+  |  xhr.open('VIEW', 'https://i.imgur.com/X3iY0e3.jpg');
+  | var xhr = new XMLHttpRequest();
+  |  xhr.open('VIEW', 'https://i.imgur.com/X3iY0e3.jpg')
+  |  };
+  |  xhr.send();
+  | 
+  | // CODE EVALUATION:
+  | 
+  | [-] erreur: bouton is not defined
+  | [+] l'image initiale n'est pas modifiée tant que l'utilisateur ne clique pas
+  | [-] clic sur bouton1 à causé une erreur: _fakeDom[id].onclick is not a function
+  | [+] clic sur bouton1 => image https://i.imgur.com/X3iY0e3.jpg est bien affichée
+  | [-] clic sur bouton2 à causé une erreur: _fakeDom[id].onclick is not a function
+  | [+] clic sur bouton2 => image https://i.imgur.com/X3iY0e3.jpg est bien affichée
+  | [-] clic sur bouton1 à causé une erreur: _fakeDom[id].onclick is not a function
+  | [+] clic sur bouton1 => image https://i.imgur.com/X3iY0e3.jpg est bien affichée
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 1, 0, 1, 0, 1, 0, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 2 / 4
+
+  => code score: 5.111111111111111 / 16 pts
+
+=> TOTAL STUDENT SCORE: 8.11 / 20
+
+
+================================
+
+STUDENT: louis_gosse
+
+  -  quizz answers:
+  | qcm1 : 3 (solution: 3) => 1 pts
+  | qcm2 : 1 (solution: 1) => 1 pts
+  | qcm3 : 2 (solution: 2) => 1 pts
+  | qcm4 : 3 (solution: 4) => 0 pts
+
+  => quizz score: 3 / 4 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code5 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function acro (prenom, nom) {
+  |  var soustraire = acro.indexOf();
+  | 
+  | // CODE EVALUATION:
+  | 
+  | /!\ erreur: Unexpected end of input
+  | [+] function acro a bien été trouvé dans le code
+  | [-] acro n'est pas une fonction valide
+  | [-] acro n'est pas une fonction valide
+  | [-] acro n'est pas une fonction valide
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 1 / 4
+  | 
+  | ------------- EXERCISE: code6 (variant: 3) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var compt1 = document.getElementsById('compteur1');
+  | var compt2 = document.getElementsById('compteur2');
+  | var button = document.getElementById('bouton');
+  | 
+  | bouton.onclick = function() {
+  | 
+  | for (var i = 0; i < compt1.length; i++) {
+  |   
+  |      )
+  | 
+  |  };
+  | 
+  | 
+  | // CODE EVALUATION:
+  | 
+  | [-] erreur: Unexpected token )
+  | [-] avant clic de l'utilisateur, compteur1 devrait afficher 0
+  | [-] avant clic de l'utilisateur, compteur1 devrait afficher 0
+  | [-] clic sur bouton à causé une erreur: _fakeDom.bouton.onclick is not a function
+  | [-] 1 seconde après clic, compteur1 devrait afficher 10
+  | [-] 1 seconde après clic, compteur1 devrait afficher 45
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 0 / 4
+  | 
+  | ------------- EXERCISE: code7 (variant: 3) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var xhr = new XMLHttpRequest();
+  | xhr.open('POST', 'https://js-jsonplaceholder.herokuapp.com');
+  | xhr.onreadystatechange = function() {
+  |   if (xhr.readyState === 4) {
+  |     alert(xhr.responseText);
+  |   }
+  | };
+  | 
+  | xhr.send.JSON.parse({'body':'Heroku'});
+  | 
+  | 
+  | // CODE EVALUATION:
+  | 
+  | [-] erreur: Cannot read property 'parse' of undefined
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [+] la méthode open() de l'instance de `XMLHttpRequest` a bien été appelée
+  | [+] `POST` a bien été passé en paramètre de la méthode open()
+  | [-] il fallait passer l'url demandée comme 2ème paramètre de la méthode open()
+  | [+] une fonction a bien été affectée à la propriété `onreadystatechange` de l'instance
+  | [-] il fallait appeler la méthode send() une fois pour envoyer la requête
+  | [-] il fallait passer à send() un objet ayant une propriété body: Heroku
+  | [-] la valeur d'id 101 aurait être affichée dans un console.log()
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 1, 1, 1, 0, 1, 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 1.7777777777777777 / 4
+  | 
+  | ------------- EXERCISE: code8 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var images = document.getElementByTagName('button');
+  | 
+  | for (var i = 0; i< images.length; i++) {
+  | 
+  | button.onclick = function changerImage() {
+  |   initGallery(document.getElementById('bouton1'), [
+  |  'https://i.imgur.com/MrsKxdZ.jpg'
+  | ]);
+  | 
+  | 
+  | 
+  | 
+  | 
+  | }
+  | 
+  | // CODE EVALUATION:
+  | 
+  | [-] erreur: Unexpected end of input
+  | [+] l'image initiale n'est pas modifiée tant que l'utilisateur ne clique pas
+  | [-] clic sur bouton1 à causé une erreur: _fakeDom[id].onclick is not a function
+  | [+] clic sur bouton1 => image https://i.imgur.com/MrsKxdZ.jpg est bien affichée
+  | [-] clic sur bouton2 à causé une erreur: _fakeDom[id].onclick is not a function
+  | [+] clic sur bouton2 => image https://i.imgur.com/MrsKxdZ.jpg est bien affichée
+  | [-] clic sur bouton1 à causé une erreur: _fakeDom[id].onclick is not a function
+  | [+] clic sur bouton1 => image https://i.imgur.com/MrsKxdZ.jpg est bien affichée
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 1, 0, 1, 0, 1, 0, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 2 / 4
+
+  => code score: 4.777777777777778 / 16 pts
+
+=> TOTAL STUDENT SCORE: 7.77 / 20
+
+
+================================
+
+STUDENT: madison_hayat
+
+  -  quizz answers:
+  | qcm1 : 3 (solution: 3) => 1 pts
+  | qcm2 : 1 (solution: 1) => 1 pts
+  | qcm3 : 2 (solution: 2) => 1 pts
+  | qcm4 : 4 (solution: 4) => 1 pts
+
+  => quizz score: 4 / 4 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code5 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | acronyme() {
+  | 	MyString classATester = new MyString();
+  | 	String a = "madison";
+  | 	String b = "hayat";
+  | 	String resultatAttendu = "madison hayat";
+  |         String resultatObtenu = classATester.concatene(a, b);
+  |         if (resultatAttendu.compareTo(resultatObtenu) == 0) {
+  | 	     return true;
+  |         }
+  |         else {
+  | 	     return false;
+  |         }
+  | }
+  | 
+  | 
+  | // CODE EVALUATION:
+  | 
+  | /!\ erreur: Unexpected token {
+  | [-] la fonction acronyme() n'est pas définie correctement
+  | [-] acronyme n'est pas une fonction valide
+  | [-] acronyme n'est pas une fonction valide
+  | [-] acronyme n'est pas une fonction valide
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 0 / 4
+  | 
+  | ------------- EXERCISE: code6 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | $('.compteur').each(function() {
+  |   var $this = $(this),
+  |       countTo = $this.attr('data-count');
+  |   
+  |   $({ countNum: $this.text()}).animate({
+  |     countNum: countTo
+  |   },
+  | 
+  |   {
+  | 
+  |     duration: 8000,
+  |     easing:'linear',
+  |     step: function() {
+  |       $this.text(Math.floor(this.countNum));
+  |     },
+  |     complete: function() {
+  |       $this.text(this.countNum);
+  |       //alert('finished');
+  |     }
+  | 
+  |   });  
+  |   
+  |   
+  | 
+  | });
+  | 
+  | // CODE EVALUATION:
+  | 
+  | [-] erreur: $ is not defined
+  | [-] avant clic de l'utilisateur, compteur1 devrait afficher 0
+  | [-] avant clic de l'utilisateur, compteur1 devrait afficher 0
+  | [-] clic sur bouton à causé une erreur: _fakeDom.bouton.onclick is not a function
+  | [-] 1 seconde après clic, compteur1 devrait afficher 100
+  | [-] 1 seconde après clic, compteur1 devrait afficher 45
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 0 / 4
+  | 
+  | ------------- EXERCISE: code7 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | $.ajax('https://js-jsonplaceholder.herokuapp.com/posts', {
+  |   method: 'POST',
+  |   data: {
+  |     title: 'title',
+  |     body: 'zone',
+  |     userId: 1
+  |   }
+  | }).then(function(data) {
+  |   console.log(data);
+  | });
+  | 
+  | // CODE EVALUATION:
+  | 
+  | [-] erreur: $ is not defined
+  | [-] il fallait instancier `XMLHttpRequest` avec le mot-clé `new`
+  | [-] il fallait appeler la méthode open() de l'instance de `XMLHttpRequest`
+  | [-] il fallait passer `POST` comme 1er paramètre de la méthode open()
+  | [-] il fallait passer l'url demandée comme 2ème paramètre de la méthode open()
+  | [-] il fallait affecter une fonction à la propriété `onreadystatechange` de l'instance
+  | [-] il fallait appeler la méthode send() une fois pour envoyer la requête
+  | [-] il fallait passer à send() un objet ayant une propriété title: Heroku
+  | [-] la valeur d'id 101 aurait être affichée dans un alert()
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 0 / 4
+  | 
+  | ------------- EXERCISE: code8 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function changeImage() {
+  | 
+  |         if (document.getElementById("imgClickAndChange").src == "https://i.imgur.com/X3iY0e3.jpg") 
+  |         else 
+  |         {
+  |             document.getElementById("imgClickAndChange").src = "https://i.imgur.com/X3iY0e3.jpg";
+  |         }
+  |     }
+  |     
+  |     alert='bravo!'
+  | 
+  | // CODE EVALUATION:
+  | 
+  | [-] erreur: Unexpected token else
+  | [+] l'image initiale n'est pas modifiée tant que l'utilisateur ne clique pas
+  | [-] clic sur bouton1 à causé une erreur: _fakeDom[id].onclick is not a function
+  | [+] clic sur bouton1 => image https://i.imgur.com/X3iY0e3.jpg est bien affichée
+  | [-] clic sur bouton2 à causé une erreur: _fakeDom[id].onclick is not a function
+  | [+] clic sur bouton2 => image https://i.imgur.com/X3iY0e3.jpg est bien affichée
+  | [-] clic sur bouton1 à causé une erreur: _fakeDom[id].onclick is not a function
+  | [+] clic sur bouton1 => image https://i.imgur.com/X3iY0e3.jpg est bien affichée
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 1, 0, 1, 0, 1, 0, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 2 / 4
+
+  => code score: 2 / 16 pts
+
+=> TOTAL STUDENT SCORE: 6 / 20
+
+
+================================
+
+STUDENT: mickael_chekroun
+
+  -  quizz answers:
+  | qcm1 : 3 (solution: 3) => 1 pts
+  | qcm2 : 1 (solution: 1) => 1 pts
+  | qcm3 : 2 (solution: 2) => 1 pts
+  | qcm4 : 4 (solution: 4) => 1 pts
+
+  => quizz score: 4 / 4 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code5 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function acronyme ([a,b]) {
+  |   var premier = a;
+  |   var deuxieme = b;
+  |   premier = premier.substring(0,3);
+  |   deuxieme = deuxieme.substring(0,3);
+  |   return premier + deuxieme;
+  | }
+  | 
+  | // CODE EVALUATION:
+  | 
+  | [+] function acronyme a bien été trouvé dans le code
+  | [+] l'appel acronyme(["adrien","joly"]) retourne bien adrjol
+  | [-] l'appel acronyme(["paul","edouard","vaillant"]) devrait retourner pauedovai
+  | [+] l'appel acronyme(["eric","maubert"]) retourne bien erimau
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 0, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 3 / 4
+  | 
+  | ------------- EXERCISE: code6 (variant: 3) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function compteur(a,b,c) {
+  |   var premierCompteur = document.getElementById('a');
+  |   var deuxiemeCompteur = document.getElementById('b');
+  |   var boutonCompteur = document.getElementById('c');
+  | 
+  |   if(boutonCompteur.addEventListener === true) {
+  |     var max1 = 10;
+  |     var max2 = 45;
+  |     for (var i = 0; i <= max1; i++) {
+  |       premierCompteur.innerHtml(i);
+  |     }
+  |   }
+  | }
+  | 
+  | 
+  | // CODE EVALUATION:
+  | 
+  | [+] le programme fonctionne sans erreur
+  | [-] avant clic de l'utilisateur, compteur1 devrait afficher 0
+  | [-] avant clic de l'utilisateur, compteur1 devrait afficher 0
+  | [-] clic sur bouton à causé une erreur: _fakeDom.bouton.onclick is not a function
+  | [-] 1 seconde après clic, compteur1 devrait afficher 10
+  | [-] 1 seconde après clic, compteur1 devrait afficher 45
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 0, 0, 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 0.6666666666666666 / 4
+  | 
+  | ------------- EXERCISE: code7 (variant: 3) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var req = new XMLHttpRequest(); 
+  | req.open('GET', 'https://js-jsonplaceholder.herokuapp.com');
+  | 
+  | 
+  | // CODE EVALUATION:
+  | 
+  | [+] le programme fonctionne sans erreur
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [+] la méthode open() de l'instance de `XMLHttpRequest` a bien été appelée
+  | [-] il fallait passer `POST` comme 1er paramètre de la méthode open()
+  | [-] il fallait passer l'url demandée comme 2ème paramètre de la méthode open()
+  | [-] il fallait affecter une fonction à la propriété `onreadystatechange` de l'instance
+  | [-] il fallait appeler la méthode send() une fois pour envoyer la requête
+  | [-] il fallait passer à send() un objet ayant une propriété body: Heroku
+  | [-] la valeur d'id 101 aurait être affichée dans un console.log()
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 0, 0, 0, 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 1.3333333333333333 / 4
+  | 
+  | ------------- EXERCISE: code8 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function comparer(a,b,c) {
+  |   var bouton1 = document.getElementById(a);
+  |   var bouton2 = document.getElementById(b);
+  |   var monImage = document.getElementById(c);
+  |   bouton1.onclick = function (){
+  |     monImage.setAttribute('src','https://i.imgur.com/MrsKxdZ.jpg');
+  |   }
+  |   bouton2.onclick = function (){
+  |     monImage.setAttribute('src','https://i.imgur.com/MrsKxdZ.jpg');
+  |   }
+  | }
+  | 
+  | // CODE EVALUATION:
+  | 
+  | [+] le programme fonctionne sans erreur
+  | [+] l'image initiale n'est pas modifiée tant que l'utilisateur ne clique pas
+  | [-] clic sur bouton1 à causé une erreur: _fakeDom[id].onclick is not a function
+  | [+] clic sur bouton1 => image https://i.imgur.com/MrsKxdZ.jpg est bien affichée
+  | [-] clic sur bouton2 à causé une erreur: _fakeDom[id].onclick is not a function
+  | [+] clic sur bouton2 => image https://i.imgur.com/MrsKxdZ.jpg est bien affichée
+  | [-] clic sur bouton1 à causé une erreur: _fakeDom[id].onclick is not a function
+  | [+] clic sur bouton1 => image https://i.imgur.com/MrsKxdZ.jpg est bien affichée
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 0, 1, 0, 1, 0, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 2.5 / 4
+
+  => code score: 7.5 / 16 pts
+
+=> TOTAL STUDENT SCORE: 11.5 / 20
+
+
+================================
+
+STUDENT: pierre_salesse
+
+  -  quizz answers:
+  | qcm1 : 4 (solution: 3) => 0 pts
+  | qcm2 : 1 (solution: 1) => 1 pts
+  | qcm3 : 2 (solution: 2) => 1 pts
+  | qcm4 : 3 (solution: 4) => 0 pts
+
+  => quizz score: 2 / 4 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code5 (variant: 1) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | // -> EXERCISE POINTS: 0 / 4
+  | 
+  | ------------- EXERCISE: code6 (variant: 1) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | // -> EXERCISE POINTS: 0 / 4
+  | 
+  | ------------- EXERCISE: code7 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var xhr = new XMLHttpRequest(); 
+  | xhr.open('POST', 'https://js-jsonplaceholder.herokuapp.com/posts');
+  | xhr.onreadystatechange = function() {
+  |   if (xhr.readyState === 4) {
+  |    	var reponse = JSON.parse(xhr.responseText);
+  |     alert(reponse.id);
+  |   }
+  | };
+  | xhr.send();
+  | 
+  | // CODE EVALUATION:
+  | 
+  | [+] le programme fonctionne sans erreur
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [+] la méthode open() de l'instance de `XMLHttpRequest` a bien été appelée
+  | [+] `POST` a bien été passé en paramètre de la méthode open()
+  | [+] l'url demandée a bien été passée en paramètre de la méthode open()
+  | [+] une fonction a bien été affectée à la propriété `onreadystatechange` de l'instance
+  | [+] la méthode send() a bien été appelée une fois
+  | [-] il fallait passer à send() un objet ayant une propriété body: Firebase
+  | [+] la valeur d'id 101 a bien été affichée dans un alert()
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1, 1, 0, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 3.5555555555555554 / 4
+  | 
+  | ------------- EXERCISE: code8 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | 
+  | var bouton = document.getElementById('bouton1');
+  | var bouton2 = document.getElementById('bouton2');
+  | 
+  | bouton.onclick = function changeImage(element)
+  | {
+  |   var image = element.getElementsById("image").item(0);
+  |   var source = image.getAttribute("src");
+  |   if(source == "https://i.imgur.com/MrsKxdZ.jpg"){
+  |     source = "https://i.imgur.com/MrsKxdZ.jpg");
+  |     }
+  |   else{
+  |     source = "https://i.imgur.com/MrsKxdZ.jpg");
+  |   image.setAttribute("src", source);	
+  |   }
+  | }
+  | 
+  | // CODE EVALUATION:
+  | 
+  | [-] erreur: Unexpected token )
+  | [+] l'image initiale n'est pas modifiée tant que l'utilisateur ne clique pas
+  | [-] clic sur bouton1 à causé une erreur: _fakeDom[id].onclick is not a function
+  | [+] clic sur bouton1 => image https://i.imgur.com/MrsKxdZ.jpg est bien affichée
+  | [-] clic sur bouton2 à causé une erreur: _fakeDom[id].onclick is not a function
+  | [+] clic sur bouton2 => image https://i.imgur.com/MrsKxdZ.jpg est bien affichée
+  | [-] clic sur bouton1 à causé une erreur: _fakeDom[id].onclick is not a function
+  | [+] clic sur bouton1 => image https://i.imgur.com/MrsKxdZ.jpg est bien affichée
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 1, 0, 1, 0, 1, 0, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 2 / 4
+
+  => code score: 5.555555555555555 / 16 pts
+
+=> TOTAL STUDENT SCORE: 7.55 / 20
+
+
+================================
+
+STUDENT: quentin_champenois
+
+  -  quizz answers:
+  | qcm1 : 3 (solution: 3) => 1 pts
+  | qcm2 : 1 (solution: 1) => 1 pts
+  | qcm3 : 2 (solution: 2) => 1 pts
+  | qcm4 : 2 (solution: 4) => 0 pts
+
+  => quizz score: 3 / 4 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code5 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function acro(tableau) {
+  |   var acronyme = tableau[0].substring(0, 3);
+  |   var acronyme2 = tableau[1].substring(0, 3);
+  |   var concat = acronyme + acronyme2;
+  |   return concat;
+  | }
+  | 
+  | // CODE EVALUATION:
+  | 
+  | [+] function acro a bien été trouvé dans le code
+  | [+] l'appel acro(["adrien","joly"]) retourne bien adrjol
+  | [-] l'appel acro(["paul","edouard","vaillant"]) devrait retourner pauedovai
+  | [+] l'appel acro(["eric","maubert"]) retourne bien erimau
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 0, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 3 / 4
+  | 
+  | ------------- EXERCISE: code6 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var compteur1 = document.getElementById('compteur1');
+  | var compteur2 = document.getElementById('compteur2');
+  | 
+  | 
+  | 
+  | // CODE EVALUATION:
+  | 
+  | [+] le programme fonctionne sans erreur
+  | [-] avant clic de l'utilisateur, compteur1 devrait afficher 0
+  | [-] avant clic de l'utilisateur, compteur1 devrait afficher 0
+  | [-] clic sur bouton à causé une erreur: _fakeDom.bouton.onclick is not a function
+  | [-] 1 seconde après clic, compteur1 devrait afficher 100
+  | [-] 1 seconde après clic, compteur1 devrait afficher 45
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 0, 0, 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 0.6666666666666666 / 4
+  | 
+  | ------------- EXERCISE: code7 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var xhr = new XMLHttpRequest();
+  | xhr.open('POST', 'https://js-jsonplaceholder.herokuapp.com/posts');
+  | xhr.onreadystatechange = function () {
+  |   if (xhr.readyState === 4) {
+  |     var reponse = JSON.parse(xhr.responseText);
+  |     console.log(xhr.responseText);
+  |     alert(reponse.id);
+  |   }
+  | };
+  | xhr.send();
+  | 
+  | // CODE EVALUATION:
+  | 
+  | [+] le programme fonctionne sans erreur
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [+] la méthode open() de l'instance de `XMLHttpRequest` a bien été appelée
+  | [+] `POST` a bien été passé en paramètre de la méthode open()
+  | [+] l'url demandée a bien été passée en paramètre de la méthode open()
+  | [+] une fonction a bien été affectée à la propriété `onreadystatechange` de l'instance
+  | [+] la méthode send() a bien été appelée une fois
+  | [-] il fallait passer à send() un objet ayant une propriété body: Firebase
+  | [+] la valeur d'id 101 a bien été affichée dans un alert()
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1, 1, 0, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 3.5555555555555554 / 4
+  | 
+  | ------------- EXERCISE: code8 (variant: 1) -------------
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | // -> EXERCISE POINTS: 0 / 4
+
+  => code score: 7.222222222222221 / 16 pts
+
+=> TOTAL STUDENT SCORE: 10.22 / 20
+
+
+================================
+
+STUDENT: raphael_parets
+
+  -  quizz answers:
+  | qcm1 : 3 (solution: 3) => 1 pts
+  | qcm2 : 1 (solution: 1) => 1 pts
+  | qcm3 : 2 (solution: 2) => 1 pts
+  | qcm4 : 4 (solution: 4) => 1 pts
+
+  => quizz score: 4 / 4 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code5 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function genererAcronyme(tableau){
+  |   var acronyme = '';
+  |   for (var i=0; i<tableau.length; i++){
+  |     acronyme = acronyme + tableau[i].substring(0,3);
+  |   }
+  |   return acronyme;
+  | }
+  | 
+  | // CODE EVALUATION:
+  | 
+  | [+] function genererAcronyme a bien été trouvé dans le code
+  | [+] l'appel genererAcronyme(["adrien","joly"]) retourne bien adrjol
+  | [+] l'appel genererAcronyme(["paul","edouard","vaillant"]) retourne bien pauedovai
+  | [+] l'appel genererAcronyme(["eric","maubert"]) retourne bien erimau
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 4 / 4
+  | 
+  | ------------- EXERCISE: code6 (variant: 3) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var div1 = document.getElementById('compteur1');
+  | var div2 = document.getElementById('compteur2');
+  | var counter1 = new Counter(div1);
+  | var counter2 = new Counter(div2);
+  | 
+  | document.getElementById('bouton').onclick = function counterStrike(){
+  |   counter1.countTo(10);
+  |   counter2.countTo(45);
+  | }
+  | 
+  | // CODE EVALUATION:
+  | 
+  | [+] le programme fonctionne sans erreur
+  | [+] avant clic de l'utilisateur, compteur1 affiche bien 0
+  | [+] avant clic de l'utilisateur, compteur1 affiche bien 0
+  | [+] clic sur bouton ne cause aucune erreur
+  | [+] 1 seconde après clic, compteur1 affiche bien 10
+  | [+] 1 seconde après clic, compteur1 affiche bien 45
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 4 / 4
+  | 
+  | ------------- EXERCISE: code7 (variant: 3) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function ressource(){
+  |   var query = new XMLHttpRequest(); 
+  |   query.open('POST', 'https://js-jsonplaceholder.herokuapp.com/posts');
+  |   query.onreadystatechange = function() {
+  |     if (query.readyState === 4) {
+  |       var reponse = JSON.parse(query.responseText);
+  |       console.log(reponse.id);
+  |     }
+  |   query.send(JSON.stringify({ 
+  |     body: 'Heroku',
+  |     title: 'Bonjour le monde, je m\'appelle Raphaël et je suis en partiel',
+  |     }));
+  |   }
+  | }
+  | 
+  | // CODE EVALUATION:
+  | 
+  | [+] le programme fonctionne sans erreur
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [-] il fallait appeler la méthode open() de l'instance de `XMLHttpRequest`
+  | [-] il fallait passer `POST` comme 1er paramètre de la méthode open()
+  | [-] il fallait passer l'url demandée comme 2ème paramètre de la méthode open()
+  | [-] il fallait affecter une fonction à la propriété `onreadystatechange` de l'instance
+  | [-] il fallait appeler la méthode send() une fois pour envoyer la requête
+  | [-] il fallait passer à send() un objet ayant une propriété body: Heroku
+  | [-] la valeur d'id 101 aurait être affichée dans un console.log()
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 0, 0, 0, 0, 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 0.8888888888888888 / 4
+  | 
+  | ------------- EXERCISE: code8 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var img = document.getElementById('image');
+  | 
+  | document.getElementById('bouton1').onclick = function(){
+  |   img.src = 'https://i.imgur.com/MrsKxdZ.jpg';
+  | }
+  | 
+  | document.getElementById('bouton2').onclick = function(){
+  |   img.src = 'http://i.imgur.com/qo4ahD3.jpg';
+  | }
+  | 
+  | // CODE EVALUATION:
+  | 
+  | [+] le programme fonctionne sans erreur
+  | [+] l'image initiale n'est pas modifiée tant que l'utilisateur ne clique pas
+  | [+] clic sur bouton1 ne cause aucune erreur
+  | [+] clic sur bouton1 => image https://i.imgur.com/MrsKxdZ.jpg est bien affichée
+  | [+] clic sur bouton2 ne cause aucune erreur
+  | [-] clic sur bouton2 => image https://i.imgur.com/MrsKxdZ.jpg devrait être affichée
+  | [+] clic sur bouton1 ne cause aucune erreur
+  | [+] clic sur bouton1 => image https://i.imgur.com/MrsKxdZ.jpg est bien affichée
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 0, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 3.5 / 4
+
+  => code score: 12.38888888888889 / 16 pts
+
+=> TOTAL STUDENT SCORE: 16.38 / 20
+
+
+================================
+
+STUDENT: theo_geay
+
+  -  quizz answers:
+  | qcm1 : 3 (solution: 3) => 1 pts
+  | qcm2 : 1 (solution: 1) => 1 pts
+  | qcm3 : 2 (solution: 2) => 1 pts
+  | qcm4 : 3 (solution: 4) => 0 pts
+
+  => quizz score: 3 / 4 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code5 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var genererAcronyme = function(texte){
+  | var g = texte.substring(0,2);
+  | g;
+  | }
+  | 
+  | 
+  | // CODE EVALUATION:
+  | 
+  | [-] la fonction genererAcronyme() n'est pas définie correctement
+  | [-] genererAcronyme n'est pas une fonction valide
+  | [-] genererAcronyme n'est pas une fonction valide
+  | [-] genererAcronyme n'est pas une fonction valide
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 0 / 4
+  | 
+  | ------------- EXERCISE: code6 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var but = document.getElementByID('bouton')
+  | var cone = document.getElementByID('compteur1')
+  | var ctwo = document.getElementByID('compteur')
+  | var lone = function(){
+  | Counter(cone);
+  | countTo(100);
+  | }
+  | var ltwo = function() {
+  | Counter(ctwo);
+  | countTo(45);
+  | }
+  | 
+  | but.onclick = function() {
+  | lone;
+  | ltwo;
+  | }
+  | 
+  | 
+  | // CODE EVALUATION:
+  | 
+  | [-] erreur: document.getElementByID is not a function
+  | [-] avant clic de l'utilisateur, compteur1 devrait afficher 0
+  | [-] avant clic de l'utilisateur, compteur1 devrait afficher 0
+  | [-] clic sur bouton à causé une erreur: _fakeDom.bouton.onclick is not a function
+  | [-] 1 seconde après clic, compteur1 devrait afficher 100
+  | [-] 1 seconde après clic, compteur1 devrait afficher 45
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 0 / 4
+  | 
+  | ------------- EXERCISE: code7 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var xhr = new XMLHttpRequest();
+  | xhr.open('POST', 'http://jsonplaceholder.typicode.com/posts');
+  | xhr.setRequestHeader('Content-Type', 'application/json');
+  | xhr.onreadystatechange = function () {
+  |     if (xhr.readyState == 4 && xhr.status == 200) {
+  |         alert(xhr.responseText);
+  |     }
+  | }
+  | xhr.send(JSON.stringify({title: 'boom', body: 'Firebase', userId: 100}));
+  | alert(data.id);
+  | 
+  | 
+  | // CODE EVALUATION:
+  | 
+  | [-] erreur: xhr.setRequestHeader is not a function
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [+] la méthode open() de l'instance de `XMLHttpRequest` a bien été appelée
+  | [+] `POST` a bien été passé en paramètre de la méthode open()
+  | [-] il fallait passer l'url demandée comme 2ème paramètre de la méthode open()
+  | [-] il fallait affecter une fonction à la propriété `onreadystatechange` de l'instance
+  | [-] il fallait appeler la méthode send() une fois pour envoyer la requête
+  | [-] il fallait passer à send() un objet ayant une propriété body: Firebase
+  | [-] la valeur d'id 101 aurait être affichée dans un alert()
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 1, 1, 1, 0, 0, 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 1.3333333333333333 / 4
+  | 
+  | ------------- EXERCISE: code8 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var bone = document.getElementById('bouton1');
+  | var btwo = document.getElementById('bouton2');
+  | var im = document.getElementById('image');
+  | bone.onclick = function(){
+  | im.src="https://i.imgur.com/MrsKxdZ.jpg";
+  | }
+  | btwo.onclick= function(){
+  | im.src="https://i.imgur.com/MrsKxdZ.jpg";
+  | }
+  | 
+  | 
+  | // CODE EVALUATION:
+  | 
+  | [+] le programme fonctionne sans erreur
+  | [+] l'image initiale n'est pas modifiée tant que l'utilisateur ne clique pas
+  | [+] clic sur bouton1 ne cause aucune erreur
+  | [+] clic sur bouton1 => image https://i.imgur.com/MrsKxdZ.jpg est bien affichée
+  | [+] clic sur bouton2 ne cause aucune erreur
+  | [+] clic sur bouton2 => image https://i.imgur.com/MrsKxdZ.jpg est bien affichée
+  | [+] clic sur bouton1 ne cause aucune erreur
+  | [+] clic sur bouton1 => image https://i.imgur.com/MrsKxdZ.jpg est bien affichée
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 4 / 4
+
+  => code score: 5.333333333333333 / 16 pts
+
+=> TOTAL STUDENT SCORE: 8.33 / 20
+
+
+================================
+
+STUDENT: thibault_chambrillon
+
+  -  quizz answers:
+  | qcm1 : 3 (solution: 3) => 1 pts
+  | qcm2 : 1 (solution: 1) => 1 pts
+  | qcm3 : 2 (solution: 2) => 1 pts
+  | qcm4 : 1 (solution: 4) => 0 pts
+
+  => quizz score: 3 / 4 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code5 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | <button onclick="genererAcronyme()">Try it</button>
+  | 
+  | <p id="demo"></p>
+  | 
+  | <script>
+  | function genererAcronyme() {
+  |   var nom = ['adrien','joly'];
+  |   var res = nom[0].substr(0, 3) + nom[1].substr(0, 3);
+  |   document.getElementById("demo").innerHTML = res;
+  | }
+  | </script>
+  | 
+  | // CODE EVALUATION:
+  | 
+  | /!\ erreur: Unexpected token <
+  | [+] function genererAcronyme a bien été trouvé dans le code
+  | [-] genererAcronyme n'est pas une fonction valide
+  | [-] genererAcronyme n'est pas une fonction valide
+  | [-] genererAcronyme n'est pas une fonction valide
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 1 / 4
+  | 
+  | ------------- EXERCISE: code6 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | AnimCounter () {
+  | document.getElementById('compteur1').countTo(10)
+  | document.getElementById('compteur2').countTo(45)
+  | document.getElementById('bouton').onclick = AnimCounter() {
+  |  };
+  | 
+  | // CODE EVALUATION:
+  | 
+  | [-] erreur: Unexpected token {
+  | [-] avant clic de l'utilisateur, compteur1 devrait afficher 0
+  | [-] avant clic de l'utilisateur, compteur1 devrait afficher 0
+  | [-] clic sur bouton à causé une erreur: _fakeDom.bouton.onclick is not a function
+  | [-] 1 seconde après clic, compteur1 devrait afficher 10
+  | [-] 1 seconde après clic, compteur1 devrait afficher 45
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 0 / 4
+  | 
+  | ------------- EXERCISE: code7 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var message = document.getElementById('message');
+  | 
+  | function sendMessage() {
+  |   if (message.value.length === 0) {
+  |     return;
+  |   }
+  |   
+  |   var xhr = new XMLHttpRequest();
+  |   xhr.open('POST', 'https://js-jsonplaceholder.herokuapp.com/posts');
+  |   xhr.onreadystatechange = function() {
+  |     if (xhr.readyState === 4) {
+  |       console.log('Réponse finale du serveur:', xhr.responseText);
+  |       var responseObject = JSON.parse(xhr.responseText);
+  |       if (responseObject.error) {
+  |         alert('Erreur: ' + responseObject.error);
+  |       } else {
+  |         console.log('Message bien envoyé !');
+  |         message.value = '';
+  |       }
+  |     }
+  |   };
+  | 
+  | // CODE EVALUATION:
+  | 
+  | [-] erreur: Unexpected end of input
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [-] il fallait appeler la méthode open() de l'instance de `XMLHttpRequest`
+  | [-] il fallait passer `POST` comme 1er paramètre de la méthode open()
+  | [-] il fallait passer l'url demandée comme 2ème paramètre de la méthode open()
+  | [-] il fallait affecter une fonction à la propriété `onreadystatechange` de l'instance
+  | [-] il fallait appeler la méthode send() une fois pour envoyer la requête
+  | [-] il fallait passer à send() un objet ayant une propriété title: Firebase
+  | [-] la valeur d'id 101 aurait être affichée dans un console.log()
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 1, 0, 0, 0, 0, 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 0.4444444444444444 / 4
+  | 
+  | ------------- EXERCISE: code8 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var images = document.getElementsByClassName('carousel-img');
+  | var imageVisible = 0;
+  | 
+  | function img1() {
+  |   images[imageVisible].classList.remove('visible');
+  |   imageVisible = (imageVisible + 1) % images.length;
+  |   images[imageVisible].classList.add('visible');
+  | }
+  | 
+  | function img2() {
+  |   images[imageVisible].classList.remove('visible');
+  |   imageVisible = (imageVisible + 2) % images.length;
+  |   images[imageVisible].classList.add('visible');
+  | }
+  | document.getElementById('bouton1').onclick = img1;
+  | document.getElementById('bouton2').onclick = img2;
+  | 
+  | // CODE EVALUATION:
+  | 
+  | [+] le programme fonctionne sans erreur
+  | [+] l'image initiale n'est pas modifiée tant que l'utilisateur ne clique pas
+  | [-] clic sur bouton1 à causé une erreur: Cannot read property 'classList' of undefined
+  | [+] clic sur bouton1 => image https://i.imgur.com/X3iY0e3.jpg est bien affichée
+  | [-] clic sur bouton2 à causé une erreur: Cannot read property 'classList' of undefined
+  | [+] clic sur bouton2 => image https://i.imgur.com/X3iY0e3.jpg est bien affichée
+  | [-] clic sur bouton1 à causé une erreur: Cannot read property 'classList' of undefined
+  | [+] clic sur bouton1 => image https://i.imgur.com/X3iY0e3.jpg est bien affichée
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 0, 1, 0, 1, 0, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 2.5 / 4
+
+  => code score: 3.9444444444444446 / 16 pts
+
+=> TOTAL STUDENT SCORE: 6.94 / 20
+
+
+================================
+
+STUDENT: timothee_ong
+
+  -  quizz answers:
+  | qcm1 : 3 (solution: 3) => 1 pts
+  | qcm2 : 1 (solution: 1) => 1 pts
+  | qcm3 : 2 (solution: 2) => 1 pts
+  | qcm4 : 2 (solution: 4) => 0 pts
+
+  => quizz score: 3 / 4 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code5 (variant: 1) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function genererAcronyme(tab){
+  |     var tab = "";
+  |     for (var i= 0; i<tab.length; i++){
+  |         tabContent= tab[i].substr(0,2);
+  |     }
+  | }
+  | return tab;
+  | 
+  | // CODE EVALUATION:
+  | 
+  | /!\ erreur: Illegal return statement
+  | [+] function genererAcronyme a bien été trouvé dans le code
+  | [-] genererAcronyme n'est pas une fonction valide
+  | [-] genererAcronyme n'est pas une fonction valide
+  | [-] genererAcronyme n'est pas une fonction valide
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 1 / 4
+  | 
+  | ------------- EXERCISE: code6 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function animateCounter(id, start, end, duration) {
+  |     var range = end - start;
+  |     var current = start;
+  |     var increment = end > start? 1 : -1;
+  |     var stepTime = Math.abs(Math.floor(duration / range));
+  |     var obj = document.getElementById(id);
+  |     var timer = setInterval(function() {
+  |         current += increment;
+  |         obj.innerHTML = current;
+  |         if (current == end) {
+  |             clearInterval(timer);
+  |         }
+  |     }, stepTime);
+  | }
+  | 
+  | animateCounter("compteur1", 0, 100, 1000);
+  | animateCounter("compteur2",0,45,1000);
+  | 
+  | // CODE EVALUATION:
+  | 
+  | [+] le programme fonctionne sans erreur
+  | [-] avant clic de l'utilisateur, compteur1 devrait afficher 0
+  | [-] avant clic de l'utilisateur, compteur1 devrait afficher 0
+  | [-] clic sur bouton à causé une erreur: _fakeDom.bouton.onclick is not a function
+  | [-] 1 seconde après clic, compteur1 devrait afficher 100
+  | [-] 1 seconde après clic, compteur1 devrait afficher 45
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 0, 0, 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 0.6666666666666666 / 4
+  | 
+  | ------------- EXERCISE: code7 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var xhr = new XMLHttpRequest();
+  | xhr.open('POST', 'https://js-jsonplaceholder.herokuapp.com/posts');
+  | xhr.onreadystatechange = function() {
+  |     if (xhr.readyState === 4) {
+  |         alert(xhr.responseText);
+  |     }
+  | };
+  | // envoi d'une chaine de caractères:
+  | xhr.send('Heroku');
+  | 
+  | 
+  | // CODE EVALUATION:
+  | 
+  | [+] le programme fonctionne sans erreur
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [+] la méthode open() de l'instance de `XMLHttpRequest` a bien été appelée
+  | [+] `POST` a bien été passé en paramètre de la méthode open()
+  | [+] l'url demandée a bien été passée en paramètre de la méthode open()
+  | [+] une fonction a bien été affectée à la propriété `onreadystatechange` de l'instance
+  | [+] la méthode send() a bien été appelée une fois
+  | [-] il fallait passer à send() un objet ayant une propriété title: Heroku
+  | [-] la valeur d'id 101 aurait être affichée dans un alert()
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1, 1, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 3.111111111111111 / 4
+  | 
+  | ------------- EXERCISE: code8 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var boutons = document.getElementsByTagName('button');
+  | var images = document.getElementsById('image');
+  | 
+  | var imageVisible = 0;
+  | 
+  | 
+  | function changerImage() {
+  |     images[imageVisible].style.display="none";
+  |     imageVisible = (imageVisible + 1) % images.length;
+  |     images[imageVisible].style.display="block";
+  | }
+  | 
+  | document.getElementsByTagName('button').onclick = changerImage;
+  | 
+  | changerImage();
+  | 
+  | 
+  | // CODE EVALUATION:
+  | 
+  | [-] erreur: document.getElementsById is not a function
+  | [+] l'image initiale n'est pas modifiée tant que l'utilisateur ne clique pas
+  | [-] clic sur bouton1 à causé une erreur: _fakeDom[id].onclick is not a function
+  | [+] clic sur bouton1 => image https://i.imgur.com/X3iY0e3.jpg est bien affichée
+  | [-] clic sur bouton2 à causé une erreur: _fakeDom[id].onclick is not a function
+  | [+] clic sur bouton2 => image https://i.imgur.com/X3iY0e3.jpg est bien affichée
+  | [-] clic sur bouton1 à causé une erreur: _fakeDom[id].onclick is not a function
+  | [+] clic sur bouton1 => image https://i.imgur.com/X3iY0e3.jpg est bien affichée
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 1, 0, 1, 0, 1, 0, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 2 / 4
+
+  => code score: 6.777777777777778 / 16 pts
+
+=> TOTAL STUDENT SCORE: 9.77 / 20
+
+
+================================
+
+STUDENT: victor_legac
+
+  -  quizz answers:
+  | qcm1 : 3 (solution: 3) => 1 pts
+  | qcm2 : 1 (solution: 1) => 1 pts
+  | qcm3 : 2 (solution: 2) => 1 pts
+  | qcm4 : 1 (solution: 4) => 0 pts
+
+  => quizz score: 3 / 4 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code5 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function acro(event) {
+  |  console.log(nom[0].substr(0,3));
+  |  console.log(nom[1].substr(0,3));
+  |  console.log(nom[2].substr(0,3));
+  | }
+  | 
+  | // CODE EVALUATION:
+  | 
+  | [+] function acro a bien été trouvé dans le code
+  | [-] l'appel acro(["adrien","joly"]) cause l'erreur: nom is not defined
+  | [-] l'appel acro(["paul","edouard","vaillant"]) cause l'erreur: nom is not defined
+  | [-] l'appel acro(["eric","maubert"]) cause l'erreur: nom is not defined
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 1 / 4
+  | 
+  | ------------- EXERCISE: code6 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var n = 10; 
+  | var n2 = 45; 
+  | var compte = 0; 
+  | var duree = 1; 
+  | var inter = Math.ceil((duree * 1000) / n); 
+  | var content = document.getElementById("compteur1");
+  | var content2 = document.getElementById("compteur2");
+  | var b = document.getElementById("bouton") 
+  | 
+  | function countdown(event) {
+  |  content.innerHTML = ++compte;
+  |  content2.innerHTML = ++compte;
+  | 
+  |   if( compte < n ) { 
+  |      setTimeout(countdown, inter);
+  | }
+  | setTimeout(countdown, inter);
+  | 
+  | // CODE EVALUATION:
+  | 
+  | [-] erreur: Unexpected end of input
+  | [-] avant clic de l'utilisateur, compteur1 devrait afficher 0
+  | [-] avant clic de l'utilisateur, compteur1 devrait afficher 0
+  | [-] clic sur bouton à causé une erreur: _fakeDom.bouton.onclick is not a function
+  | [-] 1 seconde après clic, compteur1 devrait afficher 10
+  | [-] 1 seconde après clic, compteur1 devrait afficher 45
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 0 / 4
+  | 
+  | ------------- EXERCISE: code7 (variant: 2) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var xhr = new XMLHttpRequest(); 
+  | xhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/posts');
+  | xhr.onreadystatechange = function() {
+  |   if (xhr.readyState === 4) {
+  |     console.log('H', xhr.responseText);
+  |     var objet = JSON.parse(xhr.responseText);
+  |     alert(objet.origin);
+  |   }
+  | };
+  | xhr.send();
+  | 
+  | // CODE EVALUATION:
+  | 
+  | [+] le programme fonctionne sans erreur
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [+] la méthode open() de l'instance de `XMLHttpRequest` a bien été appelée
+  | [-] il fallait passer `POST` comme 1er paramètre de la méthode open()
+  | [+] l'url demandée a bien été passée en paramètre de la méthode open()
+  | [+] une fonction a bien été affectée à la propriété `onreadystatechange` de l'instance
+  | [+] la méthode send() a bien été appelée une fois
+  | [-] il fallait passer à send() un objet ayant une propriété title: Firebase
+  | [-] la valeur d'id 101 aurait être affichée dans un console.log()
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 0, 1, 1, 1, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 2.6666666666666665 / 4
+  | 
+  | ------------- EXERCISE: code8 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var btn1 = document.getElementById('bouton1');
+  | var btn2 = document.getElementById('bouton2');
+  | 
+  | function creeGallerie(){
+  |   var param = creeGallerie.arguments;
+  |   var tab_image = new Array(param.length);
+  |   for (var i=0; i< tab_image.length;i++){ 
+  |     //tab_image[i]= new Image();
+  |     tab_image[i]= param[i];
+  |   }
+  | return tab_image
+  | }
+  | var n=0;
+  | function change(img,gallerie) {
+  |   n= ++n;
+  |   if (n == gallerie.length) n=0;
+  |     img.src=gallerie[n];
+  | }
+  | var tab1=creeGallerie('https://i.imgur.com/X3iY0e3.jpg', 'https://i.imgur.com/X3iY0e3.jpg');
+  | 
+  | // CODE EVALUATION:
+  | 
+  | [-] erreur: 'caller' and 'arguments' are restricted function properties and cannot be accessed in this context.
+  | [+] l'image initiale n'est pas modifiée tant que l'utilisateur ne clique pas
+  | [-] clic sur bouton1 à causé une erreur: _fakeDom[id].onclick is not a function
+  | [+] clic sur bouton1 => image https://i.imgur.com/X3iY0e3.jpg est bien affichée
+  | [-] clic sur bouton2 à causé une erreur: _fakeDom[id].onclick is not a function
+  | [+] clic sur bouton2 => image https://i.imgur.com/X3iY0e3.jpg est bien affichée
+  | [-] clic sur bouton1 à causé une erreur: _fakeDom[id].onclick is not a function
+  | [+] clic sur bouton1 => image https://i.imgur.com/X3iY0e3.jpg est bien affichée
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 1, 0, 1, 0, 1, 0, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 2 / 4
+
+  => code score: 5.666666666666666 / 16 pts
+
+=> TOTAL STUDENT SCORE: 8.66 / 20
+
+
+================================
+
+STUDENT: victoria_antalis
+
+  -  quizz answers:
+  | qcm1 : 3 (solution: 3) => 1 pts
+  | qcm2 : 1 (solution: 1) => 1 pts
+  | qcm3 : 3 (solution: 2) => 0 pts
+  | qcm4 : 2 (solution: 4) => 0 pts
+
+  => quizz score: 2 / 4 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code5 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | function acronyme(prenom, nom){
+  | 	acronyme(['victoria', 'antalis']);
+  | 	acronyme(['catherine', 'stylianos', 'alexandra']);
+  | }
+  | 
+  | 
+  | // CODE EVALUATION:
+  | 
+  | [+] function acronyme a bien été trouvé dans le code
+  | [-] l'appel acronyme(["adrien","joly"]) cause l'erreur: acronyme is not defined
+  | [-] l'appel acronyme(["paul","edouard","vaillant"]) cause l'erreur: acronyme is not defined
+  | [-] l'appel acronyme(["eric","maubert"]) cause l'erreur: acronyme is not defined
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 1 / 4
+  | 
+  | ------------- EXERCISE: code6 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var compteur1 = document.getElementById('compteur1');
+  | var compteur2 = document.getElementById('compteur2');
+  |  compteur1.countTo.onclick(100);
+  |  compteur2.countTo.onclick(45);
+  | 
+  | 
+  | // CODE EVALUATION:
+  | 
+  | [-] erreur: Cannot read property 'onclick' of undefined
+  | [-] avant clic de l'utilisateur, compteur1 devrait afficher 0
+  | [-] avant clic de l'utilisateur, compteur1 devrait afficher 0
+  | [-] clic sur bouton à causé une erreur: _fakeDom.bouton.onclick is not a function
+  | [-] 1 seconde après clic, compteur1 devrait afficher 100
+  | [-] 1 seconde après clic, compteur1 devrait afficher 45
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 0 / 4
+  | 
+  | ------------- EXERCISE: code7 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var xhr = new XMLHttpRequest();
+  | xhr.open('POST', 'https://js-jsonplaceholder.herokuapp.com');
+  | xhr.add = function() {
+  |   if (xhr.readyState === 1) {
+  |     alert(xhr.responseText);
+  |   }
+  | };
+  | xhr.send('Heroku');
+  | 
+  | // CODE EVALUATION:
+  | 
+  | [+] le programme fonctionne sans erreur
+  | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
+  | [+] la méthode open() de l'instance de `XMLHttpRequest` a bien été appelée
+  | [+] `POST` a bien été passé en paramètre de la méthode open()
+  | [-] il fallait passer l'url demandée comme 2ème paramètre de la méthode open()
+  | [-] il fallait affecter une fonction à la propriété `onreadystatechange` de l'instance
+  | [+] la méthode send() a bien été appelée une fois
+  | [-] il fallait passer à send() un objet ayant une propriété title: Heroku
+  | [-] la valeur d'id 101 aurait être affichée dans un alert()
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 0, 0, 1, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 2.2222222222222223 / 4
+  | 
+  | ------------- EXERCISE: code8 (variant: 0) -------------
+  | 
+  | // STUDENT CODE:
+  | 
+  | var document.getElementById('bouton1');
+  | var document.getElementById('bouton2');
+  |  
+  |  function changerImage(){
+  |   images[imageVisible].classList.remove('visible');
+  |   imageVisible = (imageVisible + 1) % images.length;
+  |   images[imageVisible].classList.add('visible');
+  |  }
+  | 
+  |  document.getElementById.onclick('image') = changerImage;
+  | 
+  |  changerImage();
+  | 
+  | // CODE EVALUATION:
+  | 
+  | [-] erreur: Unexpected token .
+  | [+] l'image initiale n'est pas modifiée tant que l'utilisateur ne clique pas
+  | [-] clic sur bouton1 à causé une erreur: _fakeDom[id].onclick is not a function
+  | [+] clic sur bouton1 => image https://i.imgur.com/X3iY0e3.jpg est bien affichée
+  | [-] clic sur bouton2 à causé une erreur: _fakeDom[id].onclick is not a function
+  | [+] clic sur bouton2 => image https://i.imgur.com/X3iY0e3.jpg est bien affichée
+  | [-] clic sur bouton1 à causé une erreur: _fakeDom[id].onclick is not a function
+  | [+] clic sur bouton1 => image https://i.imgur.com/X3iY0e3.jpg est bien affichée
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 1, 0, 1, 0, 1, 0, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 2 / 4
+
+  => code score: 5.222222222222222 / 16 pts
+
+=> TOTAL STUDENT SCORE: 7.22 / 20
