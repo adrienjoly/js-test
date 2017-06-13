@@ -41,7 +41,9 @@ STUDENT: adrien_joly
 
   => code score: 10 / 10 pts
 
-=> TOTAL STUDENT SCORE: 16 / 16
+  + 4 points de qualité de code
+
+=> TOTAL STUDENT SCORE: 20 / 20
 
 
 ================================
@@ -81,7 +83,9 @@ STUDENT: clement_zerbi
 
   => code score: 10 / 10 pts
 
-=> TOTAL STUDENT SCORE: 16 / 16
+  + 3 points de qualité de code. (créer une variable aurait réduit la redondance)
+
+=> TOTAL STUDENT SCORE: 19 / 20
 
 
 ================================
@@ -122,7 +126,9 @@ STUDENT: mathias_lachot
 
   => code score: 10 / 10 pts
 
-=> TOTAL STUDENT SCORE: 15 / 16
+  + 3 points de qualité de code. (pourquoi ne pas avoir utilisé la variable en ligne 2 ?)
+
+=> TOTAL STUDENT SCORE: 18 / 20
 
 
 ================================
@@ -160,7 +166,9 @@ STUDENT: maxime_bonnet
 
   => code score: 5 / 10 pts
 
-=> TOTAL STUDENT SCORE: 10 / 16
+  + 2 points de qualité de code. (code incomplet, mais pas d'anomalie)
+
+=> TOTAL STUDENT SCORE: 12 / 20
 
 
 ================================
@@ -201,7 +209,9 @@ STUDENT: mike_meimoun
 
   => code score: 10 / 10 pts
 
-=> TOTAL STUDENT SCORE: 16 / 16
+  + 4 points de qualité de code. (très bien)
+
+=> TOTAL STUDENT SCORE: 20 / 20
 
 
 ================================
@@ -241,7 +251,9 @@ STUDENT: nicolas_perrousset
 
   => code score: 10 / 10 pts
 
-=> TOTAL STUDENT SCORE: 16 / 16
+  + 1 point de qualité de code. (indentation de 4 espaces au lieu de 2, pas de variable, pas de point virgule)
+
+=> TOTAL STUDENT SCORE: 17 / 20
 
 
 ================================
@@ -279,7 +291,9 @@ STUDENT: thomas_kossowski
 
   => code score: 2.5 / 10 pts
 
-=> TOTAL STUDENT SCORE: 3.5 / 16
+  + 1 point de qualité de code. (usage d'apostrophes mais code incorrect et pas de point virgule)
+
+=> TOTAL STUDENT SCORE: 4.5 / 20
 
 
 ================================
@@ -320,4 +334,6 @@ STUDENT: yassine_baba_slimane
 
   => code score: 10 / 10 pts
 
-=> TOTAL STUDENT SCORE: 15 / 16
+  + 4 points de qualité de code. (très bien)
+
+=> TOTAL STUDENT SCORE: 19 / 20
