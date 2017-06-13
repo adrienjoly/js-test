@@ -49,18 +49,45 @@ bouton.onclick = function() {
       return id === '{{btnId}}' ? _button : null;
     }
   };
-  _runStudentCode();
   var tests = [];
+  try {
+    eval(`_studentCode`);
+    application.remote._log('[+] le code fonctionne sans erreur');
+    tests.push(1);
+  } catch(e) {
+    application.remote._log('[-] erreur: ' + e.message);
+    tests.push(0);
+  }
+  application.remote._log(res.length === 0 ?
+    '[+] la classe {{className}} n\'est pas ajoutée avant le clic' : 
+    '[-] la classe {{className}} ne devrait pas être ajoutée avant le clic');
   tests.push(res.length === 0);
   setTimeout(function(){
-    _button.onclick()
-    tests.push(res.length === 1 && res[0] === '{{className}}');
-    setTimeout(function(){
+    try {
       _button.onclick()
-      tests.push(res.length === 2 && res[1] === '{{className}}');
-      application.remote._send(null, tests);
-      // 1 point per passing test => 3 pts per exercise
-    }, 50)
-  }, 50)
+      var ok = res.length === 1 && res[0] === '{{className}}';
+      tests.push(ok);
+      application.remote._log(ok ?
+        '[+] le clic ajoute bien la classe {{className}}' : 
+        '[-] le clic n\'ajoute pas la classe {{className}}');
+    } catch(e) {
+      application.remote._log('[-] le clic cause une erreur: ' + e.message);
+      tests.push(0);
+    }
+  }, 50);
+  setTimeout(function(){
+    try {
+      _button.onclick()
+      var ok = res.length === 2 && res[1] === '{{className}}';
+      tests.push(ok);
+      application.remote._log(ok ?
+        '[+] deuxième clic ajoute bien la classe {{className}}' : 
+        '[-] deuxième clic n\'ajoute pas la classe {{className}}');
+    } catch(e) {
+      application.remote._log('[-] deuxième clic cause une erreur: ' + e.message);
+      tests.push(0);
+    }
+    application.remote._send(null, tests);
+  }, 100)
 })();
 ```

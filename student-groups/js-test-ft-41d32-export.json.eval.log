@@ -30,8 +30,12 @@ STUDENT: adrien_joly
   | 
   | // CODE EVALUATION:
   | 
+  | [+] le code fonctionne sans erreur
+  | [+] la classe hidden n'est pas ajoutée avant le clic
+  | [+] le clic ajoute bien la classe hidden
+  | [+] deuxième clic ajoute bien la classe hidden
   | 
-  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1 ]
   | 
   | // -> EXERCISE POINTS: 10 / 10
 
@@ -66,8 +70,12 @@ STUDENT: clement_zerbi
   | 
   | // CODE EVALUATION:
   | 
+  | [+] le code fonctionne sans erreur
+  | [+] la classe cache n'est pas ajoutée avant le clic
+  | [+] le clic ajoute bien la classe cache
+  | [+] deuxième clic ajoute bien la classe cache
   | 
-  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1 ]
   | 
   | // -> EXERCISE POINTS: 10 / 10
 
@@ -103,8 +111,12 @@ STUDENT: mathias_lachot
   | 
   | // CODE EVALUATION:
   | 
+  | [+] le code fonctionne sans erreur
+  | [+] la classe cache n'est pas ajoutée avant le clic
+  | [+] le clic ajoute bien la classe cache
+  | [+] deuxième clic ajoute bien la classe cache
   | 
-  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1 ]
   | 
   | // -> EXERCISE POINTS: 10 / 10
 
@@ -137,14 +149,18 @@ STUDENT: maxime_bonnet
   | 
   | // CODE EVALUATION:
   | 
+  | [+] le code fonctionne sans erreur
+  | [+] la classe cache n'est pas ajoutée avant le clic
+  | [-] le clic n'ajoute pas la classe cache
+  | [-] deuxième clic n'ajoute pas la classe cache
   | 
-  | // -> STUDENT SCORE ARRAY: [ 1, 0, 0 ]
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 0, 0 ]
   | 
-  | // -> EXERCISE POINTS: 3.333333333333333 / 10
+  | // -> EXERCISE POINTS: 5 / 10
 
-  => code score: 3.3333333333333335 / 10 pts
+  => code score: 5 / 10 pts
 
-=> TOTAL STUDENT SCORE: 8.33 / 16
+=> TOTAL STUDENT SCORE: 10 / 16
 
 
 ================================
@@ -174,8 +190,12 @@ STUDENT: mike_meimoun
   | 
   | // CODE EVALUATION:
   | 
+  | [+] le code fonctionne sans erreur
+  | [+] la classe hidden n'est pas ajoutée avant le clic
+  | [+] le clic ajoute bien la classe hidden
+  | [+] deuxième clic ajoute bien la classe hidden
   | 
-  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1 ]
   | 
   | // -> EXERCISE POINTS: 10 / 10
 
@@ -210,8 +230,12 @@ STUDENT: nicolas_perrousset
   | 
   | // CODE EVALUATION:
   | 
+  | [+] le code fonctionne sans erreur
+  | [+] la classe cache n'est pas ajoutée avant le clic
+  | [+] le clic ajoute bien la classe cache
+  | [+] deuxième clic ajoute bien la classe cache
   | 
-  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1 ]
   | 
   | // -> EXERCISE POINTS: 10 / 10
 
@@ -244,24 +268,18 @@ STUDENT: thomas_kossowski
   | 
   | // CODE EVALUATION:
   | 
-Tue, 06 Jun 2017 14:24:43 GMT jailed:sandbox TypeError: document.getElementById(...).oneclick is not a function
-    at evaluateStudentCode (DYNAMIC PLUGIN:19:35)
-    at DYNAMIC PLUGIN:33:3
-    at ContextifyScript.Script.runInContext (vm.js:35:29)
-    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
-    at Object.exports.runInNewContext (vm.js:72:17)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-ft-controle/node_modules/jailed-node/sandbox/sandbox.js:151:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-ft-controle/node_modules/jailed-node/sandbox/sandbox.js:165:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-ft-controle/node_modules/jailed-node/sandbox/sandbox.js:53:7)
-    at emitTwo (events.js:106:13)
-    at process.emit (events.js:191:7)
-  | => test runner err: TypeError: document.getElementById(...).oneclick is not a function at evaluateStudentCode (DYNAMIC PLUGIN:19:35)
+  | [-] erreur: document.getElementById(...).oneclick is not a function
+  | [+] la classe cache n'est pas ajoutée avant le clic
+  | [-] le clic n'ajoute pas la classe cache
+  | [-] deuxième clic n'ajoute pas la classe cache
   | 
-  | // -> EXERCISE POINTS: 0 / 10
+  | // -> STUDENT SCORE ARRAY: [ 0, 1, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 2.5 / 10
 
-  => code score: 0 / 10 pts
+  => code score: 2.5 / 10 pts
 
-=> TOTAL STUDENT SCORE: 1 / 16
+=> TOTAL STUDENT SCORE: 3.5 / 16
 
 
 ================================
@@ -291,8 +309,12 @@ STUDENT: yassine_baba_slimane
   | 
   | // CODE EVALUATION:
   | 
+  | [+] le code fonctionne sans erreur
+  | [+] la classe cache n'est pas ajoutée avant le clic
+  | [+] le clic ajoute bien la classe cache
+  | [+] deuxième clic ajoute bien la classe cache
   | 
-  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1 ]
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1 ]
   | 
   | // -> EXERCISE POINTS: 10 / 10
 
