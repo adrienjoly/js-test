@@ -137,24 +137,14 @@ STUDENT: maxime_bonnet
   | 
   | // CODE EVALUATION:
   | 
-Tue, 06 Jun 2017 14:20:50 GMT jailed:sandbox TypeError: document.getElementById(...).classList.remove is not a function
-    at evaluateStudentCode (DYNAMIC PLUGIN:16:49)
-    at DYNAMIC PLUGIN:30:3
-    at ContextifyScript.Script.runInContext (vm.js:35:29)
-    at ContextifyScript.Script.runInNewContext (vm.js:41:15)
-    at Object.exports.runInNewContext (vm.js:72:17)
-    at executeJailed (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-ft-controle/node_modules/jailed-node/sandbox/sandbox.js:151:8)
-    at execute (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-ft-controle/node_modules/jailed-node/sandbox/sandbox.js:165:3)
-    at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-ft-controle/node_modules/jailed-node/sandbox/sandbox.js:53:7)
-    at emitTwo (events.js:106:13)
-    at process.emit (events.js:191:7)
-  | => test runner err: TypeError: document.getElementById(...).classList.remove is not a function at evaluateStudentCode (DYNAMIC PLUGIN:16:49)
   | 
-  | // -> EXERCISE POINTS: 0 / 10
+  | // -> STUDENT SCORE ARRAY: [ 1, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 3.333333333333333 / 10
 
-  => code score: 0 / 10 pts
+  => code score: 3.3333333333333335 / 10 pts
 
-=> TOTAL STUDENT SCORE: 5 / 16
+=> TOTAL STUDENT SCORE: 8.33 / 16
 
 
 ================================
@@ -254,9 +244,9 @@ STUDENT: thomas_kossowski
   | 
   | // CODE EVALUATION:
   | 
-Tue, 06 Jun 2017 14:20:50 GMT jailed:sandbox TypeError: document.getElementById(...).oneclick is not a function
-    at evaluateStudentCode (DYNAMIC PLUGIN:16:35)
-    at DYNAMIC PLUGIN:30:3
+Tue, 06 Jun 2017 14:24:43 GMT jailed:sandbox TypeError: document.getElementById(...).oneclick is not a function
+    at evaluateStudentCode (DYNAMIC PLUGIN:19:35)
+    at DYNAMIC PLUGIN:33:3
     at ContextifyScript.Script.runInContext (vm.js:35:29)
     at ContextifyScript.Script.runInNewContext (vm.js:41:15)
     at Object.exports.runInNewContext (vm.js:72:17)
@@ -265,7 +255,7 @@ Tue, 06 Jun 2017 14:20:50 GMT jailed:sandbox TypeError: document.getElementById(
     at process.<anonymous> (/Users/adrienjoly/Dev/github-cours-javascript-eemi-2016-2017/js-test-ft-controle/node_modules/jailed-node/sandbox/sandbox.js:53:7)
     at emitTwo (events.js:106:13)
     at process.emit (events.js:191:7)
-  | => test runner err: TypeError: document.getElementById(...).oneclick is not a function at evaluateStudentCode (DYNAMIC PLUGIN:16:35)
+  | => test runner err: TypeError: document.getElementById(...).oneclick is not a function at evaluateStudentCode (DYNAMIC PLUGIN:19:35)
   | 
   | // -> EXERCISE POINTS: 0 / 10
 

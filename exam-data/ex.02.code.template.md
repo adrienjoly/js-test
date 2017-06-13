@@ -39,7 +39,10 @@ bouton.onclick = function() {
   var res = [];
   var _button = {
     onclick: function() {},
-    classList: { add: res.push.bind(res) }
+    classList: {
+      add: res.push.bind(res),
+      remove: function(){},
+    }
   };
   var document = {
     getElementById: function(id) {
