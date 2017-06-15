@@ -1173,17 +1173,17 @@ STUDENT: jessy_hachet
   | 
   | [-] erreur: Unexpected token :
   | [+] la classe `XMLHttpRequest` a bien été instanciée avec le mot-clé `new`
-  | [-] il fallait appeler la méthode open() de l'instance de `XMLHttpRequest`
-  | [-] il fallait passer `POST` comme 1er paramètre de la méthode open()
-  | [-] il fallait passer l'url demandée comme 2ème paramètre de la méthode open()
-  | [-] il fallait affecter une fonction à la propriété `onreadystatechange` de l'instance
+  | [OK] il fallait appeler la méthode open() de l'instance de `XMLHttpRequest`
+  | [OK] il fallait passer `POST` comme 1er paramètre de la méthode open()
+  | [OK] il fallait passer l'url demandée comme 2ème paramètre de la méthode open()
+  | [OK] il fallait affecter une fonction à la propriété `onreadystatechange` de l'instance
   | [-] il fallait appeler la méthode send() une fois pour envoyer la requête
   | [-] il fallait passer à send() un objet ayant une propriété body: Heroku
   | [-] la valeur d'id 101 aurait être affichée dans un console.log()
   | 
-  | // -> STUDENT SCORE ARRAY: [ 0, 1, 0, 0, 0, 0, 0, 0, 0 ]
+  | // -> STUDENT SCORE ARRAY: [ 0, 1, 0, 0, 0, 0, 0, 0, 0 ] + 4
   | 
-  | // -> EXERCISE POINTS: 0.4444444444444444 / 4
+  | // -> EXERCISE POINTS: 0.4444444444444444 / 4 + ~1.78  => 2.22222 / 4
   | 
   | ------------- EXERCISE: code8 (variant: 1) -------------
   | 
@@ -1214,8 +1214,10 @@ STUDENT: jessy_hachet
   | // -> EXERCISE POINTS: 2.5 / 4
 
   => code score: 2.9444444444444446 / 16 pts
+  + ~1.78
+  = 4.72 / 16 pts
 
-=> TOTAL STUDENT SCORE: 5.94 / 20
+=> TOTAL STUDENT SCORE: 7.72 / 20
 
 
 ================================

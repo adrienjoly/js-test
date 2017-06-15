@@ -802,8 +802,10 @@ STUDENT: jacques_hovine
   | [-] l'appel acronyme(["eric","maubert"]) cause l'erreur: i is not defined
   | 
   | // -> STUDENT SCORE ARRAY: [ 1, 0, 0, 0 ]
+  
+  + 2 pts, car logique correcte mais var manquant et usage de guillemets
   | 
-  | // -> EXERCISE POINTS: 1 / 4
+  | // -> EXERCISE POINTS: 1 / 4 => 3 / 4
   | 
   | ------------- EXERCISE: code6 (variant: 3) -------------
   | 
@@ -903,9 +905,9 @@ STUDENT: jacques_hovine
   | 
   | // -> EXERCISE POINTS: 4 / 4
 
-  => code score: 13 / 16 pts
+  => code score: 13 / 16 pts => 15 / 16
 
-=> TOTAL STUDENT SCORE: 17 / 20
+=> TOTAL STUDENT SCORE: 17 / 20 => 19 / 20
 
 
 ================================
