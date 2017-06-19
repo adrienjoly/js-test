@@ -7,7 +7,7 @@ function readfile(filePath) {
 module.exports = {
 
   // Front-end config
-  title: 'JavaScript - Partiel 2',
+  title: 'JavaScript Controle - Classe 4',
 
   // General settings
   PUBLIC_TEST_MODE: false, // set to false to restrict acccess and identify students using Google Login
@@ -30,29 +30,11 @@ module.exports = {
     },
     */
     FIREBASE_CONFIG: {
-      'jsparta': {
-        apiKey: "AIzaSyAry2VPlxIdHkfAUvtXGjeYWEqbXlG0mtM",
-        databaseURL: "https://jspa-79caf.firebaseio.com",
-        messagingSenderId: "1046784867897"
-        // admin/dashboard: https://console.firebase.google.com/project/jspa-79caf/database/data
-      },
-      'jspartb': {
-        apiKey: "AIzaSyAZrJhZzWl-ncg8JvfRpCM7GAnHrIF7L_M",
-        databaseURL: "https://jspb-fd563.firebaseio.com",
-        messagingSenderId: "253586129661"
-        // admin/dashboard: https://console.firebase.google.com/project/jspb-fd563/database/data
-      },
-      'jspartc': {
-        apiKey: "AIzaSyA8CYvNgJOjOT7Fb5XResPor0UgvSnpRhg",
-        databaseURL: "https://jspc-19feb.firebaseio.com",
-        messagingSenderId: "527718816676"
-        // admin/dashboard: https://console.firebase.google.com/project/jspc-19feb/database/data
-      },
-    }['__INSTANCE__']
-    
-    
-    
-    ,
+      apiKey: "AIzaSyCMqtRa383qaJ59U3RYbue325iExmESCBY",
+      databaseURL: "https://js-test-ft-41d32.firebaseio.com",
+      messagingSenderId: "859086271487"
+      // admin/dashboard: https://console.firebase.google.com/project/js-test-ft-41d32/database/data
+    },
   },
 
   teacherEmail: 'adrien.joly@eemi.com', // required for dashboard auth
@@ -69,7 +51,7 @@ module.exports = {
     ptsNull: 0,
   },
   codeGrading: {
-    ptsPerExercise: 4,
+    ptsPerExercise: 10, // applies to scores of code exercises
   }
 
 };
