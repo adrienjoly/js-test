@@ -5,7 +5,7 @@
     window.location.href = window.location.href.replace('http:', 'https:');
   var app = document.querySelector('#app');
   app.config = {
-    "title": "JavaScript Controle - Classe 4",
+    "title": "JavaScript Controle - AJAX (fast-track)",
     "PUBLIC_TEST_MODE": false,
     "DISPLAY_SOLUTIONS_AFTER_SUBMIT": false,
     "redirectToHttps": true,
@@ -47,23 +47,19 @@
           "id": "code1",
           "variants": [
             {
-              "number": 4
+              "number": 0
             },
             {
-              "number": 6
+              "number": 1
             },
             {
-              "number": 8
-            },
-            {
-              "number": 14
+              "number": 2
             }
           ],
           "mdVariants": [
-            "\nÉcrire un programme JavaScript permettant:\n\n - d'envoyer une requête HTTP GET à l'URL `https://js-jsonplaceholder.herokuapp.com/posts/4`,\n - puis d'afficher avec `alert()` la réponse finale du serveur à cette requête.\n\nUtiliser la classe `XMLHttpRequest()` pour effectuer cette requête.\n\n\n",
-            "\nÉcrire un programme JavaScript permettant:\n\n - d'envoyer une requête HTTP GET à l'URL `https://js-jsonplaceholder.herokuapp.com/posts/6`,\n - puis d'afficher avec `alert()` la réponse finale du serveur à cette requête.\n\nUtiliser la classe `XMLHttpRequest()` pour effectuer cette requête.\n\n\n",
-            "\nÉcrire un programme JavaScript permettant:\n\n - d'envoyer une requête HTTP GET à l'URL `https://js-jsonplaceholder.herokuapp.com/posts/8`,\n - puis d'afficher avec `alert()` la réponse finale du serveur à cette requête.\n\nUtiliser la classe `XMLHttpRequest()` pour effectuer cette requête.\n\n\n",
-            "\nÉcrire un programme JavaScript permettant:\n\n - d'envoyer une requête HTTP GET à l'URL `https://js-jsonplaceholder.herokuapp.com/posts/14`,\n - puis d'afficher avec `alert()` la réponse finale du serveur à cette requête.\n\nUtiliser la classe `XMLHttpRequest()` pour effectuer cette requête.\n\n\n"
+            "\nÉcrire un programme JavaScript permettant:\n\n - d'envoyer une requête HTTP GET à l'URL `https://js-jsonplaceholder.herokuapp.com/photos/0`,\n - puis d'afficher avec `alert()` la réponse complète du serveur à cette requête.\n\nUtiliser la classe `XMLHttpRequest()` pour effectuer cette requête.\n\n\n",
+            "\nÉcrire un programme JavaScript permettant:\n\n - d'envoyer une requête HTTP GET à l'URL `https://js-jsonplaceholder.herokuapp.com/photos/1`,\n - puis d'afficher avec `alert()` la réponse complète du serveur à cette requête.\n\nUtiliser la classe `XMLHttpRequest()` pour effectuer cette requête.\n\n\n",
+            "\nÉcrire un programme JavaScript permettant:\n\n - d'envoyer une requête HTTP GET à l'URL `https://js-jsonplaceholder.herokuapp.com/photos/2`,\n - puis d'afficher avec `alert()` la réponse complète du serveur à cette requête.\n\nUtiliser la classe `XMLHttpRequest()` pour effectuer cette requête.\n\n\n"
           ]
         },
         {
@@ -71,22 +67,15 @@
           "id": "code2",
           "variants": [
             {
-              "fr": "nom",
-              "prop": "name"
+              "prop": "url"
             },
             {
-              "fr": "numéro de téléphone",
-              "prop": "phone"
-            },
-            {
-              "fr": "site web",
-              "prop": "website"
+              "prop": "thumbnailUrl"
             }
           ],
           "mdVariants": [
-            "# Annuaire interactif\n\nUn client souhaite un moyen d'accéder rapidement au nom d'un adhérent, à partir de son numéro d'adhérent.\n\nIl met à disposition une API permettant d'accéder aux données de chaque adhérent. Il suffit d'effectuer une requête HTTP GET à l'URL `https://js-jsonplaceholder.herokuapp.com/users/<numero>`, où `<numero>` est à remplacer par le numéro d'adhérent dont on souhaite récupérer les données. L'API retourne alors une réponse au format JSON, contenant une propriété `name`.\n\nNous allons développer une solution simple consistant en:\n - une page HTML contenant un champ permettant de saisir le numéro d'adhérent, un bouton pour effectuer la requête, et un deuxième champ qui contiendra le nom de l'adhérent,\n - et un programme JavaScript permettant d'effectuer les requêtes AJAX correspondantes vers leur API, et d'afficher le nom de l'adhérent spécifié à chaque fois que l'utilisateur cliquera sur le bouton.\n\nLa page HTML de cette solution est fournie. Voici le code source de son `<body>`:\n\n```html\n<label for=\"numero\">Numéro d'adhérent:</label>\n<input id=\"numero\" type=\"text\">\n<input id=\"bouton\" type=\"button\" value=\"Chercher\">\n<p>Résultat:</p>\n<input id=\"name\" type=\"text\" readonly>\n```\n\nL'utilisateur doit pouvoir effectuer plusieurs recherches d'affilée, en tapant un autre numéro d'adhérent puis cliquant à nouveau sur le bouton.\n\nÉcrire le programme JavaScript à associer à cette page.\n\nNote: Vous devrez utiliser la classe `XMLHttpRequest()` pour effectuer les requêtes.\n\n\n",
-            "# Annuaire interactif\n\nUn client souhaite un moyen d'accéder rapidement au numéro de téléphone d'un adhérent, à partir de son numéro d'adhérent.\n\nIl met à disposition une API permettant d'accéder aux données de chaque adhérent. Il suffit d'effectuer une requête HTTP GET à l'URL `https://js-jsonplaceholder.herokuapp.com/users/<numero>`, où `<numero>` est à remplacer par le numéro d'adhérent dont on souhaite récupérer les données. L'API retourne alors une réponse au format JSON, contenant une propriété `phone`.\n\nNous allons développer une solution simple consistant en:\n - une page HTML contenant un champ permettant de saisir le numéro d'adhérent, un bouton pour effectuer la requête, et un deuxième champ qui contiendra le numéro de téléphone de l'adhérent,\n - et un programme JavaScript permettant d'effectuer les requêtes AJAX correspondantes vers leur API, et d'afficher le numéro de téléphone de l'adhérent spécifié à chaque fois que l'utilisateur cliquera sur le bouton.\n\nLa page HTML de cette solution est fournie. Voici le code source de son `<body>`:\n\n```html\n<label for=\"numero\">Numéro d'adhérent:</label>\n<input id=\"numero\" type=\"text\">\n<input id=\"bouton\" type=\"button\" value=\"Chercher\">\n<p>Résultat:</p>\n<input id=\"phone\" type=\"text\" readonly>\n```\n\nL'utilisateur doit pouvoir effectuer plusieurs recherches d'affilée, en tapant un autre numéro d'adhérent puis cliquant à nouveau sur le bouton.\n\nÉcrire le programme JavaScript à associer à cette page.\n\nNote: Vous devrez utiliser la classe `XMLHttpRequest()` pour effectuer les requêtes.\n\n\n",
-            "# Annuaire interactif\n\nUn client souhaite un moyen d'accéder rapidement au site web d'un adhérent, à partir de son numéro d'adhérent.\n\nIl met à disposition une API permettant d'accéder aux données de chaque adhérent. Il suffit d'effectuer une requête HTTP GET à l'URL `https://js-jsonplaceholder.herokuapp.com/users/<numero>`, où `<numero>` est à remplacer par le numéro d'adhérent dont on souhaite récupérer les données. L'API retourne alors une réponse au format JSON, contenant une propriété `website`.\n\nNous allons développer une solution simple consistant en:\n - une page HTML contenant un champ permettant de saisir le numéro d'adhérent, un bouton pour effectuer la requête, et un deuxième champ qui contiendra le site web de l'adhérent,\n - et un programme JavaScript permettant d'effectuer les requêtes AJAX correspondantes vers leur API, et d'afficher le site web de l'adhérent spécifié à chaque fois que l'utilisateur cliquera sur le bouton.\n\nLa page HTML de cette solution est fournie. Voici le code source de son `<body>`:\n\n```html\n<label for=\"numero\">Numéro d'adhérent:</label>\n<input id=\"numero\" type=\"text\">\n<input id=\"bouton\" type=\"button\" value=\"Chercher\">\n<p>Résultat:</p>\n<input id=\"website\" type=\"text\" readonly>\n```\n\nL'utilisateur doit pouvoir effectuer plusieurs recherches d'affilée, en tapant un autre numéro d'adhérent puis cliquant à nouveau sur le bouton.\n\nÉcrire le programme JavaScript à associer à cette page.\n\nNote: Vous devrez utiliser la classe `XMLHttpRequest()` pour effectuer les requêtes.\n\n\n"
+            "# Album interactif\n\nUn client souhaite un moyen d'accéder rapidement à l'URL d'une photo, à partir du numéro d'identifiant de cette photo.\n\nIl met à disposition une API permettant d'accéder à la base de données de photos. Il suffit d'effectuer une requête HTTP GET à l'URL `https://js-jsonplaceholder.herokuapp.com/photos/<numero>`, où `<numero>` est à remplacer par le numéro d'identifiant dont on souhaite récupérer les données de la photo correspondante. L'API retourne alors une réponse au format JSON, contenant une propriété `url`.\n\nNous allons développer une solution simple consistant en:\n\n - une page HTML contenant un champ permettant de saisir le numéro d'identifiant d'une photo, un bouton pour effectuer la requête, et un deuxième champ qui contiendra l'URL correspondante (récupérée depuis l'API),\n - et un programme JavaScript permettant d'effectuer les requêtes AJAX correspondantes vers leur API, et d'afficher la valeur de la propriété `url` de la photo spécifiée, à chaque fois que l'utilisateur cliquera sur le bouton.\n\nLa page HTML de cette solution est fournie. Voici le code source de son `<body>`:\n\n```html\n<label for=\"numero\">Numéro d'identifiant de la photo:</label>\n<input id=\"numero\" type=\"text\">\n<input id=\"bouton\" type=\"button\" value=\"Chercher\">\n<p>Résultat:</p>\n<input id=\"url\" type=\"text\" readonly>\n```\n\nL'utilisateur doit pouvoir effectuer plusieurs recherches d'affilée, en tapant un autre numéro d'identifiant puis cliquant à nouveau sur le bouton.\n\nÉcrire le programme JavaScript à associer à cette page.\n\nNote: Vous devrez utiliser la classe `XMLHttpRequest()` pour effectuer les requêtes.\n\n\n",
+            "# Album interactif\n\nUn client souhaite un moyen d'accéder rapidement à l'URL d'une photo, à partir du numéro d'identifiant de cette photo.\n\nIl met à disposition une API permettant d'accéder à la base de données de photos. Il suffit d'effectuer une requête HTTP GET à l'URL `https://js-jsonplaceholder.herokuapp.com/photos/<numero>`, où `<numero>` est à remplacer par le numéro d'identifiant dont on souhaite récupérer les données de la photo correspondante. L'API retourne alors une réponse au format JSON, contenant une propriété `thumbnailUrl`.\n\nNous allons développer une solution simple consistant en:\n\n - une page HTML contenant un champ permettant de saisir le numéro d'identifiant d'une photo, un bouton pour effectuer la requête, et un deuxième champ qui contiendra l'URL correspondante (récupérée depuis l'API),\n - et un programme JavaScript permettant d'effectuer les requêtes AJAX correspondantes vers leur API, et d'afficher la valeur de la propriété `thumbnailUrl` de la photo spécifiée, à chaque fois que l'utilisateur cliquera sur le bouton.\n\nLa page HTML de cette solution est fournie. Voici le code source de son `<body>`:\n\n```html\n<label for=\"numero\">Numéro d'identifiant de la photo:</label>\n<input id=\"numero\" type=\"text\">\n<input id=\"bouton\" type=\"button\" value=\"Chercher\">\n<p>Résultat:</p>\n<input id=\"thumbnailUrl\" type=\"text\" readonly>\n```\n\nL'utilisateur doit pouvoir effectuer plusieurs recherches d'affilée, en tapant un autre numéro d'identifiant puis cliquant à nouveau sur le bouton.\n\nÉcrire le programme JavaScript à associer à cette page.\n\nNote: Vous devrez utiliser la classe `XMLHttpRequest()` pour effectuer les requêtes.\n\n\n"
           ]
         }
       ]

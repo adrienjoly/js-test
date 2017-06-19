@@ -2,21 +2,20 @@
 
 Écrire un programme JavaScript permettant:
 
- - d'envoyer une requête HTTP GET à l'URL `https://js-jsonplaceholder.herokuapp.com/posts/{{number}}`,
- - puis d'afficher avec `alert()` la réponse finale du serveur à cette requête.
+ - d'envoyer une requête HTTP GET à l'URL `https://js-jsonplaceholder.herokuapp.com/photos/{{number}}`,
+ - puis d'afficher avec `alert()` la réponse complète du serveur à cette requête.
 
 Utiliser la classe `XMLHttpRequest()` pour effectuer cette requête.
 
-- { "number": 4 }
-- { "number": 6 }
-- { "number": 8 }
-- { "number": 14 }
+- { "number": 0 }
+- { "number": 1 }
+- { "number": 2 }
 
 ???
 
 ```js
 var xhr = new XMLHttpRequest(); 
-xhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/posts/{{number}}');
+xhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/photos/{{number}}');
 xhr.onreadystatechange = function() {
   if (xhr.readyState === 4) {
     alert(xhr.responseText);
@@ -85,7 +84,7 @@ xhr.send();
       (_methods[0] || '').toLowerCase() !== 'get'
         ? res(0, 'il fallait passer `GET` comme 1er paramètre de la méthode open()')
         : res(1, '`GET` a bien été passé en paramètre de la méthode open()'),
-      (_urls[0] || '') !== 'https://js-jsonplaceholder.herokuapp.com/posts/{{number}}'
+      (_urls[0] || '') !== 'https://js-jsonplaceholder.herokuapp.com/photos/{{number}}'
         ? res(0, 'il fallait passer l\'url comme 2ème paramètre de la méthode open()')
         : res(1, 'l\'url a bien été passée en paramètre de la méthode open()'),
       typeof (_instances[0] || {}).onreadystatechange !== 'function'
@@ -105,35 +104,35 @@ xhr.send();
 
 ---
 
-# Annuaire interactif
+# Album interactif
 
-Un client souhaite un moyen d'accéder rapidement au {{fr}} d'un adhérent, à partir de son numéro d'adhérent.
+Un client souhaite un moyen d'accéder rapidement à l'URL d'une photo, à partir du numéro d'identifiant de cette photo.
 
-Il met à disposition une API permettant d'accéder aux données de chaque adhérent. Il suffit d'effectuer une requête HTTP GET à l'URL `https://js-jsonplaceholder.herokuapp.com/users/<numero>`, où `<numero>` est à remplacer par le numéro d'adhérent dont on souhaite récupérer les données. L'API retourne alors une réponse au format JSON, contenant une propriété `{{prop}}`.
+Il met à disposition une API permettant d'accéder à la base de données de photos. Il suffit d'effectuer une requête HTTP GET à l'URL `https://js-jsonplaceholder.herokuapp.com/photos/<numero>`, où `<numero>` est à remplacer par le numéro d'identifiant dont on souhaite récupérer les données de la photo correspondante. L'API retourne alors une réponse au format JSON, contenant une propriété `{{prop}}`.
 
 Nous allons développer une solution simple consistant en:
- - une page HTML contenant un champ permettant de saisir le numéro d'adhérent, un bouton pour effectuer la requête, et un deuxième champ qui contiendra le {{fr}} de l'adhérent,
- - et un programme JavaScript permettant d'effectuer les requêtes AJAX correspondantes vers leur API, et d'afficher le {{fr}} de l'adhérent spécifié à chaque fois que l'utilisateur cliquera sur le bouton.
+
+ - une page HTML contenant un champ permettant de saisir le numéro d'identifiant d'une photo, un bouton pour effectuer la requête, et un deuxième champ qui contiendra l'URL correspondante (récupérée depuis l'API),
+ - et un programme JavaScript permettant d'effectuer les requêtes AJAX correspondantes vers leur API, et d'afficher la valeur de la propriété `{{prop}}` de la photo spécifiée, à chaque fois que l'utilisateur cliquera sur le bouton.
 
 La page HTML de cette solution est fournie. Voici le code source de son `<body>`:
 
 ```html
-<label for="numero">Numéro d'adhérent:</label>
+<label for="numero">Numéro d'identifiant de la photo:</label>
 <input id="numero" type="text">
 <input id="bouton" type="button" value="Chercher">
 <p>Résultat:</p>
 <input id="{{prop}}" type="text" readonly>
 ```
 
-L'utilisateur doit pouvoir effectuer plusieurs recherches d'affilée, en tapant un autre numéro d'adhérent puis cliquant à nouveau sur le bouton.
+L'utilisateur doit pouvoir effectuer plusieurs recherches d'affilée, en tapant un autre numéro d'identifiant puis cliquant à nouveau sur le bouton.
 
 Écrire le programme JavaScript à associer à cette page.
 
 Note: Vous devrez utiliser la classe `XMLHttpRequest()` pour effectuer les requêtes.
 
-- { "fr": "nom", "prop": "name" }
-- { "fr": "numéro de téléphone", "prop": "phone" }
-- { "fr": "site web", "prop": "website" }
+- { "prop": "url" }
+- { "prop": "thumbnailUrl" }
 
 ???
 
@@ -143,18 +142,18 @@ var bouton = document.getElementById('bouton');
 var {{prop}} = document.getElementById('{{prop}}');
 bouton.onclick = function() {
   var xhr = new XMLHttpRequest(); 
-  xhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/users/' + numero.value);
+  xhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/photos/' + numero.value);
   xhr.onreadystatechange = function() {
     if (xhr.readyState === 4) {
-      var adherent = JSON.parse(xhr.responseText);
-      {{prop}}.value = adherent.{{prop}};
+      var record = JSON.parse(xhr.responseText);
+      {{prop}}.value = record.{{prop}};
     }
   };
   xhr.send();
 };
 ```
 
-Solution complète: [jsfiddle](https://jsfiddle.net/hsg50xk5/)
+Solution complète: [jsfiddle](https://jsfiddle.net/omgxf4s7/1/)
 
 --
 
@@ -205,53 +204,21 @@ Solution complète: [jsfiddle](https://jsfiddle.net/hsg50xk5/)
   // __ FAKE AJAX ___
   var _instances = [],  _methods = [], _urls = [], _sends = [];
   var _expectedResponses = {
-    'https://js-jsonplaceholder.herokuapp.com/users/4' : `{
-  "id": 4,
-  "name": "Patricia Lebsack",
-  "username": "Karianne",
-  "email": "Julianne.OConner@kory.org",
-  "address": {
-    "street": "Hoeger Mall",
-    "suite": "Apt. 692",
-    "city": "South Elvis",
-    "zipcode": "53919-4257",
-    "geo": {
-      "lat": "29.4572",
-      "lng": "-164.2990"
-    }
-  },
-  "phone": "493-170-9623 x156",
-  "website": "kale.biz",
-  "company": {
-    "name": "Robel-Corkery",
-    "catchPhrase": "Multi-tiered zero tolerance productivity",
-    "bs": "transition cutting-edge web services"
-  }
-}`,
-    'https://js-jsonplaceholder.herokuapp.com/users/6' : `{
-  "id": 6,
-  "name": "Mrs. Dennis Schulist",
-  "username": "Leopoldo_Corkery",
-  "email": "Karley_Dach@jasper.info",
-  "address": {
-    "street": "Norberto Crossing",
-    "suite": "Apt. 950",
-    "city": "South Christy",
-    "zipcode": "23505-1337",
-    "geo": {
-      "lat": "-71.4197",
-      "lng": "71.7478"
-    }
-  },
-  "phone": "1-477-935-8478 x6430",
-  "website": "ola.org",
-  "company": {
-    "name": "Considine-Lockman",
-    "catchPhrase": "Synchronised bottom-line interface",
-    "bs": "e-enable innovative applications"
-  }
-}`,
-  }
+    'https://js-jsonplaceholder.herokuapp.com/photos/4' : {
+      albumId: 1,
+      id: 4,
+      title: "culpa odio esse rerum omnis laboriosam voluptate repudiandae",
+      url: "http://placehold.it/600/d32776",
+      thumbnailUrl: "http://placehold.it/150/39e985"
+    },
+    'https://js-jsonplaceholder.herokuapp.com/photos/6' : {
+      albumId: 1,
+      id: 6,
+      title: "accusamus ea aliquid et amet sequi nemo",
+      url: "http://placehold.it/600/56a8c2",
+      thumbnailUrl: "http://placehold.it/150/c672a0"
+    },
+  };
   function XMLHttpRequest(){
     _instances.push(this);
   }
@@ -263,7 +230,7 @@ Solution complète: [jsfiddle](https://jsfiddle.net/hsg50xk5/)
   XMLHttpRequest.prototype.send = function(data) {
     _sends.push(data);
     this.readyState = 4;
-    this.responseText = _expectedResponses[this.url];
+    this.responseText = JSON.stringify(_expectedResponses[this.url]);
     try { this.onreadystatechange(); } catch (e) {}
   };
   // __ RUN STUDENT CODE ___
@@ -296,9 +263,9 @@ Solution complète: [jsfiddle](https://jsfiddle.net/hsg50xk5/)
   ];
 
   /* simulate requests: */ [ '4', '6' ].forEach((numero) => {
-    application.remote._log(`\-\-\- Simulation de requête pour adhérent numéro ${numero} ...`);
-    var expectedUrl = 'https://js-jsonplaceholder.herokuapp.com/users/' + numero;
-    var expectedValue = JSON.parse(_expectedResponses[expectedUrl]).{{prop}};
+    application.remote._log(`\-\-\- Simulation de requête pour photo numéro ${numero} ...`);
+    var expectedUrl = 'https://js-jsonplaceholder.herokuapp.com/photos/' + numero;
+    var expectedValue = _expectedResponses[expectedUrl].{{prop}};
     // run student's onclick handler
     _fakeDom.numero.value = numero;
     _sends = [];
