@@ -36,180 +36,57 @@
   };
   app.exercises = [
     {
-      "_info": "generated from ex.01.quizz.template.md",
+      "_info": "generated from ex.01.code.template.md",
       "i": 1,
-      "isQuizz": true,
-      "title": "QCM",
-      "maxScore": 6,
+      "isCode": true,
+      "title": "Requête AJAX simple",
+      "maxScore": 20,
       "questions": [
         {
           "i": 1,
-          "id": "qcm1",
-          "md": "Qu'est-ce qu'un composant ?\n\n\n",
-          "choices": [
+          "id": "code1",
+          "variants": [
             {
-              "name": 1,
-              "text": "c'est le nom qu'on donne à tout programme JavaScript"
+              "number": 4
             },
             {
-              "name": 2,
-              "text": "c'est le nom qu'on donne à tout div d'une page HTML"
+              "number": 6
             },
             {
-              "name": 3,
-              "text": "c'est un module qui a été conçu pour être intégré par d'autres développeurs"
+              "number": 8
             },
             {
-              "name": 4,
-              "text": "c'est une page web de documentation"
+              "number": 14
             }
+          ],
+          "mdVariants": [
+            "\nÉcrire un programme JavaScript permettant:\n\n - d'envoyer une requête HTTP GET à l'URL `https://js-jsonplaceholder.herokuapp.com/posts/4`,\n - puis d'afficher avec `alert()` la réponse finale du serveur à cette requête.\n\nUtiliser la classe `XMLHttpRequest()` pour effectuer cette requête.\n\n\n",
+            "\nÉcrire un programme JavaScript permettant:\n\n - d'envoyer une requête HTTP GET à l'URL `https://js-jsonplaceholder.herokuapp.com/posts/6`,\n - puis d'afficher avec `alert()` la réponse finale du serveur à cette requête.\n\nUtiliser la classe `XMLHttpRequest()` pour effectuer cette requête.\n\n\n",
+            "\nÉcrire un programme JavaScript permettant:\n\n - d'envoyer une requête HTTP GET à l'URL `https://js-jsonplaceholder.herokuapp.com/posts/8`,\n - puis d'afficher avec `alert()` la réponse finale du serveur à cette requête.\n\nUtiliser la classe `XMLHttpRequest()` pour effectuer cette requête.\n\n\n",
+            "\nÉcrire un programme JavaScript permettant:\n\n - d'envoyer une requête HTTP GET à l'URL `https://js-jsonplaceholder.herokuapp.com/posts/14`,\n - puis d'afficher avec `alert()` la réponse finale du serveur à cette requête.\n\nUtiliser la classe `XMLHttpRequest()` pour effectuer cette requête.\n\n\n"
           ]
         },
         {
           "i": 2,
-          "id": "qcm2",
-          "md": "```js\nvar lien = document.getElementById('mon-hyperlien');\n```\n\nComment changer le texte du lien `<a>` (tel qu'il sera affiché à l'écran) référencé par la variable `lien` ?\n\n\n",
-          "choices": [
-            {
-              "name": 1,
-              "text": "lien.href = 'nouveau texte';"
-            },
-            {
-              "name": 2,
-              "text": "lien.title = 'nouveau texte';"
-            },
-            {
-              "name": 3,
-              "text": "lien.innerHTML = 'nouveau texte';"
-            },
-            {
-              "name": 4,
-              "text": "lien.setAttribute('title', 'nouveau texte');"
-            }
-          ]
-        },
-        {
-          "i": 3,
-          "id": "qcm3",
-          "md": "Soit le fichier HTML suivant:\n\n```html\n<ul>\n  <li class=\"displayed first-item\">premier</li>\n  <li class=\"hidden\">deuxième</li>\n  <li class=\"hidden\" id=\"last-item\">troisième</li>\n</ul>\n```\n\nQuelle est la fonction du DOM la plus directe pour:\n\n1) accéder au dernier élément `<li>` depuis JavaScript ?\n\n\n",
-          "choices": [
-            {
-              "name": 1,
-              "text": "getElementById()"
-            },
-            {
-              "name": 2,
-              "text": "getElementByClassName()"
-            },
-            {
-              "name": 3,
-              "text": "getElementsByClassName()"
-            },
-            {
-              "name": 4,
-              "text": "getElementsByTagName()"
-            }
-          ]
-        },
-        {
-          "i": 4,
-          "id": "qcm4",
-          "md": "2) accéder à tous les éléments `<li>` portant la classe `\"hidden\"` ?\n\n\n",
-          "choices": [
-            {
-              "name": 1,
-              "text": "getElementById()"
-            },
-            {
-              "name": 2,
-              "text": "getElementByClassName()"
-            },
-            {
-              "name": 3,
-              "text": "getElementsByClassName()"
-            },
-            {
-              "name": 4,
-              "text": "getElementsByTagName()"
-            }
-          ]
-        },
-        {
-          "i": 5,
-          "id": "qcm5",
-          "md": "3) accéder à tous les éléments `<li>` ?\n\n\n",
-          "choices": [
-            {
-              "name": 1,
-              "text": "getElementById()"
-            },
-            {
-              "name": 2,
-              "text": "getElementByClassName()"
-            },
-            {
-              "name": 3,
-              "text": "getElementsByClassName()"
-            },
-            {
-              "name": 4,
-              "text": "getElementsByTagName()"
-            }
-          ]
-        },
-        {
-          "i": 6,
-          "id": "qcm6",
-          "md": "Comment retirer la classe `\"hidden\"` des deux derniers éléments `<li>` ?\n\n\n",
-          "choices": [
-            {
-              "name": 1,
-              "text": "document.getElementsByClassName('hidden').className = '';"
-            },
-            {
-              "name": 2,
-              "text": "document.getElementsByClassName('hidden').setAttribute('class', '');"
-            },
-            {
-              "name": 3,
-              "text": "document.getElementsByClassName('hidden').classList.remove('hidden');"
-            },
-            {
-              "name": 4,
-              "text": "(il faut utiliser une boucle)"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "_info": "generated from ex.02.code.template.md",
-      "i": 2,
-      "isCode": true,
-      "title": "Exercices de codage",
-      "maxScore": 10,
-      "questions": [
-        {
-          "i": 7,
-          "id": "code7",
+          "id": "code2",
           "variants": [
             {
-              "btnId": "bouton",
-              "className": "hidden"
+              "fr": "nom",
+              "prop": "name"
             },
             {
-              "btnId": "bouton",
-              "className": "cache"
+              "fr": "numéro de téléphone",
+              "prop": "phone"
             },
             {
-              "btnId": "mon-bouton",
-              "className": "cache"
+              "fr": "site web",
+              "prop": "website"
             }
           ],
           "mdVariants": [
-            "<!-- ## Cacher le bouton -->\n\nImaginez que vous disposez de la page HTML suivante:\n\n```html\n<button id=\"bouton\">cliquez ici !</button>\n```\n\nEt de la règle CSS suivante:\n\n```css\n.hidden {\n  display: none;\n}\n```\n\nÉcrivez le code JavaScript nécéssaire pour que la classe `hidden` soit ajoutée au bouton une fois que l'utilisateur aura cliqué dessus, à l'aide de la propriété `classList`.\n\n\n",
-            "<!-- ## Cacher le bouton -->\n\nImaginez que vous disposez de la page HTML suivante:\n\n```html\n<button id=\"bouton\">cliquez ici !</button>\n```\n\nEt de la règle CSS suivante:\n\n```css\n.cache {\n  display: none;\n}\n```\n\nÉcrivez le code JavaScript nécéssaire pour que la classe `cache` soit ajoutée au bouton une fois que l'utilisateur aura cliqué dessus, à l'aide de la propriété `classList`.\n\n\n",
-            "<!-- ## Cacher le bouton -->\n\nImaginez que vous disposez de la page HTML suivante:\n\n```html\n<button id=\"mon-bouton\">cliquez ici !</button>\n```\n\nEt de la règle CSS suivante:\n\n```css\n.cache {\n  display: none;\n}\n```\n\nÉcrivez le code JavaScript nécéssaire pour que la classe `cache` soit ajoutée au bouton une fois que l'utilisateur aura cliqué dessus, à l'aide de la propriété `classList`.\n\n\n"
+            "# Annuaire interactif\n\nUn client souhaite un moyen d'accéder rapidement au nom d'un adhérent, à partir de son numéro d'adhérent.\n\nIl met à disposition une API permettant d'accéder aux données de chaque adhérent. Il suffit d'effectuer une requête HTTP GET à l'URL `https://js-jsonplaceholder.herokuapp.com/users/<numero>`, où `<numero>` est à remplacer par le numéro d'adhérent dont on souhaite récupérer les données. L'API retourne alors une réponse au format JSON, contenant une propriété `name`.\n\nNous allons développer une solution simple consistant en:\n - une page HTML contenant un champ permettant de saisir le numéro d'adhérent, un bouton pour effectuer la requête, et un deuxième champ qui contiendra le nom de l'adhérent,\n - et un programme JavaScript permettant d'effectuer les requêtes AJAX correspondantes vers leur API, et d'afficher le nom de l'adhérent spécifié à chaque fois que l'utilisateur cliquera sur le bouton.\n\nLa page HTML de cette solution est fournie. Voici le code source de son `<body>`:\n\n```html\n<label for=\"numero\">Numéro d'adhérent:</label>\n<input id=\"numero\" type=\"text\">\n<input id=\"bouton\" type=\"button\" value=\"Chercher\">\n<p>Résultat:</p>\n<input id=\"name\" type=\"text\" readonly>\n```\n\nL'utilisateur doit pouvoir effectuer plusieurs recherches d'affilée, en tapant un autre numéro d'adhérent puis cliquant à nouveau sur le bouton.\n\nÉcrire le programme JavaScript à associer à cette page.\n\nNote: Vous devrez utiliser la classe `XMLHttpRequest()` pour effectuer les requêtes.\n\n\n",
+            "# Annuaire interactif\n\nUn client souhaite un moyen d'accéder rapidement au numéro de téléphone d'un adhérent, à partir de son numéro d'adhérent.\n\nIl met à disposition une API permettant d'accéder aux données de chaque adhérent. Il suffit d'effectuer une requête HTTP GET à l'URL `https://js-jsonplaceholder.herokuapp.com/users/<numero>`, où `<numero>` est à remplacer par le numéro d'adhérent dont on souhaite récupérer les données. L'API retourne alors une réponse au format JSON, contenant une propriété `phone`.\n\nNous allons développer une solution simple consistant en:\n - une page HTML contenant un champ permettant de saisir le numéro d'adhérent, un bouton pour effectuer la requête, et un deuxième champ qui contiendra le numéro de téléphone de l'adhérent,\n - et un programme JavaScript permettant d'effectuer les requêtes AJAX correspondantes vers leur API, et d'afficher le numéro de téléphone de l'adhérent spécifié à chaque fois que l'utilisateur cliquera sur le bouton.\n\nLa page HTML de cette solution est fournie. Voici le code source de son `<body>`:\n\n```html\n<label for=\"numero\">Numéro d'adhérent:</label>\n<input id=\"numero\" type=\"text\">\n<input id=\"bouton\" type=\"button\" value=\"Chercher\">\n<p>Résultat:</p>\n<input id=\"phone\" type=\"text\" readonly>\n```\n\nL'utilisateur doit pouvoir effectuer plusieurs recherches d'affilée, en tapant un autre numéro d'adhérent puis cliquant à nouveau sur le bouton.\n\nÉcrire le programme JavaScript à associer à cette page.\n\nNote: Vous devrez utiliser la classe `XMLHttpRequest()` pour effectuer les requêtes.\n\n\n",
+            "# Annuaire interactif\n\nUn client souhaite un moyen d'accéder rapidement au site web d'un adhérent, à partir de son numéro d'adhérent.\n\nIl met à disposition une API permettant d'accéder aux données de chaque adhérent. Il suffit d'effectuer une requête HTTP GET à l'URL `https://js-jsonplaceholder.herokuapp.com/users/<numero>`, où `<numero>` est à remplacer par le numéro d'adhérent dont on souhaite récupérer les données. L'API retourne alors une réponse au format JSON, contenant une propriété `website`.\n\nNous allons développer une solution simple consistant en:\n - une page HTML contenant un champ permettant de saisir le numéro d'adhérent, un bouton pour effectuer la requête, et un deuxième champ qui contiendra le site web de l'adhérent,\n - et un programme JavaScript permettant d'effectuer les requêtes AJAX correspondantes vers leur API, et d'afficher le site web de l'adhérent spécifié à chaque fois que l'utilisateur cliquera sur le bouton.\n\nLa page HTML de cette solution est fournie. Voici le code source de son `<body>`:\n\n```html\n<label for=\"numero\">Numéro d'adhérent:</label>\n<input id=\"numero\" type=\"text\">\n<input id=\"bouton\" type=\"button\" value=\"Chercher\">\n<p>Résultat:</p>\n<input id=\"website\" type=\"text\" readonly>\n```\n\nL'utilisateur doit pouvoir effectuer plusieurs recherches d'affilée, en tapant un autre numéro d'adhérent puis cliquant à nouveau sur le bouton.\n\nÉcrire le programme JavaScript à associer à cette page.\n\nNote: Vous devrez utiliser la classe `XMLHttpRequest()` pour effectuer les requêtes.\n\n\n"
           ]
         }
       ]
