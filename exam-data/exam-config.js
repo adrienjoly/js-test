@@ -30,10 +30,10 @@ module.exports = {
     },
     */
     FIREBASE_CONFIG: {
-      apiKey: "AIzaSyCMqtRa383qaJ59U3RYbue325iExmESCBY",
-      databaseURL: "https://js-test-ft-41d32.firebaseio.com",
-      messagingSenderId: "859086271487"
-      // admin/dashboard: https://console.firebase.google.com/project/js-test-ft-41d32/database/data
+      apiKey: "AIzaSyCUIGKvdZ4EdFywDU4a90PupcpBEfvpNPc",
+      databaseURL: "https://js-qcm-ft.firebaseio.com",
+      messagingSenderId: "793078387774"
+      // admin/dashboard: https://console.firebase.google.com/project/js-qcm-ft/database/data
     },
   },
 
