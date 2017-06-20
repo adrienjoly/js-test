@@ -27,7 +27,7 @@
     "eval-firebase-export": "node ./src/evaluateGroupFile.js ../exam-data/js-qcm-ft-export-fast-track.json >./exam-data/js-qcm-ft-export-fast-track.eval.log",
     "eval-student-groups": "src/score-student-groups.sh ./student-groups/*.json",
     "eval-groups-from-firebase": "src/score-groups.sh",
-    "deploy-firebase": "firebase use default && firebase deploy; # alternative to heroku, but did not scale over 20 simultaneous connections",
+    "deploy-firebase": "echo \"don't forget to rebuild and commit first!\" && firebase use default && firebase deploy; # may not scale over 20 simultaneous connections",
     "deploy-heroku": "echo \"don't forget to commit first!\" && heroku git:remote -a js-part-2 && git push heroku `git rev-parse --abbrev-ref HEAD`:master",
     "deploy-instances": "./src/multi-instance-deploy.sh",
     "eval-instances": "./src/multi-instance-eval.sh"
