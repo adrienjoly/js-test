@@ -9,20 +9,24 @@ console.log('Reading and comparing answers from:', filePath, '...');
 
 var submissionSet = require(filePath).submissions; // this line allows to parse an entire firebase json export at once
 
+// generates [ { student, qId, code } ] tuples from submissionSet
+const expandCodeAnswers = submissionSet =>
+  Object.keys(submissionSet).reduce((answ, student) =>
+    answ.concat(Object.keys(submissionSet[student])
+      .filter(field => /^code/.test(field))
+      .map(qId => ({ student, qId, code: submissionSet[student][qId] }))
+    ), []);
+
 console.log('== Exact same solutions');
 
 var codeAnswers = {}; // { question id -> { trimmed answer -> [ students ] } }
 
-for (var student in submissionSet) {
-  for (var q in submissionSet[student]) {
-    if (/^code/.test(q)) {
-      var trimmedCode = submissionSet[student][q].trim();
-      codeAnswers[q] = codeAnswers[q] || {};
-      codeAnswers[q][trimmedCode] = codeAnswers[q][trimmedCode] || [];
-      codeAnswers[q][trimmedCode].push(student);
-    }
-  }
-}
+expandCodeAnswers(submissionSet).forEach(({ student, qId, code }) => {
+  var trimmedCode = code.trim();
+  codeAnswers[qId] = codeAnswers[qId] || {};
+  codeAnswers[qId][trimmedCode] = codeAnswers[qId][trimmedCode] || [];
+  codeAnswers[qId][trimmedCode].push(student);
+});
 
 for (var q in codeAnswers) {
   console.log('exercice', q, ':');
