@@ -14,3 +14,23 @@ exercice code2 :
 - [ 'maxime_bonnet' ]
 - [ 'nicolas_perrousset' ]
 - [ 'yassine_baba_slimane' ]
+
+== Checksums
+
+exercice code1 :
+- 18436	nicolas_perrousset
+- 18436	yassine_baba_slimane
+- 18596	maxime_bonnet
+- 18627	gauthier_ailloud
+- 18628	charlotte_vigneux
+- 18628	clement_zerbi
+- 22281	mathias_lachot
+
+exercice code2 :
+- 37865	clement_zerbi
+- 38674	gauthier_ailloud
+- 39862	nicolas_perrousset
+- 39965	mathias_lachot
+- 40092	charlotte_vigneux
+- 40493	yassine_baba_slimane
+- 43822	maxime_bonnet
