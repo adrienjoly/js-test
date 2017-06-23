@@ -1,0 +1,17 @@
+Reading and comparing answers from: ../student-groups/js-controle-ajax-ft-export.json ...
+== Exact same solutions
+exercice code1 :
+- [ 'charlotte_vigneux', 'clement_zerbi' ]
+- [ 'gauthier_ailloud' ]
+- [ 'mathias_lachot' ]
+- [ 'maxime_bonnet' ]
+- [ 'nicolas_perrousset', 'yassine_baba_slimane' ]
+exercice code2 :
+- [ 'charlotte_vigneux' ]
+- [ 'clement_zerbi' ]
+- [ 'gauthier_ailloud' ]
+- [ 'mathias_lachot' ]
+- [ 'maxime_bonnet' ]
+- [ 'nicolas_perrousset' ]
+- [ 'yassine_baba_slimane' ]
+== Checksums
