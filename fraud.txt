@@ -14,4 +14,3 @@ exercice code2 :
 - [ 'maxime_bonnet' ]
 - [ 'nicolas_perrousset' ]
 - [ 'yassine_baba_slimane' ]
-== Checksums
