@@ -17,39 +17,43 @@ const expandCodeAnswers = submissionSet =>
       .map(qId => ({ student, qId, code: submissionSet[student][qId] }))
     ), []);
 
+var codeAnswers = expandCodeAnswers(submissionSet);
+
 console.log('== Exact same solutions');
 
-var codeAnswers = {}; // { question id -> { trimmed answer -> [ students ] } }
+var perfectMatches = {}; // { question id -> { trimmed answer -> [ students ] } }
 
-expandCodeAnswers(submissionSet).forEach(({ student, qId, code }) => {
+codeAnswers.forEach(({ student, qId, code }) => {
   var trimmedCode = code.trim();
-  codeAnswers[qId] = codeAnswers[qId] || {};
-  codeAnswers[qId][trimmedCode] = codeAnswers[qId][trimmedCode] || [];
-  codeAnswers[qId][trimmedCode].push(student);
+  perfectMatches[qId] = perfectMatches[qId] || {};
+  perfectMatches[qId][trimmedCode] = perfectMatches[qId][trimmedCode] || [];
+  perfectMatches[qId][trimmedCode].push(student);
 });
 
-for (var q in codeAnswers) {
+for (var q in perfectMatches) {
   console.log('exercice', q, ':');
-  for (var code in codeAnswers[q]) {
-    console.log('-', codeAnswers[q][code]);
+  for (var code in perfectMatches[q]) {
+    console.log('-', perfectMatches[q][code]);
   }
 }
 
 // run node ./src/checkGroupFile.js ../student-groups/js-controle-ajax-ft-export.json >fraud.txt
 
-/*
-console.log('== Checksums');
+console.log('\n== Checksums');
+
+const computeChecksum = (str) => str.split('').reduce((cksm, char) => cksm + char.charCodeAt(0), 0);
 
 var checksums = {}; // { question id -> [ { student, checksum } ] }
 
-for (var student in submissionSet) {
-  for (var q in submissionSet[student]) {
-    if (/^code/.test(q)) {
-      var trimmedCode = submissionSet[student][q].trim();
-      codeAnswers[q] = codeAnswers[q] || {};
-      codeAnswers[q][trimmedCode] = codeAnswers[q][trimmedCode] || [];
-      codeAnswers[q][trimmedCode].push(student);
-    }
-  }
+codeAnswers.forEach(({ student, qId, code }) => {
+  var checksum = computeChecksum(code.trim());
+  (checksums[qId] = checksums[qId] || []).push({ student, checksum });
+});
+
+for (var q in checksums) {
+  console.log('\nexercice', q, ':');
+  checksums[q].sort((a, b) => a.checksum - b.checksum);
+  checksums[q].forEach(({ student, checksum }) =>
+    console.log('-', checksum + '\t' + student)
+  );
 }
-*/
