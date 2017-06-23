@@ -79,7 +79,9 @@ STUDENT: charlotte_vigneux
 
   => code score: 11.666666666666666 / 20 pts
 
-=> TOTAL STUDENT SCORE: 11.66 / 20
+- 1 pts pour indentation non respectée à partir du onclick
+
+=> TOTAL STUDENT SCORE: 10.66 / 20
 
 
 ================================
@@ -158,7 +160,9 @@ STUDENT: clement_zerbi
 
   => code score: 18.333333333333336 / 20 pts
 
-=> TOTAL STUDENT SCORE: 18.33 / 20
+-1 pts pour xhr.send() non indenté
+
+=> TOTAL STUDENT SCORE: 17.33 / 20
 
 
 ================================
@@ -321,7 +325,9 @@ STUDENT: mathias_lachot
 
   => code score: 15.416666666666668 / 20 pts
 
-=> TOTAL STUDENT SCORE: 15.41 / 20
+-2 pts pour indentation manquant après onreadystatechange, et usage d'1 espace au lieu de 2
+
+=> TOTAL STUDENT SCORE: 13.41 / 20
 
 
 ================================
@@ -401,7 +407,9 @@ STUDENT: maxime_bonnet
 
   => code score: 16.666666666666668 / 20 pts
 
-=> TOTAL STUDENT SCORE: 16.66 / 20
+-1 pts pour indentation manquante à partir du onclick
+
+=> TOTAL STUDENT SCORE: 15.66 / 20
 
 
 ================================
@@ -484,7 +492,10 @@ STUDENT: nicolas_perrousset
 
   => code score: 20 / 20 pts
 
-=> TOTAL STUDENT SCORE: 20 / 20
+-2 pts pour indentation à 1 espace au lieu de 2, dans les 2 exercices
+-2 pts pour indentation imbriquée manquante, dans les 2 exercices
+
+=> TOTAL STUDENT SCORE: 16 / 20
 
 
 ================================
@@ -564,4 +575,7 @@ STUDENT: yassine_baba_slimane
 
   => code score: 20 / 20 pts
 
-=> TOTAL STUDENT SCORE: 20 / 20
+-2 pts pour indentation à 1 espace au lieu de 2, dans les 2 exercices
+-2 pts pour indentation imbriquée manquante, dans les 2 exercices
+
+=> TOTAL STUDENT SCORE: 16 / 20
