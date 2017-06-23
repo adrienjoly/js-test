@@ -1,0 +1,82 @@
+{
+  "active" : 0,
+  "submissions" : {
+    "adrien_joly" : {
+      "_d" : "Tue Jun 20 2017 15:00:01 GMT+0200 (CEST)",
+      "_f" : "Tue Jun 20 2017 10:56:54 GMT+0200 (CEST)",
+      "_ft" : 1497949014654,
+      "_t" : 1497963601297,
+      "_uid" : "103769591752335079590"
+    },
+    "charlotte_vigneux" : {
+      "_d" : "Tue Jun 20 2017 15:30:04 GMT+0200 (Paris, Madrid (heure d’été))",
+      "_f" : "Tue Jun 20 2017 15:01:20 GMT+0200 (Paris, Madrid (heure d’été))",
+      "_ft" : 1497963650134,
+      "_submitted" : true,
+      "_t" : 1497965374603,
+      "_uid" : "105224665555532657102",
+      "code1" : "var xhr = new XMLHttpRequest(); \nxhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/photos/2');\nxhr.onreadystatechange = function() {\n  if (xhr.readyState === 4) {\n    alert(xhr.responseText);\n  }\n};\nxhr.send();",
+      "code2" : "var numero = document.getElementById('numero');\nvar afficheUrl = document.getElementById('url');\n\ndocument.getElementById('bouton').onclick = function() {\nvar xhr = new XMLHttpRequest(); \nxhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/photos/'+ numero.value');\nxhr.onreadystatechange = function() {\n  if (xhr.readyState === 4) {\n    var reponse = JSON.stringify(xhr.responseText);\n    afficheUrl.innerHTML = name=\"'reponse.url'\";\n  }\n};\nxhr.send();\n\n};"
+    },
+    "clement_zerbi" : {
+      "_d" : "Tue Jun 20 2017 15:28:50 GMT+0200 (CEST)",
+      "_f" : "Tue Jun 20 2017 15:01:16 GMT+0200 (CEST)",
+      "_ft" : 1497963676133,
+      "_submitted" : true,
+      "_t" : 1497965330107,
+      "_uid" : "117249543399178428749",
+      "code1" : "var xhr = new XMLHttpRequest(); \nxhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/photos/2');\nxhr.onreadystatechange = function() {\n  if (xhr.readyState === 4) {\n    alert(xhr.responseText);\n  }\n};\nxhr.send();",
+      "code2" : "var numero = document.getElementById('numero');\nvar bouton = document.getElementById('bouton');\n\nbouton.onclick = function() {\n  var xhr = new XMLHttpRequest(); \n  xhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/photos/'+ numero.value);\n  xhr.onreadystatechange = function() {\n    if (xhr.readyState === 4) {\n      var reponse = JSON.parse(xhr.responseText);\n      thumbnailUrl.value = reponse.thumbnailUrl;\n    }\n  };\nxhr.send();\n};"
+    },
+    "gauthier_ailloud" : {
+      "_d" : "Tue Jun 20 2017 15:26:36 GMT+0200 (Romance Daylight Time)",
+      "_f" : "Tue Jun 20 2017 15:01:37 GMT+0200 (Romance Daylight Time)",
+      "_ft" : 1497963697188,
+      "_submitted" : true,
+      "_t" : 1497965196677,
+      "_uid" : "113743186065809140348",
+      "code1" : "var xhr = new XMLHttpRequest(); \nxhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/photos/1');\nxhr.onreadystatechange = function() {\n  if (xhr.readyState === 4) {\n    alert(xhr.responseText);\n  }\n};\nxhr.send();",
+      "code2" : "var numero = document.getElementById('numero');\nvar bouton = document.getElementById('bouton');\nvar url = document.getElementById('url');\nbouton.onclick = function() {\n  var xhr = new XMLHttpRequest();\n  xhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/photos/' + \n  numero.value);\n  xhr.onreadystatechange = function() {\n    if (xhr.readyState === 4) {\n      var id = JSON.parse(xhr.responseText);\n      url.value = id.url;\n    }\n  };\n xhr.send();\n};"
+    },
+    "mathias_lachot" : {
+      "_d" : "Tue Jun 20 2017 15:29:50 GMT+0200 (CEST)",
+      "_f" : "Tue Jun 20 2017 15:01:31 GMT+0200 (CEST)",
+      "_ft" : 1497963691778,
+      "_submitted" : true,
+      "_t" : 1497965390974,
+      "_uid" : "114847707654490958272",
+      "code1" : "var xhr = new XMLHttpRequest(); \nxhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/photos/1');\nxhr.onreadystatechange = function() {\n  if (xhr.readyState === 4) {\n    var reponse = JSON.parse(xhr.responseText);\n    alert(reponse.name);\n  }\n};\nxhr.send();",
+      "code2" : "var numero = document.getElementById('numero');\nvar bouton = document.getElementById('bouton');\nvar url = document.getElementById('url');\n\nbouton.onclick = function() {\n var xhr = new XMLHttpRequest();\n xhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/photo/' +\nnumero.value);\n xhr.onreadystatechange = function() {\n if (xhr.readyState === 4) {\n var thumbnailUrl = JSON.parse(xhr.responseText);\n url.value = thumbnailUrl.url;\n }\n };\n xhr.send();\n};\n"
+    },
+    "maxime_bonnet" : {
+      "_d" : "Tue Jun 20 2017 15:29:25 GMT+0200 (Paris, Madrid (heure d’été))",
+      "_f" : "Tue Jun 20 2017 15:01:23 GMT+0200 (Paris, Madrid (heure d’été))",
+      "_ft" : 1497963683867,
+      "_submitted" : true,
+      "_t" : 1497965367265,
+      "_uid" : "117620703936466776803",
+      "code1" : "var xhr = new XMLHttpRequest();\nxhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/photos/2');\nxhr.onreadystatechange = function() {\n  if (xhr.readyState === 4) {\n    alert(xhr.responseText);\n  }\n};\nxhr.send();",
+      "code2" : "var numero = document.getElementById('numero');\nvar bouton = document.getElementById('bouton');\nvar thumbnailUrl = document.getElementById('thumbnailUrl');\nbouton.onclick = function() {\nvar xhr = new XMLHttpRequest();\nxhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/photos/<numero>' +\nnumero.value);\nxhr.onreadystatechange = function() {\n  if (xhr.readyState === 4) {\n    var adherent = JSON.parse(xhr.responseText);\n    thumbnailUrl.value = adherent.thumbnailUrl;\n  }\n};\nxhr.send();\n};"
+    },
+    "nicolas_perrousset" : {
+      "_d" : "Tue Jun 20 2017 15:29:54 GMT+0200 (Paris, Madrid (heure d’été))",
+      "_f" : "Tue Jun 20 2017 14:14:34 GMT+0200 (Paris, Madrid (heure d’été))",
+      "_ft" : 1497960874779,
+      "_submitted" : true,
+      "_t" : 1497965393833,
+      "_uid" : "107852631580892581886",
+      "code1" : "var xhr = new XMLHttpRequest();\nxhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/photos/2');\nxhr.onreadystatechange = function() {\n if (xhr.readyState === 4) {\n alert(xhr.responseText);\n }\n};\nxhr.send();\n\n",
+      "code2" : "var numero = document.getElementById('numero');\nvar bouton = document.getElementById('bouton');\nvar url = document.getElementById('url');\nbouton.onclick = function() {\n var xhr = new XMLHttpRequest();\n xhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/photos/' +\nnumero.value);\n xhr.onreadystatechange = function() {\n if (xhr.readyState === 4) {\n var identifiant = JSON.parse(xhr.responseText);\n url.value = identifiant.url;\n }\n };\n xhr.send();\n};\n"
+    },
+    "yassine_baba_slimane" : {
+      "_d" : "Tue Jun 20 2017 15:30:03 GMT+0200 (CEST)",
+      "_f" : "Tue Jun 20 2017 15:00:36 GMT+0200 (CEST)",
+      "_ft" : 1497963636732,
+      "_submitted" : true,
+      "_t" : 1497965403682,
+      "_uid" : "104548294737086674559",
+      "code1" : "var xhr = new XMLHttpRequest();\nxhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/photos/2');\nxhr.onreadystatechange = function() {\n if (xhr.readyState === 4) {\n alert(xhr.responseText);\n }\n};\nxhr.send();",
+      "code2" : "var numero = document.getElementById('numero');\nvar bouton = document.getElementById('bouton');\nbouton.onclick = function() {\n var xhr = new XMLHttpRequest();\n xhr.open('GET', 'https://js-jsonplaceholder.herokuapp.com/photos/' +\nnumero.value);\n xhr.onreadystatechange = function() {\n if (xhr.readyState === 4) {\n var identifiant = JSON.parse(xhr.responseText);\n document.getElementById('thumbnailUrl').value = identifiant.thumbnailUrl;\n }\n };\n xhr.send();\n};\n"
+    }
+  }
+}
