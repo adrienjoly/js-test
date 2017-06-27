@@ -1,4 +1,7 @@
+== v2.8 Fraud detection and detailed scores
+ * Feature: measure fraud probability based on checksums of code answers
  * Feature: scores-detail.csv lists points for each exercise
+ * Improved examples in documentation
 
 == v2.7 Robust exam process
  * Feature: /rendus.html (for teacher use) displays which students have submitted their answers
