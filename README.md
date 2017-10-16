@@ -1,7 +1,15 @@
-Coding Test for Javascript course students
-==========================================
+JS-TEST
+=======
+
+**A toolkit to help JavaScript teachers evaluate their students' skills more efficiently.**
 
 In the frame of my JavaScript course at EEMI, I developed an online exam application for students, using Google Polymer and Firebase. It's designed to display different variants of each exercise to prevent fraud, and automatic student evaluation/grading, for both quizzes and coding exercises.
+
+It's made of:
+
+- a web app that students will use to give their answers;
+- a simple Markdown-based language to define quizz and coding exercises;
+- scripts to deploy, evaluate and grade students' answers automatically.
 
 ▶️ **Demo video:** *(click to play)*
 
