@@ -1,6 +1,16 @@
 Coding Test for Javascript course students
 ==========================================
 
+In the frame of my JavaScript course at EEMI, I developed an online exam application for students, using Google Polymer and Firebase. It's designed to display different variants of each exercise to prevent fraud, and automatic student evaluation/grading, for both quizzes and coding exercises.
+
+Demo video: *(click to play)*
+
+[![](docs/js-test-video-thumbnail.png)](https://www.youtube.com/watch?v=RwxCBDoxbF8)
+
+Interactive demo: *(click to try)*
+
+[![](js-test-screenshot-thumb.png)](https://js-test-demo.herokuapp.com/)
+
 Features:
 ---------
 
