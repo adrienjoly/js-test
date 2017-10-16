@@ -1,5 +1,28 @@
-/public/bower_components
-/node_modules
+# Specifies intentionally untracked files to ignore when using Git
+# http://git-scm.com/docs/gitignore
+
+#### IDE files and folders
+# JetBrains IDEs'config
+.idea/
+# Apple thing (go fuck yourself Apple)
+.DS_Store/
+# Cloud9
+.c9/
+
+# npm things
+node_modules/
+npm-debug.log
+
+# bower things
+/public/bower_components/
+
+# Coverage folder
+coverage/
+
+# Quality report provided by plato
+plato/
+
+# App specific
 /students
 /exam-data
 /public/scripts/exam-data.js
