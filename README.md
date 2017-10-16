@@ -9,7 +9,7 @@ In the frame of my JavaScript course at EEMI, I developed an online exam applica
 
 ▶️ **Interactive demo:** *(click to try)*
 
-[![](docs/js-test-screenshot-thumb.png)](https://js-test-demo.herokuapp.com/)
+[![](docs/js-test-screenshot-thumb.png)](https://js-test-demo.firebaseapp.com/)
 
 Features:
 ---------
