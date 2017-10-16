@@ -1,3 +1,5 @@
 /public/bower_components
 /node_modules
 /students
+/exam-data
+/public/scripts/exam-data.js

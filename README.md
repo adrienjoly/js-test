@@ -16,9 +16,10 @@ Features:
 Usage:
 ------
 
-- Clone the repo locally
+- Fork, then clone the repo locally
 - Run `npm install` to install dependencies,
-- Update exercises (`ex.1.quizz.template.md` and `ex.2.code.template.md`) using Markdown formatting and Mustache variables,
+- Run `npm run create` to generate sample exercises and configuration to `/exam-data`,
+- Update exercises files (`/exam-data/*.md`) using Markdown formatting and Mustache variables (see [howto](docs/howto-write-templates.md)),
 - Run `npm run build` to compile exercise data into `/public/scripts/exam-data.js`,
 - Run `npm start` to start the web server locally,
 - Open [localhost:8000](http://localhost:8000) to test the web client locally.

@@ -18,6 +18,7 @@
   },
   "devDependencies": {},
   "scripts": {
+    "create": "echo backing up to exam-data-backup-$(date +%s)...; mv exam-data exam-data-backup-$(date +%s); mkdir exam-data; cp sample-data/*.* exam-data; echo done! now, you can npm run start",
     "postinstall": "bower install",
     "build": "node ./src/build-exercises.js",
     "test": "node ./src/test-solutions.js",
