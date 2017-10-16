@@ -1,4 +1,4 @@
-Sample quizz question 1
+# Quizz questions
 
 ```html
 <p>you can include code</p>
@@ -15,8 +15,6 @@ Optional explanation that appears after submission of the student's answers.
 (can include line breaks and code sections)
 
 ---
-
-Sample quizz question 2
 
 * right choice
 - choice 2

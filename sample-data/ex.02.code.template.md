@@ -1,7 +1,9 @@
+# Coding exercices
+
 Question text (can include line breaks and code sections)
 with variant placeholders. (optional, see source template)
 
-In this session, `sample_variant` is replaced by `{{sample_variant}}`.
+In this session, `sample_variant`'s value is `{{sample_variant}}`.
 
 - { "sample_variant": "this is variant 1" }
 - { "sample_variant": "this is variant 2" }
@@ -23,13 +25,19 @@ alert('{{sample_variant}}');
 ```js
 // automatic student evaluation code
 (function evaluateStudentCode(){
-  var alert = window.alert = function(msg) {
-    return 1; // fake alert() that returns 1 all the time
-  };
+  function runInContext() {
+    var points = 0;
+    try {
+      eval('function alert(msg) { points = 1; };' // fake alert() function that gives 1 point when called
+          + `_studentCode`); // run student's code
+    } catch(e) {
+      application.remote._log(`error: ${e}`);
+    }
+    return points;
+  }
   var scoreArray = [
-    `_studentCode`.length > 0, // 1 point if student provided non-empty code
     /{{sample_variant}}/.test(`_studentCode`), // 1 point if value was included
-    eval(`return _studentCode`), // will return 1 point if student used alert()
+    runInContext(), // will return 1 point if student used alert()
   ];
   application.remote._send(null, scoreArray);
 })();
@@ -37,7 +45,7 @@ alert('{{sample_variant}}');
 
 ---
 
-Next exercise...
+Next exercise... Type whatever you want.
 
 ???
 
@@ -50,5 +58,6 @@ Next exercise...
 ```js
 (function evaluateStudentCode(){
   // please write student evaluation code
+  application.remote._send(null, [ 1 ]); // 1 / 1 points
 })();
 ```
