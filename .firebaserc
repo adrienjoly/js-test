@@ -1,6 +1,5 @@
 {
   "projects": {
-    "staging": "jsexam-afaa0",
-    "default": "jsexam-afaa0"
+    "default": "js-test-demo"
   }
 }

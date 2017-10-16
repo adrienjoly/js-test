@@ -33,7 +33,7 @@ How to deploy a test to Firebase
 4. Still in your `/exam-data/exam-config.js` file:
     - set `backend.type` to `firebase`,
     - un-comment the `FIREBASE_CONFIG` object.
-5. Also copy the value of the given `projectId` property to entries of the `/.firebaserc` file
+5. Also copy the value of the given `projectId` property to the `/.firebaserc` file
 6. Run `npm run build` to re-compile your configuration into `/public/scripts/exam-data.js`
 7. Run `npm run deploy-firebase` to push the project to production on Firebase Hosting
 8. Test your Firebase project from the given URL, by simulating a student's submission
