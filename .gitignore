@@ -4,7 +4,7 @@
 #### IDE files and folders
 # JetBrains IDEs'config
 .idea/
-# Apple thing (go fuck yourself Apple)
+# Apple thing
 .DS_Store/
 # Cloud9
 .c9/
