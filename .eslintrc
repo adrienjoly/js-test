@@ -1,0 +1,6 @@
+{
+  "extends": ["plugin:polymer/polymer-1"],
+  "plugins": [
+    "polymer"
+  ]
+}
