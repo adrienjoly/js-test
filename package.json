@@ -35,7 +35,6 @@
   },
   "author": "Adrien Joly <adrien.joly@gmail.com>",
   "license": "MIT",
-  "description": "Exercise/exam software for evaluating JavaScript students' progress",
   "bugs": {
     "url": "https://github.com/adrienjoly/js-test/issues"
   },
