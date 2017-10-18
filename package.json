@@ -34,5 +34,10 @@
     "eval-instances": "./src/multi-instance-eval.sh"
   },
   "author": "Adrien Joly <adrien.joly@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "description": "Exercise/exam software for evaluating JavaScript students' progress",
+  "bugs": {
+    "url": "https://github.com/adrienjoly/js-test/issues"
+  },
+  "homepage": "https://github.com/adrienjoly/js-test"
 }
