@@ -11,6 +11,8 @@ It's made of:
 - a simple Markdown-based language to define quizz and coding exercises;
 - scripts to deploy, evaluate and grade students' answers automatically.
 
+> 🇫🇷 Annonce de sortie en Français: [Un exerciseur en ligne + script pour corriger et noter le code de vos étudiants](http://mailchi.mp/cec2914e9181/exporter-en-pdf-le-code-de-vos-tudiants-depuis-google-classroom-1439429)
+
 ▶️ **Demo video:** *(click to play)*
 
 [![](docs/js-test-video-thumbnail.png)](https://www.youtube.com/watch?v=RwxCBDoxbF8)
