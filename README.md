@@ -89,3 +89,4 @@ Roadmap
 - Add variants to Quizzes.
 - Allow per-variable variants. => more combinations.
 - Add access rules. (per student group and timeslot)
+- ([read more](https://github.com/adrienjoly/js-test/projects/1))
