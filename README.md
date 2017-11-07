@@ -42,7 +42,7 @@ Usage:
 - Update exercises files (`/exam-data/*.md`) using Markdown formatting and Mustache variables (see [howto](docs/howto-write-templates.md)),
 - Run `npm run build` to compile exercise data into `/public/scripts/exam-data.js`,
 - Run `npm start` to start the web server locally,
-- Open [localhost:8000](http://localhost:8000) to test the web client locally.
+- Open [localhost:8080](http://localhost:8080) to test the web client locally.
 
 How to deploy a test to Firebase
 --------------------------------
