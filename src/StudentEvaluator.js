@@ -87,7 +87,13 @@ function evaluateStudent(student, next) {
     console.log('=> TOTAL STUDENT SCORE:', totalScore, '/', totalPoints);
     var csv = [ student.key, totalScore ];
     fs.appendFileSync(SCORES_FILE, csv.toString() + '\n');
-    fs.appendFile(SCORES_DETAIL_FILE, csv.concat(scoreArray).toString() + '\n', next);
+    fs.appendFile(SCORES_DETAIL_FILE, csv.concat(scoreArray).toString() + '\n', function() {
+      next(null, {
+        studentKey: student.key,
+        studentTotalScore: totalScore,
+        totalPoints: totalPoints
+      });
+    });
   }
 
   function evaluateExercise(evaluator, callback) {
