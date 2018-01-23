@@ -1,3 +1,11 @@
+== v2.9 Streamlined evaluation processes (mono and multi-instance)
+ * Feature: compute average and median scores when processing firebase dumps
+ * Feature: evaluation logs are splitted per student
+ * Feature: .firebaserc is no longer required
+ * Feature: new `instances` property in exam-config.js file
+ * Documentation: provided a sample multi-instance exam-config.js file
+ * Refactoring: cleaned, renamed and sorted npm scripts for evaluation
+
 == v2.8 Fraud detection and detailed scores
  * Feature: measure fraud probability based on checksums of code answers
  * Feature: scores-detail.csv lists points for each exercise

@@ -53,9 +53,8 @@ How to deploy a test to Firebase
 4. Still in your `/exam-data/exam-config.js` file:
     - set `backend.type` to `firebase`,
     - un-comment the `FIREBASE_CONFIG` object.
-5. Also copy the value of the given `projectId` property to the `/.firebaserc` file
 6. Run `npm run build` to re-compile your configuration into `/public/scripts/exam-data.js`
-7. Run `npm run deploy-firebase` to push the project to production on Firebase Hosting
+7. Run `npm run deploy-firebase` (or `npm run deploy-firebase-instances`) to push the project to production on Firebase Hosting
 8. Test your Firebase project from the given URL, by simulating a student's submission
 
 ℹ️️ After disabling `PUBLIC_TEST_MODE` in `/exam-data/exam-config.js`, don't forget to toggle the `active` property (to `1` or `0`) of your Firebase database, to (de-)activate student access to the test.
@@ -72,8 +71,8 @@ At all times, you can:
 
 After having run the steps above, you can either:
 
-- Run `npm run eval` to compute the scores of answers stored in your Firebase database;
-- Or `npm run eval-firebase-export` to do it offline, from a JSON export of your Firebase database.
+- Run `npm run eval` (`npm run eval-instances`) to compute the scores of answers stored in your Firebase database;
+- Or `npm run eval-firebase-dumps` to do it offline, from a JSON export of your Firebase database.
 
 In both cases, resulting grades will be stored in the `/exam-data/scores.csv` file.
 
