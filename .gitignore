@@ -24,6 +24,5 @@ plato/
 
 # App specific
 /students
-/exam-data
 /public/scripts/exam-data.js
 /.firebaserc
