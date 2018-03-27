@@ -1,6 +1,6 @@
 {
   "name": "js-test",
-  "version": "2.9.0",
+  "version": "2.9.1",
   "description": "Exercise/exam software for evaluating JavaScript students' progress",
   "repository": {
     "type": "git",
@@ -16,7 +16,6 @@
     "mustache": "^2.2.1",
     "node-static": "^0.7.9"
   },
-  "devDependencies": {},
   "scripts": {
     "clear-data": "rm -r exam-data; rm -r public/data",
     "create": "echo backing up to exam-data-backup-$(date +%s)...; mv exam-data exam-data-backup-$(date +%s); mkdir exam-data; cp sample-data/*.* exam-data; echo done! now, you can npm run start",
