@@ -15,15 +15,16 @@ do
 
   echo # blank line
   echo "* Building config data for $INSTANCE ..."
-  URL=`JS_TEST_INSTANCE=$INSTANCE node -e "console.log(require('$CONFIG_FILE').backend.FIREBASE_CONFIG.authDomain);"`
-  JS_TEST_INSTANCE=$INSTANCE npm run build --silent
+  PROJECT_ID=`JS_TEST_INSTANCE="$INSTANCE" node -e "console.log(require('$CONFIG_FILE').backend.FIREBASE_CONFIG.projectId);"`
+  URL="https://$PROJECT_ID.firebaseapp.com"
+  JS_TEST_INSTANCE="$INSTANCE" npm run build --silent
 
   echo "* Creating temporary commit for config data ..."
   git add --force public/scripts/exam-data.js
   git commit -m 'Temporary Firebase-only deployment commit'
 
   echo "* Deploying to instance: $URL ..."
-  firebase use $INSTANCE && firebase deploy
+  firebase use $PROJECT_ID && firebase deploy
 
   echo "* Reverting temporary commit ..."
   git reset --mixed HEAD~1
