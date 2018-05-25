@@ -15,10 +15,14 @@ var SCORES_DETAIL_FILE = PATH_SOURCE + 'scores-detail.csv';
 var SCORES_CHART_FILE = PATH_SOURCE + 'scores-chart.txt';
 
 function appendScoreValues(array) {
-  var csvLine = array.toString() + '\n';
-  fs.appendFileSync(SCORES_FILE, csvLine);
-  fs.appendFileSync(SCORES_DETAIL_FILE, csvLine);
+  fs.appendFileSync(SCORES_FILE, array.slice(0, 2).toString() + '\n');
+  fs.appendFileSync(SCORES_DETAIL_FILE, array.toString() + '\n');
 }
+
+var questionIds = evaluateStudent.exercises.reduce(
+  (ids, ex) => ids.concat(ex.questionLines.map(
+    (_, q) => ex._type + (ids.length + q)
+  )), []);
 
 function sum(a, b) {
   return a + b;
@@ -32,8 +36,9 @@ function median(arr){
 
 console.log('Reading and evaluating answers from:', filePath, '...');
 
-var groupHeader = [ '\"GROUP FILE:\"', '\"' + filePath + '\"' ];
-appendScoreValues(groupHeader);
+// csv header
+appendScoreValues([ filePath.split('/').pop(), 'score' ].concat(questionIds));
+appendScoreValues([]); // (empty) line separator
 
 var submissionSet = require(filePath).submissions; // this line allows to parse an entire firebase json export at once
 

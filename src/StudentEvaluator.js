@@ -76,7 +76,9 @@ var converters = {
   },
 };
 
-var evaluators = ExerciseEnumerator.parseAllFrom(PATH_SOURCE).map(function(exData) {
+var exercises = ExerciseEnumerator.parseAllFrom(PATH_SOURCE);
+
+var evaluators = exercises.map(function(exData) {
   return converters[exData._type](exData, exData.i);
 });
 
@@ -120,3 +122,4 @@ function evaluateStudent(student, next) {
 
 module.exports = evaluateStudent;
 module.exports.getVariantByStudentId = CodeEvaluator.getVariantByStudentId;
+module.exports.exercises = exercises;
