@@ -12,8 +12,16 @@ var PATH_SOURCE = './exam-data/';
 
 var SCORES_FILE = PATH_SOURCE + 'scores.csv';
 var SCORES_DETAIL_FILE = PATH_SOURCE + 'scores-detail.csv';
+var SCORE_DECIMAL_DIGITS = 2;
 
 // helpers
+
+var SCORE_DECIMAL_DIGITS = 2;
+
+// note: returns a string
+function renderScore(score) {
+  return parseFloat(score).toFixed(SCORE_DECIMAL_DIGITS);
+}
 
 function setConsolePrefix(prefix) {
   if (!prefix) {
@@ -82,12 +90,12 @@ function evaluateStudent(student, next) {
   console.log('STUDENT:', student.key/*, '(' + student._uid + ')', '...'*/);
 
   function whenDone() {
-    totalScore = Math.floor(totalScore * 100) / 100;
+    var renderedScore = renderScore(totalScore);
     console.log();
-    console.log('=> TOTAL STUDENT SCORE:', totalScore, '/', totalPoints);
-    var csv = [ student.key, totalScore ];
+    console.log('=> TOTAL STUDENT SCORE:', renderedScore, '/', totalPoints);
+    var csv = [ student.key, renderedScore ];
     fs.appendFileSync(SCORES_FILE, csv.toString() + '\n');
-    fs.appendFile(SCORES_DETAIL_FILE, csv.concat(scoreArray).toString() + '\n', function() {
+    fs.appendFile(SCORES_DETAIL_FILE, csv.concat(scoreArray.map(renderScore)).toString() + '\n', function() {
       next(null, {
         studentKey: student.key,
         studentTotalScore: totalScore,
