@@ -50,6 +50,7 @@ var submissions = Object.keys(submissionSet).map(function(key){
 
 async.mapSeries(submissions, evaluateStudent, function(err, res) {
   if (err) throw err;
+  var flatScores = res.map(student => student.studentTotalScore);
   // for each student, enumerate total score followed by number of points for each question
   var studentScores = res.map(student => [ student.studentTotalScore ].concat(student.studentScoreArray));
   // rotate this score matrix to get scores per student per question, cf https://stackoverflow.com/a/17428705/592254
