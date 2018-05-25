@@ -19,6 +19,9 @@ do
   ./src/split-eval-log-per-student.sh $EVAL_PATH/eval.log >/dev/null
   mv Eval_*.txt $EVAL_PATH/
   mv exam-data/score*.* $EVAL_PATH/
+
+  # pad each csv column with spaces, for better lisibility
+  column -t -s "," $EVAL_PATH/scores-detail.csv > $EVAL_PATH/scores-detail.txt
 done;
 
 echo "✅  Done!"
