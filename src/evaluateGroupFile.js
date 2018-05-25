@@ -19,6 +19,8 @@ function appendScoreValues(array) {
   fs.appendFileSync(SCORES_DETAIL_FILE, array.toString() + '\n');
 }
 
+var renderScore = evaluateStudent.renderScore;
+var nbQuestions = evaluateStudent.exercises.reduce((nb, ex) => nb + ex.questionLines.length, 0);
 var questionIds = evaluateStudent.exercises.reduce(
   (ids, ex) => ids.concat(ex.questionLines.map(
     (_, q) => ex._type + (ids.length + q)
@@ -48,14 +50,17 @@ var submissions = Object.keys(submissionSet).map(function(key){
 
 async.mapSeries(submissions, evaluateStudent, function(err, res) {
   if (err) throw err;
-  // list students' total scores
-  var flatScores = res.map(function(student) {
-    return student.studentTotalScore;
-  });
-  // compute average and median
+  // for each student, enumerate total score followed by number of points for each question
+  var studentScores = res.map(student => [ student.studentTotalScore ].concat(student.studentScoreArray));
+  // rotate this score matrix to get scores per student per question, cf https://stackoverflow.com/a/17428705/592254
+  var scoresPerQ = studentScores[0].map((col, i) => studentScores.map(row => row[i]));
+  // compute statistics
   [
-    [ '(AVERAGE)', flatScores.reduce(sum) / res.length ],
-    [ '(MEDIAN)', median(flatScores) ]
+    [], // (empty) line separator
+    [ '(MIN)' ].concat(scoresPerQ.map(scores => renderScore(Math.min.apply(null, scores)))),
+    [ '(AVERAGE)' ].concat(scoresPerQ.map(scores => renderScore(scores.reduce(sum) / scores.length))),
+    [ '(MEDIAN)' ].concat(scoresPerQ.map(scores => renderScore(median(scores)))),
+    [ '(MAX)' ].concat(scoresPerQ.map(scores => renderScore(Math.max.apply(null, scores)))),
   ].map(appendScoreValues);
   // generate grade/score distribution chart
   fs.appendFileSync(SCORES_CHART_FILE, renderDistributionChart({ flatScores }));

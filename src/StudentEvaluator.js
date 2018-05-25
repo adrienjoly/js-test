@@ -100,6 +100,7 @@ function evaluateStudent(student, next) {
     fs.appendFile(SCORES_DETAIL_FILE, csv.concat(scoreArray.map(renderScore)).toString() + '\n', function() {
       next(null, {
         studentKey: student.key,
+        studentScoreArray: scoreArray,
         studentTotalScore: totalScore,
         totalPoints: totalPoints
       });
@@ -122,4 +123,5 @@ function evaluateStudent(student, next) {
 
 module.exports = evaluateStudent;
 module.exports.getVariantByStudentId = CodeEvaluator.getVariantByStudentId;
+module.exports.renderScore = renderScore;
 module.exports.exercises = exercises;
