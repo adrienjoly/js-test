@@ -51,7 +51,11 @@ var converters = {
     return function (studentAnswers, callback) {
       console.log('\n  -  code evaluation:');
       setConsolePrefix('  | ');
-      evaluator.evaluateAnswers(studentAnswers, function(err, res) {
+      var evalParams = {
+        renderedQuestions: rendered.questions,
+        answers: studentAnswers
+      };
+      evaluator.evaluateAnswersEx(evalParams, function(err, res) {
         setConsolePrefix();
         console.log('\n  => code score:', res.score, '/', res.length, 'pts');
         callback(err, res);
@@ -66,9 +70,26 @@ var converters = {
       console.log('\n  -  quizz answers:');
       setConsolePrefix('  | ');
       var res = evaluator.evaluateAnswers(studentAnswers);
-      res.log.map(function(q){
-        console.log(q.questionId, ':', q.answer, '(solution: ' + q.solution + ') =>', q.points, 'pts');
+
+      var summary = res.log.map(function(q){
+        // display questions and choices
+        var question = rendered.questions.find(qu => qu.id === q.questionId);
+        console.log([
+          '\n------------- EXERCISE: ' + q.questionId + ' -------------',
+          question.md.replace(/<!--(.*?)-->/g, '').trim(),
+          question.choices.map(choice => {
+            var icon = choice.name == q.solution
+              ? (q.answer == q.solution ? '✅' : '👉')
+              : (q.answer == choice.name ? '❌' : '- ');
+            return icon + ' ' + choice.text;
+          }).join('\n'),
+        ].join('\n\n'));
+        // return line of summary for this question
+        return [ q.questionId, ':', q.answer, '(solution: ' + q.solution + ') =>', q.points, 'pts' ].join(' ');
       });
+
+      console.log('\n------------- SUMMARY -------------\n');
+      console.log(summary.join('\n'));
       setConsolePrefix();
       console.log('\n  => quizz score:', res.score, '/', res.length, 'pts');
       callback(null, res);

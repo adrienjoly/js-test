@@ -7,7 +7,7 @@ function getVariantByStudentId (id, variants) {
       var partLength = 10;
       while (divident.length > partLength) {
           var part = divident.substring(0, partLength);
-          divident = (part % divisor) +  divident.substring(partLength);          
+          divident = (part % divisor) +  divident.substring(partLength);
       }
       return divident % divisor;
   };
@@ -133,12 +133,28 @@ function makeCodeEvaluator(jailed, async, codeGradingOptions) {
     return this.tests.length * COEF;
   };
 
-  CodeEvaluator.prototype.evaluateAnswers = function(answers, callback) {
+  CodeEvaluator.prototype.evaluateAnswersEx = function(params, callback) {
     var _this = this;
+    params = params || {};
+    var answers = params.answers;
+    var renderedQuestions = params.renderedQuestions;
     function runExEval(exEval, callback) {
       var variantNumber = getVariantByStudentId(answers._uid, exEval.variants);
       var evalTest = exEval.testVariants[variantNumber];
       console.log('\n------------- EXERCISE:', exEval.id, '(variant:', variantNumber + ') -------------\n');
+
+      if (renderedQuestions) {
+        var question = renderedQuestions
+          .find(q => q.id === exEval.id)
+          .mdVariants[variantNumber]
+          .replace(/<!--(.*?)-->/g, '')
+          .trim();
+        console.log([
+          '// QUESTION:',
+          question,
+        ].join('\n\n') + '\n');
+      }
+
       runTest(evalTest, answers[exEval.id], function(err, scoreArray) {
         var pts = (scoreArray.reduce(sum) / scoreArray.length)
         console.log('\n// -> EXERCISE POINTS:', pts * COEF + ' / ' + COEF);
@@ -155,6 +171,10 @@ function makeCodeEvaluator(jailed, async, codeGradingOptions) {
         scoreArray: ptsPerExercise,
       });
     });
+  };
+
+  CodeEvaluator.prototype.evaluateAnswers = function(answers, callback) {
+    return this.evaluateAnswersEx({ answers: answers }, callback);
   };
 
   return CodeEvaluator;
