@@ -7,7 +7,7 @@ function readfile(filePath) {
 module.exports = {
 
   // Front-end config
-  title: 'JavaScript Exam',
+  title: 'Partiel Node.js',
 
   // General settings
   PUBLIC_TEST_MODE: true, // set to false to restrict acccess and identify students using Google Login
@@ -39,7 +39,7 @@ module.exports = {
     */
   },
 
-  teacherEmail: 'teacher.email@domain.com', // required for dashboard auth
+  teacherEmail: 'adrien.joly@eemi.com', // required for dashboard auth
   
   // Authentication
   GOOGLE_CLIENT_ID: '7465834756-rkjgelkhjlerkgjlerkgjelrkg.apps.googleusercontent.com', // generated from https://console.developers.google.com/apis/credentials?project=eemi-own-exam&authuser=1
@@ -53,7 +53,7 @@ module.exports = {
     ptsNull: 0,
   },
   codeGrading: {
-    ptsPerExercise: 1,
+    ptsPerExercise: 5,
   }
 
 };
