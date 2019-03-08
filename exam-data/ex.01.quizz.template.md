@@ -1,30 +1,44 @@
-# Quizz questions
+# QCM (1 point par bonne réponse)
 
-```html
-<p>you can include code</p>
-```
+J'ai créé une API avec Node.js et l'ai mise en production sur Heroku. Où s'exécute le code permettant de répondre aux requêtes reçues par cette API ?
 
-- choice 1
-- choice 2
-* choice 3 (star indicates that it's the right answer)
-- choice 4
-
-???
-
-Optional explanation that appears after submission of the student's answers.
-(can include line breaks and code sections)
+- Dans le navigateur
+- Dans la commande curl
+* Sur un des serveurs de Heroku
+- Sur GitLab
 
 ---
 
-* right choice
-- choice 2
-- choice 3
-- choice 4
+Je viens de "cloner" un projet Node.js depuis GitHub. Comment installer les dépendances de ce projet ?
 
-???
+- npm start
+* npm install
+- npm init
+- npm install express --save
 
-Choices 2, 3 and 4 are wrong!
+---
 
-```js
-alert('You can also include code here!');
-```
+Laquelle de ces phrases est CORRECTE ?
+
+- MongoDB est une base de données SQL constituée de collections et de documents
+- MongoDB est une base de données SQL constituée de tables et de lignes
+* MongoDB est une base de données NoSQL constituée de collections et de documents
+- MongoDB est une base de données NoSQL constituée de tables et de lignes
+
+---
+
+À quoi sert Express.js ?
+
+* à faciliter la création d'un serveur HTTP
+- à accelérer la vitesse de traitement des requêtes HTTP
+- à gérer des requêtes asynchrones comme si elles étaient synchrones
+- à mettre une API en production
+
+---
+
+Laquelle de ces phrases est INCORRECTE ?
+
+- await permet d'attendre qu'une Promise soit résolue
+- await ne peut être utilisé que depuis une fonction async
+* await permet d'exécuter une fonction synchrone comme si elle était asynchrone
+- sans await, deux fonctions asynchrones peuvent être exécutées en parallèle

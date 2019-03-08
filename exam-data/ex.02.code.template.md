@@ -1,23 +1,28 @@
-# Coding exercices
+# Exercices de code (5 points par exercice)
 
-Question text (can include line breaks and code sections)
-with variant placeholders. (optional, see source template)
+Ré-écrire ce code de manière à ce qu'il utilise `async` et `await`, au lieu de `then()` et `catch()`. Les erreurs doivent être correctement interceptées.
 
-In this session, `sample_variant`'s value is `{{sample_variant}}`.
+```js
+const MongoClient = require('mongodb').MongoClient;
+MongoClient.connect('{{{url}}}')
+  .then(function (db) {
+    return db.collection('dates').find().toArray();
+  })
+  .then(function (dates) {
+    console.log('dates:', dates);
+  })
+  .catch(function (err) {
+    console.error('erreur:', err)
+  });
+```
 
-- { "sample_variant": "this is variant 1" }
-- { "sample_variant": "this is variant 2" }
-
-Sample exercise: display the value of `sample_variant` in a call to `alert()`.
+- { "url": "mongodb://localhost:27017/test" }
 
 ???
 
-Optional explanation that appears after submission of the student's answers.
-(can include line breaks and code sections)
-
 ```js
 // expected solution
-alert('{{sample_variant}}');
+alert('{{{url}}}');
 ```
 
 --
@@ -45,19 +50,60 @@ alert('{{sample_variant}}');
 
 ---
 
-Next exercise... Type whatever you want.
+Le fichier `index.js` contient le code suivant:
+
+```js
+const express = require('express');
+const app = express();
+
+app.listen(process.env.PORT || 3000);
+```
+
+Quelles lignes de code faut-il ajouter à ce fichier pour que `curl http://localhost:3000/bonjour` affiche "Hello", une fois qu'on aura exécuté ce programme avec `node index.js` ?
 
 ???
 
 ```js
-// please enter an expected solution in JavaScript
+// TODO: expected solution
 ```
 
 --
 
 ```js
-(function evaluateStudentCode(){
-  // please write student evaluation code
-  application.remote._send(null, [ 1 ]); // 1 / 1 points
-})();
+// TODO: automatic student evaluation code
+```
+
+---
+
+L'objectif est d'écrire un programme Node.js permettant d'afficher dans la sortie standard (c.a.d. en utilisant `console.log()`) l'adresse email de trois personnes dont les données seront à récupérer en JSON depuis les URLs suivantes:
+
+ - https://js-jsonplaceholder.herokuapp.com/users/1
+ - https://js-jsonplaceholder.herokuapp.com/users/2
+ - https://js-jsonplaceholder.herokuapp.com/users/3
+
+Seules les adresses email doivent être affichées. Et l'affichage de ces adresses doit respecter l'ordre des URLs fournies ci-dessus. C'est à dire que l'adresse email de la personne `1` doit être affichée en premier, et ainsi de suite.
+
+Votre programme devra utiliser le module `node-fetch` pour effectuer les requêtes. Voici le contenu actuel du programme:
+
+```js
+const fetch = require('node-fetch');
+const urlsToFetch = [
+ 'https://js-jsonplaceholder.herokuapp.com/users/1',
+ 'https://js-jsonplaceholder.herokuapp.com/users/2',
+ 'https://js-jsonplaceholder.herokuapp.com/users/3'
+];
+```
+
+Quelles lignes de code faut-il ajouter pour que ce programme affiche l'adresse email de ces utilisateurs, quand on l'exécutera avec `node`.
+
+???
+
+```js
+// TODO: expected solution
+```
+
+--
+
+```js
+// TODO: automatic student evaluation code
 ```
