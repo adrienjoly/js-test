@@ -31,6 +31,7 @@ module.exports = {
     */
     FIREBASE_CONFIG: {
       apiKey: "AIzaSyDkiphR3IUCQ4CcjUgW6-q9ryYc9MxwVs0",
+      authDomain: "js-ps2.firebaseapp.com",
       databaseURL: "https://js-ps2.firebaseio.com",
       projectId: "js-ps2",
       messagingSenderId: "18232771090"
