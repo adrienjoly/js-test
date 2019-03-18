@@ -30,11 +30,11 @@ module.exports = {
     },
     */
     FIREBASE_CONFIG: {
-      apiKey: "AIzaSyCTaK1RKtQeCstJj7Y0UlFsL16kOCBtl_4",
-      databaseURL: "https://eemi-own-exam.firebaseio.com",
-      projectId: "eemi-own-exam",
-      messagingSenderId: "247219641427"
-      // => back-office: https://console.firebase.google.com/project/jsexam-jhgkejr/database/data
+      apiKey: "AIzaSyDkiphR3IUCQ4CcjUgW6-q9ryYc9MxwVs0",
+      databaseURL: "https://js-ps2.firebaseio.com",
+      projectId: "js-ps2",
+      messagingSenderId: "18232771090"
+      // => back-office: https://console.firebase.google.com/project/js-ps2/database/data
     },
   },
 
