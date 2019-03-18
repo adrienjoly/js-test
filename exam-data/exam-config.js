@@ -42,8 +42,8 @@ module.exports = {
   teacherEmail: 'adrien.joly@eemi.com', // required for dashboard auth
   
   // Authentication
-  GOOGLE_CLIENT_ID: '7465834756-rkjgelkhjlerkgjlerkgjelrkg.apps.googleusercontent.com', // generated from https://console.developers.google.com/apis/credentials?project=eemi-own-exam&authuser=1
-  GOOGLE_CLIENT_DOMAIN: 'domain.com', // to restrict access to users from a certain domain only
+  GOOGLE_CLIENT_ID: '247219641427-ifeq88p7rgor9al5ksduds7ug0ba7djr.apps.googleusercontent.com', // generated from https://console.developers.google.com/apis/credentials?project=eemi-own-exam&authuser=1
+  GOOGLE_CLIENT_DOMAIN: 'eemi.com', // to restrict access to users from a certain domain only
   LOGIN_INVITE: 'Connectez-vous à l\'aide de votre compte Google de l\'EEMI:',
   
   // Evaluation / grading
