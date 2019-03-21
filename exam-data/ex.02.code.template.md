@@ -168,7 +168,7 @@ Respecter les chaines de caractères fournies à la lettre.
       return instance;
     };
     const {{app}} = express();
-    const require = () => express
+    const require = () => express;
     try {
       eval(`_studentCode`); // run student's code
       await new Promise(resolve => setTimeout(resolve, 100));
@@ -227,18 +227,12 @@ Respecter les chaines de caractères fournies à la lettre.
 
 ---
 
-L'objectif est d'écrire un programme Node.js permettant d'afficher dans la sortie standard (c.a.d. en utilisant `console.log()`) l'adresse email de trois personnes dont les données seront à récupérer en JSON depuis les URLs suivantes:
+L'objectif est d'afficher dans la sortie standard (c.a.d. en utilisant `console.log()`) l'adresse email de plusieurs personnes dont les données seront à récupérer en JSON, depuis des URLs listées dans un tableau JavaScript.
 
- - https://js-jsonplaceholder.herokuapp.com/users/1
- - https://js-jsonplaceholder.herokuapp.com/users/2
- - https://js-jsonplaceholder.herokuapp.com/users/3
-
-Seules les adresses email doivent être affichées. Et l'affichage de ces adresses doit respecter l'ordre des URLs fournies ci-dessus. C'est à dire que l'adresse email de la personne `1` doit être affichée en premier, et ainsi de suite.
-
-Votre programme devra utiliser le module `node-fetch` pour effectuer les requêtes. Voici le contenu actuel du programme:
+Pour cela, nous allons compléter le programme Node.js suivant:
 
 ```js
-const fetch = require('node-fetch');
+const https = require('https');
 const urlsToFetch = [
  'https://js-jsonplaceholder.herokuapp.com/users/1',
  'https://js-jsonplaceholder.herokuapp.com/users/2',
@@ -246,16 +240,113 @@ const urlsToFetch = [
 ];
 ```
 
-Quelles lignes de code faut-il ajouter pour que ce programme affiche l'adresse email de ces utilisateurs, quand on l'exécutera avec `node`.
+Consignes à respecter:
+
+ - Seules les adresses email doivent être affichées.
+ - L'affichage de ces adresses doit respecter l'ordre des URLs dans le tableau `urlsToFetch`.
+ - Votre programme devra utiliser le module `https` fourni par Node.js pour effectuer les requêtes. Aucune autre dépendance ne pourra être utilisée.
+ - En cas d'erreur lors d'une requête, afficher `oops!` au lieu de l'adresse email dont la récupération a échoué.
+ - Enfin, le nombre d'adresses fournies dans `urlsToFetch` peut varier entre 0 et 10000.
+
+Fournir les lignes de code à ajouter pour que ce programme affiche l'adresse email de ces utilisateurs, quand on l'exécutera avec `node`.
 
 ???
 
 ```js
-// TODO: expected solution
+// expected solution
+const fetch = (url) => new Promise((resolve, reject) => {
+  https.get(url, (resp) => {
+    let data = '';
+    resp.on('data', (chunk) => { data += chunk; });
+    resp.on('end', () => resolve(data));
+  }).on('error', reject);
+});
+const fetchAndRender = (url) => new Promise((resolve) => {
+  fetch(url)
+    .then(data => resolve(JSON.parse(data).email))
+    .catch(err => resolve('oops!'));
+});
+(async() => {
+  for (const url in urlsToFetch) {
+    console.log(await fetchAndRender(url));
+  }
+})();
 ```
 
 --
 
 ```js
-// TODO: automatic student evaluation code
+// automatic student evaluation code
+(async function evaluateStudentCode(){
+  async function runStudentCode(urlsToFetch) {
+    let error = undefined;
+    let lastLogParams = [];
+    const console = {
+      log: (message, param) => lastLogParams = [message, param],
+      error: () => {},
+    };
+    const respEvtHandlers = {};
+    const retEvtHandlers = {};
+    const https = {
+      get: (url, callback) => {
+        const resp = {
+          on: (evtName, handler) => {
+            respEvtHandlers[evtName] = handler;
+          },
+        };
+        setTimeout(async () => {
+          const dataParts = '{ "email": "test@test.com" }'.split(' ');
+          for (var dataPart in dataParts) {
+            await respEvtHandlers.data(dataPart);
+          }
+          respEvtHandlers.end();
+          // TODO: also implement error case
+        }, 10);
+        callback(resp);
+        return {
+          on: (evtName, handler) => {
+            retEvtHandlers[evtName] = handler;
+          },
+        };
+      },
+    };
+    const require = () => https;
+    try {
+      eval(`_studentCode`); // run student's code
+      await new Promise(resolve => setTimeout(resolve, 100));
+    } catch(e) {
+      error = e;
+    }
+    return { error, lastLogParams, respEvtHandlers, retEvtHandlers };
+  }
+  const urlsToFetch = []; // TODO: populate
+  const expectedEmails = []; // TODO: populate
+  const { error, lastLogParams, respEvtHandlers, retEvtHandlers } = await runStudentCode(urlsToFetch);
+  function res(pts, msg) {
+    application.remote._log((pts ? ' ✅ ' : ' ❌ ') + msg);
+    return pts; 
+  }
+  const scoreArray = [
+    !error
+      ? res(1, 'exécution du code sans erreur')
+      : res(0, `erreur survenue en exécutant le code: ${error}`),
+    typeof respEvtHandlers.data === 'function'
+      ? res(1, 'fonction rattachée à l\'évènement "data"')
+      : res(0, 'fonction rattachée à l\'évènement "data"'),
+    typeof respEvtHandlers.end === 'function'
+      ? res(1, 'fonction rattachée à l\'évènement "end"')
+      : res(0, 'fonction rattachée à l\'évènement "end"'),
+    typeof retEvtHandlers.end === 'function'
+      ? res(1, 'fonction rattachée à l\'évènement "error"')
+      : res(0, 'fonction rattachée à l\'évènement "error"'),
+    (new Set(lastLogParams)).toString() === (new Set(expectedEmails)).toString()
+      ? res(1, 'cas nominal: toutes adresses email affichées')
+      : res(0, 'cas nominal: toutes adresses email affichées'),
+    lastLogParams.toString() === expectedEmails.toString()
+      ? res(1, 'cas nominal: adresses email affichées dans l\'ordre')
+      : res(0, 'cas nominal: adresses email affichées dans l\'ordre'),
+      // TODO: simuler désordre dans les réponses de requêtes
+  ];
+  application.remote._send(null, scoreArray);
+})();
 ```
