@@ -43,22 +43,22 @@ const MongoClient = require('mongodb').MongoClient;
   const EXPECTED_ERROR = new Error('unable to connect');
   const makeMongoClient = ({ shouldFail }) => {
     const client = {
-    connect: async (url) => {
-      if (shouldFail) throw EXPECTED_ERROR;
+      connect: async (url) => {
+        if (shouldFail) throw EXPECTED_ERROR;
         if (url === '{{{url}}}') return Promise.resolve(client);
-      else throw new Error(`unexpected connection url: ${url}`);
-    },
-    db: (name) => {
+        else throw new Error(`unexpected connection url: ${url}`);
+      },
+      db: (name) => {
         if (name === 'test') return client;
-      else throw new Error(`unexpected db name: ${name}`);
-    },
-    collection: (name) => {
+        else throw new Error(`unexpected db name: ${name}`);
+      },
+      collection: (name) => {
         if (name === 'dates') return client;
-      else throw new Error(`unexpected coll name: ${name}`);
-    },
-    find: () => ({
-      toArray: async () => EXPECTED_ARRAY
-    })
+        else throw new Error(`unexpected coll name: ${name}`);
+      },
+      find: () => ({
+        toArray: async () => EXPECTED_ARRAY
+      })
     };
     return client;
   };
