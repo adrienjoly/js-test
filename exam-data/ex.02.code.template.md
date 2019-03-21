@@ -115,23 +115,114 @@ Le fichier `index.js` contient le code suivant:
 
 ```js
 const express = require('express');
-const app = express();
-
-app.listen(process.env.PORT || 3000);
+const {{app}} = express();
 ```
 
-Quelles lignes de code faut-il ajouter à ce fichier pour que `curl http://localhost:3000/bonjour` affiche "Hello", une fois qu'on aura exécuté ce programme avec `node index.js` ?
+Quelles lignes de code faut-il ajouter à ce fichier pour que:
+
+ - `curl http://localhost:3000/bonjour?prenom=Michelle` réponde "Hello Michelle" (au format texte brut),
+ - `curl http://localhost:3000/bonjour` réponde "Prénom manquant" (toujours au format texte brut) avec un code `400` de status HTTP,
+
+... une fois qu'on aura exécuté ce programme avec `node index.js` ?
+
+Respecter les chaines de caractères fournies à la lettre.
+
+- { "app": "app" }
 
 ???
 
 ```js
-// TODO: expected solution
+// expected solution
+{{app}}.get('/bonjour', (req, res) => {
+  const { prenom } = req.query;
+  res
+    .status(prenom ? 200 : 400)
+    .send(prenom ? 'Hello ' + prenom : 'Prénom manquant');
+});
+{{app}}.listen(3000);
 ```
 
 --
 
 ```js
-// TODO: automatic student evaluation code
+// automatic student evaluation code
+(async function evaluateStudentCode(){
+  async function runInContext() {
+    let error = undefined;
+    const pathHandlers = {};
+    const listenedPorts = [];
+    const console = {
+      log: () => {},
+      error: () => {},
+    };
+    const express = () => {
+      const instance = {
+        get: (path, handler) => {
+          pathHandlers[path] = handler;
+          return instance;
+        },
+        listen: (port) => {
+          listenedPorts.push(port);
+        },
+      };
+      return instance;
+    };
+    const {{app}} = express();
+    const require = () => express
+    try {
+      eval(`_studentCode`); // run student's code
+      await new Promise(resolve => setTimeout(resolve, 100));
+    } catch(e) {
+      error = e;
+    }
+    return { error, pathHandlers, listenedPorts };
+  }
+  const { error, pathHandlers, listenedPorts } = await runInContext();
+  const pathHandler = pathHandlers['/bonjour'] || (() => {});
+  const callHandler = (queryParams) => new Promise((resolve) => {
+    let statusCode;
+    const timeout = setTimeout(() => resolve({ timeout: true }), 100);
+    const req = {
+      query: queryParams
+    };
+    const res = {
+      status: (code) => {
+        statusCode = code;
+        return res;
+      },
+      send: (text) => {
+        clearTimeout(timeout);
+        resolve({ text, statusCode });
+      }
+    };
+    pathHandler(req, res);
+  });
+  function res(pts, msg) {
+    application.remote._log((pts ? ' ✅ ' : ' ❌ ') + msg);
+    return pts; 
+  }
+  const scoreArray = [
+    !error
+      ? res(1, 'exécution du code sans erreur')
+      : res(0, `erreur survenue en exécutant le code: ${error}`),
+    listenedPorts.includes(3000)
+      ? res(1, 'écoute sur port 3000 avec {{app}}.listen()')
+      : res(0, 'écoute sur port 3000 avec {{app}}.listen()'),
+    typeof pathHandler === 'function'
+      ? res(1, 'définition de route GET /bonjour avec {{app}}.get()')
+      : res(0, 'définition de route GET /bonjour avec {{app}}.get()'),
+    (await callHandler({ prenom: '_étienne_' })).text === 'Hello _étienne_'
+      ? res(1, 'cas nominal: GET /bonjour retourne le prénom')
+      : res(0, 'cas nominal: GET /bonjour retourne le prénom'),
+    (await callHandler({})).text === 'Prénom manquant'
+      ? res(1, 'cas d\'erreur: retour de GET /bonjour sans prénom')
+      : res(0, 'cas d\'erreur: retour de GET /bonjour sans prénom'),
+    (await callHandler({})).statusCode === 400
+      ? res(1, 'cas d\'erreur: code 400 de GET /bonjour sans prénom')
+      : res(0, 'cas d\'erreur: code 400 de GET /bonjour sans prénom'),
+  ];
+  application.remote._send(null, scoreArray);
+})();
 ```
 
 ---
