@@ -41,24 +41,27 @@ const MongoClient = require('mongodb').MongoClient;
 (async function evaluateStudentCode(){
   const EXPECTED_ARRAY = [ '__ expected result __' ];
   const EXPECTED_ERROR = new Error('unable to connect');
-  const makeMongoClient = ({ shouldFail }) => ({
+  const makeMongoClient = ({ shouldFail }) => {
+    const client = {
     connect: async (url) => {
       if (shouldFail) throw EXPECTED_ERROR;
-      if (url === '{{{url}}}') return Promise.resolve(MongoClient);
+        if (url === '{{{url}}}') return Promise.resolve(client);
       else throw new Error(`unexpected connection url: ${url}`);
     },
     db: (name) => {
-      if (name === 'test') return MongoClient;
+        if (name === 'test') return client;
       else throw new Error(`unexpected db name: ${name}`);
     },
     collection: (name) => {
-      if (name === 'dates') return MongoClient;
+        if (name === 'dates') return client;
       else throw new Error(`unexpected coll name: ${name}`);
     },
     find: () => ({
       toArray: async () => EXPECTED_ARRAY
     })
-  });
+    };
+    return client;
+  };
   async function runInContext({ shouldFail }) {
     let error = undefined;
     let lastLogParams = [];
@@ -70,29 +73,36 @@ const MongoClient = require('mongodb').MongoClient;
     const MongoClient = makeMongoClient({ shouldFail });
     const require = () => ({ MongoClient });
     try {
-      eval(/*'function alert(msg) { points = 1; };' // fake alert() function that gives 1 point when called
-          +*/ `_studentCode`); // run student's code
-      await new Promise(resolve => setTimeout(resolve, 500));
+      eval(`_studentCode`); // run student's code
+      await new Promise(resolve => setTimeout(resolve, 100));
     } catch(e) {
       error = e;
-      application.remote._log(`error: ${e}`);
     }
     return { error, lastLogParams, lastErrParams };
   }
   const successfulExec = await runInContext({ shouldFail: false });
   const impossibleExec = await runInContext({ shouldFail: true });
   const normalisedCode = `_studentCode`.replace(/[ \n]/g, '');
+  function res(pts, msg) {
+    application.remote._log((pts ? ' ✅ ' : ' ❌ ') + msg);
+    return pts; 
+  }
   const scoreArray = [
-    // 1. il n'y a pas de .then() ni de .catch() dans le code
-    !normalisedCode.includes('.then()') && !normalisedCode.includes('.catch()'),
-    // 2. le code contient async et await
-    normalisedCode.includes('async') && normalisedCode.includes('await'),
-    // 3. le code peut s'excuter sans erreur
-    !!successfulExec.error,
-    // 4. les dates sont récupérées depuis la db
-    successfulExec.lastLogParams[1] == EXPECTED_ARRAY,
-    // 5. l'erreur est récupérée si db innacessible (cas d'erreur)
-    impossibleExec.lastErrParams[1] == EXPECTED_ERROR,
+    !normalisedCode.includes('.then(') && !normalisedCode.includes('.catch(')
+      ? res(1, 'ne pas utiliser then() et catch()')
+      : res(0, 'ne pas utiliser then() et catch()'),
+    normalisedCode.includes('async') && normalisedCode.includes('await')
+      ? res(1, 'utiliser async et await')
+      : res(0, 'utiliser async et await'),
+    !successfulExec.error
+      ? res(1, 'exécution du code sans erreur')
+      : res(0, `erreur survenue en exécutant le code: ${successfulExec.error}`),
+    successfulExec.lastLogParams[1] == EXPECTED_ARRAY
+      ? res(1, 'cas nominal: tableau de dates récupéré et affiché dans la console')
+      : res(0, `cas nominal: affiché dans la console au lieu des dates: ${successfulExec.lastLogParams[1]}`),
+    impossibleExec.lastErrParams[1] == EXPECTED_ERROR
+      ? res(1, 'cas d\'erreur: message bien affiché dans la console')
+      : res(0, `cas d\'erreur: message affiché dans la console: ${successfulExec.lastErrParams[1]}`),
   ];
   application.remote._send(null, scoreArray);
 })();
