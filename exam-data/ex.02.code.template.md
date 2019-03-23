@@ -298,6 +298,7 @@ const fetchAndRender = (url) => new Promise((resolve) => {
     };
     const respEvtHandlers = {};
     const retEvtHandlers = {};
+    let reqDelay = 30; // will decrease for each request, to simulate random network latency
     const https = {
       get: (url, callback) => {
         const resp = {
@@ -313,7 +314,8 @@ const fetchAndRender = (url) => new Promise((resolve) => {
           }
           respEvtHandlers.end();
           // TODO: also implement error case
-        }, 10);
+        }, reqDelay);
+        reqDelay = reqDelay / 2; // next request will respond twice faster
         callback(resp);
         return {
           on: (evtName, handler) => {
@@ -355,7 +357,6 @@ const fetchAndRender = (url) => new Promise((resolve) => {
     logs.toString() === expectedEmails.toString()
       ? res(1, 'cas nominal: adresses email affichées dans l\'ordre')
       : res(0, 'cas nominal: adresses email affichées dans l\'ordre'),
-      // TODO: simuler désordre dans les réponses de requêtes
   ];
   application.remote._send(null, scoreArray);
 })();
