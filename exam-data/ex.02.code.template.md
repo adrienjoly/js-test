@@ -234,9 +234,9 @@ Pour cela, nous allons compléter le programme Node.js suivant:
 ```js
 const https = require('https');
 const urlsToFetch = [
- 'https://js-jsonplaceholder.herokuapp.com/users/1',
- 'https://js-jsonplaceholder.herokuapp.com/users/2',
- 'https://js-jsonplaceholder.herokuapp.com/users/3'
+ '{{url1}}',
+ '{{url2}}',
+ '{{url3}}'
 ];
 ```
 
@@ -249,6 +249,8 @@ Consignes à respecter:
  - Enfin, le nombre d'adresses fournies dans `urlsToFetch` peut varier entre 0 et 10000.
 
 Fournir les lignes de code à ajouter pour que ce programme affiche l'adresse email de ces utilisateurs, quand on l'exécutera avec `node`.
+
+- { "url1": "https://js-jsonplaceholder.herokuapp.com/users/1", "url2": "https://js-jsonplaceholder.herokuapp.com/users/2", "url3": "https://js-jsonplaceholder.herokuapp.com/users/3", "email1": "Sincere@april.biz", "email2": "Shanna@melissa.tv", "email3": "Nathan@yesenia.net" }
 
 ???
 
@@ -267,8 +269,8 @@ const fetchAndRender = (url) => new Promise((resolve) => {
     .catch(err => resolve('oops!'));
 });
 (async() => {
-  for (const url in urlsToFetch) {
-    console.log(await fetchAndRender(url));
+  for (const i in urlsToFetch) {
+    console.log(await fetchAndRender(urlsToFetch[i]));
   }
 })();
 ```
@@ -278,11 +280,21 @@ const fetchAndRender = (url) => new Promise((resolve) => {
 ```js
 // automatic student evaluation code
 (async function evaluateStudentCode(){
+  const urlsToFetch = [
+    '{{url1}}',
+    '{{url2}}',
+    '{{url3}}',
+  ];
+  const expectedEmails = [
+    '{{email1}}',
+    '{{email2}}',
+    '{{email3}}',
+  ];
   async function runStudentCode(urlsToFetch) {
     let error = undefined;
-    let lastLogParams = [];
+    let logs = [];
     const console = {
-      log: (message, param) => lastLogParams = [message, param],
+      log: (email) => logs.push(email),
       error: () => {},
     };
     const respEvtHandlers = {};
@@ -295,9 +307,10 @@ const fetchAndRender = (url) => new Promise((resolve) => {
           },
         };
         setTimeout(async () => {
-          const dataParts = '{ "email": "test@test.com" }'.split(' ');
-          for (var dataPart in dataParts) {
-            await respEvtHandlers.data(dataPart);
+          const email = expectedEmails[urlsToFetch.indexOf(url)];
+          const dataParts = ['{ ', '"email": "', email, '" }'];
+          for (var i in dataParts) {
+            await respEvtHandlers.data(dataParts[i]);
           }
           respEvtHandlers.end();
           // TODO: also implement error case
@@ -317,11 +330,9 @@ const fetchAndRender = (url) => new Promise((resolve) => {
     } catch(e) {
       error = e;
     }
-    return { error, lastLogParams, respEvtHandlers, retEvtHandlers };
+    return { error, logs, respEvtHandlers, retEvtHandlers };
   }
-  const urlsToFetch = []; // TODO: populate
-  const expectedEmails = []; // TODO: populate
-  const { error, lastLogParams, respEvtHandlers, retEvtHandlers } = await runStudentCode(urlsToFetch);
+  const { error, logs, respEvtHandlers, retEvtHandlers } = await runStudentCode(urlsToFetch);
   function res(pts, msg) {
     application.remote._log((pts ? ' ✅ ' : ' ❌ ') + msg);
     return pts; 
@@ -336,13 +347,13 @@ const fetchAndRender = (url) => new Promise((resolve) => {
     typeof respEvtHandlers.end === 'function'
       ? res(1, 'fonction rattachée à l\'évènement "end"')
       : res(0, 'fonction rattachée à l\'évènement "end"'),
-    typeof retEvtHandlers.end === 'function'
+    typeof retEvtHandlers.error === 'function'
       ? res(1, 'fonction rattachée à l\'évènement "error"')
       : res(0, 'fonction rattachée à l\'évènement "error"'),
-    (new Set(lastLogParams)).toString() === (new Set(expectedEmails)).toString()
+    (new Set(logs)).toString() === (new Set(expectedEmails)).toString()
       ? res(1, 'cas nominal: toutes adresses email affichées')
       : res(0, 'cas nominal: toutes adresses email affichées'),
-    lastLogParams.toString() === expectedEmails.toString()
+    logs.toString() === expectedEmails.toString()
       ? res(1, 'cas nominal: adresses email affichées dans l\'ordre')
       : res(0, 'cas nominal: adresses email affichées dans l\'ordre'),
       // TODO: simuler désordre dans les réponses de requêtes
