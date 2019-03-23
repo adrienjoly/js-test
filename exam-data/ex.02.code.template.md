@@ -4,19 +4,22 @@ Ré-écrire ce code de manière à ce qu'il utilise `async` et `await`, au lieu 
 
 ```js
 const MongoClient = require('mongodb').MongoClient;
-MongoClient.connect('{{{url}}}')
+MongoClient.connect('mongodb://localhost:27017/{{{db}}}')
   .then(function (client) {
-    return client.db('test').collection('dates').find().toArray();
+    return client.db('{{{db}}}').collection('{{{coll}}}').find().toArray();
   })
   .then(function (dates) {
-    console.log('dates:', dates);
+    console.log('{{{coll}}}:', dates);
   })
   .catch(function (err) {
     console.error('erreur:', err);
   });
 ```
 
-- { "url": "mongodb://localhost:27017/test" }
+- { "db": "myapp", "coll": "dates" }
+- { "db": "test", "coll": "cats" }
+- { "db": "db", "coll": "chats" }
+- { "db": "cats", "coll": "types" }
 
 ???
 
@@ -25,9 +28,9 @@ MongoClient.connect('{{{url}}}')
 const MongoClient = require('mongodb').MongoClient;
 (async () => {
   try {
-    const client = await MongoClient.connect('{{{url}}}');
-    const dates = await client.db('test').collection('dates').find().toArray();
-    console.log('dates:', dates);
+    const client = await MongoClient.connect('mongodb://localhost:27017/{{{db}}}');
+    const dates = await client.db('{{{db}}}').collection('{{{coll}}}').find().toArray();
+    console.log('{{{coll}}}:', dates);
   } catch (err) {
     console.error('erreur:', err);
   }
@@ -45,15 +48,15 @@ const MongoClient = require('mongodb').MongoClient;
     const client = {
       connect: async (url) => {
         if (shouldFail) throw EXPECTED_ERROR;
-        if (url === '{{{url}}}') return Promise.resolve(client);
+        if (url === 'mongodb://localhost:27017/{{{db}}}') return Promise.resolve(client);
         else throw new Error(`unexpected connection url: ${url}`);
       },
       db: (name) => {
-        if (name === 'test') return client;
+        if (name === '{{{db}}}') return client;
         else throw new Error(`unexpected db name: ${name}`);
       },
       collection: (name) => {
-        if (name === 'dates') return client;
+        if (name === '{{{coll}}}') return client;
         else throw new Error(`unexpected coll name: ${name}`);
       },
       find: () => ({
@@ -98,8 +101,8 @@ const MongoClient = require('mongodb').MongoClient;
       ? res(1, 'exécution du code sans erreur')
       : res(0, `erreur survenue en exécutant le code: ${successfulExec.error}`),
     successfulExec.lastLogParams[1] == EXPECTED_ARRAY
-      ? res(1, 'cas nominal: tableau de dates récupéré et affiché dans la console')
-      : res(0, `cas nominal: affiché dans la console au lieu des dates: ${successfulExec.lastLogParams[1]}`),
+      ? res(1, 'cas nominal: tableau de récupéré et affiché dans la console')
+      : res(0, `cas nominal: affiché inattendu dans la console: ${successfulExec.lastLogParams[1]}`),
     impossibleExec.lastErrParams[1] == EXPECTED_ERROR
       ? res(1, 'cas d\'erreur: message bien affiché dans la console')
       : res(0, `cas d\'erreur: message affiché dans la console: ${successfulExec.lastErrParams[1]}`),
@@ -119,20 +122,22 @@ const {{app}} = express();
 
 Quelles lignes de code faut-il ajouter à ce fichier pour que:
 
- - `curl http://localhost:3000/bonjour?prenom=Michelle` réponde "`Hello Michelle`" (au format texte brut, sans les guillemets, et le prénom devra systématiquement correspondre à celui passé en paramètre),
- - `curl http://localhost:3000/bonjour` réponde "`Prénom manquant`" (toujours au format texte brut, et sans les guillemets) avec un code `400` de status HTTP,
+ - `curl http://localhost:3000/{{{path}}}?prenom=Michelle` réponde "`Hello Michelle`" (au format texte brut, sans les guillemets, et le prénom devra systématiquement correspondre à celui passé en paramètre),
+ - `curl http://localhost:3000/{{{path}}}` réponde "`Prénom manquant`" (toujours au format texte brut, et sans les guillemets) avec un code `400` de status HTTP,
 
 ... une fois qu'on aura exécuté ce programme avec `node index.js` ?
 
 Respecter les chaines de caractères fournies à la lettre.
 
-- { "app": "app" }
+- { "app": "app", "path": "bonjour" }
+- { "app": "myApp", "path": "bonjour" }
+- { "app": "myApp", "path": "hello" }
 
 ???
 
 ```js
 // expected solution
-{{app}}.get('/bonjour', (req, res) => {
+{{app}}.get('/{{{path}}}', (req, res) => {
   const { prenom } = req.query;
   res
     .status(prenom ? 200 : 400)
@@ -177,7 +182,7 @@ Respecter les chaines de caractères fournies à la lettre.
     return { error, pathHandlers, listenedPorts };
   }
   const { error, pathHandlers, listenedPorts } = await runInContext();
-  const pathHandler = pathHandlers['/bonjour'] || (() => {});
+  const pathHandler = pathHandlers['/{{{path}}}'] || (() => {});
   const callHandler = (queryParams) => new Promise((resolve) => {
     let statusCode;
     const timeout = setTimeout(() => resolve({ timeout: true }), 100);
@@ -208,17 +213,17 @@ Respecter les chaines de caractères fournies à la lettre.
       ? res(1, 'écoute sur port 3000 avec {{app}}.listen()')
       : res(0, 'écoute sur port 3000 avec {{app}}.listen()'),
     typeof pathHandler === 'function'
-      ? res(1, 'définition de route GET /bonjour avec {{app}}.get()')
-      : res(0, 'définition de route GET /bonjour avec {{app}}.get()'),
+      ? res(1, 'définition de route GET /{{{path}}} avec {{app}}.get()')
+      : res(0, 'définition de route GET /{{{path}}} avec {{app}}.get()'),
     (await callHandler({ prenom: '_étienne_' })).text === 'Hello _étienne_'
-      ? res(1, 'cas nominal: GET /bonjour retourne le prénom')
-      : res(0, 'cas nominal: GET /bonjour retourne le prénom'),
+      ? res(1, 'cas nominal: GET /{{{path}}} retourne le prénom')
+      : res(0, 'cas nominal: GET /{{{path}}} retourne le prénom'),
     (await callHandler({})).text === 'Prénom manquant'
-      ? res(1, 'cas d\'erreur: retour de GET /bonjour sans prénom')
-      : res(0, 'cas d\'erreur: retour de GET /bonjour sans prénom'),
+      ? res(1, 'cas d\'erreur: retour de GET /{{{path}}} sans prénom')
+      : res(0, 'cas d\'erreur: retour de GET /{{{path}}} sans prénom'),
     (await callHandler({})).statusCode === 400
-      ? res(1, 'cas d\'erreur: code 400 de GET /bonjour sans prénom')
-      : res(0, 'cas d\'erreur: code 400 de GET /bonjour sans prénom'),
+      ? res(1, 'cas d\'erreur: code 400 de GET /{{{path}}} sans prénom')
+      : res(0, 'cas d\'erreur: code 400 de GET /{{{path}}} sans prénom'),
   ];
   application.remote._send(null, scoreArray);
 })();
@@ -250,6 +255,7 @@ Consignes à respecter:
 Fournir les lignes de code à ajouter au programme fourni ci-dessus de manière à ce qu'il affiche les adresses email quand on l'exécutera avec `node`.
 
 - { "url1": "https://js-jsonplaceholder.herokuapp.com/users/1", "url2": "https://js-jsonplaceholder.herokuapp.com/users/2", "url3": "https://js-jsonplaceholder.herokuapp.com/users/3", "email1": "Sincere@april.biz", "email2": "Shanna@melissa.tv", "email3": "Nathan@yesenia.net" }
+- { "url3": "https://js-jsonplaceholder.herokuapp.com/users/1", "url2": "https://js-jsonplaceholder.herokuapp.com/users/2", "url1": "https://js-jsonplaceholder.herokuapp.com/users/3", "email3": "Sincere@april.biz", "email2": "Shanna@melissa.tv", "email1": "Nathan@yesenia.net" }
 
 ???
 
@@ -390,6 +396,9 @@ Déployer en production (sur Heroku) un serveur Web en Node.js mettant à dispos
 Au lieu de fournir le code JavaScript de ce serveur, collez seulement l'URL Heroku de ce serveur dans le champ ci-dessous:
 
 - { "path": "text", "text": "test" }
+- { "path": "test", "text": "text" }
+- { "path": "test", "text": "ceci est un test" }
+- { "path": "text", "text": "ceci est un texte" }
 
 ???
 
