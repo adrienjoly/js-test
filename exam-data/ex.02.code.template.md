@@ -119,8 +119,8 @@ const {{app}} = express();
 
 Quelles lignes de code faut-il ajouter à ce fichier pour que:
 
- - `curl http://localhost:3000/bonjour?prenom=Michelle` réponde "Hello Michelle" (au format texte brut),
- - `curl http://localhost:3000/bonjour` réponde "Prénom manquant" (toujours au format texte brut) avec un code `400` de status HTTP,
+ - `curl http://localhost:3000/bonjour?prenom=Michelle` réponde "`Hello Michelle`" (au format texte brut, sans les guillemets, et le prénom devra systématiquement correspondre à celui passé en paramètre),
+ - `curl http://localhost:3000/bonjour` réponde "`Prénom manquant`" (toujours au format texte brut, et sans les guillemets) avec un code `400` de status HTTP,
 
 ... une fois qu'on aura exécuté ce programme avec `node index.js` ?
 
@@ -226,28 +226,28 @@ Respecter les chaines de caractères fournies à la lettre.
 
 ---
 
-L'objectif est d'afficher dans la sortie standard (c.a.d. en utilisant `console.log()`) l'adresse email de plusieurs personnes dont les données seront à récupérer en JSON, depuis des URLs listées dans un tableau JavaScript.
+L'objectif est d'afficher dans la sortie standard (c.a.d. en utilisant `console.log()`) l'adresse email de plusieurs personnes dont les données seront à récupérer en JSON, depuis des URLs listées dans un tableau JavaScript. L'adresse email est fournie via la propriété `email` de la réponse à ces requêtes.
 
 Pour cela, nous allons compléter le programme Node.js suivant:
 
 ```js
 const https = require('https');
 const urlsToFetch = [
- '{{url1}}',
- '{{url2}}',
- '{{url3}}'
+ '{{{url1}}}',
+ '{{{url2}}}',
+ '{{{url3}}}'
 ];
 ```
 
 Consignes à respecter:
 
- - Seules les adresses email doivent être affichées.
- - L'affichage de ces adresses doit respecter l'ordre des URLs dans le tableau `urlsToFetch`.
+ - Seules les adresses email doivent être affichées, sans préfixe et à raison d'une par ligne.
+ - L'affichage de ces adresses doit respecter l'ordre de leurs URLs respectives dans le tableau `urlsToFetch`.
  - Votre programme devra utiliser le module `https` fourni par Node.js pour effectuer les requêtes. Aucune autre dépendance ne pourra être utilisée.
- - En cas d'erreur lors d'une requête, afficher `oops!` au lieu de l'adresse email dont la récupération a échoué.
- - Enfin, le nombre d'adresses fournies dans `urlsToFetch` peut varier entre 0 et 10000.
+ - En cas d'erreur lors d'une requête, afficher "`oops!`" (sans les guillemets) au lieu de l'adresse email dont la récupération a échoué.
+ - Enfin, les URLs fournies dans `urlsToFetch`, leur ordre, ainsi que leur nombre peuvent changer. Le programme doit donc fonctionner en s'adaptant au contenu de ce tableau.
 
-Fournir les lignes de code à ajouter pour que ce programme affiche l'adresse email de ces utilisateurs, quand on l'exécutera avec `node`.
+Fournir les lignes de code à ajouter au programme fourni ci-dessus de manière à ce qu'il affiche les adresses email quand on l'exécutera avec `node`.
 
 - { "url1": "https://js-jsonplaceholder.herokuapp.com/users/1", "url2": "https://js-jsonplaceholder.herokuapp.com/users/2", "url3": "https://js-jsonplaceholder.herokuapp.com/users/3", "email1": "Sincere@april.biz", "email2": "Shanna@melissa.tv", "email3": "Nathan@yesenia.net" }
 
@@ -280,14 +280,14 @@ const fetchAndRender = (url) => new Promise((resolve) => {
 // automatic student evaluation code
 (async function evaluateStudentCode(){
   const urlsToFetch = [
-    '{{url1}}',
-    '{{url2}}',
-    '{{url3}}',
+    '{{{url1}}}',
+    '{{{url2}}}',
+    '{{{url3}}}',
   ];
   const expectedEmails = [
-    '{{email1}}',
-    '{{email2}}',
-    '{{email3}}',
+    '{{{email1}}}',
+    '{{{email2}}}',
+    '{{{email3}}}',
   ];
   async function runStudentCode(urlsToFetch) {
     let error = undefined;
@@ -363,12 +363,12 @@ const fetchAndRender = (url) => new Promise((resolve) => {
 
 ---
 
-Déployer en production (sur Heroku) un serveur Web en Node.js mettant à disposition les endpoints suivants:
+Déployer en production (sur Heroku) un serveur Web en Node.js mettant à disposition les routes suivantes:
 
  - `GET /` retourne le texte "`Bonjour !`" (sans les guillemets)
  - `GET /{{{path}}}` retourne le texte "`{{{text}}}`" (sans les guillemets)
 
-Fournir l'URL Heroku de ce serveur dans le champs ci-dessous.
+Au lieu de fournir le code JavaScript de ce serveur, collez seulement l'URL Heroku de ce serveur dans le champ ci-dessous:
 
 - { "path": "text", "text": "test" }
 
