@@ -289,7 +289,12 @@ const fetchAndRender = (url) => new Promise((resolve) => {
     '{{{email2}}}',
     '{{{email3}}}',
   ];
-  async function runStudentCode(urlsToFetch) {
+  const expectedFailEmails = [
+    '{{{email1}}}',
+    'oops!',
+    '{{{email3}}}',
+  ];
+  async function runStudentCode({ urlsToFetch, failSecondReq = false }) {
     let error = undefined;
     let logs = [];
     const console = {
@@ -299,6 +304,7 @@ const fetchAndRender = (url) => new Promise((resolve) => {
     const respEvtHandlers = {};
     const retEvtHandlers = {};
     let reqDelay = 30; // will decrease for each request, to simulate random network latency
+    let reqsUntilFailure = failSecondReq ? 2 : -1;
     const https = {
       get: (url, callback) => {
         const resp = {
@@ -306,15 +312,23 @@ const fetchAndRender = (url) => new Promise((resolve) => {
             respEvtHandlers[evtName] = handler;
           },
         };
-        setTimeout(async () => {
-          const email = expectedEmails[urlsToFetch.indexOf(url)];
-          const dataParts = ['{ ', '"email": "', email, '" }'];
-          for (var i in dataParts) {
-            await respEvtHandlers.data(dataParts[i]);
-          }
-          respEvtHandlers.end();
-          // TODO: also implement error case
-        }, reqDelay);
+        const email = expectedEmails[urlsToFetch.indexOf(url)];
+        const simulateSuccess = async () => {
+          try {
+            const dataParts = ['{ ', '"email": "', email, '" }'];
+            for (var i in dataParts) {
+              await respEvtHandlers.data(dataParts[i]);
+            }
+            respEvtHandlers.end();
+          } catch (err) {}
+        };
+        const simulateFailure = () => {
+          try {
+            retEvtHandlers.error(new Error('simulated error'));
+          } catch (err) {}
+        };
+        reqsUntilFailure = reqsUntilFailure - 1;
+        setTimeout(reqsUntilFailure === 0 ? simulateFailure : simulateSuccess, reqDelay);
         reqDelay = reqDelay / 2; // next request will respond twice faster
         callback(resp);
         return {
@@ -333,30 +347,34 @@ const fetchAndRender = (url) => new Promise((resolve) => {
     }
     return { error, logs, respEvtHandlers, retEvtHandlers };
   }
-  const { error, logs, respEvtHandlers, retEvtHandlers } = await runStudentCode(urlsToFetch);
+  const nominal = await runStudentCode({ urlsToFetch });
+  const failure = await runStudentCode({ urlsToFetch, failSecondReq: true });
   function res(pts, msg) {
     application.remote._log((pts ? ' ✅ ' : ' ❌ ') + msg);
     return pts; 
   }
   const scoreArray = [
-    !error
+    !nominal.error
       ? res(1, 'exécution du code sans erreur')
       : res(0, `erreur survenue en exécutant le code: ${error}`),
-    typeof respEvtHandlers.data === 'function'
+    typeof nominal.respEvtHandlers.data === 'function'
       ? res(1, 'fonction rattachée à l\'évènement "data"')
       : res(0, 'fonction rattachée à l\'évènement "data"'),
-    typeof respEvtHandlers.end === 'function'
+    typeof nominal.respEvtHandlers.end === 'function'
       ? res(1, 'fonction rattachée à l\'évènement "end"')
       : res(0, 'fonction rattachée à l\'évènement "end"'),
-    typeof retEvtHandlers.error === 'function'
+    typeof nominal.retEvtHandlers.error === 'function'
       ? res(1, 'fonction rattachée à l\'évènement "error"')
       : res(0, 'fonction rattachée à l\'évènement "error"'),
-    (new Set(logs)).toString() === (new Set(expectedEmails)).toString()
+    (new Set(nominal.logs)).toString() === (new Set(expectedEmails)).toString()
       ? res(1, 'cas nominal: toutes adresses email affichées')
       : res(0, 'cas nominal: toutes adresses email affichées'),
-    logs.toString() === expectedEmails.toString()
+    nominal.logs.toString() === expectedEmails.toString()
       ? res(1, 'cas nominal: adresses email affichées dans l\'ordre')
       : res(0, 'cas nominal: adresses email affichées dans l\'ordre'),
+    failure.logs.toString() === expectedFailEmails.toString()
+      ? res(1, 'cas d\'erreur: adresses email + "oops!" affichées dans l\'ordre')
+      : res(0, 'cas d\'erreur: adresses email + "oops!" affichées dans l\'ordre'),
   ];
   application.remote._send(null, scoreArray);
 })();
