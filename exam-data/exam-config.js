@@ -53,7 +53,7 @@ module.exports = {
     ptsNull: 0,
   },
   codeGrading: {
-    ptsPerExercise: 5,
+    ptsPerExercise: 3.75,
   }
 
 };

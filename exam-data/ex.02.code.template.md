@@ -1,4 +1,4 @@
-# Exercices de code (5 points par exercice)
+# Exercices de code (3.75 points par exercice)
 
 Ré-écrire ce code de manière à ce qu'il utilise `async` et `await`, au lieu de `then()` et `catch()`. Les erreurs doivent être correctement interceptées.
 
@@ -107,7 +107,6 @@ const MongoClient = require('mongodb').MongoClient;
   application.remote._send(null, scoreArray);
 })();
 ```
-
 
 ---
 
@@ -357,6 +356,74 @@ const fetchAndRender = (url) => new Promise((resolve) => {
       ? res(1, 'cas nominal: adresses email affichées dans l\'ordre')
       : res(0, 'cas nominal: adresses email affichées dans l\'ordre'),
       // TODO: simuler désordre dans les réponses de requêtes
+  ];
+  application.remote._send(null, scoreArray);
+})();
+```
+
+---
+
+Déployer en production (sur Heroku) un serveur Web en Node.js mettant à disposition les endpoints suivants:
+
+ - `GET /` retourne le texte "`Bonjour !`" (sans les guillemets)
+ - `GET /{{{path}}}` retourne le texte "`{{{text}}}`" (sans les guillemets)
+
+Fournir l'URL Heroku de ce serveur dans le champs ci-dessous.
+
+- { "path": "text", "text": "test" }
+
+???
+
+```js
+https://frozen-dawn-64094.herokuapp.com
+// 👆 run `npm run deploy` from exam-data/app-to-deploy/ to get that URL
+```
+
+--
+
+```js
+// automatic student evaluation code
+(async function evaluateStudentCode(){
+  const expectedRes = {
+    indexRes: { responseText: 'Bonjour !' },
+    pathRes:  { responseText: `{{{text}}}` },
+  };
+  const fetch = (url) => new Promise((resolve) =>
+    application.remote._xhr('GET', url, (error, res) => {
+      const { responseText } = res || {};
+      resolve({ responseText, error });
+    })
+  );
+  async function callEndpoints(url = `_studentCode`) {
+    const appName = url.match(/\/\/(.*)\.herokuapp\.com/)[1];
+    const urlPrefix = 'https://' + appName + '.herokuapp.com';
+    return {
+      appName,
+      indexRes: await fetch(urlPrefix),
+      pathRes: await fetch(urlPrefix + '/{{{path}}}'),
+    };
+  }
+  const { appName, indexRes, pathRes } = await callEndpoints();
+  function res(pts, msg) {
+    application.remote._log((pts ? ' ✅ ' : ' ❌ ') + msg);
+    return pts; 
+  }
+  const scoreArray = [
+    appName
+      ? res(1, 'URL Heroku reconnue')
+      : res(0, `URL Heroku reconnue`),
+    !indexRes.error
+      ? res(1, 'réponse valide de l\'endpoint GET /')
+      : res(0, 'réponse valide de l\'endpoint GET /'),
+    !pathRes.error
+      ? res(1, 'réponse valide de l\'endpoint GET /{{{path}}}')
+      : res(0, 'réponse valide de l\'endpoint GET /{{{path}}}'),
+    indexRes.responseText === expectedRes.indexRes.responseText
+      ? res(1, 'réponse conforme de l\'endpoint GET /')
+      : res(0, 'réponse conforme de l\'endpoint GET /'),
+    pathRes.responseText === expectedRes.pathRes.responseText
+      ? res(1, 'réponse conforme de l\'endpoint GET /{{{path}}}')
+      : res(0, 'réponse conforme de l\'endpoint GET /{{{path}}}'),
   ];
   application.remote._send(null, scoreArray);
 })();
