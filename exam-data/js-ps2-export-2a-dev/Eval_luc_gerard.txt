@@ -142,19 +142,19 @@ STUDENT: luc_gerard
   | 
   | // CODE EVALUATION:
   | 
-(node:47014) UnhandledPromiseRejectionWarning: Error: unable to connect
-(node:47014) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
-(node:47014) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:49583) UnhandledPromiseRejectionWarning: Error: unable to connect
+(node:49583) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
+(node:49583) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
   |  ❌ erreur survenue en exécutant le code: ReferenceError: app is not defined
   |  ❌ écoute sur port 3000 avec myApp.listen()
-  |  ✅ définition de route GET /bonjour avec myApp.get()
+  |  ❌ définition de route GET /bonjour avec myApp.get()
   |  ❌ cas nominal: GET /bonjour retourne le prénom
   |  ❌ cas d'erreur: retour de GET /bonjour sans prénom
   |  ❌ cas d'erreur: code 400 de GET /bonjour sans prénom
   | 
-  | // -> STUDENT SCORE ARRAY: [ 0, 0, 1, 0, 0, 0 ]
+  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 0, 0, 0 ]
   | 
-  | // -> EXERCISE POINTS: 0.625 / 3.75
+  | // -> EXERCISE POINTS: 0 / 3.75
   | 
   | ------------- EXERCISE: code8 (variant: 1) -------------
   | 
@@ -214,9 +214,9 @@ STUDENT: luc_gerard
   | 
   | // -> EXERCISE POINTS: 3 / 3.75
 
-  => code score: 5.125 / 15 pts
+  => code score: 4.5 / 15 pts
 
-=> TOTAL STUDENT SCORE: 8.13 / 20
+=> TOTAL STUDENT SCORE: 7.50 / 20
 
 
 ================================

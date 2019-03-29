@@ -218,7 +218,7 @@ Respecter les chaines de caractères fournies à la lettre.
     listenedPorts.includes(3000)
       ? res(1, 'écoute sur port 3000 avec {{app}}.listen()')
       : res(0, 'écoute sur port 3000 avec {{app}}.listen()'),
-    typeof pathHandler === 'function'
+    `_studentCode`.includes(`.get('/{{{path}}}', `)
       ? res(1, 'définition de route GET /{{{path}}} avec {{app}}.get()')
       : res(0, 'définition de route GET /{{{path}}} avec {{app}}.get()'),
     (await callHandler({ prenom: '_étienne_' })).text === 'Hello _étienne_'

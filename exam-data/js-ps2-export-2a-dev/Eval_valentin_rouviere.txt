@@ -105,7 +105,7 @@ STUDENT: valentin_rouviere
   | 
   |  ✅ ne pas utiliser then() et catch()
   |  ✅ utiliser async et await
-  |  ❌ erreur survenue en exécutant le code: ReferenceError: process is not defined
+  |  ❌ erreur survenue en exécutant le code: TypeError: MongoClient is not a constructor
   |  ❌ cas nominal: affiché inattendu dans la console: undefined
   |  ❌ cas d'erreur: message affiché dans la console: undefined
   | 
@@ -148,14 +148,14 @@ STUDENT: valentin_rouviere
   | 
   |  ❌ erreur survenue en exécutant le code: ReferenceError: app is not defined
   |  ❌ écoute sur port 3000 avec myApp.listen()
-  |  ✅ définition de route GET /hello avec myApp.get()
+  |  ❌ définition de route GET /hello avec myApp.get()
   |  ❌ cas nominal: GET /hello retourne le prénom
   |  ❌ cas d'erreur: retour de GET /hello sans prénom
   |  ❌ cas d'erreur: code 400 de GET /hello sans prénom
   | 
-  | // -> STUDENT SCORE ARRAY: [ 0, 0, 1, 0, 0, 0 ]
+  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 0, 0, 0 ]
   | 
-  | // -> EXERCISE POINTS: 0.625 / 3.75
+  | // -> EXERCISE POINTS: 0 / 3.75
   | 
   | ------------- EXERCISE: code8 (variant: 1) -------------
   | 
@@ -215,6 +215,6 @@ STUDENT: valentin_rouviere
   | 
   | // -> EXERCISE POINTS: 3.75 / 3.75
 
-  => code score: 5.875 / 15 pts
+  => code score: 5.25 / 15 pts
 
-=> TOTAL STUDENT SCORE: 8.88 / 20
+=> TOTAL STUDENT SCORE: 8.25 / 20
