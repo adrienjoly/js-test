@@ -69,6 +69,7 @@ const MongoClient = require('mongodb').MongoClient;
     let error = undefined;
     let lastLogParams = [];
     let lastErrParams = [];
+    const process = { env: {} };
     const console = {
       log: (message, param) => lastLogParams = [message, param],
       error: (message, param) => lastErrParams = [message, param],
