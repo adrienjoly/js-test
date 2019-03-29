@@ -10,7 +10,7 @@ function makeRegexTester(regex) {
   return regex.test.bind(regex);
 }
 
-exports.parseAllFrom = function(sourcePath) {
+function parseAllFrom(sourcePath) {
   var files = fs.readdirSync(sourcePath).sort();
   var exercises = [];
 
@@ -18,7 +18,7 @@ exports.parseAllFrom = function(sourcePath) {
     var fileParts = RE_TEMPLATE_FILE.exec(file);
     var exNumber = fileParts[1];
     var exType = fileParts[2];
-    console.log('Parsing', file, '...');
+    console.warn('Parsing', file, '...');
     var parser = new ExerciseParser();
     var exData = parser.readFromFile(sourcePath + file);
     exercises.push(_.extend({
@@ -30,4 +30,15 @@ exports.parseAllFrom = function(sourcePath) {
   });
 
   return exercises;
+}
+
+const getQuestionIdsFrom = (sourcePath) =>
+  parseAllFrom(sourcePath).reduce(
+    (ids, ex) => ids.concat(ex.questionLines.map(
+      (_, q) => ex._type + (ids.length + q)
+    )), []);
+
+module.exports = {
+  parseAllFrom,
+  getQuestionIdsFrom,
 };

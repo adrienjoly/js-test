@@ -7,6 +7,8 @@
 
 rm ./exam-data/score*.* &>/dev/null
 
+QUESTION_IDS=$(node -e "console.log(require('./src/ExerciseEnumerator').getQuestionIdsFrom('./exam-data/').join(','));" 2>/dev/null)
+
 docker build -t js-test-eval .
 
 for FILEPATH in $*;
@@ -23,8 +25,11 @@ do
   ./src/split-eval-log-per-student.sh $EVAL_PATH/eval.log # >/dev/null
   mv Eval_*.txt $EVAL_PATH/
 
-  node src/extract-scores-from-eval-log.js <$EVAL_PATH/eval.log \
+  echo "$FILENAME,score,$QUESTION_IDS" \
     >$EVAL_PATH/scores-detail.csv
+
+  node src/extract-scores-from-eval-log.js <$EVAL_PATH/eval.log \
+    >>$EVAL_PATH/scores-detail.csv
 
   # pad each csv column with spaces, for better lisibility
   column -t -s "," $EVAL_PATH/scores-detail.csv > $EVAL_PATH/scores-detail.txt
