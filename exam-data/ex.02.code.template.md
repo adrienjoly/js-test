@@ -423,12 +423,13 @@ https://frozen-dawn-64094.herokuapp.com
     })
   );
   async function callEndpoints(url = `_studentCode`) {
-    const appName = url.match(/\/\/(.*)\.herokuapp\.com/)[1];
+    const appName = (url.match(/\/\/(.*)\.herokuapp\.com/) || [])[1];
+    const error = !appName ? { error: 'invalid heroku app url' } : null;
     const urlPrefix = 'https://' + appName + '.herokuapp.com';
     return {
       appName,
-      indexRes: await fetch(urlPrefix),
-      pathRes: await fetch(urlPrefix + '/{{{path}}}'),
+      indexRes: error || await fetch(urlPrefix),
+      pathRes: error || await fetch(urlPrefix + '/{{{path}}}'),
     };
   }
   const { appName, indexRes, pathRes } = await callEndpoints();

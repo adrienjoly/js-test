@@ -642,10 +642,703 @@ STUDENT: danylo_zhalkovskyy
   | 
   | // CODE EVALUATION:
   | 
-(node:59) UnhandledPromiseRejectionWarning: TypeError: Cannot read property '1' of null
-(node:59) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)
-(node:59) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+  |  ❌ URL Heroku reconnue
+  |  ❌ réponse valide de l'endpoint GET /
+  |  ❌ réponse valide de l'endpoint GET /test
+  |  ❌ réponse conforme de l'endpoint GET /
+  |  ❌ réponse conforme de l'endpoint GET /test
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 0 / 3.75
+
+  => code score: 2.125 / 15 pts
+
+=> TOTAL STUDENT SCORE: 6.13 / 20
 
 
+================================
 
-^C
+STUDENT: luc_gerard
+
+  -  quizz answers:
+  | 
+  | ------------- EXERCISE: qcm1 -------------
+  | 
+  | J'ai créé une API avec Node.js et l'ai mise en production sur Heroku. Où s'exécute le code permettant de répondre aux requêtes reçues par cette API ?
+  | 
+  | -  Dans le navigateur
+  | -  Dans la commande curl
+  | ✅ Sur un des serveurs de Heroku
+  | -  Sur GitLab
+  | 
+  | ------------- EXERCISE: qcm2 -------------
+  | 
+  | Je viens de "cloner" un projet Node.js depuis GitHub. Comment installer les dépendances de ce projet ?
+  | 
+  | -  npm start
+  | 👉 npm install
+  | -  npm init
+  | ❌ npm install express --save
+  | 
+  | ------------- EXERCISE: qcm3 -------------
+  | 
+  | Laquelle de ces phrases est CORRECTE ?
+  | 
+  | -  MongoDB est une base de données SQL constituée de collections et de documents
+  | -  MongoDB est une base de données SQL constituée de tables et de lignes
+  | 👉 MongoDB est une base de données NoSQL constituée de collections et de documents
+  | ❌ MongoDB est une base de données NoSQL constituée de tables et de lignes
+  | 
+  | ------------- EXERCISE: qcm4 -------------
+  | 
+  | À quoi sert Express.js ?
+  | 
+  | ✅ à faciliter la création d'un serveur HTTP
+  | -  à accelérer la vitesse de traitement des requêtes HTTP
+  | -  à gérer des requêtes asynchrones comme si elles étaient synchrones
+  | -  à mettre une API en production
+  | 
+  | ------------- EXERCISE: qcm5 -------------
+  | 
+  | Laquelle de ces phrases est INCORRECTE ?
+  | 
+  | -  await permet d'attendre qu'une Promise soit résolue
+  | -  await ne peut être utilisé que depuis une fonction async
+  | ✅ await permet d'exécuter une fonction synchrone comme si elle était asynchrone
+  | -  sans await, deux fonctions asynchrones peuvent être exécutées en parallèle
+  | 
+  | ------------- SUMMARY -------------
+  | 
+  | qcm1 : 3 (solution: 3) => 1 pts
+  | qcm2 : 4 (solution: 2) => 0 pts
+  | qcm3 : 4 (solution: 3) => 0 pts
+  | qcm4 : 1 (solution: 1) => 1 pts
+  | qcm5 : 3 (solution: 3) => 1 pts
+
+  => quizz score: 3 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code6 (variant: 3) -------------
+  | 
+  | // QUESTION:
+  | 
+  | Ré-écrire ce code de manière à ce qu'il utilise `async` et `await`, au lieu de `then()` et `catch()`. Les erreurs doivent être correctement interceptées.
+  | 
+  | ```js
+  | const MongoClient = require('mongodb').MongoClient;
+  | MongoClient.connect('mongodb://localhost:27017/cats')
+  |   .then(function (client) {
+  |     return client.db('cats').collection('types').find().toArray();
+  |   })
+  |   .then(function (dates) {
+  |     console.log('types:', dates);
+  |   })
+  |   .catch(function (err) {
+  |     console.error('erreur:', err);
+  |   });
+  | ```
+  | 
+  | // STUDENT CODE:
+  | 
+  | const MongoClient = require('mongodb').MongoClient;
+  | MongoClient.connect('mongodb://localhost:27017/cats')
+  | (async () => {
+  |   try {
+  |     await client.connect();
+  |     const db = client.db(dbName);
+  | 
+  |     col = db.collection('cats');
+  | 
+  |   } catch (err) {
+  |     console.log(err.stack);
+  |   }
+  |   // client.close()
+  | })();
+  | 
+  | 
+  | // CODE EVALUATION:
+  | 
+  |  ✅ ne pas utiliser then() et catch()
+  |  ✅ utiliser async et await
+  |  ❌ erreur survenue en exécutant le code: TypeError: MongoClient.connect(...) is not a function
+  |  ❌ cas nominal: affiché inattendu dans la console: undefined
+  |  ❌ cas d'erreur: message affiché dans la console: undefined
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 1.5 / 3.75
+  | 
+  | ------------- EXERCISE: code7 (variant: 1) -------------
+  | 
+  | // QUESTION:
+  | 
+  | Le fichier `index.js` contient le code suivant:
+  | 
+  | ```js
+  | const express = require('express');
+  | const myApp = express();
+  | ```
+  | 
+  | Quelles lignes de code faut-il ajouter à ce fichier pour que:
+  | 
+  |  - `curl http://localhost:3000/bonjour?prenom=Michelle` réponde "`Hello Michelle`" (au format texte brut, sans les guillemets, et le prénom devra systématiquement correspondre à celui passé en paramètre),
+  |  - `curl http://localhost:3000/bonjour` réponde "`Prénom manquant`" (toujours au format texte brut, et sans les guillemets) avec un code `400` de status HTTP,
+  | 
+  | ... une fois qu'on aura exécuté ce programme avec `node index.js` ?
+  | 
+  | Respecter les chaines de caractères fournies à la lettre.
+  | 
+  | // STUDENT CODE:
+  | 
+  | app.post('/bonjour', function (req, res) {
+  |   console.log(req.body);
+  |   if ( req.body.prenom == 'Hello Michelle'){
+  |     res.send('Nous sommes à Paris');
+  |   } else if ( req.body.msg == empty){
+  |     res.send('Prénom manquant');
+  |   }  
+  | });
+  | 
+  | // CODE EVALUATION:
+  | 
+  |  ❌ erreur survenue en exécutant le code: ReferenceError: app is not defined
+  |  ❌ écoute sur port 3000 avec myApp.listen()
+  |  ✅ définition de route GET /bonjour avec myApp.get()
+  |  ❌ cas nominal: GET /bonjour retourne le prénom
+  |  ❌ cas d'erreur: retour de GET /bonjour sans prénom
+  |  ❌ cas d'erreur: code 400 de GET /bonjour sans prénom
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 0, 1, 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 0.625 / 3.75
+  | 
+  | ------------- EXERCISE: code8 (variant: 1) -------------
+  | 
+  | // QUESTION:
+  | 
+  | L'objectif est d'afficher dans la sortie standard (c.a.d. en utilisant `console.log()`) l'adresse email de plusieurs personnes dont les données seront à récupérer en JSON, depuis des URLs listées dans un tableau JavaScript. L'adresse email est fournie via la propriété `email` de la réponse à ces requêtes.
+  | 
+  | Pour cela, nous allons compléter le programme Node.js suivant:
+  | 
+  | ```js
+  | const https = require('https');
+  | const urlsToFetch = [
+  |  'https://js-jsonplaceholder.herokuapp.com/users/3',
+  |  'https://js-jsonplaceholder.herokuapp.com/users/2',
+  |  'https://js-jsonplaceholder.herokuapp.com/users/1'
+  | ];
+  | ```
+  | 
+  | Consignes à respecter:
+  | 
+  |  - Seules les adresses email doivent être affichées, sans préfixe et à raison d'une par ligne.
+  |  - L'affichage de ces adresses doit respecter l'ordre de leurs URLs respectives dans le tableau `urlsToFetch`.
+  |  - Votre programme devra utiliser le module `https` fourni par Node.js pour effectuer les requêtes. Aucune autre dépendance ne pourra être utilisée.
+  |  - En cas d'erreur lors d'une requête, afficher "`oops!`" (sans les guillemets) au lieu de l'adresse email dont la récupération a échoué.
+  |  - Enfin, les URLs fournies dans `urlsToFetch`, leur ordre, ainsi que leur nombre peuvent changer. Le programme doit donc fonctionner en s'adaptant au contenu de ce tableau.
+  | 
+  | Fournir les lignes de code à ajouter au programme fourni ci-dessus de manière à ce qu'il affiche les adresses email quand on l'exécutera avec `node`.
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | // -> EXERCISE POINTS: 0 / 3.75
+  | 
+  | ------------- EXERCISE: code9 (variant: 3) -------------
+  | 
+  | // QUESTION:
+  | 
+  | Déployer en production (sur Heroku) un serveur Web en Node.js mettant à disposition les routes suivantes:
+  | 
+  |  - `GET /` retourne le texte "`Bonjour !`" (sans les guillemets)
+  |  - `GET /text` retourne le texte "`ceci est un texte`" (sans les guillemets)
+  | 
+  | Au lieu de fournir le code JavaScript de ce serveur, collez seulement l'URL Heroku de ce serveur dans le champ ci-dessous:
+  | 
+  | // STUDENT CODE:
+  | 
+  | https://morning-woodland-58520.herokuapp.com/
+  | 
+  | // CODE EVALUATION:
+  | 
+  |  ✅ URL Heroku reconnue
+  |  ✅ réponse valide de l'endpoint GET /
+  |  ✅ réponse valide de l'endpoint GET /text
+  |  ✅ réponse conforme de l'endpoint GET /
+  |  ❌ réponse conforme de l'endpoint GET /text
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 3 / 3.75
+
+  => code score: 5.125 / 15 pts
+
+=> TOTAL STUDENT SCORE: 8.13 / 20
+
+
+================================
+
+STUDENT: mickael_chekroun
+
+  -  quizz answers:
+  | 
+  | ------------- EXERCISE: qcm1 -------------
+  | 
+  | J'ai créé une API avec Node.js et l'ai mise en production sur Heroku. Où s'exécute le code permettant de répondre aux requêtes reçues par cette API ?
+  | 
+  | -  Dans le navigateur
+  | -  Dans la commande curl
+  | ✅ Sur un des serveurs de Heroku
+  | -  Sur GitLab
+  | 
+  | ------------- EXERCISE: qcm2 -------------
+  | 
+  | Je viens de "cloner" un projet Node.js depuis GitHub. Comment installer les dépendances de ce projet ?
+  | 
+  | -  npm start
+  | ✅ npm install
+  | -  npm init
+  | -  npm install express --save
+  | 
+  | ------------- EXERCISE: qcm3 -------------
+  | 
+  | Laquelle de ces phrases est CORRECTE ?
+  | 
+  | -  MongoDB est une base de données SQL constituée de collections et de documents
+  | -  MongoDB est une base de données SQL constituée de tables et de lignes
+  | ✅ MongoDB est une base de données NoSQL constituée de collections et de documents
+  | -  MongoDB est une base de données NoSQL constituée de tables et de lignes
+  | 
+  | ------------- EXERCISE: qcm4 -------------
+  | 
+  | À quoi sert Express.js ?
+  | 
+  | ✅ à faciliter la création d'un serveur HTTP
+  | -  à accelérer la vitesse de traitement des requêtes HTTP
+  | -  à gérer des requêtes asynchrones comme si elles étaient synchrones
+  | -  à mettre une API en production
+  | 
+  | ------------- EXERCISE: qcm5 -------------
+  | 
+  | Laquelle de ces phrases est INCORRECTE ?
+  | 
+  | -  await permet d'attendre qu'une Promise soit résolue
+  | -  await ne peut être utilisé que depuis une fonction async
+  | 👉 await permet d'exécuter une fonction synchrone comme si elle était asynchrone
+  | ❌ sans await, deux fonctions asynchrones peuvent être exécutées en parallèle
+  | 
+  | ------------- SUMMARY -------------
+  | 
+  | qcm1 : 3 (solution: 3) => 1 pts
+  | qcm2 : 2 (solution: 2) => 1 pts
+  | qcm3 : 3 (solution: 3) => 1 pts
+  | qcm4 : 1 (solution: 1) => 1 pts
+  | qcm5 : 4 (solution: 3) => 0 pts
+
+  => quizz score: 4 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code6 (variant: 3) -------------
+  | 
+  | // QUESTION:
+  | 
+  | Ré-écrire ce code de manière à ce qu'il utilise `async` et `await`, au lieu de `then()` et `catch()`. Les erreurs doivent être correctement interceptées.
+  | 
+  | ```js
+  | const MongoClient = require('mongodb').MongoClient;
+  | MongoClient.connect('mongodb://localhost:27017/cats')
+  |   .then(function (client) {
+  |     return client.db('cats').collection('types').find().toArray();
+  |   })
+  |   .then(function (dates) {
+  |     console.log('types:', dates);
+  |   })
+  |   .catch(function (err) {
+  |     console.error('erreur:', err);
+  |   });
+  | ```
+  | 
+  | // STUDENT CODE:
+  | 
+  | const MongoClient = require('mongodb').MongoClient;
+  | (async function() {
+  |   let client;
+  |   let dates;
+  |   try {
+  |     client = await MongoClient.connect('mongodb://localhost:27017/cats');
+  |     dates = await client.db('cats').collection('types').find().toArray();
+  |     console.log('types:', dates);
+  |   } catch(err) {
+  |     console.log('erreur:', err);
+  |   }
+  | }()
+  | 
+  | // CODE EVALUATION:
+  | 
+  |  ✅ ne pas utiliser then() et catch()
+  |  ✅ utiliser async et await
+  |  ❌ erreur survenue en exécutant le code: SyntaxError: Unexpected end of input
+  |  ❌ cas nominal: affiché inattendu dans la console: undefined
+  |  ❌ cas d'erreur: message affiché dans la console: undefined
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 1.5 / 3.75
+  | 
+  | ------------- EXERCISE: code7 (variant: 0) -------------
+  | 
+  | // QUESTION:
+  | 
+  | Le fichier `index.js` contient le code suivant:
+  | 
+  | ```js
+  | const express = require('express');
+  | const app = express();
+  | ```
+  | 
+  | Quelles lignes de code faut-il ajouter à ce fichier pour que:
+  | 
+  |  - `curl http://localhost:3000/bonjour?prenom=Michelle` réponde "`Hello Michelle`" (au format texte brut, sans les guillemets, et le prénom devra systématiquement correspondre à celui passé en paramètre),
+  |  - `curl http://localhost:3000/bonjour` réponde "`Prénom manquant`" (toujours au format texte brut, et sans les guillemets) avec un code `400` de status HTTP,
+  | 
+  | ... une fois qu'on aura exécuté ce programme avec `node index.js` ?
+  | 
+  | Respecter les chaines de caractères fournies à la lettre.
+  | 
+  | // STUDENT CODE:
+  | 
+  | app.get('/bonjour', function(req, res) {
+  |   if(req.query.prenom) {
+  |     if(req.query.prenom === "Michelle") {
+  |       res.send("Hello Michelle");
+  |     }
+  |   } else {
+  |     res.status(400)
+  |     res.send("Prénom manquant")
+  |   }
+  | })
+  | 
+  | // CODE EVALUATION:
+  | 
+  |  ✅ exécution du code sans erreur
+  |  ❌ écoute sur port 3000 avec app.listen()
+  |  ✅ définition de route GET /bonjour avec app.get()
+  |  ❌ cas nominal: GET /bonjour retourne le prénom
+  |  ✅ cas d'erreur: retour de GET /bonjour sans prénom
+  |  ✅ cas d'erreur: code 400 de GET /bonjour sans prénom
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 0, 1, 0, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 2.5 / 3.75
+  | 
+  | ------------- EXERCISE: code8 (variant: 1) -------------
+  | 
+  | // QUESTION:
+  | 
+  | L'objectif est d'afficher dans la sortie standard (c.a.d. en utilisant `console.log()`) l'adresse email de plusieurs personnes dont les données seront à récupérer en JSON, depuis des URLs listées dans un tableau JavaScript. L'adresse email est fournie via la propriété `email` de la réponse à ces requêtes.
+  | 
+  | Pour cela, nous allons compléter le programme Node.js suivant:
+  | 
+  | ```js
+  | const https = require('https');
+  | const urlsToFetch = [
+  |  'https://js-jsonplaceholder.herokuapp.com/users/3',
+  |  'https://js-jsonplaceholder.herokuapp.com/users/2',
+  |  'https://js-jsonplaceholder.herokuapp.com/users/1'
+  | ];
+  | ```
+  | 
+  | Consignes à respecter:
+  | 
+  |  - Seules les adresses email doivent être affichées, sans préfixe et à raison d'une par ligne.
+  |  - L'affichage de ces adresses doit respecter l'ordre de leurs URLs respectives dans le tableau `urlsToFetch`.
+  |  - Votre programme devra utiliser le module `https` fourni par Node.js pour effectuer les requêtes. Aucune autre dépendance ne pourra être utilisée.
+  |  - En cas d'erreur lors d'une requête, afficher "`oops!`" (sans les guillemets) au lieu de l'adresse email dont la récupération a échoué.
+  |  - Enfin, les URLs fournies dans `urlsToFetch`, leur ordre, ainsi que leur nombre peuvent changer. Le programme doit donc fonctionner en s'adaptant au contenu de ce tableau.
+  | 
+  | Fournir les lignes de code à ajouter au programme fourni ci-dessus de manière à ce qu'il affiche les adresses email quand on l'exécutera avec `node`.
+  | 
+  | // STUDENT CODE:
+  | 
+  | var fetch = require("node-fetch");
+  | urlsToFetch.map(async (url) => {
+  |   console.log(url);
+  |   try {
+  |     const response = await fetch(url);
+  |     const json = await response.json();
+  |     console.log(json.email);
+  |   } catch (error) {
+  |     console.log("oops!");
+  |   }
+  | });
+  | 
+  | // CODE EVALUATION:
+  | 
+  |  ✅ exécution du code sans erreur
+  |  ❌ fonction rattachée à l'évènement "data"
+  |  ❌ fonction rattachée à l'évènement "end"
+  |  ❌ fonction rattachée à l'évènement "error"
+  |  ✅ cas nominal: toutes adresses email affichées
+  |  ❌ cas nominal: adresses email affichées dans l'ordre
+  |  ❌ cas d'erreur: adresses email + "oops!" affichées dans l'ordre
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 0, 0, 0, 1, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 1.0714285714285714 / 3.75
+  | 
+  | ------------- EXERCISE: code9 (variant: 3) -------------
+  | 
+  | // QUESTION:
+  | 
+  | Déployer en production (sur Heroku) un serveur Web en Node.js mettant à disposition les routes suivantes:
+  | 
+  |  - `GET /` retourne le texte "`Bonjour !`" (sans les guillemets)
+  |  - `GET /text` retourne le texte "`ceci est un texte`" (sans les guillemets)
+  | 
+  | Au lieu de fournir le code JavaScript de ce serveur, collez seulement l'URL Heroku de ce serveur dans le champ ci-dessous:
+  | 
+  | // STUDENT CODE:
+  | 
+  | https://partiel-nodejs-1213.herokuapp.com/
+  | 
+  | // CODE EVALUATION:
+  | 
+  |  ✅ URL Heroku reconnue
+  |  ✅ réponse valide de l'endpoint GET /
+  |  ✅ réponse valide de l'endpoint GET /text
+  |  ❌ réponse conforme de l'endpoint GET /
+  |  ✅ réponse conforme de l'endpoint GET /text
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 0, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 3 / 3.75
+
+  => code score: 8.071428571428571 / 15 pts
+
+=> TOTAL STUDENT SCORE: 12.07 / 20
+
+
+================================
+
+STUDENT: valentin_rouviere
+
+  -  quizz answers:
+  | 
+  | ------------- EXERCISE: qcm1 -------------
+  | 
+  | J'ai créé une API avec Node.js et l'ai mise en production sur Heroku. Où s'exécute le code permettant de répondre aux requêtes reçues par cette API ?
+  | 
+  | -  Dans le navigateur
+  | -  Dans la commande curl
+  | ✅ Sur un des serveurs de Heroku
+  | -  Sur GitLab
+  | 
+  | ------------- EXERCISE: qcm2 -------------
+  | 
+  | Je viens de "cloner" un projet Node.js depuis GitHub. Comment installer les dépendances de ce projet ?
+  | 
+  | -  npm start
+  | 👉 npm install
+  | -  npm init
+  | ❌ npm install express --save
+  | 
+  | ------------- EXERCISE: qcm3 -------------
+  | 
+  | Laquelle de ces phrases est CORRECTE ?
+  | 
+  | ❌ MongoDB est une base de données SQL constituée de collections et de documents
+  | -  MongoDB est une base de données SQL constituée de tables et de lignes
+  | 👉 MongoDB est une base de données NoSQL constituée de collections et de documents
+  | -  MongoDB est une base de données NoSQL constituée de tables et de lignes
+  | 
+  | ------------- EXERCISE: qcm4 -------------
+  | 
+  | À quoi sert Express.js ?
+  | 
+  | ✅ à faciliter la création d'un serveur HTTP
+  | -  à accelérer la vitesse de traitement des requêtes HTTP
+  | -  à gérer des requêtes asynchrones comme si elles étaient synchrones
+  | -  à mettre une API en production
+  | 
+  | ------------- EXERCISE: qcm5 -------------
+  | 
+  | Laquelle de ces phrases est INCORRECTE ?
+  | 
+  | -  await permet d'attendre qu'une Promise soit résolue
+  | -  await ne peut être utilisé que depuis une fonction async
+  | ✅ await permet d'exécuter une fonction synchrone comme si elle était asynchrone
+  | -  sans await, deux fonctions asynchrones peuvent être exécutées en parallèle
+  | 
+  | ------------- SUMMARY -------------
+  | 
+  | qcm1 : 3 (solution: 3) => 1 pts
+  | qcm2 : 4 (solution: 2) => 0 pts
+  | qcm3 : 1 (solution: 3) => 0 pts
+  | qcm4 : 1 (solution: 1) => 1 pts
+  | qcm5 : 3 (solution: 3) => 1 pts
+
+  => quizz score: 3 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code6 (variant: 3) -------------
+  | 
+  | // QUESTION:
+  | 
+  | Ré-écrire ce code de manière à ce qu'il utilise `async` et `await`, au lieu de `then()` et `catch()`. Les erreurs doivent être correctement interceptées.
+  | 
+  | ```js
+  | const MongoClient = require('mongodb').MongoClient;
+  | MongoClient.connect('mongodb://localhost:27017/cats')
+  |   .then(function (client) {
+  |     return client.db('cats').collection('types').find().toArray();
+  |   })
+  |   .then(function (dates) {
+  |     console.log('types:', dates);
+  |   })
+  |   .catch(function (err) {
+  |     console.error('erreur:', err);
+  |   });
+  | ```
+  | 
+  | // STUDENT CODE:
+  | 
+  | const MongoClient = require('mongodb').MongoClient;
+  | const MONGODB_URL = process.env.MONGOLAB_WHITE_URI  || 'mongodb://localhost:27017/cats';
+  | 
+  | const client = new MongoClient(MONGODB_URL,{
+  | useNewUrlParser: true
+  | });
+  | 
+  | let coll
+  | 
+  | (async () => {
+  |    try{
+  |      await client.connect();
+  |       const db = client.db(dbcats);
+  |       coll = db.collection('types');
+  |  
+  |    }catch(err) {
+  |      console.error(err.stack);
+  |    }
+  | });
+  | 
+  | // CODE EVALUATION:
+  | 
+  |  ✅ ne pas utiliser then() et catch()
+  |  ✅ utiliser async et await
+  |  ❌ erreur survenue en exécutant le code: ReferenceError: process is not defined
+  |  ❌ cas nominal: affiché inattendu dans la console: undefined
+  |  ❌ cas d'erreur: message affiché dans la console: undefined
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 1.5 / 3.75
+  | 
+  | ------------- EXERCISE: code7 (variant: 2) -------------
+  | 
+  | // QUESTION:
+  | 
+  | Le fichier `index.js` contient le code suivant:
+  | 
+  | ```js
+  | const express = require('express');
+  | const myApp = express();
+  | ```
+  | 
+  | Quelles lignes de code faut-il ajouter à ce fichier pour que:
+  | 
+  |  - `curl http://localhost:3000/hello?prenom=Michelle` réponde "`Hello Michelle`" (au format texte brut, sans les guillemets, et le prénom devra systématiquement correspondre à celui passé en paramètre),
+  |  - `curl http://localhost:3000/hello` réponde "`Prénom manquant`" (toujours au format texte brut, et sans les guillemets) avec un code `400` de status HTTP,
+  | 
+  | ... une fois qu'on aura exécuté ce programme avec `node index.js` ?
+  | 
+  | Respecter les chaines de caractères fournies à la lettre.
+  | 
+  | // STUDENT CODE:
+  | 
+  | app.post('/hello{prenom}', (_req, res) => {
+  |   console.log(req.body);
+  |   if ( req.body.prenom == 'Hello Michelle'){
+  |     res.send('Hello Michelle');
+  |   } else if ( req.body.msg == empty){
+  |     res.send('Prénom manquant');
+  |   }  
+  | });
+  | 
+  | // CODE EVALUATION:
+  | 
+  |  ❌ erreur survenue en exécutant le code: ReferenceError: app is not defined
+  |  ❌ écoute sur port 3000 avec myApp.listen()
+  |  ✅ définition de route GET /hello avec myApp.get()
+  |  ❌ cas nominal: GET /hello retourne le prénom
+  |  ❌ cas d'erreur: retour de GET /hello sans prénom
+  |  ❌ cas d'erreur: code 400 de GET /hello sans prénom
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 0, 0, 1, 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 0.625 / 3.75
+  | 
+  | ------------- EXERCISE: code8 (variant: 1) -------------
+  | 
+  | // QUESTION:
+  | 
+  | L'objectif est d'afficher dans la sortie standard (c.a.d. en utilisant `console.log()`) l'adresse email de plusieurs personnes dont les données seront à récupérer en JSON, depuis des URLs listées dans un tableau JavaScript. L'adresse email est fournie via la propriété `email` de la réponse à ces requêtes.
+  | 
+  | Pour cela, nous allons compléter le programme Node.js suivant:
+  | 
+  | ```js
+  | const https = require('https');
+  | const urlsToFetch = [
+  |  'https://js-jsonplaceholder.herokuapp.com/users/3',
+  |  'https://js-jsonplaceholder.herokuapp.com/users/2',
+  |  'https://js-jsonplaceholder.herokuapp.com/users/1'
+  | ];
+  | ```
+  | 
+  | Consignes à respecter:
+  | 
+  |  - Seules les adresses email doivent être affichées, sans préfixe et à raison d'une par ligne.
+  |  - L'affichage de ces adresses doit respecter l'ordre de leurs URLs respectives dans le tableau `urlsToFetch`.
+  |  - Votre programme devra utiliser le module `https` fourni par Node.js pour effectuer les requêtes. Aucune autre dépendance ne pourra être utilisée.
+  |  - En cas d'erreur lors d'une requête, afficher "`oops!`" (sans les guillemets) au lieu de l'adresse email dont la récupération a échoué.
+  |  - Enfin, les URLs fournies dans `urlsToFetch`, leur ordre, ainsi que leur nombre peuvent changer. Le programme doit donc fonctionner en s'adaptant au contenu de ce tableau.
+  | 
+  | Fournir les lignes de code à ajouter au programme fourni ci-dessus de manière à ce qu'il affiche les adresses email quand on l'exécutera avec `node`.
+  | 
+  | // WARNING: NO STUDENT CODE => skipping
+  | 
+  | // -> EXERCISE POINTS: 0 / 3.75
+  | 
+  | ------------- EXERCISE: code9 (variant: 3) -------------
+  | 
+  | // QUESTION:
+  | 
+  | Déployer en production (sur Heroku) un serveur Web en Node.js mettant à disposition les routes suivantes:
+  | 
+  |  - `GET /` retourne le texte "`Bonjour !`" (sans les guillemets)
+  |  - `GET /text` retourne le texte "`ceci est un texte`" (sans les guillemets)
+  | 
+  | Au lieu de fournir le code JavaScript de ce serveur, collez seulement l'URL Heroku de ce serveur dans le champ ci-dessous:
+  | 
+  | // STUDENT CODE:
+  | 
+  | https://immense-woodland-63128.herokuapp.com/
+  | 
+  | // CODE EVALUATION:
+  | 
+  |  ✅ URL Heroku reconnue
+  |  ✅ réponse valide de l'endpoint GET /
+  |  ✅ réponse valide de l'endpoint GET /text
+  |  ✅ réponse conforme de l'endpoint GET /
+  |  ✅ réponse conforme de l'endpoint GET /text
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 3.75 / 3.75
+
+  => code score: 5.875 / 15 pts
+
+=> TOTAL STUDENT SCORE: 8.88 / 20
