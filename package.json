@@ -32,7 +32,7 @@
     "eval": "node ./src/evaluate.js",
     "eval-instances": "./src/eval-instances.sh",
     "eval-firebase-dumps": "src/eval-firebase-dumps.sh ./exam-data/*.json",
-    "eval-firebase-dumps-in-docker": "docker build -t js-test-eval . && docker run -it --rm --name js-test-eval js-test-eval",
+    "eval-firebase-dumps-in-docker": "src/eval-firebase-dumps-in-docker.sh ./exam-data/*.json",
     "eval-student-submissions": "src/eval-student-submissions.sh ./students/*.json"
   },
   "author": "Adrien Joly <adrien.joly@gmail.com>",
