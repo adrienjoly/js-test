@@ -151,13 +151,13 @@ STUDENT: adrien_gillmann
   |  ✅ exécution du code sans erreur
   |  ✅ écoute sur port 3000 avec app.listen()
   |  ✅ définition de route GET /bonjour avec app.get()
-  |  ✅ cas nominal: GET /bonjour retourne le prénom
+  |  ❌ cas nominal: GET /bonjour retourne le prénom
   |  ✅ cas d'erreur: retour de GET /bonjour sans prénom
   |  ✅ cas d'erreur: code 400 de GET /bonjour sans prénom
   | 
-  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1 ]
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 0, 1, 1 ]
   | 
-  | // -> EXERCISE POINTS: 3.75 / 3.75
+  | // -> EXERCISE POINTS: 3.125 / 3.75
   | 
   | ------------- EXERCISE: code8 (variant: 1) -------------
   | 
@@ -249,9 +249,9 @@ STUDENT: adrien_gillmann
   | 
   | // -> EXERCISE POINTS: 3.75 / 3.75
 
-  => code score: 11.892857142857142 / 15 pts
+  => code score: 11.267857142857142 / 15 pts
 
-=> TOTAL STUDENT SCORE: 15.89 / 20
+=> TOTAL STUDENT SCORE: 15.27 / 20
 
 
 ================================

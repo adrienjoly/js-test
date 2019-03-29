@@ -187,19 +187,22 @@ Respecter les chaines de caractères fournies à la lettre.
   const { error, pathHandlers, listenedPorts } = await runInContext();
   const pathHandler = pathHandlers['/{{{path}}}'] || (() => {});
   const callHandler = (queryParams) => new Promise((resolve) => {
-    let statusCode;
-    const timeout = setTimeout(() => resolve({ timeout: true }), 100);
+    let toResolve = {};
+    setTimeout(() => resolve(toResolve), 100);
     const req = {
       query: queryParams
     };
     const res = {
       status: (code) => {
-        statusCode = code;
+        toResolve.statusCode = code;
         return res;
       },
       send: (text) => {
-        clearTimeout(timeout);
-        resolve({ text, statusCode });
+        if (toResolve.sent) {
+          toResolve = { error: 'a response to that query was already sent' };
+        } else {
+          toResolve = { ...toResolve, text, sent: true };
+        }
       }
     };
     pathHandler(req, res);

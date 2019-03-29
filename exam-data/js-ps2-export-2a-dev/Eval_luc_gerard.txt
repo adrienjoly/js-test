@@ -142,9 +142,9 @@ STUDENT: luc_gerard
   | 
   | // CODE EVALUATION:
   | 
-(node:44045) UnhandledPromiseRejectionWarning: Error: unable to connect
-(node:44045) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
-(node:44045) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:47014) UnhandledPromiseRejectionWarning: Error: unable to connect
+(node:47014) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
+(node:47014) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
   |  ❌ erreur survenue en exécutant le code: ReferenceError: app is not defined
   |  ❌ écoute sur port 3000 avec myApp.listen()
   |  ✅ définition de route GET /bonjour avec myApp.get()
