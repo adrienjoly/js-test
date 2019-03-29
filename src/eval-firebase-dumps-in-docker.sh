@@ -33,6 +33,11 @@ do
 
   # pad each csv column with spaces, for better lisibility
   column -t -s "," $EVAL_PATH/scores-detail.csv > $EVAL_PATH/scores-detail.txt
+
+  # render distribution chart
+  node -e "require('./src/renderDistributionChart').renderFromScoreFileStream({}, console.log);" \
+    < $EVAL_PATH/scores-detail.csv \
+    > $EVAL_PATH/scores-chart.txt
 done;
 
 echo "✅  Done!"
