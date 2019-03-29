@@ -148,16 +148,16 @@ STUDENT: adrien_gillmann
   | 
   | // CODE EVALUATION:
   | 
-  |  ❌ erreur survenue en exécutant le code: TypeError: express.json is not a function
-  |  ❌ écoute sur port 3000 avec app.listen()
+  |  ✅ exécution du code sans erreur
+  |  ✅ écoute sur port 3000 avec app.listen()
   |  ✅ définition de route GET /bonjour avec app.get()
-  |  ❌ cas nominal: GET /bonjour retourne le prénom
-  |  ❌ cas d'erreur: retour de GET /bonjour sans prénom
-  |  ❌ cas d'erreur: code 400 de GET /bonjour sans prénom
+  |  ✅ cas nominal: GET /bonjour retourne le prénom
+  |  ✅ cas d'erreur: retour de GET /bonjour sans prénom
+  |  ✅ cas d'erreur: code 400 de GET /bonjour sans prénom
   | 
-  | // -> STUDENT SCORE ARRAY: [ 0, 0, 1, 0, 0, 0 ]
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 1 ]
   | 
-  | // -> EXERCISE POINTS: 0.625 / 3.75
+  | // -> EXERCISE POINTS: 3.75 / 3.75
   | 
   | ------------- EXERCISE: code8 (variant: 1) -------------
   | 
@@ -249,9 +249,9 @@ STUDENT: adrien_gillmann
   | 
   | // -> EXERCISE POINTS: 3.75 / 3.75
 
-  => code score: 8.767857142857142 / 15 pts
+  => code score: 11.892857142857142 / 15 pts
 
-=> TOTAL STUDENT SCORE: 12.77 / 20
+=> TOTAL STUDENT SCORE: 15.89 / 20
 
 
 ================================

@@ -168,9 +168,12 @@ Respecter les chaines de caractères fournies à la lettre.
         listen: (port) => {
           listenedPorts.push(port);
         },
+        use: () => {},
       };
       return instance;
     };
+    express.json = () => {};
+    express.urlencoded = () => {};
     const {{app}} = express();
     const require = () => express;
     try {
