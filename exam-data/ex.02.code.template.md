@@ -97,9 +97,9 @@ const MongoClient = require('mongodb').MongoClient;
     normalisedCode.includes('async') && normalisedCode.includes('await')
       ? res(1, 'utiliser async et await')
       : res(0, 'utiliser async et await'),
-    !successfulExec.error
+    !successfulExec.error && !successfulExec.lastErrParams.length
       ? res(1, 'exécution du code sans erreur')
-      : res(0, `erreur survenue en exécutant le code: ${successfulExec.error}`),
+      : res(0, `erreur survenue en exécutant le code: ${successfulExec.error || successfulExec.lastErrParams}`),
     successfulExec.lastLogParams[1] == EXPECTED_ARRAY
       ? res(1, 'cas nominal: tableau de récupéré et affiché dans la console')
       : res(0, `cas nominal: affiché inattendu dans la console: ${successfulExec.lastLogParams[1]}`),
