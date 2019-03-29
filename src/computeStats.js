@@ -1,3 +1,8 @@
+var SCORE_DECIMAL_DIGITS = 2;
+
+// note: returns a string
+const renderScore = (score) => parseFloat(score).toFixed(SCORE_DECIMAL_DIGITS);
+
 function sum(a, b) {
   return a + b;
 }
@@ -21,4 +26,32 @@ const computeStats = (studentScores) => {
   };
 };
 
+const fromScoreFileStream = ({stream = process.stdin, skipHeader = true} = {}, cb) => {
+  const reader = require('readline').createInterface({
+    input: stream
+  });
+  const studentScores = [];
+  reader.on('line', line => {
+    if (skipHeader) {
+      skipHeader = false;
+      // this will skip the first line (header)
+    } else {
+      const [ , ...scores ] = line.split(',');
+      studentScores.push(scores.map(nb => parseFloat(nb)));
+    }
+  });
+  reader.on('close', () => cb(computeStats(studentScores)));
+};
+
+const renderCsvLinesFromScoreFileStream = (params, cb) =>
+  fromScoreFileStream(params, ({ min, average, median, max }) =>
+    cb([
+      [ '(MIN)' ].concat(min.map(renderScore)),
+      [ '(AVERAGE)' ].concat(average.map(renderScore)),
+      [ '(MEDIAN)' ].concat(median.map(renderScore)),
+      [ '(MAX)' ].concat(max.map(renderScore)),
+    ].map(line => line.join(',')).join('\n'))
+  );
+
 module.exports = computeStats;
+module.exports.renderCsvLinesFromScoreFileStream = renderCsvLinesFromScoreFileStream;

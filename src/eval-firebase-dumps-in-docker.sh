@@ -31,13 +31,19 @@ do
   node src/extract-scores-from-eval-log.js <$EVAL_PATH/eval.log \
     >>$EVAL_PATH/scores-detail.csv
 
-  # pad each csv column with spaces, for better lisibility
-  column -t -s "," $EVAL_PATH/scores-detail.csv > $EVAL_PATH/scores-detail.txt
-
   # render distribution chart
   node -e "require('./src/renderDistributionChart').renderFromScoreFileStream({}, console.log);" \
     < $EVAL_PATH/scores-detail.csv \
     > $EVAL_PATH/scores-chart.txt
+
+  # append statistics to scores-detail.csv
+  node -e "require('./src/computeStats').renderCsvLinesFromScoreFileStream({}, console.log);" \
+    < $EVAL_PATH/scores-detail.csv \
+    >> $EVAL_PATH/scores-detail.csv
+
+  # pad each csv column with spaces, for better lisibility
+  column -t -s "," $EVAL_PATH/scores-detail.csv > $EVAL_PATH/scores-detail.txt
+
 done;
 
 echo "✅  Done!"

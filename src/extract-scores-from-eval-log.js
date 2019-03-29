@@ -1,9 +1,6 @@
 // Extract student scores from eval.log to scores.csv
 
 const readline = require('readline');
-const computeStats = require('./computeStats');
-
-const studentScores = []; // for each student: total score followed by number of points for each question
 
 var SCORE_DECIMAL_DIGITS = 2;
 
@@ -50,7 +47,6 @@ class StudentEvalParser {
   }
   flush() {
     const scores = [ this.totalScore ].concat(this.scores);
-    studentScores.push(scores);
     console.log([ this.name ].concat(scores.map(renderScore)).join(','));
   }
 }
@@ -77,13 +73,5 @@ reader.on('line', line => {
 
 reader.on('close', () => {
   if (currentParser) currentParser.flush();
-  const { min, average, median, max } = computeStats(studentScores);
-  const lines = [
-    [ '(MIN)' ].concat(min.map(renderScore)),
-    [ '(AVERAGE)' ].concat(average.map(renderScore)),
-    [ '(MEDIAN)' ].concat(median.map(renderScore)),
-    [ '(MAX)' ].concat(max.map(renderScore)),
-  ];
-  console.log(lines.map(line => line.join(',')).join('\n'));
   process.exit();
 });

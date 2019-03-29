@@ -45,7 +45,6 @@ const renderFromScoreFileStream = ({stream = process.stdin, skipHeader = true} =
   reader.on('close', () => cb(renderDistributionChart({ flatScores: studentScores })));
 };
 
-
 module.exports = renderDistributionChart;
 
 module.exports.renderFromScoreFileStream = renderFromScoreFileStream;
