@@ -32,6 +32,13 @@ function parseAllFrom(sourcePath) {
   return exercises;
 }
 
+const getQuestionIdsFrom = (sourcePath) =>
+  parseAllFrom(sourcePath).reduce(
+    (ids, ex) => ids.concat(ex.questionLines.map(
+      (_, q) => ex._type + (ids.length + q)
+    )), []);
+
 module.exports = {
   parseAllFrom,
+  getQuestionIdsFrom,
 };

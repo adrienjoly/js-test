@@ -67,3 +67,5 @@ async.mapSeries(submissions, evaluateStudent, function(err, res) {
   fs.appendFileSync(SCORES_CHART_FILE, renderDistributionChart({ flatScores }));
   process.exit();
 });
+
+// TODO: use computeState.js or let extract-scores-from-eval-log.js do this

@@ -29,4 +29,22 @@ function renderDistributionChart({ flatScores }) {
     .join('\n');
 }
 
+const renderFromScoreFileStream = ({stream = process.stdin, skipHeader = true} = {}, cb) => {
+  const reader = require('readline').createInterface({
+    input: stream
+  });
+  const studentScores = [];
+  reader.on('line', line => {
+    if (skipHeader) {
+      skipHeader = false;
+      // this will skip the first line (header)
+    } else {
+      studentScores.push(line.split(',')[1]);
+    }
+  });
+  reader.on('close', () => cb(renderDistributionChart({ flatScores: studentScores })));
+};
+
 module.exports = renderDistributionChart;
+
+module.exports.renderFromScoreFileStream = renderFromScoreFileStream;
