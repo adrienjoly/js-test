@@ -1,0 +1,6 @@
+adrien_gillmann     12.77  1  1  1  1  0  2.25  0.625  2.142857142857143   3.75
+adrien_vanpraet     2.00   1  0  0  1  0  0     0      0                   0
+danylo_zhalkovskyy  6.13   1  1  1  1  0  1.5   0.625  0                   0
+luc_gerard          8.13   1  0  0  1  1  1.5   0.625  0                   3
+mickael_chekroun    12.07  1  1  1  1  0  1.5   2.5    1.0714285714285714  3
+valentin_rouviere   8.88   1  0  0  1  1  1.5   0.625  0                   3.75
