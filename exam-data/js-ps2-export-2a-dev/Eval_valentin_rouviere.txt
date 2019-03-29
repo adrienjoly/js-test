@@ -105,13 +105,13 @@ STUDENT: valentin_rouviere
   | 
   |  ✅ ne pas utiliser then() et catch()
   |  ✅ utiliser async et await
-  |  ❌ erreur survenue en exécutant le code: TypeError: MongoClient is not a constructor
-  |  ❌ cas nominal: affiché inattendu dans la console: undefined
+  |  ✅ exécution du code sans erreur
+  |  ❌ cas nominal: affichage inattendu dans la console: undefined
   |  ❌ cas d'erreur: message affiché dans la console: undefined
   | 
-  | // -> STUDENT SCORE ARRAY: [ 1, 1, 0, 0, 0 ]
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 0, 0 ]
   | 
-  | // -> EXERCISE POINTS: 1.5 / 3.75
+  | // -> EXERCISE POINTS: 2.25 / 3.75
   | 
   | ------------- EXERCISE: code7 (variant: 2) -------------
   | 
@@ -215,6 +215,6 @@ STUDENT: valentin_rouviere
   | 
   | // -> EXERCISE POINTS: 3.75 / 3.75
 
-  => code score: 5.25 / 15 pts
+  => code score: 6 / 15 pts
 
-=> TOTAL STUDENT SCORE: 8.25 / 20
+=> TOTAL STUDENT SCORE: 9.00 / 20

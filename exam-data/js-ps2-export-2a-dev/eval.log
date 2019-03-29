@@ -104,7 +104,7 @@ STUDENT: adrien_gillmann
   |  ✅ ne pas utiliser then() et catch()
   |  ✅ utiliser async et await
   |  ✅ exécution du code sans erreur
-  |  ❌ cas nominal: affiché inattendu dans la console: undefined
+  |  ❌ cas nominal: affichage inattendu dans la console: undefined
   |  ❌ cas d'erreur: message affiché dans la console: undefined
   | 
   | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 0, 0 ]
@@ -537,7 +537,7 @@ STUDENT: danylo_zhalkovskyy
   |  ✅ ne pas utiliser then() et catch()
   |  ✅ utiliser async et await
   |  ❌ erreur survenue en exécutant le code: SyntaxError: Unexpected token =>
-  |  ❌ cas nominal: affiché inattendu dans la console: undefined
+  |  ❌ cas nominal: affichage inattendu dans la console: undefined
   |  ❌ cas d'erreur: message affiché dans la console: undefined
   | 
   | // -> STUDENT SCORE ARRAY: [ 1, 1, 0, 0, 0 ]
@@ -763,7 +763,7 @@ STUDENT: luc_gerard
   |  ✅ ne pas utiliser then() et catch()
   |  ✅ utiliser async et await
   |  ❌ erreur survenue en exécutant le code: TypeError: MongoClient.connect(...) is not a function
-  |  ❌ cas nominal: affiché inattendu dans la console: undefined
+  |  ❌ cas nominal: affichage inattendu dans la console: undefined
   |  ❌ cas d'erreur: message affiché dans la console: undefined
   | 
   | // -> STUDENT SCORE ARRAY: [ 1, 1, 0, 0, 0 ]
@@ -803,9 +803,9 @@ STUDENT: luc_gerard
   | 
   | // CODE EVALUATION:
   | 
-(node:50374) UnhandledPromiseRejectionWarning: Error: unable to connect
-(node:50374) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
-(node:50374) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:53431) UnhandledPromiseRejectionWarning: Error: unable to connect
+(node:53431) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
+(node:53431) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
   |  ❌ erreur survenue en exécutant le code: ReferenceError: app is not defined
   |  ❌ écoute sur port 3000 avec myApp.listen()
   |  ❌ définition de route GET /bonjour avec myApp.get()
@@ -983,7 +983,7 @@ STUDENT: mickael_chekroun
   |  ✅ ne pas utiliser then() et catch()
   |  ✅ utiliser async et await
   |  ❌ erreur survenue en exécutant le code: SyntaxError: Unexpected end of input
-  |  ❌ cas nominal: affiché inattendu dans la console: undefined
+  |  ❌ cas nominal: affichage inattendu dans la console: undefined
   |  ❌ cas d'erreur: message affiché dans la console: undefined
   | 
   | // -> STUDENT SCORE ARRAY: [ 1, 1, 0, 0, 0 ]
@@ -1232,13 +1232,13 @@ STUDENT: valentin_rouviere
   | 
   |  ✅ ne pas utiliser then() et catch()
   |  ✅ utiliser async et await
-  |  ❌ erreur survenue en exécutant le code: TypeError: MongoClient is not a constructor
-  |  ❌ cas nominal: affiché inattendu dans la console: undefined
+  |  ✅ exécution du code sans erreur
+  |  ❌ cas nominal: affichage inattendu dans la console: undefined
   |  ❌ cas d'erreur: message affiché dans la console: undefined
   | 
-  | // -> STUDENT SCORE ARRAY: [ 1, 1, 0, 0, 0 ]
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 0, 0 ]
   | 
-  | // -> EXERCISE POINTS: 1.5 / 3.75
+  | // -> EXERCISE POINTS: 2.25 / 3.75
   | 
   | ------------- EXERCISE: code7 (variant: 2) -------------
   | 
@@ -1342,6 +1342,6 @@ STUDENT: valentin_rouviere
   | 
   | // -> EXERCISE POINTS: 3.75 / 3.75
 
-  => code score: 5.25 / 15 pts
+  => code score: 6 / 15 pts
 
-=> TOTAL STUDENT SCORE: 8.25 / 20
+=> TOTAL STUDENT SCORE: 9.00 / 20

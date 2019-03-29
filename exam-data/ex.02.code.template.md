@@ -45,25 +45,32 @@ const MongoClient = require('mongodb').MongoClient;
   const EXPECTED_ARRAY = [ '__ expected result __' ];
   const EXPECTED_ERROR = new Error('unable to connect');
   const makeMongoClient = ({ shouldFail }) => {
-    const client = {
-      connect: async (url) => {
+    class MongoClient {
+      constuctor(url) {
         if (shouldFail) throw EXPECTED_ERROR;
-        if (url === 'mongodb://localhost:27017/{{{db}}}') return Promise.resolve(client);
+        if (url === 'mongodb://localhost:27017/{{{db}}}') return Promise.resolve(this);
         else throw new Error(`unexpected connection url: ${url}`);
-      },
-      db: (name) => {
-        if (name === '{{{db}}}') return client;
+      }
+      async connect (url) {
+        if (shouldFail) throw EXPECTED_ERROR;
+        if (url === 'mongodb://localhost:27017/{{{db}}}') return Promise.resolve(this);
+        else throw new Error(`unexpected connection url: ${url}`);
+      }
+      db (name) {
+        if (name === '{{{db}}}') return this;
         else throw new Error(`unexpected db name: ${name}`);
-      },
-      collection: (name) => {
-        if (name === '{{{coll}}}') return client;
+      }
+      collection (name) {
+        if (name === '{{{coll}}}') return this;
         else throw new Error(`unexpected coll name: ${name}`);
-      },
-      find: () => ({
-        toArray: async () => EXPECTED_ARRAY
-      })
-    };
-    return client;
+      }
+      find () {
+        return { toArray: async () => EXPECTED_ARRAY };
+      }
+    }
+    const instance = new MongoClient();
+    MongoClient.connect = instance.connect;
+    return MongoClient;
   };
   async function runInContext({ shouldFail }) {
     let error = undefined;
@@ -103,7 +110,7 @@ const MongoClient = require('mongodb').MongoClient;
       : res(0, `erreur survenue en exécutant le code: ${successfulExec.error || successfulExec.lastErrParams}`),
     successfulExec.lastLogParams[1] == EXPECTED_ARRAY
       ? res(1, 'cas nominal: tableau de récupéré et affiché dans la console')
-      : res(0, `cas nominal: affiché inattendu dans la console: ${successfulExec.lastLogParams[1]}`),
+      : res(0, `cas nominal: affichage inattendu dans la console: ${successfulExec.lastLogParams[1]}`),
     impossibleExec.lastErrParams[1] == EXPECTED_ERROR
       ? res(1, 'cas d\'erreur: message bien affiché dans la console')
       : res(0, `cas d\'erreur: message affiché dans la console: ${successfulExec.lastErrParams[1]}`),

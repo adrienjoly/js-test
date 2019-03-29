@@ -99,7 +99,7 @@ STUDENT: mickael_chekroun
   |  ✅ ne pas utiliser then() et catch()
   |  ✅ utiliser async et await
   |  ❌ erreur survenue en exécutant le code: SyntaxError: Unexpected end of input
-  |  ❌ cas nominal: affiché inattendu dans la console: undefined
+  |  ❌ cas nominal: affichage inattendu dans la console: undefined
   |  ❌ cas d'erreur: message affiché dans la console: undefined
   | 
   | // -> STUDENT SCORE ARRAY: [ 1, 1, 0, 0, 0 ]

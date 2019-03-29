@@ -97,7 +97,7 @@ STUDENT: adrien_gillmann
   |  ✅ ne pas utiliser then() et catch()
   |  ✅ utiliser async et await
   |  ✅ exécution du code sans erreur
-  |  ❌ cas nominal: affiché inattendu dans la console: undefined
+  |  ❌ cas nominal: affichage inattendu dans la console: undefined
   |  ❌ cas d'erreur: message affiché dans la console: undefined
   | 
   | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 0, 0 ]

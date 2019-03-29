@@ -102,7 +102,7 @@ STUDENT: luc_gerard
   |  ✅ ne pas utiliser then() et catch()
   |  ✅ utiliser async et await
   |  ❌ erreur survenue en exécutant le code: TypeError: MongoClient.connect(...) is not a function
-  |  ❌ cas nominal: affiché inattendu dans la console: undefined
+  |  ❌ cas nominal: affichage inattendu dans la console: undefined
   |  ❌ cas d'erreur: message affiché dans la console: undefined
   | 
   | // -> STUDENT SCORE ARRAY: [ 1, 1, 0, 0, 0 ]
@@ -142,9 +142,9 @@ STUDENT: luc_gerard
   | 
   | // CODE EVALUATION:
   | 
-(node:50374) UnhandledPromiseRejectionWarning: Error: unable to connect
-(node:50374) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
-(node:50374) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:53431) UnhandledPromiseRejectionWarning: Error: unable to connect
+(node:53431) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
+(node:53431) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
   |  ❌ erreur survenue en exécutant le code: ReferenceError: app is not defined
   |  ❌ écoute sur port 3000 avec myApp.listen()
   |  ❌ définition de route GET /bonjour avec myApp.get()
