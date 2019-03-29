@@ -1,5 +1,9 @@
 // requires caolan's async
 
+try {
+  XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest;
+} catch (err) {};
+
 // fixed version of variant3() => returns 0, 1 or 2, depending on the value of number
 function getVariantByStudentId (id, variants) {
   // modulo that also works for big integers
@@ -24,31 +28,50 @@ function makeCodeEvaluator(jailed, async, codeGradingOptions) {
 
   function runCodeInSandbox(code, callback) {
     var plugin = null;
-    var timeout = null;
+    // var timeout = null;
     function onDone(err, results){
+      /*
       clearTimeout(timeout);
       timeout = null;
+      */
       callback(err, results);
       plugin.disconnect();
     }
-    var timeoutMessage = 'TIMEOUT: infinite loop?'; // can be overrided by evaluation code
+    // var timeoutMessage = 'TIMEOUT: infinite loop?'; // can be overrided by evaluation code
     var api = {
+      _xhr: (method = 'GET', url, cb) => {
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function() {
+          if (this.readyState === 4) {
+            cb(null, this);
+          }
+        };
+        xhr.onerror = function(error) {
+          cb(error || new Error('error from XMLHttpRequest'));
+        };
+        xhr.open(method, url);
+        xhr.send();
+      },
+      /*
       _setTimeoutMessage: function(message){
         timeoutMessage = message;
       },
+      */
       _log: console.log.bind(console),
       // this function will be called with resulting arguments by sandboxed script, when done
       _send: function(){
         onDone(null, arguments);
       },
+      /*
       _sendOnce: function(){
         timeout && onDone(null, arguments);
       },
+      */
     };
     plugin = new jailed.DynamicPlugin(code, api, { failOnRuntimeError: true });
     plugin.whenFailed(onDone);
     //plugin.whenConnected(onDone);
-    timeout = setTimeout(function(){ onDone(timeoutMessage); }, 2000);
+    // timeout = setTimeout(function(){ onDone(timeoutMessage); }, 2000);
   }
 
   function runCodeInWrappedSandbox(code, callback) {
