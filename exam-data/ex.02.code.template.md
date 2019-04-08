@@ -124,8 +124,8 @@ const {{app}} = express();
 
 Quelles lignes de code faut-il ajouter à ce fichier pour que:
 
- - `curl http://localhost:3000/{{{path}}}` réponde "`Missing country`" (toujours au format texte brut, et sans les guillemets) avec un code `400` de status HTTP,
- - `curl http://localhost:3000/{{{path}}}?country=Zimbabwe` réponde "`Hello, Zimbabwe!`" (au format texte brut, sans les guillemets, et le nom du pays devra systématiquement correspondre à celui passé en paramètre),
+ - `curl -X POST http://localhost:3000/{{{path}}}` réponde "`Missing country`" (toujours au format texte brut, et sans les guillemets) avec un code `400` de status HTTP,
+ - `curl -X POST http://localhost:3000/{{{path}}}?country=Zimbabwe` réponde "`Hello, Zimbabwe!`" (au format texte brut, sans les guillemets, et le nom du pays devra systématiquement correspondre à celui passé en paramètre),
 
 ... une fois qu'on aura exécuté ce programme avec `node server.js` ?
 
@@ -139,7 +139,7 @@ Respecter les chaines de caractères fournies à la lettre.
 
 ```js
 // expected solution
-{{app}}.get('/{{{path}}}', (req, res) => {
+{{app}}.post('/{{{path}}}', (req, res) => {
   const { country } = req.query;
   res
     .status(country ? 200 : 400)
@@ -163,7 +163,8 @@ Respecter les chaines de caractères fournies à la lettre.
     };
     const express = () => {
       const instance = {
-        get: (path, handler) => {
+        get: () => instance,
+        post: (path, handler) => {
           pathHandlers[path] = handler;
           return instance;
         },
@@ -220,22 +221,21 @@ Respecter les chaines de caractères fournies à la lettre.
     listenedPorts.includes(3000)
       ? res(1, 'écoute sur port 3000 avec {{app}}.listen()')
       : res(0, 'écoute sur port 3000 avec {{app}}.listen()'),
-    `_studentCode`.includes(`.get('/{{{path}}}', `)
-      ? res(1, 'définition de route GET /{{{path}}} avec {{app}}.get()')
-      : res(0, 'définition de route GET /{{{path}}} avec {{app}}.get()'),
+    `_studentCode`.includes(`.post('/{{{path}}}', `)
+      ? res(1, 'définition de route POST /{{{path}}} avec {{app}}.post()')
+      : res(0, 'définition de route POST /{{{path}}} avec {{app}}.post()'),
     (await callHandler({ country: '_france_' })).text === 'Hello, _france_!'
-      ? res(1, 'cas nominal: GET /{{{path}}} salue le pays')
-      : res(0, 'cas nominal: GET /{{{path}}} salue le pays'),
+      ? res(1, 'cas nominal: POST /{{{path}}} salue le pays')
+      : res(0, 'cas nominal: POST /{{{path}}} salue le pays'),
     (await callHandler({})).text === 'Missing country'
-      ? res(1, 'cas d\'erreur: retour de GET /{{{path}}} sans pays')
-      : res(0, 'cas d\'erreur: retour de GET /{{{path}}} sans pays'),
+      ? res(1, 'cas d\'erreur: retour de POST /{{{path}}} sans pays')
+      : res(0, 'cas d\'erreur: retour de POST /{{{path}}} sans pays'),
     (await callHandler({})).statusCode === 400
-      ? res(1, 'cas d\'erreur: code 400 de GET /{{{path}}} sans pays')
-      : res(0, 'cas d\'erreur: code 400 de GET /{{{path}}} sans pays'),
+      ? res(1, 'cas d\'erreur: code 400 de POST /{{{path}}} sans pays')
+      : res(0, 'cas d\'erreur: code 400 de POST /{{{path}}} sans pays'),
   ];
   application.remote._send(null, scoreArray);
 })();
-// TODO: use POST instead of GET
 ```
 
 ---
