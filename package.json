@@ -27,7 +27,7 @@
     "test": "node ./src/test-solutions.js",
     "start": "npm run build && node src/server.js",
     "deploy-firebase": "./src/deploy-firebase.sh",
-    "deploy-heroku": "echo \"⚠ don't forget to rebuild and commit first!\" && PROJECT_ID=__TODO__ && echo Deploying to $PROJECT_ID... && heroku git:remote -a $PROJECT_ID && git push heroku `git rev-parse --abbrev-ref HEAD`:master",
+    "deploy-heroku": "echo \"⚠ don't forget to rebuild and commit first!\" && PROJECT_ID=js-ps2 && echo Deploying to $PROJECT_ID... && heroku git:remote -a $PROJECT_ID && git push heroku `git rev-parse --abbrev-ref HEAD`:master",
     "deploy-heroku-instances": "./src/deploy-heroku-instances.sh",
     "deploy-firebase-instances": "./src/deploy-firebase-instances.sh",
     "eval": "node ./src/evaluate.js",
