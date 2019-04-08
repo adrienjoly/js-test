@@ -5,15 +5,9 @@ Ré-écrire ce code de manière à ce qu'il utilise `async` et `await`, au lieu 
 ```js
 const MongoClient = require('mongodb').MongoClient;
 MongoClient.connect('mongodb://localhost:27017/{{{db}}}')
-  .then(function (client) {
-    return client.db('{{{db}}}').collection('{{{coll}}}').find().toArray();
-  })
-  .then(function (dates) {
-    console.log('{{{coll}}}:', dates);
-  })
-  .catch(function (err) {
-    console.error('erreur:', err);
-  });
+  .then((client) => client.db('{{{db}}}').collection('{{{coll}}}').find().toArray())
+  .then(({{{coll}}}) => console.log('{{{coll}}}:', {{{coll}}}))
+  .catch((err) => console.error('erreur:', err));
 ```
 
 - { "db": "myapp", "coll": "dates" }
@@ -29,8 +23,8 @@ const MongoClient = require('mongodb').MongoClient;
 (async () => {
   try {
     const client = await MongoClient.connect('mongodb://localhost:27017/{{{db}}}');
-    const dates = await client.db('{{{db}}}').collection('{{{coll}}}').find().toArray();
-    console.log('{{{coll}}}:', dates);
+    const {{{coll}}} = await client.db('{{{db}}}').collection('{{{coll}}}').find().toArray();
+    console.log('{{{coll}}}:', {{{coll}}});
   } catch (err) {
     console.error('erreur:', err);
   }
@@ -121,7 +115,7 @@ const MongoClient = require('mongodb').MongoClient;
 
 ---
 
-Le fichier `index.js` contient le code suivant:
+Le fichier `server.js` contient le code suivant:
 
 ```js
 const express = require('express');
@@ -130,15 +124,15 @@ const {{app}} = express();
 
 Quelles lignes de code faut-il ajouter à ce fichier pour que:
 
- - `curl http://localhost:3000/{{{path}}}?prenom=Michelle` réponde "`Hello Michelle`" (au format texte brut, sans les guillemets, et le prénom devra systématiquement correspondre à celui passé en paramètre),
- - `curl http://localhost:3000/{{{path}}}` réponde "`Prénom manquant`" (toujours au format texte brut, et sans les guillemets) avec un code `400` de status HTTP,
+ - `curl http://localhost:3000/{{{path}}}` réponde "`Missing country`" (toujours au format texte brut, et sans les guillemets) avec un code `400` de status HTTP,
+ - `curl http://localhost:3000/{{{path}}}?country=Zimbabwe` réponde "`Hello, Zimbabwe!`" (au format texte brut, sans les guillemets, et le nom du pays devra systématiquement correspondre à celui passé en paramètre),
 
-... une fois qu'on aura exécuté ce programme avec `node index.js` ?
+... une fois qu'on aura exécuté ce programme avec `node server.js` ?
 
 Respecter les chaines de caractères fournies à la lettre.
 
-- { "app": "app", "path": "bonjour" }
-- { "app": "myApp", "path": "bonjour" }
+- { "app": "app", "path": "hello" }
+- { "app": "myApp", "path": "hi" }
 - { "app": "myApp", "path": "hello" }
 
 ???
@@ -146,10 +140,10 @@ Respecter les chaines de caractères fournies à la lettre.
 ```js
 // expected solution
 {{app}}.get('/{{{path}}}', (req, res) => {
-  const { prenom } = req.query;
+  const { country } = req.query;
   res
-    .status(prenom ? 200 : 400)
-    .send(prenom ? 'Hello ' + prenom : 'Prénom manquant');
+    .status(country ? 200 : 400)
+    .send(country ? 'Hello, ' + country + '!' : 'Missing country');
 });
 {{app}}.listen(3000);
 ```
@@ -229,23 +223,24 @@ Respecter les chaines de caractères fournies à la lettre.
     `_studentCode`.includes(`.get('/{{{path}}}', `)
       ? res(1, 'définition de route GET /{{{path}}} avec {{app}}.get()')
       : res(0, 'définition de route GET /{{{path}}} avec {{app}}.get()'),
-    (await callHandler({ prenom: '_étienne_' })).text === 'Hello _étienne_'
-      ? res(1, 'cas nominal: GET /{{{path}}} retourne le prénom')
-      : res(0, 'cas nominal: GET /{{{path}}} retourne le prénom'),
-    (await callHandler({})).text === 'Prénom manquant'
-      ? res(1, 'cas d\'erreur: retour de GET /{{{path}}} sans prénom')
-      : res(0, 'cas d\'erreur: retour de GET /{{{path}}} sans prénom'),
+    (await callHandler({ country: '_france_' })).text === 'Hello, _france_!'
+      ? res(1, 'cas nominal: GET /{{{path}}} salue le pays')
+      : res(0, 'cas nominal: GET /{{{path}}} salue le pays'),
+    (await callHandler({})).text === 'Missing country'
+      ? res(1, 'cas d\'erreur: retour de GET /{{{path}}} sans pays')
+      : res(0, 'cas d\'erreur: retour de GET /{{{path}}} sans pays'),
     (await callHandler({})).statusCode === 400
-      ? res(1, 'cas d\'erreur: code 400 de GET /{{{path}}} sans prénom')
-      : res(0, 'cas d\'erreur: code 400 de GET /{{{path}}} sans prénom'),
+      ? res(1, 'cas d\'erreur: code 400 de GET /{{{path}}} sans pays')
+      : res(0, 'cas d\'erreur: code 400 de GET /{{{path}}} sans pays'),
   ];
   application.remote._send(null, scoreArray);
 })();
+// TODO: use POST instead of GET
 ```
 
 ---
 
-L'objectif est d'afficher dans la sortie standard (c.a.d. en utilisant `console.log()`) l'adresse email de plusieurs personnes dont les données seront à récupérer en JSON, depuis des URLs listées dans un tableau JavaScript. L'adresse email est fournie via la propriété `email` de la réponse à ces requêtes.
+L'objectif est d'afficher dans la sortie standard (c.a.d. en utilisant `console.log()`) le nom de plusieurs personnes dont les données seront à récupérer en JSON, depuis des URLs listées dans un tableau JavaScript. Le nom est fourni via la propriété `name` de la réponse à ces requêtes.
 
 Pour cela, nous allons compléter le programme Node.js suivant:
 
@@ -260,16 +255,16 @@ const urlsToFetch = [
 
 Consignes à respecter:
 
- - Seules les adresses email doivent être affichées, sans préfixe et à raison d'une par ligne.
- - L'affichage de ces adresses doit respecter l'ordre de leurs URLs respectives dans le tableau `urlsToFetch`.
+ - Seul le nom des personnes doit être affiché, sans préfixe et à raison d'une par ligne.
+ - L'affichage de ces noms doit respecter l'ordre de leurs URLs respectives dans le tableau `urlsToFetch`.
  - Votre programme devra utiliser le module `https` fourni par Node.js pour effectuer les requêtes. Aucune autre dépendance ne pourra être utilisée.
- - En cas d'erreur lors d'une requête, afficher "`oops!`" (sans les guillemets) au lieu de l'adresse email dont la récupération a échoué.
+ - En cas d'erreur lors d'une requête, afficher "`oops!`" (sans les guillemets) au lieu du nom dont la récupération a échoué.
  - Enfin, les URLs fournies dans `urlsToFetch`, leur ordre, ainsi que leur nombre peuvent changer. Le programme doit donc fonctionner en s'adaptant au contenu de ce tableau.
 
-Fournir les lignes de code à ajouter au programme fourni ci-dessus de manière à ce qu'il affiche les adresses email quand on l'exécutera avec `node`.
+Fournir les lignes de code à ajouter au programme fourni ci-dessus de manière à ce qu'il affiche les noms quand on l'exécutera avec `node`.
 
-- { "url1": "https://js-jsonplaceholder.herokuapp.com/users/1", "url2": "https://js-jsonplaceholder.herokuapp.com/users/2", "url3": "https://js-jsonplaceholder.herokuapp.com/users/3", "email1": "Sincere@april.biz", "email2": "Shanna@melissa.tv", "email3": "Nathan@yesenia.net" }
-- { "url3": "https://js-jsonplaceholder.herokuapp.com/users/1", "url2": "https://js-jsonplaceholder.herokuapp.com/users/2", "url1": "https://js-jsonplaceholder.herokuapp.com/users/3", "email3": "Sincere@april.biz", "email2": "Shanna@melissa.tv", "email1": "Nathan@yesenia.net" }
+- { "url1": "https://js-jsonplaceholder.herokuapp.com/users/1", "url2": "https://js-jsonplaceholder.herokuapp.com/users/2", "url3": "https://js-jsonplaceholder.herokuapp.com/users/3", "name1": "Leanne Graham", "name2": "Ervin Howell", "name3": "Clementine Bauch" }
+- { "url3": "https://js-jsonplaceholder.herokuapp.com/users/1", "url2": "https://js-jsonplaceholder.herokuapp.com/users/2", "url1": "https://js-jsonplaceholder.herokuapp.com/users/3", "name3": "Leanne Graham", "name2": "Ervin Howell", "name1": "Clementine Bauch" }
 
 ???
 
@@ -284,7 +279,7 @@ const fetch = (url) => new Promise((resolve, reject) => {
 });
 const fetchAndRender = (url) => new Promise((resolve) => {
   fetch(url)
-    .then(data => resolve(JSON.parse(data).email))
+    .then(data => resolve(JSON.parse(data).name))
     .catch(err => resolve('oops!'));
 });
 (async() => {
@@ -304,21 +299,21 @@ const fetchAndRender = (url) => new Promise((resolve) => {
     '{{{url2}}}',
     '{{{url3}}}',
   ];
-  const expectedEmails = [
-    '{{{email1}}}',
-    '{{{email2}}}',
-    '{{{email3}}}',
+  const expectedNames = [
+    '{{{name1}}}',
+    '{{{name2}}}',
+    '{{{name3}}}',
   ];
-  const expectedFailEmails = [
-    '{{{email1}}}',
+  const expectedFailNames = [
+    '{{{name1}}}',
     'oops!',
-    '{{{email3}}}',
+    '{{{name3}}}',
   ];
   async function runStudentCode({ urlsToFetch, failSecondReq = false }) {
     let error = undefined;
     let logs = [];
     const console = {
-      log: (email) => logs.push(email),
+      log: (name) => logs.push(name),
       error: () => {},
     };
     const respEvtHandlers = {};
@@ -332,10 +327,10 @@ const fetchAndRender = (url) => new Promise((resolve) => {
             respEvtHandlers[evtName] = handler;
           },
         };
-        const email = expectedEmails[urlsToFetch.indexOf(url)];
+        const name = expectedNames[urlsToFetch.indexOf(url)];
         const simulateSuccess = async () => {
           try {
-            const dataParts = ['{ ', '"email": "', email, '" }'];
+            const dataParts = ['{ ', '"name": "', name, '" }'];
             for (var i in dataParts) {
               await respEvtHandlers.data(dataParts[i]);
             }
@@ -386,18 +381,19 @@ const fetchAndRender = (url) => new Promise((resolve) => {
     typeof nominal.retEvtHandlers.error === 'function'
       ? res(1, 'fonction rattachée à l\'évènement "error"')
       : res(0, 'fonction rattachée à l\'évènement "error"'),
-    (new Set(nominal.logs)).toString() === (new Set(expectedEmails)).toString()
-      ? res(1, 'cas nominal: toutes adresses email affichées')
-      : res(0, 'cas nominal: toutes adresses email affichées'),
-    nominal.logs.toString() === expectedEmails.toString()
-      ? res(1, 'cas nominal: adresses email affichées dans l\'ordre')
-      : res(0, 'cas nominal: adresses email affichées dans l\'ordre'),
-    failure.logs.toString() === expectedFailEmails.toString()
-      ? res(1, 'cas d\'erreur: adresses email + "oops!" affichées dans l\'ordre')
-      : res(0, 'cas d\'erreur: adresses email + "oops!" affichées dans l\'ordre'),
+    (new Set(nominal.logs)).toString() === (new Set(expectedNames)).toString()
+      ? res(1, 'cas nominal: tous noms affichés')
+      : res(0, 'cas nominal: tous noms affichés'),
+    nominal.logs.toString() === expectedNames.toString()
+      ? res(1, 'cas nominal: noms affichés dans l\'ordre')
+      : res(0, 'cas nominal: noms affichés dans l\'ordre'),
+    failure.logs.toString() === expectedFailNames.toString()
+      ? res(1, 'cas d\'erreur: noms + "oops!" affichés dans l\'ordre')
+      : res(0, 'cas d\'erreur: noms + "oops!" affichés dans l\'ordre'),
   ];
   application.remote._send(null, scoreArray);
 })();
+// TODO: remplacer oops par un autre message
 ```
 
 ---
