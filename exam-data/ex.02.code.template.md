@@ -400,20 +400,20 @@ const fetchAndRender = (url) => new Promise((resolve) => {
 
 Déployer en production (sur Heroku) un serveur Web en Node.js mettant à disposition les routes suivantes:
 
- - `GET /` retourne le texte "`Bonjour !`" (sans les guillemets)
- - `GET /{{{path}}}` retourne le texte "`{{{text}}}`" (sans les guillemets)
+ - `POST /` retourne le texte "`Bonjour !`" (sans les guillemets)
+ - `POST /{{{path}}}` retourne le texte "`{{{text}}}`" (sans les guillemets)
 
 Au lieu de fournir le code JavaScript de ce serveur, collez seulement l'URL Heroku de ce serveur dans le champ ci-dessous:
 
 - { "path": "text", "text": "test" }
 - { "path": "test", "text": "text" }
-- { "path": "test", "text": "ceci est un test" }
-- { "path": "text", "text": "ceci est un texte" }
+- { "path": "tester", "text": "ceci est un test" }
+- { "path": "texte", "text": "ceci est un texte" }
 
 ???
 
 ```js
-https://frozen-dawn-64094.herokuapp.com
+https://fast-wave-24398.herokuapp.com
 // 👆 run `npm run deploy` from exam-data/app-to-deploy/ to get that URL
 ```
 
@@ -427,9 +427,10 @@ https://frozen-dawn-64094.herokuapp.com
     pathRes:  { responseText: `{{{text}}}` },
   };
   const fetch = (url) => new Promise((resolve) =>
-    application.remote._xhr('GET', url, (error, res) => {
-      const { responseText } = res || {};
-      resolve({ responseText, error });
+    application.remote._xhr('POST', url, (error, res) => {
+      const { responseText, status } = res || {};
+      application.remote._log('POST', url, status, res.code, error);
+      resolve({ responseText, error, status });
     })
   );
   async function callEndpoints(url = `_studentCode`) {
@@ -451,18 +452,18 @@ https://frozen-dawn-64094.herokuapp.com
     appName
       ? res(1, 'URL Heroku reconnue')
       : res(0, `URL Heroku reconnue`),
-    !indexRes.error
-      ? res(1, 'réponse valide de l\'endpoint GET /')
-      : res(0, 'réponse valide de l\'endpoint GET /'),
-    !pathRes.error
-      ? res(1, 'réponse valide de l\'endpoint GET /{{{path}}}')
-      : res(0, 'réponse valide de l\'endpoint GET /{{{path}}}'),
+    !indexRes.error && indexRes.status === 200
+      ? res(1, 'réponse valide de l\'endpoint POST /')
+      : res(0, 'réponse valide de l\'endpoint POST /'),
+    !pathRes.error && indexRes.status === 200
+      ? res(1, 'réponse valide de l\'endpoint POST /{{{path}}}')
+      : res(0, 'réponse valide de l\'endpoint POST /{{{path}}}'),
     indexRes.responseText === expectedRes.indexRes.responseText
-      ? res(1, 'réponse conforme de l\'endpoint GET /')
-      : res(0, 'réponse conforme de l\'endpoint GET /'),
+      ? res(1, 'réponse conforme de l\'endpoint POST /')
+      : res(0, 'réponse conforme de l\'endpoint POST /'),
     pathRes.responseText === expectedRes.pathRes.responseText
-      ? res(1, 'réponse conforme de l\'endpoint GET /{{{path}}}')
-      : res(0, 'réponse conforme de l\'endpoint GET /{{{path}}}'),
+      ? res(1, 'réponse conforme de l\'endpoint POST /{{{path}}}')
+      : res(0, 'réponse conforme de l\'endpoint POST /{{{path}}}'),
   ];
   application.remote._send(null, scoreArray);
 })();
