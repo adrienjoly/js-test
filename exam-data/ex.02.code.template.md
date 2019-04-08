@@ -258,7 +258,7 @@ Consignes à respecter:
  - Seul le nom des personnes doit être affiché, sans préfixe et à raison d'une par ligne.
  - L'affichage de ces noms doit respecter l'ordre de leurs URLs respectives dans le tableau `urlsToFetch`.
  - Votre programme devra utiliser le module `https` fourni par Node.js pour effectuer les requêtes. Aucune autre dépendance ne pourra être utilisée.
- - En cas d'erreur lors d'une requête, afficher "`oops!`" (sans les guillemets) au lieu du nom dont la récupération a échoué.
+ - En cas d'erreur lors d'une requête, afficher "`Error.`" (sans les guillemets) au lieu du nom dont la récupération a échoué.
  - Enfin, les URLs fournies dans `urlsToFetch`, leur ordre, ainsi que leur nombre peuvent changer. Le programme doit donc fonctionner en s'adaptant au contenu de ce tableau.
 
 Fournir les lignes de code à ajouter au programme fourni ci-dessus de manière à ce qu'il affiche les noms quand on l'exécutera avec `node`.
@@ -280,7 +280,7 @@ const fetch = (url) => new Promise((resolve, reject) => {
 const fetchAndRender = (url) => new Promise((resolve) => {
   fetch(url)
     .then(data => resolve(JSON.parse(data).name))
-    .catch(err => resolve('oops!'));
+    .catch(err => resolve('Error.'));
 });
 (async() => {
   for (const i in urlsToFetch) {
@@ -306,7 +306,7 @@ const fetchAndRender = (url) => new Promise((resolve) => {
   ];
   const expectedFailNames = [
     '{{{name1}}}',
-    'oops!',
+    'Error.',
     '{{{name3}}}',
   ];
   async function runStudentCode({ urlsToFetch, failSecondReq = false }) {
@@ -388,12 +388,11 @@ const fetchAndRender = (url) => new Promise((resolve) => {
       ? res(1, 'cas nominal: noms affichés dans l\'ordre')
       : res(0, 'cas nominal: noms affichés dans l\'ordre'),
     failure.logs.toString() === expectedFailNames.toString()
-      ? res(1, 'cas d\'erreur: noms + "oops!" affichés dans l\'ordre')
-      : res(0, 'cas d\'erreur: noms + "oops!" affichés dans l\'ordre'),
+      ? res(1, 'cas d\'erreur: noms + "Error." affichés dans l\'ordre')
+      : res(0, 'cas d\'erreur: noms + "Error." affichés dans l\'ordre'),
   ];
   application.remote._send(null, scoreArray);
 })();
-// TODO: remplacer oops par un autre message
 ```
 
 ---
