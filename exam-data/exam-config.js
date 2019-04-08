@@ -7,7 +7,7 @@ function readfile(filePath) {
 module.exports = {
 
   // Front-end config
-  title: 'Partiel Node.js 2A Dev',
+  title: 'Partiel Node.js 2A TC',
 
   // General settings
   PUBLIC_TEST_MODE: false, // set to false to restrict acccess and identify students using Google Login
