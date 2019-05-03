@@ -29,7 +29,8 @@ function makeCodeEvaluator(jailed, async, codeGradingOptions) {
   function runCodeInSandbox({ code, apiExts = {} }, callback) {
     var plugin = null;
     var timeout = null;
-    var timeoutMessage = 'TIMEOUT: infinite loop?'; // can be overrided by evaluation code
+    var timeoutDelay = 2000;
+    var timeoutMessage = null;
     function onDone(err, results){
       clearTimeout(timeout);
       timeout = null;
@@ -41,8 +42,10 @@ function makeCodeEvaluator(jailed, async, codeGradingOptions) {
       onDone(err, results);
     }
     function sendTimeout() {
-      onDoneOnce(new Error(timeoutMessage));
+      if (!timeout) return;
+      onDoneOnce(new Error(timeoutMessage || `Sandbox Timeout after ${timeoutDelay} ms`));
     }
+    timeout = setTimeout(sendTimeout, timeoutDelay);
     let trackUncaughtRejections = false;
     const uncaughtRejections = [];
     var api = {
@@ -62,7 +65,8 @@ function makeCodeEvaluator(jailed, async, codeGradingOptions) {
       },
       _setTimeoutDelay: function(delayMs){
         if (!timeout) return;
-        clearTimeout();
+        clearTimeout(timeout);
+        timeoutDelay = delayMs;
         timeout = setTimeout(sendTimeout, delayMs);
       },
       _setTimeoutMessage: function(message){
@@ -98,7 +102,6 @@ function makeCodeEvaluator(jailed, async, codeGradingOptions) {
     });
     plugin.whenFailed(onDone);
     //plugin.whenConnected(onDone);
-    timeout = setTimeout(sendTimeout, 2000);
   }
 
   function runCodeInWrappedSandbox({ code, apiExts }, callback) {
