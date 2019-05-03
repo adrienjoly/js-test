@@ -1729,16 +1729,16 @@ STUDENT: ilena_abba
   | // CODE EVALUATION:
   | 
   |  ❌ erreur survenue en exécutant le code: TypeError: res.on is not a function at https.get (eval at runStudentCode (DYNAMIC PLUGIN:68:9), <anonymous>:10:16)
-  |  ❌ fonction rattachée à l'évènement "data"
+  |  ✅ fonction rattachée à l'évènement "data"
   |  ❌ fonction rattachée à l'évènement "end"
-  |  ❌ fonction rattachée à l'évènement "error"
+  |  ✅ fonction rattachée à l'évènement "error"
   |  ✅ cas nominal: tous noms affichés
   |  ❌ cas nominal: noms affichés dans l'ordre
   |  ❌ cas d'erreur: noms + "Error." affichés dans l'ordre
   | 
-  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 0, 1, 0, 0 ]
+  | // -> STUDENT SCORE ARRAY: [ 0, 1, 0, 1, 1, 0, 0 ]
   | 
-  | // -> EXERCISE POINTS: 0.5357142857142857 / 3.75
+  | // -> EXERCISE POINTS: 1.607142857142857 / 3.75
   | 
   | ------------- EXERCISE: code9 (variant: 0) -------------
   | 
@@ -1755,9 +1755,9 @@ STUDENT: ilena_abba
   | 
   | // -> EXERCISE POINTS: 0 / 3.75
 
-  => code score: 2.7857142857142856 / 15 pts
+  => code score: 3.857142857142857 / 15 pts
 
-=> TOTAL STUDENT SCORE: 7.79 / 20
+=> TOTAL STUDENT SCORE: 8.86 / 20
 
 
 ================================
@@ -2706,16 +2706,16 @@ STUDENT: josselin_tual
   | // CODE EVALUATION:
   | 
   |  ❌ erreur survenue en exécutant le code: TypeError: express is not a function
-  |  ❌ fonction rattachée à l'évènement "data"
+  |  ✅ fonction rattachée à l'évènement "data"
   |  ❌ fonction rattachée à l'évènement "end"
-  |  ❌ fonction rattachée à l'évènement "error"
+  |  ✅ fonction rattachée à l'évènement "error"
   |  ✅ cas nominal: tous noms affichés
   |  ❌ cas nominal: noms affichés dans l'ordre
   |  ❌ cas d'erreur: noms + "Error." affichés dans l'ordre
   | 
-  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 0, 1, 0, 0 ]
+  | // -> STUDENT SCORE ARRAY: [ 0, 1, 0, 1, 1, 0, 0 ]
   | 
-  | // -> EXERCISE POINTS: 0.5357142857142857 / 3.75
+  | // -> EXERCISE POINTS: 1.607142857142857 / 3.75
   | 
   | ------------- EXERCISE: code9 (variant: 1) -------------
   | 
@@ -2746,9 +2746,9 @@ STUDENT: josselin_tual
   | 
   | // -> EXERCISE POINTS: 3.75 / 3.75
 
-  => code score: 6.410714285714286 / 15 pts
+  => code score: 7.482142857142858 / 15 pts
 
-=> TOTAL STUDENT SCORE: 10.41 / 20
+=> TOTAL STUDENT SCORE: 11.48 / 20
 
 
 ================================

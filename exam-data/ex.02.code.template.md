@@ -372,17 +372,18 @@ const fetchAndRender = (url) => new Promise((resolve) => {
     application.remote._log((pts ? ' ✅ ' : ' ❌ ') + msg);
     return pts; 
   }
+  const normalisedCode = _studentCode.replace(/[ \n]/g, '');
   const scoreArray = [
     !nominal.error
       ? res(1, 'exécution du code sans erreur')
       : res(0, `erreur survenue en exécutant le code: ${nominal.error}`),
-    typeof nominal.respEvtHandlers.data === 'function'
+    normalisedCode.match(/\.on\(["']data["'],/)
       ? res(1, 'fonction rattachée à l\'évènement "data"')
       : res(0, 'fonction rattachée à l\'évènement "data"'),
-    typeof nominal.respEvtHandlers.end === 'function'
+    normalisedCode.match(/\.on\(["']end["'],/)
       ? res(1, 'fonction rattachée à l\'évènement "end"')
       : res(0, 'fonction rattachée à l\'évènement "end"'),
-    typeof nominal.retEvtHandlers.error === 'function'
+    normalisedCode.match(/\.on\(["']error["'],/)
       ? res(1, 'fonction rattachée à l\'évènement "error"')
       : res(0, 'fonction rattachée à l\'évènement "error"'),
     (new Set(nominal.logs)).toString() === (new Set(expectedNames)).toString()
