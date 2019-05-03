@@ -90,7 +90,7 @@ STUDENT: gregoire_boudsocq
   | 
   |  ✅ ne pas utiliser then() et catch()
   |  ✅ utiliser async et await
-  |  ❌ erreur survenue en exécutant le code: TypeError: MongoClient.connect(...) is not a function
+  |  ❌ erreur survenue en exécutant le code: Error: unexpected connection url: mongodb://localhost:27017/cats
   |  ❌ cas nominal: affichage inattendu dans la console: undefined
   |  ❌ cas d'erreur: message affiché dans la console: undefined
   | 
@@ -136,7 +136,6 @@ STUDENT: gregoire_boudsocq
   | 
   | // CODE EVALUATION:
   | 
-  |  ⚠️ runCodeInSandbox caught a warning: Error: unexpected connection url: mongodb://localhost:27017/cats at Function.connect (DYNAMIC PLUGIN:18:22)
   |  ❌ erreur survenue en exécutant le code: ReferenceError: process is not defined
   |  ❌ écoute sur port 3000 avec myApp.listen()
   |  ❌ définition de route POST /hi avec myApp.post()

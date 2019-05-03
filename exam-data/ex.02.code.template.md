@@ -45,7 +45,7 @@ const MongoClient = require('mongodb').MongoClient;
         if (url === 'mongodb://localhost:27017/{{{db}}}') return Promise.resolve(this);
         else throw new Error(`unexpected connection url: ${url}`);
       }
-      async connect (url) {
+      connect (url) {
         if (shouldFail) throw EXPECTED_ERROR;
         if (url === 'mongodb://localhost:27017/{{{db}}}') return new MongoClient(url);
         else throw new Error(`unexpected connection url: ${url}`);
