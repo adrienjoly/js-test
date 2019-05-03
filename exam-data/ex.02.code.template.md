@@ -143,7 +143,7 @@ Respecter les chaines de caractères fournies à la lettre.
   const { country } = req.query;
   res
     .status(country ? 200 : 400)
-    .send(country ? 'Hello, ' + country + '!' : 'Missing country');
+    .send(country ? `Hello, ${country}!` : 'Missing country');
 });
 {{app}}.listen(3000);
 ```

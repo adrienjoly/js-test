@@ -26,7 +26,7 @@ function makeCodeEvaluator(jailed, async, codeGradingOptions) {
     return a + b;
   }
 
-  function runCodeInSandbox(code, callback) {
+  function runCodeInSandbox({ code, apiExts = {} }, callback) {
     var plugin = null;
     // var timeout = null;
     function onDone(err, results){
@@ -39,6 +39,7 @@ function makeCodeEvaluator(jailed, async, codeGradingOptions) {
     }
     // var timeoutMessage = 'TIMEOUT: infinite loop?'; // can be overrided by evaluation code
     var api = {
+      ...apiExts,
       _xhr: (method = 'GET', url, cb) => {
         var xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function() {
@@ -74,7 +75,7 @@ function makeCodeEvaluator(jailed, async, codeGradingOptions) {
     // timeout = setTimeout(function(){ onDone(timeoutMessage); }, 2000);
   }
 
-  function runCodeInWrappedSandbox(code, callback) {
+  function runCodeInWrappedSandbox({ code, apiExts }, callback) {
     /*
     var consoleErrorInitial = console.error; // backup
     console.error = function(stack) {
@@ -82,7 +83,7 @@ function makeCodeEvaluator(jailed, async, codeGradingOptions) {
       console.log('JAILED ERROR:', stack);
     };
     */
-    runCodeInSandbox(code, function(err, res) {
+    runCodeInSandbox({ code, apiExts }, function(err, res) {
       //console.error = consoleErrorInitial; // restore
       callback(err, res);
     });
@@ -93,17 +94,6 @@ function makeCodeEvaluator(jailed, async, codeGradingOptions) {
     runCodeInWrappedSandbox = codeGradingOptions.wrapper.bind(runCodeInWrappedSandbox);
   }
 
-  function wrapStudentCode(studentCode) {
-    return [
-      //'try {',
-      '/* <STUDENT-CODE> */',
-      studentCode,
-      '/* </STUDENT-CODE> */',
-      //'}',
-      //'catch(e) { application.remote._log("/!\\\\ Execution error:", e.message); };',
-    ].join('\n');
-  }
-
   function runTest(testCode, studentCode, callback) {
     if (!testCode) {
       console.log('// WARNING: NO CODE TESTER => skipping');
@@ -112,19 +102,26 @@ function makeCodeEvaluator(jailed, async, codeGradingOptions) {
       console.log('// WARNING: NO STUDENT CODE => skipping');
       callback(null, [ 0 ]);
     } else {
-      var code = testCode
-        .replace(/`_studentCode`/g, '`' + studentCode.replace(/\\/g, '\\\\').replace(/`/g, '\\\`') + '`')
-        .replace(/_runStudentCode\(\)/g, wrapStudentCode(studentCode))
-        .replace(/_runStudentCodeAgain\(\)/g,
-          wrapStudentCode(studentCode).replace(/function ([^ \(]+)/g, '$1 = function')
-        );
-      //console.log(code);
+      var code = [
+        'application.remote.getStudentCode(_studentCode => {',
+      ].concat(testCode
+        .replace(/`_studentCode`/g, '_studentCode') // kept for backward compatibility
+        .replace(/_runStudentCode\(\)/g, 'eval(_studentCode)') // kept for backward compatibility
+        .replace(/_runStudentCodeAgain\(\)/g, 'eval(_studentCode)') // kept for backward compatibility
+        .split('\n').map(line => '  ' + line)
+      ).concat([
+        '});'
+      ]).join('\n');
+      // console.warn(code.split('\n').map(line => `> ${line}`).join('\n'))
       console.log([
         '// STUDENT CODE:',
         studentCode,
         '// CODE EVALUATION:',
       ].join('\n\n') + '\n');
-      runCodeInWrappedSandbox(code, function(err, res) {
+      const apiExts = {
+        getStudentCode: (callback) => callback(studentCode),
+      };
+      runCodeInWrappedSandbox({ code, apiExts }, function(err, res) {
         if (err) console.log('=> test runner err:', err);
         // TODO: find a way to display the position of the error in the student's code
         // (like when nodejs intercepts and displays the error)
