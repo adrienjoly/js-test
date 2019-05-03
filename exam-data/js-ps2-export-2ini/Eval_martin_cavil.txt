@@ -136,7 +136,7 @@ STUDENT: martin_cavil
   | 
   | // CODE EVALUATION:
   | 
-  |  ❌ erreur survenue en exécutant le code: ReferenceError: process is not defined
+  |  ❌ erreur survenue en exécutant le code: ReferenceError: app is not defined
   |  ❌ écoute sur port 3000 avec myApp.listen()
   |  ❌ définition de route POST /hello avec myApp.post()
   |  ❌ cas nominal: POST /hello salue le pays

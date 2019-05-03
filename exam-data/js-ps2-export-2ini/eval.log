@@ -339,7 +339,7 @@ STUDENT: bilel_elmanouni
   | 
   | // CODE EVALUATION:
   | 
-  |  ❌ erreur survenue en exécutant le code: ReferenceError: process is not defined
+  |  ❌ erreur survenue en exécutant le code: ReferenceError: app is not defined
   |  ❌ écoute sur port 3000 avec myApp.listen()
   |  ❌ définition de route POST /hi avec myApp.post()
   |  ❌ cas nominal: POST /hi salue le pays
@@ -541,7 +541,7 @@ STUDENT: chloe_deguelder
   | 
   | // CODE EVALUATION:
   | 
-  |  ❌ erreur survenue en exécutant le code: ReferenceError: process is not defined
+  |  ❌ erreur survenue en exécutant le code: ReferenceError: app is not defined
   |  ❌ écoute sur port 3000 avec myApp.listen()
   |  ❌ définition de route POST /hi avec myApp.post()
   |  ❌ cas nominal: POST /hi salue le pays
@@ -999,16 +999,16 @@ STUDENT: emma_plouchart
   | 
   | // CODE EVALUATION:
   | 
-  |  ❌ erreur survenue en exécutant le code: ReferenceError: process is not defined
-  |  ❌ écoute sur port 3000 avec app.listen()
+  |  ✅ exécution du code sans erreur
+  |  ✅ écoute sur port 3000 avec app.listen()
   |  ❌ définition de route POST /hello avec app.post()
   |  ❌ cas nominal: POST /hello salue le pays
   |  ❌ cas d'erreur: retour de POST /hello sans pays
   |  ❌ cas d'erreur: code 400 de POST /hello sans pays
   | 
-  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 0, 0, 0 ]
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 0, 0, 0, 0 ]
   | 
-  | // -> EXERCISE POINTS: 0 / 3.75
+  | // -> EXERCISE POINTS: 1.25 / 3.75
   | 
   | ------------- EXERCISE: code8 (variant: 0) -------------
   | 
@@ -1056,9 +1056,9 @@ STUDENT: emma_plouchart
   | 
   | // -> EXERCISE POINTS: 0 / 3.75
 
-  => code score: 1.5 / 15 pts
+  => code score: 2.75 / 15 pts
 
-=> TOTAL STUDENT SCORE: 4.50 / 20
+=> TOTAL STUDENT SCORE: 5.75 / 20
 
 
 ================================
@@ -1201,7 +1201,7 @@ STUDENT: gregoire_boudsocq
   | 
   | // CODE EVALUATION:
   | 
-  |  ❌ erreur survenue en exécutant le code: ReferenceError: process is not defined
+  |  ❌ erreur survenue en exécutant le code: ReferenceError: app is not defined
   |  ❌ écoute sur port 3000 avec myApp.listen()
   |  ❌ définition de route POST /hi avec myApp.post()
   |  ❌ cas nominal: POST /hi salue le pays
@@ -1728,7 +1728,7 @@ STUDENT: ilena_abba
   | 
   | // CODE EVALUATION:
   | 
-  |  ❌ erreur survenue en exécutant le code: TypeError: res.on is not a function at https.get (eval at runStudentCode (DYNAMIC PLUGIN:68:9), <anonymous>:10:16)
+  |  ❌ erreur survenue en exécutant le code: TypeError: res.on is not a function at https.get (eval at runStudentCode (DYNAMIC PLUGIN:68:15), <anonymous>:10:16)
   |  ✅ fonction rattachée à l'évènement "data"
   |  ❌ fonction rattachée à l'évènement "end"
   |  ✅ fonction rattachée à l'évènement "error"
@@ -1900,16 +1900,16 @@ STUDENT: jacques_airey
   | 
   | // CODE EVALUATION:
   | 
-  |  ❌ erreur survenue en exécutant le code: ReferenceError: process is not defined
-  |  ❌ écoute sur port 3000 avec myApp.listen()
+  |  ✅ exécution du code sans erreur
+  |  ✅ écoute sur port 3000 avec myApp.listen()
   |  ✅ définition de route POST /hello avec myApp.post()
   |  ✅ cas nominal: POST /hello salue le pays
   |  ✅ cas d'erreur: retour de POST /hello sans pays
   |  ❌ cas d'erreur: code 400 de POST /hello sans pays
   | 
-  | // -> STUDENT SCORE ARRAY: [ 0, 0, 1, 1, 1, 0 ]
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 0 ]
   | 
-  | // -> EXERCISE POINTS: 1.875 / 3.75
+  | // -> EXERCISE POINTS: 3.125 / 3.75
   | 
   | ------------- EXERCISE: code8 (variant: 1) -------------
   | 
@@ -1995,9 +1995,9 @@ STUDENT: jacques_airey
   | 
   | // -> EXERCISE POINTS: 3.75 / 3.75
 
-  => code score: 10.017857142857142 / 15 pts
+  => code score: 11.267857142857142 / 15 pts
 
-=> TOTAL STUDENT SCORE: 14.02 / 20
+=> TOTAL STUDENT SCORE: 15.27 / 20
 
 
 ================================
@@ -2631,16 +2631,13 @@ STUDENT: josselin_tual
   | 
   | // CODE EVALUATION:
   | 
-  |  ❌ erreur survenue en exécutant le code: ReferenceError: process is not defined
-  |  ❌ écoute sur port 3000 avec app.listen()
+  |  ✅ exécution du code sans erreur
+  |  ✅ écoute sur port 3000 avec app.listen()
   |  ✅ définition de route POST /hello avec app.post()
-  |  ❌ cas nominal: POST /hello salue le pays
-  |  ❌ cas d'erreur: retour de POST /hello sans pays
-  |  ❌ cas d'erreur: code 400 de POST /hello sans pays
+  |  ⚠️ runCodeInSandbox caught a warning: TypeError: req.param is not a function at eval (eval at runInContext (DYNAMIC PLUGIN:35:15), <anonymous>:9:11)
+  |  🔴 runTest caught an error: Sandbox Timeout after 2000 ms
   | 
-  | // -> STUDENT SCORE ARRAY: [ 0, 0, 1, 0, 0, 0 ]
-  | 
-  | // -> EXERCISE POINTS: 0.625 / 3.75
+  | // -> EXERCISE POINTS: 0 / 3.75
   | 
   | ------------- EXERCISE: code8 (variant: 1) -------------
   | 
@@ -2746,9 +2743,9 @@ STUDENT: josselin_tual
   | 
   | // -> EXERCISE POINTS: 3.75 / 3.75
 
-  => code score: 7.482142857142858 / 15 pts
+  => code score: 6.857142857142858 / 15 pts
 
-=> TOTAL STUDENT SCORE: 11.48 / 20
+=> TOTAL STUDENT SCORE: 10.86 / 20
 
 
 ================================
@@ -3565,7 +3562,7 @@ STUDENT: martin_cavil
   | 
   | // CODE EVALUATION:
   | 
-  |  ❌ erreur survenue en exécutant le code: ReferenceError: process is not defined
+  |  ❌ erreur survenue en exécutant le code: ReferenceError: app is not defined
   |  ❌ écoute sur port 3000 avec myApp.listen()
   |  ❌ définition de route POST /hello avec myApp.post()
   |  ❌ cas nominal: POST /hello salue le pays
@@ -3776,16 +3773,16 @@ STUDENT: martin_hurel
   | 
   | // CODE EVALUATION:
   | 
-  |  ❌ erreur survenue en exécutant le code: ReferenceError: process is not defined
+  |  ✅ exécution du code sans erreur
   |  ❌ écoute sur port 3000 avec myApp.listen()
   |  ❌ définition de route POST /hello avec myApp.post()
   |  ❌ cas nominal: POST /hello salue le pays
   |  ❌ cas d'erreur: retour de POST /hello sans pays
   |  ❌ cas d'erreur: code 400 de POST /hello sans pays
   | 
-  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 0, 0, 0 ]
+  | // -> STUDENT SCORE ARRAY: [ 1, 0, 0, 0, 0, 0 ]
   | 
-  | // -> EXERCISE POINTS: 0 / 3.75
+  | // -> EXERCISE POINTS: 0.625 / 3.75
   | 
   | ------------- EXERCISE: code8 (variant: 1) -------------
   | 
@@ -3881,9 +3878,9 @@ STUDENT: martin_hurel
   | 
   | // -> EXERCISE POINTS: 0.75 / 3.75
 
-  => code score: 4.928571428571429 / 15 pts
+  => code score: 5.553571428571429 / 15 pts
 
-=> TOTAL STUDENT SCORE: 7.93 / 20
+=> TOTAL STUDENT SCORE: 8.55 / 20
 
 
 ================================
@@ -4519,16 +4516,16 @@ STUDENT: theodore_konikowski
   | 
   | // CODE EVALUATION:
   | 
-  |  ❌ erreur survenue en exécutant le code: ReferenceError: process is not defined
-  |  ❌ écoute sur port 3000 avec myApp.listen()
+  |  ✅ exécution du code sans erreur
+  |  ✅ écoute sur port 3000 avec myApp.listen()
   |  ❌ définition de route POST /hello avec myApp.post()
   |  ❌ cas nominal: POST /hello salue le pays
   |  ❌ cas d'erreur: retour de POST /hello sans pays
   |  ❌ cas d'erreur: code 400 de POST /hello sans pays
   | 
-  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 0, 0, 0 ]
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 0, 0, 0, 0 ]
   | 
-  | // -> EXERCISE POINTS: 0 / 3.75
+  | // -> EXERCISE POINTS: 1.25 / 3.75
   | 
   | ------------- EXERCISE: code8 (variant: 1) -------------
   | 
@@ -4590,9 +4587,9 @@ STUDENT: theodore_konikowski
   | 
   | // -> EXERCISE POINTS: 0.75 / 3.75
 
-  => code score: 3 / 15 pts
+  => code score: 4.25 / 15 pts
 
-=> TOTAL STUDENT SCORE: 7.00 / 20
+=> TOTAL STUDENT SCORE: 8.25 / 20
 
 
 ================================
@@ -4938,7 +4935,7 @@ STUDENT: thomas_mousty
   | 
   | // CODE EVALUATION:
   | 
-  |  ❌ erreur survenue en exécutant le code: ReferenceError: process is not defined
+  |  ❌ erreur survenue en exécutant le code: ReferenceError: app is not defined
   |  ❌ écoute sur port 3000 avec myApp.listen()
   |  ❌ définition de route POST /hi avec myApp.post()
   |  ❌ cas nominal: POST /hi salue le pays

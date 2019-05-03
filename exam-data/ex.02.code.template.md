@@ -164,6 +164,7 @@ Respecter les chaines de caractères fournies à la lettre.
     let error = undefined;
     const pathHandlers = {};
     const listenedPorts = [];
+    const process = { env: {} };
     const console = {
       log: () => {},
       error: () => {},
@@ -207,7 +208,8 @@ Respecter les chaines de caractères fournies à la lettre.
     let toResolve = {};
     setTimeout(() => resolve(toResolve), 100);
     const req = {
-      query: queryParams
+      query: queryParams,
+      body: {},
     };
     const res = {
       status: (code) => {

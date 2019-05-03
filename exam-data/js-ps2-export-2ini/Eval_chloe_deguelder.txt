@@ -136,7 +136,7 @@ STUDENT: chloe_deguelder
   | 
   | // CODE EVALUATION:
   | 
-  |  ❌ erreur survenue en exécutant le code: ReferenceError: process is not defined
+  |  ❌ erreur survenue en exécutant le code: ReferenceError: app is not defined
   |  ❌ écoute sur port 3000 avec myApp.listen()
   |  ❌ définition de route POST /hi avec myApp.post()
   |  ❌ cas nominal: POST /hi salue le pays

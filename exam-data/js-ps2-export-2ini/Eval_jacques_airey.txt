@@ -136,16 +136,16 @@ STUDENT: jacques_airey
   | 
   | // CODE EVALUATION:
   | 
-  |  ❌ erreur survenue en exécutant le code: ReferenceError: process is not defined
-  |  ❌ écoute sur port 3000 avec myApp.listen()
+  |  ✅ exécution du code sans erreur
+  |  ✅ écoute sur port 3000 avec myApp.listen()
   |  ✅ définition de route POST /hello avec myApp.post()
   |  ✅ cas nominal: POST /hello salue le pays
   |  ✅ cas d'erreur: retour de POST /hello sans pays
   |  ❌ cas d'erreur: code 400 de POST /hello sans pays
   | 
-  | // -> STUDENT SCORE ARRAY: [ 0, 0, 1, 1, 1, 0 ]
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 0 ]
   | 
-  | // -> EXERCISE POINTS: 1.875 / 3.75
+  | // -> EXERCISE POINTS: 3.125 / 3.75
   | 
   | ------------- EXERCISE: code8 (variant: 1) -------------
   | 
@@ -231,9 +231,9 @@ STUDENT: jacques_airey
   | 
   | // -> EXERCISE POINTS: 3.75 / 3.75
 
-  => code score: 10.017857142857142 / 15 pts
+  => code score: 11.267857142857142 / 15 pts
 
-=> TOTAL STUDENT SCORE: 14.02 / 20
+=> TOTAL STUDENT SCORE: 15.27 / 20
 
 
 ================================

@@ -139,16 +139,16 @@ STUDENT: theodore_konikowski
   | 
   | // CODE EVALUATION:
   | 
-  |  ❌ erreur survenue en exécutant le code: ReferenceError: process is not defined
-  |  ❌ écoute sur port 3000 avec myApp.listen()
+  |  ✅ exécution du code sans erreur
+  |  ✅ écoute sur port 3000 avec myApp.listen()
   |  ❌ définition de route POST /hello avec myApp.post()
   |  ❌ cas nominal: POST /hello salue le pays
   |  ❌ cas d'erreur: retour de POST /hello sans pays
   |  ❌ cas d'erreur: code 400 de POST /hello sans pays
   | 
-  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 0, 0, 0 ]
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 0, 0, 0, 0 ]
   | 
-  | // -> EXERCISE POINTS: 0 / 3.75
+  | // -> EXERCISE POINTS: 1.25 / 3.75
   | 
   | ------------- EXERCISE: code8 (variant: 1) -------------
   | 
@@ -210,9 +210,9 @@ STUDENT: theodore_konikowski
   | 
   | // -> EXERCISE POINTS: 0.75 / 3.75
 
-  => code score: 3 / 15 pts
+  => code score: 4.25 / 15 pts
 
-=> TOTAL STUDENT SCORE: 7.00 / 20
+=> TOTAL STUDENT SCORE: 8.25 / 20
 
 
 ================================

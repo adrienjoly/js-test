@@ -210,7 +210,7 @@ STUDENT: ilena_abba
   | 
   | // CODE EVALUATION:
   | 
-  |  ❌ erreur survenue en exécutant le code: TypeError: res.on is not a function at https.get (eval at runStudentCode (DYNAMIC PLUGIN:68:9), <anonymous>:10:16)
+  |  ❌ erreur survenue en exécutant le code: TypeError: res.on is not a function at https.get (eval at runStudentCode (DYNAMIC PLUGIN:68:15), <anonymous>:10:16)
   |  ✅ fonction rattachée à l'évènement "data"
   |  ❌ fonction rattachée à l'évènement "end"
   |  ✅ fonction rattachée à l'évènement "error"

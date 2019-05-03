@@ -136,16 +136,16 @@ STUDENT: emma_plouchart
   | 
   | // CODE EVALUATION:
   | 
-  |  ❌ erreur survenue en exécutant le code: ReferenceError: process is not defined
-  |  ❌ écoute sur port 3000 avec app.listen()
+  |  ✅ exécution du code sans erreur
+  |  ✅ écoute sur port 3000 avec app.listen()
   |  ❌ définition de route POST /hello avec app.post()
   |  ❌ cas nominal: POST /hello salue le pays
   |  ❌ cas d'erreur: retour de POST /hello sans pays
   |  ❌ cas d'erreur: code 400 de POST /hello sans pays
   | 
-  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 0, 0, 0 ]
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 0, 0, 0, 0 ]
   | 
-  | // -> EXERCISE POINTS: 0 / 3.75
+  | // -> EXERCISE POINTS: 1.25 / 3.75
   | 
   | ------------- EXERCISE: code8 (variant: 0) -------------
   | 
@@ -193,9 +193,9 @@ STUDENT: emma_plouchart
   | 
   | // -> EXERCISE POINTS: 0 / 3.75
 
-  => code score: 1.5 / 15 pts
+  => code score: 2.75 / 15 pts
 
-=> TOTAL STUDENT SCORE: 4.50 / 20
+=> TOTAL STUDENT SCORE: 5.75 / 20
 
 
 ================================
