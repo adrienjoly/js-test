@@ -340,15 +340,15 @@ STUDENT: bilel_elmanouni
   | // CODE EVALUATION:
   | 
   |  ❌ erreur survenue en exécutant le code: ReferenceError: app is not defined
-  |  ❌ écoute sur port 3000 avec myApp.listen()
+  |  ✅ écoute sur port 3000 avec myApp.listen()
   |  ❌ définition de route POST /hi avec myApp.post()
   |  ❌ cas nominal: POST /hi salue le pays
   |  ❌ cas d'erreur: retour de POST /hi sans pays
   |  ❌ cas d'erreur: code 400 de POST /hi sans pays
   | 
-  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 0, 0, 0 ]
+  | // -> STUDENT SCORE ARRAY: [ 0, 1, 0, 0, 0, 0 ]
   | 
-  | // -> EXERCISE POINTS: 0 / 3.75
+  | // -> EXERCISE POINTS: 0.625 / 3.75
   | 
   | ------------- EXERCISE: code8 (variant: 1) -------------
   | 
@@ -396,9 +396,9 @@ STUDENT: bilel_elmanouni
   | 
   | // -> EXERCISE POINTS: 0 / 3.75
 
-  => code score: 1.5 / 15 pts
+  => code score: 2.125 / 15 pts
 
-=> TOTAL STUDENT SCORE: 6.50 / 20
+=> TOTAL STUDENT SCORE: 7.13 / 20
 
 
 ================================
@@ -542,15 +542,15 @@ STUDENT: chloe_deguelder
   | // CODE EVALUATION:
   | 
   |  ❌ erreur survenue en exécutant le code: ReferenceError: app is not defined
-  |  ❌ écoute sur port 3000 avec myApp.listen()
+  |  ✅ écoute sur port 3000 avec myApp.listen()
   |  ❌ définition de route POST /hi avec myApp.post()
   |  ❌ cas nominal: POST /hi salue le pays
   |  ❌ cas d'erreur: retour de POST /hi sans pays
   |  ❌ cas d'erreur: code 400 de POST /hi sans pays
   | 
-  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 0, 0, 0 ]
+  | // -> STUDENT SCORE ARRAY: [ 0, 1, 0, 0, 0, 0 ]
   | 
-  | // -> EXERCISE POINTS: 0 / 3.75
+  | // -> EXERCISE POINTS: 0.625 / 3.75
   | 
   | ------------- EXERCISE: code8 (variant: 0) -------------
   | 
@@ -598,9 +598,9 @@ STUDENT: chloe_deguelder
   | 
   | // -> EXERCISE POINTS: 0 / 3.75
 
-  => code score: 1.5 / 15 pts
+  => code score: 2.125 / 15 pts
 
-=> TOTAL STUDENT SCORE: 6.50 / 20
+=> TOTAL STUDENT SCORE: 7.13 / 20
 
 
 ================================
@@ -1202,15 +1202,15 @@ STUDENT: gregoire_boudsocq
   | // CODE EVALUATION:
   | 
   |  ❌ erreur survenue en exécutant le code: ReferenceError: app is not defined
-  |  ❌ écoute sur port 3000 avec myApp.listen()
+  |  ✅ écoute sur port 3000 avec myApp.listen()
   |  ❌ définition de route POST /hi avec myApp.post()
   |  ❌ cas nominal: POST /hi salue le pays
   |  ❌ cas d'erreur: retour de POST /hi sans pays
   |  ❌ cas d'erreur: code 400 de POST /hi sans pays
   | 
-  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 0, 0, 0 ]
+  | // -> STUDENT SCORE ARRAY: [ 0, 1, 0, 0, 0, 0 ]
   | 
-  | // -> EXERCISE POINTS: 0 / 3.75
+  | // -> EXERCISE POINTS: 0.625 / 3.75
   | 
   | ------------- EXERCISE: code8 (variant: 1) -------------
   | 
@@ -1258,9 +1258,9 @@ STUDENT: gregoire_boudsocq
   | 
   | // -> EXERCISE POINTS: 0 / 3.75
 
-  => code score: 1.5 / 15 pts
+  => code score: 2.125 / 15 pts
 
-=> TOTAL STUDENT SCORE: 6.50 / 20
+=> TOTAL STUDENT SCORE: 7.13 / 20
 
 
 ================================
@@ -3566,15 +3566,15 @@ STUDENT: martin_cavil
   | // CODE EVALUATION:
   | 
   |  ❌ erreur survenue en exécutant le code: ReferenceError: app is not defined
-  |  ❌ écoute sur port 3000 avec myApp.listen()
+  |  ✅ écoute sur port 3000 avec myApp.listen()
   |  ❌ définition de route POST /hello avec myApp.post()
   |  ❌ cas nominal: POST /hello salue le pays
   |  ❌ cas d'erreur: retour de POST /hello sans pays
   |  ❌ cas d'erreur: code 400 de POST /hello sans pays
   | 
-  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 0, 0, 0 ]
+  | // -> STUDENT SCORE ARRAY: [ 0, 1, 0, 0, 0, 0 ]
   | 
-  | // -> EXERCISE POINTS: 0 / 3.75
+  | // -> EXERCISE POINTS: 0.625 / 3.75
   | 
   | ------------- EXERCISE: code8 (variant: 1) -------------
   | 
@@ -3634,9 +3634,9 @@ STUDENT: martin_cavil
   | 
   | // -> EXERCISE POINTS: 0 / 3.75
 
-  => code score: 1.5 / 15 pts
+  => code score: 2.125 / 15 pts
 
-=> TOTAL STUDENT SCORE: 4.50 / 20
+=> TOTAL STUDENT SCORE: 5.13 / 20
 
 
 ================================
@@ -4939,15 +4939,15 @@ STUDENT: thomas_mousty
   | // CODE EVALUATION:
   | 
   |  ❌ erreur survenue en exécutant le code: ReferenceError: app is not defined
-  |  ❌ écoute sur port 3000 avec myApp.listen()
+  |  ✅ écoute sur port 3000 avec myApp.listen()
   |  ❌ définition de route POST /hi avec myApp.post()
   |  ❌ cas nominal: POST /hi salue le pays
   |  ❌ cas d'erreur: retour de POST /hi sans pays
   |  ❌ cas d'erreur: code 400 de POST /hi sans pays
   | 
-  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 0, 0, 0 ]
+  | // -> STUDENT SCORE ARRAY: [ 0, 1, 0, 0, 0, 0 ]
   | 
-  | // -> EXERCISE POINTS: 0 / 3.75
+  | // -> EXERCISE POINTS: 0.625 / 3.75
   | 
   | ------------- EXERCISE: code8 (variant: 1) -------------
   | 
@@ -5022,6 +5022,6 @@ STUDENT: thomas_mousty
   | 
   | // -> EXERCISE POINTS: 0 / 3.75
 
-  => code score: 2.0357142857142856 / 15 pts
+  => code score: 2.6607142857142856 / 15 pts
 
-=> TOTAL STUDENT SCORE: 7.04 / 20
+=> TOTAL STUDENT SCORE: 7.66 / 20

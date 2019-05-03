@@ -235,7 +235,7 @@ Respecter les chaines de caractères fournies à la lettre.
     !error
       ? res(1, 'exécution du code sans erreur')
       : res(0, `erreur survenue en exécutant le code: ${error}`),
-    listenedPorts.includes(3000) || _studentCode.match(/[aA]pp.listen\(3000/)
+    listenedPorts.includes(3000) || _studentCode.match(/[aA]pp.listen\(.*(3000|PORT)/)
       ? res(1, 'écoute sur port 3000 avec {{app}}.listen()')
       : res(0, 'écoute sur port 3000 avec {{app}}.listen()'),
     `_studentCode`.includes(`.post('/{{{path}}}', `)
