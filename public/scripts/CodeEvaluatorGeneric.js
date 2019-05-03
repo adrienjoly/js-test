@@ -75,22 +75,22 @@ function makeCodeEvaluator(jailed, async, codeGradingOptions) {
         onDoneOnce(null, arguments);
       },
     };
-    plugin = new jailed.DynamicPlugin(code, api, { failOnRuntimeError: true });
+    plugin = new jailed.DynamicPlugin(code, api, {
+      failOnRuntimeError: true,
+      onUncaughtRejection: function (err, extras = {}) {
+        if (!err.includes('evaluateStudentCode')) {
+          console.log(` ⚠️ runCodeInSandbox caught a warning: ${err}`);
+        }
+        console.error('⚠️ runCodeInSandbox caught a warning:', extras.promiseStack || err);
+      },
+    });
     plugin.whenFailed(onDone);
     //plugin.whenConnected(onDone);
     timeout = setTimeout(sendTimeout, 2000);
   }
 
   function runCodeInWrappedSandbox({ code, apiExts }, callback) {
-    /*
-    var consoleErrorInitial = console.error; // backup
-    console.error = function(stack) {
-      // TODO: for some reason, this code is never called...
-      console.log('JAILED ERROR:', stack);
-    };
-    */
     runCodeInSandbox({ code, apiExts }, function(err, res) {
-      //console.error = consoleErrorInitial; // restore
       callback(err, res);
     });
   }
@@ -129,10 +129,8 @@ function makeCodeEvaluator(jailed, async, codeGradingOptions) {
       };
       runCodeInWrappedSandbox({ code, apiExts }, function(err, res) {
         if (err) {
-          console.log('=> test runner err:', err);
-          console.error('=> test runner err:', err);
-          process.stdout.write(`runCodeInWrappedSandbox caught an error: ${err.message || err}\n`);
-          process.stderr.write(`runCodeInWrappedSandbox caught an error: ${err.message || err}\n`);
+          console.log(' 🔴 runTest caught an error:', err.message || err);
+          process.stderr.write(`🔴 runTest caught an error: ${err.message || err}\n`);
         }
         // TODO: find a way to display the position of the error in the student's code
         // (like when nodejs intercepts and displays the error)

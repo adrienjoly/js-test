@@ -1,5 +1,3 @@
-Parsing ex.01.quizz.template.md ...
-Parsing ex.02.code.template.md ...
 Reading and evaluating answers from: ../exam-data/js-ps2-export-2ini.json ...
 
 
@@ -341,9 +339,6 @@ STUDENT: bilel_elmanouni
   | 
   | // CODE EVALUATION:
   | 
-(node:18669) UnhandledPromiseRejectionWarning: Error: unable to connect
-(node:18669) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
-(node:18669) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
   |  ❌ erreur survenue en exécutant le code: ReferenceError: process is not defined
   |  ❌ écoute sur port 3000 avec myApp.listen()
   |  ❌ définition de route POST /hi avec myApp.post()
@@ -546,11 +541,7 @@ STUDENT: chloe_deguelder
   | 
   | // CODE EVALUATION:
   | 
-(node:18699) UnhandledPromiseRejectionWarning: Error: unexpected connection url: mongodb://localhost:27017/chats
-(node:18699) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
-(node:18699) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
-(node:18699) UnhandledPromiseRejectionWarning: Error: unable to connect
-(node:18699) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)
+  |  ⚠️ runCodeInSandbox caught a warning: Error: unexpected connection url: mongodb://localhost:27017/chats at Function.connect (DYNAMIC PLUGIN:18:22)
   |  ❌ erreur survenue en exécutant le code: ReferenceError: process is not defined
   |  ❌ écoute sur port 3000 avec myApp.listen()
   |  ❌ définition de route POST /hi avec myApp.post()
@@ -1009,11 +1000,7 @@ STUDENT: emma_plouchart
   | 
   | // CODE EVALUATION:
   | 
-(node:18816) UnhandledPromiseRejectionWarning: Error: unexpected connection url: mongodb://localhost:27017/chats
-(node:18816) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
-(node:18816) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
-(node:18816) UnhandledPromiseRejectionWarning: Error: unable to connect
-(node:18816) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)
+  |  ⚠️ runCodeInSandbox caught a warning: Error: unexpected connection url: mongodb://localhost:27017/chats at Function.connect (DYNAMIC PLUGIN:18:22)
   |  ❌ erreur survenue en exécutant le code: ReferenceError: process is not defined
   |  ❌ écoute sur port 3000 avec app.listen()
   |  ❌ définition de route POST /hello avec app.post()
@@ -1216,11 +1203,7 @@ STUDENT: gregoire_boudsocq
   | 
   | // CODE EVALUATION:
   | 
-(node:18825) UnhandledPromiseRejectionWarning: Error: unexpected connection url: mongodb://localhost:27017/cats
-(node:18825) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
-(node:18825) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
-(node:18825) UnhandledPromiseRejectionWarning: Error: unable to connect
-(node:18825) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)
+  |  ⚠️ runCodeInSandbox caught a warning: Error: unexpected connection url: mongodb://localhost:27017/cats at Function.connect (DYNAMIC PLUGIN:18:22)
   |  ❌ erreur survenue en exécutant le code: ReferenceError: process is not defined
   |  ❌ écoute sur port 3000 avec myApp.listen()
   |  ❌ définition de route POST /hi avec myApp.post()
@@ -1748,19 +1731,12 @@ STUDENT: ilena_abba
   | 
   | // CODE EVALUATION:
   | 
-(node:18913) UnhandledPromiseRejectionWarning: TypeError: res.on is not a function
-(node:18913) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
-(node:18913) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
-(node:18913) UnhandledPromiseRejectionWarning: TypeError: res.on is not a function
-(node:18913) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)
-(node:18913) UnhandledPromiseRejectionWarning: TypeError: res.on is not a function
-(node:18913) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 3)
-(node:18913) UnhandledPromiseRejectionWarning: TypeError: res.on is not a function
-(node:18913) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 4)
-(node:18913) UnhandledPromiseRejectionWarning: TypeError: res.on is not a function
-(node:18913) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 5)
-(node:18913) UnhandledPromiseRejectionWarning: TypeError: res.on is not a function
-(node:18913) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 6)
+  |  ⚠️ runCodeInSandbox caught a warning: TypeError: res.on is not a function at https.get (eval at runStudentCode (DYNAMIC PLUGIN:67:9), <anonymous>:10:16)
+  |  ⚠️ runCodeInSandbox caught a warning: TypeError: res.on is not a function at https.get (eval at runStudentCode (DYNAMIC PLUGIN:67:9), <anonymous>:10:16)
+  |  ⚠️ runCodeInSandbox caught a warning: TypeError: res.on is not a function at https.get (eval at runStudentCode (DYNAMIC PLUGIN:67:9), <anonymous>:10:16)
+  |  ⚠️ runCodeInSandbox caught a warning: TypeError: res.on is not a function at https.get (eval at runStudentCode (DYNAMIC PLUGIN:67:9), <anonymous>:10:16)
+  |  ⚠️ runCodeInSandbox caught a warning: TypeError: res.on is not a function at https.get (eval at runStudentCode (DYNAMIC PLUGIN:67:9), <anonymous>:10:16)
+  |  ⚠️ runCodeInSandbox caught a warning: TypeError: res.on is not a function at https.get (eval at runStudentCode (DYNAMIC PLUGIN:67:9), <anonymous>:10:16)
   |  ✅ exécution du code sans erreur
   |  ❌ fonction rattachée à l'évènement "data"
   |  ❌ fonction rattachée à l'évènement "end"
@@ -2426,9 +2402,6 @@ STUDENT: jean_rusek
   | 
   | // CODE EVALUATION:
   | 
-(node:18945) UnhandledPromiseRejectionWarning: Error: unable to connect
-(node:18945) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
-(node:18945) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
   |  ❌ erreur survenue en exécutant le code: ReferenceError: app is not defined
   |  ❌ écoute sur port 3000 avec myApp.listen()
   |  ❌ définition de route POST /hi avec myApp.post()
@@ -3399,9 +3372,6 @@ STUDENT: manon_boucheteil
   | 
   | // CODE EVALUATION:
   | 
-(node:18991) UnhandledPromiseRejectionWarning: Error: unable to connect
-(node:18991) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
-(node:18991) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
   |  ❌ erreur survenue en exécutant le code: SyntaxError: missing ) after argument list
   |  ❌ écoute sur port 3000 avec myApp.listen()
   |  ✅ définition de route POST /hi avec myApp.post()
@@ -3604,9 +3574,6 @@ STUDENT: martin_cavil
   | 
   | // CODE EVALUATION:
   | 
-(node:19006) UnhandledPromiseRejectionWarning: Error: unable to connect
-(node:19006) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
-(node:19006) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
   |  ❌ erreur survenue en exécutant le code: ReferenceError: process is not defined
   |  ❌ écoute sur port 3000 avec myApp.listen()
   |  ❌ définition de route POST /hello avec myApp.post()
@@ -3818,9 +3785,6 @@ STUDENT: martin_hurel
   | 
   | // CODE EVALUATION:
   | 
-(node:19016) UnhandledPromiseRejectionWarning: Error: unable to connect
-(node:19016) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
-(node:19016) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
   |  ❌ erreur survenue en exécutant le code: ReferenceError: process is not defined
   |  ❌ écoute sur port 3000 avec myApp.listen()
   |  ❌ définition de route POST /hello avec myApp.post()
@@ -4513,9 +4477,6 @@ STUDENT: theodore_konikowski
   | 
   | // CODE EVALUATION:
   | 
-(node:19088) UnhandledPromiseRejectionWarning: Error: unable to connect
-(node:19088) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
-(node:19088) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
   |  ✅ ne pas utiliser then() et catch()
   |  ✅ utiliser async et await
   |  ✅ exécution du code sans erreur
@@ -4986,9 +4947,6 @@ STUDENT: thomas_mousty
   | 
   | // CODE EVALUATION:
   | 
-(node:19122) UnhandledPromiseRejectionWarning: Error: unable to connect
-(node:19122) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
-(node:19122) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
   |  ❌ erreur survenue en exécutant le code: ReferenceError: process is not defined
   |  ❌ écoute sur port 3000 avec myApp.listen()
   |  ❌ définition de route POST /hi avec myApp.post()

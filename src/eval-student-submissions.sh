@@ -15,7 +15,7 @@ do
 
   echo "* Evaluating $FILEPATH to $EVAL_PATH/ ..."
   mkdir $EVAL_PATH &>/dev/null
-  node ./src/evaluateStudentFile.js ".$FILEPATH" &>$EVAL_PATH/Eval_$STUDENT_NAME.txt
+  node ./src/evaluateStudentFile.js ".$FILEPATH" >$EVAL_PATH/Eval_$STUDENT_NAME.txt
 done;
 
 mv exam-data/score*.* $EVAL_PATH/
