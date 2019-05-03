@@ -92,12 +92,10 @@ function makeCodeEvaluator(jailed, async, codeGradingOptions) {
       onUncaughtRejection: function (err, extras = {}) {
         if (trackUncaughtRejections) {
           uncaughtRejections.push(err);
-          return;
-        }
-        if (!err.includes('evaluateStudentCode')) {
+        } else if (!err.includes('evaluateStudentCode')) {
           console.log(` ⚠️ runCodeInSandbox caught a warning: ${err}`);
         }
-        console.error('⚠️ runCodeInSandbox caught a warning:', extras.promiseStack || err);
+        console.error(`⚠️ runCodeInSandbox caught a ${trackUncaughtRejections ? '': 'un'}tracked warning: ${extras.promiseStack || err}`);
       },
     });
     plugin.whenFailed(onDone);
