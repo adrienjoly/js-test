@@ -78,8 +78,15 @@ const MongoClient = require('mongodb').MongoClient;
     const MongoClient = makeMongoClient({ shouldFail });
     const require = () => ({ MongoClient });
     try {
-      eval(`_studentCode`); // run student's code
+      application.remote._trackUncaughtRejections(true);
+      await _runStudentCode();
       await new Promise(resolve => setTimeout(resolve, 100));
+      await new Promise((resolve, reject) => {
+        application.remote._getUncaughtRejections(e => {
+          application.remote._trackUncaughtRejections(false);
+          e.length ? reject(e[0]) : resolve();
+        });
+      });
     } catch(e) {
       error = e;
     }
@@ -180,8 +187,15 @@ Respecter les chaines de caractères fournies à la lettre.
     const {{app}} = express();
     const require = () => express;
     try {
-      eval(`_studentCode`); // run student's code
-      await new Promise(resolve => setTimeout(resolve, 100));
+      application.remote._trackUncaughtRejections(true);
+      await _runStudentCode();
+      await new Promise(resolve => setTimeout(resolve, 500));
+      await new Promise((resolve, reject) => {
+        application.remote._getUncaughtRejections(e => {
+          application.remote._trackUncaughtRejections(false);
+          e.length ? reject(e[0]) : resolve();
+        });
+      });
     } catch(e) {
       error = e;
     }
@@ -356,10 +370,13 @@ const fetchAndRender = (url) => new Promise((resolve) => {
     const require = () => https;
     try {
       application.remote._trackUncaughtRejections(true);
-      _runStudentCode();
+      await _runStudentCode();
       await new Promise(resolve => setTimeout(resolve, 100));
       await new Promise((resolve, reject) => {
-        application.remote._getUncaughtRejections(e => e.length ? reject(e[0]) : resolve());
+        application.remote._getUncaughtRejections(e => {
+          application.remote._trackUncaughtRejections(false);
+          e.length ? reject(e[0]) : resolve();
+        });
       });
     } catch(e) {
       error = e;
