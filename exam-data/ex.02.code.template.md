@@ -421,6 +421,7 @@ https://fast-wave-24398.herokuapp.com
 ```js
 // automatic student evaluation code
 (async function evaluateStudentCode(){
+  application.remote._setTimeoutDelay(60 * 1000); // leave some time for heroku app to wake up
   const expectedRes = {
     indexRes: { responseText: 'Bonjour !' },
     pathRes:  { responseText: `{{{text}}}` },

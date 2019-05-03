@@ -28,16 +28,21 @@ function makeCodeEvaluator(jailed, async, codeGradingOptions) {
 
   function runCodeInSandbox({ code, apiExts = {} }, callback) {
     var plugin = null;
-    // var timeout = null;
+    var timeout = null;
+    var timeoutMessage = 'TIMEOUT: infinite loop?'; // can be overrided by evaluation code
     function onDone(err, results){
-      /*
       clearTimeout(timeout);
       timeout = null;
-      */
       callback(err, results);
       plugin.disconnect();
     }
-    // var timeoutMessage = 'TIMEOUT: infinite loop?'; // can be overrided by evaluation code
+    function onDoneOnce(err, results){
+      if (!timeout) return;
+      onDone(err, results);
+    }
+    function sendTimeout() {
+      onDoneOnce(new Error(timeoutMessage));
+    }
     var api = {
       ...apiExts,
       _xhr: (method = 'GET', url, cb) => {
@@ -53,26 +58,27 @@ function makeCodeEvaluator(jailed, async, codeGradingOptions) {
         xhr.open(method, url);
         xhr.send();
       },
-      /*
+      _setTimeoutDelay: function(delayMs){
+        if (!timeout) return;
+        clearTimeout();
+        timeout = setTimeout(sendTimeout, delayMs);
+      },
       _setTimeoutMessage: function(message){
         timeoutMessage = message;
       },
-      */
       _log: console.log.bind(console),
       // this function will be called with resulting arguments by sandboxed script, when done
       _send: function(){
         onDone(null, arguments);
       },
-      /*
       _sendOnce: function(){
-        timeout && onDone(null, arguments);
+        onDoneOnce(null, arguments);
       },
-      */
     };
     plugin = new jailed.DynamicPlugin(code, api, { failOnRuntimeError: true });
     plugin.whenFailed(onDone);
     //plugin.whenConnected(onDone);
-    // timeout = setTimeout(function(){ onDone(timeoutMessage); }, 2000);
+    timeout = setTimeout(sendTimeout, 2000);
   }
 
   function runCodeInWrappedSandbox({ code, apiExts }, callback) {
@@ -122,7 +128,12 @@ function makeCodeEvaluator(jailed, async, codeGradingOptions) {
         getStudentCode: (callback) => callback(studentCode),
       };
       runCodeInWrappedSandbox({ code, apiExts }, function(err, res) {
-        if (err) console.log('=> test runner err:', err);
+        if (err) {
+          console.log('=> test runner err:', err);
+          console.error('=> test runner err:', err);
+          process.stdout.write(`runCodeInWrappedSandbox caught an error: ${err.message || err}\n`);
+          process.stderr.write(`runCodeInWrappedSandbox caught an error: ${err.message || err}\n`);
+        }
         // TODO: find a way to display the position of the error in the student's code
         // (like when nodejs intercepts and displays the error)
         var scoreArray = [ 0 ];
