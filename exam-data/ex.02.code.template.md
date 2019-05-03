@@ -355,8 +355,12 @@ const fetchAndRender = (url) => new Promise((resolve) => {
     };
     const require = () => https;
     try {
-      eval(`_studentCode`); // run student's code
+      application.remote._trackUncaughtRejections(true);
+      _runStudentCode();
       await new Promise(resolve => setTimeout(resolve, 100));
+      await new Promise((resolve, reject) => {
+        application.remote._getUncaughtRejections(e => e.length ? reject(e[0]) : resolve());
+      });
     } catch(e) {
       error = e;
     }

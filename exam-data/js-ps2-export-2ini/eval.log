@@ -1728,13 +1728,7 @@ STUDENT: ilena_abba
   | 
   | // CODE EVALUATION:
   | 
-  |  ⚠️ runCodeInSandbox caught a warning: TypeError: res.on is not a function at https.get (eval at runStudentCode (DYNAMIC PLUGIN:67:9), <anonymous>:10:16)
-  |  ⚠️ runCodeInSandbox caught a warning: TypeError: res.on is not a function at https.get (eval at runStudentCode (DYNAMIC PLUGIN:67:9), <anonymous>:10:16)
-  |  ⚠️ runCodeInSandbox caught a warning: TypeError: res.on is not a function at https.get (eval at runStudentCode (DYNAMIC PLUGIN:67:9), <anonymous>:10:16)
-  |  ⚠️ runCodeInSandbox caught a warning: TypeError: res.on is not a function at https.get (eval at runStudentCode (DYNAMIC PLUGIN:67:9), <anonymous>:10:16)
-  |  ⚠️ runCodeInSandbox caught a warning: TypeError: res.on is not a function at https.get (eval at runStudentCode (DYNAMIC PLUGIN:67:9), <anonymous>:10:16)
-  |  ⚠️ runCodeInSandbox caught a warning: TypeError: res.on is not a function at https.get (eval at runStudentCode (DYNAMIC PLUGIN:67:9), <anonymous>:10:16)
-  |  ✅ exécution du code sans erreur
+  |  ❌ erreur survenue en exécutant le code: TypeError: res.on is not a function at https.get (eval at runStudentCode (DYNAMIC PLUGIN:68:9), <anonymous>:10:16)
   |  ❌ fonction rattachée à l'évènement "data"
   |  ❌ fonction rattachée à l'évènement "end"
   |  ❌ fonction rattachée à l'évènement "error"
@@ -1742,9 +1736,9 @@ STUDENT: ilena_abba
   |  ❌ cas nominal: noms affichés dans l'ordre
   |  ❌ cas d'erreur: noms + "Error." affichés dans l'ordre
   | 
-  | // -> STUDENT SCORE ARRAY: [ 1, 0, 0, 0, 1, 0, 0 ]
+  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 0, 1, 0, 0 ]
   | 
-  | // -> EXERCISE POINTS: 1.0714285714285714 / 3.75
+  | // -> EXERCISE POINTS: 0.5357142857142857 / 3.75
   | 
   | ------------- EXERCISE: code9 (variant: 0) -------------
   | 
@@ -1761,9 +1755,9 @@ STUDENT: ilena_abba
   | 
   | // -> EXERCISE POINTS: 0 / 3.75
 
-  => code score: 3.321428571428571 / 15 pts
+  => code score: 2.7857142857142856 / 15 pts
 
-=> TOTAL STUDENT SCORE: 8.32 / 20
+=> TOTAL STUDENT SCORE: 7.79 / 20
 
 
 ================================

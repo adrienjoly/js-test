@@ -43,6 +43,8 @@ function makeCodeEvaluator(jailed, async, codeGradingOptions) {
     function sendTimeout() {
       onDoneOnce(new Error(timeoutMessage));
     }
+    let trackUncaughtRejections = false;
+    const uncaughtRejections = [];
     var api = {
       ...apiExts,
       _xhr: (method = 'GET', url, cb) => {
@@ -74,10 +76,20 @@ function makeCodeEvaluator(jailed, async, codeGradingOptions) {
       _sendOnce: function(){
         onDoneOnce(null, arguments);
       },
+      _trackUncaughtRejections: function(val){
+        trackUncaughtRejections = !!val;
+      },
+      _getUncaughtRejections: function(callback){
+        callback(uncaughtRejections);
+      },
     };
     plugin = new jailed.DynamicPlugin(code, api, {
       failOnRuntimeError: true,
       onUncaughtRejection: function (err, extras = {}) {
+        if (trackUncaughtRejections) {
+          uncaughtRejections.push(err);
+          return;
+        }
         if (!err.includes('evaluateStudentCode')) {
           console.log(` ⚠️ runCodeInSandbox caught a warning: ${err}`);
         }
