@@ -371,7 +371,7 @@ const fetchAndRender = (url) => new Promise((resolve) => {
   const scoreArray = [
     !nominal.error
       ? res(1, 'exécution du code sans erreur')
-      : res(0, `erreur survenue en exécutant le code: ${error}`),
+      : res(0, `erreur survenue en exécutant le code: ${nominal.error}`),
     typeof nominal.respEvtHandlers.data === 'function'
       ? res(1, 'fonction rattachée à l\'évènement "data"')
       : res(0, 'fonction rattachée à l\'évènement "data"'),
