@@ -210,6 +210,7 @@ Respecter les chaines de caractères fournies à la lettre.
     const req = {
       query: queryParams,
       body: {},
+      param: (key) => queryParams[key],
     };
     const res = {
       status: (code) => {

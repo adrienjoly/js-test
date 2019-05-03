@@ -2634,10 +2634,13 @@ STUDENT: josselin_tual
   |  ✅ exécution du code sans erreur
   |  ✅ écoute sur port 3000 avec app.listen()
   |  ✅ définition de route POST /hello avec app.post()
-  |  ⚠️ runCodeInSandbox caught a warning: TypeError: req.param is not a function at eval (eval at runInContext (DYNAMIC PLUGIN:35:15), <anonymous>:9:11)
-  |  🔴 runTest caught an error: Sandbox Timeout after 2000 ms
+  |  ❌ cas nominal: POST /hello salue le pays
+  |  ✅ cas d'erreur: retour de POST /hello sans pays
+  |  ✅ cas d'erreur: code 400 de POST /hello sans pays
   | 
-  | // -> EXERCISE POINTS: 0 / 3.75
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 0, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 3.125 / 3.75
   | 
   | ------------- EXERCISE: code8 (variant: 1) -------------
   | 
@@ -2743,9 +2746,9 @@ STUDENT: josselin_tual
   | 
   | // -> EXERCISE POINTS: 3.75 / 3.75
 
-  => code score: 6.857142857142858 / 15 pts
+  => code score: 9.982142857142858 / 15 pts
 
-=> TOTAL STUDENT SCORE: 10.86 / 20
+=> TOTAL STUDENT SCORE: 13.98 / 20
 
 
 ================================
