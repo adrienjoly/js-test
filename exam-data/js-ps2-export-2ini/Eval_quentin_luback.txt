@@ -1,0 +1,242 @@
+STUDENT: quentin_luback
+
+  -  quizz answers:
+  | 
+  | ------------- EXERCISE: qcm1 -------------
+  | 
+  | Je viens de "cloner" un projet Node.js depuis GitHub. Comment installer les dépendances de ce projet ?
+  | 
+  | -  npm start
+  | -  npm init
+  | ✅ npm install
+  | -  npm install express --save
+  | 
+  | ------------- EXERCISE: qcm2 -------------
+  | 
+  | J'ai créé une API avec Node.js et l'ai lancée en local avec la commande `npm start`. Quel logiciel exécute le code permettant de répondre aux requêtes reçues par cette API ?
+  | 
+  | -  Mon navigateur Web
+  | -  La commande curl
+  | -  Heroku
+  | ✅ node
+  | 
+  | ------------- EXERCISE: qcm3 -------------
+  | 
+  | À quoi sert Express.js ?
+  | 
+  | -  à mettre une API en production
+  | ✅ à faciliter la création d'un serveur HTTP
+  | -  à accelérer la vitesse de traitement des requêtes HTTP
+  | -  à gérer des requêtes asynchrones comme si elles étaient synchrones
+  | 
+  | ------------- EXERCISE: qcm4 -------------
+  | 
+  | Laquelle de ces phrases est CORRECTE ?
+  | 
+  | ✅ MongoDB est une base de données NoSQL constituée de collections et de documents
+  | -  MongoDB est une base de données NoSQL constituée de tables et de lignes
+  | -  MongoDB est une base de données SQL constituée de collections et de documents
+  | -  MongoDB est une base de données SQL constituée de tables et de lignes
+  | 
+  | ------------- EXERCISE: qcm5 -------------
+  | 
+  | Laquelle de ces phrases est INCORRECTE ?
+  | 
+  | -  await permet d'attendre qu'une Promise soit résolue
+  | -  await ne peut être utilisé que depuis une fonction async
+  | ❌ sans await, deux fonctions asynchrones peuvent être exécutées en parallèle
+  | 👉 await permet d'exécuter une fonction synchrone comme si elle était asynchrone
+  | 
+  | ------------- SUMMARY -------------
+  | 
+  | qcm1 : 3 (solution: 3) => 1 pts
+  | qcm2 : 4 (solution: 4) => 1 pts
+  | qcm3 : 2 (solution: 2) => 1 pts
+  | qcm4 : 1 (solution: 1) => 1 pts
+  | qcm5 : 3 (solution: 4) => 0 pts
+
+  => quizz score: 4 / 5 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code6 (variant: 0) -------------
+  | 
+  | // QUESTION:
+  | 
+  | Ré-écrire ce code de manière à ce qu'il utilise `async` et `await`, au lieu de `then()` et `catch()`. Les erreurs doivent être correctement interceptées.
+  | 
+  | ```js
+  | const MongoClient = require('mongodb').MongoClient;
+  | MongoClient.connect('mongodb://localhost:27017/myapp')
+  |   .then((client) => client.db('myapp').collection('dates').find().toArray())
+  |   .then((dates) => console.log('dates:', dates))
+  |   .catch((err) => console.error('erreur:', err));
+  | ```
+  | 
+  | // STUDENT CODE:
+  | 
+  | (async () => {
+  |   try {
+  |     const MongoClient = require('mongodb').MongoClient;
+  |     const client = new MongoClient(url, { useNewUrlParser: true });
+  |     await client.connect();
+  |     const dates = await 
+  | client.db('myapp').collection('dates').find().toArray();
+  |     console.log('dates:', dates);
+  |   }
+  |   catch(err) {
+  |     console.error('erreur:', err)
+  |   }
+  | })();
+  | 
+  | // CODE EVALUATION:
+  | 
+  |  ✅ ne pas utiliser then() et catch()
+  |  ✅ utiliser async et await
+  |  ❌ erreur survenue en exécutant le code: erreur:,ReferenceError: url is not defined
+  |  ❌ cas nominal: affichage inattendu dans la console: undefined
+  |  ❌ cas d'erreur: message affiché dans la console: ReferenceError: url is not defined
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 0, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 1.5 / 3.75
+  | 
+  | ------------- EXERCISE: code7 (variant: 0) -------------
+  | 
+  | // QUESTION:
+  | 
+  | Le fichier `server.js` contient le code suivant:
+  | 
+  | ```js
+  | const express = require('express');
+  | const app = express();
+  | ```
+  | 
+  | Quelles lignes de code faut-il ajouter à ce fichier pour que:
+  | 
+  |  - `curl -X POST http://localhost:3000/hello` réponde "`Missing country`" (toujours au format texte brut, et sans les guillemets) avec un code `400` de status HTTP,
+  |  - `curl -X POST http://localhost:3000/hello?country=Zimbabwe` réponde "`Hello, Zimbabwe!`" (au format texte brut, sans les guillemets, et le nom du pays devra systématiquement correspondre à celui passé en paramètre),
+  | 
+  | ... une fois qu'on aura exécuté ce programme avec `node server.js` ?
+  | 
+  | Respecter les chaines de caractères fournies à la lettre.
+  | 
+  | // STUDENT CODE:
+  | 
+  | app.post('/hello', (req,res) => {
+  |   if(req.query.country) {
+  |     res.send('Hello, ' + req.query.country + '!');
+  |   } else {
+  |     res.status(400).send('Missing country');
+  |   }
+  | });
+  | 
+  | // CODE EVALUATION:
+  | 
+  |  ✅ exécution du code sans erreur
+  |  ❌ écoute sur port 3000 avec app.listen()
+  |  ✅ définition de route POST /hello avec app.post()
+  |  ✅ cas nominal: POST /hello salue le pays
+  |  ✅ cas d'erreur: retour de POST /hello sans pays
+  |  ✅ cas d'erreur: code 400 de POST /hello sans pays
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 0, 1, 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 3.125 / 3.75
+  | 
+  | ------------- EXERCISE: code8 (variant: 0) -------------
+  | 
+  | // QUESTION:
+  | 
+  | L'objectif est d'afficher dans la sortie standard (c.a.d. en utilisant `console.log()`) le nom de plusieurs personnes dont les données seront à récupérer en JSON, depuis des URLs listées dans un tableau JavaScript. Le nom est fourni via la propriété `name` de la réponse à ces requêtes.
+  | 
+  | Pour cela, nous allons compléter le programme Node.js suivant:
+  | 
+  | ```js
+  | const https = require('https');
+  | const urlsToFetch = [
+  |  'https://js-jsonplaceholder.herokuapp.com/users/1',
+  |  'https://js-jsonplaceholder.herokuapp.com/users/2',
+  |  'https://js-jsonplaceholder.herokuapp.com/users/3'
+  | ];
+  | ```
+  | 
+  | Consignes à respecter:
+  | 
+  |  - Seul le nom des personnes doit être affiché, sans préfixe et à raison d'une par ligne.
+  |  - L'affichage de ces noms doit respecter l'ordre de leurs URLs respectives dans le tableau `urlsToFetch`.
+  |  - Votre programme devra utiliser le module `https` fourni par Node.js pour effectuer les requêtes. Aucune autre dépendance ne pourra être utilisée.
+  |  - En cas d'erreur lors d'une requête, afficher "`Error.`" (sans les guillemets) au lieu du nom dont la récupération a échoué.
+  |  - Enfin, les URLs fournies dans `urlsToFetch`, leur ordre, ainsi que leur nombre peuvent changer. Le programme doit donc fonctionner en s'adaptant au contenu de ce tableau.
+  | 
+  | Fournir les lignes de code à ajouter au programme fourni ci-dessus de manière à ce qu'il affiche les noms quand on l'exécutera avec `node`.
+  | 
+  | // STUDENT CODE:
+  | 
+  | for(var i=0; i < urlsToFetch.length; i++) {
+  |   (async () => {
+  |     await https.get(urlsToFetch[i], function(res){
+  |     var body = '';
+  |     res.on('data', function(chunk){
+  |       body += chunk;
+  |     });
+  |     res.on('end', function(){
+  |       var userData = JSON.parse(body);
+  |       console.log(userData.name);
+  |     });
+  |   }).on('error', function(e){
+  |     console.log("Error.");
+  |     });
+  |   })();
+  | }
+  | 
+  | // CODE EVALUATION:
+  | 
+  |  ✅ exécution du code sans erreur
+  |  ✅ fonction rattachée à l'évènement "data"
+  |  ✅ fonction rattachée à l'évènement "end"
+  |  ✅ fonction rattachée à l'évènement "error"
+  |  ✅ cas nominal: tous noms affichés
+  |  ❌ cas nominal: noms affichés dans l'ordre
+  |  ❌ cas d'erreur: noms + "Error." affichés dans l'ordre
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 2.678571428571429 / 3.75
+  | 
+  | ------------- EXERCISE: code9 (variant: 0) -------------
+  | 
+  | // QUESTION:
+  | 
+  | Déployer en production (sur Heroku) un serveur Web en Node.js mettant à disposition les routes suivantes:
+  | 
+  |  - `POST /` retourne le texte "`Bonjour !`" (sans les guillemets)
+  |  - `POST /text` retourne le texte "`test`" (sans les guillemets)
+  | 
+  | Au lieu de fournir le code JavaScript de ce serveur, collez seulement l'URL Heroku de ce serveur dans le champ ci-dessous:
+  | 
+  | // STUDENT CODE:
+  | 
+  | https://node-partiel.herokuapp.com/
+  | 
+  | // CODE EVALUATION:
+  | 
+  | POST https://node-partiel.herokuapp.com 200  
+  | POST https://node-partiel.herokuapp.com/text 200  
+  |  ✅ URL Heroku reconnue
+  |  ✅ réponse valide de l'endpoint POST /
+  |  ✅ réponse valide de l'endpoint POST /text
+  |  ✅ réponse conforme de l'endpoint POST /
+  |  ✅ réponse conforme de l'endpoint POST /text
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 1, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 3.75 / 3.75
+
+  => code score: 11.053571428571429 / 15 pts
+
+=> TOTAL STUDENT SCORE: 15.05 / 20
+
+
+================================
+
