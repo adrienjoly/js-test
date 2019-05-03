@@ -3778,14 +3778,14 @@ STUDENT: martin_hurel
   | 
   |  ✅ exécution du code sans erreur
   |  ❌ écoute sur port 3000 avec myApp.listen()
-  |  ❌ définition de route POST /hello avec myApp.post()
+  |  ✅ définition de route POST /hello avec myApp.post()
   |  ❌ cas nominal: POST /hello salue le pays
   |  ❌ cas d'erreur: retour de POST /hello sans pays
   |  ❌ cas d'erreur: code 400 de POST /hello sans pays
   | 
-  | // -> STUDENT SCORE ARRAY: [ 1, 0, 0, 0, 0, 0 ]
+  | // -> STUDENT SCORE ARRAY: [ 1, 0, 1, 0, 0, 0 ]
   | 
-  | // -> EXERCISE POINTS: 0.625 / 3.75
+  | // -> EXERCISE POINTS: 1.25 / 3.75
   | 
   | ------------- EXERCISE: code8 (variant: 1) -------------
   | 
@@ -3881,9 +3881,9 @@ STUDENT: martin_hurel
   | 
   | // -> EXERCISE POINTS: 0.75 / 3.75
 
-  => code score: 5.553571428571429 / 15 pts
+  => code score: 6.178571428571429 / 15 pts
 
-=> TOTAL STUDENT SCORE: 8.55 / 20
+=> TOTAL STUDENT SCORE: 9.18 / 20
 
 
 ================================

@@ -238,7 +238,7 @@ Respecter les chaines de caractères fournies à la lettre.
     listenedPorts.includes(3000) || _studentCode.match(/[aA]pp.listen\(.*(3000|PORT)/)
       ? res(1, 'écoute sur port 3000 avec {{app}}.listen()')
       : res(0, 'écoute sur port 3000 avec {{app}}.listen()'),
-    `_studentCode`.includes(`.post('/{{{path}}}', `)
+    _studentCode.includes(`.post('/{{{path}}}',`) || _studentCode.match(/[aA]pp.post\(["']\/{{{path}}}/)
       ? res(1, 'définition de route POST /{{{path}}} avec {{app}}.post()')
       : res(0, 'définition de route POST /{{{path}}} avec {{app}}.post()'),
     (await callHandler({ country: '_france_' })).text === 'Hello, _france_!'
