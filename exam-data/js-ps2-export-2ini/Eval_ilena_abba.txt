@@ -149,15 +149,15 @@ STUDENT: ilena_abba
   | // CODE EVALUATION:
   | 
   |  ❌ erreur survenue en exécutant le code: SyntaxError: Unexpected token {
-  |  ❌ écoute sur port 3000 avec app.listen()
+  |  ✅ écoute sur port 3000 avec app.listen()
   |  ❌ définition de route POST /hello avec app.post()
   |  ❌ cas nominal: POST /hello salue le pays
   |  ❌ cas d'erreur: retour de POST /hello sans pays
   |  ❌ cas d'erreur: code 400 de POST /hello sans pays
   | 
-  | // -> STUDENT SCORE ARRAY: [ 0, 0, 0, 0, 0, 0 ]
+  | // -> STUDENT SCORE ARRAY: [ 0, 1, 0, 0, 0, 0 ]
   | 
-  | // -> EXERCISE POINTS: 0 / 3.75
+  | // -> EXERCISE POINTS: 0.625 / 3.75
   | 
   | ------------- EXERCISE: code8 (variant: 0) -------------
   | 
@@ -237,9 +237,9 @@ STUDENT: ilena_abba
   | 
   | // -> EXERCISE POINTS: 0 / 3.75
 
-  => code score: 3.857142857142857 / 15 pts
+  => code score: 4.482142857142858 / 15 pts
 
-=> TOTAL STUDENT SCORE: 8.86 / 20
+=> TOTAL STUDENT SCORE: 9.48 / 20
 
 
 ================================
