@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# This script evaluates students from Firebase JSON exports, to log and csv formats.
+# This script safely evaluates students from Firebase JSON exports, to log and csv formats.
 # (one student grade per line)
 
-# Usage: ./eval-firebase-dumps.sh ./exam-data/*.json
+# Usage: ./src/eval-firebase-dumps-in-docker.sh ./exam-data/*.json
 
 rm ./exam-data/score*.* &>/dev/null
 

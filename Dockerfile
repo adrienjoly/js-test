@@ -1,5 +1,5 @@
 # Run with:
-# $ npm eval-firebase-dumps-in-docker
+# $ npm run eval-firebase-dumps-in-docker
 
 FROM node:10
 WORKDIR /usr/src/app
