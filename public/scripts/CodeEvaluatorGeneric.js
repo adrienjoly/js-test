@@ -28,16 +28,24 @@ function makeCodeEvaluator(jailed, async, codeGradingOptions) {
 
   function runCodeInSandbox({ code, apiExts = {} }, callback) {
     var plugin = null;
-    // var timeout = null;
+    var timeout = null;
+    var timeoutDelay = 2000;
+    var timeoutMessage = null;
     function onDone(err, results){
-      /*
       clearTimeout(timeout);
       timeout = null;
-      */
       callback(err, results);
       plugin.disconnect();
     }
-    // var timeoutMessage = 'TIMEOUT: infinite loop?'; // can be overrided by evaluation code
+    function onDoneOnce(err, results){
+      if (!timeout) return;
+      onDone(err, results);
+    }
+    function sendTimeout() {
+      if (!timeout) return;
+      onDoneOnce(new Error(timeoutMessage || `Sandbox Timeout after ${timeoutDelay} ms`));
+    }
+    timeout = setTimeout(sendTimeout, timeoutDelay);
     let trackUncaughtRejections = false;
     const uncaughtRejections = [];
     var api = {
@@ -55,21 +63,23 @@ function makeCodeEvaluator(jailed, async, codeGradingOptions) {
         xhr.open(method, url);
         xhr.send();
       },
-      /*
+      _setTimeoutDelay: function(delayMs){
+        if (!timeout) return;
+        clearTimeout(timeout);
+        timeoutDelay = delayMs;
+        timeout = setTimeout(sendTimeout, delayMs);
+      },
       _setTimeoutMessage: function(message){
         timeoutMessage = message;
       },
-      */
       _log: console.log.bind(console),
       // this function will be called with resulting arguments by sandboxed script, when done
       _send: function(){
         onDone(null, arguments);
       },
-      /*
       _sendOnce: function(){
-        timeout && onDone(null, arguments);
+        onDoneOnce(null, arguments);
       },
-      */
       _trackUncaughtRejections: function(val){
         trackUncaughtRejections = !!val;
       },
@@ -90,7 +100,6 @@ function makeCodeEvaluator(jailed, async, codeGradingOptions) {
     });
     plugin.whenFailed(onDone);
     //plugin.whenConnected(onDone);
-    // timeout = setTimeout(function(){ onDone(timeoutMessage); }, 2000);
   }
 
   function runCodeInWrappedSandbox({ code, apiExts }, callback) {
