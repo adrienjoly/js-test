@@ -26,7 +26,7 @@ function makeCodeEvaluator(jailed, async, codeGradingOptions) {
     return a + b;
   }
 
-  function runCodeInSandbox(code, callback) {
+  function runCodeInSandbox({ code, apiExts = {} }, callback) {
     var plugin = null;
     // var timeout = null;
     function onDone(err, results){
@@ -38,7 +38,10 @@ function makeCodeEvaluator(jailed, async, codeGradingOptions) {
       plugin.disconnect();
     }
     // var timeoutMessage = 'TIMEOUT: infinite loop?'; // can be overrided by evaluation code
+    let trackUncaughtRejections = false;
+    const uncaughtRejections = [];
     var api = {
+      ...apiExts,
       _xhr: (method = 'GET', url, cb) => {
         var xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function() {
@@ -67,23 +70,31 @@ function makeCodeEvaluator(jailed, async, codeGradingOptions) {
         timeout && onDone(null, arguments);
       },
       */
+      _trackUncaughtRejections: function(val){
+        trackUncaughtRejections = !!val;
+      },
+      _getUncaughtRejections: function(callback){
+        callback(uncaughtRejections);
+      },
     };
-    plugin = new jailed.DynamicPlugin(code, api, { failOnRuntimeError: true });
+    plugin = new jailed.DynamicPlugin(code, api, {
+      failOnRuntimeError: true,
+      onUncaughtRejection: function (err, extras = {}) {
+        if (trackUncaughtRejections) {
+          uncaughtRejections.push(err);
+        } else if (!err.includes('evaluateStudentCode')) {
+          console.log(` ⚠️ runCodeInSandbox caught a warning: ${err}`);
+        }
+        console.error(`⚠️ runCodeInSandbox caught a ${trackUncaughtRejections ? '': 'un'}tracked warning: ${extras.promiseStack || err}`);
+      },
+    });
     plugin.whenFailed(onDone);
     //plugin.whenConnected(onDone);
     // timeout = setTimeout(function(){ onDone(timeoutMessage); }, 2000);
   }
 
-  function runCodeInWrappedSandbox(code, callback) {
-    /*
-    var consoleErrorInitial = console.error; // backup
-    console.error = function(stack) {
-      // TODO: for some reason, this code is never called...
-      console.log('JAILED ERROR:', stack);
-    };
-    */
-    runCodeInSandbox(code, function(err, res) {
-      //console.error = consoleErrorInitial; // restore
+  function runCodeInWrappedSandbox({ code, apiExts }, callback) {
+    runCodeInSandbox({ code, apiExts }, function(err, res) {
       callback(err, res);
     });
   }
@@ -91,17 +102,6 @@ function makeCodeEvaluator(jailed, async, codeGradingOptions) {
   if (codeGradingOptions.wrapper) {
     // wrapper could be overrided by CodeEvaluator.js, for catching Jailed errors from stderr
     runCodeInWrappedSandbox = codeGradingOptions.wrapper.bind(runCodeInWrappedSandbox);
-  }
-
-  function wrapStudentCode(studentCode) {
-    return [
-      //'try {',
-      '/* <STUDENT-CODE> */',
-      studentCode,
-      '/* </STUDENT-CODE> */',
-      //'}',
-      //'catch(e) { application.remote._log("/!\\\\ Execution error:", e.message); };',
-    ].join('\n');
   }
 
   function runTest(testCode, studentCode, callback) {
@@ -112,20 +112,30 @@ function makeCodeEvaluator(jailed, async, codeGradingOptions) {
       console.log('// WARNING: NO STUDENT CODE => skipping');
       callback(null, [ 0 ]);
     } else {
-      var code = testCode
-        .replace(/`_studentCode`/g, '`' + studentCode.replace(/\\/g, '\\\\').replace(/`/g, '\\\`') + '`')
-        .replace(/_runStudentCode\(\)/g, wrapStudentCode(studentCode))
-        .replace(/_runStudentCodeAgain\(\)/g,
-          wrapStudentCode(studentCode).replace(/function ([^ \(]+)/g, '$1 = function')
-        );
-      //console.log(code);
+      var code = [
+        'application.remote.getStudentCode(_studentCode => {',
+      ].concat(testCode
+        .replace(/`_studentCode`/g, '_studentCode') // kept for backward compatibility
+        .replace(/_runStudentCode\(\)/g, 'eval(_studentCode)') // kept for backward compatibility
+        .replace(/_runStudentCodeAgain\(\)/g, 'eval(_studentCode)') // kept for backward compatibility
+        .split('\n').map(line => '  ' + line)
+      ).concat([
+        '});'
+      ]).join('\n');
+      // console.warn(code.split('\n').map(line => `> ${line}`).join('\n'))
       console.log([
         '// STUDENT CODE:',
         studentCode,
         '// CODE EVALUATION:',
       ].join('\n\n') + '\n');
-      runCodeInWrappedSandbox(code, function(err, res) {
-        if (err) console.log('=> test runner err:', err);
+      const apiExts = {
+        getStudentCode: (callback) => callback(studentCode),
+      };
+      runCodeInWrappedSandbox({ code, apiExts }, function(err, res) {
+        if (err) {
+          console.log(' 🔴 runTest caught an error:', err.message || err);
+          process.stderr.write(`🔴 runTest caught an error: ${err.message || err}\n`);
+        }
         // TODO: find a way to display the position of the error in the student's code
         // (like when nodejs intercepts and displays the error)
         var scoreArray = [ 0 ];
