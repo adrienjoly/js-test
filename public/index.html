@@ -104,12 +104,16 @@
               </template>
 
             </template>
-            <google-signin
-              is-authorized="{{loggedIn}}"
-              scopes="profile email"
-              hosted-domain="{{config.GOOGLE_CLIENT_DOMAIN}}"
-              client-id="{{config.GOOGLE_CLIENT_ID}}"
-            ></google-signin>
+
+            <template is="dom-if" if="{{config.GOOGLE_CLIENT_ID}}">
+              <google-signin
+                is-authorized="{{loggedIn}}"
+                scopes="profile email"
+                hosted-domain="{{config.GOOGLE_CLIENT_DOMAIN}}"
+                client-id="{{config.GOOGLE_CLIENT_ID}}"
+              ></google-signin>
+            </template>
+            
           </paper-material>
         </section>
 
