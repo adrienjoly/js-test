@@ -125,7 +125,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       var id = Math.floor(999 * Math.random()); // variant is based on user id => randomize it
       onLogin({
         id: id,
-        name: 'Demo User #' + id,
+        name: 'Copie #' + id,
         email: 'demo-user-' + id + '@example.com',
         token: 'XXX'
       }/*, true*/);
