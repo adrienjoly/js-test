@@ -7,7 +7,7 @@ function readfile(filePath) {
 module.exports = {
 
   // Front-end config
-  title: 'Partiel Node.js 2A TC',
+  title: 'Node.js - Évaluation Jour 1',
 
   // General settings
   PUBLIC_TEST_MODE: false, // set to false to restrict acccess and identify students using Google Login
@@ -39,7 +39,7 @@ module.exports = {
     },
   },
 
-  teacherEmail: 'adrien.joly@eemi.com', // required for dashboard auth
+  teacherEmail: 'adrien.joly@gmail.com', // required for dashboard auth
   
   // Authentication
   GOOGLE_CLIENT_ID: '247219641427-ifeq88p7rgor9al5ksduds7ug0ba7djr.apps.googleusercontent.com', // generated from https://console.developers.google.com/apis/credentials?project=eemi-own-exam&authuser=1
@@ -53,7 +53,7 @@ module.exports = {
     ptsNull: 0,
   },
   codeGrading: {
-    ptsPerExercise: 3.75,
+    ptsPerExercise: 10,
   }
 
 };

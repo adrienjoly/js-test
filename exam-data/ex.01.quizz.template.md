@@ -9,6 +9,34 @@ Je viens de "cloner" un projet Node.js depuis GitHub. Comment installer les dép
 
 ---
 
+Quel fichier contient la liste des dépendances npm installées dans le projet Node.js ?
+
+- serveur.js
+- server.js
+* package.json 
+- node_modules
+
+---
+
+À quoi sert la fonction `require()` ?
+
+
+- à déployer notre serveur dans le cloud
+- à configurer Node.js
+- à créer une API Web utilisant le protocole HTTP
+* à charger une dépendance npm dans un programme Node.js
+
+---
+
+Quel est le nom du package npm permettant de faciliter la création d'une API web ?
+
+- package.json
+- Heroku
+- .gitignore
+* express
+
+---
+
 J'ai créé une API avec Node.js et l'ai lancée en local avec la commande `npm start`. Quel logiciel exécute le code permettant de répondre aux requêtes reçues par cette API ?
 
 - Mon navigateur Web
@@ -27,18 +55,40 @@ J'ai créé une API avec Node.js et l'ai lancée en local avec la commande `npm 
 
 ---
 
-Laquelle de ces phrases est CORRECTE ?
+Quelle expression Node.js permet de récupérer le numéro de port choisi par Heroku ? (via lequel notre serveur pourra recevoir les requêtes HTTP)
 
-* MongoDB est une base de données NoSQL constituée de collections et de documents
-- MongoDB est une base de données NoSQL constituée de tables et de lignes
-- MongoDB est une base de données SQL constituée de collections et de documents
-- MongoDB est une base de données SQL constituée de tables et de lignes
+- 3000
+- console.log("port");
+- app.listen(PORT, function() {});
+* process.env.PORT 
 
 ---
 
-Laquelle de ces phrases est INCORRECTE ?
+Quelle fonction permet d'expliquer à Node.js comment répondre à une requête HTTP GET ?
 
-- await permet d'attendre qu'une Promise soit résolue
-- await ne peut être utilisé que depuis une fonction async
-- sans await, deux fonctions asynchrones peuvent être exécutées en parallèle
-* await permet d'exécuter une fonction synchrone comme si elle était asynchrone
+En supposant que `app` est une instance de Express.js.
+
+- process.env.PORT
+- express()
+* app.get()
+- app.listen()
+
+---
+
+Quel est le type du deuxième paramètre qu'il faut passer quand on appelle la fonction `app.get()` ?
+
+Pour rappel, le premier paramètre de cette fonction est une chaine de caractères (type = `string`) contenant le chemin de l'API que l'on est en train de définir.
+
+- port
+- null
+- string
+* function
+
+---
+
+À quoi sert Heroku ?
+
+* à déployer un programme en production, sur internet
+- à compiler un programme Node.js
+- à déboguer un programme Node.js
+- à tester des chat bots
