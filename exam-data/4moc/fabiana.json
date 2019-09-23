@@ -1,0 +1,15 @@
+{
+  "_uid": 918,
+  "_uha": "demo_user_918",
+  "qcm1": "3",
+  "qcm2": "3",
+  "qcm3": "4",
+  "qcm4": "1",
+  "qcm5": "1",
+  "qcm6": "2",
+  "qcm7": "4",
+  "qcm8": "3",
+  "qcm9": "4",
+  "qcm10": "1",
+  "code11": "const port = process.env.PORT || 3000\n\napp.get('/hello', (req, res) => {\n if (req.query.country == null) {\n   res.send(\"Which country?\");\n } else {\n   res.send(\"Hello, \" + req.query.country + \"!\");\n }}\n)\n\napp.listen(port, () => console.log(`Example app listening on port ${port}!`))"
+}
