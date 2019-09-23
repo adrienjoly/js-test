@@ -1,0 +1,173 @@
+Reading and evaluating answers from: ../students/dian.json ...
+
+
+================================
+
+STUDENT: dian
+
+  -  quizz answers:
+  | 
+  | ------------- EXERCISE: qcm1 -------------
+  | 
+  | Je viens de "cloner" un projet Node.js depuis GitHub. Comment installer les dépendances de ce projet ?
+  | 
+  | -  npm start
+  | -  npm init
+  | 👉 npm install
+  | ❌ npm install express --save
+  | 
+  | ------------- EXERCISE: qcm2 -------------
+  | 
+  | Quel fichier contient la liste des dépendances npm installées dans le projet Node.js ?
+  | 
+  | -  serveur.js
+  | -  server.js
+  | ✅ package.json 
+  | -  node_modules
+  | 
+  | ------------- EXERCISE: qcm3 -------------
+  | 
+  | À quoi sert la fonction `require()` ?
+  | 
+  | -  à déployer notre serveur dans le cloud
+  | -  à configurer Node.js
+  | -  à créer une API Web utilisant le protocole HTTP
+  | ✅ à charger une dépendance npm dans un programme Node.js
+  | 
+  | ------------- EXERCISE: qcm4 -------------
+  | 
+  | Quel est le nom du package npm permettant de faciliter la création d'une API web ?
+  | 
+  | -  package.json
+  | -  Heroku
+  | -  .gitignore
+  | ✅ express
+  | 
+  | ------------- EXERCISE: qcm5 -------------
+  | 
+  | J'ai créé une API avec Node.js et l'ai lancée en local avec la commande `npm start`. Quel logiciel exécute le code permettant de répondre aux requêtes reçues par cette API ?
+  | 
+  | -  Mon navigateur Web
+  | ❌ La commande curl
+  | -  Heroku
+  | 👉 node
+  | 
+  | ------------- EXERCISE: qcm6 -------------
+  | 
+  | À quoi sert Express.js ?
+  | 
+  | -  à mettre une API en production
+  | ✅ à faciliter la création d'un serveur HTTP
+  | -  à accelérer la vitesse de traitement des requêtes HTTP
+  | -  à gérer des requêtes asynchrones comme si elles étaient synchrones
+  | 
+  | ------------- EXERCISE: qcm7 -------------
+  | 
+  | Quelle expression Node.js permet de récupérer le numéro de port choisi par Heroku ? (via lequel notre serveur pourra recevoir les requêtes HTTP)
+  | 
+  | -  3000
+  | -  console.log("port");
+  | -  app.listen(PORT, function() {});
+  | ✅ process.env.PORT
+  | 
+  | ------------- EXERCISE: qcm8 -------------
+  | 
+  | Quelle fonction permet d'expliquer à Node.js comment répondre à une requête HTTP GET ?
+  | 
+  | En supposant que `app` est une instance de Express.js.
+  | 
+  | -  process.env.PORT
+  | -  express()
+  | ✅ app.get()
+  | -  app.listen()
+  | 
+  | ------------- EXERCISE: qcm9 -------------
+  | 
+  | Quel est le type du deuxième paramètre qu'il faut passer quand on appelle la fonction `app.get()` ?
+  | 
+  | Pour rappel, le premier paramètre de cette fonction est une chaine de caractères (type = `string`) contenant le chemin de l'API que l'on est en train de définir.
+  | 
+  | -  port
+  | -  null
+  | -  string
+  | ✅ function
+  | 
+  | ------------- EXERCISE: qcm10 -------------
+  | 
+  | À quoi sert Heroku ?
+  | 
+  | ✅ à déployer un programme en production, sur internet
+  | -  à compiler un programme Node.js
+  | -  à déboguer un programme Node.js
+  | -  à tester des chat bots
+  | 
+  | ------------- SUMMARY -------------
+  | 
+  | qcm1 : 4 (solution: 3) => 0 pts
+  | qcm2 : 3 (solution: 3) => 1 pts
+  | qcm3 : 4 (solution: 4) => 1 pts
+  | qcm4 : 4 (solution: 4) => 1 pts
+  | qcm5 : 2 (solution: 4) => 0 pts
+  | qcm6 : 2 (solution: 2) => 1 pts
+  | qcm7 : 4 (solution: 4) => 1 pts
+  | qcm8 : 3 (solution: 3) => 1 pts
+  | qcm9 : 4 (solution: 4) => 1 pts
+  | qcm10 : 1 (solution: 1) => 1 pts
+
+  => quizz score: 8 / 10 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code11 (variant: 1) -------------
+  | 
+  | // QUESTION:
+  | 
+  | Le fichier `server.js` contient le code suivant:
+  | 
+  | ```js
+  | const express = require('express');
+  | const myApp = express();
+  | ```
+  | 
+  | Quelles lignes de code faut-il **ajouter à ce fichier** pour que:
+  | 
+  |  - `curl http://localhost:3000/hi?country=Zimbabwe` réponde `Hello, Zimbabwe!` (ou autre pays passé en paramètre);
+  |  - `curl http://localhost:3000/hi` réponde `Which country?`.
+  |  
+  | ... une fois qu'on aura exécuté ce programme avec `$ node server.js` ?
+  | 
+  | > Important: Votre code sera évalué de manière automatique. Pensez donc à:
+  | > - respecter les valeurs fournies **à la lettre**;
+  | > - tester votre code avant de rendre votre copie.
+  | 
+  | // STUDENT CODE:
+  | 
+  | const port = 3000
+  | var bodyParser = require('body-parser')
+  | myApp.use(bodyParser.json())
+  | 
+  | myApp.get('/hi', (req, res) => {
+  |  if (req.query.country == null) {
+  |    res.send("Which country?");
+  |  } else {
+  |    res.send("Hello, " + req.query.country + " !");
+  |  }}
+  | )
+  | 
+  | myApp.listen(port, () => console.log(`Example app listening on port ${port}!`))
+  | 
+  | // CODE EVALUATION:
+  | 
+  |  ✅ exécution du code sans erreur
+  |  ✅ écoute sur port 3000 avec myApp.listen()
+  |  ✅ définition de route GET /hi avec myApp.get()
+  |  ❌ cas nominal: GET /hi salue le pays
+  |  ✅ cas d'erreur: retour de GET /hi sans pays
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 1, 1, 0, 1 ]
+  | 
+  | // -> EXERCISE POINTS: 8 / 10
+
+  => code score: 8 / 10 pts
+
+=> TOTAL STUDENT SCORE: 16.00 / 20
