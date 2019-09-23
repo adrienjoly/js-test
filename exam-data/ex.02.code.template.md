@@ -1,36 +1,34 @@
 # Exercice de code (10 points)
 
-Le fichier `server.js` contient le code suivant:
+Ré-écrire ce code de manière à ce qu'il utilise `async` et `await`, au lieu de `then()` et `catch()`. Les erreurs doivent être correctement interceptées.
 
 ```js
-const express = require('express');
-const {{app}} = express();
+const MongoClient = require('mongodb').MongoClient;
+MongoClient.connect('mongodb://localhost:27017/{{{db}}}')
+  .then((client) => client.db('{{{db}}}').collection('{{{coll}}}').find().toArray())
+  .then(({{{coll}}}) => console.log('{{{coll}}}:', {{{coll}}}))
+  .catch((err) => console.error('erreur:', err));
 ```
 
-Quelles lignes de code faut-il **ajouter à ce fichier** pour que:
-
- - `curl http://localhost:3000/{{{path}}}?country=Zimbabwe` réponde `Hello, Zimbabwe!` (ou autre pays passé en paramètre);
- - `curl http://localhost:3000/{{{path}}}` réponde `Which country?`.
- 
-... une fois qu'on aura exécuté ce programme avec `$ node server.js` ?
-
-> Important: Votre code sera évalué de manière automatique. Pensez donc à:
-> - respecter les valeurs fournies **à la lettre**;
-> - tester votre code avant de rendre votre copie.
-
-- { "app": "app", "path": "hello" }
-- { "app": "myApp", "path": "hi" }
-- { "app": "myApp", "path": "hello" }
+- { "db": "myapp", "coll": "dates" }
+- { "db": "test", "coll": "cats" }
+- { "db": "db", "coll": "chats" }
+- { "db": "cats", "coll": "types" }
 
 ???
 
 ```js
 // expected solution
-{{app}}.get('/{{{path}}}', (req, res) => {
-  const { country } = req.query;
-  res.send(country ? `Hello, ${country}!` : 'Which country?');
-});
-{{app}}.listen(3000);
+const MongoClient = require('mongodb').MongoClient;
+(async () => {
+  try {
+    const client = await MongoClient.connect('mongodb://localhost:27017/{{{db}}}');
+    const {{{coll}}} = await client.db('{{{db}}}').collection('{{{coll}}}').find().toArray();
+    console.log('{{{coll}}}:', {{{coll}}});
+  } catch (err) {
+    console.error('erreur:', err);
+  }
+})();
 ```
 
 --
@@ -38,37 +36,51 @@ Quelles lignes de code faut-il **ajouter à ce fichier** pour que:
 ```js
 // automatic student evaluation code
 (async function evaluateStudentCode(){
-  async function runInContext() {
+  const EXPECTED_ARRAY = [ '__ expected result __' ];
+  const EXPECTED_ERROR = new Error('unable to connect');
+  const makeMongoClient = ({ shouldFail }) => {
+    class MongoClient {
+      constuctor(url) {
+        if (shouldFail) throw EXPECTED_ERROR;
+        if (url === 'mongodb://localhost:27017/{{{db}}}') return Promise.resolve(this);
+        else throw new Error(`unexpected connection url: ${url}`);
+      }
+      connect (url) {
+        if (shouldFail) throw EXPECTED_ERROR;
+        if (url === 'mongodb://localhost:27017/{{{db}}}') return new MongoClient(url);
+        else throw new Error(`unexpected connection url: ${url}`);
+      }
+      db (name) {
+        if (name === '{{{db}}}') return this;
+        else throw new Error(`unexpected db name: ${name}`);
+      }
+      collection (name) {
+        if (name === '{{{coll}}}') return this;
+        else throw new Error(`unexpected coll name: ${name}`);
+      }
+      find () {
+        return { toArray: async () => EXPECTED_ARRAY };
+      }
+    }
+    const instance = new MongoClient();
+    MongoClient.connect = instance.connect;
+    return MongoClient;
+  };
+  async function runInContext({ shouldFail }) {
     let error = undefined;
-    const pathHandlers = {};
-    const listenedPorts = [];
+    let lastLogParams = [];
+    let lastErrParams = [];
     const process = { env: {} };
     const console = {
-      log: () => {},
-      error: () => {},
+      log: (message, param) => lastLogParams = [message, param],
+      error: (message, param) => lastErrParams = [message, param],
     };
-    const express = () => {
-      const instance = {
-        get: (path, handler) => {
-          pathHandlers[path] = handler;
-          return instance;
-        },
-        post: () => instance,
-        listen: (port) => {
-          listenedPorts.push(port);
-        },
-        use: () => {},
-      };
-      return instance;
-    };
-    express.json = () => {};
-    express.urlencoded = () => {};
-    const {{app}} = express();
-    const require = () => express;
+    const MongoClient = makeMongoClient({ shouldFail });
+    const require = () => ({ MongoClient });
     try {
       application.remote._trackUncaughtRejections(true);
       await _runStudentCode();
-      await new Promise(resolve => setTimeout(resolve, 500));
+      await new Promise(resolve => setTimeout(resolve, 100));
       await new Promise((resolve, reject) => {
         application.remote._getUncaughtRejections(e => {
           application.remote._trackUncaughtRejections(false);
@@ -78,53 +90,31 @@ Quelles lignes de code faut-il **ajouter à ce fichier** pour que:
     } catch(e) {
       error = e;
     }
-    return { error, pathHandlers, listenedPorts };
+    return { error, lastLogParams, lastErrParams };
   }
-  const { error, pathHandlers, listenedPorts } = await runInContext();
-  const pathHandler = pathHandlers['/{{{path}}}'] || (() => {});
-  const callHandler = (queryParams) => new Promise((resolve) => {
-    let toResolve = {};
-    setTimeout(() => resolve(toResolve), 100);
-    const req = {
-      query: queryParams,
-      body: {},
-      param: (key) => queryParams[key],
-    };
-    const res = {
-      status: (code) => {
-        toResolve.statusCode = code;
-        return res;
-      },
-      send: (text) => {
-        if (toResolve.sent) {
-          toResolve = { error: 'a response to that query was already sent' };
-        } else {
-          toResolve = { ...toResolve, text, sent: true };
-        }
-      }
-    };
-    pathHandler(req, res);
-  });
+  const successfulExec = await runInContext({ shouldFail: false });
+  const impossibleExec = await runInContext({ shouldFail: true });
+  const normalisedCode = `_studentCode`.replace(/[ \n]/g, '');
   function res(pts, msg) {
     application.remote._log((pts ? ' ✅ ' : ' ❌ ') + msg);
     return pts; 
   }
   const scoreArray = [
-    !error
+    !normalisedCode.includes('.then(') && !normalisedCode.includes('.catch(')
+      ? res(1, 'ne pas utiliser then() et catch()')
+      : res(0, 'ne pas utiliser then() et catch()'),
+    normalisedCode.includes('async') && normalisedCode.includes('await')
+      ? res(1, 'utiliser async et await')
+      : res(0, 'utiliser async et await'),
+    !successfulExec.error && !successfulExec.lastErrParams.length
       ? res(1, 'exécution du code sans erreur')
-      : res(0, `erreur survenue en exécutant le code: ${error}`),
-    listenedPorts.includes(3000) || _studentCode.match(/[aA]pp.listen\(.*(3000|PORT)/)
-      ? res(1, 'écoute sur port 3000 avec {{app}}.listen()')
-      : res(0, 'écoute sur port 3000 avec {{app}}.listen()'),
-    _studentCode.includes(`.get('/{{{path}}}',`) || _studentCode.match(/[aA]pp.get\(["']\/{{{path}}}/)
-      ? res(1, 'définition de route GET /{{{path}}} avec {{app}}.get()')
-      : res(0, 'définition de route GET /{{{path}}} avec {{app}}.get()'),
-    (await callHandler({ country: '_france_' })).text === 'Hello, _france_!'
-      ? res(1, 'cas nominal: GET /{{{path}}} salue le pays')
-      : res(0, 'cas nominal: GET /{{{path}}} salue le pays'),
-    (await callHandler({})).text === 'Which country?'
-      ? res(1, 'cas d\'erreur: retour de GET /{{{path}}} sans pays')
-      : res(0, 'cas d\'erreur: retour de GET /{{{path}}} sans pays'),
+      : res(0, `erreur survenue en exécutant le code: ${successfulExec.error || successfulExec.lastErrParams}`),
+    successfulExec.lastLogParams[1] == EXPECTED_ARRAY
+      ? res(1, 'cas nominal: tableau de récupéré et affiché dans la console')
+      : res(0, `cas nominal: affichage inattendu dans la console: ${successfulExec.lastLogParams[1]}`),
+    impossibleExec.lastErrParams[1] == EXPECTED_ERROR
+      ? res(1, 'cas d\'erreur: message bien affiché dans la console')
+      : res(0, `cas d\'erreur: message affiché dans la console: ${successfulExec.lastErrParams[1]}`),
   ];
   application.remote._send(null, scoreArray);
 })();

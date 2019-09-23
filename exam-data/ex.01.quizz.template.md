@@ -1,94 +1,80 @@
 # QCM (1 point par bonne réponse)
 
-Je viens de "cloner" un projet Node.js depuis GitHub. Comment installer les dépendances de ce projet ?
+MongoDB est une base de données ...
 
-- npm start
-- npm init
-* npm install
-- npm install express --save
-
----
-
-Quel fichier contient la liste des dépendances npm installées dans le projet Node.js ?
-
-- serveur.js
-- server.js
-* package.json 
-- node_modules
+* NoSQL
+- MoSQL
+- Low-SQL
+- SQL
 
 ---
+L'expression `require('mongodb').MongoClient` permet ...
 
-À quoi sert la fonction `require()` ?
-
-
-- à déployer notre serveur dans le cloud
-- à configurer Node.js
-- à créer une API Web utilisant le protocole HTTP
-* à charger une dépendance npm dans un programme Node.js
+- de télécharger le client MongoDB
+* de charger le client MongoDB dans le programme Node.js
+- de créer la base de données MongoDB depuis Node.js
+- de stocker des dates dans une base de données MongoDB
 
 ---
+Dans MongoDB, chaque information est stockée sous forme ...
 
-Quel est le nom du package npm permettant de faciliter la création d'une API web ?
-
-- package.json
-- Heroku
-- .gitignore
-* express
-
----
-
-J'ai créé une API avec Node.js et l'ai lancée en local avec la commande `npm start`. Quel logiciel exécute le code permettant de répondre aux requêtes reçues par cette API ?
-
-- Mon navigateur Web
-- La commande curl
-- Heroku
-* node
+* d'une "collection"
+- d'une "table"
+- d'un "container"
+- d'un "document"
 
 ---
+Quand on appelle `col.find({})`, le premier paramètre de cette fonction ...
 
-À quoi sert Express.js ?
-
-- à mettre une API en production
-* à faciliter la création d'un serveur HTTP
-- à accelérer la vitesse de traitement des requêtes HTTP
-- à gérer des requêtes asynchrones comme si elles étaient synchrones
-
----
-
-Quelle expression Node.js permet de récupérer le numéro de port choisi par Heroku ? (via lequel notre serveur pourra recevoir les requêtes HTTP)
-
-- 3000
-- console.log("port");
-- app.listen(PORT, function() {});
-* process.env.PORT 
+- sert à spécifier dans quelle collection chercher
+- sert à donner un document par défaut
+* sert à séléctionner / filtrer les documents
+- ne sert à rien
 
 ---
+Le mot clé `await` permet ...
 
-Quelle fonction permet d'expliquer à Node.js comment répondre à une requête HTTP GET ?
-
-En supposant que `app` est une instance de Express.js.
-
-- process.env.PORT
-- express()
-* app.get()
-- app.listen()
+* d'appeler une fonction asynchrone et d'attendre la fin de son exécution
+- d'attendre que la base de données soit prête
+- d'attendre que le package `mongodb` soit complètement téléchargé
+- d'attendre la fin d'exécution d'une fonction synchrone
 
 ---
+Qu'est-ce qu'une fonction asynchrone ?
 
-Quel est le type du deuxième paramètre qu'il faut passer quand on appelle la fonction `app.get()` ?
-
-Pour rappel, le premier paramètre de cette fonction est une chaine de caractères (type = `string`) contenant le chemin de l'API que l'on est en train de définir.
-
-- port
-- null
-- string
-* function
+- Une fonction fournie par Node.js
+- Une fonction qui permet d'accéder à une base de données
+- Une fonction qui n'a pas de return
+* Une fonction qui rend la main à l'appelant avant la fin de son exécution
 
 ---
+Comment récupérer des documents MongoDB dans l'ordre anti-chronologique ?
 
-À quoi sert Heroku ?
+- col.find().sort({ _id: 1 })
+* col.find().sort({ _id: -1 })
+- col.find({ _id: -1 }).limit(2)
+- col.find({}).limit(2)
 
-* à déployer un programme en production, sur internet
-- à compiler un programme Node.js
-- à déboguer un programme Node.js
-- à tester des chat bots
+---
+Comment intercepter les erreurs / exceptions d'un appel de fonction asynchrone ?
+
+* Avec un bloc try-catch, à condition d'appeler la fonction avec await
+- Avec un bloc try-catch, à condition de ne pas appeler la fonction avec await
+- Elle est passé en paramètre du callback, à condition d'appeler la fonction avec await
+- Toute erreur sera fournie comme valeur de retour (return) par la fonction
+
+---
+Est-il obligatoire d'utiliser le mot clé `await` pour appeler une méthode asynchrone ?
+
+- Oui
+- Non, ce mot clé n'a aucun effet
+* Non, mais la fonction retournera une Promise, au lieu de retourner la valeur attendue
+- Non, mais dans ce cas la fonction ne terminera jamais son exécution
+
+---
+Quelles conditions sont nécessaires pour utiliser le mot clé `await` ?
+
+* c'est seulement possible depuis une fonction asynchrone (`async`)
+- c'est seulement possible si la fonction appelée a été définie avec `async`
+- c'est seulement possible en production
+- c'est seulement possible si on travaille avec une base de données
