@@ -29,10 +29,10 @@ STUDENT: ouali
   | 
   | Dans MongoDB, chaque information est stockée sous forme ...
   | 
-  | ✅ d'une "collection"
+  | ❌ d'une "collection"
   | -  d'une "table"
   | -  d'un "container"
-  | -  d'un "document"
+  | 👉 d'un "document"
   | 
   | ------------- EXERCISE: qcm4 -------------
   | 
@@ -101,7 +101,7 @@ STUDENT: ouali
   | 
   | qcm1 : 1 (solution: 1) => 1 pts
   | qcm2 : 2 (solution: 2) => 1 pts
-  | qcm3 : 1 (solution: 1) => 1 pts
+  | qcm3 : 1 (solution: 4) => 0 pts
   | qcm4 : 3 (solution: 3) => 1 pts
   | qcm5 : 1 (solution: 1) => 1 pts
   | qcm6 : 4 (solution: 4) => 1 pts
@@ -110,7 +110,7 @@ STUDENT: ouali
   | qcm9 : 3 (solution: 3) => 1 pts
   | qcm10 : 1 (solution: 1) => 1 pts
 
-  => quizz score: 9 / 10 pts
+  => quizz score: 8 / 10 pts
 
   -  code evaluation:
   | 
@@ -179,4 +179,4 @@ STUDENT: ouali
 
   => code score: 4 / 10 pts
 
-=> TOTAL STUDENT SCORE: 13.00 / 20
+=> TOTAL STUDENT SCORE: 12.00 / 20

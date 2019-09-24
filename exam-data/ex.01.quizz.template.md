@@ -18,10 +18,10 @@ L'expression `require('mongodb').MongoClient` permet ...
 ---
 Dans MongoDB, chaque information est stockée sous forme ...
 
-* d'une "collection"
+- d'une "collection"
 - d'une "table"
 - d'un "container"
-- d'un "document"
+* d'un "document"
 
 ---
 Quand on appelle `col.find({})`, le premier paramètre de cette fonction ...
