@@ -1,0 +1,182 @@
+Reading and evaluating answers from: ../students/ouali.json ...
+
+
+================================
+
+STUDENT: ouali
+
+  -  quizz answers:
+  | 
+  | ------------- EXERCISE: qcm1 -------------
+  | 
+  | MongoDB est une base de données ...
+  | 
+  | ✅ NoSQL
+  | -  MoSQL
+  | -  Low-SQL
+  | -  SQL
+  | 
+  | ------------- EXERCISE: qcm2 -------------
+  | 
+  | L'expression `require('mongodb').MongoClient` permet ...
+  | 
+  | -  de télécharger le client MongoDB
+  | ✅ de charger le client MongoDB dans le programme Node.js
+  | -  de créer la base de données MongoDB depuis Node.js
+  | -  de stocker des dates dans une base de données MongoDB
+  | 
+  | ------------- EXERCISE: qcm3 -------------
+  | 
+  | Dans MongoDB, chaque information est stockée sous forme ...
+  | 
+  | ✅ d'une "collection"
+  | -  d'une "table"
+  | -  d'un "container"
+  | -  d'un "document"
+  | 
+  | ------------- EXERCISE: qcm4 -------------
+  | 
+  | Quand on appelle `col.find({})`, le premier paramètre de cette fonction ...
+  | 
+  | -  sert à spécifier dans quelle collection chercher
+  | -  sert à donner un document par défaut
+  | ✅ sert à séléctionner / filtrer les documents
+  | -  ne sert à rien
+  | 
+  | ------------- EXERCISE: qcm5 -------------
+  | 
+  | Le mot clé `await` permet ...
+  | 
+  | ✅ d'appeler une fonction asynchrone et d'attendre la fin de son exécution
+  | -  d'attendre que la base de données soit prête
+  | -  d'attendre que le package mongodb soit complètement téléchargé
+  | -  d'attendre la fin d'exécution d'une fonction synchrone
+  | 
+  | ------------- EXERCISE: qcm6 -------------
+  | 
+  | Qu'est-ce qu'une fonction asynchrone ?
+  | 
+  | -  Une fonction fournie par Node.js
+  | -  Une fonction qui permet d'accéder à une base de données
+  | -  Une fonction qui n'a pas de return
+  | ✅ Une fonction qui rend la main à l'appelant avant la fin de son exécution
+  | 
+  | ------------- EXERCISE: qcm7 -------------
+  | 
+  | Comment récupérer des documents MongoDB dans l'ordre anti-chronologique ?
+  | 
+  | -  col.find().sort({ _id: 1 })
+  | 👉 col.find().sort({ _id: -1 })
+  | ❌ col.find({ _id: -1 }).limit(2)
+  | -  col.find({}).limit(2)
+  | 
+  | ------------- EXERCISE: qcm8 -------------
+  | 
+  | Comment intercepter les erreurs / exceptions d'un appel de fonction asynchrone ?
+  | 
+  | ✅ Avec un bloc try-catch, à condition d'appeler la fonction avec await
+  | -  Avec un bloc try-catch, à condition de ne pas appeler la fonction avec await
+  | -  Elle est passé en paramètre du callback, à condition d'appeler la fonction avec await
+  | -  Toute erreur sera fournie comme valeur de retour (return) par la fonction
+  | 
+  | ------------- EXERCISE: qcm9 -------------
+  | 
+  | Est-il obligatoire d'utiliser le mot clé `await` pour appeler une méthode asynchrone ?
+  | 
+  | -  Oui
+  | -  Non, ce mot clé n'a aucun effet
+  | ✅ Non, mais la fonction retournera une Promise, au lieu de retourner la valeur attendue
+  | -  Non, mais dans ce cas la fonction ne terminera jamais son exécution
+  | 
+  | ------------- EXERCISE: qcm10 -------------
+  | 
+  | Quelles conditions sont nécessaires pour utiliser le mot clé `await` ?
+  | 
+  | ✅ c'est seulement possible depuis une fonction asynchrone (async)
+  | -  c'est seulement possible si la fonction appelée a été définie avec async
+  | -  c'est seulement possible en production
+  | -  c'est seulement possible si on travaille avec une base de données
+  | 
+  | ------------- SUMMARY -------------
+  | 
+  | qcm1 : 1 (solution: 1) => 1 pts
+  | qcm2 : 2 (solution: 2) => 1 pts
+  | qcm3 : 1 (solution: 1) => 1 pts
+  | qcm4 : 3 (solution: 3) => 1 pts
+  | qcm5 : 1 (solution: 1) => 1 pts
+  | qcm6 : 4 (solution: 4) => 1 pts
+  | qcm7 : 3 (solution: 2) => 0 pts
+  | qcm8 : 1 (solution: 1) => 1 pts
+  | qcm9 : 3 (solution: 3) => 1 pts
+  | qcm10 : 1 (solution: 1) => 1 pts
+
+  => quizz score: 9 / 10 pts
+
+  -  code evaluation:
+  | 
+  | ------------- EXERCISE: code11 (variant: 1) -------------
+  | 
+  | // QUESTION:
+  | 
+  | Ré-écrire ce code de manière à ce qu'il utilise `async` et `await`, au lieu de `then()` et `catch()`. Les erreurs doivent être correctement interceptées.
+  | 
+  | ```js
+  | const MongoClient = require('mongodb').MongoClient;
+  | MongoClient.connect('mongodb://localhost:27017/test')
+  |   .then((client) => client.db('test').collection('cats').find().toArray())
+  |   .then((cats) => console.log('cats:', cats))
+  |   .catch((err) => console.error('erreur:', err));
+  | ```
+  | 
+  | // STUDENT CODE:
+  | 
+  | var MongoClient = require("mongodb").MongoClient;
+  | const uri = "mongodb://localhost:27017/test";
+  | 
+  | const client = new MongoClient(uri, {
+  |     useNewUrlParser: true,
+  |     useUnifiedTopology: true
+  | });
+  | try {
+  | 
+  |     client.connect(err => {
+  |         // async
+  |         (async()=> {
+  | 
+  |             var dbo = client.db("test");
+  | 
+  |             dbo.collection("cats").find({}).toArray(function(err, result) {
+  |                 if (err) {
+  |                     console.error('erreur:', err)
+  |                 } else {
+  |                     console.log('cats:', result);
+  |                 }
+  |                 console.log("find ok");
+  |                 client.close();
+  |             });
+  | 
+  |         })()
+  | 
+  |     });
+  | 
+  | } catch (err) {
+  |     console.log(err.stack);
+  | }
+  | 
+  | 
+  | 
+  | // CODE EVALUATION:
+  | 
+  |  ✅ ne pas utiliser then() et catch()
+  |  ❌ utiliser async et await
+  |  ✅ exécution du code sans erreur
+  |  ❌ cas nominal: affichage inattendu dans la console: undefined
+  |  ❌ cas d'erreur: message affiché dans la console: undefined
+  | 
+  | // -> STUDENT SCORE ARRAY: [ 1, 0, 1, 0, 0 ]
+  | 
+  | // -> EXERCISE POINTS: 4 / 10
+
+  => code score: 4 / 10 pts
+
+=> TOTAL STUDENT SCORE: 13.00 / 20

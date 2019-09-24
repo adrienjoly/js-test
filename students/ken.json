@@ -1,0 +1,15 @@
+{
+  "_uid": 27,
+  "_uha": "demo_user_27",
+  "qcm1": "1",
+  "qcm2": "2",
+  "qcm3": "4",
+  "qcm4": "3",
+  "qcm5": "1",
+  "qcm6": "4",
+  "qcm7": "2",
+  "qcm8": "1",
+  "qcm9": "3",
+  "qcm10": "1",
+  "code11": "const MongoClient = require('mongodb').MongoClient; \nMongoClient.connect('mongodb://localhost:27017/mongo_db') \n\nconst url = 'mongodb://localhost:27017/mongo_db';\n\n(async function() { \n    \n  const url = 'mongodb://localhost:27017/mongo_db'; \n  const dbName = 'mongo_db';\n  const client = new MongoClient(url, , { useNewUrlParser: true, useUnifiedTopology: true }); \n\n    try {\n    await client.connect(); \n        \n        const db = client.db(dbName); \n        const chats = db.collection('chats');\n        const docs = await chats.find().toArray(); \n        \n        console.log('chats :', chats ); \n        \n      } \n    catch (err) \n    {\n    console.log('erreur:', err.stack);\n    }\n\n  // Close connection\n  client.close();\n})();"
+}

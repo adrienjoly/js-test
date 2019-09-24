@@ -1,9 +1,9 @@
-Reading and evaluating answers from: ../students/adrien.json ...
+Reading and evaluating answers from: ../students/lukas.json ...
 
 
 ================================
 
-STUDENT: adrien
+STUDENT: lukas
 
   -  quizz answers:
   | 
@@ -29,10 +29,10 @@ STUDENT: adrien
   | 
   | Dans MongoDB, chaque information est stockée sous forme ...
   | 
-  | ✅ d'une "collection"
+  | 👉 d'une "collection"
   | -  d'une "table"
   | -  d'un "container"
-  | -  d'un "document"
+  | ❌ d'un "document"
   | 
   | ------------- EXERCISE: qcm4 -------------
   | 
@@ -101,7 +101,7 @@ STUDENT: adrien
   | 
   | qcm1 : 1 (solution: 1) => 1 pts
   | qcm2 : 2 (solution: 2) => 1 pts
-  | qcm3 : 1 (solution: 1) => 1 pts
+  | qcm3 : 4 (solution: 1) => 0 pts
   | qcm4 : 3 (solution: 3) => 1 pts
   | qcm5 : 1 (solution: 1) => 1 pts
   | qcm6 : 4 (solution: 4) => 1 pts
@@ -110,11 +110,11 @@ STUDENT: adrien
   | qcm9 : 3 (solution: 3) => 1 pts
   | qcm10 : 1 (solution: 1) => 1 pts
 
-  => quizz score: 10 / 10 pts
+  => quizz score: 9 / 10 pts
 
   -  code evaluation:
   | 
-  | ------------- EXERCISE: code11 (variant: 2) -------------
+  | ------------- EXERCISE: code11 (variant: 1) -------------
   | 
   | // QUESTION:
   | 
@@ -122,22 +122,26 @@ STUDENT: adrien
   | 
   | ```js
   | const MongoClient = require('mongodb').MongoClient;
-  | MongoClient.connect('mongodb://localhost:27017/db')
-  |   .then((client) => client.db('db').collection('chats').find().toArray())
-  |   .then((chats) => console.log('chats:', chats))
+  | MongoClient.connect('mongodb://localhost:27017/test')
+  |   .then((client) => client.db('test').collection('cats').find().toArray())
+  |   .then((cats) => console.log('cats:', cats))
   |   .catch((err) => console.error('erreur:', err));
   | ```
   | 
   | // STUDENT CODE:
   | 
   | const MongoClient = require('mongodb').MongoClient;
-  | (async()=>{
+  | (async function() {
   |   try {
-  |     const client = await MongoClient.connect('mongodb://localhost:27017/db');
-  |     const chats = await client.db('db').collection('chats').find().toArray();
-  |     console.log('chats:', chats);
-  |   } catch(err) {
-  |     console.error('erreur:', err)
+  |     const client = await MongoClient.connect("mongodb://localhost:27017/test");
+  |     const cats = await client
+  |       .db("test")
+  |       .collection("cats")
+  |       .find()
+  |       .toArray();
+  |     console.log("cats:", cats);
+  |   } catch (err) {
+  |     console.error("erreur:", err);
   |   }
   | })();
   | 
@@ -155,4 +159,4 @@ STUDENT: adrien
 
   => code score: 10 / 10 pts
 
-=> TOTAL STUDENT SCORE: 20.00 / 20
+=> TOTAL STUDENT SCORE: 19.00 / 20

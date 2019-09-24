@@ -1,0 +1,16 @@
+
+{
+  "_uid": 749,
+  "_uha": "demo_user_749",
+  "qcm1": "1",
+  "qcm2": "2",
+  "qcm3": "1",
+  "qcm4": "1",
+  "qcm5": "1",
+  "qcm6": "4",
+  "qcm7": "2",
+  "qcm8": "1",
+  "qcm9": "4",
+  "qcm10": "4",
+  "code11": "\nconst MongoClient = require('mongodb').MongoClient;\n(async function() {\nconst client = new MongoClient('mongodb://localhost:27017/test');\ntry{\n await client.connect();\n client.db('test').collection('cats').find().toArray())\n                  .((cats) => console.log('cats:', cats))\n                  .catch((err) => console.error('erreur:', err));\n}\n})();"
+}

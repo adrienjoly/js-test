@@ -1,0 +1,14 @@
+{
+  "_uid": 424,
+  "_uha": "demo_user_424",
+  "qcm2": "2",
+  "qcm1": "1",
+  "qcm3": "1",
+  "qcm4": "1",
+  "qcm6": "4",
+  "qcm5": "1",
+  "qcm8": "1",
+  "qcm9": "3",
+  "qcm10": "2",
+  "code11": "const MongoClient = require('mongodb').MongoClient;\n(async function() {\n  const client = new MongoClient('mongodb://localhost:27017/myapp')\n  try {\n    await  client.connect();\n    await client.db('myapp').collection('dates').find().toArray();\n    const dates = await console.log('dates:', dates);\n\n  } catch (err) {\n    console.log('erreur',err.stack)\n  }"
+}

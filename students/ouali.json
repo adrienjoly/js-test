@@ -1,0 +1,15 @@
+{
+  "_uid": 593,
+  "_uha": "demo_user_593",
+  "qcm1": "1",
+  "qcm3": "1",
+  "qcm4": "3",
+  "qcm5": "1",
+  "qcm6": "4",
+  "qcm7": "3",
+  "qcm2": "2",
+  "qcm8": "1",
+  "qcm9": "3",
+  "qcm10": "1",
+  "code11": "var MongoClient = require(\"mongodb\").MongoClient;\nconst uri = \"mongodb://localhost:27017/test\";\n\nconst client = new MongoClient(uri, {\n    useNewUrlParser: true,\n    useUnifiedTopology: true\n});\ntry {\n\n    client.connect(err => {\n        // async\n        (async()=> {\n\n            var dbo = client.db(\"test\");\n\n            dbo.collection(\"cats\").find({}).toArray(function(err, result) {\n                if (err) {\n                    console.error('erreur:', err)\n                } else {\n                    console.log('cats:', result);\n                }\n                console.log(\"find ok\");\n                client.close();\n            });\n\n        })()\n\n    });\n\n} catch (err) {\n    console.log(err.stack);\n}\n\n"
+}
