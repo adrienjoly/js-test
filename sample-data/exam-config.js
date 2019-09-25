@@ -23,7 +23,7 @@ module.exports = {
 
   // Back-end config
   backend: {
-    type: 'auto-eval', // 'realtime-eval', 'auto-eval', or 'firebase' (with FIREBASE_CONFIG)
+    type: 'auto-eval', // 'realtime-eval', 'auto-eval', 'email-submit' (with EMAIL_SUBMIT_CONFIG) or 'firebase' (with FIREBASE_CONFIG)
     /*
     EMAIL_SUBMIT_CONFIG: {
       mdTemplate: readfile('public/data/submitted.md'),
