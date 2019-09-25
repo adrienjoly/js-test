@@ -23,7 +23,6 @@ coverage/
 plato/
 
 # App specific
-/students
 /public/scripts/exam-data.js
 /.firebaserc
 .firebase
