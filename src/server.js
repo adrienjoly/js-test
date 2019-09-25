@@ -19,4 +19,4 @@ require('http').createServer(function (request, response) {
     }).resume();
 }).listen(port);
 
-console.log('Serving', dir, 'on port', port);
+console.log('Serving', dir, 'on http://localhost:' + port);
