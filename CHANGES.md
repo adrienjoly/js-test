@@ -1,3 +1,5 @@
+ℹ️  Changelog is now maintained in https://github.com/adrienjoly/js-test/releases
+
 == v2.9 Streamlined evaluation processes (mono and multi-instance)
  * Feature: compute average and median scores when processing firebase dumps
  * Feature: evaluation logs are splitted per student
