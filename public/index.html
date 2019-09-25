@@ -82,7 +82,7 @@
 
               <template is="dom-if" if="{{myAnswers._submitted}}">
                 <zero-md text="{{mdSubmitted}}">
-                  <!-- Remember to pass in empty container of class="md-html". -->
+                  <!-- Please keep the empty container below -->
                   <div class="md-html"></div>
                 </zero-md>
                 <!--
@@ -98,7 +98,7 @@
 
               <template is="dom-if" if="{{!myAnswers._submitted}}">
                 <zero-md file="./data/intro.md">
-                  <!-- Remember to pass in empty container of class="md-html". -->
+                  <!-- Please keep the empty container below -->
                   <div class="md-html"></div>
                 </zero-md>
               </template>
@@ -142,7 +142,7 @@
                           <paper-spinner-lite active></paper-spinner-lite>
 
                           <zero-md text="{{question.md}}" file="{{question.mdFile}}">
-                            <!-- Remember to pass in empty container of class="md-html". -->
+                            <!-- Please keep the empty container below -->
                             <div class="md-html"></div>
                           </zero-md>
 
@@ -162,7 +162,7 @@
 
                           <template is="dom-if" if="[[showSolutions(myAnswers)]]">
                             <zero-md class="solution" text="{{question.mdSolution}}" file="{{question.mdSolutionFile}}">
-                              <!-- Remember to pass in empty container of class="md-html". -->
+                              <!-- Please keep the empty container below -->
                               <div class="md-html"></div>
                             </zero-md>
                           </template>
@@ -180,7 +180,7 @@
                   <paper-material elevation="1">
                     <h2>Rendu de copie</h2>
                     <zero-md file="./data/rendu.md">
-                      <!-- Remember to pass in empty container of class="md-html". -->
+                      <!-- Please keep the empty container below -->
                       <div class="md-html"></div>
                     </zero-md>
                     <paper-button id="btnSubmitExam" on-click="onSubmitExam" raised class="green">
