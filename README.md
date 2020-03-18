@@ -3,13 +3,15 @@ JS-TEST
 
 **A toolkit to help JavaScript teachers evaluate their students' skills more efficiently.**
 
+Alternative short description: a file-based way to produce, publish, collect and grade student evaluations.
+
 In the frame of my JavaScript course at EEMI, I developed an online exam application for students, using Google Polymer and Firebase. It's designed to display different variants of each exercise to prevent fraud, and automatic student evaluation/grading, for both quizzes and coding exercises.
 
 It's made of:
 
 - a web app that students will use to give their answers;
 - a simple Markdown-based language to define quizz and coding exercises;
-- scripts to deploy, evaluate and grade students' answers automatically.
+- scripts to deploy, evaluate, collect (e.g. from Google Forms) and grade students' answers automatically.
 
 > 🇫🇷 Annonce de sortie en Français: [Un exerciseur en ligne + script pour corriger et noter le code de vos étudiants](http://mailchi.mp/cec2914e9181/exporter-en-pdf-le-code-de-vos-tudiants-depuis-google-classroom-1439429)
 
