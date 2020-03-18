@@ -1,6 +1,6 @@
 {
   "name": "js-test",
-  "version": "2.15.0",
+  "version": "2.16.0",
   "description": "Exercise/exam software for evaluating JavaScript students' progress",
   "engines": {
     "node": "8.16.2"
