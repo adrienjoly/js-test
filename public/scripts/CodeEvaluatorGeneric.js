@@ -142,8 +142,13 @@ function makeCodeEvaluator(jailed, async, codeGradingOptions) {
       };
       runCodeInWrappedSandbox({ code, apiExts }, function(err, res) {
         if (err) {
-          console.log(' 🔴 runTest caught an error:', err.message || err);
-          process.stderr.write(`🔴 runTest caught an error: ${err.message || err}\n`);
+          const message = [
+            `🔴 runTest caught an error: ${err.message || err}`,
+            '👉 Exercise may not be graded as expected. Teacher should review tests.',
+            '' // line break
+          ].join('\n');
+          console.log(message); // will be visible by the student (i.e. evaluation file)
+          process.stderr.write(message); // will be visible by the teacher 
         }
         // TODO: find a way to display the position of the error in the student's code
         // (like when nodejs intercepts and displays the error)
