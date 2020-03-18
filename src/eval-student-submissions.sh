@@ -5,11 +5,12 @@
 
 # Usage: ./eval-student-submissions.sh ./students/*.json
 
+EVAL_PATH=exam-data/email-submissions
+
 rm ./exam-data/score*.* &>/dev/null
 
 for FILEPATH in $*;
 do
-  EVAL_PATH=exam-data/email-submissions
   FILENAME=$(basename "${FILEPATH}")
   STUDENT_NAME="${FILENAME%.*}"
 
