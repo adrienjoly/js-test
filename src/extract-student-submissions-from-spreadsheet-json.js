@@ -1,9 +1,11 @@
 // script to convert json file from google spreadsheet to /students/*.json submission files
 
-const JSON_SUBMISSIONS_FILE = '../student-submissions.csv.json' // csv file exported from google spreadsheets and converted to json with https://www.csvjson.com/csv2json
+// USAGE: $ node src/extract-student-submissions-from-spreadsheet-json.js ./student-submissions.csv.json 
+
+const JSON_SUBMISSIONS_FILE = process.argv[2] || 'student-submissions.csv.json' // csv file exported from google spreadsheets and converted to json with https://www.csvjson.com/csv2json
 
 const fs = require('fs');
-const submissions = require(JSON_SUBMISSIONS_FILE);
+const submissions = require('../' + JSON_SUBMISSIONS_FILE);
 
 try {
 fs.mkdirSync('./students');
