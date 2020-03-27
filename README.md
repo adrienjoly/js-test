@@ -112,8 +112,8 @@ As an alternative to using Firebase as a back-end, it's possible to ask students
     - un-comment the `FIREBASE_CONFIG` object.
 1. In the `/public/data/intro.md` file, write a message to let students know that refreshing (or changing) the page will cause them to loose their answers.
 1. In the `/public/data/submitted.md` file:
-  - include a HTML link to a Google Forms where your students will paste their answers in JSON format, with the `target="_blank"` attribute, to prevent them from loosing their answers during that process.
-  - also include `<pre>{{hashedAnswers}}</pre>` to display the JSON code in question.
+    - include a HTML link to a Google Forms where your students will paste their answers in JSON format, with the `target="_blank"` attribute, to prevent them from loosing their answers during that process.
+    - also include `<pre>{{hashedAnswers}}</pre>` to display the JSON code in question.
 1. Run `npm run build` then commit the pending changes to the `git` repository that holds your `js-test` copy and your exercises.
 1. Run `npm run deploy-firebase`, as specified in the procedure above. (i.e. you will need to setup a Firebase app first)
 1. At the time of the exam, provide the resulting URL to students, so they can fill their answers.
