@@ -105,6 +105,8 @@ In both cases, resulting grades will be stored in the `/exam-data/scores.csv` fi
 
 As an alternative to using Firebase as a back-end, it's possible to ask students to submit their answers by email, or to Google Forms. This alternative has been useful with schools which don't provide Google-based authentification for their students.
 
+#### Phase 1 - Setup and deploy the assessment website
+
 1. In the `/exam-data/exam-config.js` file:
     - set `PUBLIC_TEST_MODE` to `true`,
     - set `backend.type` to `'email-submit'`,
@@ -116,12 +118,18 @@ As an alternative to using Firebase as a back-end, it's possible to ask students
     - also include `<pre>{{hashedAnswers}}</pre>` to display the JSON code in question.
 1. Run `npm run build` then commit the pending changes to the `git` repository that holds your `js-test` copy and your exercises.
 1. Run `npm run deploy-firebase`, as specified in the procedure above. (i.e. you will need to setup a Firebase app first)
+
+#### Phase 2 - Collect answers from students
+
 1. At the time of the exam, provide the resulting URL to students, so they can fill their answers.
 1. At the end of the exam, go to the "answers" tab of the Google Forms, click the icon to save them into a Google Spreadsheet, then open that spreadsheet.
 1. Export the spreadsheet as a csv file, then use https://www.csvjson.com/csv2json to convert it into a JSON file. Download that file in your `js-test` directory, and rename it as `student-submissions.csv.json`.
 1. Run `node src/extract-student-submissions-from-spreadsheet-json.js ./student-submissions.csv.json` => this creates a `students` directory that contains one JSON file per student submission.
+
+#### Phase 3 - Evaluate and grade student answers
+
 1. Run `npm run eval-student-submissions` to evaluate and grade these student submissions and store their results in `exam-data/email-submission`.
-1. If you see any error during this process, it may mean that your testing code needs some fixes. Student mistakes and runtime errors are reported in their own file, not in stdout.
+    > If you see any error during this process, it may mean that your testing code needs some fixes. Student mistakes and runtime errors are reported in their own file, not in stdout.
 1. When you're done, send these result files back to students, so they can read the feedback and grade of their work.
 
 Checkout [this YouTube playlist](https://www.youtube.com/playlist?list=PLmzn1C-VN6G7DsJb9wn29Pv2XkrF8aI6Q) for examples.
