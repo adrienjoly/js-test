@@ -38,7 +38,7 @@
     "eval-firebase-dumps": "src/eval-firebase-dumps.sh ./exam-data/*.json",
     "eval-firebase-dumps-in-docker": "src/eval-firebase-dumps-in-docker.sh ./exam-data/*.json",
     "eval-student-submissions": "src/eval-student-submissions.sh ./students/*.json",
-    "release": "release-it"
+    "release": "release-it --no-npm.publish"
   },
   "author": "Adrien Joly <adrien.joly@gmail.com>",
   "license": "MIT",
