@@ -38,8 +38,11 @@ function forEachSubmission(endpointUrl, handler, callback) {
 
 // actual script
 
-console.log('Reading and evaluating answers from:', FIREBASE_URL, '...');
-forEachSubmission(FIREBASE_URL, evaluateStudent, function done() {
+console.warn('Reading and evaluating answers from:', FIREBASE_URL, '...');
+forEachSubmission(FIREBASE_URL, function evalStudent(student, next) {
+  console.warn('Evaluating student:', student.key);
+  evaluateStudent(student, next);
+}, function done() {
   console.log();
   process.exit();
 });
