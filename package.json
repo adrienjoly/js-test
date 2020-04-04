@@ -37,12 +37,21 @@
     "eval-instances": "./src/eval-instances.sh",
     "eval-firebase-dumps": "src/eval-firebase-dumps.sh ./exam-data/*.json",
     "eval-firebase-dumps-in-docker": "src/eval-firebase-dumps-in-docker.sh ./exam-data/*.json",
-    "eval-student-submissions": "src/eval-student-submissions.sh ./students/*.json"
+    "eval-student-submissions": "src/eval-student-submissions.sh ./students/*.json",
+    "release": "release-it"
   },
   "author": "Adrien Joly <adrien.joly@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/adrienjoly/js-test/issues"
   },
-  "homepage": "https://github.com/adrienjoly/js-test"
+  "homepage": "https://github.com/adrienjoly/js-test",
+  "release-it": {
+    "github": {
+      "release": true
+    }
+  },
+  "devDependencies": {
+    "release-it": "^13.5.1"
+  }
 }
