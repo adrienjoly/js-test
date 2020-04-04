@@ -26,3 +26,4 @@ plato/
 /public/scripts/exam-data.js
 /.firebaserc
 .firebase
+.env.sh
