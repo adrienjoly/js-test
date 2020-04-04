@@ -33,7 +33,7 @@
     "deploy-heroku": "echo \"⚠ don't forget to rebuild and commit first!\" && PROJECT_ID=__TODO__ && echo Deploying to $PROJECT_ID... && heroku git:remote -a $PROJECT_ID && git push heroku `git rev-parse --abbrev-ref HEAD`:master",
     "deploy-heroku-instances": "./src/deploy-heroku-instances.sh",
     "deploy-firebase-instances": "./src/deploy-firebase-instances.sh",
-    "eval": "node ./src/evaluate.js",
+    "eval": "rm exam-data/scores*.csv; node ./src/evaluate.js && npm run render-score-chart",
     "eval-instances": "./src/eval-instances.sh",
     "eval-firebase-dumps": "src/eval-firebase-dumps.sh ./exam-data/*.json",
     "eval-firebase-dumps-in-docker": "src/eval-firebase-dumps-in-docker.sh ./exam-data/*.json",
