@@ -75,6 +75,7 @@
           <paper-material elevation="1">
             <template is="dom-if" if="{{!loggedIn}}">
               <h2>Connexion</h2>
+              <p>ℹ️ Pour permettre l'identification, merci d'<a href="/images/chrome-cookies-tiers.png" target="_blank">activer les cookies tiers</a> dans les paramètres de Chrome.</p>
               <p>{{config.LOGIN_INVITE}}</p>
             </template>
             <template is="dom-if" if="{{loggedIn}}">
