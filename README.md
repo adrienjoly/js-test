@@ -1,3 +1,5 @@
+⚠ This project is not maintained anymore. Feel free to fork and make it your own ^^
+
 # JS-TEST
 
 **A toolkit to help JavaScript teachers evaluate their students' skills more efficiently.**
