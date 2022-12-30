@@ -53,6 +53,6 @@
     }
   },
   "devDependencies": {
-    "release-it": "^13.5.1"
+    "release-it": "^13.7.2"
   }
 }
